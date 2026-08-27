@@ -1,6 +1,6 @@
 {
-  "schema": "RFC_CROSS_REFERENCE_LOCK_V0_8",
-  "status": "PHASE_CLOCK_HEXAHEDRAL_RANK3_RELATIONAL_LAPSE_NEWTON_OPERATOR_CONTINUOUS_CARRIER_AND_SHAPE_SCALE_HOLONOMY_PINNED",
+  "schema": "RFC_CROSS_REFERENCE_LOCK_V0_9",
+  "status": "PHASE_CLOCK_HEXAHEDRAL_RANK3_RELATIONAL_LAPSE_NEWTON_OPERATOR_CONTINUOUS_CARRIER_SHAPE_SCALE_AND_PNCS_SOURCE_HOLONOMY_PINNED",
   "created": "2026-08-27",
   "updated": "2026-08-27",
   "upstreams": [
@@ -39,22 +39,31 @@
       "role": "normalized_shape_extensive_scale_interface",
       "repository": "AdrianLipa90/Informational-Dynamics-of-Time",
       "ref": "feat/idt-rfc-normalized-shape-holonomy-v0.1",
-      "commit": "54542dbf18f38e62883399366e032a4dc86e5e1a",
+      "interface_anchor_commit": "54542dbf18f38e62883399366e032a4dc86e5e1a",
       "interfaces": [
         "formalism/01D_shannon_onsager_response_tensor.md",
         "formalism/01X_RFC_normalized_shape_extensive_scale_interface.md",
-        "validation/01X_RFC_NORMALIZED_SHAPE_EXTENSIVE_SCALE_V0_1.json"
+        "validation/01X_RFC_NORMALIZED_SHAPE_EXTENSIVE_SCALE_V0_1.json",
+        "validation/01X_RFC_CROSS_REFERENCE_LOCK_V0_1.json"
       ]
     },
     {
-      "role": "gremlin_pnv_candidate_authoring_and_holonomy_execution_contract",
+      "role": "gremlin_pnv_candidate_authoring_information_holonomy_and_source_loop_contracts",
       "repository": "AdrianLipa90/PhaseNav-Natural-Coding-System",
       "ref": "feat/gremlin-pnv-authoring-v0.2",
-      "commit": "695223eff9373554c4c2aff1aca9c3e1e7dfecd4",
+      "commit": "5f3bf90998b8c3547d51e7c47bddaf0d6be25d60",
+      "contracts": [
+        "PNCS_GREMLIN_NATIVE_PNV_BRIDGE_V0_2",
+        "PNCS_PNV_INFORMATION_HOLONOMY_V0_1",
+        "PNCS_PNV_SOURCE_HOLONOMY_LOOPS_V0_1"
+      ],
       "interfaces": [
         "src/phasenav_natural_code/gremlin_pnv_bridge_v02.py",
-        "src/phasenav_natural_code/gremlin_relational_compiler_v01.py",
-        "src/phasenav_natural_code/native_pnv_exec_v01.py"
+        "src/phasenav_natural_code/gremlin_pnv_holonomy_v01.py",
+        "src/phasenav_natural_code/pnv_source_holonomy_v01.py",
+        "src/phasenav_natural_code/native_pnv_exec_v01.py",
+        "spec/PNCS_PNV_INFORMATION_HOLONOMY_V0_1.md",
+        "spec/PNCS_PNV_SOURCE_HOLONOMY_LOOPS_V0_1.md"
       ]
     }
   ],
@@ -77,6 +86,11 @@
     "formalism/RFN1B2_CONSERVED_SOURCE_CARRIER_FACTORIZATION.md",
     "formalism/RFN1B2H_NORMALIZED_SHAPE_HOLONOMY.md"
   ],
+  "pncs_source_holonomy_loops": [
+    "SOURCE.CARRIER.NORMALIZATION.ROUNDTRIP",
+    "SOURCE.CARRIER.Q0_OCCUPATION.ROUNDTRIP",
+    "SOURCE.CARRIER.EPSILON_MASS_DENSITY.ROUNDTRIP"
+  ],
   "validation_receipts": [
     "validation/RFL0_PHASE_CLOCK_SCALE_V0_2.json",
     "validation/RF02H_HEXAHEDRAL_RANK3_V0_1.json",
@@ -87,5 +101,5 @@
     "validation/RFN1B2_CONSERVED_SOURCE_CARRIER_V0_1.json",
     "validation/RFN1B2H_NORMALIZED_SHAPE_HOLONOMY_V0_1.json"
   ],
-  "rule": "Every upstream ref change requires an explicit cross-reference update receipt; all dependencies remain explicitly pinned."
+  "pinning_rule": "Mutual IDT/RFC references use immutable interface-anchor commits; both repositories pin the same PNCS source-holonomy commit and contract paths."
 }
