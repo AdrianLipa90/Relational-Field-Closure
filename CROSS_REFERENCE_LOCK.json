@@ -74,9 +74,9 @@
     {"name": "Neutrinotime14.pdf", "role": "tensor_scalar_time_and_on_shell_lambda0_conservation"},
     {"name": "fluid_time.pdf", "role": "scalar_time_density_current_continuity_and_time_fluid_stress_energy"},
     {"name": "noema_fermionic_intention_fields_corrected(4).pdf", "role": "fermionic_coupling_source_constraints"},
-    {"name": "Hilbert_Kahler_Phase_Intention_Hamiltonian.pdf", "role": "cyclic_phase_coordinate_and finite phase momentum"},
-    {"name": "Phase_Intention_Hamiltonian_Formal_Derivations.tex", "role": "Euler closed intention charge and canonical rotor energy"},
-    {"name": "Euler_Noether_Berry_Preference_Formalism_v2.tex", "role": "global U1 current and Euler/Berry closure"},
+    {"name": "Hilbert_Kahler_Phase_Intention_Hamiltonian.pdf", "role": "cyclic_phase_coordinate_and_finite_phase_momentum"},
+    {"name": "Phase_Intention_Hamiltonian_Formal_Derivations.tex", "role": "Euler_closed_intention_charge_and_canonical_rotor_energy"},
+    {"name": "Euler_Noether_Berry_Preference_Formalism_v2.tex", "role": "global_U1_current_and_Euler_Berry_closure"},
     {"name": "TIR_KEPLER_NOETHER_PHASE_BINDING_V0_4.md", "role": "noether_to_relational_phase_cross_binding_status"}
   ],
   "rfc_gates": [
@@ -109,11 +109,11 @@
   ],
   "local_validation_commits": {
     "rfn1b2h": "e64b362739bf113dea03903bd15b08565cfde151",
-    "paired_receipt": "7e75e46b0b2cd14590ca17fe4c84b407b69947e1"
+    "paired_receipt": "763858a0162cb12882fe013aa0805053fd213790"
   },
   "executed_reference_gates": {
-    "idt": "347/347 PASS",
-    "rfc": "39/39 PASS"
+    "idt": "348/348 PASS",
+    "rfc": "40/40 PASS"
   },
   "normalization_order": [
     "Euler/Berry closure",
