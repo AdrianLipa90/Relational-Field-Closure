@@ -1,236 +1,165 @@
-# RF-N1B2I — Phase-Intention Energy-per-Action-Charge Gate
+# RF-N1B2I — Euler-Closed Phase-Intention Energy-per-Action-Charge Gate
 
-Status: `FLOQUET_ENERGY_ACTION_RATIO_PASS / RFC_CARRIER_BINDING_OPEN / LOCAL_CURRENT_LIFT_OPEN`
+Status: `EULER_CLOSED_ACTION_CHARGE_PASS / ROTOR_ENERGY_PER_CHARGE_PASS_CONDITIONAL / RFC_CARRIER_BINDING_OPEN / LOCAL_CURRENT_LIFT_OPEN`
 
-RF-N1B2I consumes the IDT 01Y phase-intention export and advances the continuous source-normalization branch without using a Newton matching condition.
+RF-N1B2I consumes IDT 01Y after Euler/Berry closure selects the admissible phase/action-charge sector. The gate remains downstream of RF-N1B2H and upstream of RF-N1C.
 
-The gate is downstream of RF-N1B2H and upstream of RF-N1C.
+## 1. Euler/Berry closure first
 
-## 1. IDT 01Y source contract
-
-The pinned phase-intention scaffold defines
+The shared closure law is
 
 \[
-\boxed{
-J_{I,s}(\tau,k)=\hbar\rho_s(k)\mathcal I_s(\tau,k)
-}
+\Phi_{\rm tot}=\Phi_{AB}+\int_\Sigma(\mathcal F_B+s_E\mathcal R_E)+\Theta_I=2\pi(D+\epsilon_{EB}).
 \]
 
-and
+For the next intention step,
 
 \[
-\boxed{
-H_{\Phi,s}(\tau,k)
-=\frac{\hbar}{\Delta\tau_k}\rho_s(k)\mathcal I_s(\tau,k).
-}
+\boxed{\theta_{I,k}^{EB}=2\pi(D+\epsilon_{EB})-\Phi_{AB}-\int_\Sigma(\mathcal F_B+s_E\mathcal R_E)-\Theta_I^{<k}.}
 \]
 
-Therefore IDT 01Y exports
+The phase fixes the action charge:
 
 \[
-\boxed{
-\Delta\tau_k H_{\Phi,s}=J_{I,s}
-}
+\boxed{J_{I,k}^{EB}=\hbar\theta_{I,k}^{EB}.}
 \]
 
-and the action-charge energy conversion
+At exact closure, \(\epsilon_{EB}=0\).
+
+## 2. Independent rotor energy
+
+The canonical phase rotor supplies
 
 \[
-\boxed{
-H_{\Phi,s}=\epsilon_{I,k}J_{I,s},
-\qquad
-\epsilon_{I,k}=\frac1{\Delta\tau_k}.
-}
+\boxed{H_{\Phi,k}^{EB}=\frac{(J_k-J_{I,k}^{EB})^2}{2I_\phi}.}
 \]
 
-This is an operator-level identity in the pinned Floquet phase sector.
+Therefore, on the positive non-degenerate sector,
 
-## 2. RFC carrier-type binding
+\[
+\boxed{\epsilon_{I,k}^{EB}:=\frac{H_{\Phi,k}^{EB}}{J_{I,k}^{EB}}=\frac{(J_k-\hbar\theta_{I,k}^{EB})^2}{2I_\phi\hbar\theta_{I,k}^{EB}}.}
+\]
 
-RF-N1B2 defines a generic extensive conserved carrier
+Since \(J_I\) has action type, \([\epsilon_I]=T^{-1}\).
+
+## 3. Floquet time step becomes derived
+
+The Floquet identity remains
+
+\[
+\Delta\tau_kH_{\Phi,k}=J_{I,k}.
+\]
+
+After Euler closure and rotor energy are fixed,
+
+\[
+\boxed{\Delta\tau_{k,\rm eff}^{EB}=\frac{J_{I,k}^{EB}}{H_{\Phi,k}^{EB}}=\frac1{\epsilon_{I,k}^{EB}}.}
+\]
+
+Thus the order is
+
+```text
+Euler/Berry closure
+ -> theta_I^EB
+ -> J_I^EB
+ -> rotor H_Phi^EB
+ -> epsilon_I^EB
+ -> Delta_tau_eff^EB
+ -> RFC carrier binding
+```
+
+## 4. RFC binding
+
+RF-N1B2 defines
 
 \[
 Q_\Sigma=\int_{\Sigma_t}j_Q\,dV_h.
 \]
 
-The phase-intention sector now supplies a concrete action-charge candidate. The interface binding is
+The physical binding remains
 
 \[
-\boxed{
-Q_\Sigma\stackrel{?}{\longleftrightarrow}J_{I,s}.
-}
+\boxed{Q_\Sigma\stackrel{?}{\longleftrightarrow}J_I^{EB}.}
 \]
 
-Its gate state is
+Only in an admitted bound sector does RFC assign
+
+\[
+\boxed{\epsilon_Q\stackrel{?}{=}\epsilon_I^{EB}.}
+\]
+
+Then
+
+\[
+\boxed{M_I=\frac{\epsilon_I^{EB}J_I^{EB}}{c^2}=\frac{H_\Phi^{EB}}{c^2}.}
+\]
+
+For normalized profile \(p_a^{(Q)}\), \(m_{I,a}=M_Ip_a^{(Q)}\).
+
+## 5. Local current lift
+
+A local source requires
+
+\[
+\boxed{J_I^{EB}\stackrel{?}{=}\int_{\Sigma_t}j_I\,dV_h}
+\]
+
+with a conserved local current. Once admitted,
+
+\[
+\boxed{\rho_I(x)=\frac{\epsilon_I^{EB}}{c^2}j_I(x).}
+\]
+
+The Euler/Noether phase current and temporal-fluid current remain candidate local lifts.
+
+## 6. Fail-closed sector
+
+Ratio evaluation requires
 
 ```text
-Q_Sigma <-> J_I    OPEN PHYSICAL/CURRENT BINDING
+I_phi > 0
+J_I^EB > 0
+H_Phi^EB > 0
+finite Euler/Berry phase data
 ```
 
-Under admission of this binding, the RFC continuous conversion coordinate becomes
+Zero or degenerate sectors retain the closure/action-charge equations without forcing a finite energy-per-charge ratio.
 
-\[
-\boxed{
-\epsilon_Q
-=\epsilon_{I,k}
-=\frac1{\Delta\tau_k}.
-}
-\]
+## 7. PNCS loop
 
-Since \(J_I\) carries action type,
-
-\[
-[\epsilon_Q]=T^{-1},
-\]
-
-which is the correct energy-per-charge type for an action-valued carrier.
-
-## 3. Extensive source-mass coordinate
-
-RF-N1B2H introduced
-
-\[
-M_Q=\frac{\epsilon_QQ_\Sigma}{c^2}.
-\]
-
-With the phase-intention binding admitted,
-
-\[
-\boxed{
-M_I
-=\frac{J_{I,s}}{c^2\Delta\tau_k}
-=\frac{H_{\Phi,s}}{c^2}.
-}
-\]
-
-Thus the extensive mass coordinate is exactly the Floquet phase energy divided by \(c^2\) in the bound sector.
-
-For a normalized carrier profile \(p_a^{(Q)}\), the cell mass factorization is
-
-\[
-\boxed{
-m_{I,a}
-=M_Ip_a^{(Q)}
-=\frac{H_{\Phi,s}}{c^2}p_a^{(Q)}.
-}
-\]
-
-A physical cell density additionally uses the admitted RF measure/cell volume:
-
-\[
-\rho_{I,a}=\frac{M_I}{V_a}p_a^{(Q)}.
-\]
-
-## 4. Local current-lift gate
-
-The finite phase-intention charge becomes a local RFC source only after a current lift satisfies
-
-\[
-\boxed{
-J_{I,s}
-\stackrel{?}{=}
-\int_{\Sigma_t}j_I\,dV_h
-}
-\]
-
-with an admitted conservation law for the corresponding current.
-
-Once that gate passes,
-
-\[
-\boxed{
-\rho_I(x)
-=\frac{1}{c^2\Delta\tau_k}j_I(x).
-}
-\]
-
-The upstream stack contains two current structures relevant to the search:
+Required executable loop:
 
 ```text
-Euler/Noether phase current      J_phi^mu
-fluid-time conserved current     J_tau^mu
+SOURCE.PHASE_INTENTION.EULER_CHARGE_ENERGY.ROUNDTRIP
+
+Euler/Berry data
+ -> theta_I^EB
+ -> J_I^EB = hbar theta_I^EB
+ -> H_Phi^EB = (J-J_I^EB)^2/(2 I_phi)
+ -> epsilon_I^EB = H_Phi^EB/J_I^EB
+ -> Delta_tau_eff^EB = 1/epsilon_I^EB
+ -> reconstruct J_I^EB
 ```
 
-Their relation to the finite phase-intention action charge is tracked as a cross-binding problem.
-
-## 5. Exact cancellation structure
-
-The central GREMLIN invariant is the shared factor
-
-\[
-\hbar\rho_s(k)\mathcal I_s(\tau,k).
-\]
-
-It appears as
-
-\[
-J_I
-=\hbar\rho_s\mathcal I_s,
-\qquad
-H_\Phi
-=\frac1{\Delta\tau_k}\hbar\rho_s\mathcal I_s.
-\]
-
-Hence the normalization coordinate is independent of the particular nonzero scalar realization of the shared factor:
-
-\[
-\boxed{
-\epsilon_I=\frac1{\Delta\tau_k}.
-}
-\]
-
-The zero-charge sector is carried by the linear identity
-
-\[
-\Delta\tau_kH_\Phi=J_I
-\]
-
-without ratio evaluation.
-
-## 6. PNCS source-law control loop
-
-RF-N1B2I requires the executable loop
+Required invariants:
 
 ```text
-SOURCE.PHASE_INTENTION.CHARGE_ENERGY.ROUNDTRIP
-
-J_I
-  -> H_Phi = J_I / Delta_tau
-  -> J_I' = Delta_tau H_Phi
+SOURCE.EULER_CLOSURE_SECTOR
+SOURCE.INTENTION_ACTION_CHARGE
+SOURCE.ROTOR_PHASE_ENERGY
+SOURCE.ENERGY_PER_ACTION_CHARGE
 ```
 
-with
+## 8. Advancement
 
 ```text
-Delta_tau > 0
-invariant: SOURCE.INTENTION_ACTION_CHARGE
-normalization: epsilon_I = 1/Delta_tau
+Euler/Berry closure                            PASS
+Euler residual -> action charge J_I^EB         PASS
+canonical rotor energy                         PASS
+energy/action-charge epsilon_I^EB              PASS_CONDITIONAL
+Delta_tau_eff=1/epsilon_I^EB                   PASS_CONDITIONAL
+Q_Sigma <-> J_I^EB carrier binding             OPEN
+J_I^EB <-> local conserved-current lift        OPEN
+p_IDT <-> p_Q physical binding                 OPEN
+RF-N1C coupling/universality                   OPEN
 ```
-
-The PNCS receipt must retain the exact `Delta_tau` parameter, state defect, invariant defect and inverse lineage.
-
-The larger source path is then staged as
-
-```text
-phase-intention J_I
-  -> phase energy H_Phi
-  -> [Q_Sigma <-> J_I binding]
-  -> epsilon_Q=1/Delta_tau
-  -> RFC source-mass coordinate M_Q
-  -> local current/source density after current lift
-  -> RF-N1C coupling/universality audit
-```
-
-## 7. Advancement state
-
-```text
-IDT 01Y Floquet charge-energy identity         PASS
-energy/action-charge epsilon_I=1/Delta_tau     PASS
-RF-N1B2H extensive mass algebra                PASS
-Q_Sigma <-> J_I carrier binding                OPEN
-J_I <-> local conserved-current lift           OPEN
-p_IDT <-> p_Q physical state-space binding     OPEN
-RF-N1C source coupling/universality             OPEN
-```
-
-The preferred next derivation target is the finite-charge ↔ local-current lift, because it would turn the exact Floquet energy/action-charge coordinate into a local source-density transport that can be audited in the full IDT ↔ PNCS ↔ RFC physical-law loop.
