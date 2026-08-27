@@ -1,0 +1,21 @@
+{
+  "schema": "RFC_CROSS_REFERENCE_UPDATE_RECEIPT_V0_1",
+  "date": "2026-08-27",
+  "reason": "temporal information curvature formalization",
+  "previous": {
+    "tir_main": "b8c3efc17acf03f8eed5a05e9dc5019913eacef4",
+    "idt_main": "dc821fc9df4a77b0cd4b3296b139cbf374a199b2",
+    "secret_of_a_half_main": "206e49e306b246c4b0f4d182b0d32d5511739408"
+  },
+  "current": {
+    "tir_main": "d21631fe7281b5dbbad70f3a4a5f5b4876cac9f7",
+    "idt_main": "647f1652edde59d9bfd7e075fb6ed5bf02aab2fc",
+    "secret_of_a_half_main": "206e49e306b246c4b0f4d182b0d32d5511739408"
+  },
+  "new_interfaces": [
+    "TIR/integration/TIR_IDT_INFORMATION_AREA_CURVATURE_V0_1.md",
+    "IDT/formalism/01K_temporal_information_curvature_interface.md",
+    "RFC/formalism/RFL0_TEMPORAL_INFORMATION_CURVATURE_CLOSURE.md"
+  ],
+  "status": "PIN_UPDATE_RECORDED"
+}
