@@ -1,5 +1,5 @@
 {
-  "schema": "RFC_CROSS_REFERENCE_LOCK_V0_12",
+  "schema": "RFC_CROSS_REFERENCE_LOCK_V0_13",
   "status": "PHASE_CLOCK_HEXAHEDRAL_RANK3_RELATIONAL_LAPSE_CONTINUOUS_CARRIER_EULER_NOETHER_SOURCE_HOLONOMY_PINNED",
   "created": "2026-08-27",
   "updated": "2026-08-27",
@@ -34,7 +34,7 @@
       "role": "gremlin_pnv_candidate_authoring_information_holonomy_and_source_loop_contracts",
       "repository": "AdrianLipa90/PhaseNav-Natural-Coding-System",
       "ref": "feat/gremlin-pnv-authoring-v0.2",
-      "commit": "5276133cf2ab6e47b6a4737d9671a1a8f0386a11",
+      "commit": "fa517208e40873523d1c2a5b7fdb852092421afa",
       "contracts": ["PNCS_GREMLIN_NATIVE_PNV_BRIDGE_V0_2", "PNCS_PNV_INFORMATION_HOLONOMY_V0_1", "PNCS_PNV_SOURCE_HOLONOMY_LOOPS_V0_1", "PNCS_PNV_NOETHER_COLLECTIVE_CARRIER_V0_1"],
       "interfaces": ["src/phasenav_natural_code/gremlin_pnv_bridge_v02.py", "src/phasenav_natural_code/gremlin_pnv_holonomy_v01.py", "src/phasenav_natural_code/pnv_source_holonomy_v01.py", "src/phasenav_natural_code/pnv_noether_collective_holonomy_v01.py", "spec/PNCS_PNV_SOURCE_HOLONOMY_LOOPS_V0_1.md", "spec/PNCS_PNV_NOETHER_COLLECTIVE_CARRIER_V0_1.md"],
       "native_ci_state": "CI_EXECUTION_UNRESOLVED_PRE_TEST"
@@ -53,8 +53,8 @@
   "rfc_gates": ["formalism/RFL0_TEMPORAL_INFORMATION_CURVATURE_CLOSURE.md", "formalism/RF02H_HEXAHEDRAL_RANK3_SPATIAL_METRIC.md", "formalism/RF02I_HEXAHEDRAL_COFRAME_CONNECTION.md", "formalism/RFN0_RELATIONAL_LAPSE_CLOCK_DYNAMICS.md", "formalism/RFN1_HEXAHEDRAL_SOURCE_OPERATOR.md", "formalism/RFN1B_SOURCE_TYPE_IDENTIFIABILITY_FIREWALL.md", "formalism/RFN1B2_CONSERVED_SOURCE_CARRIER_FACTORIZATION.md", "formalism/RFN1B2H_NORMALIZED_SHAPE_HOLONOMY.md", "formalism/RFN1B2I_PHASE_INTENTION_ENERGY_PER_CHARGE.md", "formalism/RFN1B2J_NOETHER_COLLECTIVE_PHASE_CARRIER.md"],
   "pncs_source_holonomy_loops": ["SOURCE.CARRIER.NORMALIZATION.ROUNDTRIP", "SOURCE.CARRIER.Q0_OCCUPATION.ROUNDTRIP", "SOURCE.CARRIER.EPSILON_MASS_DENSITY.ROUNDTRIP", "SOURCE.PHASE_INTENTION.EULER_CHARGE_ENERGY.ROUNDTRIP", "SOURCE.PHASE_NOETHER.COLLECTIVE_CARRIER.ROUNDTRIP"],
   "validation_receipts": ["validation/RFL0_PHASE_CLOCK_SCALE_V0_2.json", "validation/RF02H_HEXAHEDRAL_RANK3_V0_1.json", "validation/RF02I_COFRAME_CONNECTION_V0_1.json", "validation/RFN0_RELATIONAL_LAPSE_V0_1.json", "validation/RFN1_HEXAHEDRAL_SOURCE_OPERATOR_V0_1.json", "validation/RFN1B_SOURCE_TYPE_FIREWALL_V0_1.json", "validation/RFN1B2_CONSERVED_SOURCE_CARRIER_V0_1.json", "validation/RFN1B2H_NORMALIZED_SHAPE_HOLONOMY_V0_1.json", "validation/IDT_RFC_PNCS_SOURCE_HOLONOMY_PAIR_V0_1.json"],
-  "local_validation_commits": {"paired_receipt": "5d2ddc5cd0e00e8741d6004c8862413f8b2df6cb"},
-  "executed_reference_gates": {"idt": "355/355 PASS", "rfc": "47/47 PASS"},
-  "preferred_source_chain": ["Euler/Berry closure", "J_I^EB=hbar*theta_I^EB", "P_Phi^EB=J-J_I^EB", "Q_theta=I_A*(P_Phi^EB/I_phi)", "Delta_I=abs(I_A/I_phi-1)", "epsilon_N^EB=H_Phi^EB/P_Phi^EB", "Q_Sigma <-> Q_theta OPEN", "epsilon_Q <-> epsilon_N^EB OPEN"],
-  "pinning_rule": "Both repositories pin the same PNCS Noether-collective snapshot and retain immutable tested snapshots for executed reference gates."
+  "local_validation_commits": {"paired_receipt": "af5948e061bd45f87b626df2e0c9d3ad0d4e3de3"},
+  "executed_reference_gates": {"idt": "356/356 PASS", "rfc": "48/48 PASS"},
+  "preferred_source_chain": ["Euler/Berry closure", "J_I^EB=hbar*theta_I^EB", "P_Phi^EB=J-J_I^EB", "Q_theta=I_A*(P_Phi^EB/I_phi)", "Delta_I=abs(I_A/I_phi-1)", "epsilon_N^EB=H_Phi^EB/Q_theta", "I_A=I_phi => epsilon_N^EB=(1/2)D_tau_chi", "Q_Sigma <-> Q_theta OPEN", "epsilon_Q <-> epsilon_N^EB OPEN"],
+  "pinning_rule": "Both repositories pin the same finite-Noether PNCS code snapshot and retain immutable tested snapshots for executed reference gates."
 }
