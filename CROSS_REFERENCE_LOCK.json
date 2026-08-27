@@ -1,0 +1,44 @@
+{
+  "schema": "RFC_CROSS_REFERENCE_LOCK_V0_1",
+  "status": "BOOTSTRAP_PINNED",
+  "created": "2026-08-27",
+  "upstreams": [
+    {
+      "role": "relational_information_geometry",
+      "repository": "AdrianLipa90/The-Fundamental-Theory-of-Informational-Relations",
+      "ref": "main",
+      "commit": "b8c3efc17acf03f8eed5a05e9dc5019913eacef4"
+    },
+    {
+      "role": "half_spinorial_critical_interface",
+      "repository": "AdrianLipa90/Secret-of-a-Half",
+      "ref": "main",
+      "commit": "206e49e306b246c4b0f4d182b0d32d5511739408"
+    },
+    {
+      "role": "dynamic_time_transport_clock",
+      "repository": "AdrianLipa90/Informational-Dynamics-of-Time",
+      "ref": "main",
+      "commit": "dc821fc9df4a77b0cd4b3296b139cbf374a199b2"
+    }
+  ],
+  "document_sources": [
+    {
+      "name": "Lambda_0.pdf",
+      "role": "dynamic_lambda0_einstein_maxwell_source"
+    },
+    {
+      "name": "Neutrinotime14.pdf",
+      "role": "tensor_scalar_time_and_on_shell_lambda0_conservation"
+    },
+    {
+      "name": "fluid_time.pdf",
+      "role": "scalar_time_current_and_conservation"
+    },
+    {
+      "name": "noema_fermionic_intention_fields_corrected(4).pdf",
+      "role": "fermionic_coupling_source_constraints"
+    }
+  ],
+  "rule": "Any upstream ref change requires an explicit cross-reference update receipt; no silent floating dependency."
+}

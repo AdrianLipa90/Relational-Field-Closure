@@ -1,0 +1,18 @@
+{
+  "schema": "RFC_BOOTSTRAP_MANIFEST_V0_1",
+  "status": "LOCAL_BOOTSTRAP_READY",
+  "files": {
+    "CROSS_REFERENCE_LOCK.json": "eb7100fc61d35d005332422b11dd36bfd9043730aa5e152636bdb8b949331bca",
+    "README.md": "2dbce1aa557c0d613f1b97340934b71a7461ff7ad782ef7688434d5c705cbabd",
+    "closure/einstein/README.md": "dfcf8dc703370a515cb463bfc7fd0db95b44217257578372b71d7b76d86f2019",
+    "closure/lambda0/README.md": "cf447820e0a25c3221cd930d54ba98b82b1404bb6ea4e1867137610f11917042",
+    "closure/maxwell/README.md": "fed8da739826828cce4f94fa7439442f31a20becbacb799e36dc363717296839",
+    "closure/newton/README.md": "5773d86a2fb065fb7d136371f6704f8dd86da1820c0788378226d0f4742933ff",
+    "crossrefs/UPSTREAM_CONTRACT.md": "7ee0bc20ed48716f1e7e8074a8d5c2dd52fc5d03063b2bbb8abc91d63c4545c8",
+    "formalism/DEPENDENCY_GRAPH.md": "4fad1736d618bd83e473e5d5b04ba7a47b8a5501c63de4a90d4b3caead2bfb8a",
+    "formalism/RF00_RESEARCH_CONTRACT.md": "579a26054fda84c2df2c8f74857988c10484c4a84cf104cd67726d14fbddd830",
+    "formalism/RF01_RELATIONAL_FIELD_PRIMITIVE.md": "e24f64b52c9534dec07ba07227a92082c4ebdb574ffc426d35d9a0a2cfde7834",
+    "monograph/README.md": "aa5acabada2721f62a39b8b98c873dcf57c8eea9703fb4adb4e94f723981a1b4",
+    "validation/README.md": "a4b580fa2f1ec77f965c82564201794624098e7af5094facf850ef099e523620"
+  }
+}
