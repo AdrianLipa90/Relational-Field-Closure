@@ -34,13 +34,12 @@ RF-N1B source-type firewall
   E=hbar|omega| = local phase-energy scale
   Xi_I [L^-2] = source-basis-compatible geometry scalar
   dV_h = geometric measure after physical binding
-  rho_m binding requires conserved source/occupation + measure + energy assignment
+  source binding requires conserved carrier + measure + energy assignment
                                  |
                                  v
 RF-N1B2 conserved source-carrier factorization
-  fluid_time: J_tau^mu=rho_tau u^mu, nabla_mu J_tau^mu=0
-  conserved current + dV_h -> extensive Q_Sigma (boundary-conditioned)
-  positive-source sector -> normalized carrier profile p_Q
+  conserved current + dV_h -> extensive Q_Sigma
+  positive-source sector -> normalized p_Q
   Q_a=Q_Sigma p_a^(Q)
                                  |
                                  v
@@ -49,7 +48,15 @@ RF-N1B2H normalized-shape / extensive-scale holonomy
   H_s(Q)=L_s(N(Q))=(s/Q_Sigma)Q
   Delta_ext=|1-s/Q_Sigma|
   exact inverse lift at s=Q_Sigma
-  m_Q,a=M_Q p_a^(Q), M_Q=epsilon_Q Q_Sigma/c^2
+                                 |
+                                 v
+IDT 01Y / RF-N1B2I Euler-closed phase-energy normalization
+  Phi_tot=2 pi(D+epsilon_EB)
+  theta_I^EB = closure residual
+  J_I^EB=hbar theta_I^EB
+  H_Phi^EB=(J-J_I^EB)^2/(2 I_phi)
+  epsilon_I^EB=H_Phi^EB/J_I^EB
+  Delta_tau_eff^EB=J_I^EB/H_Phi^EB
                                  |
                                  v
 PNCS physical-law frame / executable holonomy
@@ -57,17 +64,18 @@ PNCS physical-law frame / executable holonomy
   PNCS_PNV_SOURCE_HOLONOMY_LOOPS_V0_1
   Q_a <-> (Q_Sigma,p_Q) exact control loop
   Q_a <-> n_a through conditional q0
-  j_Q <-> rho_Q through conditional epsilon_Q
+  j_Q <-> rho_Q through downstream conditional epsilon_Q
+  Euler/Berry -> J_I^EB -> H_Phi^EB -> epsilon_I^EB round trip
   Delta_gamma=d(I,H_gamma(I)) + invariant defects + inverse lineage
                                  |
                 +----------------+----------------+
                 |                                 |
                 v                                 v
-source normalization OPEN                 bounded candidate basis
- Q_Sigma / epsilon_Q / M_Q                S_R=beta_I Xi_I+...
- IDT 01X-RFC p <-> p_Q cross-binding      CANDIDATE_ONLY
- q0 / E-per-carrier binding
- temporal/phase carrier <-> rho_m
+physical source binding OPEN              bounded candidate basis
+ Q_Sigma <-> J_I^EB                       S_R=beta_I Xi_I+...
+ J_I^EB <-> integral j_I dV_h             CANDIDATE_ONLY
+ p_IDT <-> p_Q
+ local cell/measure transport
                 |                                 |
                 +----------------+----------------+
                                  |
@@ -75,7 +83,7 @@ source normalization OPEN                 bounded candidate basis
 RF-N1C coupling/universality audit
   Delta_h ln N_R = S_R
   Delta_h Phi_R = c^2 S_R
-  target: c^2 S_R ?= 4 pi G rho_m
+  target diagnostic: c^2 S_R ?= 4 pi G rho_m
   G OPEN
                                  |
                                  v
@@ -100,38 +108,41 @@ Every downstream promotion is limited by its weakest unresolved prerequisite.
 - `IDT 05C`: EXACT CLOCK-RATIO PASS — `N_R>0`, dimensionless, reparameterization invariant, compositional.
 - `RF-N0`: exact conditional geodesic kinematics after temporal-coframe binding; `Phi_R=c^2 ln N_R`, weak local force form `a=-grad Phi_R+...`.
 - `RF-N1A`: LOCAL EXACT OPERATOR PASS — IDT graph response plus hexahedral symmetry yields the Laplace principal operator from the admitted graph-response and symmetry premises.
-- `RF-N1B type separation`: EXACT PASS at the cited interfaces. `rho_R` carries relational kinetic/mobility typing; `rho_R <-> rho_m` remains an explicit OPEN physical binding. `E=hbar|omega|` carries energy typing. `Xi_I` carries the required `L^-2` source-basis type; matter-source semantics remain an explicit binding gate.
-- `RF-N1B conditional phase-cell bridge`: exact algebra once `V_H=a_H^3`, `E=hbar|omega|` and a source occupation `n_E` are separately admitted: `rho_cell=6 sqrt(6) n_E hbar |omega|^4/c^5`. Physical source occupation and cell-volume semantics remain OPEN.
-- `RF-N1B identifiability theorem`: EXACT for the current premise set — different free occupation maps or source coefficients give different matter/source laws while preserving the already-derived geometry, lapse kinematics and source operator. Unique `rho_m` and unique `G` therefore remain OPEN at this premise level.
-- `RF-N1B universality diagnostic`: CANDIDATE TEST. If independent derivations later give both `S_R=beta_I Xi_I` and the phase-cell matter bridge, Newton matching requires `G=[beta_I J_pi/(24 pi sqrt(6) n_E a_FS)] c^5/(hbar omega^2)`. Status: consistency condition; independent `G` derivation remains OPEN.
-- `RF-N1B2 conserved continuous carrier`: PASS at the stated conditional level. `fluid_time.pdf` supplies `J_tau^mu=rho_tau u^mu` with `nabla_mu J_tau^mu=0`; any admitted conserved current plus the RF physical spatial measure gives an extensive slice carrier `Q_Sigma` under vanishing side flux / periodic / sufficient-decay conditions. On a positive-source sector it factorizes as `Q_a=Q_Sigma p_a^(Q)` with normalized `p_a^(Q)`.
-- `RF-N1B2H normalization holonomy`: EXACT PASS for the positive finite-cell factorization. The normalization map is constant on positive rays; the lift holonomy is `H_s(Q)=(s/Q_Sigma)Q`; the relative extensive defect is `Delta_ext=|1-s/Q_Sigma|`; exact inverse transport uses the preserved scale coordinate. The continuous source conversion combines into the extensive coordinate `M_Q=epsilon_Q Q_Sigma/c^2`, with `m_Q,a=M_Q p_a^(Q)` and `rho_Q,a=M_Q p_a^(Q)/V_a`.
-- `RF-N1B2H IDT interface`: REFERENCE/ANALYTIC PASS with physical cross-binding OPEN. IDT `01X-RFC` exports normalized simplex shape and the exact scale-fiber theorem; physical admission awaits a pinned common state space, cell partition/measure, and transport compatibility.
-- `PNCS source-law frame`: REFERENCE IMPLEMENTED. Both IDT and RFC pin PNCS code snapshot `5f3bf90998b8c3547d51e7c47bddaf0d6be25d60` and contracts `PNCS_PNV_INFORMATION_HOLONOMY_V0_1` / `PNCS_PNV_SOURCE_HOLONOMY_LOOPS_V0_1`.
-- `SOURCE.CARRIER.NORMALIZATION.ROUNDTRIP`: reference exact control loop for `Q_a -> (Q_Sigma,p_Q) -> Q_a'`, with `SOURCE.TOTAL_Q` and `SOURCE.PROFILE_NORM` as explicit invariants.
-- `SOURCE.CARRIER.Q0_OCCUPATION.ROUNDTRIP`: CONDITIONAL on an independently admitted positive `q0`; transports `Q_a -> n_a=Q_a/q0 -> Q_a'`.
-- `SOURCE.CARRIER.EPSILON_MASS_DENSITY.ROUNDTRIP`: CONDITIONAL on an independently admitted positive `epsilon_Q`; transports `j_Q -> rho_Q=(epsilon_Q/c^2)j_Q -> j_Q'`.
-- `paired IDT/RFC reference validation`: PASS. IDT full reference suite: `337 passed`; RFC full reference suite: `29 passed`. Shared receipt: `validation/IDT_RFC_PNCS_SOURCE_HOLONOMY_PAIR_V0_1.json`.
-- `PNCS native source-loop workflow`: `CI_EXECUTION_UNRESOLVED_PRE_TEST`; this remains a separate execution admission gate for the PNCS code snapshot.
-- `RF-N1B2 normalization frontier`: OPEN. Carrier quantum `q0`, energy-per-carrier conversion `epsilon_Q`, combined physical source-mass scale `M_Q`, the physical `p_IDT <-> p^(Q)` cross-binding, and temporal/phase carrier to ordinary matter binding remain the explicit prerequisites before RF-N1C.
+- `RF-N1B type separation`: EXACT PASS at the cited interfaces. `rho_R` carries relational kinetic/mobility typing; `E=hbar|omega|` carries energy typing; `Xi_I` carries the required `L^-2` source-basis type. Matter-source semantics remain an explicit binding gate.
+- `RF-N1B2 conserved continuous carrier`: PASS at the stated conditional level. An admitted conserved current plus the RF physical spatial measure gives an extensive slice carrier `Q_Sigma` under the declared boundary conditions. On a positive-source sector it factorizes as `Q_a=Q_Sigma p_a^(Q)`.
+- `RF-N1B2H normalization holonomy`: EXACT PASS for the positive finite-cell factorization. Exact inverse transport uses the preserved scale coordinate.
+- `RF-N1B2H IDT interface`: REFERENCE/ANALYTIC PASS with physical cross-binding OPEN. IDT 01X exports normalized simplex shape and the exact scale-fiber theorem.
+- `RF-N1B2I Euler-closed action charge`: PASS for `theta_I^EB -> J_I^EB=hbar theta_I^EB` after the declared Euler/Berry closure input.
+- `RF-N1B2I rotor energy`: PASS for `H_Phi^EB=(J-J_I^EB)^2/(2 I_phi)` with `I_phi>0`.
+- `RF-N1B2I energy/action-charge`: PASS_CONDITIONAL on the positive non-degenerate sector: `epsilon_I^EB=H_Phi^EB/J_I^EB`; `Delta_tau_eff^EB=1/epsilon_I^EB` is then reconstructed.
+- `RFC epsilon_Q binding`: OPEN physical carrier gate `Q_Sigma <-> J_I^EB`, followed by `epsilon_Q <-> epsilon_I^EB` in the admitted bound sector.
+- `finite/local current lift`: OPEN gate `J_I^EB <-> integral_Sigma j_I dV_h`; this is the immediate source-normalization frontier.
+- `PNCS source-law frame`: REFERENCE IMPLEMENTED at code snapshot `e6d5e217aeed2906372fdd0aa41845f0df32bbae`, with contracts `PNCS_PNV_INFORMATION_HOLONOMY_V0_1` and `PNCS_PNV_SOURCE_HOLONOMY_LOOPS_V0_1`.
+- `SOURCE.CARRIER.NORMALIZATION.ROUNDTRIP`: reference exact control for `Q_a -> (Q_Sigma,p_Q) -> Q_a'`.
+- `SOURCE.CARRIER.Q0_OCCUPATION.ROUNDTRIP`: CONDITIONAL on positive `q0`.
+- `SOURCE.CARRIER.EPSILON_MASS_DENSITY.ROUNDTRIP`: downstream CONDITIONAL consumer of an admitted positive `epsilon_Q`.
+- `SOURCE.PHASE_INTENTION.EULER_CHARGE_ENERGY.ROUNDTRIP`: Euler-first normalization control with invariants `SOURCE.EULER_CLOSURE_SECTOR`, `SOURCE.INTENTION_ACTION_CHARGE`, `SOURCE.ROTOR_PHASE_ENERGY`, `SOURCE.ENERGY_PER_ACTION_CHARGE`.
+- `paired IDT/RFC reference validation`: PASS on pinned test snapshots. IDT: `348 passed`; RFC: `40 passed`. Shared receipt: `validation/IDT_RFC_PNCS_SOURCE_HOLONOMY_PAIR_V0_1.json`.
+- `PNCS native source-loop workflow`: `CI_EXECUTION_UNRESOLVED_PRE_TEST`; observed job `steps=null`, so PNCS native execution remains a separate admission gate.
+- `RF-N1B2I normalization frontier`: `Q_Sigma <-> J_I^EB`, finite-charge ↔ conserved-local-current lift, `p_IDT <-> p_Q`, and local measure/cell transport are the explicit prerequisites before RF-N1C.
 - `TIR mass sector`: active TIR claim hierarchy classifies the exponential mass ansatz as class B/C depending on sector. Newton-source import remains a separate OPEN gate.
-- `RF-M2`, carrier normalization/matter binding, `RF-N1C`, `RF-L1`, `RF-E1`: OPEN.
+- `RF-M2`, physical carrier/current binding, `RF-N1C`, `RF-L1`, `RF-E1`: OPEN.
 
 ## Information-holonomy connection audit
 
-The cross-repository architecture is now
+The cross-repository architecture is
 
 \[
 \boxed{
-\mathrm{IDT}
+\mathrm{IDT\ 01X/01Y}
 \leftrightarrow
 \mathrm{PNV\ physical\! -\! law\ frame}
 \leftrightarrow
-\mathrm{RFC}.
+\mathrm{RFC\ RF\! -\! N1B2H/I}.
 }
 \]
 
-For each admitted or conditional transport edge \(T_{i\to j}\), PNV carries an explicit operator and the loop audit records
+For each admitted or conditional transport edge \(T_{i\to j}\), PNV carries an explicit operator and records
 
 \[
 \mathcal H_\gamma=T_{n-1}\cdots T_1T_0,
@@ -139,6 +150,21 @@ For each admitted or conditional transport edge \(T_{i\to j}\), PNV carries an e
 \Delta_\gamma=d(I,\mathcal H_\gamma I).
 \]
 
-The receipt also carries declared invariant defects and inverse lineage to KAKU/RADICAL/OPERATOR evidence. This turns `RF-N1B2H` into the first executable connection-control layer in the source branch rather than a document-only cross-reference.
+The receipt carries declared invariant defects and inverse lineage to KAKU/RADICAL/OPERATOR evidence.
 
-The next source-law closure target is an independent derivation of `epsilon_Q`, or equivalently an independently derived `q0` plus per-carrier energy assignment, from the admitted phase/time Hamiltonian. The resulting normalization enters PNCS as an explicit transport edge and must close a declared information-holonomy loop before advancing the RF-N1C source-coupling audit.
+The immediate source-law closure target is now the physical current/carrier bridge:
+
+\[
+\boxed{
+J_I^{EB}
+\stackrel{?}{\longleftrightarrow}
+Q_\Sigma
+=\int_{\Sigma_t}j_Q\,dV_h,
+\qquad
+J_I^{EB}
+\stackrel{?}{\longleftrightarrow}
+\int_{\Sigma_t}j_I\,dV_h.
+}
+\]
+
+A successful binding feeds the Euler-derived `epsilon_I^EB` into the conditional RFC density transport and then into the RF-N1C coupling/universality audit.
