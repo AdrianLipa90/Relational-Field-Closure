@@ -1,0 +1,42 @@
+{
+  "schema": "RFC_RFN0_RELATIONAL_LAPSE_RECEIPT_V0_1",
+  "status": "PASS_LOCAL_EXACT_KINEMATICS",
+  "date": "2026-08-27",
+  "branch": "feat/rfn0-relational-lapse-v0.1",
+  "formalism": "formalism/RFN0_RELATIONAL_LAPSE_CLOCK_DYNAMICS.md",
+  "reference_test": "validation/test_rfn0_relational_lapse.py",
+  "upstream_idt": {
+    "branch": "feat/relational-lapse-interface-v0.1",
+    "commit": "e3cbcd39f2cc9ea8f3e08f613aa5124de1c4dac4",
+    "interface": "formalism/05C_relational_lapse_interface.md"
+  },
+  "local_reference_execution": {
+    "status": "PASS",
+    "passed": 7,
+    "failed": 0,
+    "total": 7,
+    "checks": [
+      "lapse_ratio_positive",
+      "lapse_metric_lorentzian_inertia",
+      "static_acceleration_lapse_gradient",
+      "Phi_R_exact_gradient_relation",
+      "weak_lapse_force_form",
+      "kinetic_gradient_acceleration_decomposition",
+      "density_viscosity_drive_decomposition"
+    ]
+  },
+  "exact_results": {
+    "relational_lapse": "N_R=phi_x/phi_ref>0",
+    "temporal_coframe_candidate": "Theta_R=N_R c dt",
+    "static_metric": "ds^2=-N_R^2 c^2 dt^2+h_ij dX^i dX^j",
+    "Christoffel": "Gamma^i_tt=c^2 N_R h^ij partial_j N_R",
+    "slow_acceleration": "a^i=-c^2 N_R h^ij partial_j N_R + corrections",
+    "lapse_potential": "Phi_R=c^2 ln N_R",
+    "potential_acceleration": "a^i=-N_R^2 h^ij partial_j Phi_R + corrections",
+    "fixed_reference_kinetic_gradient": "partial ln N_R=partial ln M + 1/2 tanh(A/2) partial A"
+  },
+  "weak_limit": "For N_R=1+epsilon and locally Euclidean physical h, a^i=-partial^i Phi_R plus higher-order corrections.",
+  "open_source_gate": "No Poisson equation or Newton constant normalization is used or derived at RF-N0. RF-N1 must derive the source equation independently.",
+  "claim_promotion": "KINEMATIC_LIMIT_PASS_CANDIDATE_ONLY",
+  "gremlin_authority": "candidate_generation_and_audit_only"
+}

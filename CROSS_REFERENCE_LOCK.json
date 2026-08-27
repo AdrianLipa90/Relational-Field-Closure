@@ -1,6 +1,6 @@
 {
-  "schema": "RFC_CROSS_REFERENCE_LOCK_V0_4",
-  "status": "PHASE_CLOCK_AND_HEXAHEDRAL_RANK3_PINNED",
+  "schema": "RFC_CROSS_REFERENCE_LOCK_V0_5",
+  "status": "PHASE_CLOCK_HEXAHEDRAL_RANK3_AND_RELATIONAL_LAPSE_PINNED",
   "created": "2026-08-27",
   "updated": "2026-08-27",
   "upstreams": [
@@ -21,13 +21,15 @@
       "commit": "206e49e306b246c4b0f4d182b0d32d5511739408"
     },
     {
-      "role": "dynamic_time_phase_clock_length_and_information_curvature",
+      "role": "dynamic_time_phase_clock_length_information_curvature_and_relational_lapse",
       "repository": "AdrianLipa90/Informational-Dynamics-of-Time",
-      "ref": "feat/phase-clock-length-scale-v0.1",
-      "commit": "f90435edbfbba8211e6c28cc49a7c22f8059021b",
+      "ref": "feat/relational-lapse-interface-v0.1",
+      "commit": "e3cbcd39f2cc9ea8f3e08f613aa5124de1c4dac4",
       "interfaces": [
         "formalism/01K_temporal_information_curvature_interface.md",
-        "formalism/01L_phase_clock_length_scale.md"
+        "formalism/01L_phase_clock_length_scale.md",
+        "formalism/05A_internal_elapsed_activity.md",
+        "formalism/05C_relational_lapse_interface.md"
       ]
     }
   ],
@@ -51,11 +53,15 @@
   ],
   "rfc_gates": [
     "formalism/RFL0_TEMPORAL_INFORMATION_CURVATURE_CLOSURE.md",
-    "formalism/RF02H_HEXAHEDRAL_RANK3_SPATIAL_METRIC.md"
+    "formalism/RF02H_HEXAHEDRAL_RANK3_SPATIAL_METRIC.md",
+    "formalism/RF02I_HEXAHEDRAL_COFRAME_CONNECTION.md",
+    "formalism/RFN0_RELATIONAL_LAPSE_CLOCK_DYNAMICS.md"
   ],
   "validation_receipts": [
     "validation/RFL0_PHASE_CLOCK_SCALE_V0_2.json",
-    "validation/RF02H_HEXAHEDRAL_RANK3_V0_1.json"
+    "validation/RF02H_HEXAHEDRAL_RANK3_V0_1.json",
+    "validation/RF02I_COFRAME_CONNECTION_V0_1.json",
+    "validation/RFN0_RELATIONAL_LAPSE_V0_1.json"
   ],
   "rule": "Any upstream ref change requires an explicit cross-reference update receipt; no silent floating dependency."
 }
