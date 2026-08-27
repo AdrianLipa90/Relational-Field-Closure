@@ -26,6 +26,6 @@ jobs:
         with:
           python-version: '3.12'
       - name: Install reference dependencies
-        run: python -m pip install pytest
+        run: python -m pip install pytest numpy
       - name: Run RFC reference suite
         run: python -m pytest -q tests/reference
