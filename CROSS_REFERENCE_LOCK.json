@@ -1,15 +1,18 @@
 {
-  "schema": "RFC_CROSS_REFERENCE_LOCK_V0_3",
-  "status": "PHASE_CLOCK_INFORMATION_CURVATURE_PINNED",
+  "schema": "RFC_CROSS_REFERENCE_LOCK_V0_4",
+  "status": "PHASE_CLOCK_AND_HEXAHEDRAL_RANK3_PINNED",
   "created": "2026-08-27",
   "updated": "2026-08-27",
   "upstreams": [
     {
-      "role": "relational_information_geometry_phase_clock_area_scale",
+      "role": "relational_information_geometry_phase_clock_area_and_hexahedral_rank3",
       "repository": "AdrianLipa90/The-Fundamental-Theory-of-Informational-Relations",
-      "ref": "agent/phase-clock-area-scale-v0.2",
-      "commit": "b69ba6055c0535c666e12dbba069ffb87238eee6",
-      "interface": "TIR/integration/TIR_IDT_INFORMATION_AREA_CURVATURE_V0_2.md"
+      "ref": "agent/hexahedral-bloch-frame-v0.1",
+      "commit": "a2e7003599b13a7b38c0860ecfdcf1c012780c92",
+      "interfaces": [
+        "TIR/integration/TIR_IDT_INFORMATION_AREA_CURVATURE_V0_2.md",
+        "TIR/integration/TIR_HEXAHEDRAL_BLOCH_DUAL_FRAME_V0_1.md"
+      ]
     },
     {
       "role": "half_spinorial_critical_interface",
@@ -46,7 +49,13 @@
       "role": "fermionic_coupling_source_constraints"
     }
   ],
-  "rfc_gate": "formalism/RFL0_TEMPORAL_INFORMATION_CURVATURE_CLOSURE.md",
-  "validation_receipt": "validation/RFL0_PHASE_CLOCK_SCALE_V0_2.json",
+  "rfc_gates": [
+    "formalism/RFL0_TEMPORAL_INFORMATION_CURVATURE_CLOSURE.md",
+    "formalism/RF02H_HEXAHEDRAL_RANK3_SPATIAL_METRIC.md"
+  ],
+  "validation_receipts": [
+    "validation/RFL0_PHASE_CLOCK_SCALE_V0_2.json",
+    "validation/RF02H_HEXAHEDRAL_RANK3_V0_1.json"
+  ],
   "rule": "Any upstream ref change requires an explicit cross-reference update receipt; no silent floating dependency."
 }
