@@ -36,13 +36,21 @@ RF-N1B source-type firewall
   dV_h = geometric measure after physical binding
   rho_m requires conserved source/occupation + measure + energy assignment
                                  |
+                                 v
+RF-N1B2 conserved source-carrier factorization
+  fluid_time: J_tau^mu=rho_tau u^mu, nabla_mu J_tau^mu=0
+  conserved current + dV_h -> extensive Q_Sigma (boundary-conditioned)
+  positive-source sector -> normalized carrier profile p_Q
+  Q_a=Q_Sigma p_a^(Q)
+                                 |
                 +----------------+----------------+
                 |                                 |
                 v                                 v
-RF-N1B source carrier/measure OPEN      bounded candidate basis
- conserved current/occupation n_E       S_R=beta_I Xi_I+...
- physical source volume V               NO PROMOTION
- energy/rest-mass assignment
+source normalization OPEN                 bounded candidate basis
+ q0 or epsilon_Q                          S_R=beta_I Xi_I+...
+ IDT p <-> p_Q cross-binding              NO PROMOTION
+ E-per-carrier binding
+ temporal/phase carrier <-> rho_m
                 |                                 |
                 +----------------+----------------+
                                  |
@@ -79,5 +87,7 @@ No downstream node may be promoted above its weakest unresolved prerequisite.
 - `RF-N1B conditional phase-cell bridge`: exact algebra once `V_H=a_H^3`, `E=hbar|omega|` and a source occupation `n_E` are separately admitted: `rho_cell=6 sqrt(6) n_E hbar |omega|^4/c^5`. Physical source occupation and cell-volume semantics remain OPEN.
 - `RF-N1B identifiability theorem`: EXACT for the current premise set — different free occupation maps or source coefficients give different matter/source laws while preserving the already-derived geometry, lapse kinematics and source operator. Therefore neither unique `rho_m` nor unique `G` is determined yet.
 - `RF-N1B universality diagnostic`: CANDIDATE TEST. If independent derivations later give both `S_R=beta_I Xi_I` and the phase-cell matter bridge, Newton matching requires `G=[beta_I J_pi/(24 pi sqrt(6) n_E a_FS)] c^5/(hbar omega^2)`. This is a consistency condition, not a derivation or definition of `G`.
+- `RF-N1B2 conserved continuous carrier`: PASS at the stated conditional level. `fluid_time.pdf` supplies `J_tau^mu=rho_tau u^mu` with `nabla_mu J_tau^mu=0`; any admitted conserved current plus the RF physical spatial measure gives an extensive slice carrier `Q_Sigma` under vanishing side flux / periodic / sufficient-decay conditions. On a positive-source sector it factorizes as `Q_a=Q_Sigma p_a^(Q)` with normalized `p_a^(Q)`.
+- `RF-N1B2 normalization firewall`: OPEN. The current equations do not fix a carrier quantum `q0`, an energy-per-carrier conversion `epsilon_Q`, the identification `p_IDT=p^(Q)`, or the binding of temporal/phase carrier density to ordinary matter density. These are now the minimal prerequisites before RF-N1C.
 - `TIR mass sector`: active TIR claim hierarchy classifies the exponential mass ansatz as class B/C depending on sector and not as a universal established mass law; it is not imported as the Newton source.
-- `RF-M2`, conserved physical source carrier/measure, `RF-N1C`, `RF-L1`, `RF-E1`: OPEN.
+- `RF-M2`, carrier normalization/matter binding, `RF-N1C`, `RF-L1`, `RF-E1`: OPEN.
