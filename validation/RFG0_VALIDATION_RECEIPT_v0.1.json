@@ -1,0 +1,26 @@
+{
+  "schema": "RFC_RFG0_VALIDATION_RECEIPT_V0_1",
+  "status": "EXACT_SIGNATURE_THEOREM_PASS__SPATIAL_BINDING_OPEN",
+  "date": "2026-08-27",
+  "theorems": [
+    "single CP1 pullback rank <= 2",
+    "g = -Theta⊗Theta + h_perp has signature (-,+,+,+) when h_perp is positive on ker Theta",
+    "null cone iff h_perp(v,v)=a^2 for X=a u+v",
+    "metric inertia is invariant under nonsingular coordinate changes",
+    "Poincare negative curvature is compatible with a positive-definite spatial metric"
+  ],
+  "tests": {
+    "file": "validation/test_rfg0_temporal_reflection.py",
+    "result": "6 passed",
+    "runtime": "0.003 s"
+  },
+  "open_dependencies": [
+    "RF-02 rank-three polyhedral/refinement spatial metric",
+    "canonical IDT temporal one-form binding",
+    "physical clock/length normalization",
+    "Newton weak-field gate",
+    "Einstein-Bianchi dynamics"
+  ],
+  "claim_promotion": false,
+  "gremlin_authority": "candidate_generation_and_audit_only"
+}

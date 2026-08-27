@@ -1,21 +1,22 @@
 # Monograph layer
 
-The monograph tracks the formalism but keeps exact geometry separate from open physical bindings.
+Current working monograph:
 
-Current working volume: `RELATIONAL_FIELD_CLOSURE_MONOGRAPH_v0.2.md`.
+- `RELATIONAL_FIELD_CLOSURE_MONOGRAPH_v0.3.md`
+- status: `EARLY_FORMALISM / EXACT_QGT_AND_SIGNATURE_RESULTS / PHYSICAL_FIELD_CLOSURE_OPEN`
 
-Chapter order:
+The monograph remains downstream of the formalism/evidence layers. Exact local theorems may be documented immediately with their open physical bindings stated explicitly; target field equations are never promoted by resemblance.
 
-1. pinned upstream foundations,
-2. spin-1/2, \(\mathbb{CP}^1\) and the Bloch sphere,
-3. the quantum geometric tensor,
-4. polyhedral invariants from tetrahedral/hexahedral cells to refinement,
-5. Euler--Berry closure and the Poincare/signature gate,
-6. Berry connection and the Maxwell candidate,
-7. phase-energy transfer, spectroscopy and the photoelectric bridge,
-8. IDT temporal orientation and Newton weak-field gate,
-9. dynamic \(\Lambda_0\),
-10. Einstein--Bianchi closure,
-11. unified limits and Resonant Chemistry tests.
+Current chapter order:
 
-A chapter may contain exact mathematical identities before a downstream physical identification is admitted, but the evidential status of each layer must be stated explicitly.
+1. pinned TIR + Secret of a Half + IDT foundation,
+2. spin-1/2 / Bloch / CP1 geometry,
+3. quantum geometric tensor,
+4. polyhedral invariants and rank firewall,
+5. Euler--Berry closure,
+6. RF-G0 Lorentzian temporal reflection,
+7. Poincare curvature gate,
+8. Berry/Maxwell branch,
+9. phase-energy/photoelectric bridge,
+10. dynamic Lambda0 and Einstein-Bianchi target,
+11. derivation frontier.

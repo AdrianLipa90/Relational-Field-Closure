@@ -1,6 +1,6 @@
 # Relational Field Closure
 
-**Status:** EARLY_FORMALISM / QGT_GEOMETRY_ADMITTED / PHYSICAL_FIELD_BINDING_OPEN
+**Status:** `EARLY_FORMALISM / EXACT_QGT_AND_LORENTZ_SIGNATURE_RESULTS / PHYSICAL_CLOSURE_OPEN`
 
 Relational Field Closure (RFC) is a derivation-first research repository testing whether Maxwell, Newton and Einstein field structures can be obtained from three pinned upstream theories:
 
@@ -8,104 +8,85 @@ Relational Field Closure (RFC) is a derivation-first research repository testing
 2. **Secret of a Half**
 3. **Informational Dynamics of Time (IDT)**
 
-The working geometric bridge is the spin-1/2 projective state space
+The repository also carries dynamic `Lambda0` as the candidate scalar closure entering the Einstein sector.
+
+## Current exact structural results
+
+### Quantum geometric tensor
+
+For a projective state,
 
 \[
-\mathbb{CP}^1 \simeq S^2_{\rm Bloch},
-\]
-
-with the quantum geometric tensor (QGT)
-
-\[
-Q_{\mu\nu}=\langle D_\mu\psi|D_\nu\psi\rangle.
-\]
-
-Its real part supplies Fubini--Study metric data and its imaginary part supplies Berry curvature data. RFC tests whether these two projections can be promoted, through explicit temporal, continuum and calibration gates, into physical metric and electromagnetic field structures.
-
-The dynamic \(\Lambda_0\) program is retained as the candidate scalar closure in the Einstein sector. Its admissible scalar content and conservation law are to be re-derived rather than copied as premises.
-
-## Current dependency graph
-
-```text
-TIR + Secret-of-a-Half + IDT
-        |
-        v
-RF-00  pinned cross-reference contract
-        |
-        v
-RF-01  spin-1/2 / CP1 quantum geometric tensor
-        |
-        v
-RF-02  polyhedral geometric invariants and refinement
-        |
-        v
-RF-03  Euler-Berry real/complex closure
-       / \
-      /   \
-     v     v
-RF-M0       RF-G0
-Berry       IDT temporal orientation
-one-form    + metric-signature gate
-     |             |
-     v             v
-RF-M1         RF-N1 Newton weak-field gate
-F=dA              |
-     |             |
-     +---- RF-P1 --+
-          phase-energy / photoelectric bridge
-                 |
-                 v
-        RF-L1 dynamic Lambda0 scalar closure
-                 |
-                 v
-        RF-E1 Einstein-Bianchi closure
-                 |
-                 v
-        RF-X1 unified limit + Resonant Chemistry interface
-```
-
-## Exact geometric core already available
-
-For a normalized qubit/spinor
-
-\[
-|\psi\rangle=\begin{pmatrix}\cos(\theta/2)\\ e^{i\varphi}\sin(\theta/2)\end{pmatrix},
-\]
-
-the projective state lies on \(\mathbb{CP}^1\). With a fixed convention,
-
-\[
-\mathrm{Re}\,Q_{\mu\nu}=g^{\rm FS}_{\mu\nu},\qquad
-2\,\mathrm{Im}\,Q_{\mu\nu}=\Omega_{\mu\nu},
-\]
-
-and the Berry connection and curvature are
-
-\[
-\mathcal A_\mu=-i\langle\psi|\partial_\mu\psi\rangle,
+Q_{\mu\nu}=\langle D_\mu\psi|D_\nu\psi\rangle,
 \qquad
-\mathcal F=d\mathcal A.
+\Re Q=g^{FS},
+\qquad
+2\Im Q=\Omega.
 \]
 
-On the Bloch sphere one gauge gives
+### Single-Bloch rank firewall
+
+A pullback from a single `CP1` has rank at most two. A nondegenerate 3+1 geometry therefore requires a multi-state/polyhedral configuration or a higher-dimensional projective state space.
+
+### RF-G0 Lorentzian signature theorem
+
+Given a nonvanishing IDT temporal one-form `Theta` on a four-dimensional base and a positive-definite rank-three spatial metric `h_perp` on `ker(Theta)`, define
 
 \[
-\mathcal F=\frac12\sin\theta\,d\theta\wedge d\varphi.
+\boxed{g_L=-\Theta\otimes\Theta+h_\perp.}
 \]
 
-This exact factor \(1/2\) is cross-referenced to the spinorial \(2\pi/4\pi\) structure, without identifying distinct involutions or promoting a physical field equation prematurely.
+Then
+
+\[
+\boxed{\operatorname{signature}(g_L)=(-,+,+,+).}
+\]
+
+The associated null cone satisfies
+
+\[
+g_L(a u+v,a u+v)=0
+\iff
+h_\perp(v,v)=a^2.
+\]
+
+The signature result is exact. The physical binding of `h_perp` to the hexahedral/higher invariant hierarchy and of `Theta` to the current IDT clock object remains open.
+
+## Curvature/sign separation
+
+The Poincare metric is positive definite even though its curvature is negative. RFC therefore treats Poincare as a curvature/refinement gate and IDT temporal orientation as the Lorentzian signature gate.
+
+## Phase-energy bridge
+
+The current bridge from phase to transferred energy is
+
+\[
+E=\hbar\omega
+=\hbar\frac{d\varphi/d\tau}{dt/d\tau}.
+\]
+
+This controls both bound spectroscopy and the photoelectric threshold and later feeds stress-energy bookkeeping.
 
 ## Repository layers
 
-- `formalism/` — equations, type signatures and dependency gates
-- `closure/maxwell/` — Berry/gauge curvature to Maxwell closure
-- `closure/newton/` — weak-field limit and force-law closure
-- `closure/einstein/` — Lorentzian metric, stress-energy and Bianchi closure
-- `closure/lambda0/` — dynamic \(\Lambda_0\) scalar and conservation contract
-- `crossrefs/` — pinned upstream references and source contracts
-- `validation/` — exact identities, preregistration and GREMLIN candidate audits
-- `monograph/` — derivation narrative tracking the admitted formalism
+- `formalism/` — equations, theorems and dependency gates
+- `closure/maxwell/` — Maxwell derivation and tests
+- `closure/newton/` — Newtonian limit derivation and tests
+- `closure/einstein/` — Einstein/Bianchi closure and tests
+- `closure/lambda0/` — dynamic `Lambda0` derivation and conservation contract
+- `crossrefs/` — pinned upstream references
+- `validation/` — symbolic/numerical receipts and bounded GREMLIN audits
+- `monograph/` — derivation narrative
+
+## Immediate frontier
+
+1. derive a rank-three positive spatial metric from the polyhedral/hexahedral refinement hierarchy;
+2. bind the IDT temporal one-form and clock normalization;
+3. derive lapse/shift dynamics;
+4. derive the Newton weak-field limit;
+5. close Maxwell sourced dynamics;
+6. derive dynamic `Lambda0` and Einstein-Bianchi closure.
 
 ## Claim firewall
 
-A target equation is never a derivation input. No result is promoted because it resembles Maxwell, Newton or Einstein. Exact projective/Berry/Fubini--Study identities are separated from the still-open physical bindings: Lorentzian signature, spacetime interpretation, Planck normalization, sourced Maxwell dynamics, Newtonian limit and Einstein--Bianchi closure.
+Target equations remain validation targets. No known field equation may be inserted upstream and then counted as derived.
