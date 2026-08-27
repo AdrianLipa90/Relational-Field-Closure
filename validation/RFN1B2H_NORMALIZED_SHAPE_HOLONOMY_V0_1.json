@@ -1,6 +1,6 @@
 {
   "schema": "RFC_RFN1B2H_NORMALIZED_SHAPE_HOLONOMY_V0_1",
-  "status": "PASS_ANALYTIC_AND_REFERENCE__NATIVE_PNV_MODULE_EXECUTION_OPEN__PHYSICAL_CROSS_BINDING_OPEN",
+  "status": "PASS_ANALYTIC_REFERENCE_AND_RFC_SUITE__PNCS_NATIVE_CI_PRE_TEST__PHYSICAL_CROSS_BINDING_OPEN",
   "rfc_base": {
     "branch": "feat/rfn1b2-conserved-source-carrier-v0.1",
     "commit": "66a6f9385a62dc473a0b2a02c0bfed26175b123a"
@@ -8,6 +8,7 @@
   "rfc_artifacts": {
     "formalism": "formalism/RFN1B2H_NORMALIZED_SHAPE_HOLONOMY.md",
     "formalism_commit": "2e4a20cf0a9244b37fc5ed7cf1fdd29e227f41b9",
+    "dependency_graph_commit": "6f9d49b21b5ba660733bb1d424caf208121cb4cf",
     "pnv": "experiments/gremlin_pnv/RFN1B2H_NORMALIZED_SHAPE_HOLONOMY.pnv",
     "pnv_commit": "4d2e60c91b6da9dda001d97e2a96fd7c20ebe480",
     "reference_test": "tests/reference/test_rfn1b2h_normalized_shape_holonomy.py",
@@ -18,15 +19,29 @@
     "branch": "feat/idt-rfc-normalized-shape-holonomy-v0.1",
     "interface": "formalism/01X_RFC_normalized_shape_extensive_scale_interface.md",
     "interface_commit": "7be599b9c7d99123521fd8f82ac2bdc4c735b3cf",
-    "dependency_graph_commit": "d706f7f200db88375ba88ec778f3f3c940eec5ed"
+    "dependency_graph_commit": "c398e005b183738bfbcbf930b7ae4db9b0537a7f"
   },
   "pncs_contract": {
     "repository": "AdrianLipa90/PhaseNav-Natural-Coding-System",
     "branch": "feat/gremlin-pnv-authoring-v0.2",
-    "head": "695223eff9373554c4c2aff1aca9c3e1e7dfecd4",
+    "code_head": "5f3bf90998b8c3547d51e7c47bddaf0d6be25d60",
     "bridge": "PNCS_GREMLIN_NATIVE_PNV_BRIDGE_V0_2",
-    "native_executor_blob": "8b1a8e00e9ccaeacd9522a64c329a5c77cca1321"
+    "information_holonomy": "PNCS_PNV_INFORMATION_HOLONOMY_V0_1",
+    "source_holonomy": "PNCS_PNV_SOURCE_HOLONOMY_LOOPS_V0_1",
+    "native_executor_blob": "8b1a8e00e9ccaeacd9522a64c329a5c77cca1321",
+    "source_loops": [
+      "SOURCE.CARRIER.NORMALIZATION.ROUNDTRIP",
+      "SOURCE.CARRIER.Q0_OCCUPATION.ROUNDTRIP",
+      "SOURCE.CARRIER.EPSILON_MASS_DENSITY.ROUNDTRIP"
+    ],
+    "native_ci": {
+      "run_id": 33119729046,
+      "job_id": 98683307108,
+      "classification": "CI_EXECUTION_UNRESOLVED_PRE_TEST",
+      "steps": null
+    }
   },
+  "paired_receipt": "validation/IDT_RFC_PNCS_SOURCE_HOLONOMY_PAIR_V0_1.json",
   "analytic_result": {
     "normalization": "N(Q)=Q/Q_Sigma",
     "lift": "L_s(p)=s p",
@@ -54,13 +69,28 @@
     "cell_density": "rho_Q,a=M_Q p_a^(Q)/V_a"
   },
   "reference_execution": {
-    "harness": "local exact-equivalent Fraction reference suite",
-    "rfc_tests": 6,
-    "idt_tests": 5,
-    "total": 11,
-    "passed": 11,
-    "failed": 0,
-    "wall_report": "11 passed in 0.13s"
+    "combined_rfc_idt_fixture": "11 passed in 0.13s",
+    "rfc_interface_tests": 6,
+    "idt_interface_tests": 5,
+    "failed": 0
+  },
+  "rfc_full_reference_suite": {
+    "commit": "48d229d5e8374710900822a89e02ccd3eefd5e09",
+    "workflow": "RFC reference suite",
+    "run_id": 33120038218,
+    "job_id": 98684356166,
+    "result": "PASS",
+    "passed": 32,
+    "failed": 0
+  },
+  "idt_full_reference_suite": {
+    "commit": "f6e36990e8055280c924fca17353820aa8d6c814",
+    "workflow": "Reference suite",
+    "run_id": 33120017246,
+    "job_id": 98684287374,
+    "result": "PASS",
+    "passed": 340,
+    "failed": 0
   },
   "pnv_subset_conformance": {
     "status": "PASS",
@@ -71,17 +101,17 @@
       "Q2_CLOSED": true,
       "EPS_SHAPE_SAME": true
     },
-    "expected_open_defects": {
-      "Q1_UNIT_DEFECT_equal": false,
-      "Q2_UNIT_DEFECT_equal": false,
-      "EPS_SCALE_DEFECT_equal": false
-    },
+    "open_scale_gates": [
+      "Q1_UNIT_SCALE",
+      "Q2_UNIT_SCALE",
+      "EPSILON_SCALE"
+    ],
     "classification": "PNV1_SUBSET_SEMANTICS_EQUIVALENT_HARNESS",
-    "native_module_execution": "OPEN"
+    "native_module_gate": "CI_EXECUTION_UNRESOLVED_PRE_TEST"
   },
   "gremlin_invariant": "positive extensive state -> normalization quotient -> simplex shape -> explicit positive scale lift -> exact round trip iff scale coordinate is preserved",
   "epistemic_state": "CHYBA",
   "rfn1c_reserved": true,
-  "newton_G_used_as_input": false,
+  "newton_G_role": "TARGET_DIAGNOSTIC_ONLY",
   "main_mutated": false
 }
