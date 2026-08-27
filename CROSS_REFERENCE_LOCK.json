@@ -1,6 +1,6 @@
 {
-  "schema": "RFC_CROSS_REFERENCE_LOCK_V0_10",
-  "status": "PHASE_CLOCK_HEXAHEDRAL_RANK3_RELATIONAL_LAPSE_NEWTON_OPERATOR_CONTINUOUS_CARRIER_SHAPE_SCALE_PNCS_SOURCE_HOLONOMY_AND_PAIRED_VALIDATION_PINNED",
+  "schema": "RFC_CROSS_REFERENCE_LOCK_V0_11",
+  "status": "PHASE_CLOCK_HEXAHEDRAL_RANK3_RELATIONAL_LAPSE_CONTINUOUS_CARRIER_SHAPE_SCALE_EULER_SOURCE_HOLONOMY_AND_PAIRED_VALIDATION_PINNED",
   "created": "2026-08-27",
   "updated": "2026-08-27",
   "upstreams": [
@@ -36,14 +36,14 @@
       ]
     },
     {
-      "role": "normalized_shape_extensive_scale_interface",
+      "role": "normalized_shape_extensive_scale_and_euler_closed_phase_energy_interface",
       "repository": "AdrianLipa90/Informational-Dynamics-of-Time",
       "ref": "feat/idt-rfc-normalized-shape-holonomy-v0.1",
       "interface_anchor_commit": "54542dbf18f38e62883399366e032a4dc86e5e1a",
       "interfaces": [
         "formalism/01D_shannon_onsager_response_tensor.md",
         "formalism/01X_RFC_normalized_shape_extensive_scale_interface.md",
-        "validation/01X_RFC_NORMALIZED_SHAPE_EXTENSIVE_SCALE_V0_1.json",
+        "formalism/01Y_phase_intention_energy_per_charge_interface.md",
         "validation/01X_RFC_CROSS_REFERENCE_LOCK_V0_1.json",
         "validation/IDT_RFC_PNCS_SOURCE_HOLONOMY_PAIR_V0_1.json"
       ]
@@ -52,7 +52,7 @@
       "role": "gremlin_pnv_candidate_authoring_information_holonomy_and_source_loop_contracts",
       "repository": "AdrianLipa90/PhaseNav-Natural-Coding-System",
       "ref": "feat/gremlin-pnv-authoring-v0.2",
-      "commit": "5f3bf90998b8c3547d51e7c47bddaf0d6be25d60",
+      "commit": "e6d5e217aeed2906372fdd0aa41845f0df32bbae",
       "contracts": [
         "PNCS_GREMLIN_NATIVE_PNV_BRIDGE_V0_2",
         "PNCS_PNV_INFORMATION_HOLONOMY_V0_1",
@@ -74,8 +74,9 @@
     {"name": "Neutrinotime14.pdf", "role": "tensor_scalar_time_and_on_shell_lambda0_conservation"},
     {"name": "fluid_time.pdf", "role": "scalar_time_density_current_continuity_and_time_fluid_stress_energy"},
     {"name": "noema_fermionic_intention_fields_corrected(4).pdf", "role": "fermionic_coupling_source_constraints"},
-    {"name": "Hilbert_Kahler_Phase_Intention_Hamiltonian.pdf", "role": "cyclic_phase_coordinate_and_conserved_finite_phase_momentum"},
-    {"name": "Euler_Noether_Berry_Preference_Formalism_v2.tex", "role": "global_u1_local_noether_current"},
+    {"name": "Hilbert_Kahler_Phase_Intention_Hamiltonian.pdf", "role": "cyclic_phase_coordinate_and finite phase momentum"},
+    {"name": "Phase_Intention_Hamiltonian_Formal_Derivations.tex", "role": "Euler closed intention charge and canonical rotor energy"},
+    {"name": "Euler_Noether_Berry_Preference_Formalism_v2.tex", "role": "global U1 current and Euler/Berry closure"},
     {"name": "TIR_KEPLER_NOETHER_PHASE_BINDING_V0_4.md", "role": "noether_to_relational_phase_cross_binding_status"}
   ],
   "rfc_gates": [
@@ -86,12 +87,14 @@
     "formalism/RFN1_HEXAHEDRAL_SOURCE_OPERATOR.md",
     "formalism/RFN1B_SOURCE_TYPE_IDENTIFIABILITY_FIREWALL.md",
     "formalism/RFN1B2_CONSERVED_SOURCE_CARRIER_FACTORIZATION.md",
-    "formalism/RFN1B2H_NORMALIZED_SHAPE_HOLONOMY.md"
+    "formalism/RFN1B2H_NORMALIZED_SHAPE_HOLONOMY.md",
+    "formalism/RFN1B2I_PHASE_INTENTION_ENERGY_PER_CHARGE.md"
   ],
   "pncs_source_holonomy_loops": [
     "SOURCE.CARRIER.NORMALIZATION.ROUNDTRIP",
     "SOURCE.CARRIER.Q0_OCCUPATION.ROUNDTRIP",
-    "SOURCE.CARRIER.EPSILON_MASS_DENSITY.ROUNDTRIP"
+    "SOURCE.CARRIER.EPSILON_MASS_DENSITY.ROUNDTRIP",
+    "SOURCE.PHASE_INTENTION.EULER_CHARGE_ENERGY.ROUNDTRIP"
   ],
   "validation_receipts": [
     "validation/RFL0_PHASE_CLOCK_SCALE_V0_2.json",
@@ -106,11 +109,21 @@
   ],
   "local_validation_commits": {
     "rfn1b2h": "e64b362739bf113dea03903bd15b08565cfde151",
-    "paired_receipt": "dc38ea77883c0e701024b9d4007d879d0c7112a9"
+    "paired_receipt": "7e75e46b0b2cd14590ca17fe4c84b407b69947e1"
   },
   "executed_reference_gates": {
-    "idt": "340/340 PASS",
-    "rfc": "32/32 PASS"
+    "idt": "347/347 PASS",
+    "rfc": "39/39 PASS"
   },
-  "pinning_rule": "Mutual IDT/RFC references use immutable interface-anchor commits; both repositories pin the same PNCS source-holonomy commit and carry the paired validation receipt."
+  "normalization_order": [
+    "Euler/Berry closure",
+    "theta_I^EB",
+    "J_I^EB=hbar*theta_I^EB",
+    "H_Phi^EB=(J-J_I^EB)^2/(2 I_phi)",
+    "epsilon_I^EB=H_Phi^EB/J_I^EB",
+    "Delta_tau_eff=1/epsilon_I^EB",
+    "Q_Sigma <-> J_I^EB OPEN",
+    "epsilon_Q binding OPEN"
+  ],
+  "pinning_rule": "Mutual IDT/RFC references use immutable interface anchors; both repositories pin the same PNCS Euler-source-holonomy snapshot and carry paired validation."
 }
