@@ -1,0 +1,45 @@
+{
+  "schema": "RFC_RFN1_HEXAHEDRAL_SOURCE_OPERATOR_V0_1",
+  "created": "2026-08-27",
+  "status": "LOCAL_EXACT_OPERATOR_PASS__SOURCE_FUNCTIONAL_OPEN__NEWTON_NORMALIZATION_OPEN",
+  "branch": "feat/rfn1-hexahedral-source-operator-v0.1",
+  "formalism": "formalism/RFN1_HEXAHEDRAL_SOURCE_OPERATOR.md",
+  "reference_test": "tests/reference/test_rfn1_hexahedral_source_operator.py",
+  "upstream": {
+    "idt_shannon_onsager": "formalism/01D_shannon_onsager_response_tensor.md",
+    "idt_relational_lapse": "formalism/05C_relational_lapse_interface.md",
+    "tir_hexahedral_frame": "TIR/integration/TIR_HEXAHEDRAL_BLOCH_DUAL_FRAME_V0_1.md",
+    "rfc_parent": "formalism/RFN0_RELATIONAL_LAPSE_NEWTON_KINEMATICS.md"
+  },
+  "checks": {
+    "constant_null": "PASS",
+    "affine_null": "PASS",
+    "quadratic_laplacian_exact": "PASS",
+    "quartic_truncation_coefficient": "PASS",
+    "signed_permutation_invariance": "PASS",
+    "octahedral_rank_two_isotropization": "PASS",
+    "phase_clock_cell_scale_finite_typing": "PASS"
+  },
+  "summary": {
+    "passed": 7,
+    "failed": 0,
+    "total": 7
+  },
+  "exact_results": [
+    "The symmetric IDT response carries a graph Laplacian D^T W D with constant-vector null.",
+    "The equal-neighbour hexahedral stencil has continuum principal operator Delta.",
+    "Signed-permutation symmetry forces any local constant-coefficient scalar second-order principal tensor to be proportional to the identity.",
+    "Annihilation of constant lapse offsets removes the zeroth-order term; signed-axis reversals remove first-order drift.",
+    "For u=ln N_R, Delta_h u has inverse-area type and Delta_h Phi_R has inverse-time-squared type."
+  ],
+  "open_gates": [
+    "derive the independent source functional S_R",
+    "determine whether Xi_I enters S_R and with what coefficient",
+    "derive the mass-density map without using Poisson as an input",
+    "derive or independently fix the coupling normalization identified with G in the Newton limit",
+    "validate discrete-to-continuum refinement on nonuniform hexahedral complexes"
+  ],
+  "newton_target_not_used_as_premise": true,
+  "G_derived": false,
+  "gremlin_can_promote": false
+}

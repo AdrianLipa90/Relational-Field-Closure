@@ -34,8 +34,28 @@ RF-M2 sourced/action Maxwell                         v
   |                                     Phi_R=c^2 ln N_R
   |                                     a^i~-grad^i Phi_R
   |                                                  |
+  |                         +------------------------+-------------------+
+  |                         |                                            |
+  |                         v                                            v
+  |                 IDT 01D Shannon-Onsager                    TIR RF-02H six-ray symmetry
+  |                 G~D^T W D                                  {+/-e1,+/-e2,+/-e3}
+  |                         |                                            |
+  |                         +------------------------+-------------------+
+  |                                                  |
   |                                                  v
-  |                                           RF-N1 source law / Poisson test
+  |                                      RF-N1A source-operator theorem
+  |                                      -L_H/a_H^2 -> Delta_h
+  |                                      octahedral symmetry -> Laplace
+  |                                                  |
+  |                                                  v
+  |                                      RF-N1B source identification
+  |                                      Delta_h ln N_R = S_R
+  |                                      S_R [L^-2] : OPEN
+  |                                                  |
+  |                                                  v
+  |                                      RF-N1C Newton normalization audit
+  |                                      c^2 S_R ?= 4 pi G rho_m
+  |                                      TARGET ONLY / OPEN
   |                                                  |
   +----------------------+---------------------------+
                          |
@@ -54,32 +74,40 @@ RF-M2 sourced/action Maxwell                         v
                IDT 01K information curvature
           Xi_I = J_pi / A_rel
                          |
-                         v
-               RF-L0 temporal information curvature
-     constant cell: Xi_I = (J_pi/a_FS)(omega/c)^2
-                         |
-                         v
-               RF-L1 dynamic Lambda0 scalar closure
-                         |
-                         v
-               RF-E1 Einstein-Bianchi closure
-                         |
-                         v
-               RF-X1 unified limit audit
+                         +------------------------+
+                         |                        |
+                         v                        |
+               RF-L0 temporal information        |
+               curvature                         |
+                         |                        |
+                         v                        |
+               RF-L1 dynamic Lambda0             |
+                         |                        |
+                         +----------+             |
+                                    |             |
+                                    v             v
+                              RF-E1 Einstein   RF-N1B source-basis candidate
+                              Bianchi closure  S_R = beta_I Xi_I + ...
+                                    |             |
+                                    +------+------+ 
+                                           |
+                                           v
+                                  RF-X1 unified limit audit
 ```
 
 No downstream node may be promoted above the weakest unresolved prerequisite.
 
-Exact/candidate status after RF-N0:
+Exact/candidate status after RF-N1A:
 
-- `RF-02H`: LOCAL STRUCTURAL PASS. Regular hexahedral dual frame supplies the positive rank-three local metric `h_H=I3/6`.
+- `RF-02H`: LOCAL STRUCTURAL PASS. Regular hexahedral dual frame supplies `h_H=I3/6`, six signed axis directions and exact octahedral isotropy.
 - `RF-G0`: exact Lorentzian signature theorem; positive rank-three prerequisite satisfied locally by RF-02H.
-- `RF-02I`: LOCAL EXACT CONNECTION PASS. Phase-clock gradients enter the spatial connection and curvature; constant temporal lapse gives exact `Gamma^i_tt=0` negative theorem.
-- `IDT 05C relational lapse`: EXACT CLOCK-RATIO PASS. `N_R=phi_x/phi_ref>0` is dimensionless, reparameterization invariant and compositional. For common normalization, `N_R=M_x cosh(A_x/2)/[M_ref cosh(A_ref/2)]`.
-- `RF-N0 temporal coframe binding`: CANDIDATE physical binding `Theta_R=N_R c dt` after reference-clock calibration.
-- `RF-N0 static geodesic kinematics`: EXACT conditional on the temporal-coframe binding. `Gamma^i_tt=c^2N_R h^ij partial_j N_R`; `Phi_R=c^2 ln N_R`; slow local acceleration is `a^i=-N_R^2 h^ij partial_j Phi_R+...`.
-- `RF-N0 relational-gradient decomposition`: EXACT under fixed reference and admitted IDT kinetic realization. `partial ln N_R=partial ln M+1/2 tanh(A/2) partial A`, with `partial ln M` decomposing into density and viscosity gradients.
-- `RF-N0 weak force-law form`: CONDITIONAL LIMIT PASS CANDIDATE. Near `N_R=1` and locally Euclidean physical `h`, `a^i=-partial^i Phi_R+...`.
-- `RF-N1 source equation / Newton constant normalization`: OPEN. No Poisson equation is used upstream.
+- `RF-02I`: LOCAL EXACT CONNECTION PASS. Phase-clock gradients enter the spatial connection and curvature; constant lapse gives exact `Gamma^i_tt=0` negative theorem.
+- `IDT 05C`: EXACT CLOCK-RATIO PASS. `N_R=phi_x/phi_ref>0` is dimensionless, reparameterization invariant and compositional.
+- `RF-N0`: exact conditional geodesic kinematics after the temporal-coframe binding. `Phi_R=c^2 ln N_R`; near the reference sector `a^i=-partial^i Phi_R+...`.
+- `IDT 01D`: exact detailed-balance Shannon-Onsager operator `G=(ln2)D^T diag[c Lambda]D`; at uniform equilibrium it reduces to the positive relational-mobility graph Laplacian `(ln2/m)K_0`.
+- `RF-N1A six-neighbour operator`: LOCAL EXACT PASS. The positive hexahedral graph Laplacian `L_H` has constant null and normalized continuum-sign operator `-L_H/a_H^2 = Delta + (a_H^2/12) sum_i partial_i^4 + O(a_H^4)`.
+- `RF-N1A symmetry classification`: LOCAL EXACT PASS. Signed permutations remove first-order drift and off-diagonal second derivatives; axis permutations force equal diagonal coefficients; constant-null removes the zeroth-order term. The leading local second-order scalar operator is therefore proportional to `Delta`, with normalized hexahedral stencil fixing the principal coefficient to one in physical cell coordinates.
+- `RF-N1B source functional`: OPEN. `Delta_h ln N_R=S_R` is only a typed balance until `S_R` is independently derived. `Xi_I` is retained by bounded GREMLIN only as a lowest-order `L^-2` source-basis candidate, `S_R=beta_I Xi_I+...`; no promotion and no fitted `beta_I`.
+- `RF-N1C Newton normalization`: OPEN. The target `c^2 S_R = 4 pi G rho_m` is not used as an input. `G` is not derived by RF-N1A.
 - `IDT 01L`, `TIR phase-clock area v0.2`, `IDT 01K`, `RF-L0`: retained.
-- `RF-M2`, `RF-N1`, `RF-E1`: OPEN.
+- `RF-M2`, `RF-N1B`, `RF-N1C`, `RF-E1`: OPEN.
