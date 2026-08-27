@@ -1,6 +1,6 @@
 {
-  "schema": "RFC_CROSS_REFERENCE_LOCK_V0_6",
-  "status": "PHASE_CLOCK_HEXAHEDRAL_RANK3_RELATIONAL_LAPSE_AND_NEWTON_OPERATOR_PINNED",
+  "schema": "RFC_CROSS_REFERENCE_LOCK_V0_7",
+  "status": "PHASE_CLOCK_HEXAHEDRAL_RANK3_RELATIONAL_LAPSE_NEWTON_OPERATOR_AND_CONTINUOUS_CARRIER_PINNED",
   "created": "2026-08-27",
   "updated": "2026-08-27",
   "upstreams": [
@@ -39,8 +39,11 @@
   "document_sources": [
     {"name": "Lambda_0.pdf", "role": "dynamic_lambda0_einstein_maxwell_source"},
     {"name": "Neutrinotime14.pdf", "role": "tensor_scalar_time_and_on_shell_lambda0_conservation"},
-    {"name": "fluid_time.pdf", "role": "scalar_time_current_and_conservation"},
-    {"name": "noema_fermionic_intention_fields_corrected(4).pdf", "role": "fermionic_coupling_source_constraints"}
+    {"name": "fluid_time.pdf", "role": "scalar_time_density_current_continuity_and_time_fluid_stress_energy"},
+    {"name": "noema_fermionic_intention_fields_corrected(4).pdf", "role": "fermionic_coupling_source_constraints"},
+    {"name": "Hilbert_Kahler_Phase_Intention_Hamiltonian.pdf", "role": "cyclic_phase_coordinate_and_conserved_finite_phase_momentum"},
+    {"name": "Euler_Noether_Berry_Preference_Formalism_v2.tex", "role": "global_u1_local_noether_current"},
+    {"name": "TIR_KEPLER_NOETHER_PHASE_BINDING_V0_4.md", "role": "noether_to_relational_phase_cross_binding_status"}
   ],
   "rfc_gates": [
     "formalism/RFL0_TEMPORAL_INFORMATION_CURVATURE_CLOSURE.md",
@@ -48,7 +51,8 @@
     "formalism/RF02I_HEXAHEDRAL_COFRAME_CONNECTION.md",
     "formalism/RFN0_RELATIONAL_LAPSE_CLOCK_DYNAMICS.md",
     "formalism/RFN1_HEXAHEDRAL_SOURCE_OPERATOR.md",
-    "formalism/RFN1B_SOURCE_TYPE_IDENTIFIABILITY_FIREWALL.md"
+    "formalism/RFN1B_SOURCE_TYPE_IDENTIFIABILITY_FIREWALL.md",
+    "formalism/RFN1B2_CONSERVED_SOURCE_CARRIER_FACTORIZATION.md"
   ],
   "validation_receipts": [
     "validation/RFL0_PHASE_CLOCK_SCALE_V0_2.json",
@@ -56,7 +60,8 @@
     "validation/RF02I_COFRAME_CONNECTION_V0_1.json",
     "validation/RFN0_RELATIONAL_LAPSE_V0_1.json",
     "validation/RFN1_HEXAHEDRAL_SOURCE_OPERATOR_V0_1.json",
-    "validation/RFN1B_SOURCE_TYPE_FIREWALL_V0_1.json"
+    "validation/RFN1B_SOURCE_TYPE_FIREWALL_V0_1.json",
+    "validation/RFN1B2_CONSERVED_SOURCE_CARRIER_V0_1.json"
   ],
   "rule": "Any upstream ref change requires an explicit cross-reference update receipt; no silent floating dependency."
 }
