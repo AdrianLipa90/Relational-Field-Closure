@@ -1,113 +1,83 @@
 # Formal dependency graph
 
 ```text
-RF-00  pinned cross-reference contract
+RF-00 pinned upstream contract
   |
-RF-01  quantum geometric tensor / relational field primitive
+RF-01 QGT relational primitive
   |
-RF-02  polyhedral metric-curvature invariants
-  |\
-  | RF-03 Euler-Berry reality + Poincare curvature gate
-  |    |
-  |    +---------------------------------------------+
-  |                                                  |
-  v                                                  v
-RF-M0 Berry gauge seed                        RF-02H hexahedral rank-3 local metric
-  |                                                  |
-RF-M1 homogeneous Maxwell                            | h_H=I3/6
-  |                                                  | ell_phi=c/|omega|
-RF-M2 sourced/action Maxwell                         v
-  |                                           RF-G0 Lorentzian signature
-  |                                                  |
-  |                                           RF-02I coframe connection/curvature
-  |                                                  |
-  |                                       exact negative theorem:
-  |                                       constant lapse -> Gamma^i_tt=0
-  |                                                  |
-  |                                                  v
-  |                                  IDT 05C relational clock ratio
-  |                                  N_R=phi_x/phi_ref > 0
-  |                                                  |
-  |                                                  v
-  |                                           RF-N0 relational lapse
-  |                                     Theta=N_R c dt
-  |                                     Phi_R=c^2 ln N_R
-  |                                     a^i~-grad^i Phi_R
-  |                                                  |
-  |                         +------------------------+-------------------+
-  |                         |                                            |
-  |                         v                                            v
-  |                 IDT 01D Shannon-Onsager                    TIR RF-02H six-ray symmetry
-  |                 G~D^T W D                                  {+/-e1,+/-e2,+/-e3}
-  |                         |                                            |
-  |                         +------------------------+-------------------+
-  |                                                  |
-  |                                                  v
-  |                                      RF-N1A source-operator theorem
-  |                                      -L_H/a_H^2 -> Delta_h
-  |                                      octahedral symmetry -> Laplace
-  |                                                  |
-  |                                                  v
-  |                                      RF-N1B source identification
-  |                                      Delta_h ln N_R = S_R
-  |                                      S_R [L^-2] : OPEN
-  |                                                  |
-  |                                                  v
-  |                                      RF-N1C Newton normalization audit
-  |                                      c^2 S_R ?= 4 pi G rho_m
-  |                                      TARGET ONLY / OPEN
-  |                                                  |
-  +----------------------+---------------------------+
-                         |
-                         v
-               RF-P0 phase-energy / photoelectric bridge
-                         |
-                         v
-              IDT 01L phase-clock length scale
-          ell_phi = c/|omega| = hbar c/E
-                         |
-                         v
-          TIR phase-clock physicalized FS/Berry area
-          dA_rel = ell_phi^2 da_FS
-                         |
-                         v
-               IDT 01K information curvature
-          Xi_I = J_pi / A_rel
-                         |
-                         +------------------------+
-                         |                        |
-                         v                        |
-               RF-L0 temporal information        |
-               curvature                         |
-                         |                        |
-                         v                        |
-               RF-L1 dynamic Lambda0             |
-                         |                        |
-                         +----------+             |
-                                    |             |
-                                    v             v
-                              RF-E1 Einstein   RF-N1B source-basis candidate
-                              Bianchi closure  S_R = beta_I Xi_I + ...
-                                    |             |
-                                    +------+------+ 
-                                           |
-                                           v
-                                  RF-X1 unified limit audit
+RF-02H hexahedral rank-3 metric
+  |
+RF-G0 Lorentzian signature
+  |
+RF-02I coframe connection/curvature
+  |   exact negative theorem: constant lapse -> Gamma^i_tt=0
+  v
+IDT 05C clock ratio N_R=phi_x/phi_ref
+  |
+RF-N0 relational lapse
+  |   Theta_R=N_R c dt
+  |   Phi_R=c^2 ln N_R
+  |   weak kinematics -> a^i=-partial^i Phi_R+...
+  |
+  +------------------- IDT 01D Shannon-Onsager D^T W D
+  |                              +
+  +------------------- TIR six-ray hexahedral symmetry
+                                 |
+                                 v
+RF-N1A source-operator theorem
+  -L_H/a_H^2 -> Delta_h
+  octahedral symmetry -> Laplace principal operator
+                                 |
+                                 v
+RF-N1B source-type firewall
+  rho_R = relational kinetic/mobility scalar
+  E=hbar|omega| = local phase-energy scale
+  Xi_I [L^-2] = source-basis-compatible geometry scalar
+  dV_h = geometric measure after physical binding
+  rho_m requires conserved source/occupation + measure + energy assignment
+                                 |
+                +----------------+----------------+
+                |                                 |
+                v                                 v
+RF-N1B source carrier/measure OPEN      bounded candidate basis
+ conserved current/occupation n_E       S_R=beta_I Xi_I+...
+ physical source volume V               NO PROMOTION
+ energy/rest-mass assignment
+                |                                 |
+                +----------------+----------------+
+                                 |
+                                 v
+RF-N1C coupling/universality audit
+  Delta_h ln N_R = S_R
+  Delta_h Phi_R = c^2 S_R
+  target only: c^2 S_R ?= 4 pi G rho_m
+  G OPEN
+                                 |
+                                 v
+RF-E1 Einstein-Bianchi closure -> RF-X1 unified limit audit
+
+Parallel gauge branch:
+RF-M0 Berry connection -> RF-M1 dF=0 -> RF-M2 sourced Maxwell OPEN
+
+Information-curvature branch:
+IDT 01L + TIR FS/Berry area -> IDT 01K Xi_I -> RF-L0 Lambda_I=alpha_I Xi_I
+                                                |              |
+                                                +--> RF-N1B    +--> RF-L1/RF-E1
 ```
 
-No downstream node may be promoted above the weakest unresolved prerequisite.
+No downstream node may be promoted above its weakest unresolved prerequisite.
 
-Exact/candidate status after RF-N1A:
+## Current exact/candidate status
 
-- `RF-02H`: LOCAL STRUCTURAL PASS. Regular hexahedral dual frame supplies `h_H=I3/6`, six signed axis directions and exact octahedral isotropy.
-- `RF-G0`: exact Lorentzian signature theorem; positive rank-three prerequisite satisfied locally by RF-02H.
-- `RF-02I`: LOCAL EXACT CONNECTION PASS. Phase-clock gradients enter the spatial connection and curvature; constant lapse gives exact `Gamma^i_tt=0` negative theorem.
-- `IDT 05C`: EXACT CLOCK-RATIO PASS. `N_R=phi_x/phi_ref>0` is dimensionless, reparameterization invariant and compositional.
-- `RF-N0`: exact conditional geodesic kinematics after the temporal-coframe binding. `Phi_R=c^2 ln N_R`; near the reference sector `a^i=-partial^i Phi_R+...`.
-- `IDT 01D`: exact detailed-balance Shannon-Onsager operator `G=(ln2)D^T diag[c Lambda]D`; at uniform equilibrium it reduces to the positive relational-mobility graph Laplacian `(ln2/m)K_0`.
-- `RF-N1A six-neighbour operator`: LOCAL EXACT PASS. The positive hexahedral graph Laplacian `L_H` has constant null and normalized continuum-sign operator `-L_H/a_H^2 = Delta + (a_H^2/12) sum_i partial_i^4 + O(a_H^4)`.
-- `RF-N1A symmetry classification`: LOCAL EXACT PASS. Signed permutations remove first-order drift and off-diagonal second derivatives; axis permutations force equal diagonal coefficients; constant-null removes the zeroth-order term. The leading local second-order scalar operator is therefore proportional to `Delta`, with normalized hexahedral stencil fixing the principal coefficient to one in physical cell coordinates.
-- `RF-N1B source functional`: OPEN. `Delta_h ln N_R=S_R` is only a typed balance until `S_R` is independently derived. `Xi_I` is retained by bounded GREMLIN only as a lowest-order `L^-2` source-basis candidate, `S_R=beta_I Xi_I+...`; no promotion and no fitted `beta_I`.
-- `RF-N1C Newton normalization`: OPEN. The target `c^2 S_R = 4 pi G rho_m` is not used as an input. `G` is not derived by RF-N1A.
-- `IDT 01L`, `TIR phase-clock area v0.2`, `IDT 01K`, `RF-L0`: retained.
-- `RF-M2`, `RF-N1B`, `RF-N1C`, `RF-E1`: OPEN.
+- `RF-02H`: LOCAL STRUCTURAL PASS — regular dual frame gives `h_H=I3/6`, exact rank three and octahedral isotropy.
+- `RF-G0`: exact conditional Lorentzian signature theorem; RF-02H supplies the local positive rank-three prerequisite.
+- `RF-02I`: LOCAL EXACT CONNECTION PASS; phase-clock gradients enter the spatial connection/curvature. Constant lapse gives exact `Gamma^i_tt=0` negative theorem.
+- `IDT 05C`: EXACT CLOCK-RATIO PASS — `N_R>0`, dimensionless, reparameterization invariant, compositional.
+- `RF-N0`: exact conditional geodesic kinematics after temporal-coframe binding; `Phi_R=c^2 ln N_R`, weak local force form `a=-grad Phi_R+...`.
+- `RF-N1A`: LOCAL EXACT OPERATOR PASS — IDT graph response plus hexahedral symmetry yields the Laplace principal operator without using Poisson as a premise.
+- `RF-N1B type separation`: EXACT PASS at the cited interfaces. IDT `rho_R` is introduced as a relational kinetic/mobility scalar and is not supplied there as `rho_m`; `E=hbar|omega|` is energy rather than density; `Xi_I` has the correct `L^-2` source type but no automatic matter semantics.
+- `RF-N1B conditional phase-cell bridge`: exact algebra once `V_H=a_H^3`, `E=hbar|omega|` and a source occupation `n_E` are separately admitted: `rho_cell=6 sqrt(6) n_E hbar |omega|^4/c^5`. Physical source occupation and cell-volume semantics remain OPEN.
+- `RF-N1B identifiability theorem`: EXACT for the current premise set — different free occupation maps or source coefficients give different matter/source laws while preserving the already-derived geometry, lapse kinematics and source operator. Therefore neither unique `rho_m` nor unique `G` is determined yet.
+- `RF-N1B universality diagnostic`: CANDIDATE TEST. If independent derivations later give both `S_R=beta_I Xi_I` and the phase-cell matter bridge, Newton matching requires `G=[beta_I J_pi/(24 pi sqrt(6) n_E a_FS)] c^5/(hbar omega^2)`. This is a consistency condition, not a derivation or definition of `G`.
+- `TIR mass sector`: active TIR claim hierarchy classifies the exponential mass ansatz as class B/C depending on sector and not as a universal established mass law; it is not imported as the Newton source.
+- `RF-M2`, conserved physical source carrier/measure, `RF-N1C`, `RF-L1`, `RF-E1`: OPEN.
