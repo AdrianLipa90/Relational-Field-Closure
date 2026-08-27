@@ -1,0 +1,38 @@
+{
+  "schema": "RFC_RFL0_TEMPORAL_INFORMATION_CURVATURE_V0_1",
+  "status": "EXACT_TIR_IDT_INTERFACE_PASS__LAMBDA0_COUPLING_CANDIDATE",
+  "date": "2026-08-27",
+  "pinned_upstreams": {
+    "tir_main": "d21631fe7281b5dbbad70f3a4a5f5b4876cac9f7",
+    "idt_main": "647f1652edde59d9bfd7e075fb6ed5bf02aab2fc",
+    "secret_of_a_half_main": "206e49e306b246c4b0f4d182b0d32d5511739408"
+  },
+  "local_reference_test": {
+    "file": "validation/test_rfl0_temporal_information_curvature.py",
+    "result": "6 passed",
+    "runtime": "0.04 s"
+  },
+  "exact_identities": [
+    "Xi_I = ln(2) I_pi / A_rel = 24 pi kappa I_pi / A_rel",
+    "[Xi_I] = L^-2",
+    "Lambda_I = alpha_I Xi_I with dimensionless alpha_I",
+    "partial Lambda0 / partial Xi_I = alpha_I",
+    "minimal-sector dLambda0/dtau_int = alpha_I dXi_I/dtau_int",
+    "Bianchi bookkeeping: div T_visible = c^4/(8 pi G) grad Lambda0 in the displayed convention"
+  ],
+  "action_level_gate": {
+    "metric_independent_lambda0": "Lambda0 g_mn contribution",
+    "algebraic_metric_dependence": "Lambda0 g_mn - 2 partial Lambda0 / partial g^mn",
+    "derivative_metric_dependence": "functional Euler-Lagrange variation required"
+  },
+  "open_dependencies": [
+    "physical or derived ell_R",
+    "alpha_I determination or bound",
+    "A_rel metric-dependence classification",
+    "stress-energy partition",
+    "Newton weak-field closure",
+    "Einstein-Bianchi closure"
+  ],
+  "claim_promotion": false,
+  "gremlin_authority": "candidate_generation_and_audit_only"
+}
