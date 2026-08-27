@@ -25,27 +25,32 @@ RF-N1B2 conserved source-carrier factorization
 RF-N1B2H normalized-shape / extensive-scale holonomy
   |
 IDT 01Y / RF-N1B2I Euler-closed intention charge
-  Phi_tot=2 pi(D+epsilon_EB)
   J_I^EB=hbar theta_I^EB
   H_Phi^EB=(J-J_I^EB)^2/(2 I_phi)
   |
-IDT 01Z / RF-N1B2J Noether collective carrier
+IDT 01Z / RF-N1B2J finite Noether carrier
   P_Phi^EB=J-J_I^EB
-  J_theta^mu=2 A^2 partial^mu theta
   Q_theta=I_A D_tau chi=(I_A/I_phi)P_Phi^EB
   Delta_I=|I_A/I_phi-1|
   epsilon_N^EB=H_Phi^EB/Q_theta
-  exact I_A=I_phi => epsilon_N^EB=(1/2)D_tau chi
+  |
+IDT 01AA / RF-N1B2K local conserved-current binding
+  common slice + measure + ordered cells
+  Delta_measure
+  Delta_local
+  Delta_Q
+  Delta_F
+  zero defects => Q_Sigma=Q_theta candidate identity
   |
 PNCS physical-law frame / executable holonomy
-  five source/control loops
+  six source/control loops
   Delta_gamma + invariant defects + inverse lineage
   |
-  +---------------- current/carrier binding OPEN ----------------+
+  +---------------- physical promotion OPEN ---------------------+
   |  I_A <-> I_phi                                              |
   |  Q_Sigma <-> Q_theta                                       |
   |  epsilon_Q <-> epsilon_N^EB                                 |
-  |  p_IDT <-> p_Q and local cell/measure/current transport     |
+  |  p_IDT <-> p_Q physical state-space binding                 |
   +--------------------------------------------------------------+
   |
 RF-N1C coupling/universality audit
@@ -71,24 +76,36 @@ Parallel gauge and information-curvature branches retain their existing RF-M0/RF
 - `RF-N1B2H`: normalized-shape/extensive-scale holonomy PASS for the positive finite-cell factorization.
 - `RF-N1B2I`: Euler-closed intention charge PASS for `J_I^EB=hbar theta_I^EB`; canonical rotor energy PASS for `H_Phi^EB=(J-J_I^EB)^2/(2I_phi)`.
 - `RF-N1B2J`: local U(1) Noether current and polar reduction PASS; collective finite-charge reduction PASS_CONDITIONAL.
-- `field inertia`: `I_A=2 integral A^2 dV_h` is the finite collective-field inertia coordinate.
+- `field inertia`: `I_A=2 integral A^2 dV_h`.
 - `rotor kinetic coordinate`: `P_Phi^EB=J-J_I^EB=I_phi D_tau chi`.
-- `field/rotor normalization`: OPEN physical gate `I_A <-> I_phi` with exact audit coordinate
+- `field/rotor normalization`: OPEN physical gate with
   \[
   \Delta_I=\left|I_A/I_\phi-1\right|.
   \]
 - `finite Noether carrier`: `Q_theta=I_A D_tau chi=(I_A/I_phi)P_Phi^EB`.
-- `Noether/rotor charge equality`: PASS_CONDITIONAL only at `Delta_I=0`, giving `Q_theta=P_Phi^EB`.
-- `finite Noether energy coordinate`: PASS as typed positive-sector ratio,
+- `finite Noether energy coordinate`:
   \[
   \epsilon_N^{EB}=H_\Phi^{EB}/Q_\vartheta.
   \]
-- `exact inertia-binding reduction`: PASS_CONDITIONAL at `I_A=I_phi`,
+- `RF-N1B2K common-measure gate`: semantic slice/measure/ordered-cell support is explicit; numerical cell-volume mismatch is measured by
   \[
-  \epsilon_N^{EB}=H_\Phi^{EB}/P_\Phi^{EB}=P_\Phi^{EB}/(2I_\phi)=\tfrac12D_\tau\chi.
+  \Delta_V=\frac{\sum_a|V_a^{(\vartheta)}-V_a^{(Q)}|}{\sum_aV_a^{(\vartheta)}}.
   \]
-- `RFC physical carrier binding`: OPEN chain `Q_Sigma <-> Q_theta`.
-- `RFC epsilon binding`: OPEN downstream binding `epsilon_Q <-> epsilon_N^EB` after the conserved carrier identity is admitted.
+- `RF-N1B2K local-current gate`:
+  \[
+  \Delta_{\rm local}=\frac{\sum_aV_a|j_{Q,a}-j_{\vartheta,a}|}{Q_\vartheta}.
+  \]
+- `RF-N1B2K total-charge gate`:
+  \[
+  \Delta_Q=\frac{|Q_\Sigma-Q_\vartheta|}{Q_\vartheta}.
+  \]
+- `RF-N1B2K side-flux gate`:
+  \[
+  \Delta_F=|F_{\rm side}|.
+  \]
+- `anti-false-positive witness`: `j_theta=(1,3)`, `j_Q=(2,2)`, `V=(1,1)` gives `Q_theta=Q_Sigma=4`, `Delta_Q=0`, but `Delta_local=1/2`; integrated equality alone therefore does not promote local current identity.
+- `Q_Sigma <-> Q_theta`: PASS_CONDITIONAL at zero common-measure/local-current/total-charge/side-flux defects; physical promotion remains OPEN.
+- `RFC epsilon binding`: OPEN downstream physical promotion `epsilon_Q <-> epsilon_N^EB` after carrier identity evidence is admitted.
 - `source mass coordinate`: `M_N=epsilon_N^EB Q_theta/c^2=H_Phi^EB/c^2`.
 
 ## PNCS execution layer
@@ -98,7 +115,7 @@ Pinned PNCS code snapshot:
 ```text
 AdrianLipa90/PhaseNav-Natural-Coding-System
 feat/gremlin-pnv-authoring-v0.2
-fa517208e40873523d1c2a5b7fdb852092421afa
+f7b428f4dc30ddeb1280c9213c5788f576a54db4
 ```
 
 Contracts:
@@ -108,6 +125,7 @@ PNCS_GREMLIN_NATIVE_PNV_BRIDGE_V0_2
 PNCS_PNV_INFORMATION_HOLONOMY_V0_1
 PNCS_PNV_SOURCE_HOLONOMY_LOOPS_V0_1
 PNCS_PNV_NOETHER_COLLECTIVE_CARRIER_V0_1
+PNCS_PNV_NOETHER_RFC_CURRENT_BINDING_V0_1
 ```
 
 Loops:
@@ -118,36 +136,54 @@ SOURCE.CARRIER.Q0_OCCUPATION.ROUNDTRIP
 SOURCE.CARRIER.EPSILON_MASS_DENSITY.ROUNDTRIP
 SOURCE.PHASE_INTENTION.EULER_CHARGE_ENERGY.ROUNDTRIP
 SOURCE.PHASE_NOETHER.COLLECTIVE_CARRIER.ROUNDTRIP
+SOURCE.PHASE_NOETHER.RFC_CONSERVED_CURRENT.ROUNDTRIP
 ```
 
-The fifth loop audits
+The sixth loop audits
 
 ```text
-SOURCE.ROTOR_KINETIC_CHARGE
-SOURCE.NOETHER_FINITE_CHARGE
-SOURCE.NOETHER_INERTIA_BINDING_DEFECT
-SOURCE.NOETHER_ENERGY_PER_CHARGE
+SOURCE.NOETHER_TOTAL_CHARGE
+SOURCE.RFC_TOTAL_CHARGE
+SOURCE.COMMON_MEASURE_DEFECT
+SOURCE.LOCAL_CURRENT_BINDING_DEFECT
+SOURCE.TOTAL_CHARGE_BINDING_DEFECT
+SOURCE.SIDE_FLUX_DEFECT
 ```
 
-and fails closed at RFC candidate binding when the declared inertia tolerance is exceeded. Its general energy coordinate is `H_Phi_EB/Q_theta`; `H_Phi_EB/P_Phi_EB=(1/2)D_tau_chi` is the exact zero-defect reduction.
+and fails closed on semantic measure/cell mismatch or any declared defect above tolerance.
 
 Latest executed cross-repository reference snapshots:
 
 ```text
-IDT Reference suite     356 passed, 0 failed
-RFC Reference suite      48 passed, 0 failed
+IDT Reference suite     370 passed, 0 failed
+RFC Reference suite      62 passed, 0 failed
 ```
 
-PNCS native workflow remains `CI_EXECUTION_UNRESOLVED_PRE_TEST`; the observed candidate-authoring job for the test head has `steps=null`.
+PNCS native workflow remains `CI_EXECUTION_UNRESOLVED_PRE_TEST`; run `33123979049`, job `98697546433` has `steps=null`.
 
 ## Current source frontier
+
+The executable candidate-current gate is now present. The remaining source frontier is physical promotion and downstream transport:
 
 \[
 \boxed{
 Q_\Sigma\stackrel{?}{\longleftrightarrow}Q_\vartheta,
 \qquad
-I_A\stackrel{?}{=}I_\phi.
+\epsilon_Q\stackrel{?}{=}\epsilon_N^{EB}
 }
 \]
 
-The immediate RF-N1B2J closure target is the conserved-current identity under one explicitly pinned spatial slice, measure/cell partition, orientation and side-flux convention. Once that carrier identity is admitted, `epsilon_Q <-> epsilon_N^EB` becomes a direct downstream gate rather than a free normalization search.
+under evidence for the common local current and measure.
+
+The next executable integration target is the full source path
+
+\[
+J_\vartheta^\mu
+\to Q_\vartheta
+\leftrightarrow Q_\Sigma
+\to \epsilon_N^{EB}
+\to \rho_N
+\to RF\text{-}N1C,
+\]
+
+with current-binding and physical-promotion defects retained explicitly.
