@@ -1,6 +1,6 @@
 {
-  "schema": "RFC_CROSS_REFERENCE_LOCK_V0_13",
-  "status": "PHASE_CLOCK_HEXAHEDRAL_RANK3_RELATIONAL_LAPSE_CONTINUOUS_CARRIER_EULER_NOETHER_SOURCE_HOLONOMY_PINNED",
+  "schema": "RFC_CROSS_REFERENCE_LOCK_V0_14",
+  "status": "PHASE_CLOCK_HEXAHEDRAL_RANK3_RELATIONAL_LAPSE_CONTINUOUS_CARRIER_EULER_NOETHER_CURRENT_HOLONOMY_PINNED",
   "created": "2026-08-27",
   "updated": "2026-08-27",
   "upstreams": [
@@ -25,18 +25,18 @@
       "interfaces": ["formalism/00C_relational_density_viscosity.md", "formalism/01D_shannon_onsager_response_tensor.md", "formalism/01K_temporal_information_curvature_interface.md", "formalism/01L_phase_clock_length_scale.md", "formalism/05A_internal_elapsed_activity.md", "formalism/05C_relational_lapse_interface.md"]
     },
     {
-      "role": "shape_euler_and_noether_collective_source_interface",
+      "role": "shape_euler_noether_and_local_current_source_interface",
       "repository": "AdrianLipa90/Informational-Dynamics-of-Time",
       "ref": "feat/idt-rfc-normalized-shape-holonomy-v0.1",
-      "interfaces": ["formalism/01X_RFC_normalized_shape_extensive_scale_interface.md", "formalism/01Y_phase_intention_energy_per_charge_interface.md", "formalism/01Z_noether_collective_phase_carrier_interface.md", "validation/01X_RFC_CROSS_REFERENCE_LOCK_V0_1.json", "validation/IDT_RFC_PNCS_SOURCE_HOLONOMY_PAIR_V0_1.json"]
+      "interfaces": ["formalism/01X_RFC_normalized_shape_extensive_scale_interface.md", "formalism/01Y_phase_intention_energy_per_charge_interface.md", "formalism/01Z_noether_collective_phase_carrier_interface.md", "formalism/01AA_noether_rfc_conserved_current_binding.md", "validation/01X_RFC_CROSS_REFERENCE_LOCK_V0_1.json", "validation/IDT_RFC_PNCS_SOURCE_HOLONOMY_PAIR_V0_1.json"]
     },
     {
       "role": "gremlin_pnv_candidate_authoring_information_holonomy_and_source_loop_contracts",
       "repository": "AdrianLipa90/PhaseNav-Natural-Coding-System",
       "ref": "feat/gremlin-pnv-authoring-v0.2",
-      "commit": "fa517208e40873523d1c2a5b7fdb852092421afa",
-      "contracts": ["PNCS_GREMLIN_NATIVE_PNV_BRIDGE_V0_2", "PNCS_PNV_INFORMATION_HOLONOMY_V0_1", "PNCS_PNV_SOURCE_HOLONOMY_LOOPS_V0_1", "PNCS_PNV_NOETHER_COLLECTIVE_CARRIER_V0_1"],
-      "interfaces": ["src/phasenav_natural_code/gremlin_pnv_bridge_v02.py", "src/phasenav_natural_code/gremlin_pnv_holonomy_v01.py", "src/phasenav_natural_code/pnv_source_holonomy_v01.py", "src/phasenav_natural_code/pnv_noether_collective_holonomy_v01.py", "spec/PNCS_PNV_SOURCE_HOLONOMY_LOOPS_V0_1.md", "spec/PNCS_PNV_NOETHER_COLLECTIVE_CARRIER_V0_1.md"],
+      "commit": "f7b428f4dc30ddeb1280c9213c5788f576a54db4",
+      "contracts": ["PNCS_GREMLIN_NATIVE_PNV_BRIDGE_V0_2", "PNCS_PNV_INFORMATION_HOLONOMY_V0_1", "PNCS_PNV_SOURCE_HOLONOMY_LOOPS_V0_1", "PNCS_PNV_NOETHER_COLLECTIVE_CARRIER_V0_1", "PNCS_PNV_NOETHER_RFC_CURRENT_BINDING_V0_1"],
+      "interfaces": ["src/phasenav_natural_code/gremlin_pnv_bridge_v02.py", "src/phasenav_natural_code/gremlin_pnv_holonomy_v01.py", "src/phasenav_natural_code/pnv_source_holonomy_v01.py", "src/phasenav_natural_code/pnv_noether_collective_holonomy_v01.py", "src/phasenav_natural_code/pnv_noether_rfc_current_holonomy_v01.py", "spec/PNCS_PNV_SOURCE_HOLONOMY_LOOPS_V0_1.md", "spec/PNCS_PNV_NOETHER_COLLECTIVE_CARRIER_V0_1.md", "spec/PNCS_PNV_NOETHER_RFC_CURRENT_BINDING_V0_1.md"],
       "native_ci_state": "CI_EXECUTION_UNRESOLVED_PRE_TEST"
     }
   ],
@@ -50,11 +50,13 @@
     {"name": "Euler_Noether_Berry_Preference_Formalism_v2.tex", "role": "global_U1_current_and_Euler_Berry_closure"},
     {"name": "TIR_KEPLER_NOETHER_PHASE_BINDING_V0_4.md", "role": "Noether_current_polar_reduction_and_phase_cross_binding"}
   ],
-  "rfc_gates": ["formalism/RFL0_TEMPORAL_INFORMATION_CURVATURE_CLOSURE.md", "formalism/RF02H_HEXAHEDRAL_RANK3_SPATIAL_METRIC.md", "formalism/RF02I_HEXAHEDRAL_COFRAME_CONNECTION.md", "formalism/RFN0_RELATIONAL_LAPSE_CLOCK_DYNAMICS.md", "formalism/RFN1_HEXAHEDRAL_SOURCE_OPERATOR.md", "formalism/RFN1B_SOURCE_TYPE_IDENTIFIABILITY_FIREWALL.md", "formalism/RFN1B2_CONSERVED_SOURCE_CARRIER_FACTORIZATION.md", "formalism/RFN1B2H_NORMALIZED_SHAPE_HOLONOMY.md", "formalism/RFN1B2I_PHASE_INTENTION_ENERGY_PER_CHARGE.md", "formalism/RFN1B2J_NOETHER_COLLECTIVE_PHASE_CARRIER.md"],
-  "pncs_source_holonomy_loops": ["SOURCE.CARRIER.NORMALIZATION.ROUNDTRIP", "SOURCE.CARRIER.Q0_OCCUPATION.ROUNDTRIP", "SOURCE.CARRIER.EPSILON_MASS_DENSITY.ROUNDTRIP", "SOURCE.PHASE_INTENTION.EULER_CHARGE_ENERGY.ROUNDTRIP", "SOURCE.PHASE_NOETHER.COLLECTIVE_CARRIER.ROUNDTRIP"],
+  "rfc_gates": ["formalism/RFL0_TEMPORAL_INFORMATION_CURVATURE_CLOSURE.md", "formalism/RF02H_HEXAHEDRAL_RANK3_SPATIAL_METRIC.md", "formalism/RF02I_HEXAHEDRAL_COFRAME_CONNECTION.md", "formalism/RFN0_RELATIONAL_LAPSE_CLOCK_DYNAMICS.md", "formalism/RFN1_HEXAHEDRAL_SOURCE_OPERATOR.md", "formalism/RFN1B_SOURCE_TYPE_IDENTIFIABILITY_FIREWALL.md", "formalism/RFN1B2_CONSERVED_SOURCE_CARRIER_FACTORIZATION.md", "formalism/RFN1B2H_NORMALIZED_SHAPE_HOLONOMY.md", "formalism/RFN1B2I_PHASE_INTENTION_ENERGY_PER_CHARGE.md", "formalism/RFN1B2J_NOETHER_COLLECTIVE_PHASE_CARRIER.md", "formalism/RFN1B2K_NOETHER_RFC_CONSERVED_CURRENT_BINDING.md"],
+  "pncs_source_holonomy_loops": ["SOURCE.CARRIER.NORMALIZATION.ROUNDTRIP", "SOURCE.CARRIER.Q0_OCCUPATION.ROUNDTRIP", "SOURCE.CARRIER.EPSILON_MASS_DENSITY.ROUNDTRIP", "SOURCE.PHASE_INTENTION.EULER_CHARGE_ENERGY.ROUNDTRIP", "SOURCE.PHASE_NOETHER.COLLECTIVE_CARRIER.ROUNDTRIP", "SOURCE.PHASE_NOETHER.RFC_CONSERVED_CURRENT.ROUNDTRIP"],
   "validation_receipts": ["validation/RFL0_PHASE_CLOCK_SCALE_V0_2.json", "validation/RF02H_HEXAHEDRAL_RANK3_V0_1.json", "validation/RF02I_COFRAME_CONNECTION_V0_1.json", "validation/RFN0_RELATIONAL_LAPSE_V0_1.json", "validation/RFN1_HEXAHEDRAL_SOURCE_OPERATOR_V0_1.json", "validation/RFN1B_SOURCE_TYPE_FIREWALL_V0_1.json", "validation/RFN1B2_CONSERVED_SOURCE_CARRIER_V0_1.json", "validation/RFN1B2H_NORMALIZED_SHAPE_HOLONOMY_V0_1.json", "validation/IDT_RFC_PNCS_SOURCE_HOLONOMY_PAIR_V0_1.json"],
-  "local_validation_commits": {"paired_receipt": "af5948e061bd45f87b626df2e0c9d3ad0d4e3de3"},
-  "executed_reference_gates": {"idt": "356/356 PASS", "rfc": "48/48 PASS"},
-  "preferred_source_chain": ["Euler/Berry closure", "J_I^EB=hbar*theta_I^EB", "P_Phi^EB=J-J_I^EB", "Q_theta=I_A*(P_Phi^EB/I_phi)", "Delta_I=abs(I_A/I_phi-1)", "epsilon_N^EB=H_Phi^EB/Q_theta", "I_A=I_phi => epsilon_N^EB=(1/2)D_tau_chi", "Q_Sigma <-> Q_theta OPEN", "epsilon_Q <-> epsilon_N^EB OPEN"],
-  "pinning_rule": "Both repositories pin the same finite-Noether PNCS code snapshot and retain immutable tested snapshots for executed reference gates."
+  "local_validation_commits": {"paired_receipt": "1a3f72785b8f8e69d75aa800c81e23b942b89cfa"},
+  "executed_reference_gates": {"idt": "370/370 PASS", "rfc": "62/62 PASS"},
+  "current_binding_defects": {"Delta_measure": "sum|V_theta-V_Q|/sum V_theta", "Delta_local": "sum V|j_Q-j_theta|/Q_theta", "Delta_Q": "|Q_Sigma-Q_theta|/Q_theta", "Delta_F": "|F_side|"},
+  "anti_false_positive_witness": {"j_theta": [1.0, 3.0], "j_Q": [2.0, 2.0], "V": [1.0, 1.0], "Q_theta": 4.0, "Q_Sigma": 4.0, "Delta_Q": 0.0, "Delta_local": 0.5, "binding_verdict": "FAIL_LOCAL_CURRENT"},
+  "preferred_source_chain": ["Euler/Berry closure", "J_I^EB=hbar*theta_I^EB", "P_Phi^EB=J-J_I^EB", "Q_theta=I_A*(P_Phi^EB/I_phi)", "Delta_I=abs(I_A/I_phi-1)", "epsilon_N^EB=H_Phi^EB/Q_theta", "common slice/measure/cell partition", "Delta_local and Delta_Q current audit", "zero side flux", "Q_Sigma <-> Q_theta candidate identity at zero defects", "epsilon_Q <-> epsilon_N^EB OPEN physical promotion"],
+  "pinning_rule": "Both repositories pin the same six-loop PNCS current-binding snapshot and require local-current plus common-measure closure before physical carrier promotion."
 }
