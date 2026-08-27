@@ -43,12 +43,20 @@ RF-N1B2 conserved source-carrier factorization
   positive-source sector -> normalized carrier profile p_Q
   Q_a=Q_Sigma p_a^(Q)
                                  |
+                                 v
+RF-N1B2H normalized-shape / extensive-scale holonomy
+  N(Q)=Q/Q_Sigma
+  H_s(Q)=L_s(N(Q))=(s/Q_Sigma)Q
+  Delta_ext=|1-s/Q_Sigma|
+  exact inverse lift at s=Q_Sigma
+  m_Q,a=M_Q p_a^(Q), M_Q=epsilon_Q Q_Sigma/c^2
+                                 |
                 +----------------+----------------+
                 |                                 |
                 v                                 v
 source normalization OPEN                 bounded candidate basis
- q0 or epsilon_Q                          S_R=beta_I Xi_I+...
- IDT p <-> p_Q cross-binding              NO PROMOTION
+ Q_Sigma / epsilon_Q / M_Q                S_R=beta_I Xi_I+...
+ IDT 01X-RFC p <-> p_Q cross-binding      NO PROMOTION
  E-per-carrier binding
  temporal/phase carrier <-> rho_m
                 |                                 |
@@ -88,6 +96,8 @@ No downstream node may be promoted above its weakest unresolved prerequisite.
 - `RF-N1B identifiability theorem`: EXACT for the current premise set — different free occupation maps or source coefficients give different matter/source laws while preserving the already-derived geometry, lapse kinematics and source operator. Therefore neither unique `rho_m` nor unique `G` is determined yet.
 - `RF-N1B universality diagnostic`: CANDIDATE TEST. If independent derivations later give both `S_R=beta_I Xi_I` and the phase-cell matter bridge, Newton matching requires `G=[beta_I J_pi/(24 pi sqrt(6) n_E a_FS)] c^5/(hbar omega^2)`. This is a consistency condition, not a derivation or definition of `G`.
 - `RF-N1B2 conserved continuous carrier`: PASS at the stated conditional level. `fluid_time.pdf` supplies `J_tau^mu=rho_tau u^mu` with `nabla_mu J_tau^mu=0`; any admitted conserved current plus the RF physical spatial measure gives an extensive slice carrier `Q_Sigma` under vanishing side flux / periodic / sufficient-decay conditions. On a positive-source sector it factorizes as `Q_a=Q_Sigma p_a^(Q)` with normalized `p_a^(Q)`.
-- `RF-N1B2 normalization firewall`: OPEN. The current equations do not fix a carrier quantum `q0`, an energy-per-carrier conversion `epsilon_Q`, the identification `p_IDT=p^(Q)`, or the binding of temporal/phase carrier density to ordinary matter density. These are now the minimal prerequisites before RF-N1C.
+- `RF-N1B2H normalization holonomy`: EXACT PASS for the positive finite-cell factorization. The normalization map is constant on positive rays; the lift holonomy is `H_s(Q)=(s/Q_Sigma)Q`; the relative extensive defect is `Delta_ext=|1-s/Q_Sigma|`; exact inverse transport uses the preserved scale coordinate. The continuous source conversion combines into the extensive coordinate `M_Q=epsilon_Q Q_Sigma/c^2`, with `m_Q,a=M_Q p_a^(Q)` and `rho_Q,a=M_Q p_a^(Q)/V_a`.
+- `RF-N1B2H IDT interface`: OPEN. IDT `01X-RFC` exports normalized simplex shape and the exact scale-fiber theorem; physical admission awaits a pinned common state space, cell partition/measure, and transport compatibility.
+- `RF-N1B2 normalization frontier`: OPEN. Carrier quantum `q0`, energy-per-carrier conversion `epsilon_Q`, combined physical source-mass scale `M_Q`, the physical `p_IDT <-> p^(Q)` cross-binding, and temporal/phase carrier to ordinary matter binding remain the explicit prerequisites before RF-N1C.
 - `TIR mass sector`: active TIR claim hierarchy classifies the exponential mass ansatz as class B/C depending on sector and not as a universal established mass law; it is not imported as the Newton source.
 - `RF-M2`, carrier normalization/matter binding, `RF-N1C`, `RF-L1`, `RF-E1`: OPEN.
