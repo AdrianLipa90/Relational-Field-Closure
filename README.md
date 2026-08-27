@@ -1,6 +1,6 @@
 # Relational Field Closure
 
-**Status:** `EARLY_FORMALISM / EXACT_QGT_LORENTZ_AND_PHASE_CLOCK_CURVATURE_RESULTS / PHYSICAL_CLOSURE_OPEN`
+**Status:** `EARLY_FORMALISM / EXACT_QGT_LORENTZ_PHASE_CLOCK_AND_HEXAHEDRAL_RANK3_RESULTS / PHYSICAL_CLOSURE_OPEN`
 
 Relational Field Closure (RFC) is a derivation-first research repository testing whether Maxwell, Newton and Einstein field structures can be obtained from three pinned upstream theories:
 
@@ -24,7 +24,68 @@ Q_{\mu\nu}=\langle D_\mu\psi|D_\nu\psi\rangle,
 
 A single `CP1` pullback has rank at most two, so the rank-three spatial sector is assigned to the multi-state/polyhedral refinement gate.
 
-Given a nonvanishing IDT temporal one-form `Theta` and a positive rank-three spatial metric `h_perp` on `ker(Theta)`,
+## RF-02H hexahedral rank-three local metric
+
+Represent a regular hexahedral cell by its six oriented face-normal Bloch rays,
+
+\[
+\boxed{
+\mathcal H^\star=\{\pm e_1,\pm e_2,\pm e_3\}.
+}
+\]
+
+With equal weights, their Bloch second moment is
+
+\[
+\boxed{M_H=\frac13I_3.}
+\]
+
+The aggregate Fubini--Study orbit metric is therefore
+
+\[
+\boxed{
+h_H=\frac14(I_3-M_H)=\frac16I_3.}
+\]
+
+Hence
+
+\[
+\boxed{
+\operatorname{rank}h_H=3,
+\qquad
+\det h_H=\frac1{216},
+\qquad
+\operatorname{cond}(h_H)=1.
+}
+\]
+
+The six dual Bloch points tessellate the sphere into eight octants. The exact refinement invariants include
+
+\[
+\boxed{
+\chi=2,
+\qquad
+\sum_f a_{FS}(f)=\pi,
+\qquad
+\int_{S^2}F_B=\pm2\pi,
+\qquad
+c_1=\pm1.
+}
+\]
+
+Each octant carries
+
+\[
+\boxed{
+a_{FS}=\frac\pi8,
+\qquad
+|\gamma_B|=\frac\pi4.
+}
+\]
+
+## Lorentzian assembly
+
+Given the IDT temporal one-form `Theta` and the RF-02H positive rank-three spatial metric,
 
 \[
 \boxed{g_L=-\Theta\otimes\Theta+h_\perp}
@@ -36,9 +97,11 @@ has exact signature
 \boxed{(-,+,+,+)}.
 \]
 
-## Phase-clock length and physicalized projective area
+RF-02H therefore satisfies the local positive-rank-three prerequisite of RF-G0. The next geometric gate is the gluing/integrability of the local spatial coframe across neighboring cells.
 
-IDT now supplies the local phase-clock length carrier
+## Phase-clock length and physicalized projective geometry
+
+IDT supplies the local phase-clock length carrier
 
 \[
 \boxed{
@@ -60,22 +123,28 @@ TIR binds this to the dimensionless Fubini--Study geometry through
 }
 \]
 
-For a constant-rate cell `P`,
+For the regular RF-02H cell with a common local phase rate,
 
 \[
 \boxed{
-\mathcal A_{\rm rel}^{(P)}
-=\frac{c^2}{\omega_P^2}a_{FS}^{(P)}.
+h_H^{\rm phys}
+=\frac{\ell_\varphi^2}{6}I_3
+=\frac{c^2}{6\omega^2}I_3.
 }
 \]
 
-Thus the former scalar area calibration is replaced, under this binding, by the local dynamical scale
+For three paired local rates, `ell_i=c/|omega_i|`, the exact anisotropic extension is
 
 \[
 \boxed{
-\ell_R(x)\equiv\ell_\varphi(x)=\frac{c}{|\omega(x)|}.
+h_H^{\rm aniso}
+=\frac1{12}
+\operatorname{diag}
+(\ell_2^2+\ell_3^2,\ell_1^2+\ell_3^2,\ell_1^2+\ell_2^2).
 }
 \]
+
+This gives a typed local map from phase-clock anisotropy to spatial metric anisotropy.
 
 ## Temporal information curvature
 
@@ -205,12 +274,12 @@ The physicalized FS/Berry area therefore has a dedicated metric-dependence gate 
 
 ## Immediate frontier
 
-1. derive a positive rank-three spatial metric from the hexahedral/higher refinement hierarchy;
-2. promote or falsify the phase-clock physical metric binding `ds_rel^2 = ell_phi^2 ds_FS^2`;
-3. handle phase-rate-zero patches and nonuniform refinement convergence;
-4. determine or bound `alpha_I`;
-5. classify metric dependence of the physicalized area and complete action variation;
-6. derive lapse/shift dynamics and the Newton weak-field limit;
+1. `RF-02I`: derive hexahedral coframe gluing/refinement and determine the integrability/connection structure;
+2. `RF-N0`: derive local lapse/clock-rate dynamics from IDT rather than fixing the temporal leg;
+3. derive the connection and curvature of the physicalized tetrad;
+4. construct the weak-field variables from those derived objects and run the Newton/Poisson limit gate;
+5. handle phase-rate-zero patches and nonuniform refinement convergence;
+6. determine or bound `alpha_I`;
 7. close sourced Maxwell dynamics;
 8. close dynamic `Lambda0` and Einstein-Bianchi dynamics.
 
