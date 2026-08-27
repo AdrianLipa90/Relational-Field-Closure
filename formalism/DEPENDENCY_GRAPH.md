@@ -14,21 +14,30 @@ RF-02  polyhedral metric-curvature invariants
   v                                                  v
 RF-M0 Berry gauge seed                        RF-02H hexahedral rank-3 local metric
   |                                                  |
-RF-M1 homogeneous Maxwell                            | h_H = I3/6
+RF-M1 homogeneous Maxwell                            | h_H=I3/6
   |                                                  | ell_phi=c/|omega|
 RF-M2 sourced/action Maxwell                         v
   |                                           RF-G0 Lorentzian signature
   |                                                  |
   |                                           RF-02I coframe connection/curvature
-  |                                             |       |
-  |                                             |       +-- exact negative theorem:
-  |                                             |           constant lapse -> Gamma^i_tt=0
-  |                                             v
-  |                                           RF-N0 derive lapse / clock-rate field N
-  |                                             |
-  |                                           RF-N1 Newton weak-field + source law
-  |                                             |
-  +----------------------+----------------------+
+  |                                                  |
+  |                                       exact negative theorem:
+  |                                       constant lapse -> Gamma^i_tt=0
+  |                                                  |
+  |                                                  v
+  |                                  IDT 05C relational clock ratio
+  |                                  N_R=phi_x/phi_ref > 0
+  |                                                  |
+  |                                                  v
+  |                                           RF-N0 relational lapse
+  |                                     Theta=N_R c dt
+  |                                     Phi_R=c^2 ln N_R
+  |                                     a^i~-grad^i Phi_R
+  |                                                  |
+  |                                                  v
+  |                                           RF-N1 source law / Poisson test
+  |                                                  |
+  +----------------------+---------------------------+
                          |
                          v
                RF-P0 phase-energy / photoelectric bridge
@@ -61,14 +70,16 @@ RF-M2 sourced/action Maxwell                         v
 
 No downstream node may be promoted above the weakest unresolved prerequisite.
 
-Exact/candidate status after RF-02I:
+Exact/candidate status after RF-N0:
 
-- `RF-02H`: LOCAL STRUCTURAL PASS. Regular six-face hexahedral dual frame gives `M_H=I3/3`, `h_H=I3/6`, exact rank three, determinant `1/216`, condition number `1`.
-- `RF-G0`: exact signature theorem; RF-02H now supplies its positive rank-three local spatial prerequisite.
-- `RF-02I conformal coframe connection`: LOCAL EXACT PASS. For `E^i=a vartheta^i`, `a=c/(sqrt(6)|omega|)`, the torsion-free metric connection is `omega^i_j=bar_omega^i_j+f_j E^i-f_i E^j`, with `f_i=-E_i ln|omega|`.
-- `RF-02I integrable-reference curvature`: LOCAL EXACT PASS. On `vartheta^i=dx^i`, `R3=a^-2[4 Delta ln|omega|-2|grad ln|omega||^2]=(24 omega Delta omega-36|grad omega|^2)/c^2` on a sign-definite nonzero-rate patch.
-- `RF-02I cell gluing`: exact `SO(3)` connection transformation law; discrete-to-continuum holonomy convergence remains a candidate/refinement gate.
-- `RF-02I Newton negative theorem`: EXACT. A static metric `-c^2dt^2+h_ij(x)dx^idx^j` has `Gamma^i_tt=0`; static spatial curvature alone cannot supply the Newtonian acceleration term for a slowly moving trajectory initially at rest.
-- `RF-N0 lapse kinematic bridge`: exact conditional relation `Gamma^i_tt=c^2 N h^ij partial_j N`. If a later derivation gives `N=1+Phi/c^2+...`, the slow-motion kinematic limit is `d2x^i/dt^2=-partial^i Phi+O(c^-2)`. The source equation for `Phi` remains open.
-- `IDT 01L`, `TIR phase-clock area v0.2`, `IDT 01K`, `RF-L0`: retained as previously staged.
-- `RF-N0 dynamical lapse derivation`, `RF-N1 source-law/Poisson closure`, `RF-E1`: OPEN.
+- `RF-02H`: LOCAL STRUCTURAL PASS. Regular hexahedral dual frame supplies the positive rank-three local metric `h_H=I3/6`.
+- `RF-G0`: exact Lorentzian signature theorem; positive rank-three prerequisite satisfied locally by RF-02H.
+- `RF-02I`: LOCAL EXACT CONNECTION PASS. Phase-clock gradients enter the spatial connection and curvature; constant temporal lapse gives exact `Gamma^i_tt=0` negative theorem.
+- `IDT 05C relational lapse`: EXACT CLOCK-RATIO PASS. `N_R=phi_x/phi_ref>0` is dimensionless, reparameterization invariant and compositional. For common normalization, `N_R=M_x cosh(A_x/2)/[M_ref cosh(A_ref/2)]`.
+- `RF-N0 temporal coframe binding`: CANDIDATE physical binding `Theta_R=N_R c dt` after reference-clock calibration.
+- `RF-N0 static geodesic kinematics`: EXACT conditional on the temporal-coframe binding. `Gamma^i_tt=c^2N_R h^ij partial_j N_R`; `Phi_R=c^2 ln N_R`; slow local acceleration is `a^i=-N_R^2 h^ij partial_j Phi_R+...`.
+- `RF-N0 relational-gradient decomposition`: EXACT under fixed reference and admitted IDT kinetic realization. `partial ln N_R=partial ln M+1/2 tanh(A/2) partial A`, with `partial ln M` decomposing into density and viscosity gradients.
+- `RF-N0 weak force-law form`: CONDITIONAL LIMIT PASS CANDIDATE. Near `N_R=1` and locally Euclidean physical `h`, `a^i=-partial^i Phi_R+...`.
+- `RF-N1 source equation / Newton constant normalization`: OPEN. No Poisson equation is used upstream.
+- `IDT 01L`, `TIR phase-clock area v0.2`, `IDT 01K`, `RF-L0`: retained.
+- `RF-M2`, `RF-N1`, `RF-E1`: OPEN.
