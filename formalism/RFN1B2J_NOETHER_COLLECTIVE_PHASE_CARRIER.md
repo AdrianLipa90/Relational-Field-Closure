@@ -56,13 +56,13 @@ The rotor gives
 \boxed{P_\Phi=J-J_I=I_\phi D_\tau\chi.}
 \]
 
-Hence the cross-representation normalization gate is
+Hence
 
 \[
-\boxed{I_A\stackrel{?}{=}I_\phi.}
+\boxed{I_A\stackrel{?}{=}I_\phi}
 \]
 
-When admitted,
+is the cross-representation normalization gate. When admitted,
 
 \[
 \boxed{Q_\vartheta=P_\Phi.}
@@ -74,7 +74,7 @@ For nonzero phase rate the exact relative binding defect is
 \boxed{\Delta_I=\left|\frac{I_A}{I_\phi}-1\right|.}
 \]
 
-## 3. Euler-closed carrier
+## 3. Euler-closed finite carrier and energy conversion
 
 RF-N1B2I supplies
 
@@ -85,32 +85,52 @@ J_I^{EB}=\hbar\theta_I^{EB}.
 Therefore
 
 \[
-\boxed{P_\Phi^{EB}=J-\hbar\theta_I^{EB}.}
+\boxed{P_\Phi^{EB}=J-\hbar\theta_I^{EB}}
 \]
 
-The rotor energy becomes
+and
 
 \[
 \boxed{H_\Phi^{EB}=\frac{(P_\Phi^{EB})^2}{2I_\phi}.}
 \]
 
-On the positive carrier sector,
+The finite Noether charge is
+
+\[
+\boxed{
+Q_\vartheta^{EB}
+=I_A D_\tau\chi
+=\frac{I_A}{I_\phi}P_\Phi^{EB}.
+}
+\]
+
+The energy-per-conserved-carrier coordinate is therefore
 
 \[
 \boxed{
 \epsilon_N^{EB}
-:=\frac{H_\Phi^{EB}}{P_\Phi^{EB}}
-=\frac{P_\Phi^{EB}}{2I_\phi}.
+:=\frac{H_\Phi^{EB}}{Q_\vartheta^{EB}}.
 }
 \]
 
-Under the collective inertia binding,
+On the exact inertia-binding sector \(I_A=I_\phi\),
 
 \[
-\boxed{\epsilon_N^{EB}=\frac12D_\tau\chi.}
+Q_\vartheta^{EB}=P_\Phi^{EB}
 \]
 
-The intention-charge ratio \(H_\Phi/J_I\) and the Noether-carrier ratio \(H_\Phi/P_\Phi\) remain separately typed. RF-N1B2J selects the second ratio for the conserved-current source route.
+and
+
+\[
+\boxed{
+\epsilon_N^{EB}
+=\frac{H_\Phi^{EB}}{P_\Phi^{EB}}
+=\frac{P_\Phi^{EB}}{2I_\phi}
+=\frac12D_\tau\chi.
+}
+\]
+
+The intention-charge ratio \(H_\Phi/J_I\) and the Noether-carrier ratio \(H_\Phi/Q_\vartheta\) remain separately typed. The latter is the RFC conserved-current candidate.
 
 ## 4. RFC carrier binding
 
@@ -120,30 +140,33 @@ RF-N1B2 defines
 Q_\Sigma=\int_{\Sigma_t}j_Q\,dV_h.
 \]
 
-The preferred physical chain is
+The physical chain is
 
 \[
 \boxed{
 Q_\Sigma
 \stackrel{?}{\longleftrightarrow}
-Q_\vartheta
+Q_\vartheta^{EB}
 \stackrel{I_A=I_\phi}{\longleftrightarrow}
 P_\Phi^{EB}.
 }
 \]
 
-Once admitted,
+The corresponding candidate conversion is
 
 \[
-\boxed{\epsilon_Q\stackrel{?}{=}\epsilon_N^{EB}}
+\boxed{
+\epsilon_Q\stackrel{?}{=}\epsilon_N^{EB}
+=\frac{H_\Phi^{EB}}{Q_\vartheta^{EB}}.
+}
 \]
 
-and
+Once the carrier binding is admitted,
 
 \[
 \boxed{
 M_N
-=\frac{\epsilon_N^{EB}P_\Phi^{EB}}{c^2}
+=\frac{\epsilon_N^{EB}Q_\vartheta^{EB}}{c^2}
 =\frac{H_\Phi^{EB}}{c^2}.
 }
 \]
@@ -166,7 +189,7 @@ This is the local density target for RF-N1C after common state-space/cell transp
 
 ## 6. PNV gate
 
-The next executable loop is
+The executable loop is
 
 ```text
 SOURCE.PHASE_NOETHER.COLLECTIVE_CARRIER.ROUNDTRIP
@@ -176,7 +199,9 @@ Euler-closed J_I^EB
  -> Q_theta=I_A D_tau chi
  -> audit Delta_I=|I_A/I_phi-1|
  -> H_Phi^EB=P_Phi^2/(2 I_phi)
- -> epsilon_N^EB=H_Phi/P_Phi
+ -> epsilon_N^EB=H_Phi/Q_theta
+ -> exact-binding reduction epsilon_N^EB=(1/2)D_tau chi
+ -> Q_RFC=Q_theta
  -> reconstruct rotor carrier
 ```
 
@@ -188,6 +213,7 @@ SOURCE.ROTOR_KINETIC_CHARGE
 SOURCE.NOETHER_FINITE_CHARGE
 SOURCE.ROTOR_PHASE_ENERGY
 SOURCE.NOETHER_ENERGY_PER_CHARGE
+SOURCE.NOETHER_INERTIA_BINDING_DEFECT
 ```
 
 ## 7. Advancement
@@ -198,7 +224,8 @@ collective-phase finite charge                  PASS_CONDITIONAL
 field inertia I_A                               PASS as defined integral
 I_A <-> I_phi                                   OPEN physical normalization gate
 Q_theta <-> P_Phi                               PASS_CONDITIONAL on inertia binding
-Euler-closed epsilon_N=H/P_Phi                  PASS_CONDITIONAL positive sector
+Euler-closed epsilon_N=H/Q_theta                PASS typed finite-carrier ratio
+exact epsilon_N=H/P_Phi=(1/2)D_tau chi          PASS_CONDITIONAL on I_A=I_phi
 Q_Sigma <-> Q_theta                             OPEN RFC carrier binding
 p_IDT <-> p_Q                                   OPEN physical state-space binding
 RF-N1C coupling/universality                    OPEN
