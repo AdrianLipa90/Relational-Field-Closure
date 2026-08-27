@@ -32,9 +32,10 @@ IDT 01Y / RF-N1B2I Euler-closed intention charge
 IDT 01Z / RF-N1B2J Noether collective carrier
   P_Phi^EB=J-J_I^EB
   J_theta^mu=2 A^2 partial^mu theta
-  Q_theta=I_A D_tau chi
+  Q_theta=I_A D_tau chi=(I_A/I_phi)P_Phi^EB
   Delta_I=|I_A/I_phi-1|
-  epsilon_N^EB=H_Phi^EB/P_Phi^EB
+  epsilon_N^EB=H_Phi^EB/Q_theta
+  exact I_A=I_phi => epsilon_N^EB=(1/2)D_tau chi
   |
 PNCS physical-law frame / executable holonomy
   five source/control loops
@@ -42,9 +43,9 @@ PNCS physical-law frame / executable holonomy
   |
   +---------------- current/carrier binding OPEN ----------------+
   |  I_A <-> I_phi                                              |
-  |  Q_Sigma <-> Q_theta <-> P_Phi^EB                          |
+  |  Q_Sigma <-> Q_theta                                       |
   |  epsilon_Q <-> epsilon_N^EB                                 |
-  |  p_IDT <-> p_Q and local cell/measure transport             |
+  |  p_IDT <-> p_Q and local cell/measure/current transport     |
   +--------------------------------------------------------------+
   |
 RF-N1C coupling/universality audit
@@ -71,28 +72,33 @@ Parallel gauge and information-curvature branches retain their existing RF-M0/RF
 - `RF-N1B2I`: Euler-closed intention charge PASS for `J_I^EB=hbar theta_I^EB`; canonical rotor energy PASS for `H_Phi^EB=(J-J_I^EB)^2/(2I_phi)`.
 - `RF-N1B2J`: local U(1) Noether current and polar reduction PASS; collective finite-charge reduction PASS_CONDITIONAL.
 - `field inertia`: `I_A=2 integral A^2 dV_h` is the finite collective-field inertia coordinate.
-- `rotor kinetic carrier`: `P_Phi^EB=J-J_I^EB=I_phi D_tau chi`.
+- `rotor kinetic coordinate`: `P_Phi^EB=J-J_I^EB=I_phi D_tau chi`.
 - `field/rotor normalization`: OPEN physical gate `I_A <-> I_phi` with exact audit coordinate
   \[
   \Delta_I=\left|I_A/I_\phi-1\right|.
   \]
-- `Noether/rotor charge binding`: PASS_CONDITIONAL at `Delta_I=0`, giving `Q_theta=P_Phi^EB`.
-- `preferred conserved-carrier energy ratio`: PASS_CONDITIONAL on the positive carrier sector,
+- `finite Noether carrier`: `Q_theta=I_A D_tau chi=(I_A/I_phi)P_Phi^EB`.
+- `Noether/rotor charge equality`: PASS_CONDITIONAL only at `Delta_I=0`, giving `Q_theta=P_Phi^EB`.
+- `finite Noether energy coordinate`: PASS as typed positive-sector ratio,
+  \[
+  \epsilon_N^{EB}=H_\Phi^{EB}/Q_\vartheta.
+  \]
+- `exact inertia-binding reduction`: PASS_CONDITIONAL at `I_A=I_phi`,
   \[
   \epsilon_N^{EB}=H_\Phi^{EB}/P_\Phi^{EB}=P_\Phi^{EB}/(2I_\phi)=\tfrac12D_\tau\chi.
   \]
-- `RFC physical carrier binding`: OPEN chain `Q_Sigma <-> Q_theta <-> P_Phi^EB`.
-- `RFC epsilon binding`: OPEN downstream binding `epsilon_Q <-> epsilon_N^EB` after the carrier identity is admitted.
-- `source mass coordinate`: in the bound sector `M_N=H_Phi^EB/c^2`.
+- `RFC physical carrier binding`: OPEN chain `Q_Sigma <-> Q_theta`.
+- `RFC epsilon binding`: OPEN downstream binding `epsilon_Q <-> epsilon_N^EB` after the conserved carrier identity is admitted.
+- `source mass coordinate`: `M_N=epsilon_N^EB Q_theta/c^2=H_Phi^EB/c^2`.
 
 ## PNCS execution layer
 
-Pinned PNCS snapshot:
+Pinned PNCS code snapshot:
 
 ```text
 AdrianLipa90/PhaseNav-Natural-Coding-System
 feat/gremlin-pnv-authoring-v0.2
-5276133cf2ab6e47b6a4737d9671a1a8f0386a11
+fa517208e40873523d1c2a5b7fdb852092421afa
 ```
 
 Contracts:
@@ -123,26 +129,25 @@ SOURCE.NOETHER_INERTIA_BINDING_DEFECT
 SOURCE.NOETHER_ENERGY_PER_CHARGE
 ```
 
-and fails closed at RFC candidate binding when the declared inertia tolerance is exceeded.
+and fails closed at RFC candidate binding when the declared inertia tolerance is exceeded. Its general energy coordinate is `H_Phi_EB/Q_theta`; `H_Phi_EB/P_Phi_EB=(1/2)D_tau_chi` is the exact zero-defect reduction.
 
 Latest executed cross-repository reference snapshots:
 
 ```text
-IDT Reference suite     355 passed, 0 failed
-RFC Reference suite      47 passed, 0 failed
+IDT Reference suite     356 passed, 0 failed
+RFC Reference suite      48 passed, 0 failed
 ```
 
-PNCS native workflow remains `CI_EXECUTION_UNRESOLVED_PRE_TEST`; the observed job for the pinned snapshot has `steps=null`.
+PNCS native workflow remains `CI_EXECUTION_UNRESOLVED_PRE_TEST`; the observed candidate-authoring job for the test head has `steps=null`.
 
 ## Current source frontier
 
 \[
 \boxed{
-I_A\stackrel{?}{=}I_\phi,
+Q_\Sigma\stackrel{?}{\longleftrightarrow}Q_\vartheta,
 \qquad
-Q_\Sigma\stackrel{?}{\longleftrightarrow}Q_\vartheta
-\stackrel{?}{=}P_\Phi^{EB}.
+I_A\stackrel{?}{=}I_\phi.
 }
 \]
 
-This is now the immediate RF-N1B2J closure target. Once admitted, the Euler-derived/rotor-derived `epsilon_N^EB` feeds the conditional RFC mass-density transport and then the RF-N1C coupling/universality audit.
+The immediate RF-N1B2J closure target is the conserved-current identity under one explicitly pinned spatial slice, measure/cell partition, orientation and side-flux convention. Once that carrier identity is admitted, `epsilon_Q <-> epsilon_N^EB` becomes a direct downstream gate rather than a free normalization search.
