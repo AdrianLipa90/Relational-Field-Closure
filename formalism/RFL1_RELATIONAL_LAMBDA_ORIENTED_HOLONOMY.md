@@ -56,8 +56,7 @@ with explicit provenance to whichever RFC scalar-basis closure supplies it. In t
 Using the Einstein-Lambda effective-source convention,
 
 \[
-\boxed{
-u_R
+\boxed{u_R
 =\frac{c^4}{8\pi G}\Lambda_R
 }
 \]
