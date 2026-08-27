@@ -1,6 +1,6 @@
 # Relational Field Closure
 
-**Status:** `EARLY_FORMALISM / EXACT_QGT_LORENTZ_PHASE_CLOCK_AND_HEXAHEDRAL_RANK3_RESULTS / PHYSICAL_CLOSURE_OPEN`
+**Status:** `EARLY_FORMALISM / EXACT_QGT_HEXAHEDRAL_RANK3_LORENTZ_AND_LOCAL_CONNECTION_RESULTS / NEWTON_SOURCE_DYNAMICS_OPEN`
 
 Relational Field Closure (RFC) is a derivation-first research repository testing whether Maxwell, Newton and Einstein field structures can be obtained from three pinned upstream theories:
 
@@ -10,7 +10,7 @@ Relational Field Closure (RFC) is a derivation-first research repository testing
 
 The repository carries dynamic `Lambda0` as the candidate scalar closure entering the Einstein sector.
 
-## Current structural core
+## Projective and hexahedral core
 
 For a projective state,
 
@@ -22,29 +22,18 @@ Q_{\mu\nu}=\langle D_\mu\psi|D_\nu\psi\rangle,
 2\Im Q=\Omega.
 \]
 
-A single `CP1` pullback has rank at most two, so the rank-three spatial sector is assigned to the multi-state/polyhedral refinement gate.
-
-## RF-02H hexahedral rank-three local metric
-
-Represent a regular hexahedral cell by its six oriented face-normal Bloch rays,
+A single `CP1` pullback has rank at most two. RF-02H therefore uses the six oriented face-normal Bloch rays of a regular hexahedron,
 
 \[
-\boxed{
-\mathcal H^\star=\{\pm e_1,\pm e_2,\pm e_3\}.
-}
+\boxed{\mathcal H^\star=\{\pm e_1,\pm e_2,\pm e_3\}.}
 \]
 
-With equal weights, their Bloch second moment is
+With equal weights,
 
 \[
-\boxed{M_H=\frac13I_3.}
-\]
-
-The aggregate Fubini--Study orbit metric is therefore
-
-\[
-\boxed{
-h_H=\frac14(I_3-M_H)=\frac16I_3.}
+\boxed{M_H=\frac13I_3},
+\qquad
+\boxed{h_H=\frac14(I_3-M_H)=\frac16I_3}.
 \]
 
 Hence
@@ -55,17 +44,17 @@ Hence
 \qquad
 \det h_H=\frac1{216},
 \qquad
-\operatorname{cond}(h_H)=1.
+\operatorname{cond}h_H=1.
 }
 \]
 
-The six dual Bloch points tessellate the sphere into eight octants. The exact refinement invariants include
+The exact integrated dual-complex invariants include
 
 \[
 \boxed{
 \chi=2,
 \qquad
-\sum_f a_{FS}(f)=\pi,
+\sum_fa_{FS}(f)=\pi,
 \qquad
 \int_{S^2}F_B=\pm2\pi,
 \qquad
@@ -73,86 +62,145 @@ c_1=\pm1.
 }
 \]
 
-Each octant carries
+## Phase-clock physicalized spatial metric
+
+IDT supplies
 
 \[
 \boxed{
-a_{FS}=\frac\pi8,
-\qquad
-|\gamma_B|=\frac\pi4.
+\ell_\varphi=\frac{c}{|\omega|}=\frac{\hbar c}{E}.
 }
 \]
 
-## Lorentzian assembly
+For a common local phase rate,
 
-Given the IDT temporal one-form `Theta` and the RF-02H positive rank-three spatial metric,
+\[
+\boxed{
+h_H^{\rm phys}=\frac{c^2}{6\omega^2}I_3.}
+\]
+
+Write
+
+\[
+\boxed{
+E^i=a\vartheta^i,
+\qquad
+a=\frac{c}{\sqrt6|\omega|},
+\qquad
+h_\perp=\delta_{ij}E^i\otimes E^j.
+}
+\]
+
+With the temporal covector `Theta`,
 
 \[
 \boxed{g_L=-\Theta\otimes\Theta+h_\perp}
 \]
 
-has exact signature
+has exact signature `(-,+,+,+)`.
 
-\[
-\boxed{(-,+,+,+)}.
-\]
+## RF-02I coframe connection
 
-RF-02H therefore satisfies the local positive-rank-three prerequisite of RF-G0. The next geometric gate is the gluing/integrability of the local spatial coframe across neighboring cells.
-
-## Phase-clock length and physicalized projective geometry
-
-IDT supplies the local phase-clock length carrier
+If the dimensionless reference coframe is torsion-free with connection `bar_omega`, the physicalized torsion-free metric connection is
 
 \[
 \boxed{
-\ell_\varphi
-=\frac{c}{|\omega|}
-=\frac{\hbar c}{E},
+\omega^i{}_j
+=\bar\omega^i{}_j+f_jE^i-f_iE^j,
 \qquad
-\omega=\frac{d\varphi/d\tau_{\rm int}}{dt/d\tau_{\rm int}}.
+f_i=E_i\ln a=-E_i\ln|\omega|.
 }
 \]
 
-TIR binds this to the dimensionless Fubini--Study geometry through
+Thus spatial gradients of the calibrated temporal phase rate contribute directly to the spatial connection.
+
+On an integrable reference patch `vartheta^i=dx^i`, the three-dimensional scalar curvature is
 
 \[
 \boxed{
- ds^2_{\rm rel}=\ell_\varphi^2ds^2_{FS},
-\qquad
- d\mathcal A_{\rm rel}=\ell_\varphi^2da_{FS}.
+{}^{(3)}R
+=a^{-2}
+\left[4\Delta\ln|\omega|-2|\nabla\ln|\omega||^2\right]
 }
 \]
 
-For the regular RF-02H cell with a common local phase rate,
+or equivalently
 
 \[
 \boxed{
-h_H^{\rm phys}
-=\frac{\ell_\varphi^2}{6}I_3
-=\frac{c^2}{6\omega^2}I_3.
+{}^{(3)}R
+=\frac{24\omega\Delta\omega-36|\nabla\omega|^2}{c^2}.
 }
 \]
 
-For three paired local rates, `ell_i=c/|omega_i|`, the exact anisotropic extension is
+Neighboring spatial coframes glue by `SO(3)` transition maps,
+
+\[
+E_{(B)}=R_{BA}E_{(A)},
+\]
+
+with connection law
 
 \[
 \boxed{
-h_H^{\rm aniso}
-=\frac1{12}
-\operatorname{diag}
-(\ell_2^2+\ell_3^2,\ell_1^2+\ell_3^2,\ell_1^2+\ell_2^2).
+\omega_{(B)}
+=R_{BA}\omega_{(A)}R_{BA}^{-1}
+-dR_{BA}R_{BA}^{-1}.
 }
 \]
 
-This gives a typed local map from phase-clock anisotropy to spatial metric anisotropy.
+Discrete closed products of the cell rotations are the refinement-holonomy carriers.
 
-## Temporal information curvature
+## Exact Newton dependency result
+
+For a static constant-lapse metric
+
+\[
+\boxed{ds^2=-c^2dt^2+h_{ij}(x)dx^idx^j,}
+\]
+
+one has
+
+\[
+\boxed{\Gamma^i{}_{tt}=0.}
+\]
+
+Therefore static spatial curvature alone cannot generate the leading Newtonian acceleration term for a slowly moving test trajectory initially at rest.
+
+The next temporal gate is consequently mandatory. With
+
+\[
+\boxed{\Theta=N(x)c\,dt}
+\]
+
+and zero shift,
+
+\[
+\boxed{\Gamma^i{}_{tt}=c^2N h^{ij}\partial_jN.}
+\]
+
+If RF-N0 later derives
+
+\[
+N=1+\frac{\Phi}{c^2}+O(c^{-4}),
+\]
+
+then the slow-motion kinematic limit is
+
+\[
+\boxed{
+\frac{d^2x^i}{dt^2}=-\partial^i\Phi+O(c^{-2}).
+}
+\]
+
+The Poisson/source equation for `Phi` remains a separate dynamical derivation target.
+
+## Temporal information curvature and dynamic Lambda0
 
 With
 
 \[
-\mathcal J_\pi=(\ln2)\mathcal I_\pi
-=24\pi\kappa\mathcal I_\pi,
+\mathcal J_\pi=(\ln2)\mathcal I_\pi=24\pi\kappa\mathcal I_\pi,
 \]
 
 RFC uses
@@ -169,120 +217,40 @@ For a constant-rate cell,
 \[
 \boxed{
 \Xi_I^{(P)}
-=\frac{\mathcal J_\pi}{a_{FS}^{(P)}}
-\left(\frac{\omega_P}{c}\right)^2
+=\frac{\mathcal J_\pi}{a_{FS}^{(P)}}\left(\frac{\omega_P}{c}\right)^2.
 }
 \]
 
-or
+RFC retains
 
 \[
-\boxed{
-\Xi_I^{(P)}
-=\frac{24\pi\kappa}{a_{FS}^{(P)}}
-\mathcal I_\pi
-\left(\frac{\omega_P}{c}\right)^2.
-}
+\boxed{\Lambda_I=\alpha_I\Xi_I}
 \]
 
-For the full CP1/Bloch sphere, `a_FS = pi`, giving
+inside the dynamic scalar basis for `Lambda0`.
+
+## Maxwell branch
+
+The imaginary QGT sector supplies
 
 \[
-\boxed{
-\Xi_I^{(S^2)}
-=24\kappa\mathcal I_\pi
-\left(\frac{\omega}{c}\right)^2.
-}
+\mathcal F=d\mathcal A,
+\qquad
+d\mathcal F=0.
 \]
 
-The temporal derivative on a constant-`a_FS` patch is
-
-\[
-\boxed{
-\frac{d\Xi_I}{d\tau_{\rm int}}
-=
-\frac{\omega^2}{c^2a_{FS}}
-\frac{d\mathcal J_\pi}{d\tau_{\rm int}}
-+
-\frac{2\mathcal J_\pi\omega}{c^2a_{FS}}
-\frac{d\omega}{d\tau_{\rm int}}.
-}
-\]
-
-## Dynamic Lambda0 information-phase channel
-
-RFC defines
-
-\[
-\boxed{\Lambda_I=\alpha_I\Xi_I},
-\]
-
-with dimensionless `alpha_I`. For the full CP1/Bloch sphere,
-
-\[
-\boxed{
-\Lambda_I^{(S^2)}
-=24\alpha_I\kappa\mathcal I_\pi
-\left(\frac{\omega}{c}\right)^2
-}
-\]
-
-or equivalently
-
-\[
-\boxed{
-\Lambda_I^{(S^2)}
-=24\alpha_I\kappa\mathcal I_\pi
-\left(\frac{E}{\hbar c}\right)^2.
-}
-\]
-
-The general scalar basis remains
-
-\[
-\Lambda_0
-=\Lambda_{\rm vac}
-+\Lambda_I
-+\sum_r\alpha_r\mathcal S_r.
-\]
-
-## Action-level correction gate
-
-For algebraic metric dependence of `Lambda0`, metric variation gives
-
-\[
-\boxed{
-G_{\mu\nu}
-+\Lambda_0g_{\mu\nu}
--2\frac{\partial\Lambda_0}{\partial g^{\mu\nu}}
-=\frac{8\pi G}{c^4}T_{\mu\nu}.
-}
-\]
-
-The physicalized FS/Berry area therefore has a dedicated metric-dependence gate before Einstein closure.
-
-## Repository layers
-
-- `formalism/` — equations, theorems and dependency gates
-- `closure/maxwell/` — Maxwell derivation and tests
-- `closure/newton/` — Newtonian limit derivation and tests
-- `closure/einstein/` — Einstein/Bianchi closure and tests
-- `closure/lambda0/` — dynamic `Lambda0` derivation and conservation contract
-- `crossrefs/` — pinned upstream references
-- `validation/` — symbolic/numerical receipts and bounded GREMLIN audits
-- `monograph/` — derivation narrative
+Sourced Maxwell dynamics and physical normalization remain dedicated downstream gates.
 
 ## Immediate frontier
 
-1. `RF-02I`: derive hexahedral coframe gluing/refinement and determine the integrability/connection structure;
-2. `RF-N0`: derive local lapse/clock-rate dynamics from IDT rather than fixing the temporal leg;
-3. derive the connection and curvature of the physicalized tetrad;
-4. construct the weak-field variables from those derived objects and run the Newton/Poisson limit gate;
-5. handle phase-rate-zero patches and nonuniform refinement convergence;
-6. determine or bound `alpha_I`;
-7. close sourced Maxwell dynamics;
-8. close dynamic `Lambda0` and Einstein-Bianchi dynamics.
+1. derive the IDT-to-lapse map `N[temporal state]` in RF-N0;
+2. prove or falsify global hexahedral coframe/refinement convergence and classify possible torsion;
+3. derive the full tetrad connection and curvature including the temporal leg;
+4. derive the weak-field source equation and test the Newton/Poisson target;
+5. close sourced Maxwell dynamics;
+6. determine or bound `alpha_I` and complete dynamic `Lambda0` action variation;
+7. close Einstein--Bianchi dynamics and unified limits.
 
 ## Claim firewall
 
-Target equations remain validation targets. A closure is promoted only after upstream provenance, covariance, dimensional and physical-limit gates pass. The author/formalism may suggest unified field emergence, yet does not state that implication as an established result before those gates pass.
+Target equations remain validation targets. A closure is promoted only after upstream provenance, covariance, dimensional and physical-limit gates pass.

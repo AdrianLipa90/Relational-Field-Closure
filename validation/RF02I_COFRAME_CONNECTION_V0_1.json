@@ -1,0 +1,46 @@
+{
+  "schema": "RFC_RF02I_COFRAME_CONNECTION_RECEIPT_V0_1",
+  "status": "PASS_LOCAL_EXACT_CONNECTION",
+  "date": "2026-08-27",
+  "branch": "feat/rf02i-coframe-connection-v0.1",
+  "formalism": "formalism/RF02I_HEXAHEDRAL_COFRAME_CONNECTION.md",
+  "reference_test": "validation/test_rf02i_coframe_connection.py",
+  "local_reference_execution": {
+    "status": "PASS",
+    "passed": 7,
+    "failed": 0,
+    "total": 7,
+    "checks": [
+      "conformal_scalar_curvature_linear_log_scale",
+      "phase_rate_curvature_formula",
+      "uniform_phase_rate_zero_scale_connection",
+      "constant_lapse_zero_Gamma_i_tt",
+      "nontrivial_lapse_static_acceleration",
+      "weak_lapse_force_gradient",
+      "SO3_gluing_metric_preservation"
+    ]
+  },
+  "exact_results": {
+    "coframe": "E^i = a vartheta^i, a=c/(sqrt(6)|omega|)",
+    "torsion_free_connection": "omega^i_j = bar_omega^i_j + f_j E^i - f_i E^j, f_i=E_i ln a",
+    "phase_rate_connection": "f_i=-E_i ln|omega|",
+    "integrable_patch_scalar_curvature": "R3=a^-2(4 Delta ln|omega|-2|grad ln|omega||^2)",
+    "equivalent_scalar_curvature": "R3=(24 omega Delta omega - 36 |grad omega|^2)/c^2",
+    "SO3_connection_gluing": "omega_B=R_BA omega_A R_BA^-1-dR_BA R_BA^-1",
+    "constant_lapse_negative_theorem": "Gamma^i_tt=0 for ds^2=-c^2dt^2+h_ij(x)dx^idx^j",
+    "lapse_kinematic_bridge": "Gamma^i_tt=c^2 N h^ij partial_j N",
+    "weak_lapse_limit": "N=1+Phi/c^2 => d2x^i/dt^2=-partial^i Phi+O(c^-2)"
+  },
+  "negative_result": "A static spatial metric gradient with constant temporal lapse cannot by itself generate the Newtonian acceleration term for a slowly moving test particle initially at rest.",
+  "remaining_open": [
+    "IDT derivation of the lapse/clock-rate field N",
+    "global coframe integrability or torsion classification",
+    "discrete-to-continuum hexahedral holonomy convergence",
+    "action/source equation for lapse and phase rate",
+    "Poisson source-law derivation",
+    "Newton weak-field validation",
+    "Einstein-Bianchi closure"
+  ],
+  "claim_promotion": "LOCAL_GEOMETRY_AND_KINEMATIC_PASS_ONLY",
+  "gremlin_authority": "candidate_generation_and_audit_only"
+}
