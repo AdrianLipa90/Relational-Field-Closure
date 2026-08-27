@@ -1,0 +1,50 @@
+{
+  "schema": "RFC_RFN1B_SOURCE_TYPE_FIREWALL_V0_1",
+  "created": "2026-08-27",
+  "status": "EXACT_TYPE_SEPARATION_PASS__MATTER_SOURCE_MAP_OPEN__COUPLING_NORMALIZATION_OPEN",
+  "branch": "feat/rfn1b-source-type-firewall-v0.1",
+  "formalism": "formalism/RFN1B_SOURCE_TYPE_IDENTIFIABILITY_FIREWALL.md",
+  "reference_test": "tests/reference/test_rfn1b_source_type_firewall.py",
+  "gremlin_audit": "validation/gremlin/RFN1B_GREMLIN_SOURCE_BRIDGE_AUDIT_v0.1.md",
+  "upstream_evidence": {
+    "idt_relational_density": "Informational-Dynamics-of-Time:formalism/00C_relational_density_viscosity.md@feat/relational-lapse-interface-v0.1",
+    "idt_relational_lapse": "Informational-Dynamics-of-Time:formalism/05C_relational_lapse_interface.md@feat/relational-lapse-interface-v0.1",
+    "idt_phase_energy": "Informational-Dynamics-of-Time:formalism/01L_phase_clock_length_scale.md@feat/relational-lapse-interface-v0.1",
+    "tir_claim_hierarchy": "The-Fundamental-Theory-of-Informational-Relations:TIR/CLAIM_HIERARCHY.md@agent/hexahedral-bloch-frame-v0.1",
+    "rfc_operator_parent": "formalism/RFN1_HEXAHEDRAL_SOURCE_OPERATOR.md"
+  },
+  "reference_validation": {
+    "execution": "LOCAL_PYTHON_EQUIVALENT_2026-08-27",
+    "passed": 7,
+    "failed": 0,
+    "total": 7,
+    "checks": [
+      "Xi_I has inverse-area source type",
+      "phase energy is not a mass-density type",
+      "E/(c^2 V) has mass-density type",
+      "conditional phase-cell density reduction is algebraically exact",
+      "c^5/(hbar omega^2) has the dimensions of G",
+      "distinct occupation maps construct distinct matter densities with unchanged geometry",
+      "Newton consistency relation is algebraically exact when candidate bridges are jointly assumed"
+    ]
+  },
+  "exact_results": [
+    "IDT rho_R has relational kinetic/mobility semantics at the cited gate and is not supplied there as a Newtonian mass density.",
+    "E=hbar|omega| is an energy scale, not an energy density or mass density by itself.",
+    "Xi_I is type-compatible with S_R but type compatibility does not identify a physical matter source.",
+    "An admitted physical measure plus energy still requires an independently determined occupation/source weight to define local matter density.",
+    "Two distinct admissible occupation maps give distinct candidate rho_m while preserving all already-derived lapse kinematics and source-operator identities; the current source map is therefore non-identifiable.",
+    "If both Xi_I source coupling and a phase-cell matter bridge are later independently admitted, Newton matching imposes a source-universality consistency condition rather than deriving G automatically."
+  ],
+  "boundaries": {
+    "rho_R_equals_rho_m": false,
+    "Xi_I_equals_rho_m": false,
+    "E_equals_rho_m": false,
+    "one_quantum_per_cell_assumed": false,
+    "matter_source_derived": false,
+    "G_derived": false,
+    "poisson_used_as_premise": false,
+    "gremlin_can_promote": false
+  },
+  "next_gate": "derive a conserved source carrier, occupation/current measure, physical volume map, energy assignment and universal coupling to S_R"
+}
