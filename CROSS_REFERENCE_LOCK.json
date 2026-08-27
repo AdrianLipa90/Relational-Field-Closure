@@ -1,15 +1,15 @@
 {
-  "schema": "RFC_CROSS_REFERENCE_LOCK_V0_2",
-  "status": "TEMPORAL_INFORMATION_CURVATURE_PINNED",
+  "schema": "RFC_CROSS_REFERENCE_LOCK_V0_3",
+  "status": "PHASE_CLOCK_INFORMATION_CURVATURE_PINNED",
   "created": "2026-08-27",
   "updated": "2026-08-27",
   "upstreams": [
     {
-      "role": "relational_information_geometry_and_area_calibration",
+      "role": "relational_information_geometry_phase_clock_area_scale",
       "repository": "AdrianLipa90/The-Fundamental-Theory-of-Informational-Relations",
-      "ref": "main",
-      "commit": "d21631fe7281b5dbbad70f3a4a5f5b4876cac9f7",
-      "interface": "TIR/integration/TIR_IDT_INFORMATION_AREA_CURVATURE_V0_1.md"
+      "ref": "agent/phase-clock-area-scale-v0.2",
+      "commit": "b69ba6055c0535c666e12dbba069ffb87238eee6",
+      "interface": "TIR/integration/TIR_IDT_INFORMATION_AREA_CURVATURE_V0_2.md"
     },
     {
       "role": "half_spinorial_critical_interface",
@@ -18,11 +18,14 @@
       "commit": "206e49e306b246c4b0f4d182b0d32d5511739408"
     },
     {
-      "role": "dynamic_time_transport_clock_and_information_curvature",
+      "role": "dynamic_time_phase_clock_length_and_information_curvature",
       "repository": "AdrianLipa90/Informational-Dynamics-of-Time",
-      "ref": "main",
-      "commit": "647f1652edde59d9bfd7e075fb6ed5bf02aab2fc",
-      "interface": "formalism/01K_temporal_information_curvature_interface.md"
+      "ref": "feat/phase-clock-length-scale-v0.1",
+      "commit": "f90435edbfbba8211e6c28cc49a7c22f8059021b",
+      "interfaces": [
+        "formalism/01K_temporal_information_curvature_interface.md",
+        "formalism/01L_phase_clock_length_scale.md"
+      ]
     }
   ],
   "document_sources": [
@@ -44,6 +47,6 @@
     }
   ],
   "rfc_gate": "formalism/RFL0_TEMPORAL_INFORMATION_CURVATURE_CLOSURE.md",
-  "validation_receipt": "validation/RFL0_TEMPORAL_INFORMATION_CURVATURE_V0_1.json",
+  "validation_receipt": "validation/RFL0_PHASE_CLOCK_SCALE_V0_2.json",
   "rule": "Any upstream ref change requires an explicit cross-reference update receipt; no silent floating dependency."
 }

@@ -1,6 +1,6 @@
 # Relational Field Closure
 
-**Status:** `EARLY_FORMALISM / EXACT_QGT_LORENTZ_AND_INFORMATION_CURVATURE_RESULTS / PHYSICAL_CLOSURE_OPEN`
+**Status:** `EARLY_FORMALISM / EXACT_QGT_LORENTZ_AND_PHASE_CLOCK_CURVATURE_RESULTS / PHYSICAL_CLOSURE_OPEN`
 
 Relational Field Closure (RFC) is a derivation-first research repository testing whether Maxwell, Newton and Einstein field structures can be obtained from three pinned upstream theories:
 
@@ -10,9 +10,7 @@ Relational Field Closure (RFC) is a derivation-first research repository testing
 
 The repository carries dynamic `Lambda0` as the candidate scalar closure entering the Einstein sector.
 
-## Current exact structural results
-
-### Quantum geometric tensor
+## Current structural core
 
 For a projective state,
 
@@ -24,99 +22,164 @@ Q_{\mu\nu}=\langle D_\mu\psi|D_\nu\psi\rangle,
 2\Im Q=\Omega.
 \]
 
-### Single-Bloch rank firewall
+A single `CP1` pullback has rank at most two, so the rank-three spatial sector is assigned to the multi-state/polyhedral refinement gate.
 
-A pullback from a single `CP1` has rank at most two. A nondegenerate 3+1 geometry therefore requires a multi-state/polyhedral configuration or a higher-dimensional projective state space.
-
-### RF-G0 Lorentzian signature theorem
-
-Given a nonvanishing IDT temporal one-form `Theta` on a four-dimensional base and a positive-definite rank-three spatial metric `h_perp` on `ker(Theta)`, define
+Given a nonvanishing IDT temporal one-form `Theta` and a positive rank-three spatial metric `h_perp` on `ker(Theta)`,
 
 \[
-\boxed{g_L=-\Theta\otimes\Theta+h_\perp.}
+\boxed{g_L=-\Theta\otimes\Theta+h_\perp}
 \]
 
-Then
+has exact signature
 
 \[
-\boxed{\operatorname{signature}(g_L)=(-,+,+,+).}
+\boxed{(-,+,+,+)}.
 \]
 
-The associated null cone satisfies
+## Phase-clock length and physicalized projective area
 
-\[
-g_L(a u+v,a u+v)=0
-\iff
-h_\perp(v,v)=a^2.
-\]
-
-The signature result is exact. The physical binding of `h_perp` to the hexahedral/higher invariant hierarchy and of `Theta` to the current IDT clock object remains open.
-
-## Curvature/sign separation
-
-The Poincare metric is positive definite even though its curvature is negative. RFC therefore treats Poincare as a curvature/refinement gate and IDT temporal orientation as the Lorentzian signature gate.
-
-## Phase-energy bridge
-
-The current bridge from phase to transferred energy is
-
-\[
-E=\hbar\omega
-=\hbar\frac{d\varphi/d\tau}{dt/d\tau}.
-\]
-
-This controls both bound spectroscopy and the photoelectric threshold and later feeds stress-energy bookkeeping.
-
-## RF-L0 temporal information curvature
-
-The pinned TIR area interface and IDT 01K temporal evolution now meet in
+IDT now supplies the local phase-clock length carrier
 
 \[
 \boxed{
-\Xi_I
-=\frac{(\ln2)\mathcal I_\pi}{\mathcal A_{\rm rel}}
-=\frac{24\pi\kappa\mathcal I_\pi}{\mathcal A_{\rm rel}},
+\ell_\varphi
+=\frac{c}{|\omega|}
+=\frac{\hbar c}{E},
 \qquad
-[\Xi_I]=L^{-2}.
+\omega=\frac{d\varphi/d\tau_{\rm int}}{dt/d\tau_{\rm int}}.
 }
 \]
 
-TIR supplies
+TIR binds this to the dimensionless Fubini--Study geometry through
 
 \[
-\mathcal A_{\rm rel}=\ell_R^2a_{FS},
+\boxed{
+ ds^2_{\rm rel}=\ell_\varphi^2ds^2_{FS},
+\qquad
+ d\mathcal A_{\rm rel}=\ell_\varphi^2da_{FS}.
+}
 \]
 
-while IDT supplies
+For a constant-rate cell `P`,
 
 \[
+\boxed{
+\mathcal A_{\rm rel}^{(P)}
+=\frac{c^2}{\omega_P^2}a_{FS}^{(P)}.
+}
+\]
+
+Thus the former scalar area calibration is replaced, under this binding, by the local dynamical scale
+
+\[
+\boxed{
+\ell_R(x)\equiv\ell_\varphi(x)=\frac{c}{|\omega(x)|}.
+}
+\]
+
+## Temporal information curvature
+
+With
+
+\[
+\mathcal J_\pi=(\ln2)\mathcal I_\pi
+=24\pi\kappa\mathcal I_\pi,
+\]
+
+RFC uses
+
+\[
+\boxed{
+\Xi_I=\frac{\mathcal J_\pi}{\mathcal A_{\rm rel}},
+\qquad [\Xi_I]=L^{-2}.
+}
+\]
+
+For a constant-rate cell,
+
+\[
+\boxed{
+\Xi_I^{(P)}
+=\frac{\mathcal J_\pi}{a_{FS}^{(P)}}
+\left(\frac{\omega_P}{c}\right)^2
+}
+\]
+
+or
+
+\[
+\boxed{
+\Xi_I^{(P)}
+=\frac{24\pi\kappa}{a_{FS}^{(P)}}
+\mathcal I_\pi
+\left(\frac{\omega_P}{c}\right)^2.
+}
+\]
+
+For the full CP1/Bloch sphere, `a_FS = pi`, giving
+
+\[
+\boxed{
+\Xi_I^{(S^2)}
+=24\kappa\mathcal I_\pi
+\left(\frac{\omega}{c}\right)^2.
+}
+\]
+
+The temporal derivative on a constant-`a_FS` patch is
+
+\[
+\boxed{
 \frac{d\Xi_I}{d\tau_{\rm int}}
-=\frac{1}{\mathcal A_{\rm rel}}
+=
+\frac{\omega^2}{c^2a_{FS}}
 \frac{d\mathcal J_\pi}{d\tau_{\rm int}}
--\frac{\Xi_I}{\mathcal A_{\rm rel}}
-\frac{d\mathcal A_{\rm rel}}{d\tau_{\rm int}}.
++
+\frac{2\mathcal J_\pi\omega}{c^2a_{FS}}
+\frac{d\omega}{d\tau_{\rm int}}.
+}
 \]
 
-RFC defines the information contribution
+## Dynamic Lambda0 information-phase channel
+
+RFC defines
 
 \[
 \boxed{\Lambda_I=\alpha_I\Xi_I},
 \]
 
-with dimensionless `alpha_I`. In the minimal information sector,
+with dimensionless `alpha_I`. For the full CP1/Bloch sphere,
 
 \[
 \boxed{
-\frac{d\Lambda_0}{d\tau_{\rm int}}
-=\alpha_I\frac{d\Xi_I}{d\tau_{\rm int}}.
+\Lambda_I^{(S^2)}
+=24\alpha_I\kappa\mathcal I_\pi
+\left(\frac{\omega}{c}\right)^2
 }
 \]
 
-The general multi-sector `Lambda0` carries the sum of all admitted `L^-2` scalar channels.
+or equivalently
 
-### Action-level correction gate
+\[
+\boxed{
+\Lambda_I^{(S^2)}
+=24\alpha_I\kappa\mathcal I_\pi
+\left(\frac{E}{\hbar c}\right)^2.
+}
+\]
 
-If `Lambda0` depends on the emergent metric through one of its scalar inputs, metric variation carries an additional response. For algebraic metric dependence,
+The general scalar basis remains
+
+\[
+\Lambda_0
+=\Lambda_{\rm vac}
++\Lambda_I
++\sum_r\alpha_r\mathcal S_r.
+\]
+
+## Action-level correction gate
+
+For algebraic metric dependence of `Lambda0`, metric variation gives
 
 \[
 \boxed{
@@ -127,7 +190,7 @@ G_{\mu\nu}
 }
 \]
 
-RFC therefore tracks separately whether `A_rel` remains an independent projective-area carrier or becomes a functional of the physical spacetime metric.
+The physicalized FS/Berry area therefore has a dedicated metric-dependence gate before Einstein closure.
 
 ## Repository layers
 
@@ -142,13 +205,13 @@ RFC therefore tracks separately whether `A_rel` remains an independent projectiv
 
 ## Immediate frontier
 
-1. derive a rank-three positive spatial metric from the polyhedral/hexahedral refinement hierarchy;
-2. bind the IDT temporal one-form and clock normalization;
-3. determine or bound the physical area scale `ell_R`;
-4. determine or bound the information coupling `alpha_I`;
-5. classify metric dependence of `A_rel` and complete the action variation;
+1. derive a positive rank-three spatial metric from the hexahedral/higher refinement hierarchy;
+2. promote or falsify the phase-clock physical metric binding `ds_rel^2 = ell_phi^2 ds_FS^2`;
+3. handle phase-rate-zero patches and nonuniform refinement convergence;
+4. determine or bound `alpha_I`;
+5. classify metric dependence of the physicalized area and complete action variation;
 6. derive lapse/shift dynamics and the Newton weak-field limit;
-7. close Maxwell sourced dynamics;
+7. close sourced Maxwell dynamics;
 8. close dynamic `Lambda0` and Einstein-Bianchi dynamics.
 
 ## Claim firewall

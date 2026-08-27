@@ -1,0 +1,30 @@
+{
+  "schema": "RFC_RFL0_PHASE_CLOCK_SCALE_V0_2",
+  "status": "EXACT_PHASE_CLOCK_SCALE_CANDIDATE__TEST_EXECUTION_PENDING",
+  "date": "2026-08-27",
+  "pinned_tir_commit": "b69ba6055c0535c666e12dbba069ffb87238eee6",
+  "pinned_idt_commit": "f90435edbfbba8211e6c28cc49a7c22f8059021b",
+  "pinned_half_commit": "206e49e306b246c4b0f4d182b0d32d5511739408",
+  "exact_identities": [
+    "ell_phi = c/|omega| = hbar*c/E",
+    "dA_rel = ell_phi^2 da_FS",
+    "Xi_I(P) = (J_pi/a_FS(P))(omega_P/c)^2 for constant-rate cells",
+    "Xi_I(S^2) = 24 kappa I_pi (omega/c)^2",
+    "Lambda_I(S^2) = 24 alpha_I kappa I_pi (omega/c)^2",
+    "d Lambda0 / d Xi_I = alpha_I",
+    "L_2pi/L_4pi = 1/2"
+  ],
+  "reference_test": "validation/test_rfl0_phase_clock_scale.py",
+  "test_execution": "PENDING_LOCAL_RUNTIME_AVAILABILITY",
+  "open_dependencies": [
+    "phase-clock physical metric promotion",
+    "phase-rate-zero patches",
+    "nonuniform polyhedral refinement convergence",
+    "hexahedral rank-three spatial metric binding",
+    "alpha_I determination",
+    "action-level metric dependence",
+    "Newton and Einstein limit tests"
+  ],
+  "claim_promotion": false,
+  "gremlin_authority": "candidate_generation_and_audit_only"
+}
