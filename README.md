@@ -1,6 +1,6 @@
 # Relational Field Closure
 
-**Status:** `EARLY_FORMALISM / EXACT_QGT_AND_LORENTZ_SIGNATURE_RESULTS / PHYSICAL_CLOSURE_OPEN`
+**Status:** `EARLY_FORMALISM / EXACT_QGT_LORENTZ_AND_INFORMATION_CURVATURE_RESULTS / PHYSICAL_CLOSURE_OPEN`
 
 Relational Field Closure (RFC) is a derivation-first research repository testing whether Maxwell, Newton and Einstein field structures can be obtained from three pinned upstream theories:
 
@@ -8,7 +8,7 @@ Relational Field Closure (RFC) is a derivation-first research repository testing
 2. **Secret of a Half**
 3. **Informational Dynamics of Time (IDT)**
 
-The repository also carries dynamic `Lambda0` as the candidate scalar closure entering the Einstein sector.
+The repository carries dynamic `Lambda0` as the candidate scalar closure entering the Einstein sector.
 
 ## Current exact structural results
 
@@ -67,6 +67,68 @@ E=\hbar\omega
 
 This controls both bound spectroscopy and the photoelectric threshold and later feeds stress-energy bookkeeping.
 
+## RF-L0 temporal information curvature
+
+The pinned TIR area interface and IDT 01K temporal evolution now meet in
+
+\[
+\boxed{
+\Xi_I
+=\frac{(\ln2)\mathcal I_\pi}{\mathcal A_{\rm rel}}
+=\frac{24\pi\kappa\mathcal I_\pi}{\mathcal A_{\rm rel}},
+\qquad
+[\Xi_I]=L^{-2}.
+}
+\]
+
+TIR supplies
+
+\[
+\mathcal A_{\rm rel}=\ell_R^2a_{FS},
+\]
+
+while IDT supplies
+
+\[
+\frac{d\Xi_I}{d\tau_{\rm int}}
+=\frac{1}{\mathcal A_{\rm rel}}
+\frac{d\mathcal J_\pi}{d\tau_{\rm int}}
+-\frac{\Xi_I}{\mathcal A_{\rm rel}}
+\frac{d\mathcal A_{\rm rel}}{d\tau_{\rm int}}.
+\]
+
+RFC defines the information contribution
+
+\[
+\boxed{\Lambda_I=\alpha_I\Xi_I},
+\]
+
+with dimensionless `alpha_I`. In the minimal information sector,
+
+\[
+\boxed{
+\frac{d\Lambda_0}{d\tau_{\rm int}}
+=\alpha_I\frac{d\Xi_I}{d\tau_{\rm int}}.
+}
+\]
+
+The general multi-sector `Lambda0` carries the sum of all admitted `L^-2` scalar channels.
+
+### Action-level correction gate
+
+If `Lambda0` depends on the emergent metric through one of its scalar inputs, metric variation carries an additional response. For algebraic metric dependence,
+
+\[
+\boxed{
+G_{\mu\nu}
++\Lambda_0g_{\mu\nu}
+-2\frac{\partial\Lambda_0}{\partial g^{\mu\nu}}
+=\frac{8\pi G}{c^4}T_{\mu\nu}.
+}
+\]
+
+RFC therefore tracks separately whether `A_rel` remains an independent projective-area carrier or becomes a functional of the physical spacetime metric.
+
 ## Repository layers
 
 - `formalism/` — equations, theorems and dependency gates
@@ -82,11 +144,13 @@ This controls both bound spectroscopy and the photoelectric threshold and later 
 
 1. derive a rank-three positive spatial metric from the polyhedral/hexahedral refinement hierarchy;
 2. bind the IDT temporal one-form and clock normalization;
-3. derive lapse/shift dynamics;
-4. derive the Newton weak-field limit;
-5. close Maxwell sourced dynamics;
-6. derive dynamic `Lambda0` and Einstein-Bianchi closure.
+3. determine or bound the physical area scale `ell_R`;
+4. determine or bound the information coupling `alpha_I`;
+5. classify metric dependence of `A_rel` and complete the action variation;
+6. derive lapse/shift dynamics and the Newton weak-field limit;
+7. close Maxwell sourced dynamics;
+8. close dynamic `Lambda0` and Einstein-Bianchi dynamics.
 
 ## Claim firewall
 
-Target equations remain validation targets. No known field equation may be inserted upstream and then counted as derived.
+Target equations remain validation targets. A closure is promoted only after upstream provenance, covariance, dimensional and physical-limit gates pass. The author/formalism may suggest unified field emergence, yet does not state that implication as an established result before those gates pass.
