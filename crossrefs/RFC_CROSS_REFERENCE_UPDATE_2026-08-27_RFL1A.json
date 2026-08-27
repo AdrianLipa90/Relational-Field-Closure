@@ -1,0 +1,44 @@
+{
+  "schema": "RFC_CROSS_REFERENCE_UPDATE_V1",
+  "date": "2026-08-27",
+  "node": "RF-L1A_HERMITIAN_ORIENTED_EXCHANGE",
+  "status": "CANDIDATE_CROSS_REPOSITORY_BINDING",
+  "pins": {
+    "IDT_01M": {
+      "repository": "AdrianLipa90/Informational-Dynamics-of-Time",
+      "branch": "feat/hermitian-oriented-exchange-interface-v0.1",
+      "commit": "09e9abe24ecaf362cb46e8da40aff915593da68f",
+      "path": "formalism/01M_hermitian_oriented_exchange_interface.md"
+    },
+    "GREMLIN_V1_4": {
+      "repository": "AdrianLipa90/GREMLIN",
+      "branch": "feat/gremlin-hermitian-oriented-exchange-v1.4",
+      "commit": "1cfeb2df52f3b98318bf207c6a12cd3e6a913f24",
+      "ci_run": 33125674008,
+      "ci_result": "209 passed"
+    },
+    "RFC_RF_L1A": {
+      "repository": "AdrianLipa90/Relational-Field-Closure",
+      "branch": "feat/rfl1a-hermitian-oriented-exchange-v0.1",
+      "commit": "9e6b5451ee4cdef9b755c8abbed15f3892cb3e0c",
+      "path": "formalism/RFL1A_HERMITIAN_ORIENTED_EXCHANGE_GATE.md"
+    }
+  },
+  "operator": {
+    "oriented_coupling": "J_complex=E_R*exp(i*tau_R)",
+    "hermitian_exchange": "H_ex=J_complex|01><10|+conj(J_complex)|10><01|",
+    "pauli_decomposition": "Re(J)/2*(XX+YY)+Im(J)/2*(XY-YX)",
+    "spectrum_single_excitation": ["-|E_R|", "+|E_R|"],
+    "unitary": "U_ex=exp(-i*H_ex*dt/hbar)",
+    "orientation_control": "tau_R -> -tau_R preserves transfer probabilities and flips oriented phase quadrature"
+  },
+  "open_gates": [
+    "physical target state-space map",
+    "three-flavor Hermitian extension",
+    "vacuum and matter Hamiltonian compatibility",
+    "holonomy phase-residual prediction",
+    "uncertainty propagation",
+    "oscillation-data comparison",
+    "joint-state witness for entanglement attribution"
+  ]
+}
