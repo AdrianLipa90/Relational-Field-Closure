@@ -1,6 +1,6 @@
 # Relational Field Closure
 
-**Status:** `EARLY_FORMALISM / EXACT_QGT_HEXAHEDRAL_RANK3_LORENTZ_AND_LOCAL_CONNECTION_RESULTS / NEWTON_SOURCE_DYNAMICS_OPEN`
+**Status:** `EARLY_FORMALISM / EXACT_LOCAL_HEXAHEDRAL_METRIC_CONNECTION_RELATIONAL_LAPSE_AND_SOURCE_OPERATOR / SOURCE_AND_FIELD_CLOSURE_OPEN`
 
 Relational Field Closure (RFC) is a derivation-first research repository testing whether Maxwell, Newton and Einstein field structures can be obtained from three pinned upstream theories:
 
@@ -8,123 +8,64 @@ Relational Field Closure (RFC) is a derivation-first research repository testing
 2. **Secret of a Half**
 3. **Informational Dynamics of Time (IDT)**
 
-The repository carries dynamic `Lambda0` as the candidate scalar closure entering the Einstein sector.
+Dynamic `Lambda0` is carried as the candidate scalar closure entering the Einstein sector.
 
-## Projective and hexahedral core
+## Current geometry
 
-For a projective state,
+The regular hexahedral Bloch dual frame
 
 \[
-Q_{\mu\nu}=\langle D_\mu\psi|D_\nu\psi\rangle,
-\qquad
-\Re Q=g^{FS},
-\qquad
-2\Im Q=\Omega.
+\mathcal H^\star=\{\pm e_1,\pm e_2,\pm e_3\}
 \]
 
-A single `CP1` pullback has rank at most two. RF-02H therefore uses the six oriented face-normal Bloch rays of a regular hexahedron,
+has exact second moment and aggregate Fubini--Study orbit metric
 
 \[
-\boxed{\mathcal H^\star=\{\pm e_1,\pm e_2,\pm e_3\}.}
+\boxed{M_H=I_3/3},
+\qquad
+\boxed{h_H=I_3/6}.
 \]
 
-With equal weights,
+Hence `rank(h_H)=3`, `det(h_H)=1/216`, and `cond(h_H)=1`. Its integrated dual-complex invariants include
 
 \[
-\boxed{M_H=\frac13I_3},
-\qquad
-\boxed{h_H=\frac14(I_3-M_H)=\frac16I_3}.
-\]
-
-Hence
-
-\[
-\boxed{
-\operatorname{rank}h_H=3,
-\qquad
-\det h_H=\frac1{216},
-\qquad
-\operatorname{cond}h_H=1.
-}
-\]
-
-The exact integrated dual-complex invariants include
-
-\[
-\boxed{
 \chi=2,
 \qquad
-\sum_fa_{FS}(f)=\pi,
+a_{FS}(S^2)=\pi,
 \qquad
-\int_{S^2}F_B=\pm2\pi,
+\int F_B=\pm2\pi,
 \qquad
 c_1=\pm1.
-}
 \]
 
-## Phase-clock physicalized spatial metric
-
-IDT supplies
+IDT phase-clock dynamics supplies
 
 \[
 \boxed{
-\ell_\varphi=\frac{c}{|\omega|}=\frac{\hbar c}{E}.
-}
-\]
-
-For a common local phase rate,
-
-\[
-\boxed{
-h_H^{\rm phys}=\frac{c^2}{6\omega^2}I_3.}
-\]
-
-Write
-
-\[
-\boxed{
-E^i=a\vartheta^i,
+\ell_\varphi=\frac{c}{|\omega|}=\frac{\hbar c}{E},
 \qquad
-a=\frac{c}{\sqrt6|\omega|},
-\qquad
-h_\perp=\delta_{ij}E^i\otimes E^j.
+a_H=\frac{\ell_\varphi}{\sqrt6}.
 }
 \]
 
-With the temporal covector `Theta`,
+The physicalized regular spatial metric is
 
 \[
-\boxed{g_L=-\Theta\otimes\Theta+h_\perp}
+\boxed{h_H^{phys}=\frac{c^2}{6\omega^2}I_3.}
 \]
 
-has exact signature `(-,+,+,+)`.
-
-## RF-02I coframe connection
-
-If the dimensionless reference coframe is torsion-free with connection `bar_omega`, the physicalized torsion-free metric connection is
+RF-02I derives the torsion-free conformal coframe connection
 
 \[
 \boxed{
 \omega^i{}_j
 =\bar\omega^i{}_j+f_jE^i-f_iE^j,
 \qquad
-f_i=E_i\ln a=-E_i\ln|\omega|.
+f_i=-E_i\ln|\omega|,
 }
 \]
 
-Thus spatial gradients of the calibrated temporal phase rate contribute directly to the spatial connection.
-
-On an integrable reference patch `vartheta^i=dx^i`, the three-dimensional scalar curvature is
-
-\[
-\boxed{
-{}^{(3)}R
-=a^{-2}
-\left[4\Delta\ln|\omega|-2|\nabla\ln|\omega||^2\right]
-}
-\]
-
-or equivalently
+and, on an integrable reference patch,
 
 \[
 \boxed{
@@ -133,124 +74,184 @@ or equivalently
 }
 \]
 
-Neighboring spatial coframes glue by `SO(3)` transition maps,
+## Relational temporal lapse
 
-\[
-E_{(B)}=R_{BA}E_{(A)},
-\]
-
-with connection law
+IDT now supplies the native clock ratio
 
 \[
 \boxed{
-\omega_{(B)}
-=R_{BA}\omega_{(A)}R_{BA}^{-1}
--dR_{BA}R_{BA}^{-1}.
+N_R
+=\frac{d\tau_x}{d\tau_{ref}}
+=\frac{\phi_x}{\phi_{ref}}>0,
 }
 \]
 
-Discrete closed products of the cell rotations are the refinement-holonomy carriers.
-
-## Exact Newton dependency result
-
-For a static constant-lapse metric
+which is exactly invariant under a common increasing reparameterization of the ordering variable. RFC binds it, after reference-clock calibration, to
 
 \[
-\boxed{ds^2=-c^2dt^2+h_{ij}(x)dx^idx^j,}
+\boxed{\Theta_R=N_Rc\,dt}
 \]
 
-one has
+and therefore
 
 \[
-\boxed{\Gamma^i{}_{tt}=0.}
+\boxed{g_R=-N_R^2c^2dt^2+h_\perp.}
 \]
 
-Therefore static spatial curvature alone cannot generate the leading Newtonian acceleration term for a slowly moving test trajectory initially at rest.
-
-The next temporal gate is consequently mandatory. With
+For a static zero-shift sector,
 
 \[
-\boxed{\Theta=N(x)c\,dt}
+\boxed{\Gamma^i{}_{tt}=c^2N_Rh^{ij}\partial_jN_R.}
 \]
 
-and zero shift,
+Defining
 
 \[
-\boxed{\Gamma^i{}_{tt}=c^2N h^{ij}\partial_jN.}
+\boxed{\Phi_R=c^2\ln N_R}
 \]
 
-If RF-N0 later derives
-
-\[
-N=1+\frac{\Phi}{c^2}+O(c^{-4}),
-\]
-
-then the slow-motion kinematic limit is
+gives
 
 \[
 \boxed{
-\frac{d^2x^i}{dt^2}=-\partial^i\Phi+O(c^{-2}).
+\frac{d^2X^i}{dt^2}
+=-N_R^2h^{ij}\partial_j\Phi_R+\cdots,
 }
 \]
 
-The Poisson/source equation for `Phi` remains a separate dynamical derivation target.
-
-## Temporal information curvature and dynamic Lambda0
-
-With
-
-\[
-\mathcal J_\pi=(\ln2)\mathcal I_\pi=24\pi\kappa\mathcal I_\pi,
-\]
-
-RFC uses
+and near the reference sector/local Euclidean frame,
 
 \[
 \boxed{
-\Xi_I=\frac{\mathcal J_\pi}{\mathcal A_{\rm rel}},
-\qquad [\Xi_I]=L^{-2}.
+\frac{d^2X^i}{dt^2}=-\partial^i\Phi_R+\cdots.
 }
 \]
 
-For a constant-rate cell,
+## RF-N1: derived source operator
+
+IDT 01D supplies the exact symmetric Shannon--Onsager response
+
+\[
+G^{(2)}_\pi
+=(\ln2)D^\top\operatorname{diag}[c_{ab}\Lambda(r_a,r_b)]D,
+\]
+
+which reduces at uniform symmetric equilibrium to a positive relational-mobility graph Laplacian.
+
+On the six hexahedral neighbour directions RFC defines
+
+\[
+(L_Hf)(x)=\sum_{i=1}^3[2f(x)-f(x+a_He_i)-f(x-a_He_i)]
+\]
+
+and
 
 \[
 \boxed{
-\Xi_I^{(P)}
-=\frac{\mathcal J_\pi}{a_{FS}^{(P)}}\left(\frac{\omega_P}{c}\right)^2.
+\Delta_H^{(a)}f=-L_Hf/a_H^2.
 }
 \]
 
-RFC retains
+The exact refinement expansion is
 
 \[
-\boxed{\Lambda_I=\alpha_I\Xi_I}
+\boxed{
+\Delta_H^{(a)}f
+=\Delta f+\frac{a_H^2}{12}\sum_i\partial_i^4f+O(a_H^4).
+}
 \]
 
-inside the dynamic scalar basis for `Lambda0`.
+A separate signed-permutation classification theorem shows that hexahedral/octahedral symmetry removes first-order drift and off-diagonal second derivatives, forces equal principal coefficients, and the constant-null condition removes the zeroth-order term. Thus the leading local scalar second-order operator is
 
-## Maxwell branch
+\[
+\boxed{\mathscr L=\alpha\Delta,}
+\]
 
-The imaginary QGT sector supplies
+with the normalized hexahedral stencil fixing `alpha=1` in physical cell coordinates.
+
+Therefore for
+
+\[
+u=\ln N_R
+\]
+
+the operator side of the Newton source problem is locally derived:
+
+\[
+\boxed{
+\Delta_hu=\mathcal S_R,
+\qquad
+\Delta_h\Phi_R=c^2\mathcal S_R.
+}
+\]
+
+The source functional `S_R` is **not** yet derived.
+
+## Source-identification firewall
+
+Because `u` is dimensionless,
+
+\[
+[\mathcal S_R]=L^{-2}.
+\]
+
+The already-derived temporal information curvature
+
+\[
+\boxed{
+\Xi_I=\frac{\mathcal J_\pi}{\mathcal A_{rel}},
+\qquad [\Xi_I]=L^{-2}
+}
+\]
+
+is retained by bounded GREMLIN only as a lowest-order independent source-basis candidate,
+
+\[
+\boxed{
+\mathcal S_R=\beta_I\Xi_I+\cdots.
+}
+\]
+
+No value of `beta_I` is fitted or promoted. Spatial curvature `R^(3)` is quarantined as a primary Newton source because it would recycle the geometry being solved; `|grad u|^2` is typed as a possible higher-order self-term.
+
+The Newton/Poisson target is passed only if a later independent derivation yields
+
+\[
+\boxed{
+c^2\mathcal S_R=4\pi G\rho_m}
+\]
+
+with the correct mass source and normalization. `G` is not derived by RF-N1A.
+
+## Parallel branches
+
+The Berry sector retains
 
 \[
 \mathcal F=d\mathcal A,
 \qquad
-d\mathcal F=0.
+d\mathcal F=0,
 \]
 
-Sourced Maxwell dynamics and physical normalization remain dedicated downstream gates.
+with sourced Maxwell dynamics open.
+
+The information-curvature sector retains
+
+\[
+\Lambda_I=\alpha_I\Xi_I
+\]
+
+inside dynamic `Lambda0`. This makes the next comparison precise: determine whether the same independently derived `Xi_I` contributes to both lapse-source and `Lambda0` sectors, and derive the two couplings rather than identifying them by analogy.
 
 ## Immediate frontier
 
-1. derive the IDT-to-lapse map `N[temporal state]` in RF-N0;
-2. prove or falsify global hexahedral coframe/refinement convergence and classify possible torsion;
-3. derive the full tetrad connection and curvature including the temporal leg;
-4. derive the weak-field source equation and test the Newton/Poisson target;
-5. close sourced Maxwell dynamics;
-6. determine or bound `alpha_I` and complete dynamic `Lambda0` action variation;
-7. close Einstein--Bianchi dynamics and unified limits.
+1. RF-N1B: derive the independent source functional `S_R` from admitted TIR/IDT matter/information dynamics;
+2. RF-N1C: derive the mass-density map and normalization and only then test `c^2 S_R = 4 pi G rho_m`;
+3. prove or falsify nonuniform hexahedral refinement convergence;
+4. close sourced Maxwell dynamics and physical normalization;
+5. determine/bound `alpha_I` and complete dynamic `Lambda0` action variation;
+6. close Einstein--Bianchi dynamics and unified limits.
 
 ## Claim firewall
 
-Target equations remain validation targets. A closure is promoted only after upstream provenance, covariance, dimensional and physical-limit gates pass.
+Target field equations remain validation targets. Exact operator results, candidate source bases, physical bindings and empirical/limit tests remain separately typed.
