@@ -1,6 +1,6 @@
 {
-  "schema": "RFC_CROSS_REFERENCE_LOCK_V0_9",
-  "status": "PHASE_CLOCK_HEXAHEDRAL_RANK3_RELATIONAL_LAPSE_NEWTON_OPERATOR_CONTINUOUS_CARRIER_SHAPE_SCALE_AND_PNCS_SOURCE_HOLONOMY_PINNED",
+  "schema": "RFC_CROSS_REFERENCE_LOCK_V0_10",
+  "status": "PHASE_CLOCK_HEXAHEDRAL_RANK3_RELATIONAL_LAPSE_NEWTON_OPERATOR_CONTINUOUS_CARRIER_SHAPE_SCALE_PNCS_SOURCE_HOLONOMY_AND_PAIRED_VALIDATION_PINNED",
   "created": "2026-08-27",
   "updated": "2026-08-27",
   "upstreams": [
@@ -44,7 +44,8 @@
         "formalism/01D_shannon_onsager_response_tensor.md",
         "formalism/01X_RFC_normalized_shape_extensive_scale_interface.md",
         "validation/01X_RFC_NORMALIZED_SHAPE_EXTENSIVE_SCALE_V0_1.json",
-        "validation/01X_RFC_CROSS_REFERENCE_LOCK_V0_1.json"
+        "validation/01X_RFC_CROSS_REFERENCE_LOCK_V0_1.json",
+        "validation/IDT_RFC_PNCS_SOURCE_HOLONOMY_PAIR_V0_1.json"
       ]
     },
     {
@@ -64,7 +65,8 @@
         "src/phasenav_natural_code/native_pnv_exec_v01.py",
         "spec/PNCS_PNV_INFORMATION_HOLONOMY_V0_1.md",
         "spec/PNCS_PNV_SOURCE_HOLONOMY_LOOPS_V0_1.md"
-      ]
+      ],
+      "native_ci_state": "CI_EXECUTION_UNRESOLVED_PRE_TEST"
     }
   ],
   "document_sources": [
@@ -99,7 +101,16 @@
     "validation/RFN1_HEXAHEDRAL_SOURCE_OPERATOR_V0_1.json",
     "validation/RFN1B_SOURCE_TYPE_FIREWALL_V0_1.json",
     "validation/RFN1B2_CONSERVED_SOURCE_CARRIER_V0_1.json",
-    "validation/RFN1B2H_NORMALIZED_SHAPE_HOLONOMY_V0_1.json"
+    "validation/RFN1B2H_NORMALIZED_SHAPE_HOLONOMY_V0_1.json",
+    "validation/IDT_RFC_PNCS_SOURCE_HOLONOMY_PAIR_V0_1.json"
   ],
-  "pinning_rule": "Mutual IDT/RFC references use immutable interface-anchor commits; both repositories pin the same PNCS source-holonomy commit and contract paths."
+  "local_validation_commits": {
+    "rfn1b2h": "e64b362739bf113dea03903bd15b08565cfde151",
+    "paired_receipt": "dc38ea77883c0e701024b9d4007d879d0c7112a9"
+  },
+  "executed_reference_gates": {
+    "idt": "340/340 PASS",
+    "rfc": "32/32 PASS"
+  },
+  "pinning_rule": "Mutual IDT/RFC references use immutable interface-anchor commits; both repositories pin the same PNCS source-holonomy commit and carry the paired validation receipt."
 }
