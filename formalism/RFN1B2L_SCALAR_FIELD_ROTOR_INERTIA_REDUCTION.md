@@ -2,7 +2,7 @@
 
 Status: `EXACT_COLLECTIVE_REDUCTION_PASS_CONDITIONAL / PHASE_RATE_BINDING_OPEN / COMMON_MEASURE_BINDING_OPEN`
 
-RF-N1B2L consumes IDT 01AB and removes the rotor inertia from the list of independent source-normalization parameters when the canonical rotor is admitted as the collective-coordinate reduction of the same Euler–Noether scalar phase field.
+RF-N1B2L consumes IDT 01AB and fixes the rotor inertia through the collective-coordinate reduction of the same Euler–Noether scalar phase field once the common phase/rate/measure/support premises are admitted.
 
 ## 1. Upstream scalar-field coefficient
 
@@ -73,18 +73,18 @@ Matching the same collective quadratic phase mode on the same measure gives
 \boxed{I_\phi=I_A=2\int_\Sigma A^2dV_h.}
 \]
 
-The linear intention term does not alter this quadratic coefficient.
+The linear intention term leaves this quadratic coefficient unchanged.
 
-Therefore the RF-N1B2J inertia defect
+Therefore the RF-N1B2J inertia coordinate
 
 \[
-\Delta_I=\left|\frac{I_A}{I_\phi}-1\right|
+\Delta_I^{J}=\left|\frac{I_A}{I_\phi}-1\right|
 \]
 
 obeys
 
 \[
-\boxed{\Delta_I=0}
+\boxed{\Delta_I^{J}=0}
 \]
 
 inside the admitted collective reduction.
@@ -99,7 +99,7 @@ Q_\vartheta
 =I_\phi D_\tau\chi.
 \]
 
-But the rotor kinetic coordinate is
+The rotor kinetic coordinate is
 
 \[
 P_\Phi=J-J_I=I_\phi D_\tau\chi.
@@ -134,7 +134,7 @@ Therefore
 =\boxed{\frac12D_\tau\chi}.
 \]
 
-No independent rotor-inertia normalization remains after the collective reduction is admitted.
+The admitted collective reduction therefore fixes the rotor-inertia contribution to the source normalization.
 
 ## 5. Remaining interface conditions
 
@@ -146,11 +146,11 @@ same covariant rate D_tau theta <-> D_tau chi        OPEN interface binding
 same spatial slice and dV_h                          OPEN measure binding
 same collective-mode support                         OPEN support binding
 I_phi = 2 integral A^2 dV_h after those bindings     PASS EXACT CONDITIONAL
-Delta_I                                               ZERO EXACT after binding
+Delta_I^J                                             ZERO EXACT after binding
 Q_theta = P_Phi                                      PASS EXACT CONDITIONAL
 ```
 
-Thus `I_A <-> I_phi` is no longer an independent empirical parameter once those premises are satisfied.
+Thus the common reduction premises determine the inertia equality before downstream RFC current promotion.
 
 ## 6. Relation to RF-N1B2K
 
@@ -175,3 +175,55 @@ and the RFC normalization candidate becomes
 \]
 
 Physical promotion of the current/state-space binding remains downstream of the measured RF-N1B2K gate.
+
+## 7. Executable PNCS reduction coordinates
+
+For a finite-cell representation of the collective scalar mode,
+
+\[
+C_A:=\sum_a A_a^2V_a,
+\qquad
+I_A:=2C_A.
+\]
+
+PNCS receives `I_phi` independently and evaluates
+
+\[
+\boxed{
+\Delta_I^{red}:=\frac{|I_\phi-I_A|}{I_A}}
+\]
+
+alongside
+
+\[
+\Delta_C:=\frac{|I_\phi/2-C_A|}{C_A},
+\qquad
+\Delta_Q^{red}:=\frac{|P_\Phi-Q_\vartheta|}{Q_\vartheta},
+\]
+
+and
+
+\[
+\Delta_\epsilon^{red}
+:=\frac{|\epsilon_N-(D_\tau\chi)/2|}{(D_\tau\chi)/2}.
+\]
+
+For one common positive covariant phase rate,
+
+\[
+\boxed{
+\Delta_I^{red}
+=\Delta_C
+=\Delta_Q^{red}
+=\Delta_\epsilon^{red}.}
+\]
+
+The RF-N1B2J coordinate \(\Delta_I^{J}=|I_A/I_\phi-1|\) and the executable reduction coordinate \(\Delta_I^{red}=|I_\phi-I_A|/I_A\) remain separately typed away from the exact reduction point and share the same zero set \(I_A=I_\phi\).
+
+Executable contract:
+
+`PNCS_PNV_SCALAR_FIELD_ROTOR_INERTIA_REDUCTION_V0_1`
+
+Semantic loop:
+
+`SOURCE.PHASE_NOETHER.ROTOR_INERTIA.REDUCTION.ROUNDTRIP`
