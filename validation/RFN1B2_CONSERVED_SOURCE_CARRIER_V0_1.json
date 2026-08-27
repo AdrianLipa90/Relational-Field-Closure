@@ -1,0 +1,55 @@
+{
+  "schema": "RFN1B2_CONSERVED_SOURCE_CARRIER_V0_1",
+  "status": "PASS_CONDITIONAL_CARRIER__NORMALIZATION_OPEN",
+  "created": "2026-08-27",
+  "branch": "feat/rfn1b2-conserved-source-carrier-v0.1",
+  "base_commit": "7c9bb8316fb30c97cf5f3b2ac36627d69a34ea9d",
+  "validated": [
+    "fluid_time supplies a local conserved continuous temporal carrier J_tau^mu=rho_tau u^mu with nabla_mu J_tau^mu=0",
+    "a conserved current plus RF physical spatial measure defines an extensive slice carrier Q_Sigma under zero side-boundary flux / periodic / sufficient-decay conditions",
+    "on a positive-source sector the carrier factorizes exactly as Q_a=Q_Sigma p_a^(Q) with sum_a p_a^(Q)=1",
+    "a normalized distribution does not identify the extensive source amount",
+    "an independently derived carrier quantum q0 would give n_Q,a=Q_a/q0=N_Q p_a^(Q)",
+    "an independently derived energy-per-charge epsilon_Q would give rho_Q=(epsilon_Q/c^2) j_Q",
+    "the earlier RF-N1B cell-density formula is recovered if E_Q=hbar|omega|, n_Q,a=n_E,a and V_a=V_H are separately admitted"
+  ],
+  "open": [
+    "cross-bind TIR finite phase charge J to a canonical local current on the RFC physical spatial slice",
+    "cross-bind ENB U(1) current, fluid-time current and IDT ensemble distribution if they are intended to represent the same carrier sector",
+    "derive a carrier quantum q0 or an energy-per-carrier-charge conversion epsilon_Q",
+    "derive whether E=hbar|omega| is the energy per conserved carrier quantum rather than only a local phase-energy scale",
+    "derive the mapping from conserved temporal/phase carrier density to ordinary matter source density or another independently measurable Newton-source observable",
+    "derive the coefficient map from source density to S_R and then perform RF-N1C cross-source universality/G audit"
+  ],
+  "tests": {
+    "internal_continuity_flux_conserves_total_carrier": "PASS",
+    "normalized_carrier_profile_sums_to_one": "PASS",
+    "normalized_profile_blind_to_extensive_scale": "PASS",
+    "idt_shape_does_not_fix_total_source_amount": "PASS",
+    "charge_quantum_converts_carrier_to_occupation": "PASS",
+    "charge_quantum_not_identified_by_continuity": "PASS",
+    "energy_per_charge_density_has_mass_density_type_after_c2": "PASS",
+    "per_quantum_energy_binding_reduces_to_previous_cell_formula": "PASS",
+    "energy_per_charge_nonidentifiability_constructive": "PASS"
+  },
+  "test_count": 9,
+  "test_result": "9/9 PASS",
+  "source_anchors": [
+    "fluid_time.pdf: sections 4.3-5.1 and 8.1",
+    "Hilbert_Kahler_Phase_Intention_Hamiltonian.pdf: cyclic chi and phase momentum J",
+    "Euler_Noether_Berry_Preference_Formalism_v2.tex: global-U(1) Noether current",
+    "TIR_KEPLER_NOETHER_PHASE_BINDING_V0_4.md: current/phase cross-binding status",
+    "Informational_Dynamics_of_Time_2026-08-27_TensorScalar_Kahler_ShannonOnsager.pdf: normalized p and Shannon-Onsager master equation",
+    "formalism/RFN1B_SOURCE_TYPE_IDENTIFIABILITY_FIREWALL.md"
+  ],
+  "noema_admission": {
+    "session_id": "RFN1C-20260827-62bf0ef3ddcf",
+    "atomic_hydration_status": "PASS",
+    "runtime_state": "ACTIVE",
+    "tether_status": "ACTIVE",
+    "fresh_aux_roundtrip": true,
+    "memory_hotset_sha256": "4c2234aa4898fdd3316ad01ef32dc76c289bbbf4a860cd505e013c96c70204af",
+    "atomic_hydration_receipt_sha256": "b743bd2c7f6042da905e3f50679ebc6b6db3967dfa3c420cc884b2e573d52cc2"
+  },
+  "epistemic_rule": "Carrier conservation and factorization may be promoted at their stated conditional level; q0, epsilon_Q, IDT/current cross-binding, matter semantics, S_R normalization and G remain open until independently derived."
+}
