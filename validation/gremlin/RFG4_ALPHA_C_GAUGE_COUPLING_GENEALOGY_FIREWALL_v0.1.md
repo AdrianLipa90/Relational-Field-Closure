@@ -1,6 +1,6 @@
 # RFG4 — alpha_c Gauge-Coupling Genealogy Firewall
 
-Status: `CHYBA / CANDIDATE_ONLY / LEGACY_I0_OFFSET_RECOVERY_MATCH / UPSTREAM_EXPRESSION_SOURCE_OPEN / YM_PROMOTION_GATED`
+Status: `CHYBA / CANDIDATE_ONLY / HISTORICAL_NUMERICAL_EXTRACTION_SOURCE_RECOVERED / LEGACY_I0_OFFSET_ANALYTIC_MATCH / EXTRACTION_REPLAY_OPEN / ANALYTIC_SOURCE_OPEN / YM_PROMOTION_GATED`
 
 RFG4 audits the archived Metatime/CIEL coordinate
 
@@ -10,9 +10,9 @@ RFG4 audits the archived Metatime/CIEL coordinate
 
 before it enters RFG3 as a physical Yang–Mills normalization.
 
-## 1. Archived dependency and historical normalization
+## 1. Historical constant lineage
 
-The archived gluon implementation places the two coordinates
+The archived gluon implementation places
 
 \[
 \boxed{\alpha_c^{\rm archive}=0.474812},
@@ -20,17 +20,72 @@ The archived gluon implementation places the two coordinates
 \boxed{I_0^{\rm legacy}=0.009}
 \]
 
-in the same constant block. The same implementation then defines
+in the same constant block and then defines
 
 \[
-\boxed{g_{\rm archive}=\frac{1}{\sqrt{\alpha_c}}}
+\boxed{g_{\rm archive}=\alpha_c^{-1/2}},
+\qquad
+\boxed{\alpha_s^{\rm archive}=\frac{g_{\rm archive}^2}{4\pi}}.
 \]
 
-and
+The October 11, 2025 paper *Unified Reality Kernel: Mathematical Foundation of Consciousness-Matter Unification* (SSRN 5591492; ResearchGate DOI 10.13140/RG.2.2.17107.85287) supplies the recovered historical extraction provenance for the same coordinate. It records
 
 \[
-\boxed{\alpha_s^{\rm archive}=\frac{g_{\rm archive}^2}{4\pi}.}
+\boxed{\alpha_c=0.474812}
 \]
+
+as the Consciousness Quantum and gives an iterative constant-extraction scheme
+
+\[
+\boxed{
+\alpha_c^{(n+1)}
+=
+\alpha_c^{(n)}
++\eta\frac{\partial\mathcal L}{\partial\alpha_c}
+}
+\]
+
+with a coherence functional containing the quartic coordinate
+
+\[
+\mathcal L
+=\int
+\left[
+|\nabla\Psi|^2
++\alpha_c|\Psi|^4
++\beta_s|S-\Psi|^2
+-\gamma_t\tau|\Psi|^2
+\right]d^4x.
+\]
+
+The same source gives the power-spectrum extraction
+
+\[
+P(\omega)
+=
+\left|
+\int\Psi(x,t)e^{-i\omega t}dt
+\right|^2
+\]
+
+and spectral spacing
+
+\[
+\omega_n
+=n\alpha_c\frac{c_{\rm eff}}{\hbar_{\rm eff}},
+\]
+
+then reports the 1024-run result
+
+\[
+\boxed{\alpha_c=0.474812\pm0.000007}.
+\]
+
+This closes the historical *method/document* source for the archived decimal. The exact executable artifact reproducing those 1024 historical runs is typed `EXTRACTION_REPLAY_OPEN`.
+
+The later `definitekernel.py` kernel freezes the extracted coordinate as both `CONSCIOUSNESS_QUANTUM` and `LIPA_CONSTANT`; the current CIEL repository exposes the same value through model-tuning aliases.
+
+## 2. Canonical information normalization
 
 The current canonical information constant is
 
@@ -39,16 +94,28 @@ The current canonical information constant is
 =0.009193150006360\ldots
 \]
 
-so the historical rounded coordinate carries the normalization displacement
+while the historical rounded coordinate is
+
+\[
+I_0^{\rm legacy}=0.009.
+\]
+
+Their displacement is
 
 \[
 \boxed{\Delta I=\kappa-I_0^{\rm legacy}}
 =1.9315000636\times10^{-4}.
 \]
 
-## 2. Recovered legacy-offset candidate
+The historical project geometry supplies
 
-A previously frozen low-complexity GREMLIN candidate gave the canonical-base coordinate
+\[
+\boxed{L_3=7}.
+\]
+
+## 3. Independent analytic reconstruction candidate
+
+A frozen low-complexity GREMLIN search produced the canonical-base coordinate
 
 \[
 \boxed{
@@ -65,13 +132,7 @@ with
 =0.474839619052230\ldots
 \]
 
-The historical project geometry already supplies
-
-\[
-L_3=7.
-\]
-
-The newly recovered normalization-offset candidate is therefore
+The old rounded information normalization generates the candidate correction
 
 \[
 \boxed{
@@ -81,7 +142,7 @@ The newly recovered normalization-offset candidate is therefore
 }
 \]
 
-and
+and hence
 
 \[
 \boxed{
@@ -100,7 +161,7 @@ I_0^{\rm legacy}=0.009,
 \qquad L_3=7,
 \]
 
-this gives
+this evaluates to
 
 \[
 \boxed{
@@ -109,7 +170,7 @@ this gives
 }
 \]
 
-and therefore at the six-decimal precision carried by the archived constant,
+and therefore
 
 \[
 \boxed{
@@ -118,35 +179,41 @@ and therefore at the six-decimal precision carried by the archived constant,
 }
 \]
 
-The absolute residual against the archived decimal is
+The absolute residual against the historical extracted mean is
 
 \[
-\Delta_{\rm abs}=2.6194\times10^{-8},
+\boxed{\Delta_{\rm abs}=2.6194\times10^{-8}},
 \]
 
-with relative residual
+and the relative residual is
 
 \[
-\Delta_{\rm rel}=5.52\times10^{-8}.
+\boxed{\Delta_{\rm rel}=5.52\times10^{-8}}.
 \]
 
-This is recorded as `LEGACY_I0_OFFSET_RECOVERY_MATCH`.
+The historical paper contains the numerical extraction route. The analytic expression above is therefore typed independently as
 
-## 3. Canonical renormalized coordinate
+`GREMLIN_ANALYTIC_RECONSTRUCTION_CANDIDATE`.
 
-Under exact replacement of the historical rounded information coordinate by the canonical one,
+Its six-decimal agreement with the historical simulation-extracted coordinate is recorded as
+
+`LEGACY_I0_OFFSET_ANALYTIC_MATCH`.
+
+## 4. Canonical renormalized coordinate
+
+Under the exact normalization replacement
 
 \[
 I_0^{\rm legacy}\rightarrow\kappa,
 \]
 
-the offset term closes:
+the correction coordinate closes:
 
 \[
 \frac{\kappa-I_0}{L_3}\rightarrow0.
 \]
 
-The corresponding canonicalized coordinate is therefore
+The corresponding canonicalized candidate is
 
 \[
 \boxed{
@@ -176,7 +243,7 @@ and, for the SU(3) Wilson convention,
 }.
 \]
 
-The archived coordinates remain
+The historical coordinates are
 
 \[
 g_{\rm archive}=1.4512397213\ldots,
@@ -184,25 +251,48 @@ g_{\rm archive}=1.4512397213\ldots,
 \beta_W^{\rm archive}=2.848872.
 \]
 
-Thus the archived/canonical difference is naturally typed as a historical information-normalization displacement rather than a free numerical retuning.
+The two coordinates are retained simultaneously for sensitivity tests until the canonical Yang–Mills binding is independently admitted.
 
-## 4. Provenance typing
+## 5. Provenance split
 
-The Library presently establishes three facts:
+RFG4 now has two explicitly separated provenance routes.
 
-1. `alpha_c=0.474812` and `I0=0.009` coexist in the archived gluon constant block;
-2. the modern phase-intention formalism fixes `kappa=ln(2)/(24pi)`;
-3. the recovered offset expression reproduces the archived decimal at its stored precision.
+### Route H — historical numerical extraction
 
-The source document containing the historical upstream expression for `alpha_c` remains `OPEN_SOURCE_RECOVERY`.
+```text
+Unified Reality Kernel (11 Oct 2025)
+  -> iterative alpha_c update
+  -> consciousness-field power spectrum
+  -> 1024 reported simulation runs
+  -> alpha_c = 0.474812 ± 0.000007
+  -> definitekernel.py frozen coordinate
+  -> archived gluon alpha_c
+```
 
-Accordingly, the expression above is typed
+Status:
 
-`GREMLIN_RECOVERED_GENEALOGY_CANDIDATE`
+`HISTORICAL_NUMERICAL_EXTRACTION_SOURCE_RECOVERED / EXTRACTION_REPLAY_OPEN`.
 
-with exact numerical reconstruction and open documentary provenance.
+### Route A — analytic information-normalization reconstruction
 
-## 5. Relation to the Wilson coordinate
+```text
+phi
+kappa = ln(2)/(24pi)
+legacy I0 = 0.009
+L3 = 7
+  -> (kappa-I0)/L3
+  -> ln(phi)-kappa ln(2)-(kappa-I0)/L3
+  -> 0.474812026194...
+  -> six-decimal match to historical extracted alpha_c
+```
+
+Status:
+
+`GREMLIN_ANALYTIC_RECONSTRUCTION_CANDIDATE / ANALYTIC_SOURCE_OPEN`.
+
+The agreement of these routes is a cross-route consistency observation. Promotion requires independent closure of the remaining replay/derivation gates.
+
+## 6. Relation to the Wilson coordinate
 
 RFG3 uses
 
@@ -210,19 +300,19 @@ RFG3 uses
 \beta_W=\frac6{g_0^2}.
 \]
 
-For the archive relation
+For
 
 \[
 g_0^2=\frac1{\alpha_c},
 \]
 
-one obtains
+this gives
 
 \[
 \boxed{\beta_W=6\alpha_c.}
 \]
 
-RFG3/RFG5 may therefore carry two explicitly typed sensitivity coordinates:
+RFG3/RFG5 therefore carry the explicitly typed sensitivity coordinates
 
 \[
 \beta_W^{\rm archive}=2.848872,
@@ -234,20 +324,21 @@ and
 \beta_W^{\rm canonical\,cand}=2.8490377143\ldots
 \]
 
-until the upstream genealogy is recovered from source.
+until the physical Yang–Mills normalization gate closes.
 
-## 6. Falsification / promotion contract
+## 7. Falsification / promotion contract
 
 Promotion requires all of:
 
-1. recovery or independent derivation of the upstream expression selecting the `L3` offset structure;
-2. independently typed inputs `kappa`, `I0_legacy`, `L3`, and `phi`;
-3. reproduction of the archived six-decimal coordinate;
-4. canonical reduction under `I0 -> kappa`;
-5. separate Yang–Mills/Wilson normalization validation;
-6. running-coupling validation after the bare-coordinate expression is frozen.
+1. executable replay or equivalent independent reconstruction of the historical numerical extraction;
+2. independent derivation/source selection of the analytic `L3` offset structure;
+3. independently typed inputs `kappa`, `I0_legacy`, `L3`, and `phi`;
+4. reproduction of the archived six-decimal coordinate;
+5. canonical reduction under `I0 -> kappa`;
+6. separate Yang–Mills/Wilson normalization validation;
+7. running-coupling validation after the bare-coordinate expression is frozen.
 
-An adversarial sign reversal
+The adversarial sign reversal
 
 \[
 \alpha_c^{(+)}
@@ -258,33 +349,8 @@ An adversarial sign reversal
 
 must fail the six-decimal archive reconstruction gate.
 
-## 7. GREMLIN verdict
+## 8. GREMLIN verdict
 
-`CHYBA / CANDIDATE_ONLY / LEGACY_I0_OFFSET_RECOVERY_MATCH`.
+`CHYBA / CANDIDATE_ONLY`.
 
-The current dependency graph is
-
-```text
-legacy I0 = 0.009
-canonical kappa = ln(2)/(24pi)
-L3 = 7
-        |
-        v
-legacy normalization displacement
-        |
-        v
-alpha_c legacy reconstruction candidate
-        |
-        +--> archive six-decimal match
-        |
-        +--> I0 -> kappa canonical reduction
-                 |
-                 v
-          alpha_c canonical candidate
-                 |
-                 v
-          g_YM / beta_W candidate
-                 |
-                 v
-          RFG3 / RFG5 gravity gates
-```
+The genealogy is now more strongly constrained because the historical decimal has a recovered published numerical-extraction route and an independent modern analytic reconstruction candidate that agrees at the archived six-decimal precision. The next root gates are the historical extraction replay and the analytic source/derivation of the `L3` normalization correction.
