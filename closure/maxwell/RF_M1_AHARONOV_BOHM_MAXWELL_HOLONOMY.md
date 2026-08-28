@@ -74,27 +74,80 @@ For a smooth gauge patch and a contractible loop `C=partial Sigma`, Stokes gives
 
 Thus infinitesimal AB Wilson-loop data recover the local electromagnetic curvature. Finite noncontractible AB holonomy may remain nontrivial even when `F=0` along the particle path; this is retained as global bundle information rather than collapsed into a local field value.
 
-## 3. Gauge redundancy
+## 3. Gauge convention synchronized with IDT 01AC
 
-For a smooth single-valued local gauge function `Lambda`, let
+IDT 01AC uses the local `U(1)` convention
 
 \[
-\boxed{A' = A+d\Lambda.}
+\vartheta' = \vartheta+\lambda,
+\qquad
+\mathcal A' = \mathcal A-d\lambda,
+\qquad
+\mathcal D_\mu=\partial_\mu+i\mathcal A_\mu.
+\]
+
+RF-M1 therefore fixes the electromagnetic gauge parameterization to the same sign convention. Let
+
+\[
+\boxed{
+A' = A-d\Lambda,
+\qquad
+\lambda:=\frac{q}{\hbar}\Lambda.
+}
 \]
 
 Then
 
 \[
-F'=dA'=dA+d^2\Lambda=F.
+\boxed{
+\mathfrak a_{AB}'
+=\mathfrak a_{AB}-d\lambda,
+}
 \]
 
-For a closed contractible loop,
+and a charged phase section transforms as
 
 \[
-\oint_C A'=\oint_C A+\oint_Cd\Lambda=\oint_C A.
+\boxed{
+\psi'=e^{i\lambda}\psi,
+\qquad
+\vartheta'=\vartheta+\lambda.
+}
 \]
 
-Hence the local curvature and the closed-loop AB phase are gauge invariant. Large gauge transformations may change a phase representative by an integer multiple of `2pi`; the Wilson factor remains the appropriate global observable.
+Consequently
+
+\[
+\boxed{
+\mathcal D_\mu\psi
+=(\partial_\mu+i\mathfrak a_{AB,\mu})\psi
+}
+\]
+
+transforms covariantly and the phase one-form
+
+\[
+\boxed{
+d\vartheta+\mathfrak a_{AB}}
+\]
+
+is invariant. This is the same convention already used by the total ABE connection in IDT 01AC.
+
+The alternative parameterization `A -> A+dLambda` is physically equivalent after `Lambda -> -Lambda`, but it is not used inside the RFC↔IDT interface because mixing the two parameterizations obscures the current sign.
+
+Since
+
+\[
+F'=dA'=dA-d^2\Lambda=F,
+\]
+
+and for a closed contractible loop
+
+\[
+\oint_C A'=\oint_C A-\oint_Cd\Lambda=\oint_C A,
+\]
+
+the local curvature and closed-loop AB phase are gauge invariant. Large gauge transformations may change a phase representative by an integer multiple of `2pi`; the Wilson factor remains the appropriate global observable.
 
 ## 4. Homogeneous Maxwell theorem
 
@@ -223,7 +276,7 @@ so field plus charged matter can form a conserved total stress-energy tensor aft
 
 This supplies a concrete Maxwell-side input to the later Einstein–Bianchi gate.
 
-## 8. Relation to RF-M0
+## 8. Relation to RF-M0 and IDT 01AC
 
 RF-M0 used a generic Abelian/Berry curvature candidate and therefore required
 
@@ -239,7 +292,19 @@ RF-M1 instead uses the physically typed AB component of the combined phase conne
 }
 \]
 
-Therefore the potential normalization is inherited from the AB phase coupling itself. Berry and Euler connections remain distinct typed contributions to the total ABE phase connection; they are not merged into the electromagnetic field strength by this theorem.
+The synchronized gauge convention is
+
+\[
+\boxed{
+\vartheta' = \vartheta+\lambda,
+\qquad
+\mathfrak a_{AB}'=\mathfrak a_{AB}-d\lambda,
+\qquad
+\mathcal D=d+i\mathfrak a_{AB}.
+}
+\]
+
+Therefore the potential normalization is inherited from the AB phase coupling itself and the electromagnetic component can enter the same gauge-covariant phase-current interface used by IDT 01AC. Berry and Euler connections remain separately typed contributions to the total ABE phase connection.
 
 ## 9. Promotion contract
 
@@ -248,6 +313,7 @@ Exact at RF-M1:
 - AB connection normalization `a_AB=(q/hbar)A` for nonzero admitted probe charge;
 - curvature recovery `F=(hbar/q)d a_AB`;
 - local Stokes relation between AB loop phase and flux;
+- synchronized IDT/RFC gauge convention `A -> A-dLambda`, `theta -> theta+(q/hbar)Lambda`;
 - gauge invariance of `F` and closed-loop AB phase;
 - homogeneous Maxwell identity `dF=0`;
 - local 3+1 homogeneous equations after the standard field decomposition.
@@ -260,8 +326,9 @@ Conditional on the admitted lowest-derivative Maxwell action:
 
 Open downstream coordinates:
 
+- exact variation-level binding between the IDT 01AC phase current and electromagnetic source current;
 - empirical/vacuum normalization `mu_*` in the chosen unit system;
-- physical binding of the RFC/IDT conserved carrier to electromagnetic `J^mu`;
+- physical binding of the RFC conserved carrier to the common phase/electric current;
 - charged-matter action completing total stress-energy conservation;
 - Einstein coupling normalization and RF-N1C Newton-limit value of `G`;
 - global bundle/singularity sectors beyond regular local patches.
