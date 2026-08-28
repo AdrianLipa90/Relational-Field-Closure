@@ -1,14 +1,17 @@
 # Relational Field Closure — Canonical Dependency Graph
 
-Status: `CURRENT_FRONTIER / CROSS_REFERENCE_LOCK_V0_34`
+Status: `CURRENT_FRONTIER / CROSS_REFERENCE_LOCK_V0_35`
 
 ```text
 TIR/IDT -> RFC conserved carrier / phase-energy source
- -> RF-N1B2K independent RFC↔Noether current/measure audit
+ -> RF-N1B2K RFC↔Noether current/measure audit
  -> RF-N1B2O phase-energy matter-source factorization
- -> RF-N1B2P charge-projected RFC↔Maxwell current intertwiner       PASS
- -> RF-E0 EM/matter stress-energy exchange
- -> total-matter T_mn composition                                  NEXT
+ -> RF-N1B2P charge-projected RFC↔Maxwell intertwiner
+ -> RF-E4 phase stress-energy / pressure firewall
+ -> RF-E5 on-shell scalar carrier-energy firewall
+ -> RF-E6 canonical Lorentzian action/source bookkeeping           ACTIVE
+ -> explicit charged-matter T_mn                                  PASS via RF-E6
+ -> total-matter T_mn composition                                 NEXT
  -> Einstein source closure
 
 Parallel coupling line:
@@ -24,65 +27,79 @@ project Yang-Mills normalization and BCJ
  -> RFG35 vector-polarization projected-cut Ward audit             NEXT
 ```
 
-RF-N1B2P preserves the typed split
+RF-G0 fixes the canonical signature
 
 \[
-J_{RFC}^{\mu}=\sum_aJ_a^{\mu},
-\qquad
-\Pi_Q[J]^{\mu}=\sum_aq_aJ_a^{\mu},
-\qquad
-\boxed{J_{EM}^{\mu}=-\hbar^{-1}\Pi_Q[J]^{\mu}}.
+\boxed{(-,+,+,+)}.
 \]
 
-For one charge eigenvalue this reduces to
+RF-E6 aligns the charged matter action to
 
 \[
-\boxed{J_{EM}^{\mu}=-(q/\hbar)J_{RFC,\vartheta}^{\mu}}
+\boxed{\mathcal L_m=-(D_\mu\Psi)^\dagger D^\mu\Psi-U(\Psi)}
 \]
 
-on the RF-N1B2K zero-defect carrier-match surface. The neutral `Q=0` sector remains an exact Maxwell-null control while retaining a finite matter carrier.
-
-Hosted authority for RF-N1B2P: run `33206384854`, job `98968385458`, tested code checkpoint `d37852fd02b26cc0bbb35cc45e43962cce10a753`, `459 passed in 8.77s`. Receipt: `validation/RFN1B2P_CHARGE_PROJECTED_EM_CURRENT_INTERTWINER_V0_1.json`.
-
-For one internal double-copy line, RFG33 uses
+and fixes
 
 \[
-\boxed{P_2=\operatorname{diag}(1,0,0,1)}
+\boxed{
+J_{EM}^{\mu}=\hbar^{-1}\Pi_Q[J_{RFC}]^{\mu}.
+}
 \]
 
-on the ordered tensor-product helicity basis
+For one charge eigenvalue,
 
 \[
-\{|++\rangle,|+-\rangle,|-+\rangle,|--\rangle\}.
+\boxed{J_{EM}^{\mu}=(q/\hbar)J_{RFC,\vartheta}^{\mu}.}
 \]
 
-RFG34 extends this to the three two-particle pairings of the external `(--++)` sector. MHV support gives
+The neutral `Q=0` sector remains an exact Maxwell-null control with a finite matter carrier allowed.
+
+RF-E4/RF-E5 retain
 
 \[
-\boxed{s:\;(-,-)},
-\qquad
-\boxed{t,u:\;(+,-),(-,+)}.
+\boxed{\varepsilon=K+V,\qquad p=K-V,\qquad \varepsilon+3p=4K-2V}
 \]
 
-Thus the `s`-channel cut is already matched-spin-two on this helicity surface, while `t/u` contain the RFG32 mixed tensor-product sector. There,
+under the canonical signature. On the homogeneous quadratic on-shell surface,
 
 \[
-\boxed{\mathcal C_{raw}-\mathcal C_{projected}=2x_Ax_B}.
+\boxed{V=K,\qquad p=0,\qquad \varepsilon=2K.}
 \]
 
-The projector commutes with copy exchange, simultaneous helicity reversal, and admissible state-coordinate relabelings preserving the matched/crossed decomposition.
+RF-E6 supplies the charged multiplet tensor
+
+\[
+\boxed{
+T_{\mu\nu}^{matter}
+=(D_\mu\Psi)^\dagger D_\nu\Psi
++(D_\nu\Psi)^\dagger D_\mu\Psi
++g_{\mu\nu}\mathcal L_m
+}
+\]
+
+and the exchange closure
+
+\[
+\boxed{\nabla^\mu(T^{EM}+T^{matter})_{\mu\nu}=0.}
+\]
+
+For Maxwell normalization, RF-E6 uses `mu_*=1` in rationalized Heaviside–Lorentz natural units and `mu_*=mu_0` in SI, with
+
+\[
+\boxed{\alpha_{EM}=\frac{\mu_*e^2c}{4\pi\hbar}.}
+\]
 
 ## Open firewalls
 
 ```text
+RF-E6 hosted validation receipt
 RF-N1B2K physical current/measure realization
-complete charged-matter and total-matter T_mn binding
-mu_* physical normalization
+complete total-matter T_mn composition
+first-principles alpha_EM gate if pursued
 RFG35 vector-polarization projected-cut Ward audit
 projected loop-integrand realization
 integrated loop amplitude
-permutation-complete tree internal-state extension
-direct diagram-local alternative numerator representative
 Gamma_DC numerical promotion
 M_star physical-scale promotion
 cross-system Mbar_G universality
