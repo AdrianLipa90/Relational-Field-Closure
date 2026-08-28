@@ -1,8 +1,8 @@
 {
-  "schema": "RFC_RFG23_FIVE_POINT_KLT_REDUCED_SCALE_V0_1",
-  "status": "PASS_REFERENCE_HIGHER_POINT_KLT",
+  "schema": "RFC_RFG24_FIVE_POINT_KLT_REDUCED_SCALE_V0_1",
+  "status": "PASS_REFERENCE_HIGHER_POINT_KLT_PROJECT_PREFACTOR_ADMISSION_OPEN_RFG27",
   "observed_date_utc": "2026-08-28",
-  "reference_test": "tests/reference/test_rfg23_five_point_klt_reduced_scale.py",
+  "reference_test": "tests/reference/test_rfg24_five_point_klt_reduced_scale.py",
   "local_result": "6 passed, 0 failed",
   "matrix_two_term_samples": 450,
   "kernel_samples": 300,
@@ -15,7 +15,6 @@
     "(kappa_g/2)^3 = 1/Mbar_G^3 = kappa_E/Mbar_G",
     "1/Mbar_G^3 = 1/(M_H T_H)^(3/2) = (2 Gamma_DC/(alpha_c omega_Q))^3 on the common admitted surface"
   ],
-  "full_project_five_point_graph_assembly": "OPEN",
-  "full_project_five_point_numerators": "OPEN",
-  "promotion_state": "REFERENCE_ADMISSION_ONLY"
+  "project_amplitude_prefactor_admission": "OPEN_RFG27_NORMALIZATION_FIREWALL",
+  "promotion_state": "REFERENCE_CORE_AND_SCALE_COORDINATE_ADMITTED"
 }

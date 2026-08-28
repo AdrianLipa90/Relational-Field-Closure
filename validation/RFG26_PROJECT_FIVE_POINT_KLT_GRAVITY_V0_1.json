@@ -1,8 +1,8 @@
 {
-  "schema": "RFC_RFG25_PROJECT_FIVE_POINT_KLT_GRAVITY_V0_1",
-  "status": "PASS_DIRECT_PROJECT_FIVE_POINT_GRAVITY",
+  "schema": "RFC_RFG26_PROJECT_FIVE_POINT_KLT_GRAVITY_V0_1",
+  "status": "PASS_DIRECT_PROJECT_FIVE_POINT_GRAVITY_CORE_OVERALL_NORMALIZATION_OPEN_RFG27",
   "observed_date_utc": "2026-08-28",
-  "reference_test": "tests/reference/test_rfg25_project_five_point_klt_gravity.py",
+  "reference_test": "tests/reference/test_rfg26_project_five_point_klt_gravity.py",
   "local_result": "6 passed, 0 failed",
   "matrix_two_term_samples": 150,
   "left_ward_samples": 100,
@@ -15,9 +15,11 @@
     "all five right-copy Ward replacements vanish",
     "C5_project[L,R]=C5_project[R,L]",
     "removing the quartic contact in one copy breaks gravitational Ward closure",
-    "(kappa_g/2)^3=1/Mbar_G^3=kappa_E/Mbar_G"
+    "P5=(kappa_g/2)^3=1/Mbar_G^3=kappa_E/Mbar_G"
   ],
+  "overall_amplitude_definition": "M5_project = zeta_5 P5 C5_project",
+  "zeta_5": "OPEN_RFG27_NORMALIZATION_FIREWALL",
   "gravity_target_used_to_construct_YM_inputs": false,
   "explicit_15_graph_project_numerators": "OPEN",
-  "five_point_multi_particle_pole_audit": "NEXT"
+  "five_point_multi_particle_pole_audit": "AFTER_RFG27"
 }

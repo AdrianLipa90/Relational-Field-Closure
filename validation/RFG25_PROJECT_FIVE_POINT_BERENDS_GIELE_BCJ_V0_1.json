@@ -1,8 +1,8 @@
 {
-  "schema": "RFC_RFG24_PROJECT_FIVE_POINT_BERENDS_GIELE_BCJ_V0_1",
+  "schema": "RFC_RFG25_PROJECT_FIVE_POINT_BERENDS_GIELE_BCJ_V0_1",
   "status": "PASS_DIRECT_PROJECT_FIVE_POINT_YM",
   "observed_date_utc": "2026-08-28",
-  "reference_test": "tests/reference/test_rfg24_project_five_point_berends_giele_bcj.py",
+  "reference_test": "tests/reference/test_rfg25_project_five_point_berends_giele_bcj.py",
   "local_result": "6 passed, 0 failed",
   "ward_samples": 180,
   "bcj_samples": 220,
@@ -17,6 +17,6 @@
     "A5_project scales as g_YM^3 with g_YM^2=1/alpha_c"
   ],
   "gravity_output_used_for_selection": false,
-  "project_five_point_KLT": "NEXT",
+  "project_five_point_KLT_core": "RFG26",
   "explicit_15_graph_numerator_set": "OPEN"
 }

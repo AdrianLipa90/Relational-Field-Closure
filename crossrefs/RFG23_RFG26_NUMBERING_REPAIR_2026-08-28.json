@@ -1,0 +1,20 @@
+{
+  "schema": "RFC_RFG23_RFG26_NUMBERING_REPAIR_V0_1",
+  "status": "PASS_DEPENDENCY_ORDER_REPAIR",
+  "observed_date_utc": "2026-08-28",
+  "reason": "two distinct higher-point gates had acquired RFG23",
+  "canonical_order": [
+    "RFG23 Five-Point BCJ / Soft-Factorization",
+    "RFG24 Five-Point KLT Kernel / Reduced-Scale",
+    "RFG25 Project Five-Point Berends-Giele / BCJ",
+    "RFG26 Project Five-Point KLT Gravity Core"
+  ],
+  "test_blob_preservation": {
+    "RFG24": "9c8e96fb4ba0bd63dd4cfee52115c49f77e18f7f",
+    "RFG25": "1f1f069c8e33636f6bba68ae67d63de8da1d063a",
+    "RFG26": "0664f0ee5d6a24df58402deccbb2e9d377f1a785"
+  },
+  "test_logic_changed": false,
+  "scientific_status_change": "RFG26 overall five-point project normalization moved behind explicit RFG27 firewall; KLT core/Ward/copy-exchange results preserved",
+  "main_mutated": false
+}
