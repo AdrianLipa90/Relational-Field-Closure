@@ -1,0 +1,20 @@
+{
+  "schema": "RFC_RFG12_NONCOMMUTING_COLOR_MOMENTUM_CONVOLUTION_V0_1",
+  "status": "PASS_DIRECT_PROJECT_LINK_INTERACTION_REFERENCE",
+  "observed_date_utc": "2026-08-28",
+  "reference_test": "tests/reference/test_rfg12_noncommuting_color_momentum_convolution.py",
+  "local_result": "6 passed, 0 failed",
+  "input_modes": {"color_1": 5, "color_2": 7},
+  "output_modes": [2, 12],
+  "checks": [
+    "both noncommuting input fields recover from project link bytes",
+    "color-3 interaction curvature converges to -g A_y^1 A_z^2 for sigma_link=+1",
+    "project plaquette output contains the sum/difference Fourier modes",
+    "analytic product contains the same output modes",
+    "opposite commutator sign is falsified",
+    "subleading BCH color components vanish toward the continuum limit"
+  ],
+  "gravity_output_used_for_selection": false,
+  "quartic_yang_mills_contact_normalization": "OPEN_NEXT_FRONTIER",
+  "direct_project_four_point_amplitude": "OPEN_AFTER_QUARTIC_GATE"
+}
