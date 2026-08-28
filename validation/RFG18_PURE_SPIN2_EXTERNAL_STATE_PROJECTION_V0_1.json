@@ -1,0 +1,21 @@
+{
+  "schema": "RFC_RFG18_PURE_SPIN2_EXTERNAL_STATE_PROJECTION_V0_1",
+  "status": "PASS_EXACT_PROJECTOR_REFERENCE_FOUR_POINT",
+  "observed_date_utc": "2026-08-28",
+  "reference_test": "tests/reference/test_rfg18_pure_spin2_external_state_projection.py",
+  "local_result": "6 passed, 0 failed",
+  "random_transverse_decomposition_samples": 1000,
+  "identities": [
+    "M = h_spin2 + B + phi on the physical transverse 2x2 tensor-product space",
+    "h_spin2 is symmetric traceless and orthogonal to antisymmetric and trace sectors",
+    "2x2 tensor product decomposes as 2 + 1 + 1 physical polarization dimensions",
+    "e_x tensor e_x = (h_plus + phi)/sqrt(2)",
+    "lifted h_plus and h_cross are transverse symmetric and Minkowski-traceless",
+    "projected RFG16 four-point amplitude vanishes under h -> h + k tensor xi + xi tensor k"
+  ],
+  "einstein_external_state_branch": "SYMMETRIC_TRACELESS_TRANSVERSE",
+  "complementary_double_copy_sectors": ["ANTISYMMETRIC_B", "TRACE_SCALAR"],
+  "higher_point_spin2_projection": "OPEN",
+  "internal_state_loop_spectrum_audit": "OPEN",
+  "gravity_output_used_for_projector_selection": false
+}
