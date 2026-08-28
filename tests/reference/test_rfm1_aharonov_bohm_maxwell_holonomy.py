@@ -35,13 +35,13 @@ def test_closed_ab_loop_equals_flux_for_constant_field():
     assert math.isclose(circulation, flux, rel_tol=2e-15, abs_tol=2e-15)
 
 
-def test_closed_ab_loop_is_invariant_under_smooth_gauge_shift():
+def test_closed_ab_loop_is_invariant_under_synchronized_gauge_shift():
     B = 0.51
 
     def A(x, y):
         return (-0.5 * B * y, 0.5 * B * x)
 
-    # Lambda=b_x x+b_y y+1/2(s_xx x^2+2s_xy xy+s_yy y^2).
+    # RFC/IDT synchronized convention: A -> A-dLambda.
     bx, by = 0.4, -0.7
     sxx, sxy, syy = 0.3, -0.2, 0.6
 
@@ -51,7 +51,7 @@ def test_closed_ab_loop_is_invariant_under_smooth_gauge_shift():
     def shifted(x, y):
         ax, ay = A(x, y)
         gx, gy = grad_lambda(x, y)
-        return ax + gx, ay + gy
+        return ax - gx, ay - gy
 
     loop = [(-0.2, 0.1), (1.4, 0.1), (1.4, 1.2), (-0.2, 1.2)]
     assert math.isclose(
@@ -62,8 +62,18 @@ def test_closed_ab_loop_is_invariant_under_smooth_gauge_shift():
     )
 
 
+def test_covariant_phase_one_form_matches_idt_sign_convention():
+    # theta -> theta+lambda and a -> a-dlambda leave dtheta+a invariant.
+    dtheta = (0.4, -0.2, 0.7, 0.1)
+    a = (-0.3, 0.5, 0.2, -0.4)
+    dlambda = (0.6, -0.1, 0.8, 0.2)
+    before = tuple(dtheta[i] + a[i] for i in range(4))
+    after = tuple((dtheta[i] + dlambda[i]) + (a[i] - dlambda[i]) for i in range(4))
+    assert before == after
+
+
 def test_curvature_is_invariant_under_symmetric_hessian_gauge_term():
-    # A_mu=M_{mu nu} x^nu.  A -> A+dLambda adds a symmetric Hessian S.
+    # A_mu=M_{mu nu}x^nu.  A -> A-dLambda subtracts a symmetric Hessian S.
     M = [
         [0.0, 1.0, -0.3, 0.2],
         [0.4, 0.0, 0.7, -0.5],
@@ -80,7 +90,7 @@ def test_curvature_is_invariant_under_symmetric_hessian_gauge_term():
     def curvature(matrix):
         return [[matrix[nu][mu] - matrix[mu][nu] for nu in range(4)] for mu in range(4)]
 
-    shifted = [[M[i][j] + S[i][j] for j in range(4)] for i in range(4)]
+    shifted = [[M[i][j] - S[i][j] for j in range(4)] for i in range(4)]
     before = curvature(M)
     after = curvature(shifted)
     for mu in range(4):
@@ -93,13 +103,9 @@ def test_homogeneous_maxwell_bianchi_identity_on_nontrivial_polynomial_potential
     # A0=xy, A1=tz+y^2, A2=xz-t^2, A3=tx+yz,
     # the independent F components are below.
     # Check dF=0 for all four independent 3-index triples analytically.
-    # (012): d_t F12 + d_x F20 + d_y F01 = 0 + 1 - 1.
     assert 0.0 + 1.0 - 1.0 == 0.0
-    # (013): d_t F13 + d_x F30 + d_z F01 = 0 - 1 + 1.
     assert 0.0 - 1.0 + 1.0 == 0.0
-    # (023): d_t F23 + d_y F30 + d_z F02 = 0 + 0 + 0.
     assert 0.0 + 0.0 + 0.0 == 0.0
-    # (123): d_x F23 + d_y F31 + d_z F12 = -1 + 0 + 1.
     assert -1.0 + 0.0 + 1.0 == 0.0
 
 
@@ -121,7 +127,6 @@ def test_em_stress_energy_trace_vanishes_in_four_dimensions():
         [-0.1, 0.5, -0.9, 0.0],
     ]
 
-    # F^{mu nu}=eta_mu eta_nu F_{mu nu} for diagonal Minkowski metric.
     F_up = [[eta[mu] * eta[nu] * F[mu][nu] for nu in range(4)] for mu in range(4)]
     F2 = sum(F[mu][nu] * F_up[mu][nu] for mu in range(4) for nu in range(4))
 
