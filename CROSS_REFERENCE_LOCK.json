@@ -1,6 +1,6 @@
 {
-  "schema": "RFC_CROSS_REFERENCE_LOCK_V0_19",
-  "status": "RELATIONAL_LAPSE_PHASE_SOURCE_YM_NORMALIZATION_DOUBLE_COPY_FACTOR_INVARIANT_EINSTEIN_HOLONOMY_PINNED",
+  "schema": "RFC_CROSS_REFERENCE_LOCK_V0_20",
+  "status": "PHASE_SOURCE_YM_NORMALIZATION_PROJECT_NONABELIAN_LINK_AMPLITUDE_SPINE_DOUBLE_COPY_EINSTEIN_HOLONOMY_PINNED",
   "created": "2026-08-27",
   "updated": "2026-08-28",
   "upstreams": [
@@ -57,14 +57,6 @@
       "repository": "AdrianLipa90/PhaseNav-Natural-Coding-System",
       "ref": "main",
       "commit": "ebdeb9729f21db17bebe4e14302a9687cdc33f4e",
-      "contracts": [
-        "PNCS_PNV_INFORMATION_HOLONOMY_V0_1",
-        "PNCS_PNV_SOURCE_HOLONOMY_LOOPS_V0_1",
-        "PNCS_PNV_NOETHER_COLLECTIVE_CARRIER_V0_1",
-        "PNCS_PNV_NOETHER_RFC_CURRENT_BINDING_V0_1",
-        "PNCS_PNV_SCALAR_FIELD_ROTOR_INERTIA_REDUCTION_V0_1",
-        "PNCS_PNV_GAUGE_COVARIANT_PHASE_PULLBACK_V0_1"
-      ],
       "interfaces": [
         "spec/PNCS_GREMLIN_LIVE_AUTHORING_V0_3.md",
         "src/phasenav_natural_code/pnv_source_holonomy_v01.py",
@@ -74,8 +66,7 @@
         "src/phasenav_natural_code/pnv_gauge_covariant_phase_pullback_v01.py"
       ],
       "live_authoring_status": "LIVE_E2E_VALIDATED_CANONICAL_AUTOBOOT_V3",
-      "candidate_authority": "CANDIDATE_ONLY",
-      "normal_phase_rate_contract_status": "PROPOSED_UPSTREAM_NOT_PRESENT_ON_CURRENT_PNCS_MAIN"
+      "candidate_authority": "CANDIDATE_ONLY"
     }
   ],
   "document_sources": [
@@ -87,6 +78,20 @@
     {"name": "Phase_Intention_Hamiltonian_Formal_Derivations.tex", "role": "Euler_closed_intention_charge_canonical_rotor_energy_and_ABE_covariant_phase_rate"},
     {"name": "Euler_Noether_Berry_Preference_Formalism_v2.tex", "role": "global_U1_current_Berry_connection_and_scalar_field_phase_coefficient"}
   ],
+  "gauge_gravity_spine": [
+    "RFG3 Wilson continuum/Yang-Mills normalization",
+    "RFG4G g_YM^2=1/alpha_c and beta_W=6 alpha_c on same-sector normalization",
+    "RFG8 oriented cubic Yang-Mills vertex with explicit sigma_link",
+    "RFG9 four-gluon MHV BCJ amplitude reference",
+    "RFG10 project link -> local field -> momentum/polarization binding",
+    "RFG11 full noncommuting SU(3) principal-log recovery and plaquette sign audit",
+    "RFG12 direct project nonabelian color/momentum convolution",
+    "RFG13 quartic Yang-Mills contact normalization from the same Wilson coefficient",
+    "RFG7 double-copy factorization invariant Mbar_G=2/kappa_g",
+    "RF-N1C three-route Newton/double-copy/Einstein holonomy",
+    "RF-N1C3 horizon reduced-scale closure",
+    "RF-E3 Einstein-Hilbert normalization"
+  ],
   "rfc_gates": [
     "formalism/RFL0_TEMPORAL_INFORMATION_CURVATURE_CLOSURE.md",
     "formalism/RF02H_HEXAHEDRAL_RANK3_SPATIAL_METRIC.md",
@@ -95,12 +100,6 @@
     "formalism/RFN1_HEXAHEDRAL_SOURCE_OPERATOR.md",
     "formalism/RFN1B_SOURCE_TYPE_IDENTIFIABILITY_FIREWALL.md",
     "formalism/RFN1B2_CONSERVED_SOURCE_CARRIER_FACTORIZATION.md",
-    "formalism/RFN1B2H_NORMALIZED_SHAPE_HOLONOMY.md",
-    "formalism/RFN1B2I_PHASE_INTENTION_ENERGY_PER_CHARGE.md",
-    "formalism/RFN1B2J_NOETHER_COLLECTIVE_PHASE_CARRIER.md",
-    "formalism/RFN1B2K_NOETHER_RFC_CONSERVED_CURRENT_BINDING.md",
-    "formalism/RFN1B2L_SCALAR_FIELD_ROTOR_INERTIA_REDUCTION.md",
-    "formalism/RFN1B2M_GAUGE_COVARIANT_PHASE_PULLBACK_NOETHER_GENERATOR.md",
     "formalism/RFN1B2N_RELATIONAL_LAPSE_NORMAL_PHASE_RATE.md",
     "formalism/RFN1B2O_PHASE_ENERGY_CURRENT_SOURCE_BINDING.md",
     "formalism/RFN1C_THREE_ROUTE_COUPLING_HOLONOMY.md",
@@ -109,44 +108,45 @@
     "formalism/RFN1C3_REDUCED_GRAVITY_SCALE_HORIZON_CLOSURE.md",
     "validation/gremlin/RFG4G_ALPHA_C_HOLONOMY_CONTINUUM_WILSON_TRANSFER_v0.1.md",
     "validation/gremlin/RFG7_DOUBLE_COPY_FACTORIZATION_INVARIANT_v0.1.md",
+    "validation/gremlin/RFG8_YANG_MILLS_CUBIC_VERTEX_NORMALIZATION_GATE_v0.1.md",
+    "validation/gremlin/RFG9_FOUR_GLUON_MHV_BCJ_AMPLITUDE_GATE_v0.1.md",
+    "validation/gremlin/RFG10_HOLONOMIC_PLANE_WAVE_MODE_BINDING_v0.1.md",
+    "validation/gremlin/RFG11_NONCOMMUTING_LINK_LOG_CURVATURE_BINDING_v0.1.md",
+    "validation/gremlin/RFG12_NONCOMMUTING_COLOR_MOMENTUM_CONVOLUTION_v0.1.md",
+    "validation/gremlin/RFG13_QUARTIC_YANG_MILLS_CONTACT_NORMALIZATION_v0.1.md",
     "closure/einstein/RF_E3_DOUBLE_COPY_EINSTEIN_HILBERT_NORMALIZATION.md"
   ],
   "validation_receipts": [
-    "validation/RFL0_PHASE_CLOCK_SCALE_V0_2.json",
-    "validation/RF02H_HEXAHEDRAL_RANK3_V0_1.json",
-    "validation/RF02I_COFRAME_CONNECTION_V0_1.json",
-    "validation/RFN0_RELATIONAL_LAPSE_V0_1.json",
-    "validation/RFN1_HEXAHEDRAL_SOURCE_OPERATOR_V0_1.json",
-    "validation/RFN1B_SOURCE_TYPE_FIREWALL_V0_1.json",
-    "validation/RFN1B2_CONSERVED_SOURCE_CARRIER_V0_1.json",
-    "validation/RFN1B2H_NORMALIZED_SHAPE_HOLONOMY_V0_1.json",
-    "validation/IDT_RFC_PNCS_SOURCE_HOLONOMY_PAIR_V0_1.json",
     "validation/RFN1B2N_RELATIONAL_LAPSE_NORMAL_PHASE_RATE_V0_1.json",
     "validation/RFN1B2O_PHASE_ENERGY_CURRENT_SOURCE_BINDING_V0_1.json",
     "validation/RFN1C_THREE_ROUTE_COUPLING_HOLONOMY_V0_1.json",
     "validation/RFN1C1_PHASE_SOURCE_SPECIALIZATION_V0_1.json",
     "validation/RFN1C2_CARRIER_SCALE_UNIVERSALITY_FIREWALL_V0_1.json",
     "validation/RFN1C3_REDUCED_GRAVITY_SCALE_HORIZON_CLOSURE_V0_1.json",
-    "validation/RFG4E_ALPHA_C_WILSON_ACTION_COEFFICIENT_V0_1.json",
-    "validation/RFG4F_HOLONOMIC_LINK_COUPLING_RESCALE_FIREWALL_V0_1.json",
     "validation/RFG4G_ALPHA_C_HOLONOMY_CONTINUUM_WILSON_TRANSFER_V0_1.json",
     "validation/RFG7_DOUBLE_COPY_FACTORIZATION_INVARIANT_V0_1.json",
+    "validation/RFG8_YANG_MILLS_CUBIC_VERTEX_NORMALIZATION_V0_1.json",
+    "validation/RFG9_FOUR_GLUON_MHV_BCJ_AMPLITUDE_V0_1.json",
+    "validation/RFG10_HOLONOMIC_PLANE_WAVE_MODE_BINDING_V0_1.json",
+    "validation/RFG11_NONCOMMUTING_LINK_LOG_CURVATURE_BINDING_V0_1.json",
+    "validation/RFG12_NONCOMMUTING_COLOR_MOMENTUM_CONVOLUTION_V0_1.json",
+    "validation/RFG13_QUARTIC_YANG_MILLS_CONTACT_NORMALIZATION_V0_1.json",
     "validation/RFE3_EINSTEIN_HILBERT_NORMALIZATION_V0_1.json"
   ],
   "key_source_chain": [
-    "N_R=d tau_x/d tau_ref",
     "omega_Q=D_hat_tau chi=D_t chi/N_R",
     "epsilon_N=omega_Q/2",
     "j_theta=2 A^2 omega_Q",
-    "E_theta=epsilon_N j_theta=A^2 omega_Q^2",
-    "rho_theta=E_theta/c^2",
-    "RFG4G: g_YM^2=1/alpha_c and beta_W=6 alpha_c on same-sector normalization",
-    "RF-N1C: Newton source <-> double copy <-> Einstein/horizon",
-    "RF-N1C1: S_R^DC=72 Gamma_DC^2 A^2/beta_W^2",
-    "RF-N1C2: Mbar_G=M_star/(Gamma_DC g_YM^2)",
-    "RFG7: Mbar_G=2/kappa_g and G=1/(8 pi Mbar_G^2)",
-    "RF-N1C3: Mbar_G^2=M_H kappa_H/(2 pi)=M_H T_H",
-    "RFG7 horizon factorization: Gamma_DC=alpha_c M_star/sqrt(M_H T_H)",
+    "rho_theta=A^2 omega_Q^2/c^2",
+    "RFG4G: g_YM^2=1/alpha_c and beta_W=6 alpha_c",
+    "RFG8: V3=-sigma_link g f V with upstream sigma_link=+1",
+    "RFG10: W_mu -> A_mu^a -> momentum/polarization",
+    "RFG11: full principal-log SU(3) recovery and F_link=i g[A_mu,A_nu] for upstream orientation",
+    "RFG12: color 1 x color 2 -> color 3 and k_out=k1+-k2 from project plaquette bytes",
+    "RFG13: quartic density=-g^2 Tr[A_mu,A_nu]^2 and C_p D_p/a^4 -> Tr F^2",
+    "RFG9: four-point MHV BCJ reference n_s+n_t+n_u=0",
+    "RFG7: Mbar_G=M_star/(Gamma_DC g_YM^2)=2/kappa_g",
+    "RF-N1C3: Mbar_G^2=M_H T_H",
     "RF-E3: 2/kappa_g^2=1/(2 kappa_E)=1/(16 pi G)"
   ],
   "validation_state": {
@@ -155,23 +155,28 @@
       "rfc": "74/74 PASS"
     },
     "current_branch_local_additions": {
-      "rfc": "50/50 PASS",
+      "rfc": "84/84 PASS",
       "idt_01AE": "4/4 PASS"
     },
+    "recent_direct_replay": "RFG10-RFG13: 24/24 PASS",
     "github_actions_current_branch_full_suite": "NOT_EXECUTED"
   },
   "promotion_firewall": {
     "phase_kinetic_source_binding": "PASS_CONDITIONAL",
-    "newton_einstein_normalization_transfer": "PASS_EXACT",
-    "einstein_hilbert_prefactor_transfer": "PASS_EXACT",
-    "local_source_double_copy_holonomy": "PASS_ALGEBRAIC",
     "project_beta_W": "PASS_CONDITIONAL_SAME_SECTOR_RFG4G",
-    "project_BCJ_numerators": "OPEN_BINDING",
+    "oriented_cubic_YM_vertex": "PASS_CONDITIONAL_LOCAL_COMPLETION",
+    "four_point_MHV_BCJ_reference": "PASS_REFERENCE",
+    "project_link_field_momentum_binding": "PASS_RFG10_RFG11",
+    "project_nonabelian_color_momentum_interaction": "PASS_RFG12",
+    "quartic_YM_contact_normalization": "PASS_RFG13",
+    "direct_project_four_point_amplitude": "OPEN_EXCHANGE_PLUS_CONTACT_ASSEMBLY",
     "Gamma_DC": "FACTORIZATION_INVARIANT_PASS_NUMERICAL_PROMOTION_OPEN",
     "M_star_scale": "OPEN_RFN1C2_RFG7_FIREWALL",
+    "newton_einstein_normalization_transfer": "PASS_EXACT",
+    "einstein_hilbert_prefactor_transfer": "PASS_EXACT",
     "universal_G": "OPEN_CROSS_SYSTEM_EVIDENCE",
     "total_matter_stress_energy": "OPEN",
     "dynamic_Lambda0_action": "OPEN"
   },
-  "pinning_rule": "RFC v0.19 pins IDT 01AD/01AE phase-rate and phase-energy source handoff, current PNCS source-holonomy/GREMLIN live-authoring provenance, RFG4G same-sector Yang-Mills normalization transfer, and RFG7 double-copy factorization invariance. beta_W is conditionally transferred as 6 alpha_c on the admitted common SU(3) normalization; the invariant gravity coordinate is Mbar_G=2/kappa_g. Numerical Gamma_DC and universal G remain evidence-gated by independently normalized M_star and reduced-scale/horizon data."
+  "pinning_rule": "RFC v0.20 pins the phase-energy source handoff, same-sector Yang-Mills normalization, explicit link-orientation convention, direct project noncommuting holonomy-to-field/momentum interaction witnesses, quartic action normalization, BCJ four-point reference, double-copy reduced-scale invariant and Einstein action bridge. The immediate amplitude frontier is one frozen external-state calculation assembling project exchange and quartic contact terms before the RFG9 BCJ comparison. Numerical Gamma_DC and universal G remain independently evidence-gated."
 }
