@@ -1,12 +1,12 @@
 # RF-N1B2P — Charge-Projected RFC ↔ Maxwell Current Intertwiner
 
-Status: `EXACT_INTERTWINER_ALGEBRA / SINGLE_CHARGE_COMPOSITION_EXACT / NEUTRAL_SECTOR_NULL_EXACT / MULTIPLET_CHARGE_PROJECTION_EXACT / PHYSICAL_CURRENT_MATCH_CONDITIONAL`
+Status: `EXACT_INTERTWINER_ALGEBRA / SINGLE_CHARGE_COMPOSITION_EXACT / NEUTRAL_SECTOR_NULL_EXACT / MULTIPLET_CHARGE_PROJECTION_EXACT / RF_E6_SIGN_CORRECTION_PASS / PHYSICAL_CURRENT_MATCH_CONDITIONAL`
 
-RF-N1B2P composes the independently audited RFC carrier line with the RF-M4 / IDT 01AG electromagnetic charge projection. The bridge preserves the distinction between the pre-charge phase carrier used by the matter/gravity source sector and the charge-projected current that sources Maxwell.
+RF-N1B2P composes the independently audited RFC carrier line with the RF-M4 electromagnetic charge projection. RF-E6 aligns the matter action with the canonical RFC metric signature `(-,+,+,+)` and fixes the Maxwell-current sign used by the intertwiner.
 
 ## 1. Typed inputs
 
-RF-N1B2K supplies a falsifiable current/measure comparison between an independently constructed RFC carrier current and the phase Noether carrier,
+RF-N1B2K supplies a falsifiable current/measure comparison
 
 \[
 J_{RFC,\vartheta}^{\mu}\stackrel{\Delta_K\to0}{\longleftrightarrow}J_\vartheta^{\mu}.
@@ -18,13 +18,13 @@ RF-N1B2O uses the phase carrier before electric-charge projection to build the p
 \rho_\vartheta=\frac{\epsilon_N}{c^2}j_\vartheta.
 \]
 
-RF-M4 / IDT 01AG supplies the independently typed electromagnetic variation current,
+RF-M4/RF-E6 supplies the microscopic electromagnetic variation current
 
 \[
-\boxed{J_{EM}^{\mu}=-\frac1\hbar\mathcal J_Q^{\mu}}.
+\boxed{J_{EM}^{\mu}=\frac1\hbar\mathcal J_Q^{\mu}}.
 \]
 
-The bridge therefore acts through a charge projector rather than a raw current equality.
+The bridge therefore acts through a charge projector.
 
 ## 2. Single-charge sector
 
@@ -37,7 +37,7 @@ For one electric-charge eigenvalue `q`,
 hence
 
 \[
-\boxed{J_{EM}^{\mu}=-\frac q\hbar J_\vartheta^{\mu}}.
+\boxed{J_{EM}^{\mu}=\frac q\hbar J_\vartheta^{\mu}}.
 \]
 
 On the RF-N1B2K zero-defect surface,
@@ -46,28 +46,32 @@ On the RF-N1B2K zero-defect surface,
 J_{RFC,\vartheta}^{\mu}=J_\vartheta^{\mu},
 \]
 
-so the composed RFC→Maxwell intertwiner is
+so
 
 \[
-\boxed{J_{EM}^{\mu}=-\frac q\hbar J_{RFC,\vartheta}^{\mu}}.
+\boxed{J_{EM}^{\mu}=\frac q\hbar J_{RFC,\vartheta}^{\mu}}.
 \]
 
-The coefficient `-q/hbar` is fixed by the same physical charge normalization that appears in the Aharonov–Bohm phase.
+The coefficient `q/hbar` is fixed by the same physical charge normalization that appears in the Aharonov–Bohm phase.
 
 ## 3. Multiplet sector
 
-Let the admitted carrier resolve into charge sectors `a`, with separately constructed component currents `J_a^mu` and charge eigenvalues `q_a`. Define
+Let the admitted carrier resolve into charge sectors `a`, with component currents `J_a^mu` and charge eigenvalues `q_a`. Define
 
 \[
+\boxed{
 \Pi_Q[J]^{\mu}:=\sum_a q_aJ_a^{\mu}.
+}
 \]
 
 Then
 
 \[
-\boxed{\mathcal J_Q^{\mu}=\Pi_Q[J]^{\mu}},
+\boxed{
+\mathcal J_Q^{\mu}=\Pi_Q[J]^{\mu},
 \qquad
-\boxed{J_{EM}^{\mu}=-\frac1\hbar\Pi_Q[J]^{\mu}}.
+J_{EM}^{\mu}=\frac1\hbar\Pi_Q[J]^{\mu}.
+}
 \]
 
 The unweighted RFC matter carrier is
@@ -76,130 +80,90 @@ The unweighted RFC matter carrier is
 J_{RFC}^{\mu}=\sum_aJ_a^{\mu}.
 \]
 
-If all admitted components share one charge eigenvalue `q`, the projector reduces to
+For equal charge `q_a=q`,
 
 \[
-\Pi_Q[J]^{\mu}=qJ_{RFC}^{\mu}.
+\Pi_Q[J]^{\mu}=qJ_{RFC}^{\mu},
+\qquad
+J_{EM}^{\mu}=\frac q\hbar J_{RFC}^{\mu}.
 \]
 
-For unequal charges, the full charge-resolved packet must be retained. This prevents a scalar rescaling of the total RFC carrier from erasing charge composition.
+For unequal charges, the charge-resolved packet is the sufficient input to the Maxwell projection.
 
 ## 4. Neutral control
 
-For an electrically neutral sector,
+For every component with `q_a=0`,
 
 \[
-Q=0,
+\boxed{\Pi_Q[J]^{\mu}=0,\qquad J_{EM}^{\mu}=0.}
 \]
 
-therefore
+The unweighted matter carrier and phase-energy source can remain finite, preserving the matter/Maxwell type split.
+
+## 5. Charge-compatibility gate
+
+The RF-M4 matter action requires
 
 \[
-\boxed{J_{EM}^{\mu}=0}
+\boxed{[\mathcal M^2,Q]=0.}
 \]
 
-while the phase carrier and its phase-kinetic energy density may remain finite. This is an exact source-typing control between the matter/gravity and Maxwell branches.
+This keeps the charge decomposition dynamically compatible with the local gauge symmetry. A nonzero commutator is an explicit fail-closed condition for the current intertwiner.
 
-## 5. Gauge-covariant consistency
+## 6. Gauge covariance
 
-With the synchronized RF-M1 convention
+Under
 
 \[
-\vartheta\to\vartheta+\lambda,
+\vartheta' = \vartheta + \frac q\hbar\Lambda,
 \qquad
-A_\mu\to A_\mu-\partial_\mu\Lambda,
-\qquad
-\lambda=\frac q\hbar\Lambda,
+A'=A-d\Lambda,
 \]
 
-the covariant phase one-form
+the gauge-covariant phase one-form
 
 \[
-D_\mu\vartheta=\partial_\mu\vartheta+\frac q\hbar A_\mu
+d\vartheta+\frac q\hbar A
 \]
 
-is invariant. Any admitted phase-current construction from this invariant carrier is therefore unchanged by the synchronized gauge shift, and the charge projector commutes with that transformation.
+is invariant. The corresponding phase carrier and its charge projection therefore share the synchronized RFC/AB gauge convention.
 
-## 6. Charge-compatibility firewall
+## 7. Executable defects
 
-For a multiplet with mass generator `M^2` and charge operator `Q`, the already admitted charge-preserving sector requires
+For a single charge define
 
 \[
-\boxed{[M^2,Q]=0}.
+\Delta_P
+=\frac{2\|J_{EM}-(q/\hbar)J_{RFC,\vartheta}\|}
+{\|J_{EM}\|+\|(q/\hbar)J_{RFC,\vartheta}\|}
 \]
 
-This condition keeps the charge decomposition stable under the internal dynamics used to construct the component currents. A nonzero commutator is routed to the open charge-mixing sector and is not promoted through the fixed-eigenvalue intertwiner.
+on the nonzero sector. Reference controls cover:
 
-## 7. Executable residuals
+- exact single-charge composition;
+- sign perturbation;
+- charge-scale perturbation;
+- opposite charge;
+- neutral `Q=0`;
+- equal-charge multiplet reduction;
+- unequal-charge resolved projection;
+- `[M^2,Q]` compatibility;
+- synchronized gauge shifts;
+- vector-dimension and `hbar` fail-closed handling.
 
-For a single-charge current packet define
+RF-E6 adds the independent finite-difference matter-action variation check that fixes the positive `q/hbar` source sign under the canonical RFC Lorentzian convention.
 
-\[
-R_{EM}^{\mu}:=J_{EM}^{\mu}+\frac q\hbar J_{RFC,\vartheta}^{\mu}.
-\]
-
-A symmetric dimensionless defect is
-
-\[
-\boxed{
-\Delta_{EM}
-=\frac{2\lVert R_{EM}\rVert_2}
-{\lVert J_{EM}\rVert_2+\lVert(q/\hbar)J_{RFC,\vartheta}\rVert_2}
-}
-\]
-
-when the denominator is positive. The neutral sector is tested separately by the exact `Q=0 -> J_EM=0` control.
-
-For a multiplet,
-
-\[
-R_{EM,Q}^{\mu}:=J_{EM}^{\mu}+\frac1\hbar\sum_aq_aJ_a^{\mu}.
-\]
-
-Promotion requires both the RF-N1B2K carrier-match gate and the RF-N1B2P charge-projection residual to close on independently supplied current packets.
-
-## 8. Adversarial controls
-
-The reference gate must distinguish:
-
-1. correct single-charge sign and normalization;
-2. sign-flipped Maxwell coupling;
-3. perturbed charge magnitude;
-4. opposite electric charges;
-5. neutral `Q=0` with finite phase carrier;
-6. equal-charge multiplet reduction;
-7. unequal-charge multiplet where total RFC current alone is insufficient;
-8. charge-mixing `[M^2,Q] != 0` rejection;
-9. synchronized gauge-shift invariance of the phase carrier.
-
-## 9. Einstein-source consequence
-
-RF-N1B2P keeps the two source roles typed:
+## 8. Advancement
 
 ```text
-phase/noether carrier
-  -> RF-N1B2O phase energy density
-  -> matter/gravity source
-
-same charge-resolved carrier packet
-  -> Pi_Q
-  -> -(1/hbar) Pi_Q
-  -> Maxwell source current
-```
-
-The same matter degrees of freedom can therefore feed both branches through different, explicitly typed maps. RF-E0 may then use the charge-projected `J_EM` in the electromagnetic stress-energy exchange while RF-N1B2O supplies the phase contribution to the matter stress-energy budget.
-
-## 10. Advancement
-
-```text
-RF-N1B2K independent RFC↔Noether current/measure audit        prerequisite
-RF-N1B2O phase-energy matter-source factorization             available
-RF-M4 / IDT 01AG charge-projected variation current           available
-RF-N1B2P single-charge current intertwiner                    EXACT algebra
-RF-N1B2P neutral control                                      EXACT
-RF-N1B2P charge-resolved multiplet projector                  EXACT algebra
-physical RFC current packet ↔ Noether packet                  CONDITIONAL on measured K-gate
-complete charged-matter stress-energy composition             NEXT
-mu_* physical normalization                                   OPEN
-Einstein total-source promotion                               OPEN
+RFC carrier decomposition J_a                         TYPED
+charge projector Pi_Q                                 EXACT
+J_EM = Pi_Q[J]/hbar                                   PASS EXACT ACTION CONVENTION
+single charge J_EM=(q/hbar)J_RFC,theta                PASS EXACT after RF-N1B2K match
+neutral Q=0 Maxwell-null control                      PASS EXACT
+unequal-charge packet requirement                     PASS EXACT TYPE FIREWALL
+[M^2,Q]=0 compatibility                               PASS EXACT CONDITION
+physical RF-N1B2K carrier/measure realization         OPEN PHYSICAL GATE
+charged-matter stress-energy                          AVAILABLE via RF-E6
+total-matter composition                              NEXT EINSTEIN GATE
 ```
