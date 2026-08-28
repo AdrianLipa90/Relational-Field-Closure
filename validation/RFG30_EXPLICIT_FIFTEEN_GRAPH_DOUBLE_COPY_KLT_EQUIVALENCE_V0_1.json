@@ -1,0 +1,17 @@
+{
+  "schema":"RFC_RFG30_EXPLICIT_FIFTEEN_GRAPH_DOUBLE_COPY_KLT_EQUIVALENCE_V0_1",
+  "status":"PASS_EXPLICIT_FIFTEEN_GRAPH_DOUBLE_COPY_KLT_EQUIVALENCE",
+  "observed_date_utc":"2026-08-28",
+  "reference_test":"tests/reference/test_rfg30_explicit_fifteen_graph_double_copy_klt_equivalence.py",
+  "local_result":"6 passed, 0 failed",
+  "tether_status":"ACTIVE",
+  "graph_core":"sum_g n_g ntilde_g / D_g",
+  "orientation_identity":"C_15g_project = - C_KLT_project = -4 C_BG",
+  "generalized_gauge_invariance":"PASS_INDEPENDENT_LEFT_RIGHT_KERNEL_SHIFTS",
+  "ward":"PASS_ALL_FIVE_LEGS_EITHER_COPY",
+  "copy_exchange":"PASS",
+  "s12_residue":"Res C_15g_project = -4 Res C_BG",
+  "physical_graph_prefactor":"+i/4 (kappa_g/2)^3",
+  "physical_klt_prefactor":"-i/4 (kappa_g/2)^3",
+  "next_gate":"RFG31_INTERNAL_STATE_TREE_FACTORIZATION_PURE_SPIN2_FIREWALL"
+}

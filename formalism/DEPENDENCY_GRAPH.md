@@ -1,74 +1,50 @@
 # Relational Field Closure — Canonical Dependency Graph
 
-Status: `CURRENT_FRONTIER / CROSS_REFERENCE_LOCK_V0_29`
-
-## Core dependency spine
+Status: `CURRENT_FRONTIER / CROSS_REFERENCE_LOCK_V0_30`
 
 ```text
-TIR/IDT geometry + phase source
- -> RFN1C three-route coupling holonomy
- -> RF-E3/E4/E5 Einstein/source closures
- -> RFG3/RFG4G Yang-Mills normalization
- -> RFG8-RFG15 project interaction + four-point BCJ
- -> RFG16-RFG22 four-point double-copy / spin-2 / normalization / pole / KLT
- -> RFG23 five-point BCJ + conserved gauge soft reference
- -> RFG24 five-point KLT kernel + reduced scale
- -> RFG25 direct Berends-Giele / BCJ
- -> RFG26 direct BG x BG KLT core
- -> RFG27 project normalization + conserved gravity soft transport
- -> RFG28 non-soft s12 KLT pole factorization
- -> RFG29 explicit 15-graph project BCJ + 3pt x 4pt current residue
- -> RFG30 explicit 15-graph double-copy <-> KLT equivalence          NEXT
+TIR/IDT source + geometry
+ -> RFN1C / RF-E3-E5 coupling and source closure
+ -> RFG4G-RFG15 project Yang-Mills / four-point BCJ
+ -> RFG16-RFG22 four-point double-copy / spin-2 / normalization / KLT
+ -> RFG23-RFG28 five-point reference, direct BG, normalization and pole factorization
+ -> RFG29 explicit 15-graph project BCJ + current residue
+ -> RFG30 explicit 15-graph double-copy <-> KLT equivalence
+ -> RFG31 internal-state tree-factorization / pure-spin2 firewall        NEXT
 ```
 
-The physical coupling spine remains
+RFG29 provides
 
 \[
-\kappa_E=\frac{\kappa_g^2}{4}=8\pi G=\frac1{\bar M_G^2}=\frac1{M_HT_H}.
+F=B^TD^{-1}B,\qquad \operatorname{rank}F_5=2,\qquad m^\star=F^+A^{project},\qquad n=Bm^\star.
 \]
 
-RFG27 fixes
+RFG30 closes the explicit graph gravity core:
 
 \[
-A_5^{project}=2A_5^{BG},\qquad C_5^{project}=4C_5^{BG},
+\boxed{\mathcal C_{5,15g}^{project}=\sum_g\frac{n_g\widetilde n_g}{D_g}=-\mathcal C_{5,KLT}^{project}}.
 \]
+
+The graph orientation therefore carries
 
 \[
-M_5^{project}=-\frac{i}{4}\left(\frac{\kappa_g}{2}\right)^3C_5^{project}.
+\boxed{\mathcal M_5^{project}=+\frac{i}{4}\left(\frac{\kappa_g}{2}\right)^3\mathcal C_{5,15g}^{project}},
 \]
 
-RFG29 introduces the explicit cubic-graph coordinates
+which is identical to the RFG27 KLT-oriented amplitude. Independent null-space shifts of either numerator copy leave the graph core invariant.
+
+On `s12 -> 0`,
 
 \[
-F_{\alpha\beta}=\sum_{g=1}^{15}\frac{B_{g\alpha}B_{g\beta}}{D_g},\qquad \operatorname{rank}F_5=2,
+\boxed{\operatorname*{Res}\mathcal C_{5,15g}^{project}=-4(s_{13}+s_{23})(N_{12}\cdot J_4)(\widetilde N_{12}\cdot\widetilde J_4)}.
 \]
-
-\[
-m^\star=F^+A^{project},\qquad n_g=B_{g\alpha}m^\star_\alpha.
-\]
-
-The fifteen numerators satisfy the nine independent matched Jacobi relations and reconstruct all six DDM master amplitudes plus the full color-dressed project amplitude.
-
-On the RFG28 `s12` factorization surface,
-
-\[
-\boxed{\operatorname*{Res}A_{12345}^{project}=\frac{n_{12|3|45}}{s_{45}}-\frac{n_{12|5|34}}{s_{34}}},
-\]
-
-while the same residue is resolved into project currents as
-
-\[
-\boxed{\operatorname*{Res}A_{12345}^{BG}=N_{12}\cdot J_{(12)|345}}.
-\]
-
-The two-copy residue reproduces the RFG28 rank-one KLT factorization.
 
 ## Open firewalls
 
 ```text
-RFG30 explicit 15-graph double-copy / KLT equivalence
+RFG31 internal-state tree-factorization / pure-spin2 audit
+loop internal-state spectrum audit
 direct diagram-local alternative numerator representative
-internal-state / loop spectrum and pure-Einstein audit
 Gamma_DC numerical promotion
 M_star physical-scale promotion
 cross-system Mbar_G universality
