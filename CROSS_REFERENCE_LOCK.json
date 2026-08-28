@@ -1,14 +1,13 @@
 {
-  "schema":"RFC_CROSS_REFERENCE_LOCK_V0_30",
-  "status":"FIVE_POINT_EXPLICIT_GRAPH_DOUBLE_COPY_KLT_EQUIVALENCE_PINNED",
+  "schema":"RFC_CROSS_REFERENCE_LOCK_V0_31",
+  "status":"FIVE_POINT_TREE_INTERNAL_SPIN2_FACTORIZATION_PINNED",
   "created":"2026-08-27",
   "updated":"2026-08-28",
-  "canonical_rfg_lineage":["RFG27 Five-Point Project Normalization Firewall","RFG28 Five-Point KLT Pole-Factorization Gate","RFG29 Explicit Fifteen-Graph Project BCJ / Current-Factorization Gate","RFG30 Explicit Fifteen-Graph Double-Copy / KLT Equivalence Gate"],
-  "normalization_holonomy":["eta_A=2","C5_project=4 C5_BG","zeta5_KLT=-i/4","C5_15g_project=-C5_KLT_project","zeta5_15g=+i/4","P5=(kappa_g/2)^3=1/Mbar_G^3"],
-  "graph_holonomy":["RFG29: 15 graphs, 6 DDM masters, rank(F5)=2, nine independent Jacobi","RFG30: C15g=sum n ntilde/D=mL^T F mR","RFG30: C15g_project=-C5_KLT_project=-4 C5_BG","RFG30: independent kernel shifts leave C15g invariant","RFG30: all-leg Ward passes in either copy","RFG30: Res C15g_project=-4 Res C5_BG"],
-  "gates":["validation/gremlin/RFG29_EXPLICIT_FIFTEEN_GRAPH_PROJECT_BCJ_CURRENT_FACTORIZATION_GATE_v0.1.md","validation/gremlin/RFG30_EXPLICIT_FIFTEEN_GRAPH_DOUBLE_COPY_KLT_EQUIVALENCE_GATE_v0.1.md"],
-  "receipts":["validation/RFG29_EXPLICIT_FIFTEEN_GRAPH_PROJECT_BCJ_CURRENT_FACTORIZATION_V0_1.json","validation/RFG30_EXPLICIT_FIFTEEN_GRAPH_DOUBLE_COPY_KLT_EQUIVALENCE_V0_1.json"],
-  "validation_state":{"RFG29":"6/6 PASS FRESH LIVE-SURFACE","RFG30":"6/6 PASS FRESH LIVE-SURFACE","github_actions_current_branch_full_suite":"NOT_EXECUTED"},
-  "promotion_firewall":{"explicit_15_graph_double_copy_klt_equivalence":"PASS_RFG30","internal_state_tree_factorization_pure_spin2":"NEXT_RFG31","loop_internal_state_spectrum_audit":"OPEN","direct_diagram_local_alternative_numerator_representative":"ADDITIONAL_OPEN_REPRESENTATIVE","Gamma_DC":"FACTORIZATION_INVARIANT_PASS_NUMERICAL_PROMOTION_OPEN","M_star_scale":"OPEN_RFN1C2_RFG7_FIREWALL","universal_G":"OPEN_CROSS_SYSTEM_EVIDENCE","total_matter_stress_energy":"OPEN","dynamic_Lambda0_action":"OPEN"},
-  "pinning_rule":"RFC v0.30 pins equivalence of the explicit fifteen-graph five-point BCJ double copy and the KLT project amplitude, including generalized-gauge, Ward and non-soft residue checks. RFG31 is the internal-state tree-factorization spin-2 frontier."
+  "canonical_rfg_lineage":["RFG29 Explicit Fifteen-Graph Project BCJ / Current-Factorization Gate","RFG30 Explicit Fifteen-Graph Double-Copy / KLT Equivalence Gate","RFG31 Internal-State Tree-Factorization / Pure-Spin-2 Firewall"],
+  "tree_internal_state_holonomy":["matched copy helicities -> N_L=N_R=N","P12 dot N=0","N^2=0","T3=N tensor N symmetric and traceless","trace residue=0","antisymmetric residue=0","selected residue equals symmetric-traceless contraction","mixed-copy control activates additional tensor coordinates","Res C15g_project=-4(s13+s23)R_L R_R"],
+  "gates":["validation/gremlin/RFG29_EXPLICIT_FIFTEEN_GRAPH_PROJECT_BCJ_CURRENT_FACTORIZATION_GATE_v0.1.md","validation/gremlin/RFG30_EXPLICIT_FIFTEEN_GRAPH_DOUBLE_COPY_KLT_EQUIVALENCE_GATE_v0.1.md","validation/gremlin/RFG31_INTERNAL_STATE_TREE_FACTORIZATION_PURE_SPIN2_FIREWALL_v0.1.md"],
+  "receipts":["validation/RFG29_EXPLICIT_FIFTEEN_GRAPH_PROJECT_BCJ_CURRENT_FACTORIZATION_V0_1.json","validation/RFG30_EXPLICIT_FIFTEEN_GRAPH_DOUBLE_COPY_KLT_EQUIVALENCE_V0_1.json","validation/RFG31_INTERNAL_STATE_TREE_FACTORIZATION_PURE_SPIN2_V0_1.json"],
+  "validation_state":{"RFG29":"6/6 PASS","RFG30":"6/6 PASS","RFG31":"6/6 PASS FRESH LIVE-SURFACE","github_actions_current_branch_full_suite":"NOT_EXECUTED"},
+  "promotion_firewall":{"five_point_mhv_s12_internal_spin2":"PASS_RFG31","permutation_complete_tree_internal_state_audit":"OPTIONAL_NEXT_TREE_EXTENSION","loop_internal_state_spectrum":"NEXT_RFG32","direct_diagram_local_alternative_numerator_representative":"ADDITIONAL_OPEN_REPRESENTATIVE","Gamma_DC":"FACTORIZATION_INVARIANT_PASS_NUMERICAL_PROMOTION_OPEN","M_star_scale":"OPEN_RFN1C2_RFG7_FIREWALL","universal_G":"OPEN_CROSS_SYSTEM_EVIDENCE","total_matter_stress_energy":"OPEN","dynamic_Lambda0_action":"OPEN"},
+  "pinning_rule":"RFC v0.31 pins symmetric-traceless internal-state selection on the matched-helicity five-point MHV s12 tree factorization residue. Loop internal-state content is the RFG32 frontier."
 }

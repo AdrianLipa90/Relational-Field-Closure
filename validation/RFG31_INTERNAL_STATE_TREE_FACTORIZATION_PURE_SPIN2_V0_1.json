@@ -1,0 +1,18 @@
+{
+  "schema":"RFC_RFG31_INTERNAL_STATE_TREE_FACTORIZATION_PURE_SPIN2_V0_1",
+  "status":"PASS_FIVE_POINT_MHV_S12_INTERNAL_SPIN2_FACTORIZATION",
+  "observed_date_utc":"2026-08-28",
+  "reference_test":"tests/reference/test_rfg31_internal_state_tree_factorization_pure_spin2.py",
+  "local_result":"6 passed, 0 failed",
+  "tether_status":"ACTIVE",
+  "scope":"FIVE_POINT_MHV_S12_TREE_FACTORIZATION_MATCHED_COPY_HELICITY",
+  "internal_seed":"T3=N tensor N",
+  "transverse":"P12 dot N = 0",
+  "traceless":"N^2 = 0",
+  "trace_residue":"ZERO",
+  "antisymmetric_residue":"ZERO",
+  "spin2_residue":"FULL_SELECTED_RESIDUE",
+  "mixed_copy_control":"ADDITIONAL_TRACE_OR_ANTISYMMETRIC_COORDINATES_WITNESSED",
+  "graph_residue":"Res C15g_project=-4(s13+s23) R_L R_R",
+  "next_gate":"RFG32_LOOP_INTERNAL_STATE_SPECTRUM_FIREWALL"
+}

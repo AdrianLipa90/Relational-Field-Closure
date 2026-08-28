@@ -1,49 +1,41 @@
 # Relational Field Closure — Canonical Dependency Graph
 
-Status: `CURRENT_FRONTIER / CROSS_REFERENCE_LOCK_V0_30`
+Status: `CURRENT_FRONTIER / CROSS_REFERENCE_LOCK_V0_31`
 
 ```text
-TIR/IDT source + geometry
- -> RFN1C / RF-E3-E5 coupling and source closure
- -> RFG4G-RFG15 project Yang-Mills / four-point BCJ
- -> RFG16-RFG22 four-point double-copy / spin-2 / normalization / KLT
- -> RFG23-RFG28 five-point reference, direct BG, normalization and pole factorization
- -> RFG29 explicit 15-graph project BCJ + current residue
- -> RFG30 explicit 15-graph double-copy <-> KLT equivalence
- -> RFG31 internal-state tree-factorization / pure-spin2 firewall        NEXT
+TIR/IDT -> Newton/Einstein source closure
+ -> project Yang-Mills normalization and BCJ
+ -> four-point double copy / spin-2 / Einstein normalization
+ -> five-point BG / KLT / project normalization / pole
+ -> RFG29 explicit 15-graph BCJ
+ -> RFG30 explicit 15-graph double-copy <-> KLT
+ -> RFG31 matched-helicity internal tree spin-2 factorization
+ -> RFG32 loop internal-state spectrum firewall                    NEXT
 ```
 
-RFG29 provides
+On the RFG31 `s12` matched-helicity branch,
 
 \[
-F=B^TD^{-1}B,\qquad \operatorname{rank}F_5=2,\qquad m^\star=F^+A^{project},\qquad n=Bm^\star.
+T_3^{\mu\nu}=N^\mu N^\nu,\qquad P_{12}\cdot N=0,\qquad N^2=0.
 \]
 
-RFG30 closes the explicit graph gravity core:
+Thus `T3` is symmetric-traceless in the physical transverse quotient. For the downstream tensor `T4=J_L tensor J_R`,
 
 \[
-\boxed{\mathcal C_{5,15g}^{project}=\sum_g\frac{n_g\widetilde n_g}{D_g}=-\mathcal C_{5,KLT}^{project}}.
+\boxed{T_3:T_4=(T_3)_{ST}:(T_4)_{ST}=(N\cdot J_L)(N\cdot J_R)}.
 \]
 
-The graph orientation therefore carries
+The trace and antisymmetric coordinates contribute zero to this selected residue. RFG30 therefore gives
 
 \[
-\boxed{\mathcal M_5^{project}=+\frac{i}{4}\left(\frac{\kappa_g}{2}\right)^3\mathcal C_{5,15g}^{project}},
-\]
-
-which is identical to the RFG27 KLT-oriented amplitude. Independent null-space shifts of either numerator copy leave the graph core invariant.
-
-On `s12 -> 0`,
-
-\[
-\boxed{\operatorname*{Res}\mathcal C_{5,15g}^{project}=-4(s_{13}+s_{23})(N_{12}\cdot J_4)(\widetilde N_{12}\cdot\widetilde J_4)}.
+\boxed{\operatorname*{Res}\mathcal C_{5,15g}^{project}=-4(s_{13}+s_{23})(N\cdot J_L)(N\cdot J_R)}.
 \]
 
 ## Open firewalls
 
 ```text
-RFG31 internal-state tree-factorization / pure-spin2 audit
-loop internal-state spectrum audit
+RFG32 loop internal-state spectrum / pure-spin2 closure
+permutation-complete tree internal-state extension
 direct diagram-local alternative numerator representative
 Gamma_DC numerical promotion
 M_star physical-scale promotion
