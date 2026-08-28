@@ -1,0 +1,23 @@
+{
+  "schema": "RFC_RFG25_PROJECT_FIVE_POINT_KLT_GRAVITY_V0_1",
+  "status": "PASS_DIRECT_PROJECT_FIVE_POINT_GRAVITY",
+  "observed_date_utc": "2026-08-28",
+  "reference_test": "tests/reference/test_rfg25_project_five_point_klt_gravity.py",
+  "local_result": "6 passed, 0 failed",
+  "matrix_two_term_samples": 150,
+  "left_ward_samples": 100,
+  "right_ward_samples": 100,
+  "copy_exchange_samples": 120,
+  "identities": [
+    "C5_project = A_L_project^T S5 A_R_project",
+    "project five-point KLT matrix equals the independent two-term KLT form",
+    "all five left-copy Ward replacements vanish",
+    "all five right-copy Ward replacements vanish",
+    "C5_project[L,R]=C5_project[R,L]",
+    "removing the quartic contact in one copy breaks gravitational Ward closure",
+    "(kappa_g/2)^3=1/Mbar_G^3=kappa_E/Mbar_G"
+  ],
+  "gravity_target_used_to_construct_YM_inputs": false,
+  "explicit_15_graph_project_numerators": "OPEN",
+  "five_point_multi_particle_pole_audit": "NEXT"
+}
