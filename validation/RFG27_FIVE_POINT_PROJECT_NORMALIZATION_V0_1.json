@@ -1,0 +1,21 @@
+{
+  "schema": "RFC_RFG27_FIVE_POINT_PROJECT_NORMALIZATION_V0_1",
+  "status": "PASS_FIVE_POINT_PROJECT_NORMALIZATION_SOFT_TRANSPORT",
+  "observed_date_utc": "2026-08-28",
+  "reference_test": "tests/reference/test_rfg27_five_point_project_normalization.py",
+  "fresh_local_result": "6 passed, 0 failed",
+  "samples": {"bg4_pt4":80,"rfg15_bg4":80,"bg5_pt5":80,"klt_map":80,"soft_epsilon":1e-6},
+  "identities": [
+    "A4_BG=A4_PT_raw",
+    "A4_RFG15_project=2 A4_BG",
+    "A5_BG=A5_PT_raw",
+    "eta_A=2",
+    "C5_project=eta_A^2 C5_BG=4 C5_BG",
+    "C5_project/(S5+ C4_project) -> 1 on conserved soft family",
+    "zeta_5=-i/4",
+    "M5_project=-(i/4)(kappa_g/2)^3 C5_project=-i(kappa_g/2)^3 C5_BG",
+    "old +i(kappa_g/2)^3 C5_BG has conserved-soft ratio -1"
+  ],
+  "gravity_target_used_to_construct_YM_inputs": false,
+  "next": "RFG28 five-point multi-particle pole residue audit"
+}

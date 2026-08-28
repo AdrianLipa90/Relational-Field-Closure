@@ -1,56 +1,37 @@
 {
-  "schema": "RFC_CROSS_REFERENCE_LOCK_V0_26",
-  "status": "PHASE_SOURCE_PROJECT_YM_BCJ_KLT_SPIN2_DOUBLE_COPY_EINSTEIN_HIGHER_POINT_CORE_PINNED_NORMALIZATION_FRONTIER_OPEN",
-  "created": "2026-08-27",
-  "updated": "2026-08-28",
-  "upstreams": [
-    {"role":"relational_information_geometry_phase_clock_area_hexahedral_rank3_and_claim_typing","repository":"AdrianLipa90/The-Fundamental-Theory-of-Informational-Relations","ref":"agent/hexahedral-bloch-frame-v0.1","commit":"a2e7003599b13a7b38c0860ecfdcf1c012780c92"},
-    {"role":"half_spinorial_critical_interface","repository":"AdrianLipa90/Secret-of-a-Half","ref":"main","commit":"206e49e306b246c4b0f4d182b0d32d5511739408"},
-    {"role":"dynamic_time_phase_clock_information_curvature_relational_lapse_and_onsager_response","repository":"AdrianLipa90/Informational-Dynamics-of-Time","ref":"feat/relational-lapse-interface-v0.1","commit":"e3cbcd39f2cc9ea8f3e08f613aa5124de1c4dac4"},
-    {"role":"shape_euler_noether_local_current_scalar_field_rotor_gauge_lapse_and_phase_energy_source_interface","repository":"AdrianLipa90/Informational-Dynamics-of-Time","ref":"feat/idt-rfc-normalized-shape-holonomy-v0.1","commit":"e6c57b314bcf2e04de679c46c0be309f46cba053"},
-    {"role":"pncs_source_holonomy_and_gremlin_live_candidate_authoring","repository":"AdrianLipa90/PhaseNav-Natural-Coding-System","ref":"main","commit":"ebdeb9729f21db17bebe4e14302a9687cdc33f4e","live_authoring_status":"LIVE_E2E_VALIDATED_CANONICAL_AUTOBOOT_V3","candidate_authority":"CANDIDATE_ONLY"}
+  "schema":"RFC_CROSS_REFERENCE_LOCK_V0_27",
+  "status":"PHASE_SOURCE_PROJECT_YM_BCJ_KLT_SPIN2_DOUBLE_COPY_EINSTEIN_FIVE_POINT_NORMALIZATION_PINNED",
+  "created":"2026-08-27",
+  "updated":"2026-08-28",
+  "upstreams":[
+    {"repository":"AdrianLipa90/The-Fundamental-Theory-of-Informational-Relations","ref":"agent/hexahedral-bloch-frame-v0.1","commit":"a2e7003599b13a7b38c0860ecfdcf1c012780c92"},
+    {"repository":"AdrianLipa90/Secret-of-a-Half","ref":"main","commit":"206e49e306b246c4b0f4d182b0d32d5511739408"},
+    {"repository":"AdrianLipa90/Informational-Dynamics-of-Time","ref":"feat/relational-lapse-interface-v0.1","commit":"e3cbcd39f2cc9ea8f3e08f613aa5124de1c4dac4"},
+    {"repository":"AdrianLipa90/Informational-Dynamics-of-Time","ref":"feat/idt-rfc-normalized-shape-holonomy-v0.1","commit":"e6c57b314bcf2e04de679c46c0be309f46cba053"},
+    {"repository":"AdrianLipa90/PhaseNav-Natural-Coding-System","ref":"main","commit":"ebdeb9729f21db17bebe4e14302a9687cdc33f4e","candidate_authority":"CANDIDATE_ONLY"}
   ],
-  "numbering_repair": {
-    "reason": "higher-point RFG23 collision repaired by dependency order",
-    "RFG20": "Einstein MHV / Double-Copy Normalization Firewall",
-    "RFG21": "Project Gravity Pole Factorization Gate",
-    "RFG22": "Project Four-Point KLT Equivalence Gate",
-    "RFG23": "Five-Point BCJ / Soft-Factorization Gate",
-    "RFG24": "Five-Point KLT Kernel / Reduced-Scale Gate",
-    "RFG25": "Project Five-Point Berends-Giele / BCJ Gate",
-    "RFG26": "Project Five-Point KLT Gravity Core Gate",
-    "test_logic_changed_by_renumbering": false,
-    "renamed_tests_preserve_blob_bytes": true
-  },
-  "gauge_gravity_spine": [
-    "RFG3 Wilson continuum/Yang-Mills normalization",
-    "RFG4G g_YM^2=1/alpha_c and beta_W=6 alpha_c",
-    "RFG8-RFG13 project cubic/quartic interaction layer",
-    "RFG14 complete gauge-invariant project A4",
-    "RFG15 project BCJ numerators",
-    "RFG16 project four-point double copy",
-    "RFG17 G-free amplitude coupling holonomy",
-    "RFG18 pure spin-2 external-state projector",
-    "RFG19 spin-2 helicity/little-group gate",
-    "RFG20 A_project=-2i A_PT and g->kappa_g/4 normalization firewall",
-    "RFG21 four-point massless pole factorization",
-    "RFG22 four-point KLT equivalence",
-    "RFG23 five-point BCJ/soft reference",
-    "RFG24 five-point KLT kernel and reduced-scale coordinate",
-    "RFG25 direct project five-point BG/BCJ",
-    "RFG26 direct project five-point KLT gravity core"
+  "canonical_rfg_lineage":[
+    "RFG20 Einstein MHV / Double-Copy Normalization Firewall",
+    "RFG21 Project Gravity Pole Factorization",
+    "RFG22 Project Four-Point KLT Equivalence",
+    "RFG23 Five-Point BCJ / Soft-Factorization Reference",
+    "RFG24 Five-Point KLT Kernel / Reduced-Scale",
+    "RFG25 Direct Vertex Berends-Giele / BCJ",
+    "RFG26 Direct BGxBG KLT Gravity Core",
+    "RFG27 Five-Point Project Normalization Firewall"
   ],
-  "rfc_gates": [
-    "formalism/RFL0_TEMPORAL_INFORMATION_CURVATURE_CLOSURE.md",
-    "formalism/RFN1C_THREE_ROUTE_COUPLING_HOLONOMY.md",
-    "formalism/RFN1C1_PHASE_SOURCE_SPECIALIZATION.md",
-    "formalism/RFN1C2_CARRIER_SCALE_UNIVERSALITY_FIREWALL.md",
-    "formalism/RFN1C3_REDUCED_GRAVITY_SCALE_HORIZON_CLOSURE.md",
-    "formalism/RFN1C4_DOUBLE_COPY_CARRIER_ENERGY_TYPE_FIREWALL.md",
-    "validation/gremlin/RFG16_PROJECT_DOUBLE_COPY_EINSTEIN_COUPLING_GATE_v0.1.md",
-    "validation/gremlin/RFG17_G_FREE_AMPLITUDE_COUPLING_HOLONOMY_v0.1.md",
-    "validation/gremlin/RFG18_PURE_SPIN2_EXTERNAL_STATE_PROJECTION_FIREWALL_v0.1.md",
-    "validation/gremlin/RFG19_SPIN2_HELICITY_SELECTION_LITTLE_GROUP_GATE_v0.1.md",
+  "normalization_holonomy":[
+    "RFG20: A4_project=2 A4_PT_raw",
+    "RFG25/RFG27: A4_BG=A4_PT_raw and A5_BG=A5_PT_raw",
+    "RFG27: eta_A=2",
+    "RFG27: A5_project=2 A5_BG",
+    "RFG27: C5_project=4 C5_BG",
+    "RFG27: C5_project/(S5+ C4_project)->1",
+    "RFG27: zeta5=-i/4",
+    "RFG27: M5_project=-(i/4)(kappa_g/2)^3 C5_project=-i(kappa_g/2)^3 C5_BG",
+    "RFG27: old +i(kappa_g/2)^3 C5_BG soft ratio=-1"
+  ],
+  "gates":[
     "validation/gremlin/RFG20_EINSTEIN_MHV_DOUBLE_COPY_NORMALIZATION_FIREWALL_v0.1.md",
     "validation/gremlin/RFG21_PROJECT_GRAVITY_POLE_FACTORIZATION_GATE_v0.1.md",
     "validation/gremlin/RFG22_PROJECT_FOUR_POINT_KLT_EQUIVALENCE_GATE_v0.1.md",
@@ -58,15 +39,9 @@
     "validation/gremlin/RFG24_FIVE_POINT_KLT_KERNEL_REDUCED_SCALE_GATE_v0.1.md",
     "validation/gremlin/RFG25_PROJECT_FIVE_POINT_BERENDS_GIELE_BCJ_GATE_v0.1.md",
     "validation/gremlin/RFG26_PROJECT_FIVE_POINT_KLT_GRAVITY_GATE_v0.1.md",
-    "closure/einstein/RF_E3_DOUBLE_COPY_EINSTEIN_HILBERT_NORMALIZATION.md",
-    "closure/einstein/RF_E4_PHASE_KINETIC_STRESS_ENERGY_FIREWALL.md",
-    "closure/einstein/RF_E5_ONSHELL_SCALAR_CARRIER_ENERGY_FIREWALL.md"
+    "validation/gremlin/RFG27_FIVE_POINT_PROJECT_NORMALIZATION_FIREWALL_v0.1.md"
   ],
-  "validation_receipts": [
-    "validation/RFG16_PROJECT_DOUBLE_COPY_EINSTEIN_COUPLING_V0_1.json",
-    "validation/RFG17_G_FREE_AMPLITUDE_COUPLING_HOLONOMY_V0_1.json",
-    "validation/RFG18_PURE_SPIN2_EXTERNAL_STATE_PROJECTION_V0_1.json",
-    "validation/RFG19_SPIN2_HELICITY_SELECTION_LITTLE_GROUP_V0_1.json",
+  "receipts":[
     "validation/RFG20_EINSTEIN_MHV_DOUBLE_COPY_NORMALIZATION_V0_1.json",
     "validation/RFG21_PROJECT_GRAVITY_POLE_FACTORIZATION_V0_1.json",
     "validation/RFG22_PROJECT_FOUR_POINT_KLT_EQUIVALENCE_V0_1.json",
@@ -74,50 +49,32 @@
     "validation/RFG24_FIVE_POINT_KLT_REDUCED_SCALE_V0_1.json",
     "validation/RFG25_PROJECT_FIVE_POINT_BERENDS_GIELE_BCJ_V0_1.json",
     "validation/RFG26_PROJECT_FIVE_POINT_KLT_GRAVITY_V0_1.json",
-    "validation/RFE3_EINSTEIN_HILBERT_NORMALIZATION_V0_1.json",
-    "validation/RFE4_PHASE_KINETIC_STRESS_ENERGY_FIREWALL_V0_1.json",
-    "validation/RFE5_ONSHELL_SCALAR_CARRIER_ENERGY_FIREWALL_V0_1.json"
+    "validation/RFG27_FIVE_POINT_PROJECT_NORMALIZATION_V0_1.json"
   ],
-  "key_source_chain": [
-    "omega_Q=D_hat_tau chi=D_t chi/N_R",
-    "epsilon_N=omega_Q/2",
-    "j_theta=2 A^2 omega_Q",
-    "rho_theta=A^2 omega_Q^2/c^2",
-    "RFG4G: g_YM^2=1/alpha_c",
-    "RFG15: c_s-c_t+c_u=0 and n_s-n_t+n_u=0",
-    "RFG20: A_project=-2i A_PT fixes g->kappa_g/4 at four points",
-    "RFG16: M4_project=-i(kappa_E/4) C4_project with kappa_E=8 pi G",
-    "RFG17: kappa_E=1/(M_H T_H)=4 Gamma_DC^2/(alpha_c^2 omega_Q^2)",
-    "RFG23: five-point BCJ basis dimension 2 and soft reference",
-    "RFG24: C5_KLT=A_L^T S5 A_R and P5=(kappa_g/2)^3=1/Mbar_G^3 as scale coordinate",
-    "RFG25: direct project A5_BG satisfies Ward/BCJ using inherited cubic/quartic layer",
-    "RFG26: direct project C5=A_L_project^T S5 A_R_project; M5=zeta_5 P5 C5",
-    "RFG27: zeta_5 normalization firewall NEXT"
-  ],
-  "validation_state": {
-    "historical_full_suite_provenance": {"idt":"382/382 PASS","rfc":"74/74 PASS"},
-    "higher_point_gate_receipts": {"RFG23":"6/6 PASS","RFG24":"6/6 PASS","RFG25":"6/6 PASS","RFG26":"6/6 PASS"},
-    "renumbering_logic_change": false,
-    "github_actions_current_branch_full_suite": "NOT_EXECUTED"
+  "validation_state":{
+    "RFG23":"6/6 PASS",
+    "RFG24":"6/6 PASS",
+    "RFG25":"6/6 PASS",
+    "RFG26":"6/6 PASS",
+    "RFG27":"6/6 PASS FRESH LOCAL",
+    "renumbered_test_blobs_preserved":true,
+    "github_actions_current_branch_full_suite":"NOT_EXECUTED"
   },
-  "promotion_firewall": {
-    "project_four_point_double_copy": "PASS_RFG16_RFG20",
-    "g_free_amplitude_coupling_holonomy": "PASS_EXACT_ALGEBRAIC_RFG17",
-    "pure_spin2_external_state_projection": "PASS_RFG18",
-    "project_four_point_KLT_equivalence": "PASS_RFG22",
-    "five_point_reference_BCJ_soft": "PASS_RFG23",
-    "five_point_KLT_core_and_scale_coordinate": "PASS_RFG24",
-    "direct_project_five_point_YM": "PASS_RFG25",
-    "direct_project_five_point_KLT_core": "PASS_RFG26",
-    "five_point_project_overall_normalization": "OPEN_RFG27",
-    "five_point_multi_particle_pole_audit": "AFTER_RFG27",
-    "explicit_15_graph_project_numerators": "OPEN",
-    "internal_state_loop_spectrum_audit": "OPEN",
-    "Gamma_DC": "FACTORIZATION_INVARIANT_PASS_NUMERICAL_PROMOTION_OPEN",
-    "M_star_scale": "OPEN_RFN1C2_RFG7_FIREWALL",
-    "universal_G": "OPEN_CROSS_SYSTEM_EVIDENCE",
-    "total_matter_stress_energy": "OPEN",
-    "dynamic_Lambda0_action": "OPEN"
+  "promotion_firewall":{
+    "five_point_BCJ_soft_reference":"PASS_RFG23",
+    "five_point_KLT_kernel":"PASS_RFG24",
+    "direct_five_point_BG_Ward_BCJ":"PASS_RFG25",
+    "direct_five_point_KLT_core":"PASS_RFG26",
+    "five_point_project_color_order_map":"PASS_RFG27",
+    "five_point_project_overall_normalization":"PASS_RFG27",
+    "five_point_multi_particle_pole_audit":"NEXT_RFG28",
+    "explicit_15_graph_project_numerators":"OPEN",
+    "internal_state_loop_spectrum_audit":"OPEN",
+    "Gamma_DC":"FACTORIZATION_INVARIANT_PASS_NUMERICAL_PROMOTION_OPEN",
+    "M_star_scale":"OPEN_RFN1C2_RFG7_FIREWALL",
+    "universal_G":"OPEN_CROSS_SYSTEM_EVIDENCE",
+    "total_matter_stress_energy":"OPEN",
+    "dynamic_Lambda0_action":"OPEN"
   },
-  "pinning_rule": "RFC v0.26 pins unique dependency-ordered RFG20-RFG26 lineage through the direct five-point KLT gravity core. The five-point physical overall normalization is represented by zeta_5 and remains independently gated by RFG27 before pole-residue promotion."
+  "pinning_rule":"RFC v0.27 pins the unique RFG20-RFG27 lineage and the five-point project normalization through an explicit eta_A=2 color-order map plus conserved five-to-four gravity soft transport. RFG28 is the next pole-residue frontier."
 }

@@ -1,25 +1,13 @@
 {
-  "schema": "RFC_RFG26_PROJECT_FIVE_POINT_KLT_GRAVITY_V0_1",
-  "status": "PASS_DIRECT_PROJECT_FIVE_POINT_GRAVITY_CORE_OVERALL_NORMALIZATION_OPEN_RFG27",
-  "observed_date_utc": "2026-08-28",
-  "reference_test": "tests/reference/test_rfg26_project_five_point_klt_gravity.py",
-  "local_result": "6 passed, 0 failed",
-  "matrix_two_term_samples": 150,
-  "left_ward_samples": 100,
-  "right_ward_samples": 100,
-  "copy_exchange_samples": 120,
-  "identities": [
-    "C5_project = A_L_project^T S5 A_R_project",
-    "project five-point KLT matrix equals the independent two-term KLT form",
-    "all five left-copy Ward replacements vanish",
-    "all five right-copy Ward replacements vanish",
-    "C5_project[L,R]=C5_project[R,L]",
-    "removing the quartic contact in one copy breaks gravitational Ward closure",
-    "P5=(kappa_g/2)^3=1/Mbar_G^3=kappa_E/Mbar_G"
-  ],
-  "overall_amplitude_definition": "M5_project = zeta_5 P5 C5_project",
-  "zeta_5": "OPEN_RFG27_NORMALIZATION_FIREWALL",
-  "gravity_target_used_to_construct_YM_inputs": false,
-  "explicit_15_graph_project_numerators": "OPEN",
-  "five_point_multi_particle_pole_audit": "AFTER_RFG27"
+  "schema":"RFC_RFG26_PROJECT_FIVE_POINT_KLT_GRAVITY_V0_1",
+  "status":"PASS_DIRECT_FIVE_POINT_KLT_CORE_NORMALIZATION_PINNED_RFG27",
+  "observed_date_utc":"2026-08-28",
+  "reference_test":"tests/reference/test_rfg26_project_five_point_klt_gravity.py",
+  "local_result":"6 passed, 0 failed",
+  "core_basis":"BG_STANDARD_COLOR_ORDER",
+  "project_core_map":"C5_project=4 C5_BG",
+  "physical_amplitude":"M5_project=-(i/4)(kappa_g/2)^3 C5_project=-i(kappa_g/2)^3 C5_BG",
+  "normalization_source":"RFG27 conserved five-to-four gravity soft transport",
+  "gravity_target_used_to_construct_YM_inputs":false,
+  "five_point_multi_particle_pole_audit":"NEXT_RFG28"
 }

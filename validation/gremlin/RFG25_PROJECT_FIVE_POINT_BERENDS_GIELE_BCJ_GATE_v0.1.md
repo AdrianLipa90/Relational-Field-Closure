@@ -1,83 +1,41 @@
 # RFG25 — Project Five-Point Berends–Giele / BCJ Gate
 
-Status: `DIRECT_PROJECT_FIVE_POINT_YM_ASSEMBLY_PASS / FIVE_LEG_WARD_PASS / FUNDAMENTAL_BCJ_PASS / REFLECTION_AND_DECOUPLING_PASS / QUARTIC_NORMALIZATION_FIREWALL_PASS`
+Status: `DIRECT_VERTEX_BG_ASSEMBLY_PASS / FIVE_LEG_WARD_PASS / FUNDAMENTAL_BCJ_PASS / QUARTIC_FIREWALL_PASS / BG_STANDARD_COLOR_ORDER_PASS_RFG27 / PROJECT_MAP_ETA_A_2_PASS_RFG27`
 
-RFG25 closes the project Yang–Mills assembly gap left by the RFG23 reference gate. It evaluates five-point color-ordered amplitudes directly from the same RFG8 cubic and RFG13 quartic interaction normalization used at four points.
-
-## 1. Ordered project currents
-
-The color-ordered Berends–Giele recursion is
+RFG25 evaluates five-point color-ordered amplitudes directly from the RFG8/RFG13 cubic/quartic interaction layer with
 
 \[
-\boxed{P^2J_P^\mu=\sqrt2\sum_{XY=P}[J_X,J_Y]^\mu+\sum_{XYZ=P}\{J_X,J_Y,J_Z\}^\mu}.
+P^2J_P^\mu=\sqrt2\sum_{XY=P}[J_X,J_Y]^\mu+\sum_{XYZ=P}\{J_X,J_Y,J_Z\}^\mu.
 \]
 
-The binary `sqrt(2)` and quartic `1` coefficients are inherited from the admitted project interaction layer. The final external propagator is amputated before contraction with the fifth polarization.
+Its Ward, BCJ, reflection/decoupling and quartic-contact tests remain byte-preserved PASS results.
 
-For ordering `sigma` define the stripped amplitude
+RFG27 identifies the normalization of this Berends–Giele color-order basis:
 
 \[
-\boxed{A_5^{BG}(\sigma)}.
+\boxed{A_4^{BG}=A_4^{PT(raw)}},\qquad
+\boxed{A_5^{BG}=A_5^{PT(raw)}}.
 \]
 
-The Yang–Mills coupling attachment remains
+Comparison with the admitted RFG15/RFG20 four-point project partial gives
 
 \[
-\boxed{\mathcal A_5^{project}=g_{YM}^3A_5^{BG},\qquad g_{YM}^2=1/\alpha_c}.
+\boxed{A_4^{project}=2A_4^{BG}}.
 \]
 
-## 2. Five-leg Ward gate
-
-For every external leg,
+The canonical project handoff is therefore
 
 \[
-\boxed{A_5^{BG}|_{\varepsilon_i\to p_i}=0}
+\boxed{\eta_A=2},\qquad
+\boxed{A_5^{project}=2A_5^{BG}}.
 \]
 
-on deterministic physical `2 -> 3` massless configurations.
+This basis map preserves all homogeneous Ward/BCJ identities and carries the RFG15 project color-order convention into the five-point layer.
 
-## 3. Direct project BCJ
-
-The project amplitudes themselves satisfy
-
-\[
-\boxed{0=s_{12}A_5^{BG}(1,2,3,4,5)+(s_{12}+s_{23})A_5^{BG}(1,3,2,4,5)+(s_{12}+s_{23}+s_{24})A_5^{BG}(1,3,4,2,5)}.
-\]
-
-No gravity output is used to select this relation.
-
-## 4. Ordered-amplitude identities
-
-The same recursion verifies reflection
-
-\[
-\boxed{A(1,2,3,4,5)=-A(5,4,3,2,1)}
-\]
-
-and the five-point insertion/photon-decoupling identity.
-
-## 5. Quartic-normalization firewall
-
-Removing the inherited quartic current contribution while leaving the cubic recursion fixed produces order-one Ward defects. The admitted RFG13 coefficient restores five-leg Ward closure.
-
-## 6. Executable validation
-
-The byte-preserved reference test verifies masslessness/conservation/transversality, all five Ward replacements, direct project fundamental BCJ, reflection and decoupling, the quartic adversarial firewall, and `g_YM^3` coupling power.
-
-Recorded result:
+Recorded RFG25 result remains
 
 ```text
 6 passed, 0 failed
 ```
 
-## 7. Advancement
-
-```text
-RFG23 five-point BCJ / soft reference               PASS
-RFG24 five-point KLT kernel                         PASS
-RFG25 direct project five-point Yang-Mills          PASS
-RFG25 five-leg Ward                                 PASS
-RFG25 project fundamental BCJ                       PASS
-RFG26 project BG x BG KLT gravity core              NEXT/PASS DOWNSTREAM
-explicit 15-cubic-graph numerator set               OPEN
-```
+and RFG27 independently passes `6/6` normalization/soft-transport tests.
