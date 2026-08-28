@@ -1,8 +1,8 @@
 # RFG16 — Project Double-Copy → Einstein Coupling Gate
 
-Status: `PROJECT_FOUR_POINT_DOUBLE_COPY_PASS / GRAVITATIONAL_WARD_PASS / EINSTEIN_COUPLING_PREFACTOR_EXACT / TREE_LEVEL_FOUR_POINT_SCOPE`
+Status: `PROJECT_FOUR_POINT_DOUBLE_COPY_PASS / GRAVITATIONAL_WARD_PASS / PROJECT_NUMERATOR_NORMALIZATION_CORRECTED_RFG20 / EINSTEIN_MHV_NORMALIZATION_PASS / TREE_LEVEL_FOUR_POINT_SCOPE`
 
-RFG16 consumes the project numerators produced by RFG15. No gravity amplitude is used to construct or tune those numerators.
+RFG16 consumes the project numerators produced by RFG15. No gravity amplitude is used to construct or tune those numerators. RFG20 subsequently audits their explicit normalization and fixes the coupling-conversion convention used by this gate.
 
 For two admitted kinematic copies, let
 
@@ -19,12 +19,28 @@ be the RFG15 project numerator triplets, each satisfying the same oriented Jacob
 \boxed{\tilde n_s-\tilde n_t+\tilde n_u=0}.
 \]
 
-The four-point double-copy amplitude is
+## Project numerator normalization
+
+RFG20 verifies independently that the project color-ordered four-point numerator representation obeys
+
+\[
+\boxed{A^{project}_{1234}=-2i\,A^{PT}_{1234}}.
+\]
+
+The magnitude factor `2` is the four-point result of one absorbed `sqrt(2)` normalization per cubic vertex. For this numerator convention the compatible double-copy coupling transfer is
+
+\[
+\boxed{g\longrightarrow\kappa_g/4}
+\]
+
+rather than `kappa_g/2`.
+
+The corrected four-point project double-copy amplitude is therefore
 
 \[
 \boxed{
 \mathcal M_4
-=i\left(\frac{\kappa_g}{2}\right)^2
+=-i\left(\frac{\kappa_g}{4}\right)^2
 \left(
 \frac{n_s\tilde n_s}{s}
 +\frac{n_t\tilde n_t}{t}
@@ -33,36 +49,44 @@ The four-point double-copy amplitude is
 }
 \]
 
-RFG2 uses
+RFG2/RF-E3 use the physical gravitational coupling convention
 
 \[
-\kappa_g^2=32\pi G.
+\kappa_g^2=32\pi G,
+\qquad
+\boxed{\kappa_E=\frac{\kappa_g^2}{4}=8\pi G}
 \]
 
-Therefore at four points
-
-\[
-\boxed{
-\left(\frac{\kappa_g}{2}\right)^2
-=\frac{\kappa_g^2}{4}
-=8\pi G
-=\kappa_E
-}
-\]
-
-in natural units. The project double-copy amplitude can consequently be written
+in natural units. Hence the coefficient multiplying the **project-normalized numerator core** is
 
 \[
 \boxed{
-\mathcal M_4
-=i\kappa_E
-\left(
-\frac{n_s\tilde n_s}{s}
-+\frac{n_t\tilde n_t}{t}
-+\frac{n_u\tilde n_u}{u}
-\right).
+-i\left(\frac{\kappa_g}{4}\right)^2
+=-\frac{i\kappa_E}{4}.
 }
 \]
+
+This factor is distinct from the physical Einstein coupling because the project numerator core carries the compensating normalization identified by RFG20.
+
+For the spin-2 MHV sector,
+
+\[
+\boxed{
+\sum_i\frac{n_i^2}{D_i}
+=-4\frac{s^3}{tu}
+}
+\]
+
+and therefore
+
+\[
+\boxed{
+\mathcal M_{4,--++}
+=i\kappa_E\frac{s^3}{tu},
+}
+\]
+
+which is the independent Einstein four-graviton Born normalization.
 
 Using RFG7,
 
@@ -70,7 +94,7 @@ Using RFG7,
 \bar M_G=\frac{2}{\kappa_g},
 \]
 
-so the same prefactor is also
+so the physical coupling identities remain
 
 \[
 \boxed{
@@ -80,28 +104,40 @@ G=\frac1{8\pi\bar M_G^2}.
 }
 \]
 
+The project-core prefactor can equivalently be written
+
+\[
+\boxed{-\frac{i}{4\bar M_G^2}}.
+\]
+
 ## Gravitational Ward gate
 
-The executable reference constructs two independent physical polarization copies. Replacing any external polarization vector by its corresponding momentum in either copy gives a vanishing double-copy amplitude to numerical tolerance. This is tested independently for all four legs in both copies over deterministic random on-shell kinematics.
+The executable reference constructs two independent physical polarization copies. Replacing any external polarization vector by its corresponding momentum in either copy gives a vanishing double-copy core to numerical tolerance. This is tested independently for all four legs in both copies over deterministic random on-shell kinematics.
 
-The gate also verifies copy-exchange symmetry, nonzero physical witnesses, and exact scaling with `kappa_E`.
+The gate also verifies copy-exchange symmetry, nonzero physical witnesses, the physical `kappa_E` triangle, and the corrected project-core prefactor.
 
-Local result:
+Local corrected result:
 
 ```text
 6 passed, 0 failed
 ```
 
-This establishes the project four-point bridge
+RFG20 additionally supplies the closed-form normalization firewall:
+
+```text
+old +i(kappa_g/2)^2 project transfer   FAIL EXACT FACTOR -4
+new -i(kappa_g/4)^2 project transfer   PASS EINSTEIN MHV
+```
+
+The admitted four-point bridge is therefore
 
 ```text
 holonomic SU(3)
  -> normalized project Yang-Mills A4
  -> project BCJ numerators
- -> project double copy
- -> kappa_E = 8 pi G = kappa_g^2/4
+ -> project-normalized double copy [-i(kappa_g/4)^2]
+ -> physical kappa_E = 8 pi G = kappa_g^2/4
+ -> Einstein MHV normalization
 ```
 
-within the admitted tree-level four-point sector.
-
-The next scientific front is no longer the existence of a gauge/gravity coupling bridge at four points. It is the extension of the project numerator construction beyond four points / MHV-like reference kinematics and the independent cross-system promotion of the reduced gravity scale `Mbar_G`.
+The next scientific front is higher-point project normalization/BCJ and independent cross-system promotion of the reduced gravity scale `Mbar_G` and carrier-scale type.
