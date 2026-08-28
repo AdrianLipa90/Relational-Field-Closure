@@ -1,6 +1,6 @@
 # Relational Field Closure — Canonical Dependency Graph
 
-Status: `CURRENT_FRONTIER / CROSS_REFERENCE_LOCK_V0_37_STACKED`
+Status: `CURRENT_FRONTIER / CROSS_REFERENCE_LOCK_V0_38_STACKED`
 
 ```text
 TIR/IDT -> RFC conserved carrier / phase-energy source
@@ -12,9 +12,11 @@ TIR/IDT -> RFC conserved carrier / phase-energy source
  -> RF-E6 canonical Lorentzian action/source bookkeeping           PASS STACKED
  -> RF-E7 exact scalar T decomposition/recomposition               PASS STACKED
  -> single-complex-scalar total matter T_mn                        CLOSED
- -> multispecies/additional matter composition                     OPEN
- -> Einstein source closure / physical G universality
- -> dynamic Lambda0 independent action                             NEXT ACTION FRONTIER
+ -> RF-L1 dynamic Lambda0 target                                   ADMITTED
+ -> RF-L2 dynamic Lambda0 action + stability                       PASS STACKED
+ -> RFC-invariant U_L reconstruction                               NEXT LAMBDA FRONTIER
+ -> parameter-free Lambda0 calibration / global stability          OPEN
+ -> Einstein/unified-limit audit
 
 Parallel coupling line:
 project Yang-Mills normalization and BCJ
@@ -29,121 +31,67 @@ project Yang-Mills normalization and BCJ
  -> RFG35 vector-polarization projected-cut Ward audit             NEXT COUPLING FRONTIER
 ```
 
-RF-G0 fixes
+## Lorentzian matter spine
 
-\[
-\boxed{\operatorname{signature}(g)=(-,+,+,+)}.
-\]
-
-RF-E6 aligns the matter action to
-
-\[
-\boxed{\mathcal L_m=-(D_\mu\Psi)^\dagger D^\mu\Psi-U(\Psi)}
-\]
-
-and fixes the charge-projected Maxwell source
+RF-G0 fixes `(-,+,+,+)`. RF-E6 fixes the canonical matter action and charge-projected Maxwell current,
 
 \[
 \boxed{J_{EM}^{\mu}=\hbar^{-1}\Pi_Q[J_{RFC}]^{\mu}.}
 \]
 
-RF-E7 writes one complex scalar as
+RF-E7 closes the complete one-complex-scalar matter tensor,
 
 \[
-\psi=Ae^{i\vartheta},
-\qquad
-q_\mu=\partial_\mu\vartheta+\frac q\hbar A_\mu^{EM},
+\boxed{T_{\mu\nu}^{scalar}=T_{\mu\nu}^{amp}+T_{\mu\nu}^{phase}+T_{\mu\nu}^{pot}.}
 \]
 
-so
+Together with the Maxwell tensor,
+
+\[
+\boxed{T_{\mu\nu}^{base}=T_{\mu\nu}^{EM}+T_{\mu\nu}^{scalar}}
+\]
+
+is conserved on the admitted coupled equations.
+
+## Dynamic Lambda0 action spine
+
+RF-L2 introduces a canonical real scalar `phi_L` with potential `U_L`. The action split defines
+
+\[
+\boxed{\Lambda_0(x)=\Lambda_{ref}+\kappa_EU_L(\phi_L(x)).}
+\]
+
+while retaining
 
 \[
 \boxed{
-(D_\mu\psi)^*D^\mu\psi
-=(\partial A)^2+A^2q^2.
+T^{kin}_{\mu\nu}
+=\nabla_\mu\phi_L\nabla_\nu\phi_L
+-\frac12g_{\mu\nu}(\nabla\phi_L)^2
 }
 \]
 
-The mixed amplitude/phase terms cancel exactly, giving
+as an explicit source contribution. On the scalar equation of motion,
 
 \[
 \boxed{
-T_{\mu\nu}^{scalar}
-=T_{\mu\nu}^{amp}
-+T_{\mu\nu}^{phase}
-+T_{\mu\nu}^{pot}.
+\kappa_E\nabla^\mu
+\left(T^{base}_{\mu\nu}+T^{kin}_{\mu\nu}\right)
+=\nabla_\nu\Lambda_0.
 }
 \]
 
-with
+At a stationary point `grad(phi_L)=0`, `U_L'=0`, the kinetic tensor vanishes and `Lambda0` is constant. Linear stability is typed by
 
 \[
-T_{\mu\nu}^{amp}
-=2\partial_\mu A\partial_\nu A-g_{\mu\nu}(\partial A)^2,
-\]
-
-\[
-T_{\mu\nu}^{phase}
-=2A^2q_\mu q_\nu-g_{\mu\nu}A^2q^2,
-\]
-
-\[
-T_{\mu\nu}^{pot}=-g_{\mu\nu}V.
-\]
-
-The synchronized AB gauge shift leaves `q_mu` invariant, so the decomposition is gauge covariant.
-
-For the homogeneous phase limit,
-
-\[
-\boxed{\varepsilon=K+V,\qquad p=K-V,\qquad \varepsilon+3p=4K-2V.}
-\]
-
-For the homogeneous quadratic on-shell scalar,
-
-\[
-\boxed{V=K,\qquad p=0,\qquad \varepsilon=2K.}
-\]
-
-A pure spatial amplitude gradient `partial_hat A=(0,g,0,0)` gives
-
-\[
-\boxed{T_{\hat a\hat b}^{amp}=\operatorname{diag}(g^2,g^2,-g^2,-g^2),}
-\]
-
-so gradient energy and anisotropic stress enter the Einstein source explicitly.
-
-For the admitted single-scalar electromagnetic system,
-
-\[
-\boxed{
-T_{\mu\nu}^{source}
-=T_{\mu\nu}^{EM}+T_{\mu\nu}^{scalar},
-}
-\]
-
-and RF-E6 supplies the on-shell exchange closure
-
-\[
-\boxed{\nabla^\mu T_{\mu\nu}^{source}=0.}
+\boxed{m_L^2=U_L''(\phi_{L0})\ge0.}
 \]
 
 ## Validation authority
 
-RF-E6 correction authority:
-
-- PR #16;
-- final head `e9d665c0b3b31719868d92bfd30631ba540a9a83`;
-- final run `33207702078`, job `98972879666`;
-- `470/470 PASS`.
-
-RF-E7 stacked gate:
-
-- PR #17;
-- tested commit `904d641948b48ca564dbbfb38a9442e7ca6ab078`;
-- run `33207870117`, job `98973459240`;
-- `479/479 PASS`;
-- receipt `validation/RFE7_TOTAL_SCALAR_STRESS_ENERGY_COMPOSITION_V0_1.json`.
+- RF-E6 PR #16: final head `e9d665c0b3b31719868d92bfd30631ba540a9a83`, run `33207702078`, **470/470 PASS**.
+- RF-E7 PR #17: final head `ab433a32a8271ac629ef7c0863e3eaec9ee50ffd`, final run `33208035997`, **479/479 PASS**.
+- RF-L2 PR #18: tested commit `38c9589608abe77bdcf05d46e997731ef5d6e430`, run `33208242527`, job `98974734417`, **489/489 PASS**.
 
 ## Open firewalls
 
@@ -151,11 +99,13 @@ RF-E7 stacked gate:
 RF-N1B2K physical current/measure realization
 multispecies/additional matter composition
 IDT-01AG reciprocal Lorentzian current-sign alignment
+RFC-invariant U_L reconstruction                         NEXT LAMBDA FRONTIER
+parameter-free Lambda0 calibration
+global/nonlinear Lambda-sector stability
 first-principles alpha_EM gate if pursued
 RFG35 vector-polarization projected-cut Ward audit
 Gamma_DC numerical promotion
 M_star physical-scale promotion
 cross-system physical G universality
-dynamic Lambda0 independent action and stability             NEXT ACTION FRONTIER
 full Einstein/unified-limit audit
 ```
