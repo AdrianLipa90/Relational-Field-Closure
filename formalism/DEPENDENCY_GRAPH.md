@@ -129,10 +129,15 @@ RFG20 project KLT equivalence
   s A_1234=t A_1324
   sum n_i n~_i/D_i = -u A_1234 A~_1324
                 |
+RFG21 project gravity pole factorization
+  n_t=X_t+tK_t
+  Res_(t=0) M4 = i kappa_E X_t X~_t
+  residue = rank-2 contraction of cubic double-copy currents
+                |
 RFG7 / RF-N1C / RF-E3
   reduced gravity scale + Newton/Einstein/action closure
                 |
-higher-point project BCJ/KLT + cross-system Mbar_G evidence [NEXT]
+higher-point project BCJ/KLT/factorization + cross-system Mbar_G evidence [NEXT]
 ```
 
 ## Maxwell branch
@@ -370,6 +375,42 @@ For two independent project copies, the direct RFG16 double-copy core equals the
 
 Thus the same four-point gravity amplitude has two independently evaluated project representations with the same `kappa_E` prefactor.
 
+## Project massless-pole factorization
+
+RFG21 follows the forward `t -> 0` limit. Since
+
+\[
+\boxed{n_t=X_t+tK_t,}
+\]
+
+the finite quartic-contact allocation vanishes from the pole residue. The direct double-copy core obeys
+
+\[
+\boxed{\lim_{t\to0}t\sum_i\frac{n_i\tilde n_i}{D_i}=X_t\widetilde X_t.}
+\]
+
+Therefore
+
+\[
+\boxed{\operatorname*{Res}_{t=0}\mathcal M_4^{project}=i\kappa_E X_t\widetilde X_t.}
+\]
+
+Writing
+
+\[
+X_t=J_L\cdot J_R,
+\qquad
+\widetilde X_t=\widetilde J_L\cdot\widetilde J_R,
+\]
+
+the residue is exactly the rank-two contraction
+
+\[
+\boxed{X_t\widetilde X_t=(J_L\otimes\widetilde J_L):(J_R\otimes\widetilde J_R),}
+\]
+
+with the Minkowski metric applied on both tensor indices. This is the executable four-point cubic double-copy factorization gate.
+
 ## Einstein action bridge
 
 RF-N1C and RF-E3 give
@@ -401,9 +442,9 @@ and metric variation gives
 ```text
 historical IDT suite provenance                  382/382 PASS
 historical RFC suite provenance                   74/74 PASS
-current RFC local additions through RFG20        126/126 PASS
+current RFC local additions through RFG21        132/132 PASS
 IDT 01AE local handoff                             4/4 PASS
-recent RFG14-RFG20 local gates                    42/42 PASS
+recent RFG14-RFG21 local gates                    48/48 PASS
 GitHub Actions full branch suite                  NOT EXECUTED
 ```
 
@@ -423,7 +464,8 @@ G-free phase/horizon/amplitude coupling           PASS EXACT ALGEBRAIC / RFG17
 pure spin-2 external-state projector              PASS / RFG18
 spin-2 helicity/little-group signature            PASS / RFG19
 project four-point KLT equivalence                PASS / RFG20
-higher-point project BCJ/KLT                      OPEN
+project massless-pole factorization               PASS / RFG21
+higher-point project BCJ/KLT/factorization        OPEN
 internal-state / loop spectrum audit              OPEN
 Gamma_DC numerical promotion                      OPEN EVIDENCE GATE
 M_star scale promotion                            OPEN RF-N1C2/RFG7
