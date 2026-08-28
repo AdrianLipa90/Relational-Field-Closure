@@ -1,0 +1,19 @@
+{
+  "schema": "RFC_RFG15_PROJECT_FOUR_GLUON_BCJ_NUMERATOR_BINDING_V0_1",
+  "status": "PASS_PROJECT_FOUR_POINT_MATCHED_JACOBI",
+  "observed_date_utc": "2026-08-28",
+  "reference_test": "tests/reference/test_rfg15_project_four_gluon_bcj_numerator_binding.py",
+  "local_result": "6 passed, 0 failed",
+  "random_kinematic_samples": 500,
+  "su3_color_assignments_checked": 4096,
+  "identities": [
+    "n_i = X_i + D_i K_i",
+    "c_s-c_t+c_u=0 in the RFG14 channel orientation",
+    "n_s-n_t+n_u=0 on the admitted four-gluon on-shell transverse surface",
+    "A4 = g^2 sum_i c_i n_i / D_i reconstructs the full exchange-plus-contact amplitude",
+    "exchange-only numerators do not generally satisfy the project Jacobi relation"
+  ],
+  "generalized_gauge_fit_used": false,
+  "gravity_output_used_for_selection": false,
+  "double_copy_project_amplitude": "NEXT_RFG16_FRONTIER"
+}
