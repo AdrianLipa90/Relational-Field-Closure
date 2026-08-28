@@ -1,0 +1,20 @@
+{
+  "schema": "RFC_RFG19_SPIN2_HELICITY_SELECTION_LITTLE_GROUP_V0_1",
+  "status": "PASS_FOUR_POINT_SPIN2_HELICITY_REFERENCE",
+  "observed_date_utc": "2026-08-28",
+  "reference_test": "tests/reference/test_rfg19_spin2_helicity_selection_little_group.py",
+  "local_result": "6 passed, 0 failed",
+  "physical_crossing": "h_in=h_phys for legs 1,2 and h_in=-h_phys for legs 3,4",
+  "selection_rules": {
+    "physical_all_plus": "ZERO_REFERENCE",
+    "physical_single_minus": "ZERO_REFERENCE_ALL_LEGS",
+    "physical_MHV_minus_minus_plus_plus": "NONZERO_REFERENCE",
+    "parity_mirror": "MATCH_REFERENCE"
+  },
+  "little_group_weight": "exp(-2 i h_in psi) per rotated external spin-2 leg",
+  "spin2_tensor": "h_(2h)=epsilon_h tensor epsilon_h",
+  "numerator_source": "RFG15_PROJECT_NUMERATORS_UNCHANGED",
+  "gravity_output_used_for_numerator_selection": false,
+  "closed_form_einstein_mhv_ratio": "OPEN_NEXT_CROSSCHECK",
+  "higher_point_project_spin2_BCJ": "OPEN"
+}
