@@ -1,0 +1,23 @@
+{
+  "schema": "RFC_RFG22_PROJECT_FOUR_POINT_KLT_EQUIVALENCE_V0_1",
+  "status": "PASS_PROJECT_KLT_EQUIVALENCE_WITH_RFG20_NORMALIZATION",
+  "observed_date_utc": "2026-08-28",
+  "reference_test": "tests/reference/test_rfg22_project_four_point_klt_equivalence.py",
+  "local_result": "6 passed, 0 failed",
+  "project_partials": {
+    "A_1234": "n_s/s - n_u/u",
+    "A_1324": "n_t/t + n_u/u"
+  },
+  "bcj_relation": "s A_1234 = t A_1324",
+  "project_core_identity": "C_project = sum_i n_i ntilde_i/D_i = -u A_1234 Atilde_1324",
+  "physical_einstein_coupling": "kappa_E=kappa_g^2/4=8 pi G",
+  "project_core_prefactor": "-i kappa_E/4",
+  "full_klt_amplitude": "M4_project = +i (kappa_E/4) u A_1234 Atilde_1324",
+  "normalization_source": "RFG20_EINSTEIN_MHV_DOUBLE_COPY_NORMALIZATION_FIREWALL",
+  "random_bcj_samples": 500,
+  "random_independent_copy_klt_samples": 500,
+  "copy_exchange_samples": 250,
+  "partial_amplitude_gauge_samples": 120,
+  "gravity_output_used_for_numerator_selection": false,
+  "higher_point_project_KLT_BCJ_normalization": "OPEN"
+}
