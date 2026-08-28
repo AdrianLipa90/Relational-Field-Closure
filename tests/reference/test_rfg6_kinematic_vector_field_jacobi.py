@@ -1,3 +1,5 @@
+import math
+
 import numpy as np
 
 
@@ -70,4 +72,9 @@ def test_self_copy_squares_numerator_without_changing_graph_denominator():
     D = 2.4
     gauge_kinematic_term = n / D
     gravity_self_copy_term = n * n / D
-    assert gravity_self_copy_term == n * gauge_kinematic_term
+    assert math.isclose(
+        gravity_self_copy_term,
+        n * gauge_kinematic_term,
+        rel_tol=1e-14,
+        abs_tol=1e-14,
+    )
