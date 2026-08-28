@@ -1,0 +1,41 @@
+{
+  "schema": "RFC_RFN1C_THREE_ROUTE_COUPLING_HOLONOMY_V0_1",
+  "status": "PASS_ALGEBRAIC_REFERENCE",
+  "observed_date_utc": "2026-08-28",
+  "reference_tests": {
+    "path": "tests/reference/test_rfn1c_three_route_coupling_holonomy.py",
+    "local_precommit_result": "6 passed, 0 failed",
+    "runtime_seconds": 0.10
+  },
+  "exact_identities": [
+    "G_DC = 18 Gamma_DC^2 / (pi beta_W^2 omega_Q^2)",
+    "kappa_E = 8 pi G = kappa_g^2 / 4",
+    "kappa_E^DC = 144 Gamma_DC^2 / (beta_W^2 omega_Q^2)",
+    "S_R^DC = 36 Gamma_DC^2 j_Q / (beta_W^2 omega_Q)",
+    "beta_W^2 S_R omega_Q = 36 Gamma_DC^2 j_Q",
+    "2 M_H kappa_H S_R = pi omega_Q j_Q",
+    "72 Gamma_DC^2 M_H kappa_H = pi beta_W^2 omega_Q^2",
+    "S_R C_DH = 36 Gamma_DC^2 C_SH - pi omega_Q C_SD"
+  ],
+  "test_classes": {
+    "double_copy_to_newton_source_normalization": "PASS",
+    "double_copy_to_einstein_normalization": "PASS",
+    "graviton_to_einstein_coupling_quarter_factor": "PASS",
+    "three_route_closed_surface": "PASS",
+    "off_shell_holonomy_syzygy": "PASS",
+    "adversarial_source_perturbation": "PASS"
+  },
+  "promotion_state": "FORMALISM_FRONTIER_CONDITIONAL",
+  "physical_gates": [
+    "J_Q^mu <-> J_theta^mu measured current promotion",
+    "rho_m carrier/matter binding",
+    "project beta_W Yang-Mills normalization",
+    "project BCJ-compatible kinematic numerators",
+    "Gamma_DC normalization",
+    "M_star <-> epsilon_Q binding",
+    "independent horizon inputs",
+    "cross-system G_N universality"
+  ],
+  "numerical_G_target_used_for_selection": false,
+  "static_runtime_fallback": false
+}
