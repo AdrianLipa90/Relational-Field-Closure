@@ -1,487 +1,274 @@
-# Formal dependency graph
+# Relational Field Closure — Canonical Dependency Graph
+
+Status: `CURRENT_FRONTIER / CROSS_REFERENCE_LOCK_V0_25`
+
+This graph records the current dependency spine. Historical graphs remain recoverable from Git history; this file is the active dependency view and must agree with `CROSS_REFERENCE_LOCK.json`.
+
+## 1. Geometric / temporal base
 
 ```text
-RF-00 pinned upstream contract
-  |
-RF-01 QGT relational primitive
-  |
-RF-02H hexahedral rank-3 metric
-  |
-RF-G0 Lorentzian signature
-  |
-RF-02I coframe connection / curvature
-  |
-IDT relational clock ratio N_R
-  |
-RF-N0 relational lapse Phi_R = c^2 ln N_R
-  |
-RF-N1A hexahedral source operator
-  Delta_h ln N_R = S_R
-  |
-RF-N1B source-type / identifiability firewall
-  |
-RF-N1B2 conserved carrier factorization
-  |
-RF-N1B2H/I/J/K/L/M/N/O
-  normalized shape -> action charge -> Noether carrier
-  -> local current -> rotor inertia -> gauge pullback
-  -> omega_Q = D_hat_tau chi -> phase-energy source
-  |
-RF-N1C three-route coupling holonomy
-  Newton source <-> double copy <-> Einstein / horizon
-  |
-  +-----------------------------+
-  |                             |
-RF-N1C1                      RF-N1C2
-phase-source                reduced gravity-scale
-specialization              Mbar_G=M_star/(Gamma_DC g_YM^2)
-  |                             |
-  |                          RFG7
-  |                          Mbar_G=2/kappa_g
-  |                             |
-  |                          RF-N1C3
-  |                          Mbar_G^2=M_H T_H
-  |                             |
-  +---------------+-------------+
-                  |
-RF-E3 Einstein-Hilbert action normalization
-  2/kappa_g^2 = 1/(2 kappa_E) = 1/(16 pi G)
-  |
-metric variation -> G_mu_nu = kappa_E T_mu_nu
-  |
-total-matter composition + dynamic Lambda0 action
-  |
-RF-X1 unified-limit audit
+TIR information geometry
+  -> RF01 relational field primitive
+  -> RF02H rank-3 spatial metric
+  -> RF02I coframe + metric-compatible torsion-free connection
+  -> Lorentzian closure
+  -> Riemann / Ricci / Einstein geometry
+
+IDT phase-clock / relational lapse
+  -> RFN0 relational lapse clock dynamics
+  -> RFN1 hexahedral source operator
+  -> RFN1B source-type firewall
+  -> RFN1B2 conserved source carrier
+  -> RFN1B2N normal phase rate
+  -> RFN1B2O phase-energy/current source binding
 ```
 
-## Gauge -> amplitude -> gravity branch
+The source-side local carrier chain is
+
+\[
+\omega_Q=D_{\hat\tau}\chi=\frac{D_t\chi}{N_R},
+\qquad
+\epsilon_N=\frac{\omega_Q}{2},
+\]
+
+\[
+j_\vartheta=2A^2\omega_Q,
+\qquad
+\rho_\vartheta=\frac{A^2\omega_Q^2}{c^2}.
+\]
+
+## 2. Newton → Einstein coupling branch
 
 ```text
-holonomic SU(3) W_ij / W_mu(x)
-  |
-RFG3 Wilson continuum normalization
-  |
-RFG4E action-coefficient theorem
-  |
-RFG4F generator/link-rescale firewall
-  |
-RFG4G same-sector normalization transfer
-  g_YM^2 = 1/alpha_c
-  C_p = 2 alpha_c
-  beta_W = 6 alpha_c
-  |
-RFG8 oriented cubic Yang-Mills vertex
-  W_mu = exp(i sigma_link g a A_mu)
-  upstream sigma_link = +1
-  V3 = -sigma_link g f V
-  |
-  +---------------------------+
-  |                           |
-RFG9                        RFG10
-four-gluon MHV             direct project link
-BCJ reference              -> A_mu -> k,epsilon
-  |                           |
-  |                         RFG11
-  |                         full 8-component principal-log recovery
-  |                         F_link = i g[A_mu,A_nu] for sigma=+1
-  |                           |
-  |                         RFG12
-  |                         nonabelian color/momentum convolution
-  |                         color 1 x 2 -> 3
-  |                         k_out = k1-k2, k1+k2
-  |                           |
-  |                         RFG13
-  |                         quartic YM contact normalization
-  |                         E4=-g^2 Tr[A_mu,A_nu]^2
-  |                           |
-  +-------------+-------------+
-                |
-RFG14 project four-gluon exchange + contact
-  full Ward cancellation / A4 ~ g^2
-                |
-RFG15 project BCJ numerator binding
-  n_i = X_i + D_i K_i
-  c_s-c_t+c_u = 0
-  n_s-n_t+n_u = 0
-                |
-RFG16 project four-point double copy
-  M4 = i kappa_E sum_i n_i n~_i/D_i
-  kappa_E=(kappa_g/2)^2=8 pi G
-  gravitational Ward PASS in either copy
-                |
-RFG17 G-free amplitude coupling holonomy
-  kappa_E=1/Mbar_G^2
-  =1/(M_H T_H)
-  =4 Gamma_DC^2/(alpha_c^2 omega_Q^2)
-                |
-RFG18 pure spin-2 external-state projector
-  2x2 transverse tensor product
-  -> symmetric traceless spin-2 + antisymmetric B + trace scalar
-                |
-RFG19 spin-2 helicity / little-group gate
-  h_(+/-2)=epsilon_(+/-) tensor epsilon_(+/-)
-  physical ++++ and single-minus zero
-  MHV --++ nonzero / frame phase exp(+/-2 i psi)
-                |
-RFG20 project KLT equivalence
-  A_1234=n_s/s-n_u/u
-  A_1324=n_t/t+n_u/u
-  s A_1234=t A_1324
-  sum n_i n~_i/D_i = -u A_1234 A~_1324
-                |
-RFG21 project gravity pole factorization
-  n_t=X_t+tK_t
-  Res_(t=0) M4 = i kappa_E X_t X~_t
-  residue = rank-2 contraction of cubic double-copy currents
-                |
-RFG7 / RF-N1C / RF-E3
-  reduced gravity scale + Newton/Einstein/action closure
-                |
-higher-point project BCJ/KLT/factorization + cross-system Mbar_G evidence [NEXT]
+RFN1B2O phase source
+  -> RFN1C three-route coupling holonomy
+      |-> RFN1C1 local phase-source specialization
+      |-> RFN1C2 carrier-scale universality firewall
+      |-> RFN1C3 horizon reduced-gravity-scale closure
+      `-> RFN1C4 double-copy carrier energy-type firewall
+  -> RF-E3 Einstein-Hilbert normalization
+  -> RF-E4 phase kinetic stress-energy firewall
+  -> RF-E5 on-shell scalar carrier-energy firewall
 ```
 
-## Maxwell branch
+Key reduced scale:
+
+\[
+\boxed{\bar M_G=\frac{M_\star}{\Gamma_{DC}g_{YM}^2}=\frac{2}{\kappa_g}},
+\]
+
+hence
+
+\[
+\boxed{G=\frac{1}{8\pi\bar M_G^2}},
+\qquad
+\boxed{\kappa_E=\frac{\kappa_g^2}{4}=8\pi G=\frac1{\bar M_G^2}}.
+\]
+
+The horizon route supplies
+
+\[
+\boxed{\bar M_G^2=M_HT_H}.
+\]
+
+## 3. Holonomic Yang–Mills normalization
 
 ```text
-RF-M1 Aharonov-Bohm normalized U(1) curvature
-  -> RF-M4 charge-projected Noether Maxwell source
+Metatime W_ij holonomy
+  -> RFG3 Wilson continuum normalization
+  -> RFG4 / RFG4B / RFG4C / RFG4D alpha_c genealogy
+  -> RFG4E Wilson action coefficient firewall
+  -> RFG4F link-coupling rescaling firewall
+  -> RFG4G holonomy -> continuum -> Wilson transfer
 ```
 
-The Maxwell electric-charge projection and the gravitational phase-energy carrier remain separately typed. RF-N1B2O consumes the charge-independent phase Noether carrier, while RF-M4 applies electric-charge projection on the Maxwell source branch.
-
-## Current source / gravity identities
-
-RF-N1B2N/O give
+On the admitted same-sector normalization surface,
 
 \[
-\boxed{\omega_Q=D_{\hat\tau}\chi=\frac{D_t\chi}{N_R},\qquad\epsilon_N=\frac12\omega_Q}
+\boxed{g_{YM}^2=\frac1{\alpha_c}},
+\qquad
+\boxed{C_p=2\alpha_c},
+\qquad
+\boxed{\beta_W=6\alpha_c}.
 \]
 
-and
+## 4. Project field / interaction branch
+
+```text
+RFG4G
+  -> RFG8 oriented cubic Yang-Mills vertex
+  -> RFG10 link bytes -> A_mu^a -> momentum/polarization
+  -> RFG11 noncommuting SU(3) principal-log curvature
+  -> RFG12 nonabelian color/momentum convolution
+  -> RFG13 quartic Yang-Mills contact normalization
+  -> RFG14 complete exchange + contact A4 Ward gate
+  -> RFG15 project four-point BCJ numerators
+```
+
+The link-orientation convention is explicit:
 
 \[
-\boxed{j_\vartheta=2A^2\omega_Q,\qquad\rho_\vartheta=\frac{A^2\omega_Q^2}{c^2}.}
+W_\mu=\exp(i\sigma g aA_\mu),
 \]
 
-RF-N1C/RF-N1C1 give, in natural units on the admitted local carrier surface,
+and the corresponding local nonabelian curvature uses the same fixed orientation. The four-point amplitude is orientation-even because its overall interaction power is `g^2`.
+
+RFG15 produces, without gravity fitting,
 
 \[
-\boxed{G_{DC}=\frac{18\Gamma_{DC}^2}{\pi\beta_W^2\omega_Q^2},\qquad\mathcal S_R^{DC}=\frac{72\Gamma_{DC}^2}{\beta_W^2}A^2.}
+\boxed{c_s-c_t+c_u=0},
+\qquad
+\boxed{n_s-n_t+n_u=0},
 \]
 
-RFG4G reduces the gauge normalization to
+with
 
 \[
-\boxed{g_{YM}^2=\frac1{\alpha_c},\qquad\beta_W=6\alpha_c.}
+\boxed{n_i=X_i+D_iK_i}.
 \]
 
-RFG7 removes the factorization coordinate from the invariant gravity scale:
+## 5. Four-point gauge → gravity branch
+
+The canonical numbering is unique:
+
+```text
+RFG15 project BCJ numerators
+  -> RFG16 project double-copy construction + Ward gate
+  -> RFG18 external tensor-product / spin-2 projector
+  -> RFG19 spin-2 helicity + little-group gate
+  -> RFG20 Einstein MHV normalization firewall
+  -> RFG21 massless pole factorization
+  -> RFG22 project four-point KLT equivalence
+```
+
+RFG20 identifies the project partial-amplitude normalization
 
 \[
-\boxed{\bar M_G=\frac{M_\star}{\Gamma_{DC}g_{YM}^2}=\frac{2}{\kappa_g},\qquad G=\frac{1}{8\pi\bar M_G^2}=\frac{\kappa_g^2}{32\pi}.}
+\boxed{A^{project}_{1234}=-2iA^{PT}_{1234}}.
 \]
 
-RF-N1C3 independently gives
+Therefore the compatible project double-copy replacement is
 
 \[
-\boxed{\bar M_G^2=M_HT_H=\frac{M_H\kappa_H}{2\pi}.}
+\boxed{g\rightarrow\frac{\kappa_g}{4}},
 \]
 
-Therefore, on the RFG4G surface,
+and the project-normalized four-point amplitude is
 
 \[
-\boxed{\Gamma_{DC}=\frac{\alpha_cM_\star}{\sqrt{M_HT_H}}}
+\boxed{
+\mathcal M_4^{project}
+=-i\left(\frac{\kappa_g}{4}\right)^2
+\mathcal C_{DC}^{project}
+=-\frac{i\kappa_E}{4}\mathcal C_{DC}^{project}.
+}
 \]
 
-and on `M_star=omega_Q/2`,
+This leaves the physical Einstein coupling unchanged:
 
 \[
-\boxed{\Gamma_{DC}=\frac{\alpha_c\omega_Q}{2\sqrt{M_HT_H}}.}
+\boxed{\kappa_E=\frac{\kappa_g^2}{4}=8\pi G}.
 \]
 
-## Direct project Yang-Mills binding
-
-RFG10 recovers local field modes from link phases; RFG11 generalizes this to all eight SU(3) coordinates on the principal matrix-log branch:
+For the project MHV core,
 
 \[
-\boxed{A_\mu^a=\frac1g\operatorname{Tr}(\lambda^a\mathcal Q_\mu),\qquad\mathcal Q_\mu=\frac1a\operatorname{HermLog}W_\mu.}
-\]
-
-For upstream `sigma_link=+1`,
-
-\[
-\boxed{F_{\mu\nu}^{link}=\partial_\mu A_\nu-\partial_\nu A_\mu+i g[A_\mu,A_\nu].}
-\]
-
-RFG12 supplies the direct interacting momentum witness
-
-\[
-\boxed{A_y^1\sim\cos(k_1x),\ A_z^2\sim\cos(k_2x)\Rightarrow F_{yz}^3=-gA_y^1A_z^2,\quad k_{out}=k_1-k_2,\ k_1+k_2.}
-\]
-
-RFG13 fixes the quartic contact density from the same action normalization:
-
-\[
-\boxed{\mathcal E_4^{\mu\nu}=\operatorname{Tr}(F_{\mu\nu}^2)=-g^2\operatorname{Tr}[A_\mu,A_\nu]^2}
-\]
-
-and
-
-\[
-\boxed{\frac{(2\alpha_c)D_p}{a^4}\longrightarrow\operatorname{Tr}(F_{\mu\nu}^2).}
-\]
-
-## Project four-point color-kinematics closure
-
-RFG14 assembles the three exchange graphs and the quartic contact from the same normalized Yang-Mills sector. The full amplitude satisfies all four single-leg Ward identities; reversing the relative contact sign produces an order-one defect.
-
-RFG15 distributes the contact term into the cubic channels:
-
-\[
-\boxed{n_i=X_i+D_iK_i.}
-\]
-
-With the project channel orientation,
-
-\[
-\boxed{c_s-c_t+c_u=0,\qquad n_s-n_t+n_u=0.}
-\]
-
-The cubicized representation reconstructs the full RFG14 amplitude:
-
-\[
-\boxed{\mathcal A_4^{project}=g^2\left(\frac{c_sn_s}{s}+\frac{c_tn_t}{t}+\frac{c_un_u}{u}\right).}
-\]
-
-No gravity target is used to construct the numerators.
-
-## Project double-copy / Einstein coupling bridge
-
-RFG16 uses two independently admitted RFG15 kinematic copies:
-
-\[
-\boxed{\mathcal M_4^{project}=i\left(\frac{\kappa_g}{2}\right)^2\left(\frac{n_s\tilde n_s}{s}+\frac{n_t\tilde n_t}{t}+\frac{n_u\tilde n_u}{u}\right).}
-\]
-
-Since
-
-\[
-\boxed{\left(\frac{\kappa_g}{2}\right)^2=\frac{\kappa_g^2}{4}=8\pi G=\kappa_E=\frac1{\bar M_G^2}}
-\]
-
-in natural units,
-
-\[
-\boxed{\mathcal M_4^{project}=i\kappa_E\sum_i\frac{n_i\tilde n_i}{D_i}.}
-\]
-
-Replacing any external polarization by its momentum in either kinematic copy gives a vanishing double-copy amplitude on the executable reference surface.
-
-## G-free amplitude coupling holonomy
-
-RFG17 combines the RFG16 amplitude coupling with the reduced-scale and horizon routes:
-
-\[
-\boxed{\kappa_E=\frac1{\bar M_G^2}=\frac1{M_HT_H}.}
-\]
-
-On the local carrier candidate,
-
-\[
-\boxed{\bar M_G=\frac{\alpha_c\omega_Q}{2\Gamma_{DC}}}
+\boxed{\mathcal C_{--++}^{project}=-4\frac{s^3}{tu}},
 \]
 
 so
 
 \[
-\boxed{\kappa_E=\frac{4\Gamma_{DC}^2}{\alpha_c^2\omega_Q^2}.}
+\boxed{\mathcal M_{--++}^{project}=i\kappa_E\frac{s^3}{tu}}.
 \]
 
-Thus the same project amplitude prefactor obeys the zero-fit cross-route identity
+The previous project-core coefficient `+i(kappa_g/2)^2` is rejected by the RFG20 exact factor `-4` firewall.
+
+## 6. Pole and KLT closures
+
+RFG21:
 
 \[
-\boxed{\frac{4\Gamma_{DC}^2}{\alpha_c^2\omega_Q^2}=\frac1{M_HT_H}.}
+\boxed{\lim_{t\to0}t\mathcal C_{DC}=X_t\widetilde X_t},
 \]
 
-This is algebraically exact on the common admitted surfaces; physical promotion of the carrier, horizon and cross-system inputs remains separately gated.
-
-## Pure spin-2 external branch
-
-RFG18 decomposes each physical transverse tensor product
+and therefore, with RFG20 normalization,
 
 \[
-M_{ab}=\varepsilon_a\tilde\varepsilon_b
+\boxed{\operatorname*{Res}_{t=0}\mathcal M_4^{project}=-\frac{i\kappa_E}{4}X_t\widetilde X_t}.
 \]
 
-as
+RFG22 supplies the project four-point KLT core identity
 
 \[
-\boxed{M=h^{(2)}+B+\phi,}
+\boxed{\mathcal C_{DC}^{project}=-uA_{1234}\widetilde A_{1324}},
 \]
 
-where `h^(2)` is symmetric and traceless, `B` is antisymmetric and `phi` is the transverse trace. The Einstein external branch uses
+hence
 
 \[
-\boxed{h^{(2)}\in\mathrm{Sym}^2_0(T_\perp).}
+\boxed{\mathcal M_4^{project}=+\frac{i\kappa_E}{4}uA_{1234}\widetilde A_{1324}}.
 \]
 
-The projected four-point amplitude passes the linearized diffeomorphism Ward gate on every external leg.
+## 7. G-free coupling holonomy
 
-RFG19 then uses the complex transverse helicity vectors
+RFG17 connects the amplitude normalization back to the Newton/source/horizon routes:
 
 \[
-\varepsilon_\pm=\frac{u\pm iv}{\sqrt2}
+\boxed{\kappa_E=\frac1{M_HT_H}=\frac{4\Gamma_{DC}^2}{\alpha_c^2\omega_Q^2}}.
 \]
 
-and spin-2 states
-
-\[
-\boxed{h_{\pm2}=\varepsilon_\pm\otimes\varepsilon_\pm.}
-\]
-
-On the physical `2 -> 2` crossing surface, the project amplitude has the tested tree-level selection pattern
-
-\[
-\boxed{\mathcal M_4(++++)=0,\qquad\mathcal M_4(-+++)=0,\qquad\mathcal M_4(--++)\neq0.}
-\]
-
-A rotation of one external transverse frame by `psi` produces the doubled phase
-
-\[
-\boxed{\mathcal M_4(\psi)/\mathcal M_4(0)=e^{-2ih\psi},}
-\]
-
-which is the executable little-group weight-two signature of the projected branch.
-
-## Project KLT equivalence
-
-RFG20 defines the project partial amplitudes
-
-\[
-\boxed{A_{1234}=\frac{n_s}{s}-\frac{n_u}{u},\qquad A_{1324}=\frac{n_t}{t}+\frac{n_u}{u}.}
-\]
-
-The project Jacobi relation and `s+t+u=0` give
-
-\[
-\boxed{sA_{1234}=tA_{1324}.}
-\]
-
-For two independent project copies, the direct RFG16 double-copy core equals the KLT bilinear
-
-\[
-\boxed{\sum_i\frac{n_i\tilde n_i}{D_i}=-uA_{1234}\widetilde A_{1324}.}
-\]
-
-Thus the same four-point gravity amplitude has two independently evaluated project representations with the same `kappa_E` prefactor.
-
-## Project massless-pole factorization
-
-RFG21 follows the forward `t -> 0` limit. Since
-
-\[
-\boxed{n_t=X_t+tK_t,}
-\]
-
-the finite quartic-contact allocation vanishes from the pole residue. The direct double-copy core obeys
-
-\[
-\boxed{\lim_{t\to0}t\sum_i\frac{n_i\tilde n_i}{D_i}=X_t\widetilde X_t.}
-\]
-
-Therefore
-
-\[
-\boxed{\operatorname*{Res}_{t=0}\mathcal M_4^{project}=i\kappa_E X_t\widetilde X_t.}
-\]
-
-Writing
-
-\[
-X_t=J_L\cdot J_R,
-\qquad
-\widetilde X_t=\widetilde J_L\cdot\widetilde J_R,
-\]
-
-the residue is exactly the rank-two contraction
-
-\[
-\boxed{X_t\widetilde X_t=(J_L\otimes\widetilde J_L):(J_R\otimes\widetilde J_R),}
-\]
-
-with the Minkowski metric applied on both tensor indices. This is the executable four-point cubic double-copy factorization gate.
-
-## Einstein action bridge
-
-RF-N1C and RF-E3 give
-
-\[
-\boxed{\kappa_E=\frac{8\pi G}{c^4}}
-\]
-
-and in natural units
-
-\[
-\boxed{\kappa_E=8\pi G=\frac{\kappa_g^2}{4},\qquad\frac{1}{2\kappa_E}=\frac{2}{\kappa_g^2}.}
-\]
-
-Therefore
-
-\[
-\boxed{S_{EH}=\frac{1}{2\kappa_E}\int d^4x\sqrt{-g}R}
-\]
-
-and metric variation gives
-
-\[
-\boxed{G_{\mu\nu}=\kappa_ET_{\mu\nu}.}
-\]
-
-## Validation state on current feature branch
+Thus the same physical coupling coordinate appears in:
 
 ```text
-historical IDT suite provenance                  382/382 PASS
-historical RFC suite provenance                   74/74 PASS
-current RFC local additions through RFG21        132/132 PASS
-IDT 01AE local handoff                             4/4 PASS
-recent RFG14-RFG21 local gates                    48/48 PASS
-GitHub Actions full branch suite                  NOT EXECUTED
+Newton source
+<-> reduced gravity scale
+<-> horizon thermal product
+<-> Einstein-Hilbert action
+<-> project tree-level spin-2 amplitude
 ```
 
-## Current physical frontier
+without changing the independent promotion firewalls for `M_star`, `Gamma_DC`, total matter stress-energy or cross-system universality.
+
+## 8. Higher-point frontier
+
+RFG23 is the first explicit higher-point gate:
 
 ```text
-phase-kinetic local source map                    PASS CONDITIONAL
-Yang-Mills beta_W normalization                   PASS CONDITIONAL SAME-SECTOR / RFG4G
-project link -> full local SU(3) field             PASS PRINCIPAL-BRANCH / RFG10+RFG11
-project nonabelian color/momentum mixing           PASS / RFG12
-quartic YM contact normalization                  PASS / RFG13
-project four-gluon exchange+contact               PASS / RFG14
-project four-point BCJ numerator binding          PASS / RFG15
-project four-point double-copy gravity            PASS / RFG16
-Einstein coupling match kappa_E                   PASS EXACT / RFG16+RF-E3
-G-free phase/horizon/amplitude coupling           PASS EXACT ALGEBRAIC / RFG17
-pure spin-2 external-state projector              PASS / RFG18
-spin-2 helicity/little-group signature            PASS / RFG19
-project four-point KLT equivalence                PASS / RFG20
-project massless-pole factorization               PASS / RFG21
-higher-point project BCJ/KLT/factorization        OPEN
-internal-state / loop spectrum audit              OPEN
-Gamma_DC numerical promotion                      OPEN EVIDENCE GATE
-M_star scale promotion                            OPEN RF-N1C2/RFG7
-cross-system Mbar_G universality                  OPEN EVIDENCE GATE
-total matter stress-energy composition             OPEN
-independent dynamic-Lambda0 action                 OPEN
+RFG22 four-point KLT
+  -> RFG23 five-point MHV BCJ / soft-factorization reference
+       |-> fundamental five-point BCJ relation        PASS REFERENCE
+       |-> BCJ basis dimension (5-3)! = 2            PASS
+       |-> positive-helicity soft factorization      PASS
+       |-> project coupling power g_YM^3             PASS
+       |-> direct project five-point vertex assembly OPEN
+       |-> project five-point cubic numerators       OPEN
+       `-> five-point KLT matrix                      NEXT RFG24
 ```
 
-## Execution and provenance layer
+The immediate scientific frontier is therefore
+
+\[
+\boxed{\text{RFG24: five-point KLT / gravity soft-factorization normalization}}
+\]
+
+followed by direct five-point project assembly from the same RFG8/RFG13 interaction layer.
+
+## 9. Independent open firewalls
+
+These remain independently gated:
 
 ```text
-PNCS main: ebdeb9729f21db17bebe4e14302a9687cdc33f4e
-GREMLIN live authoring: v0.3 / canonical AutoBoot V3
-IDT phase-source branch: feat/idt-rfc-normalized-shape-holonomy-v0.1
-IDT pinned head: e6c57b314bcf2e04de679c46c0be309f46cba053
-RFC current branch: feat/rfn1c-three-route-coupling-holonomy-v0.1
+full project five-point Feynman/Berends-Giele assembly
+five-point project cubic numerator set
+higher-point per-vertex normalization
+internal-state / loop spectrum and pure-Einstein audit
+Gamma_DC numerical promotion
+M_star physical scale promotion
+cross-system Mbar_G universality
+universal G evidence
+complete total-matter T_mn binding
+dynamic Lambda_0 action closure
 ```
 
-GREMLIN remains a candidate-generation/audit layer; promotion continues through explicit reference, provenance and physical admission gates.
+No one of these is promoted by the four-point or five-point reference gates alone.
