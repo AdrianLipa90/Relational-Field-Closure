@@ -109,6 +109,11 @@ RFG16 project four-point double copy
   kappa_E=(kappa_g/2)^2=8 pi G
   gravitational Ward PASS in either copy
                 |
+RFG17 G-free amplitude coupling holonomy
+  kappa_E=1/Mbar_G^2
+  =1/(M_H T_H)
+  =4 Gamma_DC^2/(alpha_c^2 omega_Q^2)
+                |
 RFG7 / RF-N1C / RF-E3
   reduced gravity scale + Newton/Einstein/action closure
                 |
@@ -250,7 +255,35 @@ in natural units,
 \boxed{\mathcal M_4^{project}=i\kappa_E\sum_i\frac{n_i\tilde n_i}{D_i}.}
 \]
 
-Replacing any external polarization by its momentum in either kinematic copy gives a vanishing double-copy amplitude on the executable reference surface. Thus the same coupling coordinate that normalizes the Einstein equation and Einstein-Hilbert action also normalizes the admitted project four-point double-copy amplitude.
+Replacing any external polarization by its momentum in either kinematic copy gives a vanishing double-copy amplitude on the executable reference surface.
+
+## G-free amplitude coupling holonomy
+
+RFG17 combines the RFG16 amplitude coupling with the reduced-scale and horizon routes:
+
+\[
+\boxed{\kappa_E=\frac1{\bar M_G^2}=\frac1{M_HT_H}.}
+\]
+
+On the local carrier candidate,
+
+\[
+\boxed{\bar M_G=\frac{\alpha_c\omega_Q}{2\Gamma_{DC}}}
+\]
+
+so
+
+\[
+\boxed{\kappa_E=\frac{4\Gamma_{DC}^2}{\alpha_c^2\omega_Q^2}.}
+\]
+
+Thus the same project amplitude prefactor obeys the zero-fit cross-route identity
+
+\[
+\boxed{\frac{4\Gamma_{DC}^2}{\alpha_c^2\omega_Q^2}=\frac1{M_HT_H}.}
+\]
+
+This is algebraically exact on the common admitted surfaces; physical promotion of the carrier, horizon and cross-system inputs remains separately gated.
 
 ## Einstein action bridge
 
@@ -283,9 +316,9 @@ and metric variation gives
 ```text
 historical IDT suite provenance                  382/382 PASS
 historical RFC suite provenance                   74/74 PASS
-current RFC local additions through RFG16        102/102 PASS
+current RFC local additions through RFG17        108/108 PASS
 IDT 01AE local handoff                             4/4 PASS
-recent RFG14-RFG16 local gates                    18/18 PASS
+recent RFG14-RFG17 local gates                    24/24 PASS
 GitHub Actions full branch suite                  NOT EXECUTED
 ```
 
@@ -301,6 +334,7 @@ project four-gluon exchange+contact               PASS / RFG14
 project four-point BCJ numerator binding          PASS / RFG15
 project four-point double-copy gravity            PASS / RFG16
 Einstein coupling match kappa_E                   PASS EXACT / RFG16+RF-E3
+G-free phase/horizon/amplitude coupling           PASS EXACT ALGEBRAIC / RFG17
 higher-point project BCJ                          OPEN
 Gamma_DC numerical promotion                      OPEN EVIDENCE GATE
 M_star scale promotion                            OPEN RF-N1C2/RFG7
