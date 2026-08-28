@@ -2,26 +2,26 @@
 
 Current working monograph:
 
-- `RELATIONAL_FIELD_CLOSURE_MONOGRAPH_v0.10.md`
-- status: `EXACT_LOCAL_METRIC_CONNECTION_LAPSE_KINEMATICS_AND_SOURCE_OPERATOR / SOURCE_TYPE_IDENTIFIABILITY_FIREWALL_PASS / SOURCE_OCCUPATION_AND_G_NORMALIZATION_OPEN`
+- `RELATIONAL_FIELD_CLOSURE_MONOGRAPH_v0.12.md`
+- status: `GEOMETRIC_SPINE_PASS / AB_MAXWELL_CURVATURE_PASS / LORENTZIAN_MATTER_ACTION_ALIGNED / CHARGE_PROJECTED_CURRENT_PASS / CHARGED_MATTER_STRESS_TENSOR_PASS / TOTAL_MATTER_COMPOSITION_OPEN / DYNAMIC_LAMBDA_ACTION_OPEN`
 
-The monograph remains downstream of formalism/evidence. Exact local theorems, exact negative results, candidate source bases, source-type identifiability boundaries and target-law audits are typed separately.
+The monograph remains downstream of formalism and validation. Historical working snapshots are retained as provenance.
 
-Current chapter progression:
+Current v0.12 progression:
 
-1. derivation firewall,
-2. hexahedral Bloch rank-three spatial triad and physical cell scale,
-3. IDT relational lapse and `Phi_R=c^2 ln N_R`,
-4. independent Shannon--Onsager/hexahedral Laplace operator,
-5. relational-density versus mass-density type firewall,
-6. phase-energy scale with independent source occupation requirement,
-7. conditional cell-density identity `rho_cell = 6 sqrt(6) n_E hbar |omega|^4 / c^5`,
-8. `Xi_I` as bounded GREMLIN source-basis candidate only,
-9. Newton target converted into a cross-source universality condition for `G`,
-10. constructive source-type non-identifiability theorem,
-11. required conserved source current/occupation gate,
-12. implications for dynamic `Lambda0` and Einstein-Bianchi closure,
-13. current four-stage Newton factorization,
-14. next theorem target: conserved source carrier -> occupation measure -> physical mass density.
+1. canonical RFC Lorentzian signature `(-,+,+,+)`,
+2. Aharonov–Bohm normalization of `A_mu` and `F=dA`,
+3. conserved RFC/Noether carrier before charge projection,
+4. RF-E6 energy-positive charged matter action,
+5. charge projector `Pi_Q` and `J_EM=Pi_Q[J_RFC]/hbar`,
+6. microscopic versus effective electromagnetic source ledger,
+7. explicit charged-matter and Maxwell stress-energy tensors,
+8. exact EM/matter exchange cancellation,
+9. RF-E4 phase pressure firewall under the canonical signature,
+10. RF-E5 on-shell dust and factor-two carrier-energy gate,
+11. `mu_*` unit/field-normalization map,
+12. RF-N1C/RF-E3 Einstein normalization,
+13. RF-E6 hosted correction authority,
+14. next gate: exact total scalar stress-energy decomposition/recomposition.
 
-Previous complete working snapshot is retained as `RELATIONAL_FIELD_CLOSURE_MONOGRAPH_v0.9.md`.
+Previous snapshots, including v0.11, remain unchanged as historical derivation checkpoints.
