@@ -114,10 +114,25 @@ RFG17 G-free amplitude coupling holonomy
   =1/(M_H T_H)
   =4 Gamma_DC^2/(alpha_c^2 omega_Q^2)
                 |
+RFG18 pure spin-2 external-state projector
+  2x2 transverse tensor product
+  -> symmetric traceless spin-2 + antisymmetric B + trace scalar
+                |
+RFG19 spin-2 helicity / little-group gate
+  h_(+/-2)=epsilon_(+/-) tensor epsilon_(+/-)
+  physical ++++ and single-minus zero
+  MHV --++ nonzero / frame phase exp(+/-2 i psi)
+                |
+RFG20 project KLT equivalence
+  A_1234=n_s/s-n_u/u
+  A_1324=n_t/t+n_u/u
+  s A_1234=t A_1324
+  sum n_i n~_i/D_i = -u A_1234 A~_1324
+                |
 RFG7 / RF-N1C / RF-E3
   reduced gravity scale + Newton/Einstein/action closure
                 |
-higher-point project BCJ + cross-system Mbar_G evidence [NEXT]
+higher-point project BCJ/KLT + cross-system Mbar_G evidence [NEXT]
 ```
 
 ## Maxwell branch
@@ -285,6 +300,76 @@ Thus the same project amplitude prefactor obeys the zero-fit cross-route identit
 
 This is algebraically exact on the common admitted surfaces; physical promotion of the carrier, horizon and cross-system inputs remains separately gated.
 
+## Pure spin-2 external branch
+
+RFG18 decomposes each physical transverse tensor product
+
+\[
+M_{ab}=\varepsilon_a\tilde\varepsilon_b
+\]
+
+as
+
+\[
+\boxed{M=h^{(2)}+B+\phi,}
+\]
+
+where `h^(2)` is symmetric and traceless, `B` is antisymmetric and `phi` is the transverse trace. The Einstein external branch uses
+
+\[
+\boxed{h^{(2)}\in\mathrm{Sym}^2_0(T_\perp).}
+\]
+
+The projected four-point amplitude passes the linearized diffeomorphism Ward gate on every external leg.
+
+RFG19 then uses the complex transverse helicity vectors
+
+\[
+\varepsilon_\pm=\frac{u\pm iv}{\sqrt2}
+\]
+
+and spin-2 states
+
+\[
+\boxed{h_{\pm2}=\varepsilon_\pm\otimes\varepsilon_\pm.}
+\]
+
+On the physical `2 -> 2` crossing surface, the project amplitude has the tested tree-level selection pattern
+
+\[
+\boxed{\mathcal M_4(++++)=0,\qquad\mathcal M_4(-+++)=0,\qquad\mathcal M_4(--++)\neq0.}
+\]
+
+A rotation of one external transverse frame by `psi` produces the doubled phase
+
+\[
+\boxed{\mathcal M_4(\psi)/\mathcal M_4(0)=e^{-2ih\psi},}
+\]
+
+which is the executable little-group weight-two signature of the projected branch.
+
+## Project KLT equivalence
+
+RFG20 defines the project partial amplitudes
+
+\[
+\boxed{A_{1234}=\frac{n_s}{s}-\frac{n_u}{u},\qquad A_{1324}=\frac{n_t}{t}+\frac{n_u}{u}.}
+\]
+
+The project Jacobi relation and `s+t+u=0` give
+
+\[
+\boxed{sA_{1234}=tA_{1324}.}
+\]
+
+For two independent project copies, the direct RFG16 double-copy core equals the KLT bilinear
+
+\[
+\boxed{\sum_i\frac{n_i\tilde n_i}{D_i}=-uA_{1234}\widetilde A_{1324}.}
+\]
+
+Thus the same four-point gravity amplitude has two independently evaluated project representations with the same `kappa_E` prefactor.
+
 ## Einstein action bridge
 
 RF-N1C and RF-E3 give
@@ -316,9 +401,9 @@ and metric variation gives
 ```text
 historical IDT suite provenance                  382/382 PASS
 historical RFC suite provenance                   74/74 PASS
-current RFC local additions through RFG17        108/108 PASS
+current RFC local additions through RFG20        126/126 PASS
 IDT 01AE local handoff                             4/4 PASS
-recent RFG14-RFG17 local gates                    24/24 PASS
+recent RFG14-RFG20 local gates                    42/42 PASS
 GitHub Actions full branch suite                  NOT EXECUTED
 ```
 
@@ -335,7 +420,11 @@ project four-point BCJ numerator binding          PASS / RFG15
 project four-point double-copy gravity            PASS / RFG16
 Einstein coupling match kappa_E                   PASS EXACT / RFG16+RF-E3
 G-free phase/horizon/amplitude coupling           PASS EXACT ALGEBRAIC / RFG17
-higher-point project BCJ                          OPEN
+pure spin-2 external-state projector              PASS / RFG18
+spin-2 helicity/little-group signature            PASS / RFG19
+project four-point KLT equivalence                PASS / RFG20
+higher-point project BCJ/KLT                      OPEN
+internal-state / loop spectrum audit              OPEN
 Gamma_DC numerical promotion                      OPEN EVIDENCE GATE
 M_star scale promotion                            OPEN RF-N1C2/RFG7
 cross-system Mbar_G universality                  OPEN EVIDENCE GATE
