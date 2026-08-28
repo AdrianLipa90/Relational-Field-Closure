@@ -1,17 +1,17 @@
 # RFG16 — Project Double-Copy → Einstein Coupling Gate
 
-Status: `PROJECT_FOUR_POINT_DOUBLE_COPY_PASS / GRAVITATIONAL_WARD_PASS / PROJECT_NUMERATOR_NORMALIZATION_CORRECTED_RFG20 / EINSTEIN_MHV_NORMALIZATION_PASS / TREE_LEVEL_FOUR_POINT_SCOPE`
+Status: `PROJECT_FOUR_POINT_DOUBLE_COPY_PASS / GRAVITATIONAL_WARD_PASS / PROJECT_NUMERATOR_NORMALIZATION_CORRECTED_RFG22 / EINSTEIN_MHV_NORMALIZATION_PASS / TREE_LEVEL_FOUR_POINT_SCOPE`
 
-RFG16 consumes the project numerators produced by RFG15. No gravity amplitude is used to construct or tune those numerators. RFG20 subsequently audits their explicit normalization and fixes the coupling-conversion convention used by this gate.
+RFG16 consumes the project numerators produced by RFG15. No gravity amplitude is used to construct or tune those numerators. RFG22 audits their explicit normalization and fixes the coupling-conversion convention used by this gate.
 
-For two admitted kinematic copies, let
+For two admitted kinematic copies,
 
 \[
 (n_s,n_t,n_u),\qquad
-(\tilde n_s,\tilde n_t,\tilde n_u)
+(\tilde n_s,\tilde n_t,\tilde n_u),
 \]
 
-be the RFG15 project numerator triplets, each satisfying the same oriented Jacobi identity
+RFG15 gives
 
 \[
 \boxed{n_s-n_t+n_u=0},
@@ -21,13 +21,13 @@ be the RFG15 project numerator triplets, each satisfying the same oriented Jacob
 
 ## Project numerator normalization
 
-RFG20 verifies independently that the project color-ordered four-point numerator representation obeys
+RFG22 verifies independently
 
 \[
 \boxed{A^{project}_{1234}=-2i\,A^{PT}_{1234}}.
 \]
 
-The magnitude factor `2` is the four-point result of one absorbed `sqrt(2)` normalization per cubic vertex. For this numerator convention the compatible double-copy coupling transfer is
+The magnitude factor `2` is the four-point result of one absorbed `sqrt(2)` normalization per cubic vertex. For this numerator convention the compatible double-copy transfer is
 
 \[
 \boxed{g\longrightarrow\kappa_g/4}
@@ -35,11 +35,11 @@ The magnitude factor `2` is the four-point result of one absorbed `sqrt(2)` norm
 
 rather than `kappa_g/2`.
 
-The corrected four-point project double-copy amplitude is therefore
+The corrected project double-copy amplitude is
 
 \[
 \boxed{
-\mathcal M_4
+\mathcal M_4^{project}
 =-i\left(\frac{\kappa_g}{4}\right)^2
 \left(
 \frac{n_s\tilde n_s}{s}
@@ -49,15 +49,15 @@ The corrected four-point project double-copy amplitude is therefore
 }
 \]
 
-RFG2/RF-E3 use the physical gravitational coupling convention
+The physical gravitational coupling remains
 
 \[
 \kappa_g^2=32\pi G,
 \qquad
-\boxed{\kappa_E=\frac{\kappa_g^2}{4}=8\pi G}
+\boxed{\kappa_E=\frac{\kappa_g^2}{4}=8\pi G}.
 \]
 
-in natural units. Hence the coefficient multiplying the **project-normalized numerator core** is
+Therefore the coefficient multiplying the **project-normalized numerator core** is
 
 \[
 \boxed{
@@ -66,27 +66,28 @@ in natural units. Hence the coefficient multiplying the **project-normalized num
 }
 \]
 
-This factor is distinct from the physical Einstein coupling because the project numerator core carries the compensating normalization identified by RFG20.
+This coefficient is distinct from the physical Einstein coupling because the project numerator core carries the compensating normalization identified by RFG22.
 
 For the spin-2 MHV sector,
 
 \[
 \boxed{
-\sum_i\frac{n_i^2}{D_i}
-=-4\frac{s^3}{tu}
+\mathcal C_{--++}^{project}
+:=\sum_i\frac{n_i^2}{D_i}
+=-4\frac{s^3}{tu}.
 }
 \]
 
-and therefore
+Hence
 
 \[
 \boxed{
-\mathcal M_{4,--++}
+\mathcal M_{4,--++}^{project}
 =i\kappa_E\frac{s^3}{tu},
 }
 \]
 
-which is the independent Einstein four-graviton Born normalization.
+matching the independent Einstein four-graviton Born normalization.
 
 Using RFG7,
 
@@ -104,7 +105,7 @@ G=\frac1{8\pi\bar M_G^2}.
 }
 \]
 
-The project-core prefactor can equivalently be written
+The project-core coefficient is equivalently
 
 \[
 \boxed{-\frac{i}{4\bar M_G^2}}.
@@ -112,24 +113,22 @@ The project-core prefactor can equivalently be written
 
 ## Gravitational Ward gate
 
-The executable reference constructs two independent physical polarization copies. Replacing any external polarization vector by its corresponding momentum in either copy gives a vanishing double-copy core to numerical tolerance. This is tested independently for all four legs in both copies over deterministic random on-shell kinematics.
+Replacing any external polarization vector by its corresponding momentum in either copy gives a vanishing double-copy core to numerical tolerance. Copy-exchange symmetry and nonzero witnesses remain unchanged by the prefactor correction.
 
-The gate also verifies copy-exchange symmetry, nonzero physical witnesses, the physical `kappa_E` triangle, and the corrected project-core prefactor.
-
-Local corrected result:
+Corrected local reference result:
 
 ```text
 6 passed, 0 failed
 ```
 
-RFG20 additionally supplies the closed-form normalization firewall:
+RFG22 records the normalization firewall:
 
 ```text
 old +i(kappa_g/2)^2 project transfer   FAIL EXACT FACTOR -4
 new -i(kappa_g/4)^2 project transfer   PASS EINSTEIN MHV
 ```
 
-The admitted four-point bridge is therefore
+The admitted four-point bridge is
 
 ```text
 holonomic SU(3)
@@ -140,4 +139,4 @@ holonomic SU(3)
  -> Einstein MHV normalization
 ```
 
-The next scientific front is higher-point project normalization/BCJ and independent cross-system promotion of the reduced gravity scale `Mbar_G` and carrier-scale type.
+RFG20 preserves the KLT core identity and RFG21 preserves pole factorization; their external amplitude coefficients consume this corrected RFG22 normalization.
