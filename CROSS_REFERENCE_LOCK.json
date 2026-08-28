@@ -1,14 +1,67 @@
 {
-  "schema":"RFC_CROSS_REFERENCE_LOCK_V0_32",
-  "status":"LOOP_INTERNAL_STATE_MIXED_SECTOR_FIREWALL_PINNED",
+  "schema":"RFC_CROSS_REFERENCE_LOCK_V0_33",
+  "status":"EXPLICIT_LOOP_INTERNAL_SPIN2_PROJECTOR_PINNED",
   "created":"2026-08-27",
   "updated":"2026-08-28",
-  "canonical_rfg_lineage":["RFG29 Explicit Fifteen-Graph Project BCJ / Current-Factorization Gate","RFG30 Explicit Fifteen-Graph Double-Copy / KLT Equivalence Gate","RFG31 Internal-State Tree-Factorization / Pure-Spin-2 Firewall","RFG32 Loop Internal-State Spectrum Firewall"],
-  "tree_internal_state_holonomy":["matched copy helicities select tree spin2 residue","RFG31 selected tree residue is symmetric-traceless"],
-  "loop_internal_state_holonomy":["one-copy cut admits (+,-) and (-,+)","independent double-copy sums generate matched helicity +/-2 and crossed helicity-zero states","C_raw=(xA+xB)^2","C_spin2=xA^2+xB^2","C_mixed=2*xA*xB","generic C_mixed != 0","raw loop YMxYM requires explicit state projection/subtraction before Einstein loop promotion"],
-  "gates":["validation/gremlin/RFG29_EXPLICIT_FIFTEEN_GRAPH_PROJECT_BCJ_CURRENT_FACTORIZATION_GATE_v0.1.md","validation/gremlin/RFG30_EXPLICIT_FIFTEEN_GRAPH_DOUBLE_COPY_KLT_EQUIVALENCE_GATE_v0.1.md","validation/gremlin/RFG31_INTERNAL_STATE_TREE_FACTORIZATION_PURE_SPIN2_FIREWALL_v0.1.md","validation/gremlin/RFG32_LOOP_INTERNAL_STATE_SPECTRUM_FIREWALL_v0.1.md"],
-  "receipts":["validation/RFG29_EXPLICIT_FIFTEEN_GRAPH_PROJECT_BCJ_CURRENT_FACTORIZATION_V0_1.json","validation/RFG30_EXPLICIT_FIFTEEN_GRAPH_DOUBLE_COPY_KLT_EQUIVALENCE_V0_1.json","validation/RFG31_INTERNAL_STATE_TREE_FACTORIZATION_PURE_SPIN2_V0_1.json","validation/RFG32_LOOP_INTERNAL_STATE_SPECTRUM_V0_1.json"],
-  "validation_state":{"RFG29":"6/6 PASS","RFG30":"6/6 PASS","RFG31":"6/6 PASS","RFG32":"6/6 PASS FIREWALL FRESH LIVE-SURFACE","github_actions_current_branch_full_suite":"NOT_EXECUTED"},
-  "promotion_firewall":{"five_point_tree_internal_spin2":"PASS_RFG31","raw_loop_YMxYM_pure_spin2":"OPEN_RFG32_MIXED_SECTOR_NONZERO","explicit_loop_internal_state_projector":"NEXT_RFG33","permutation_complete_tree_internal_state_audit":"OPTIONAL_TREE_EXTENSION","direct_diagram_local_alternative_numerator_representative":"ADDITIONAL_OPEN_REPRESENTATIVE","Gamma_DC":"FACTORIZATION_INVARIANT_PASS_NUMERICAL_PROMOTION_OPEN","M_star_scale":"OPEN_RFN1C2_RFG7_FIREWALL","universal_G":"OPEN_CROSS_SYSTEM_EVIDENCE","total_matter_stress_energy":"OPEN","dynamic_Lambda0_action":"OPEN"},
-  "pinning_rule":"RFC v0.32 pins the distinction between tree pure-spin2 factorization and the generic raw-loop YMxYM state sum. RFG32 finds a nonzero mixed helicity-zero internal sector on a two-particle cut; RFG33 is the explicit internal-state projector frontier."
+  "canonical_rfg_lineage":[
+    "RFG29 Explicit Fifteen-Graph Project BCJ / Current-Factorization Gate",
+    "RFG30 Explicit Fifteen-Graph Double-Copy / KLT Equivalence Gate",
+    "RFG31 Internal-State Tree-Factorization / Pure-Spin-2 Firewall",
+    "RFG32 Loop Internal-State Spectrum Firewall",
+    "RFG33 Explicit Loop Internal Pure-Spin-2 Projector Gate"
+  ],
+  "tree_internal_state_holonomy":[
+    "matched copy helicities select tree spin2 residue",
+    "RFG31 selected tree residue is symmetric-traceless"
+  ],
+  "loop_internal_state_holonomy":[
+    "one-copy cut admits (+,-) and (-,+)",
+    "independent double-copy sums generate matched helicity +/-2 and crossed helicity-zero states",
+    "RFG32: C_raw=(xA+xB)^2",
+    "RFG32: C_spin2=xA^2+xB^2",
+    "RFG32: C_mixed=2*xA*xB",
+    "RFG33: P2=diag(1,0,0,1) on {++,+-,-+,--}",
+    "RFG33: P2 is Hermitian, idempotent and rank 2",
+    "RFG33: C_projected=xA^2+xB^2",
+    "RFG33: C_removed=2*xA*xB=C_mixed",
+    "RFG33: projector is copy-exchange invariant"
+  ],
+  "gates":[
+    "validation/gremlin/RFG29_EXPLICIT_FIFTEEN_GRAPH_PROJECT_BCJ_CURRENT_FACTORIZATION_GATE_v0.1.md",
+    "validation/gremlin/RFG30_EXPLICIT_FIFTEEN_GRAPH_DOUBLE_COPY_KLT_EQUIVALENCE_GATE_v0.1.md",
+    "validation/gremlin/RFG31_INTERNAL_STATE_TREE_FACTORIZATION_PURE_SPIN2_FIREWALL_v0.1.md",
+    "validation/gremlin/RFG32_LOOP_INTERNAL_STATE_SPECTRUM_FIREWALL_v0.1.md",
+    "validation/gremlin/RFG33_EXPLICIT_LOOP_INTERNAL_SPIN2_PROJECTOR_GATE_v0.1.md"
+  ],
+  "receipts":[
+    "validation/RFG29_EXPLICIT_FIFTEEN_GRAPH_PROJECT_BCJ_CURRENT_FACTORIZATION_V0_1.json",
+    "validation/RFG30_EXPLICIT_FIFTEEN_GRAPH_DOUBLE_COPY_KLT_EQUIVALENCE_V0_1.json",
+    "validation/RFG31_INTERNAL_STATE_TREE_FACTORIZATION_PURE_SPIN2_V0_1.json",
+    "validation/RFG32_LOOP_INTERNAL_STATE_SPECTRUM_V0_1.json",
+    "validation/RFG33_EXPLICIT_LOOP_INTERNAL_SPIN2_PROJECTOR_V0_1.json"
+  ],
+  "validation_state":{
+    "RFG29":"6/6 PASS",
+    "RFG30":"6/6 PASS",
+    "RFG31":"6/6 PASS",
+    "RFG32":"6/6 PASS FIREWALL FRESH LIVE-SURFACE",
+    "RFG33":"6/6 PASS EXPLICIT CUT PROJECTOR FRESH LIVE-SURFACE",
+    "github_actions_current_branch_full_suite":"NOT_EXECUTED"
+  },
+  "promotion_firewall":{
+    "five_point_tree_internal_spin2":"PASS_RFG31",
+    "raw_loop_YMxYM_pure_spin2":"RFG32_MIXED_SECTOR_NONZERO",
+    "explicit_loop_internal_state_projector":"PASS_RFG33_CUT_LEVEL",
+    "projected_cut_ward_factorization_crossing":"NEXT_RFG34",
+    "loop_integrand_realization":"OPEN",
+    "integrated_loop_amplitude":"OPEN",
+    "permutation_complete_tree_internal_state_audit":"OPTIONAL_TREE_EXTENSION",
+    "direct_diagram_local_alternative_numerator_representative":"ADDITIONAL_OPEN_REPRESENTATIVE",
+    "Gamma_DC":"FACTORIZATION_INVARIANT_PASS_NUMERICAL_PROMOTION_OPEN",
+    "M_star_scale":"OPEN_RFN1C2_RFG7_FIREWALL",
+    "universal_G":"OPEN_CROSS_SYSTEM_EVIDENCE",
+    "total_matter_stress_energy":"OPEN",
+    "dynamic_Lambda0_action":"OPEN"
+  },
+  "pinning_rule":"RFC v0.33 pins an explicit Hermitian idempotent rank-2 helicity projector that removes exactly the mixed RFG32 cut sector. This is a cut-level state projection; RFG34 must audit the projected prescription across Ward/factorization/crossing conditions before loop-level Einstein promotion."
 }

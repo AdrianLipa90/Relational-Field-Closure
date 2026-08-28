@@ -1,0 +1,24 @@
+{
+  "schema": "RFC_RFG33_EXPLICIT_LOOP_INTERNAL_SPIN2_PROJECTOR_V0_1",
+  "status": "PASS_EXPLICIT_CUT_STATE_PROJECTOR",
+  "observed_date_utc": "2026-08-28",
+  "reference_test": "tests/reference/test_rfg33_explicit_loop_internal_spin2_projector.py",
+  "local_result": "6 passed, 0 failed",
+  "live_surface": "/dev/shm/ciel_noema",
+  "tether_status": "ACTIVE",
+  "guard_failures": [],
+  "identities": [
+    "P2^dagger=P2",
+    "P2^2=P2",
+    "rank(P2)=2",
+    "Q0=I-P2 is an orthogonal complementary projector",
+    "C_projected=xA^2+xB^2",
+    "C_removed=2*xA*xB=C_mixed_RFG32",
+    "copy-exchange leaves the projected cut invariant"
+  ],
+  "gravity_target_used_to_define_projector": false,
+  "scope": "two-particle cut internal tensor-product helicity state space",
+  "all_cut_projected_ward_crossing_audit": "OPEN_RFG34",
+  "loop_integrand_realization": "OPEN",
+  "integrated_loop_amplitude": "OPEN"
+}
