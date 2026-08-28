@@ -30,7 +30,7 @@ def single_charge_em_current(j_rfc, q, hbar):
     charge = float(q)
     if not math.isfinite(charge):
         raise ValueError("q must be finite")
-    return scale_vector(-charge / h, j_rfc)
+    return scale_vector(charge / h, j_rfc)
 
 
 def charge_projected_current(component_currents, charges):
@@ -51,7 +51,7 @@ def charge_projected_current(component_currents, charges):
 
 def multiplet_em_current(component_currents, charges, hbar):
     h = _finite_nonzero(hbar, "hbar")
-    return scale_vector(-1.0 / h, charge_projected_current(component_currents, charges))
+    return scale_vector(1.0 / h, charge_projected_current(component_currents, charges))
 
 
 def total_carrier(component_currents):
@@ -108,7 +108,7 @@ def test_single_charge_intertwiner_is_exact():
     j_rfc = (2.0, -1.0, 0.5, 4.0)
     q = 3.0
     hbar = 2.0
-    j_em = (-3.0, 1.5, -0.75, -6.0)
+    j_em = (3.0, -1.5, 0.75, 6.0)
     assert single_charge_em_current(j_rfc, q, hbar) == j_em
     assert intertwiner_defect(j_em, j_rfc, q, hbar) == 0.0
 
