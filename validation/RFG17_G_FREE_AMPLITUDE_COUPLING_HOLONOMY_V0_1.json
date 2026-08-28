@@ -1,19 +1,23 @@
 {
   "schema": "RFC_RFG17_G_FREE_AMPLITUDE_COUPLING_HOLONOMY_V0_1",
-  "status": "PASS_EXACT_ALGEBRAIC_CROSS_ROUTE_REDUCTION",
+  "status": "PASS_EXACT_PHYSICAL_COUPLING_HOLONOMY_PROJECT_CORE_CORRECTED_RFG20",
   "observed_date_utc": "2026-08-28",
   "reference_test": "tests/reference/test_rfg17_g_free_amplitude_coupling_holonomy.py",
   "local_result": "6 passed, 0 failed",
   "random_cross_route_samples": 1000,
   "identities": [
-    "kappa_E=(kappa_g/2)^2=1/Mbar_G^2",
-    "Mbar_G^2=M_H T_H implies kappa_E=1/(M_H T_H)",
-    "Mbar_G=alpha_c omega_Q/(2 Gamma_DC) implies kappa_E=4 Gamma_DC^2/(alpha_c^2 omega_Q^2)",
-    "4 Gamma_DC^2/(alpha_c^2 omega_Q^2)=1/(M_H T_H) on the common admitted surface",
-    "project M4 prefactor can be written without inserting a numerical Newton constant"
+    "physical kappa_E=kappa_g^2/4=1/Mbar_G^2",
+    "Mbar_G^2=M_H T_H implies physical kappa_E=1/(M_H T_H)",
+    "kinetic carrier surface gives physical kappa_E=4 Gamma_DC^2/(alpha_c^2 omega_Q^2)",
+    "project-normalized four-point core coefficient is kappa_E/4",
+    "project M4 = -i(kappa_E/4) sum_i n_i tilde_n_i/D_i",
+    "horizon project-core coefficient = 1/(4 M_H T_H)",
+    "local kinetic-carrier project-core coefficient = Gamma_DC^2/(alpha_c^2 omega_Q^2)"
   ],
+  "superseded_project_prefactor": "kappa_E times project-normalized core",
+  "normalization_patch": "RFG20",
   "numerical_G_inserted": false,
-  "physical_Mstar_promotion": "OPEN",
+  "physical_Mstar_type": "OPEN_RFN1C4",
   "horizon_input_promotion": "OPEN",
   "cross_system_universality": "OPEN_EVIDENCE_GATE"
 }
