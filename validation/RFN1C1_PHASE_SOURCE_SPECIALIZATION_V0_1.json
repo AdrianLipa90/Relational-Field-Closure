@@ -1,0 +1,17 @@
+{
+  "schema": "RFC_RFN1C1_PHASE_SOURCE_SPECIALIZATION_V0_1",
+  "status": "PASS_ALGEBRAIC_REFERENCE",
+  "observed_date_utc": "2026-08-28",
+  "reference_test": "tests/reference/test_rfn1c1_phase_source_specialization.py",
+  "local_result": "4 passed, 0 failed",
+  "exact_identities": [
+    "rho_theta = A^2 omega_Q^2 in natural units",
+    "S_R^DC = 72 Gamma_DC^2 A^2 / beta_W^2",
+    "4 pi G_DC rho_theta = S_R^DC",
+    "(1/2) kappa_E^DC rho_theta = S_R^DC",
+    "omega rescaling: rho -> lambda^2 rho, G -> lambda^-2 G, source invariant"
+  ],
+  "promotion_state": "FORMALISM_FRONTIER_CONDITIONAL",
+  "universal_G_gate": "OPEN_RFN1C2",
+  "numerical_G_target_used_for_selection": false
+}
