@@ -1,0 +1,19 @@
+{
+  "schema": "RFC_RFE5_ONSHELL_SCALAR_CARRIER_ENERGY_FIREWALL_V0_1",
+  "status": "PASS_EXACT_ONSHELL_DUST_FACTOR_TWO_FIREWALL",
+  "observed_date_utc": "2026-08-28",
+  "reference_test": "tests/reference/test_rfe5_onshell_scalar_carrier_energy.py",
+  "local_result": "6 passed, 0 failed",
+  "identities": [
+    "homogeneous harmonic on-shell scalar: omega^2=m^2",
+    "quadratic potential on shell: V=K=A^2 omega^2",
+    "p=0 and epsilon_total=2K",
+    "j_theta=2 A^2 omega",
+    "K/j_theta=omega/2=epsilon_N",
+    "epsilon_total/j_theta=omega=2 epsilon_N"
+  ],
+  "m_star_kinetic_candidate": "epsilon_N",
+  "m_star_total_rest_candidate": "2 epsilon_N",
+  "m_star_type_promotion": "OPEN_RFN1C4",
+  "gravity_output_used_for_selection": false
+}
