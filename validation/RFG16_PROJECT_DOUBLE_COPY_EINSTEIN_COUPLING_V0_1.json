@@ -1,0 +1,23 @@
+{
+  "schema": "RFC_RFG16_PROJECT_DOUBLE_COPY_EINSTEIN_COUPLING_V0_1",
+  "status": "PASS_PROJECT_FOUR_POINT_DOUBLE_COPY_EINSTEIN_COUPLING",
+  "observed_date_utc": "2026-08-28",
+  "reference_test": "tests/reference/test_rfg16_project_double_copy_einstein_coupling.py",
+  "local_result": "6 passed, 0 failed",
+  "random_jacobi_samples_per_copy": 300,
+  "random_copy_exchange_samples": 150,
+  "random_gravitational_ward_samples": 180,
+  "ward_replacements_per_sample": 8,
+  "identities": [
+    "M4 = i (kappa_g/2)^2 sum_i n_i tilde_n_i / D_i",
+    "(kappa_g/2)^2 = kappa_g^2/4 = 8 pi G = kappa_E in natural units",
+    "kappa_E = 1/Mbar_G^2 with Mbar_G=2/kappa_g",
+    "both project numerator copies satisfy the matched four-point Jacobi relation",
+    "single-copy Ward replacement vanishes independently in either kinematic copy",
+    "double-copy amplitude is symmetric under exchange of the two copies"
+  ],
+  "gravity_amplitude_used_to_fit_numerators": false,
+  "scope": "TREE_LEVEL_FOUR_POINT_PROJECT_SECTOR",
+  "higher_point_project_bcj": "OPEN",
+  "cross_system_Mbar_G_promotion": "OPEN_EVIDENCE_GATE"
+}
