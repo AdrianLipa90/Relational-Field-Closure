@@ -1,8 +1,8 @@
 # Relational Field Closure — Canonical Dependency Graph
 
-Status: `CURRENT_FRONTIER / CROSS_REFERENCE_LOCK_V0_25`
+Status: `CURRENT_FRONTIER / CROSS_REFERENCE_LOCK_V0_26`
 
-This graph records the current dependency spine. Historical graphs remain recoverable from Git history; this file is the active dependency view and must agree with `CROSS_REFERENCE_LOCK.json`.
+This graph is the active dependency view and must agree with `CROSS_REFERENCE_LOCK.json`.
 
 ## 1. Geometric / temporal base
 
@@ -57,8 +57,6 @@ Key reduced scale:
 \boxed{\bar M_G=\frac{M_\star}{\Gamma_{DC}g_{YM}^2}=\frac{2}{\kappa_g}},
 \]
 
-hence
-
 \[
 \boxed{G=\frac{1}{8\pi\bar M_G^2}},
 \qquad
@@ -82,7 +80,7 @@ Metatime W_ij holonomy
   -> RFG4G holonomy -> continuum -> Wilson transfer
 ```
 
-On the admitted same-sector normalization surface,
+On the admitted same-sector surface,
 
 \[
 \boxed{g_{YM}^2=\frac1{\alpha_c}},
@@ -105,15 +103,7 @@ RFG4G
   -> RFG15 project four-point BCJ numerators
 ```
 
-The link-orientation convention is explicit:
-
-\[
-W_\mu=\exp(i\sigma g aA_\mu),
-\]
-
-and the corresponding local nonabelian curvature uses the same fixed orientation. The four-point amplitude is orientation-even because its overall interaction power is `g^2`.
-
-RFG15 produces, without gravity fitting,
+RFG15 gives
 
 \[
 \boxed{c_s-c_t+c_u=0},
@@ -129,7 +119,7 @@ with
 
 ## 5. Four-point gauge → gravity branch
 
-The canonical numbering is unique:
+Canonical four-point chain:
 
 ```text
 RFG15 project BCJ numerators
@@ -141,19 +131,19 @@ RFG15 project BCJ numerators
   -> RFG22 project four-point KLT equivalence
 ```
 
-RFG20 identifies the project partial-amplitude normalization
+RFG20 identifies
 
 \[
-\boxed{A^{project}_{1234}=-2iA^{PT}_{1234}}.
+\boxed{A^{project}_{1234}=-2iA^{PT}_{1234}},
 \]
 
-Therefore the compatible project double-copy replacement is
+so the project-normalized transfer is
 
 \[
-\boxed{g\rightarrow\frac{\kappa_g}{4}},
+\boxed{g\rightarrow\frac{\kappa_g}{4}}.
 \]
 
-and the project-normalized four-point amplitude is
+Hence
 
 \[
 \boxed{
@@ -164,104 +154,196 @@ and the project-normalized four-point amplitude is
 }
 \]
 
-This leaves the physical Einstein coupling unchanged:
+The physical Einstein coupling remains
 
 \[
 \boxed{\kappa_E=\frac{\kappa_g^2}{4}=8\pi G}.
 \]
 
-For the project MHV core,
+RFG21 supplies
 
 \[
-\boxed{\mathcal C_{--++}^{project}=-4\frac{s^3}{tu}},
+\boxed{\operatorname*{Res}_{t=0}\mathcal M_4^{project}
+=-\frac{i\kappa_E}{4}X_t\widetilde X_t},
 \]
 
-so
+and RFG22 supplies
 
 \[
-\boxed{\mathcal M_{--++}^{project}=i\kappa_E\frac{s^3}{tu}}.
+\boxed{\mathcal C_{DC}^{project}=-uA_{1234}\widetilde A_{1324}}.
 \]
 
-The previous project-core coefficient `+i(kappa_g/2)^2` is rejected by the RFG20 exact factor `-4` firewall.
+## 6. G-free coupling holonomy
 
-## 6. Pole and KLT closures
-
-RFG21:
+RFG17 closes the same physical coupling coordinate across the source/horizon and amplitude routes:
 
 \[
-\boxed{\lim_{t\to0}t\mathcal C_{DC}=X_t\widetilde X_t},
+\boxed{
+\kappa_E
+=\frac1{M_HT_H}
+=\frac{4\Gamma_{DC}^2}{\alpha_c^2\omega_Q^2}.
+}
 \]
 
-and therefore, with RFG20 normalization,
-
-\[
-\boxed{\operatorname*{Res}_{t=0}\mathcal M_4^{project}=-\frac{i\kappa_E}{4}X_t\widetilde X_t}.
-\]
-
-RFG22 supplies the project four-point KLT core identity
-
-\[
-\boxed{\mathcal C_{DC}^{project}=-uA_{1234}\widetilde A_{1324}},
-\]
-
-hence
-
-\[
-\boxed{\mathcal M_4^{project}=+\frac{i\kappa_E}{4}uA_{1234}\widetilde A_{1324}}.
-\]
-
-## 7. G-free coupling holonomy
-
-RFG17 connects the amplitude normalization back to the Newton/source/horizon routes:
-
-\[
-\boxed{\kappa_E=\frac1{M_HT_H}=\frac{4\Gamma_{DC}^2}{\alpha_c^2\omega_Q^2}}.
-\]
-
-Thus the same physical coupling coordinate appears in:
+Thus
 
 ```text
 Newton source
 <-> reduced gravity scale
 <-> horizon thermal product
 <-> Einstein-Hilbert action
-<-> project tree-level spin-2 amplitude
+<-> project spin-2 tree amplitude
 ```
 
-without changing the independent promotion firewalls for `M_star`, `Gamma_DC`, total matter stress-energy or cross-system universality.
+share one admitted physical coupling coordinate, while their independent promotion firewalls remain intact.
 
-## 8. Higher-point frontier
+## 7. Higher-point Yang–Mills branch
 
-RFG23 is the first explicit higher-point gate:
+RFG23 is the five-point reference gate:
 
 ```text
 RFG22 four-point KLT
-  -> RFG23 five-point MHV BCJ / soft-factorization reference
-       |-> fundamental five-point BCJ relation        PASS REFERENCE
-       |-> BCJ basis dimension (5-3)! = 2            PASS
-       |-> positive-helicity soft factorization      PASS
-       |-> project coupling power g_YM^3             PASS
-       |-> direct project five-point vertex assembly OPEN
-       |-> project five-point cubic numerators       OPEN
-       `-> five-point KLT matrix                      NEXT RFG24
+  -> RFG23 five-point MHV BCJ / soft reference
+       |-> fundamental five-point BCJ               PASS REFERENCE
+       |-> BCJ basis dimension (5-3)! = 2           PASS
+       `-> momentum-conserving soft factorization   PASS
 ```
 
-The immediate scientific frontier is therefore
-
-\[
-\boxed{\text{RFG24: five-point KLT / gravity soft-factorization normalization}}
-\]
-
-followed by direct five-point project assembly from the same RFG8/RFG13 interaction layer.
-
-## 9. Independent open firewalls
-
-These remain independently gated:
+RFG24 then builds the five-point amplitude directly from project currents:
 
 ```text
-full project five-point Feynman/Berends-Giele assembly
-five-point project cubic numerator set
-higher-point per-vertex normalization
+RFG8 cubic + RFG13 quartic
+  -> RFG24 Berends-Giele project A5
+       |-> five-leg Ward identities                 PASS
+       |-> direct five-point BCJ                    PASS
+       |-> reflection / insertion identities        PASS
+       `-> g_YM^3 coupling power                    PASS
+```
+
+## 8. RFG26 project-current normalization firewall
+
+The initial BG stripped-current coefficients were
+
+\[
+V_3^{base}:V_4^{base}=\sqrt2:1.
+\]
+
+RFG26 compares the resulting four-point BG amplitude directly with RFG15 and finds
+
+\[
+\boxed{A_4^{BG,base}=\frac12A_4^{RFG15}}.
+\]
+
+A common interaction normalization
+
+\[
+c=\sqrt2
+\]
+
+gives the project-consistent coefficients
+
+\[
+\boxed{V_3^{project}:V_4^{project}=2:2},
+\]
+
+while the gauge-coupling coordinate remains fixed. Then
+
+\[
+\boxed{A_4^{BG,project}=A_4^{RFG15}}.
+\]
+
+Tree scaling gives and the executable gate verifies
+
+\[
+\boxed{A_4^{project}=2A_4^{base}},
+\qquad
+\boxed{A_5^{project}=2\sqrt2\,A_5^{base}}.
+\]
+
+RFG24 consumes this corrected project-current convention.
+
+## 9. Five-point KLT gravity branch
+
+RFG23 supplies the two-amplitude BCJ basis. RFG25 constructs the \(2\times2\) momentum kernel directly and evaluates
+
+\[
+\boxed{
+\mathcal C_5^{project}
+=\mathbf A_L^{project\,T}S_5\mathbf A_R^{project}.
+}
+\]
+
+RFG26 proves
+
+\[
+\boxed{\mathcal C_5^{project}=8\mathcal C_5^{base}}.
+\]
+
+The project-normalized gravity transfer therefore is
+
+\[
+\boxed{
+\mathcal M_5^{project}
+=i\left(\frac{\kappa_g}{4}\right)^3\mathcal C_5^{project}.
+}
+\]
+
+Because
+
+\[
+\left(\frac{\kappa_g}{4}\right)^3
+=\frac18\left(\frac{\kappa_g}{2}\right)^3,
+\]
+
+the physical product is unchanged:
+
+\[
+\boxed{
+i\left(\frac{\kappa_g}{4}\right)^3\mathcal C_5^{project}
+=
+i\left(\frac{\kappa_g}{2}\right)^3\mathcal C_5^{base}.
+}
+\]
+
+Reduced-scale form:
+
+\[
+\boxed{
+\left(\frac{\kappa_g}{4}\right)^3
+=\frac1{8\bar M_G^3}
+=\frac{\kappa_E}{8\bar M_G}
+=\frac1{8(M_HT_H)^{3/2}}.
+}
+\]
+
+Corrected local replay:
+
+```text
+RFG24  6/6 PASS
+RFG25  6/6 PASS
+RFG26  6/6 PASS
+TOTAL 18/18 PASS
+```
+
+## 10. Current frontier
+
+The immediate next higher-point gate is
+
+\[
+\boxed{\text{RFG27: five-point multi-particle pole residue audit}}.
+\]
+
+It should test whether the direct RFG25 project KLT amplitude factorizes on a five-point multi-particle pole into admitted lower-point project amplitudes with the RFG26 normalization carried through exactly.
+
+Parallel open gate:
+
+```text
+explicit 15-cubic-graph project numerator representation
+```
+
+Independent open firewalls:
+
+```text
 internal-state / loop spectrum and pure-Einstein audit
 Gamma_DC numerical promotion
 M_star physical scale promotion
@@ -270,5 +352,3 @@ universal G evidence
 complete total-matter T_mn binding
 dynamic Lambda_0 action closure
 ```
-
-No one of these is promoted by the four-point or five-point reference gates alone.

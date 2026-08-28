@@ -1,102 +1,133 @@
 # RFG24 — Project Five-Point Berends–Giele / BCJ Gate
 
-Status: `DIRECT_PROJECT_FIVE_POINT_YM_ASSEMBLY_PASS / FIVE_LEG_WARD_PASS / FUNDAMENTAL_BCJ_PASS / REFLECTION_AND_DECOUPLING_PASS / QUARTIC_NORMALIZATION_FIREWALL_PASS`
+Status: `DIRECT_PROJECT_FIVE_POINT_YM_ASSEMBLY_PASS / FIVE_LEG_WARD_PASS / FUNDAMENTAL_BCJ_PASS / REFLECTION_AND_DECOUPLING_PASS / RFG26_PROJECT_NORMALIZATION_BOUND`
 
-RFG24 closes the main admission gap left open by RFG22/RFG23: the five-point Yang–Mills amplitude is assembled directly from the same project cubic and quartic interaction normalization used at four points, rather than imported from the MHV closed form.
+RFG24 assembles the five-point Yang–Mills amplitude directly from the project cubic/quartic interaction layer and now consumes the explicit normalization bridge supplied by RFG26.
 
-## 1. Ordered project currents
+## 1. Project-current normalization
 
-The color-ordered Berends–Giele current uses the cubic bracket
+The ordered Berends–Giele brackets are
 
 \[
 [J_X,J_Y]^\mu
-=(k_Y\cdot J_X)J_Y^\mu
-+\frac12 k_X^\mu(J_X\cdot J_Y)
--(k_X\cdot J_Y)J_X^\mu
--\frac12 k_Y^\mu(J_X\cdot J_Y),
+=(k_Y\!\cdot J_X)J_Y^\mu
++\frac12 k_X^\mu(J_X\!\cdot J_Y)
+-(k_X\!\cdot J_Y)J_X^\mu
+-\frac12 k_Y^\mu(J_X\!\cdot J_Y),
 \]
 
-and the quartic bracket
+and
 
 \[
 \{J_X,J_Y,J_Z\}^\mu
-=(J_X\cdot J_Z)J_Y^\mu
--\frac12(J_X\cdot J_Y)J_Z^\mu
--\frac12(J_Y\cdot J_Z)J_X^\mu.
+=(J_X\!\cdot J_Z)J_Y^\mu
+-\frac12(J_X\!\cdot J_Y)J_Z^\mu
+-\frac12(J_Y\!\cdot J_Z)J_X^\mu.
 \]
 
-With the RFG8/RFG13 color-ordered normalization, the current recursion is
+RFG26 compares this recursion directly with the admitted RFG15 four-point project amplitude. The previously used stripped-current coefficients
+
+\[
+\sqrt2:1
+\]
+
+produce exactly one half of the RFG15 project partial amplitude at four points. The project-consistent coefficients are therefore
+
+\[
+\boxed{2:2},
+\]
+
+which are obtained by the common interaction normalization rescaling
+
+\[
+c=\sqrt2,\qquad
+V_3\mapsto cV_3,\qquad
+V_4\mapsto c^2V_4.
+\]
+
+The gauge-coupling coordinate remains fixed at
+
+\[
+\boxed{g_{YM}^2=1/\alpha_c}.
+\]
+
+Thus the project current recursion used here is
 
 \[
 \boxed{
-P^2 J_P^\mu
-=\sqrt2\sum_{XY=P}[J_X,J_Y]^\mu
-+\sum_{XYZ=P}\{J_X,J_Y,J_Z\}^\mu.
+P^2J_P^\mu
+=2\sum_{XY=P}[J_X,J_Y]^\mu
++2\sum_{XYZ=P}\{J_X,J_Y,J_Z\}^\mu.
 }
 \]
 
-The relative `sqrt(2) : 1` normalization is fixed by the same stripped color-ordered cubic and quartic vertices; it is not tuned to the five-point output.
-
-The final external propagator is amputated before contraction with the fifth polarization.
-
 ## 2. Direct five-point project amplitude
 
-For each ordering `sigma`, define
+For each ordering \(\sigma\),
 
 \[
-\boxed{A_5^{BG}(\sigma)}
+\boxed{A_5^{BG,project}(\sigma)}
 \]
 
-by the recursive current above. The executable gate uses real `2 -> 3` massless kinematics written in the all-outgoing convention and random physical transverse polarizations.
-
-The physical project coupling is then
+is evaluated directly from the corrected recursion. The physical gauge amplitude is
 
 \[
-\boxed{\mathcal A_5^{project}=g_{YM}^3 A_5^{BG},\qquad g_{YM}^2=1/\alpha_c.}
+\boxed{\mathcal A_5^{project}=g_{YM}^3 A_5^{BG,project}}.
+\]
+
+RFG26 verifies the exact tree-scaling relation
+
+\[
+A_4^{BG,project}=2A_4^{BG,base},
+\qquad
+A_5^{BG,project}=2\sqrt2\,A_5^{BG,base},
+\]
+
+and the four-point bridge
+
+\[
+\boxed{A_4^{BG,project}=A_4^{RFG15}}.
 \]
 
 ## 3. Five-leg Ward gate
 
-For every external leg `i`, the reference test replaces
+For each external leg,
 
 \[
 \varepsilon_i\to p_i
 \]
 
-and verifies
+gives
 
 \[
-\boxed{A_5^{BG}|_{\varepsilon_i\to p_i}=0}
+\boxed{A_5^{BG,project}|_{\varepsilon_i\to p_i}=0}.
 \]
 
-on 180 deterministic random `2 -> 3` configurations.
+The corrected common interaction normalization leaves the Ward closure intact.
 
-This is a direct project gauge-invariance test of the complete five-point recursion.
+## 4. Direct five-point BCJ relation
 
-## 4. Direct project fundamental BCJ relation
-
-Using the project amplitudes themselves, RFG24 verifies
+The direct project amplitudes satisfy
 
 \[
 \boxed{
-0=
- s_{12}A_5^{BG}(1,2,3,4,5)
- +(s_{12}+s_{23})A_5^{BG}(1,3,2,4,5)
- +(s_{12}+s_{23}+s_{24})A_5^{BG}(1,3,4,2,5).
+0=s_{12}A(1,2,3,4,5)
++(s_{12}+s_{23})A(1,3,2,4,5)
++(s_{12}+s_{23}+s_{24})A(1,3,4,2,5).
 }
 \]
 
-No gravity amplitude and no Parke–Taylor value are used in this test.
+RFG23 supplies the independent five-point MHV BCJ/soft reference; RFG24 supplies the direct project-current realization.
 
 ## 5. Ordered-amplitude identities
 
-The same project recursion verifies the five-point reflection identity
+The direct amplitudes satisfy
 
 \[
 \boxed{A(1,2,3,4,5)=-A(5,4,3,2,1)}
 \]
 
-and the photon-decoupling / insertion identity
+and the insertion/decoupling identity
 
 \[
 \boxed{
@@ -104,42 +135,39 @@ A(1,2,3,4,5)+A(2,1,3,4,5)+A(2,3,1,4,5)+A(2,3,4,1,5)=0.
 }
 \]
 
-## 6. Quartic-normalization firewall
+## 6. Quartic firewall
 
-The quartic bracket is inherited from RFG13. Setting its relative coefficient to zero while leaving the cubic recursion untouched gives large five-leg Ward defects, whereas the admitted coefficient gives numerical zero.
+With the admitted cubic coefficient fixed at `2`, removing the quartic contribution while leaving the cubic recursion unchanged breaks five-leg Ward closure. Restoring the project-consistent quartic coefficient `2` restores numerical zero.
 
-Thus the same quartic contact that was required by RFG14 at four points remains required by direct project gauge invariance at five points.
+This preserves the same cubic/quartic action genealogy established by RFG8/RFG13 while making the stripped-current normalization consistent with RFG15/RFG20.
 
 ## 7. Executable validation
 
 The reference test checks:
 
-1. masslessness, total momentum conservation and transversality for project `2 -> 3` states;
-2. all five single-leg Ward identities on 180 random configurations;
-3. the fundamental five-point BCJ relation on 220 direct project amplitudes;
-4. reflection and photon-decoupling identities on 150 configurations;
-5. adversarial removal of the quartic contact breaks Ward closure;
-6. project coupling power `A5_project ~ g_YM^3` with `g_YM^2=1/alpha_c`.
+1. masslessness, momentum conservation and transversality;
+2. all five single-leg Ward identities;
+3. the direct fundamental five-point BCJ relation;
+4. reflection and insertion/decoupling identities;
+5. the quartic-contact firewall;
+6. \(g_{YM}^3\) coupling power.
 
-Local result:
+Corrected local result:
 
 ```text
 6 passed, 0 failed
 ```
 
+RFG26 independently checks the normalization bridge in six additional tests.
+
 ## 8. Advancement
 
 ```text
-RFG8 project cubic vertex                          PASS
-RFG13 project quartic normalization                 PASS
-RFG14 direct project four-point amplitude           PASS
-RFG22 five-point BCJ/soft reference                 PASS
-RFG23 five-point KLT reference                      PASS
-project five-point Berends-Giele assembly           PASS
-five-leg project Ward identities                    PASS
-project five-point fundamental BCJ                  PASS
-five-point project KLT from two BG copies           NEXT
+RFG23 five-point BCJ/soft reference                 PASS REFERENCE
+RFG24 direct project five-point BG assembly         PASS
+RFG24 five-leg Ward / BCJ                           PASS
+RFG26 four-point BG -> RFG15 normalization bridge   PASS
+RFG25 project five-point KLT gravity                PASS CORRECTED
 explicit 15-cubic-graph project numerator set       OPEN
+five-point multi-particle pole residue audit         NEXT
 ```
-
-RFG24 promotes the five-point Yang–Mills side from reference-only to direct project amplitude status.

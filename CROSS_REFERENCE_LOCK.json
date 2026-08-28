@@ -1,8 +1,10 @@
 {
-  "schema": "RFC_CROSS_REFERENCE_LOCK_V0_25",
-  "status": "PHASE_SOURCE_PROJECT_YM_BCJ_KLT_SPIN2_POLE_DOUBLE_COPY_EINSTEIN_GFREE_HIGHER_POINT_LINEAGE_PINNED",
+  "schema": "RFC_CROSS_REFERENCE_LOCK_V0_26",
+  "status": "PHASE_SOURCE_PROJECT_YM_BCJ_KLT_SPIN2_POLE_DOUBLE_COPY_EINSTEIN_GFREE_HIGHER_POINT_NORMALIZATION_PINNED",
   "created": "2026-08-27",
   "updated": "2026-08-28",
+  "snapshot_base_commit": "1e1cb376889a05cfbb36a453b05527ac24ad4f19",
+  "working_branch": "fix/rfg26-five-point-normalization-firewall-v0.1",
   "upstreams": [
     {
       "role": "relational_information_geometry_phase_clock_area_hexahedral_rank3_and_claim_typing",
@@ -79,11 +81,14 @@
     {"name": "Euler_Noether_Berry_Preference_Formalism_v2.tex", "role": "global_U1_current_Berry_connection_and_scalar_field_phase_coefficient"}
   ],
   "numbering_repair": {
-    "reason": "three distinct gates had acquired the RFG22 identifier; canonical identifiers are now dependency-ordered and unique",
+    "reason": "three distinct gates had acquired the RFG22 identifier; canonical identifiers are dependency-ordered and unique",
     "RFG20": "Einstein MHV / Double-Copy Normalization Firewall",
     "RFG21": "Project Gravity Pole Factorization Gate",
     "RFG22": "Project Four-Point KLT Equivalence Gate",
     "RFG23": "Five-Point BCJ / Soft-Factorization Gate",
+    "RFG24": "Project Five-Point Berends-Giele / BCJ Gate",
+    "RFG25": "Project Five-Point KLT Gravity Gate",
+    "RFG26": "Five-Point Project Normalization Firewall",
     "old_RFG22_einstein_alias_removed": true,
     "old_RFG22_five_point_alias_removed": true,
     "test_logic_changed_by_renumbering": false
@@ -106,6 +111,9 @@
     "RFG21 massless t-channel pole factorization with Res M4=-i(kappa_E/4)X_t Xtilde_t",
     "RFG22 project four-point KLT equivalence -u A_1234 Atilde_1324",
     "RFG23 five-point MHV BCJ basis and momentum-conserving soft factorization reference",
+    "RFG24 direct project five-point Berends-Giele assembly and project BCJ",
+    "RFG26 BG project-current normalization bridge: sqrt(2):1 base -> 2:2 project",
+    "RFG25 direct project five-point KLT gravity with i(kappa_g/4)^3 project-core coefficient",
     "RFG7 double-copy factorization invariant Mbar_G=2/kappa_g",
     "RF-N1C three-route Newton/double-copy/Einstein holonomy",
     "RF-N1C3 horizon reduced-scale closure",
@@ -147,6 +155,9 @@
     "validation/gremlin/RFG21_PROJECT_GRAVITY_POLE_FACTORIZATION_GATE_v0.1.md",
     "validation/gremlin/RFG22_PROJECT_FOUR_POINT_KLT_EQUIVALENCE_GATE_v0.1.md",
     "validation/gremlin/RFG23_FIVE_POINT_BCJ_SOFT_FACTORIZATION_GATE_v0.1.md",
+    "validation/gremlin/RFG24_PROJECT_FIVE_POINT_BERENDS_GIELE_BCJ_GATE_v0.1.md",
+    "validation/gremlin/RFG25_PROJECT_FIVE_POINT_KLT_GRAVITY_GATE_v0.1.md",
+    "validation/gremlin/RFG26_FIVE_POINT_PROJECT_NORMALIZATION_FIREWALL_v0.1.md",
     "closure/einstein/RF_E3_DOUBLE_COPY_EINSTEIN_HILBERT_NORMALIZATION.md",
     "closure/einstein/RF_E4_PHASE_KINETIC_STRESS_ENERGY_FIREWALL.md",
     "closure/einstein/RF_E5_ONSHELL_SCALAR_CARRIER_ENERGY_FIREWALL.md"
@@ -177,6 +188,9 @@
     "validation/RFG21_PROJECT_GRAVITY_POLE_FACTORIZATION_V0_1.json",
     "validation/RFG22_PROJECT_FOUR_POINT_KLT_EQUIVALENCE_V0_1.json",
     "validation/RFG23_FIVE_POINT_BCJ_SOFT_FACTORIZATION_V0_1.json",
+    "validation/RFG24_PROJECT_FIVE_POINT_BERENDS_GIELE_BCJ_V0_1.json",
+    "validation/RFG25_PROJECT_FIVE_POINT_KLT_GRAVITY_V0_1.json",
+    "validation/RFG26_FIVE_POINT_PROJECT_NORMALIZATION_FIREWALL_V0_1.json",
     "validation/RFE3_EINSTEIN_HILBERT_NORMALIZATION_V0_1.json",
     "validation/RFE4_PHASE_KINETIC_STRESS_ENERGY_FIREWALL_V0_1.json",
     "validation/RFE5_ONSHELL_SCALAR_CARRIER_ENERGY_FIREWALL_V0_1.json"
@@ -189,26 +203,30 @@
     "RFG4G: g_YM^2=1/alpha_c and beta_W=6 alpha_c",
     "RFG8/RFG11: orientation-consistent nonabelian local Yang-Mills vertex/curvature",
     "RFG10-RFG13: project link bytes -> field modes -> nonabelian mixing -> quartic contact",
-    "RFG14: complete project A4 satisfies four-leg Ward identities",
-    "RFG15: c_s-c_t+c_u=0 and n_s-n_t+n_u=0 with n_i=X_i+D_iK_i",
+    "RFG14/RFG15: complete project A4 and matched-Jacobi project numerators",
     "RFG20: A_project=-2 i A_PT fixes g->kappa_g/4 for project numerators",
     "RFG16: M4_project=-i(kappa_E/4) sum_i n_i tilde_n_i/D_i with physical kappa_E=kappa_g^2/4=8 pi G",
     "RFG17: kappa_E=1/(M_H T_H)=4 Gamma_DC^2/(alpha_c^2 omega_Q^2) on common admitted surface",
-    "RFG18: 2x2 transverse product -> spin2 symmetric-traceless + B antisymmetric + trace scalar; Einstein external branch uses spin2 projector",
-    "RFG19: h_(+/-2)=epsilon_(+/-) tensor epsilon_(+/-), all-plus/single-minus zero and little-group phase weight two",
+    "RFG18/RFG19: pure spin-2 projector and helicity-weight-two external branch",
     "RFG21: Res_(t=0) M4_project=-i(kappa_E/4) X_t Xtilde_t",
     "RFG22: direct double-copy core=-u A_1234 Atilde_1324 with project partial amplitudes",
     "RFG23: five-point fundamental BCJ, two-amplitude basis and positive-helicity soft factorization reference",
+    "RFG24: direct project five-point Berends-Giele assembly and project BCJ",
+    "RFG26: A4_BG_base=1/2 A4_RFG15, A5_BG_project=2 sqrt(2) A5_BG_base, C5_project=8 C5_base",
+    "RFG25: M5_project=i(kappa_g/4)^3 C5_project with physical product invariant under RFG26 normalization transfer",
     "RFG7: Mbar_G=M_star/(Gamma_DC g_YM^2)=2/kappa_g",
     "RF-N1C3: Mbar_G^2=M_H T_H",
     "RF-E3: 2/kappa_g^2=1/(2 kappa_E)=1/(16 pi G)"
   ],
   "validation_state": {
     "historical_full_suite_provenance": {"idt": "382/382 PASS", "rfc": "74/74 PASS"},
-    "pre_numbering_repair_branch_state": "132/132 PASS recorded by v0.24",
-    "rfg20_normalization": "6/6 PASS; test logic unchanged from previously green normalization gate",
-    "rfg23_five_point_reference": "6/6 PASS; test logic unchanged from previously green five-point gate",
-    "rfg21_core_factorization": "6/6 PASS; only external documented amplitude coefficient corrected via RFG20",
+    "pre_rfg24_branch_state": "132/132 PASS recorded before direct five-point additions",
+    "numbering_repair": "RFG20-RFG23 unique; test logic unchanged by renumbering",
+    "rfg24_direct_project_five_point": "6/6 PASS after RFG26 normalization alignment",
+    "rfg25_direct_project_five_point_gravity": "6/6 PASS after RFG26 normalization alignment",
+    "rfg26_normalization_firewall": "6/6 PASS",
+    "joint_rfg24_rfg25_rfg26_replay": "18/18 PASS",
+    "noema_live_guard_at_work_start": "ACTIVE failures=[]",
     "github_actions_current_branch_full_suite": "NOT_EXECUTED"
   },
   "promotion_firewall": {
@@ -228,9 +246,11 @@
     "project_four_point_massless_pole_factorization": "PASS_RFG21",
     "project_four_point_KLT_equivalence": "PASS_RFG22",
     "five_point_BCJ_soft_reference": "PASS_RFG23_REFERENCE_ADMISSION_ONLY",
-    "full_project_five_point_vertex_assembly": "OPEN",
-    "five_point_project_KLT_matrix": "NEXT_RFG24",
+    "full_project_five_point_vertex_assembly": "PASS_RFG24_RFG26_NORMALIZED",
+    "five_point_project_KLT_matrix": "PASS_RFG25_RFG26_NORMALIZED",
+    "higher_point_per_vertex_normalization": "PASS_RFG26",
     "five_point_project_cubic_numerator_set": "OPEN",
+    "five_point_multi_particle_pole_audit": "NEXT_RFG27",
     "internal_state_loop_spectrum_audit": "OPEN",
     "Gamma_DC": "FACTORIZATION_INVARIANT_PASS_NUMERICAL_PROMOTION_OPEN",
     "M_star_scale": "OPEN_RFN1C2_RFG7_FIREWALL",
@@ -240,5 +260,5 @@
     "total_matter_stress_energy": "OPEN",
     "dynamic_Lambda0_action": "OPEN"
   },
-  "pinning_rule": "RFC v0.25 pins a unique RFG20-RFG23 dependency chain. The project-normalized four-point double-copy coefficient is -i kappa_E/4 while the physical Einstein coupling remains kappa_E=kappa_g^2/4=8 pi G. RFG21 pole residue and RFG22 KLT amplitude consume the RFG20 normalization. RFG23 supplies a five-point MHV BCJ/soft reference only; direct project five-point assembly, five-point KLT matrix, higher-point project numerators, internal-state/loop spectrum, numerical Gamma_DC/M_star promotion, cross-system Mbar_G universality, total matter stress-energy and dynamic-Lambda0 action remain independently gated."
+  "pinning_rule": "RFC v0.26 pins the unique RFG20-RFG26 gauge-gravity lineage. RFG20 fixes the project four-point transfer g->kappa_g/4. RFG26 proves that the base Berends-Giele coefficients sqrt(2):1 are half-normalized relative to RFG15 at four points, and promotes the project-consistent 2:2 current convention. This multiplies each five-point project Yang-Mills copy by 2 sqrt(2), the five-point KLT core by 8, and correspondingly replaces the project-core prefactor (kappa_g/2)^3 by (kappa_g/4)^3, leaving the physical five-point product invariant. RFG24 and RFG25 are green on this common project normalization. The explicit 15-cubic-graph numerator representation, five-point multi-particle pole audit, internal-state/loop spectrum, numerical Gamma_DC/M_star promotion, cross-system Mbar_G universality, total matter stress-energy and dynamic-Lambda0 action remain independently gated."
 }

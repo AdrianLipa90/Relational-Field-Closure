@@ -1,0 +1,24 @@
+{
+  "schema": "RFC_RFG26_FIVE_POINT_PROJECT_NORMALIZATION_FIREWALL_V0_1",
+  "status": "PASS_PROJECT_NORMALIZATION_TRANSFER",
+  "observed_date_utc": "2026-08-28",
+  "reference_test": "tests/reference/test_rfg26_five_point_project_normalization_firewall.py",
+  "local_result": "6 passed, 0 failed",
+  "joint_replay": "RFG24+RFG25+RFG26: 18 passed, 0 failed",
+  "identities": [
+    "A4_BG_base = 1/2 A4_RFG15",
+    "A4_BG_project = A4_RFG15",
+    "A4_BG_project = 2 A4_BG_base",
+    "A5_BG_project = 2 sqrt(2) A5_BG_base",
+    "C5_KLT_project = 8 C5_KLT_base",
+    "(kappa_g/4)^3 = (kappa_g/2)^3 / 8",
+    "i(kappa_g/4)^3 C5_project = i(kappa_g/2)^3 C5_base",
+    "(kappa_g/4)^3 = 1/(8 Mbar_G^3) = kappa_E/(8 Mbar_G)"
+  ],
+  "project_BG_binary_scale": 2.0,
+  "project_BG_quartic_scale": 2.0,
+  "physical_five_point_product_changed": false,
+  "gravity_target_used_to_fit_YM_inputs": false,
+  "next_gate": "RFG27 five-point multi-particle pole residue audit",
+  "gauge_coupling_coordinate_status": "UNCHANGED_g_YM^2=1/alpha_c"
+}
