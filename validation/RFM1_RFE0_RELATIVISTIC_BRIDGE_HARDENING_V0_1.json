@@ -1,0 +1,52 @@
+{
+  "schema": "RFC_RFM1_RFE0_RELATIVISTIC_BRIDGE_HARDENING_V0_1",
+  "status": "PASS",
+  "repository": "AdrianLipa90/Relational-Field-Closure",
+  "branch": "audit/relativistic-bridge-hardening-v0.1",
+  "pull_request": 14,
+  "attested_tested_commit": "6be45ab1abe56da1ad98255bc7f1ccc1a271cd1d",
+  "workflow": "RFC reference suite",
+  "workflow_run_id": 33203140994,
+  "workflow_job_id": 98957357027,
+  "full_reference_suite": {"passed":448,"failed":0,"status":"PASS"},
+  "focused_checks": {"RF_M1":"9/9 PASS","RF_E0":"7/7 PASS"},
+  "strengthened_checks": [
+    "nontrivial polynomial four-potential with independently verified first derivatives",
+    "nonzero electromagnetic curvature with four independent cyclic dF=0 checks",
+    "probe-charge representation invariance of physical Aharonov-Bohm potential normalization",
+    "vacuum plane-wave electromagnetic stress-energy divergence",
+    "flat FLRW contracted-Bianchi continuity identity",
+    "closure/** CI path coverage",
+    "restored TIR/IDT/PNCS source-holonomy provenance in RFC cross-reference lock"
+  ],
+  "first_hardening_ci": {
+    "run_id":33202996446,
+    "passed":447,
+    "failed":1,
+    "status":"FAIL_CLOSED",
+    "failure_class":"CROSS_REFERENCE_LOCK_SCHEMA_DRIFT",
+    "repair":"RFC_CROSS_REFERENCE_LOCK_V0_35 restored upstreams and pncs_source_holonomy_loops additively while preserving RFG29-RFG34"
+  },
+  "idt_peer": {
+    "repository":"AdrianLipa90/Informational-Dynamics-of-Time",
+    "branch":"audit/relativistic-bridge-01ag-hardening-v0.1",
+    "pull_request":22,
+    "attested_tested_commit":"82faeffd77e9b6bab0fb879cf76af39b4673d7d2",
+    "workflow_run_id":33203002798,
+    "workflow_job_id":98956893800,
+    "passed":437,
+    "failed":0,
+    "focused_01AG":"5/5 PASS",
+    "status":"PASS"
+  },
+  "bridge_chain":["IDT-01AC","IDT-01AG","RF-M1","RF-E0","EINSTEIN_CLOSURE"],
+  "open_promotion_coordinates":[
+    "physical RFC carrier-current equality with the independently constructed charge-projected electromagnetic current",
+    "vacuum normalization mu_* in the selected physical unit convention",
+    "complete charged-matter stress-energy action",
+    "RF-N1C determination of G and kappa_E",
+    "action-level dynamic Lambda0 realization",
+    "full Einstein field-equation and unified-limit audit"
+  ],
+  "main_mutated": false
+}
