@@ -1,0 +1,19 @@
+{
+  "schema": "RFC_RFG17_G_FREE_AMPLITUDE_COUPLING_HOLONOMY_V0_1",
+  "status": "PASS_EXACT_ALGEBRAIC_CROSS_ROUTE_REDUCTION",
+  "observed_date_utc": "2026-08-28",
+  "reference_test": "tests/reference/test_rfg17_g_free_amplitude_coupling_holonomy.py",
+  "local_result": "6 passed, 0 failed",
+  "random_cross_route_samples": 1000,
+  "identities": [
+    "kappa_E=(kappa_g/2)^2=1/Mbar_G^2",
+    "Mbar_G^2=M_H T_H implies kappa_E=1/(M_H T_H)",
+    "Mbar_G=alpha_c omega_Q/(2 Gamma_DC) implies kappa_E=4 Gamma_DC^2/(alpha_c^2 omega_Q^2)",
+    "4 Gamma_DC^2/(alpha_c^2 omega_Q^2)=1/(M_H T_H) on the common admitted surface",
+    "project M4 prefactor can be written without inserting a numerical Newton constant"
+  ],
+  "numerical_G_inserted": false,
+  "physical_Mstar_promotion": "OPEN",
+  "horizon_input_promotion": "OPEN",
+  "cross_system_universality": "OPEN_EVIDENCE_GATE"
+}
