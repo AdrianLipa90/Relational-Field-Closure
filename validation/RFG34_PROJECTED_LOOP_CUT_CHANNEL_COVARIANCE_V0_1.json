@@ -1,0 +1,22 @@
+{
+  "schema":"RFC_RFG34_PROJECTED_LOOP_CUT_CHANNEL_COVARIANCE_V0_1",
+  "status":"PASS_PROJECTED_CUT_CHANNEL_COVARIANCE",
+  "observed_date_utc":"2026-08-28",
+  "reference_test":"tests/reference/test_rfg34_projected_loop_cut_channel_covariance.py",
+  "local_result":"6 passed, 0 failed",
+  "live_surface":"/dev/shm/ciel_noema",
+  "tether_status":"ACTIVE",
+  "guard_failures":[],
+  "identities":[
+    "s channel has one MHV-compatible one-copy internal assignment on (--++)",
+    "t and u channels each have (+,-) and (-,+)",
+    "s-channel raw cut equals its matched-spin2 cut",
+    "t/u: C_raw-C_projected=2*xA*xB",
+    "P2 commutes with copy exchange and simultaneous helicity reversal",
+    "P2 commutes with admissible state-coordinate relabelings preserving matched/crossed sectors"
+  ],
+  "gravity_target_used_for_selection":false,
+  "vector_polarization_projected_cut_ward_audit":"OPEN_RFG35",
+  "loop_integrand_realization":"OPEN",
+  "integrated_loop_amplitude":"OPEN"
+}

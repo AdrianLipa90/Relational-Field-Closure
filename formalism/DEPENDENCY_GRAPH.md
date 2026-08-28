@@ -1,6 +1,6 @@
 # Relational Field Closure — Canonical Dependency Graph
 
-Status: `CURRENT_FRONTIER / CROSS_REFERENCE_LOCK_V0_33`
+Status: `CURRENT_FRONTIER / CROSS_REFERENCE_LOCK_V0_34`
 
 ```text
 TIR/IDT -> Newton/Einstein source closure
@@ -11,55 +11,44 @@ TIR/IDT -> Newton/Einstein source closure
  -> RFG30 explicit 15-graph double-copy <-> KLT
  -> RFG31 matched-helicity internal tree spin-2 factorization
  -> RFG32 raw-loop mixed internal-state spectrum firewall
- -> RFG33 explicit pure-spin2 internal-state projector              PASS
- -> RFG34 projected-cut Ward / factorization / crossing audit       NEXT
+ -> RFG33 explicit pure-spin2 internal-state projector
+ -> RFG34 projected s/t/u loop-cut channel covariance              PASS
+ -> RFG35 vector-polarization projected-cut Ward audit             NEXT
 ```
 
-RFG31 pins the selected tree factorization residue to the symmetric-traceless spin-two sector.
-
-RFG32 shows that the corresponding loop state isolation is not automatic. On a generic two-particle t-channel cut, each Yang-Mills copy admits internal assignments `(+,-)` and `(-,+)`. Independent copy sums therefore generate both matched spin-two and crossed helicity-zero tensor-product states:
-
-\[
-\boxed{\mathcal C_{raw}=(x_A+x_B)^2},
-\qquad
-\boxed{\mathcal C_{spin2}=x_A^2+x_B^2},
-\qquad
-\boxed{\mathcal C_{mixed}=2x_Ax_B\neq0}.
-\]
-
-RFG33 introduces the explicit one-line tensor-product helicity projector
+For one internal double-copy line, RFG33 uses
 
 \[
 \boxed{P_2=\operatorname{diag}(1,0,0,1)}
 \]
 
-on the ordered basis
+on the ordered tensor-product helicity basis
 
 \[
 \{|++\rangle,|+-\rangle,|-+\rangle,|--\rangle\}.
 \]
 
-It satisfies
+RFG34 extends this to the three two-particle pairings of the external `(--++)` sector. MHV support gives
 
 \[
-P_2^\dagger=P_2,\qquad P_2^2=P_2,\qquad \operatorname{rank}P_2=2,
-\]
-
-and on the RFG32 two-particle cut gives
-
-\[
-\boxed{\mathcal C_{projected}=x_A^2+x_B^2},
+\boxed{s:\;(-,-)},
 \qquad
-\boxed{\mathcal C_{removed}=2x_Ax_B=\mathcal C_{mixed}}.
+\boxed{t,u:\;(+,-),(-,+)}.
 \]
 
-Thus the mixed internal sector is now removed by an explicit state-space operator rather than an inferred cancellation.
+Thus the `s`-channel cut is already matched-spin-two on this helicity surface, while `t/u` contain the RFG32 mixed tensor-product sector. There,
+
+\[
+\boxed{\mathcal C_{raw}-\mathcal C_{projected}=2x_Ax_B}.
+\]
+
+The projector commutes with copy exchange, simultaneous helicity reversal, and admissible state-coordinate relabelings preserving the matched/crossed decomposition.
 
 ## Open firewalls
 
 ```text
-RFG34 projected-cut Ward / factorization / crossing audit
-loop-integrand realization with the RFG33 projector
+RFG35 vector-polarization projected-cut Ward audit
+projected loop-integrand realization
 integrated loop amplitude
 permutation-complete tree internal-state extension
 direct diagram-local alternative numerator representative
