@@ -9,336 +9,255 @@ RF-02H hexahedral rank-3 metric
   |
 RF-G0 Lorentzian signature
   |
-RF-02I coframe connection/curvature
+RF-02I coframe connection / curvature
   |
-IDT 05C clock ratio N_R=phi_x/phi_ref
+IDT 05C relational clock ratio N_R
   |
-RF-N0 relational lapse
+RF-N0 relational lapse Phi_R = c^2 ln N_R
   |
-RF-N1A source-operator theorem
+RF-N1A hexahedral source operator
+  Delta_h ln N_R = S_R
   |
-RF-N1B source-type firewall
+RF-N1B source-type / identifiability firewall
   |
-RF-N1B2 conserved source-carrier factorization
-  Q_a=Q_Sigma p_a^(Q)
+RF-N1B2 conserved carrier factorization
+  Q_a = Q_Sigma p_a^(Q)
   |
 RF-N1B2H normalized-shape / extensive-scale holonomy
   |
-IDT 01Y / RF-N1B2I Euler-closed intention charge
-  J_I^EB=hbar theta_I^EB
-  P_Phi^EB=J-J_I^EB
-  H_Phi^EB=(P_Phi^EB)^2/(2 I_phi)
+RF-N1B2I Euler-closed intention action charge
   |
-IDT 01Z / RF-N1B2J finite Noether carrier
-  Q_theta=I_A D_tau chi
-  epsilon_N^EB=H_Phi^EB/Q_theta
+RF-N1B2J finite Noether carrier
   |
-IDT 01AA / RF-N1B2K exact local current/measure theorem
-  Delta_Sigma <= Delta_J + Delta_V
+RF-N1B2K local current / measure defect theorem
   |
-IDT 01AB / RF-N1B2L scalar-field -> rotor coefficient reduction
-  I_A=2 integral A^2 dV_h
-  I_phi=I_A on the common collective reduction
+RF-N1B2L scalar-field -> rotor inertia reduction
+  I_phi = 2 integral A^2 dV_h
   |
-IDT 01AC / RF-N1B2M gauge-covariant common-U(1) pullback
-  A'=A-dlambda
-  theta'=theta+lambda
-  Dtheta=dtheta+A_ABE
-  q^*(Dtheta)=D_tau chi dtau
-  Q_theta/P_Phi=(I_A/I_phi)(r_n/r_rotor)
+RF-N1B2M gauge-covariant common-U(1) pullback
   |
-PNCS physical-law frame / executable holonomy
-  eight source/control loops
-  Delta_gamma + invariant defects + inverse lineage
+RF-N1B2N relational-lapse normal phase-rate bridge
+  omega_Q = D_hat_tau chi = D_t chi / N_R
+  epsilon_N = omega_Q / 2
   |
-  +---------------- measured physical promotion ------------------+
-  |  physical common-U(1) bundle/patch/ABE realization          |
-  |  normal-flow/slice realization                               |
-  |  J_Q^mu <-> J_theta^mu                                      |
-  |  Q_Sigma <-> Q_theta                                        |
-  |  p_IDT <-> p_Q physical state-space binding                  |
-  +---------------------------------------------------------------+
+RF-N1B2O phase-energy / Noether-carrier source binding
+  j_theta = 2 A^2 omega_Q
+  E_theta = epsilon_N j_theta
+  rho_theta = E_theta / c^2
   |
-RF-N1C coupling/universality audit
-  Delta_h ln N_R = S_R
-  Delta_h Phi_R = c^2 S_R
-  target diagnostic: c^2 S_R ?= 4 pi G rho_m
-  G OPEN
+RF-N1C three-route coupling holonomy
+  Newton source <-> double copy <-> Einstein / horizon
+  kappa_E = 8 pi G / c^4
+  kappa_E = kappa_g^2 / 4  [natural units]
   |
-RF-E1 Einstein-Bianchi closure -> RF-X1 unified limit audit
+  +---------------------------+
+  |                           |
+RF-N1C1                    RF-N1C2
+phase-source              carrier-scale
+specialization            universality firewall
+S_R^DC =                  Mbar_G = M_star/(Gamma_DC g_YM^2)
+72 Gamma_DC^2 A^2/beta_W^2
+  |                           |
+  +-------------+-------------+
+                |
+RF-E3 Einstein-Hilbert action normalization
+  2/kappa_g^2 = 1/(2 kappa_E) = 1/(16 pi G)
+  |
+metric variation
+  G_mu_nu = kappa_E T_mu_nu
+  |
+total-matter composition + dynamic Lambda0 action
+  |
+RF-X1 unified-limit audit
 ```
 
-Parallel gauge and information-curvature branches retain their existing RF-M0/RF-M1/RF-M2 and IDT 01K/RF-L0 interfaces.
+## Parallel gauge branch
 
-## Current exact/candidate status
+```text
+RF-M1 Aharonov-Bohm normalized U(1) curvature
+  -> RF-M4 charge-projected Noether Maxwell source
 
-- `RF-02H`: LOCAL STRUCTURAL PASS — regular dual frame gives `h_H=I3/6`, exact rank three and octahedral isotropy.
-- `RF-G0`: exact conditional Lorentzian signature theorem.
-- `RF-02I`: LOCAL EXACT CONNECTION PASS; phase-clock gradients enter the spatial connection/curvature.
-- `IDT 05C`: EXACT CLOCK-RATIO PASS — `N_R>0`, dimensionless, reparameterization invariant and compositional.
-- `RF-N0`: exact conditional geodesic kinematics after temporal-coframe binding.
-- `RF-N1A`: LOCAL EXACT OPERATOR PASS — IDT graph response plus hexahedral symmetry yields the Laplace principal operator from the admitted graph-response and symmetry premises.
-- `RF-N1B2`: conserved continuous carrier factorization PASS at the stated conditional level: `Q_a=Q_Sigma p_a^(Q)`.
-- `RF-N1B2H`: normalized-shape/extensive-scale holonomy PASS for the positive finite-cell factorization.
-- `RF-N1B2I`: Euler-selected intention charge and canonical rotor energy PASS at the formal reference level.
-- `RF-N1B2J`: finite collective Noether carrier and energy-per-carrier coordinates typed.
-- `RF-N1B2K`: exact current/measure defect theorem implemented.
-- `RF-N1B2L`: scalar-field/rotor coefficient reduction implemented as a conditional exact theorem.
-- `RF-N1B2M`: gauge-covariant common-U(1) pullback implemented as a conditional exact theorem.
+holonomic SU(3)
+  -> RFG3 Wilson continuum/Yang-Mills normalization
+  -> RFG6 kinematic Jacobi / BCJ gate
+  -> RFG2 double-copy coupling coordinate
+  -> RF-N1C / RF-N1C2
+```
 
-## RF-N1B2K — local current and measure gate
+The Maxwell electric-charge projection and the gravitational phase-energy carrier remain separately typed. RF-N1B2O uses the charge-independent phase Noether carrier; RF-M4 applies the electric-charge projection only on the Maxwell source branch.
 
-On one common slice, orientation and ordered cell support,
+## Current exact and conditional gates
 
-\[
-Q_\vartheta=\sum_aV_{\vartheta,a}j_{\vartheta,a},
-\qquad
-Q_\Sigma=\sum_aV_{Q,a}j_{Q,a}.
-\]
+- `RF-02H`: local rank-3 hexahedral metric — PASS.
+- `RF-G0`: Lorentzian signature theorem — EXACT CONDITIONAL.
+- `RF-02I`: compatible local connection/curvature — PASS on admitted coframe sector.
+- `RF-N0`: relational lapse and Newtonian force kinematics — PASS CONDITIONAL.
+- `RF-N1A`: Laplace principal source operator — PASS.
+- `RF-N1B2`: conserved continuous carrier factorization — PASS.
+- `RF-N1B2H`: normalized-shape/extensive-scale holonomy — PASS.
+- `RF-N1B2I/J`: Euler-selected action charge and finite Noether carrier — PASS at their stated conditional levels.
+- `RF-N1B2K`: local current/measure defect theorem `Delta_Sigma <= Delta_J + Delta_V` — EXACT.
+- `RF-N1B2L`: scalar-field/rotor inertia reduction — EXACT CONDITIONAL.
+- `RF-N1B2M`: gauge-covariant phase pullback — EXACT CONDITIONAL.
+- `RF-N1B2N`: `omega_Q=D_hat_tau chi=D_t chi/N_R`, `epsilon_N=omega_Q/2` — EXACT CONDITIONAL; dedicated reference coverage added on this branch.
+- `RF-N1B2O`: `E_theta=(omega_Q/2)j_theta`, `rho_theta=E_theta/c^2` — EXACT LOCAL FACTORIZATION on admitted phase-kinetic matter sector.
+- `RF-N1C`: Newton↔double-copy↔Einstein normalization and three-route off-shell syzygy — EXACT ALGEBRAIC FRONTIER, physical inputs gated.
+- `RF-N1C1`: phase-source reduction and reciprocal `G`/`rho` phase-rate scaling — EXACT.
+- `RF-N1C2`: reduced gravity-scale reparameterization and universal-G equivalence — EXACT; cross-system evidence gate open.
+- `RF-E3`: Einstein-Hilbert coefficient transfer and metric-variation normalization — EXACT on admitted conventions.
 
-The local coordinates are
+## Phase-source bridge
+
+RF-N1B2N and RF-N1B2O give
 
 \[
 \boxed{
-\Delta_J
-=\frac{\sum_aV_{Q,a}|j_{Q,a}-j_{\vartheta,a}|}{Q_\vartheta},
+\omega_Q=D_{\hat\tau}\chi=\frac{D_t\chi}{N_R},
+\qquad
+\epsilon_N=\frac12\omega_Q,
 }
 \]
 
 \[
 \boxed{
-\Delta_V
-=\frac{\sum_a|V_{Q,a}-V_{\vartheta,a}|\,|j_{\vartheta,a}|}{Q_\vartheta},
+j_\vartheta=2A^2\omega_Q,
+\qquad
+\rho_\vartheta=\frac{A^2\omega_Q^2}{c^2}.
 }
 \]
+
+On the RF-N1C local double-copy scale candidate,
 
 \[
 \boxed{
-\Delta_\Sigma
-=\frac{|Q_\Sigma-Q_\vartheta|}{Q_\vartheta}.
+G_{DC}=\frac{18\Gamma_{DC}^2}{\pi\beta_W^2\omega_Q^2}
 }
 \]
 
-The exact bound is
-
-\[
-\boxed{\Delta_\Sigma\le\Delta_J+\Delta_V.}
-\]
-
-The witness
-
-\[
-j_\vartheta=(1,3),\qquad j_Q=(2,2),\qquad V=(1,1)
-\]
-
-has equal integrated charge together with
-
-\[
-\Delta_\Sigma=0,
-\qquad
-\Delta_J=1/2,
-\]
-
-so the local-current coordinate remains part of the promotion gate.
-
-## RF-N1B2L — scalar-field / rotor coefficient reduction
-
-\[
-C_A=\int_\Sigma A^2dV_h,
-\qquad
-I_A=2C_A,
-\]
-
-\[
-L_{phase}^{field}=\frac{I_A}{2}(D_\tau\chi)^2,
-\qquad
-L_{phase}^{rotor}=\frac{I_\phi}{2}(D_\tau\chi)^2.
-\]
-
-On the admitted common collective reduction,
-
-\[
-\boxed{I_\phi=I_A.}
-\]
-
-The executable coordinate is
+in natural units, while RF-N1C1 gives
 
 \[
 \boxed{
-\Delta_I^{red}=\frac{|I_\phi-I_A|}{I_A},
+\mathcal S_R^{DC}
+=4\pi G_{DC}\rho_\vartheta
+=\frac{72\Gamma_{DC}^2}{\beta_W^2}A^2.
 }
 \]
 
-kept separately typed from the RF-N1B2J ratio coordinate.
-
-## RF-N1B2M — gauge-covariant phase pullback and generator bridge
-
-The admitted Berry convention gives
+Thus a phase-rate rescaling obeys
 
 \[
-\boxed{\mathcal A'^{ABE}=\mathcal A^{ABE}-d\lambda}
-\]
-
-for the section transformation `u -> exp(i lambda)u`. With
-
-\[
-\vartheta' = \vartheta+\lambda,
-\]
-
-the invariant one-form is
-
-\[
-\boxed{\mathscr D\vartheta=d\vartheta+\mathcal A^{ABE}.}
-\]
-
-On the common local fiber coordinate,
-
-\[
-\chi(\tau)=\vartheta(q(\tau))+\chi_0,
-\]
-
-and the trajectory pullback satisfies
-
-\[
-\boxed{q^*(\mathscr D\vartheta)=D_\tau\chi\,d\tau.}
-\]
-
-The three independently typed rates are
-
-\[
-r_{field}=\sum_a(\partial_a\vartheta+\mathcal A_a^{ABE})\dot q^a,
+\rho_\vartheta\mapsto\lambda^2\rho_\vartheta,
 \qquad
-r_n=n_\mu\mathscr D^\mu\vartheta,
+G_{DC}\mapsto\lambda^{-2}G_{DC},
 \qquad
-r_{rotor}=D_\tau\chi.
+\mathcal S_R^{DC}\mapsto\mathcal S_R^{DC}.
 \]
 
-The finite generators obey
+## Universal gravity-scale firewall
 
-\[
-Q_\vartheta=I_A r_n,
-\qquad
-P_\Phi=I_\phi r_{rotor},
-\]
-
-and therefore
+RF-N1C2 defines
 
 \[
 \boxed{
-\frac{Q_\vartheta}{P_\Phi}
-=\frac{I_A}{I_\phi}\frac{r_n}{r_{rotor}}.
+\bar M_G
+:=\frac{M_\star}{\Gamma_{DC}g_{YM}^2},
+\qquad
+G_{DC}=\frac{1}{8\pi\bar M_G^2}.
 }
 \]
 
-The executable gate audits
-
-\[
-\Delta_{gauge},\;
-\Delta_I^{red},\;
-\Delta_{rate},\;
-\Delta_{normal},\;
-\Delta_Q,\;
-\Delta_\epsilon,\;
-\Delta_{factorization},\;
-\Delta_{action}.
-\]
-
-At the common zero-defect surface,
+With `g_YM^2=6/beta_W`,
 
 \[
 \boxed{
-I_A=I_\phi,
-\quad
-r_n=r_{field}=r_{rotor},
-\quad
-Q_\vartheta=P_\Phi^{EB},
-\quad
-\epsilon_N^{EB}=\frac12D_\tau\chi.
+\bar M_G=\frac{\beta_WM_\star}{6\Gamma_{DC}}.
 }
 \]
 
-After the separately measured RF-N1B2K current promotion, the RFC carrier chain becomes
+On `M_star=omega_Q/2`,
 
 \[
-Q_\Sigma=Q_\vartheta=P_\Phi^{EB},
-\qquad
-\boxed{\epsilon_Q=\epsilon_N^{EB}=\frac12D_\tau\chi}
+\boxed{
+\bar M_G^{local}
+=\frac{\beta_W\omega_Q}{12\Gamma_{DC}}.
+}
 \]
 
-at that admitted promotion surface.
+For independently admitted systems `a,b`,
 
-## PNCS execution layer
+\[
+\boxed{
+G_a=G_b
+\Longleftrightarrow
+\bar M_{G,a}=\bar M_{G,b}
+}
+\]
 
-Pinned executable snapshot:
+on the positive scale sector. This is the current zero-fit universality frontier.
+
+## Einstein action bridge
+
+RF-N1C and RF-E3 give
+
+\[
+\boxed{
+\kappa_E=\frac{8\pi G}{c^4}
+}
+\]
+
+and in natural units
+
+\[
+\boxed{
+\kappa_E=8\pi G=\frac{\kappa_g^2}{4},
+\qquad
+\frac{1}{2\kappa_E}=\frac{2}{\kappa_g^2}.
+}
+\]
+
+Therefore
+
+\[
+\boxed{
+S_{EH}
+=\frac{1}{2\kappa_E}\int d^4x\sqrt{-g}R
+}
+\]
+
+and standard metric variation yields
+
+\[
+\boxed{G_{\mu\nu}=\kappa_ET_{\mu\nu}.}
+\]
+
+## Execution and provenance layer
+
+Current PNCS execution-layer provenance:
 
 ```text
 AdrianLipa90/PhaseNav-Natural-Coding-System
-feat/gremlin-pnv-authoring-v0.2
-b741460dba15d979a6387305daf93f476becb54e
+main
+ebdeb9729f21db17bebe4e14302a9687cdc33f4e
 ```
 
-Contracts:
+The PNCS main state contains GREMLIN live authoring v0.3 provenance and canonical NOEMA AutoBoot V3 integration. GREMLIN remains candidate-only and has no independent canon or runtime execution authority.
+
+## Current physical frontier
 
 ```text
-PNCS_GREMLIN_NATIVE_PNV_BRIDGE_V0_2
-PNCS_PNV_INFORMATION_HOLONOMY_V0_1
-PNCS_PNV_SOURCE_HOLONOMY_LOOPS_V0_1
-PNCS_PNV_NOETHER_COLLECTIVE_CARRIER_V0_1
-PNCS_PNV_NOETHER_RFC_CURRENT_BINDING_V0_1
-PNCS_PNV_SCALAR_FIELD_ROTOR_INERTIA_REDUCTION_V0_1
-PNCS_PNV_GAUGE_COVARIANT_PHASE_PULLBACK_V0_1
+phase-kinetic local source map                PASS CONDITIONAL
+Newton <-> Einstein normalization             PASS EXACT TRANSFER
+Einstein-Hilbert prefactor                    PASS EXACT TRANSFER
+local phase-source/double-copy closure        PASS ALGEBRAIC
+reduced gravity-scale coordinate              PASS EXACT
+project beta_W physical normalization         OPEN
+project BCJ-compatible numerator binding      OPEN
+Gamma_DC physical normalization               OPEN
+M_star scale promotion                        OPEN / RF-N1C2 firewall
+cross-system Mbar_G universality               OPEN EVIDENCE GATE
+total matter stress-energy composition         OPEN
+independent dynamic-Lambda0 action             OPEN
 ```
 
-Loops:
-
-```text
-SOURCE.CARRIER.NORMALIZATION.ROUNDTRIP
-SOURCE.CARRIER.Q0_OCCUPATION.ROUNDTRIP
-SOURCE.CARRIER.EPSILON_MASS_DENSITY.ROUNDTRIP
-SOURCE.PHASE_INTENTION.EULER_CHARGE_ENERGY.ROUNDTRIP
-SOURCE.PHASE_NOETHER.COLLECTIVE_CARRIER.ROUNDTRIP
-SOURCE.PHASE_NOETHER.RFC_CONSERVED_CURRENT.ROUNDTRIP
-SOURCE.PHASE_NOETHER.ROTOR_INERTIA.REDUCTION.ROUNDTRIP
-SOURCE.PHASE.NOETHER.GAUGE_COVARIANT_PULLBACK.ROUNDTRIP
-```
-
-Focused source-law checks authored: `68`.
-
-Latest executed cross-repository gates:
-
-```text
-IDT Reference suite     382 passed, 0 failed
-RFC Reference suite      74 passed, 0 failed
-```
-
-PNCS native workflow remains `CI_EXECUTION_UNRESOLVED_PRE_TEST`; run `33129045847`, job `98713992469` has `steps=null`, so it supplies no PNCS code-test verdict.
-
-## Current source frontier
-
-The formal field↔rotor gauge pullback now supplies the generator bridge. The measured physical frontier is
-
-\[
-\boxed{
-\text{physical common-}U(1)\text{ realization}
-\to
-\text{normal-flow/slice realization}
-\to
-J_Q^\mu\leftrightarrow J_\vartheta^\mu
-\to
-Q_\Sigma\leftrightarrow Q_\vartheta
-\to
-p_{IDT}\leftrightarrow p_Q
-\to
-RF\text{-}N1C\;\text{coupling/universality}.
-}
-\]
-
-The epsilon/mass-density transport remains downstream of the carrier promotion gate, with
-
-\[
-\epsilon_N^{EB}=\frac12D_\tau\chi,
-\qquad
-M_N=H_\Phi^{EB}/c^2
-\]
-
-available on the admitted common-generator sector.
+The next coupling promotion therefore targets independently frozen Yang-Mills/BCJ/double-copy coordinates and cross-system constancy of `Mbar_G`, while the Einstein geometry/action spine remains fixed.
