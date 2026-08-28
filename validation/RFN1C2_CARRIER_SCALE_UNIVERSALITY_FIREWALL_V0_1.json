@@ -1,0 +1,18 @@
+{
+  "schema": "RFC_RFN1C2_CARRIER_SCALE_UNIVERSALITY_FIREWALL_V0_1",
+  "status": "PASS_ALGEBRAIC_REFERENCE",
+  "observed_date_utc": "2026-08-28",
+  "reference_test": "tests/reference/test_rfn1c2_carrier_scale_universality_firewall.py",
+  "local_result": "6 passed, 0 failed",
+  "exact_identities": [
+    "Mbar_G = M_star/(Gamma_DC g_YM^2)",
+    "G_DC = 1/(8 pi Mbar_G^2)",
+    "Mbar_G = beta_W M_star/(6 Gamma_DC)",
+    "local candidate Mbar_G = beta_W omega_Q/(12 Gamma_DC)",
+    "G_a/G_b = (Mbar_G,b/Mbar_G,a)^2"
+  ],
+  "falsification_case": "fixed beta_W and Gamma_DC with doubled omega_Q gives G ratio 1/4",
+  "promotion_state": "UNIVERSALITY_FIREWALL_ACTIVE",
+  "cross_system_evidence": "OPEN",
+  "numerical_G_target_used_for_selection": false
+}
