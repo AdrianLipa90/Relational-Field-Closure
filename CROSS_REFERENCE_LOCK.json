@@ -1,6 +1,6 @@
 {
-  "schema": "RFC_CROSS_REFERENCE_LOCK_V0_20",
-  "status": "PHASE_SOURCE_YM_NORMALIZATION_PROJECT_NONABELIAN_LINK_AMPLITUDE_SPINE_DOUBLE_COPY_EINSTEIN_HOLONOMY_PINNED",
+  "schema": "RFC_CROSS_REFERENCE_LOCK_V0_21",
+  "status": "PHASE_SOURCE_PROJECT_YM_BCJ_DOUBLE_COPY_EINSTEIN_COUPLING_HOLONOMY_PINNED",
   "created": "2026-08-27",
   "updated": "2026-08-28",
   "upstreams": [
@@ -82,11 +82,13 @@
     "RFG3 Wilson continuum/Yang-Mills normalization",
     "RFG4G g_YM^2=1/alpha_c and beta_W=6 alpha_c on same-sector normalization",
     "RFG8 oriented cubic Yang-Mills vertex with explicit sigma_link",
-    "RFG9 four-gluon MHV BCJ amplitude reference",
     "RFG10 project link -> local field -> momentum/polarization binding",
     "RFG11 full noncommuting SU(3) principal-log recovery and plaquette sign audit",
     "RFG12 direct project nonabelian color/momentum convolution",
     "RFG13 quartic Yang-Mills contact normalization from the same Wilson coefficient",
+    "RFG14 gauge-invariant project four-gluon exchange-plus-contact amplitude",
+    "RFG15 project BCJ numerators n_i=X_i+D_i K_i with matched Jacobi",
+    "RFG16 project four-point double copy with kappa_E=(kappa_g/2)^2=8 pi G",
     "RFG7 double-copy factorization invariant Mbar_G=2/kappa_g",
     "RF-N1C three-route Newton/double-copy/Einstein holonomy",
     "RF-N1C3 horizon reduced-scale closure",
@@ -114,6 +116,9 @@
     "validation/gremlin/RFG11_NONCOMMUTING_LINK_LOG_CURVATURE_BINDING_v0.1.md",
     "validation/gremlin/RFG12_NONCOMMUTING_COLOR_MOMENTUM_CONVOLUTION_v0.1.md",
     "validation/gremlin/RFG13_QUARTIC_YANG_MILLS_CONTACT_NORMALIZATION_v0.1.md",
+    "validation/gremlin/RFG14_PROJECT_FOUR_GLUON_EXCHANGE_CONTACT_WARD_GATE_v0.1.md",
+    "validation/gremlin/RFG15_PROJECT_FOUR_GLUON_BCJ_NUMERATOR_BINDING_v0.1.md",
+    "validation/gremlin/RFG16_PROJECT_DOUBLE_COPY_EINSTEIN_COUPLING_GATE_v0.1.md",
     "closure/einstein/RF_E3_DOUBLE_COPY_EINSTEIN_HILBERT_NORMALIZATION.md"
   ],
   "validation_receipts": [
@@ -131,6 +136,9 @@
     "validation/RFG11_NONCOMMUTING_LINK_LOG_CURVATURE_BINDING_V0_1.json",
     "validation/RFG12_NONCOMMUTING_COLOR_MOMENTUM_CONVOLUTION_V0_1.json",
     "validation/RFG13_QUARTIC_YANG_MILLS_CONTACT_NORMALIZATION_V0_1.json",
+    "validation/RFG14_PROJECT_FOUR_GLUON_EXCHANGE_CONTACT_WARD_V0_1.json",
+    "validation/RFG15_PROJECT_FOUR_GLUON_BCJ_NUMERATOR_BINDING_V0_1.json",
+    "validation/RFG16_PROJECT_DOUBLE_COPY_EINSTEIN_COUPLING_V0_1.json",
     "validation/RFE3_EINSTEIN_HILBERT_NORMALIZATION_V0_1.json"
   ],
   "key_source_chain": [
@@ -139,12 +147,11 @@
     "j_theta=2 A^2 omega_Q",
     "rho_theta=A^2 omega_Q^2/c^2",
     "RFG4G: g_YM^2=1/alpha_c and beta_W=6 alpha_c",
-    "RFG8: V3=-sigma_link g f V with upstream sigma_link=+1",
-    "RFG10: W_mu -> A_mu^a -> momentum/polarization",
-    "RFG11: full principal-log SU(3) recovery and F_link=i g[A_mu,A_nu] for upstream orientation",
-    "RFG12: color 1 x color 2 -> color 3 and k_out=k1+-k2 from project plaquette bytes",
-    "RFG13: quartic density=-g^2 Tr[A_mu,A_nu]^2 and C_p D_p/a^4 -> Tr F^2",
-    "RFG9: four-point MHV BCJ reference n_s+n_t+n_u=0",
+    "RFG8/RFG11: orientation-consistent nonabelian local Yang-Mills vertex/curvature",
+    "RFG10-RFG13: project link bytes -> field modes -> nonabelian mixing -> quartic contact",
+    "RFG14: complete project A4 satisfies four-leg Ward identities",
+    "RFG15: c_s-c_t+c_u=0 and n_s-n_t+n_u=0 with n_i=X_i+D_iK_i",
+    "RFG16: M4=i kappa_E sum_i n_i tilde_n_i/D_i and gravitational Ward PASS",
     "RFG7: Mbar_G=M_star/(Gamma_DC g_YM^2)=2/kappa_g",
     "RF-N1C3: Mbar_G^2=M_H T_H",
     "RF-E3: 2/kappa_g^2=1/(2 kappa_E)=1/(16 pi G)"
@@ -155,21 +162,24 @@
       "rfc": "74/74 PASS"
     },
     "current_branch_local_additions": {
-      "rfc": "84/84 PASS",
+      "rfc": "102/102 PASS",
       "idt_01AE": "4/4 PASS"
     },
-    "recent_direct_replay": "RFG10-RFG13: 24/24 PASS",
+    "recent_direct_replay": "RFG14-RFG16: 18/18 PASS",
     "github_actions_current_branch_full_suite": "NOT_EXECUTED"
   },
   "promotion_firewall": {
     "phase_kinetic_source_binding": "PASS_CONDITIONAL",
     "project_beta_W": "PASS_CONDITIONAL_SAME_SECTOR_RFG4G",
     "oriented_cubic_YM_vertex": "PASS_CONDITIONAL_LOCAL_COMPLETION",
-    "four_point_MHV_BCJ_reference": "PASS_REFERENCE",
     "project_link_field_momentum_binding": "PASS_RFG10_RFG11",
     "project_nonabelian_color_momentum_interaction": "PASS_RFG12",
     "quartic_YM_contact_normalization": "PASS_RFG13",
-    "direct_project_four_point_amplitude": "OPEN_EXCHANGE_PLUS_CONTACT_ASSEMBLY",
+    "direct_project_four_point_amplitude": "PASS_RFG14",
+    "project_BCJ_numerator_binding": "PASS_FOUR_POINT_RFG15",
+    "project_four_point_double_copy": "PASS_RFG16",
+    "einstein_coupling_amplitude_match": "PASS_EXACT_RFG16_RFE3",
+    "higher_point_project_BCJ": "OPEN",
     "Gamma_DC": "FACTORIZATION_INVARIANT_PASS_NUMERICAL_PROMOTION_OPEN",
     "M_star_scale": "OPEN_RFN1C2_RFG7_FIREWALL",
     "newton_einstein_normalization_transfer": "PASS_EXACT",
@@ -178,5 +188,5 @@
     "total_matter_stress_energy": "OPEN",
     "dynamic_Lambda0_action": "OPEN"
   },
-  "pinning_rule": "RFC v0.20 pins the phase-energy source handoff, same-sector Yang-Mills normalization, explicit link-orientation convention, direct project noncommuting holonomy-to-field/momentum interaction witnesses, quartic action normalization, BCJ four-point reference, double-copy reduced-scale invariant and Einstein action bridge. The immediate amplitude frontier is one frozen external-state calculation assembling project exchange and quartic contact terms before the RFG9 BCJ comparison. Numerical Gamma_DC and universal G remain independently evidence-gated."
+  "pinning_rule": "RFC v0.21 pins the phase-energy source handoff, same-sector Yang-Mills normalization, direct project holonomy-to-field/momentum witnesses, cubic and quartic interaction normalization, a complete gauge-invariant four-gluon project amplitude, an unfitted matched-Jacobi project numerator representation, and the resulting project four-point double-copy amplitude with exact Einstein coupling prefactor kappa_E=(kappa_g/2)^2=8 pi G. Higher-point project BCJ, numerical Gamma_DC/M_star promotion, cross-system Mbar_G universality, total matter stress-energy and dynamic-Lambda0 action remain independently gated."
 }
