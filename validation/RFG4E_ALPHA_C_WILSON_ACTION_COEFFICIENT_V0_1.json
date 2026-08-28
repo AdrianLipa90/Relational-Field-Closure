@@ -1,0 +1,20 @@
+{
+  "schema": "RFC_RFG4E_ALPHA_C_WILSON_ACTION_COEFFICIENT_V0_1",
+  "status": "PASS_ALGEBRAIC_REFERENCE",
+  "observed_date_utc": "2026-08-28",
+  "reference_test": "tests/reference/test_rfg4e_alpha_c_wilson_action_coefficient.py",
+  "local_result": "5 passed, 0 failed",
+  "exact_identities": [
+    "S_W = (beta_W/3) sum_p D_p for D_p=3-ReTr(U_p)",
+    "beta_W = 3 C_p",
+    "g_0^2 = 2/C_p",
+    "1/g_0^2 = C_p/2",
+    "alpha_c=1/g_0^2 iff C_p=2 alpha_c",
+    "passed binding implies beta_W=6 alpha_c"
+  ],
+  "canonical_alpha_candidate": 0.47483961905223004,
+  "canonical_beta_candidate_if_action_gate_passes": 2.84903771431338,
+  "project_plaquette_action_coefficient": "OPEN",
+  "physical_beta_W_promotion": "OPEN_PENDING_C_p",
+  "numerical_G_target_used_for_selection": false
+}
