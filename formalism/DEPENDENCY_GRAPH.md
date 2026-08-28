@@ -6,9 +6,9 @@ Status: `CURRENT_FRONTIER / CROSS_REFERENCE_LOCK_V0_34`
 TIR/IDT -> RFC conserved carrier / phase-energy source
  -> RF-N1B2K independent RFC↔Noether current/measure audit
  -> RF-N1B2O phase-energy matter-source factorization
- -> RF-N1B2P charge-projected RFC↔Maxwell current intertwiner       ACTIVE
+ -> RF-N1B2P charge-projected RFC↔Maxwell current intertwiner       PASS
  -> RF-E0 EM/matter stress-energy exchange
- -> total-matter T_mn composition
+ -> total-matter T_mn composition                                  NEXT
  -> Einstein source closure
 
 Parallel coupling line:
@@ -42,6 +42,8 @@ For one charge eigenvalue this reduces to
 
 on the RF-N1B2K zero-defect carrier-match surface. The neutral `Q=0` sector remains an exact Maxwell-null control while retaining a finite matter carrier.
 
+Hosted authority for RF-N1B2P: run `33206384854`, job `98968385458`, tested code checkpoint `d37852fd02b26cc0bbb35cc45e43962cce10a753`, `459 passed in 8.77s`. Receipt: `validation/RFN1B2P_CHARGE_PROJECTED_EM_CURRENT_INTERTWINER_V0_1.json`.
+
 For one internal double-copy line, RFG33 uses
 
 \[
@@ -73,7 +75,6 @@ The projector commutes with copy exchange, simultaneous helicity reversal, and a
 ## Open firewalls
 
 ```text
-RF-N1B2P hosted current-intertwiner validation
 RF-N1B2K physical current/measure realization
 complete charged-matter and total-matter T_mn binding
 mu_* physical normalization
