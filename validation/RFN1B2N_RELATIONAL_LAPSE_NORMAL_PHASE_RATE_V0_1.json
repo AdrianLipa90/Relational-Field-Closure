@@ -1,0 +1,24 @@
+{
+  "schema": "RFC_RFN1B2N_RELATIONAL_LAPSE_NORMAL_PHASE_RATE_V0_1",
+  "status": "PASS_ALGEBRAIC_REFERENCE",
+  "observed_date_utc": "2026-08-28",
+  "reference_test": "tests/reference/test_rfn1b2n_relational_lapse_normal_phase_rate.py",
+  "local_result": "5 passed, 0 failed",
+  "identities": [
+    "r_n = r_t / N_R",
+    "D_hat_tau chi = r_n",
+    "epsilon_N = r_n / 2 = r_t / (2 N_R)",
+    "I_A = I_phi and common rate imply Q_theta = P_Phi"
+  ],
+  "fail_closed": [
+    "N_R <= 0 rejected"
+  ],
+  "promotion_state": "EXACT_CONDITIONAL",
+  "inherited_gates": [
+    "calibrated reference clock",
+    "zero-shift temporal coframe",
+    "common gauge-covariant phase pullback",
+    "common inertia/measure support"
+  ],
+  "github_actions_full_suite_executed": false
+}
