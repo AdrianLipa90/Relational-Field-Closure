@@ -1,1 +1,177 @@
-{"schema":"RFC_CROSS_REFERENCE_LOCK_V0_18","status":"RELATIONAL_LAPSE_PHASE_ENERGY_SOURCE_NEWTON_DOUBLE_COPY_EINSTEIN_HOLONOMY_PINNED","created":"2026-08-27","updated":"2026-08-28","upstreams":[{"role":"relational_information_geometry_phase_clock_area_hexahedral_rank3_and_claim_typing","repository":"AdrianLipa90/The-Fundamental-Theory-of-Informational-Relations","ref":"agent/hexahedral-bloch-frame-v0.1","commit":"a2e7003599b13a7b38c0860ecfdcf1c012780c92","interfaces":["TIR/integration/TIR_IDT_INFORMATION_AREA_CURVATURE_V0_2.md","TIR/integration/TIR_HEXAHEDRAL_BLOCH_DUAL_FRAME_V0_1.md","TIR/CLAIM_HIERARCHY.md"]},{"role":"half_spinorial_critical_interface","repository":"AdrianLipa90/Secret-of-a-Half","ref":"main","commit":"206e49e306b246c4b0f4d182b0d32d5511739408"},{"role":"dynamic_time_phase_clock_information_curvature_relational_lapse_and_onsager_response","repository":"AdrianLipa90/Informational-Dynamics-of-Time","ref":"feat/relational-lapse-interface-v0.1","commit":"e3cbcd39f2cc9ea8f3e08f613aa5124de1c4dac4","interfaces":["formalism/00C_relational_density_viscosity.md","formalism/01D_shannon_onsager_response_tensor.md","formalism/01K_temporal_information_curvature_interface.md","formalism/01L_phase_clock_length_scale.md","formalism/05A_internal_elapsed_activity.md","formalism/05C_relational_lapse_interface.md"]},{"role":"shape_euler_noether_local_current_scalar_field_rotor_gauge_lapse_and_phase_energy_source_interface","repository":"AdrianLipa90/Informational-Dynamics-of-Time","ref":"feat/idt-rfc-normalized-shape-holonomy-v0.1","commit":"e6c57b314bcf2e04de679c46c0be309f46cba053","interfaces":["formalism/01X_RFC_normalized_shape_extensive_scale_interface.md","formalism/01Y_phase_intention_energy_per_charge_interface.md","formalism/01Z_noether_collective_phase_carrier_interface.md","formalism/01AA_noether_rfc_conserved_current_binding.md","formalism/01AB_scalar_field_rotor_inertia_reduction.md","formalism/01AC_gauge_covariant_phase_pullback_noether_generator.md","formalism/01AD_relational_lapse_normal_phase_rate.md","formalism/01AE_RFC_phase_energy_source_interface.md","validation/01AE_RFC_PHASE_ENERGY_SOURCE_INTERFACE_V0_1.json"]},{"role":"pncs_source_holonomy_and_gremlin_live_candidate_authoring","repository":"AdrianLipa90/PhaseNav-Natural-Coding-System","ref":"main","commit":"ebdeb9729f21db17bebe4e14302a9687cdc33f4e","contracts":["PNCS_PNV_INFORMATION_HOLONOMY_V0_1","PNCS_PNV_SOURCE_HOLONOMY_LOOPS_V0_1","PNCS_PNV_NOETHER_COLLECTIVE_CARRIER_V0_1","PNCS_PNV_NOETHER_RFC_CURRENT_BINDING_V0_1","PNCS_PNV_SCALAR_FIELD_ROTOR_INERTIA_REDUCTION_V0_1","PNCS_PNV_GAUGE_COVARIANT_PHASE_PULLBACK_V0_1"],"interfaces":["spec/PNCS_GREMLIN_LIVE_AUTHORING_V0_3.md","src/phasenav_natural_code/pnv_source_holonomy_v01.py","src/phasenav_natural_code/pnv_noether_collective_holonomy_v01.py","src/phasenav_natural_code/pnv_noether_rfc_current_holonomy_v01.py","src/phasenav_natural_code/pnv_scalar_field_rotor_reduction_v01.py","src/phasenav_natural_code/pnv_gauge_covariant_phase_pullback_v01.py"],"live_authoring_status":"LIVE_E2E_VALIDATED_CANONICAL_AUTOBOOT_V3","candidate_authority":"CANDIDATE_ONLY","normal_phase_rate_contract_status":"PROPOSED_UPSTREAM_NOT_PRESENT_ON_CURRENT_PNCS_MAIN"}],"document_sources":[{"name":"Lambda_0.pdf","role":"dynamic_lambda0_einstein_maxwell_source"},{"name":"Neutrinotime14.pdf","role":"tensor_scalar_time_and_on_shell_lambda0_conservation"},{"name":"fluid_time.pdf","role":"scalar_time_density_current_continuity_and_time_fluid_stress_energy"},{"name":"noema_fermionic_intention_fields_corrected(4).pdf","role":"fermionic_coupling_source_constraints"},{"name":"Hilbert_Kahler_Phase_Intention_Hamiltonian.pdf","role":"cyclic_phase_coordinate_and_finite_phase_momentum"},{"name":"Phase_Intention_Hamiltonian_Formal_Derivations.tex","role":"Euler_closed_intention_charge_canonical_rotor_energy_and_ABE_covariant_phase_rate"},{"name":"Euler_Noether_Berry_Preference_Formalism_v2.tex","role":"global_U1_current_Berry_connection_and_scalar_field_phase_coefficient"}],"rfc_gates":["formalism/RFL0_TEMPORAL_INFORMATION_CURVATURE_CLOSURE.md","formalism/RF02H_HEXAHEDRAL_RANK3_SPATIAL_METRIC.md","formalism/RF02I_HEXAHEDRAL_COFRAME_CONNECTION.md","formalism/RFN0_RELATIONAL_LAPSE_CLOCK_DYNAMICS.md","formalism/RFN1_HEXAHEDRAL_SOURCE_OPERATOR.md","formalism/RFN1B_SOURCE_TYPE_IDENTIFIABILITY_FIREWALL.md","formalism/RFN1B2_CONSERVED_SOURCE_CARRIER_FACTORIZATION.md","formalism/RFN1B2H_NORMALIZED_SHAPE_HOLONOMY.md","formalism/RFN1B2I_PHASE_INTENTION_ENERGY_PER_CHARGE.md","formalism/RFN1B2J_NOETHER_COLLECTIVE_PHASE_CARRIER.md","formalism/RFN1B2K_NOETHER_RFC_CONSERVED_CURRENT_BINDING.md","formalism/RFN1B2L_SCALAR_FIELD_ROTOR_INERTIA_REDUCTION.md","formalism/RFN1B2M_GAUGE_COVARIANT_PHASE_PULLBACK_NOETHER_GENERATOR.md","formalism/RFN1B2N_RELATIONAL_LAPSE_NORMAL_PHASE_RATE.md","formalism/RFN1B2O_PHASE_ENERGY_CURRENT_SOURCE_BINDING.md","formalism/RFN1C_THREE_ROUTE_COUPLING_HOLONOMY.md","formalism/RFN1C1_PHASE_SOURCE_SPECIALIZATION.md","formalism/RFN1C2_CARRIER_SCALE_UNIVERSALITY_FIREWALL.md","formalism/RFN1C3_REDUCED_GRAVITY_SCALE_HORIZON_CLOSURE.md","closure/einstein/RF_E3_DOUBLE_COPY_EINSTEIN_HILBERT_NORMALIZATION.md"],"validation_receipts":["validation/RFL0_PHASE_CLOCK_SCALE_V0_2.json","validation/RF02H_HEXAHEDRAL_RANK3_V0_1.json","validation/RF02I_COFRAME_CONNECTION_V0_1.json","validation/RFN0_RELATIONAL_LAPSE_V0_1.json","validation/RFN1_HEXAHEDRAL_SOURCE_OPERATOR_V0_1.json","validation/RFN1B_SOURCE_TYPE_FIREWALL_V0_1.json","validation/RFN1B2_CONSERVED_SOURCE_CARRIER_V0_1.json","validation/RFN1B2H_NORMALIZED_SHAPE_HOLONOMY_V0_1.json","validation/IDT_RFC_PNCS_SOURCE_HOLONOMY_PAIR_V0_1.json","validation/RFN1B2N_RELATIONAL_LAPSE_NORMAL_PHASE_RATE_V0_1.json","validation/RFN1B2O_PHASE_ENERGY_CURRENT_SOURCE_BINDING_V0_1.json","validation/RFN1C_THREE_ROUTE_COUPLING_HOLONOMY_V0_1.json","validation/RFN1C1_PHASE_SOURCE_SPECIALIZATION_V0_1.json","validation/RFN1C2_CARRIER_SCALE_UNIVERSALITY_FIREWALL_V0_1.json","validation/RFN1C3_REDUCED_GRAVITY_SCALE_HORIZON_CLOSURE_V0_1.json","validation/RFE3_EINSTEIN_HILBERT_NORMALIZATION_V0_1.json"],"key_source_chain":["N_R=d tau_x/d tau_ref","omega_Q=D_hat_tau chi=D_t chi/N_R","epsilon_N=omega_Q/2","j_theta=2 A^2 omega_Q","E_theta=epsilon_N j_theta=A^2 omega_Q^2","rho_theta=E_theta/c^2","RF-N1C: Newton source <-> double copy <-> Einstein/horizon","RF-N1C1: S_R^DC=72 Gamma_DC^2 A^2/beta_W^2","RF-N1C2: Mbar_G=M_star/(Gamma_DC g_YM^2)","RF-N1C3: Mbar_G^2=M_H kappa_H/(2 pi)=M_H T_H","RF-E3: 2/kappa_g^2=1/(2 kappa_E)=1/(16 pi G)"],"validation_state":{"historical_full_suite_provenance":{"idt":"382/382 PASS","rfc":"74/74 PASS"},"current_branch_local_additions":{"rfc":"27/27 PASS","idt_01AE":"4/4 PASS"},"github_actions_current_branch_full_suite":"NOT_EXECUTED"},"promotion_firewall":{"phase_kinetic_source_binding":"PASS_CONDITIONAL","newton_einstein_normalization_transfer":"PASS_EXACT","einstein_hilbert_prefactor_transfer":"PASS_EXACT","local_source_double_copy_holonomy":"PASS_ALGEBRAIC","universal_G":"OPEN_CROSS_SYSTEM_EVIDENCE","project_beta_W":"OPEN_PHYSICAL_NORMALIZATION","project_BCJ_numerators":"OPEN_BINDING","Gamma_DC":"OPEN_PHYSICAL_NORMALIZATION","M_star_scale":"OPEN_RFN1C2_FIREWALL","total_matter_stress_energy":"OPEN","dynamic_Lambda0_action":"OPEN"},"pinning_rule":"RFC v0.18 pins IDT 01AD/01AE phase-rate and phase-energy source handoff, current PNCS main source-holonomy implementation and GREMLIN live-authoring v0.3 provenance. Phase-source factorization is exact conditional on its admitted field/clock sector; Newton/Einstein coefficient transfer is exact algebra on stated conventions; universal G remains a zero-fit cross-system evidence gate."}
+{
+  "schema": "RFC_CROSS_REFERENCE_LOCK_V0_19",
+  "status": "RELATIONAL_LAPSE_PHASE_SOURCE_YM_NORMALIZATION_DOUBLE_COPY_FACTOR_INVARIANT_EINSTEIN_HOLONOMY_PINNED",
+  "created": "2026-08-27",
+  "updated": "2026-08-28",
+  "upstreams": [
+    {
+      "role": "relational_information_geometry_phase_clock_area_hexahedral_rank3_and_claim_typing",
+      "repository": "AdrianLipa90/The-Fundamental-Theory-of-Informational-Relations",
+      "ref": "agent/hexahedral-bloch-frame-v0.1",
+      "commit": "a2e7003599b13a7b38c0860ecfdcf1c012780c92",
+      "interfaces": [
+        "TIR/integration/TIR_IDT_INFORMATION_AREA_CURVATURE_V0_2.md",
+        "TIR/integration/TIR_HEXAHEDRAL_BLOCH_DUAL_FRAME_V0_1.md",
+        "TIR/CLAIM_HIERARCHY.md"
+      ]
+    },
+    {
+      "role": "half_spinorial_critical_interface",
+      "repository": "AdrianLipa90/Secret-of-a-Half",
+      "ref": "main",
+      "commit": "206e49e306b246c4b0f4d182b0d32d5511739408"
+    },
+    {
+      "role": "dynamic_time_phase_clock_information_curvature_relational_lapse_and_onsager_response",
+      "repository": "AdrianLipa90/Informational-Dynamics-of-Time",
+      "ref": "feat/relational-lapse-interface-v0.1",
+      "commit": "e3cbcd39f2cc9ea8f3e08f613aa5124de1c4dac4",
+      "interfaces": [
+        "formalism/00C_relational_density_viscosity.md",
+        "formalism/01D_shannon_onsager_response_tensor.md",
+        "formalism/01K_temporal_information_curvature_interface.md",
+        "formalism/01L_phase_clock_length_scale.md",
+        "formalism/05A_internal_elapsed_activity.md",
+        "formalism/05C_relational_lapse_interface.md"
+      ]
+    },
+    {
+      "role": "shape_euler_noether_local_current_scalar_field_rotor_gauge_lapse_and_phase_energy_source_interface",
+      "repository": "AdrianLipa90/Informational-Dynamics-of-Time",
+      "ref": "feat/idt-rfc-normalized-shape-holonomy-v0.1",
+      "commit": "e6c57b314bcf2e04de679c46c0be309f46cba053",
+      "interfaces": [
+        "formalism/01X_RFC_normalized_shape_extensive_scale_interface.md",
+        "formalism/01Y_phase_intention_energy_per_charge_interface.md",
+        "formalism/01Z_noether_collective_phase_carrier_interface.md",
+        "formalism/01AA_noether_rfc_conserved_current_binding.md",
+        "formalism/01AB_scalar_field_rotor_inertia_reduction.md",
+        "formalism/01AC_gauge_covariant_phase_pullback_noether_generator.md",
+        "formalism/01AD_relational_lapse_normal_phase_rate.md",
+        "formalism/01AE_RFC_phase_energy_source_interface.md",
+        "validation/01AE_RFC_PHASE_ENERGY_SOURCE_INTERFACE_V0_1.json"
+      ]
+    },
+    {
+      "role": "pncs_source_holonomy_and_gremlin_live_candidate_authoring",
+      "repository": "AdrianLipa90/PhaseNav-Natural-Coding-System",
+      "ref": "main",
+      "commit": "ebdeb9729f21db17bebe4e14302a9687cdc33f4e",
+      "contracts": [
+        "PNCS_PNV_INFORMATION_HOLONOMY_V0_1",
+        "PNCS_PNV_SOURCE_HOLONOMY_LOOPS_V0_1",
+        "PNCS_PNV_NOETHER_COLLECTIVE_CARRIER_V0_1",
+        "PNCS_PNV_NOETHER_RFC_CURRENT_BINDING_V0_1",
+        "PNCS_PNV_SCALAR_FIELD_ROTOR_INERTIA_REDUCTION_V0_1",
+        "PNCS_PNV_GAUGE_COVARIANT_PHASE_PULLBACK_V0_1"
+      ],
+      "interfaces": [
+        "spec/PNCS_GREMLIN_LIVE_AUTHORING_V0_3.md",
+        "src/phasenav_natural_code/pnv_source_holonomy_v01.py",
+        "src/phasenav_natural_code/pnv_noether_collective_holonomy_v01.py",
+        "src/phasenav_natural_code/pnv_noether_rfc_current_holonomy_v01.py",
+        "src/phasenav_natural_code/pnv_scalar_field_rotor_reduction_v01.py",
+        "src/phasenav_natural_code/pnv_gauge_covariant_phase_pullback_v01.py"
+      ],
+      "live_authoring_status": "LIVE_E2E_VALIDATED_CANONICAL_AUTOBOOT_V3",
+      "candidate_authority": "CANDIDATE_ONLY",
+      "normal_phase_rate_contract_status": "PROPOSED_UPSTREAM_NOT_PRESENT_ON_CURRENT_PNCS_MAIN"
+    }
+  ],
+  "document_sources": [
+    {"name": "Lambda_0.pdf", "role": "dynamic_lambda0_einstein_maxwell_source"},
+    {"name": "Neutrinotime14.pdf", "role": "tensor_scalar_time_and_on_shell_lambda0_conservation"},
+    {"name": "fluid_time.pdf", "role": "scalar_time_density_current_continuity_and_time_fluid_stress_energy"},
+    {"name": "noema_fermionic_intention_fields_corrected(4).pdf", "role": "fermionic_coupling_source_constraints"},
+    {"name": "Hilbert_Kahler_Phase_Intention_Hamiltonian.pdf", "role": "cyclic_phase_coordinate_and_finite_phase_momentum"},
+    {"name": "Phase_Intention_Hamiltonian_Formal_Derivations.tex", "role": "Euler_closed_intention_charge_canonical_rotor_energy_and_ABE_covariant_phase_rate"},
+    {"name": "Euler_Noether_Berry_Preference_Formalism_v2.tex", "role": "global_U1_current_Berry_connection_and_scalar_field_phase_coefficient"}
+  ],
+  "rfc_gates": [
+    "formalism/RFL0_TEMPORAL_INFORMATION_CURVATURE_CLOSURE.md",
+    "formalism/RF02H_HEXAHEDRAL_RANK3_SPATIAL_METRIC.md",
+    "formalism/RF02I_HEXAHEDRAL_COFRAME_CONNECTION.md",
+    "formalism/RFN0_RELATIONAL_LAPSE_CLOCK_DYNAMICS.md",
+    "formalism/RFN1_HEXAHEDRAL_SOURCE_OPERATOR.md",
+    "formalism/RFN1B_SOURCE_TYPE_IDENTIFIABILITY_FIREWALL.md",
+    "formalism/RFN1B2_CONSERVED_SOURCE_CARRIER_FACTORIZATION.md",
+    "formalism/RFN1B2H_NORMALIZED_SHAPE_HOLONOMY.md",
+    "formalism/RFN1B2I_PHASE_INTENTION_ENERGY_PER_CHARGE.md",
+    "formalism/RFN1B2J_NOETHER_COLLECTIVE_PHASE_CARRIER.md",
+    "formalism/RFN1B2K_NOETHER_RFC_CONSERVED_CURRENT_BINDING.md",
+    "formalism/RFN1B2L_SCALAR_FIELD_ROTOR_INERTIA_REDUCTION.md",
+    "formalism/RFN1B2M_GAUGE_COVARIANT_PHASE_PULLBACK_NOETHER_GENERATOR.md",
+    "formalism/RFN1B2N_RELATIONAL_LAPSE_NORMAL_PHASE_RATE.md",
+    "formalism/RFN1B2O_PHASE_ENERGY_CURRENT_SOURCE_BINDING.md",
+    "formalism/RFN1C_THREE_ROUTE_COUPLING_HOLONOMY.md",
+    "formalism/RFN1C1_PHASE_SOURCE_SPECIALIZATION.md",
+    "formalism/RFN1C2_CARRIER_SCALE_UNIVERSALITY_FIREWALL.md",
+    "formalism/RFN1C3_REDUCED_GRAVITY_SCALE_HORIZON_CLOSURE.md",
+    "validation/gremlin/RFG4G_ALPHA_C_HOLONOMY_CONTINUUM_WILSON_TRANSFER_v0.1.md",
+    "validation/gremlin/RFG7_DOUBLE_COPY_FACTORIZATION_INVARIANT_v0.1.md",
+    "closure/einstein/RF_E3_DOUBLE_COPY_EINSTEIN_HILBERT_NORMALIZATION.md"
+  ],
+  "validation_receipts": [
+    "validation/RFL0_PHASE_CLOCK_SCALE_V0_2.json",
+    "validation/RF02H_HEXAHEDRAL_RANK3_V0_1.json",
+    "validation/RF02I_COFRAME_CONNECTION_V0_1.json",
+    "validation/RFN0_RELATIONAL_LAPSE_V0_1.json",
+    "validation/RFN1_HEXAHEDRAL_SOURCE_OPERATOR_V0_1.json",
+    "validation/RFN1B_SOURCE_TYPE_FIREWALL_V0_1.json",
+    "validation/RFN1B2_CONSERVED_SOURCE_CARRIER_V0_1.json",
+    "validation/RFN1B2H_NORMALIZED_SHAPE_HOLONOMY_V0_1.json",
+    "validation/IDT_RFC_PNCS_SOURCE_HOLONOMY_PAIR_V0_1.json",
+    "validation/RFN1B2N_RELATIONAL_LAPSE_NORMAL_PHASE_RATE_V0_1.json",
+    "validation/RFN1B2O_PHASE_ENERGY_CURRENT_SOURCE_BINDING_V0_1.json",
+    "validation/RFN1C_THREE_ROUTE_COUPLING_HOLONOMY_V0_1.json",
+    "validation/RFN1C1_PHASE_SOURCE_SPECIALIZATION_V0_1.json",
+    "validation/RFN1C2_CARRIER_SCALE_UNIVERSALITY_FIREWALL_V0_1.json",
+    "validation/RFN1C3_REDUCED_GRAVITY_SCALE_HORIZON_CLOSURE_V0_1.json",
+    "validation/RFG4E_ALPHA_C_WILSON_ACTION_COEFFICIENT_V0_1.json",
+    "validation/RFG4F_HOLONOMIC_LINK_COUPLING_RESCALE_FIREWALL_V0_1.json",
+    "validation/RFG4G_ALPHA_C_HOLONOMY_CONTINUUM_WILSON_TRANSFER_V0_1.json",
+    "validation/RFG7_DOUBLE_COPY_FACTORIZATION_INVARIANT_V0_1.json",
+    "validation/RFE3_EINSTEIN_HILBERT_NORMALIZATION_V0_1.json"
+  ],
+  "key_source_chain": [
+    "N_R=d tau_x/d tau_ref",
+    "omega_Q=D_hat_tau chi=D_t chi/N_R",
+    "epsilon_N=omega_Q/2",
+    "j_theta=2 A^2 omega_Q",
+    "E_theta=epsilon_N j_theta=A^2 omega_Q^2",
+    "rho_theta=E_theta/c^2",
+    "RFG4G: g_YM^2=1/alpha_c and beta_W=6 alpha_c on same-sector normalization",
+    "RF-N1C: Newton source <-> double copy <-> Einstein/horizon",
+    "RF-N1C1: S_R^DC=72 Gamma_DC^2 A^2/beta_W^2",
+    "RF-N1C2: Mbar_G=M_star/(Gamma_DC g_YM^2)",
+    "RFG7: Mbar_G=2/kappa_g and G=1/(8 pi Mbar_G^2)",
+    "RF-N1C3: Mbar_G^2=M_H kappa_H/(2 pi)=M_H T_H",
+    "RFG7 horizon factorization: Gamma_DC=alpha_c M_star/sqrt(M_H T_H)",
+    "RF-E3: 2/kappa_g^2=1/(2 kappa_E)=1/(16 pi G)"
+  ],
+  "validation_state": {
+    "historical_full_suite_provenance": {
+      "idt": "382/382 PASS",
+      "rfc": "74/74 PASS"
+    },
+    "current_branch_local_additions": {
+      "rfc": "50/50 PASS",
+      "idt_01AE": "4/4 PASS"
+    },
+    "github_actions_current_branch_full_suite": "NOT_EXECUTED"
+  },
+  "promotion_firewall": {
+    "phase_kinetic_source_binding": "PASS_CONDITIONAL",
+    "newton_einstein_normalization_transfer": "PASS_EXACT",
+    "einstein_hilbert_prefactor_transfer": "PASS_EXACT",
+    "local_source_double_copy_holonomy": "PASS_ALGEBRAIC",
+    "project_beta_W": "PASS_CONDITIONAL_SAME_SECTOR_RFG4G",
+    "project_BCJ_numerators": "OPEN_BINDING",
+    "Gamma_DC": "FACTORIZATION_INVARIANT_PASS_NUMERICAL_PROMOTION_OPEN",
+    "M_star_scale": "OPEN_RFN1C2_RFG7_FIREWALL",
+    "universal_G": "OPEN_CROSS_SYSTEM_EVIDENCE",
+    "total_matter_stress_energy": "OPEN",
+    "dynamic_Lambda0_action": "OPEN"
+  },
+  "pinning_rule": "RFC v0.19 pins IDT 01AD/01AE phase-rate and phase-energy source handoff, current PNCS source-holonomy/GREMLIN live-authoring provenance, RFG4G same-sector Yang-Mills normalization transfer, and RFG7 double-copy factorization invariance. beta_W is conditionally transferred as 6 alpha_c on the admitted common SU(3) normalization; the invariant gravity coordinate is Mbar_G=2/kappa_g. Numerical Gamma_DC and universal G remain evidence-gated by independently normalized M_star and reduced-scale/horizon data."
+}
