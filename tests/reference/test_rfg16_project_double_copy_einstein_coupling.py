@@ -55,8 +55,7 @@ def gravity_core(ps, es_a, es_b):
 
 
 def gravity_amplitude(ps, es_a, es_b, kappa_g):
-    kappa_e = kappa_g * kappa_g / 4.0
-    return kappa_e * gravity_core(ps, es_a, es_b)
+    return -1j * (kappa_g / 4.0) ** 2 * gravity_core(ps, es_a, es_b)
 
 
 def kinematics(theta, energy=1.0):
@@ -128,20 +127,22 @@ def test_project_double_copy_is_nonzero_on_physical_witness():
     assert abs(gravity_core(ps, ea, eb)) > 1e-3
 
 
-def test_four_point_prefactor_is_exactly_einstein_coupling():
+def test_physical_einstein_coupling_and_project_core_prefactor_are_distinct():
     for kappa_g in (0.1, 0.37, 1.0, 2.4):
         G = kappa_g * kappa_g / (32.0 * math.pi)
         kappa_e = 8.0 * math.pi * G
         mbar = 2.0 / kappa_g
-        assert math.isclose((kappa_g / 2.0) ** 2, kappa_e, rel_tol=2e-15)
+        assert math.isclose(kappa_g * kappa_g / 4.0, kappa_e, rel_tol=2e-15)
+        assert math.isclose((kappa_g / 4.0) ** 2, kappa_e / 4.0, rel_tol=2e-15)
         assert math.isclose(kappa_e, 1.0 / (mbar * mbar), rel_tol=2e-15)
         assert math.isclose(G, 1.0 / (8.0 * math.pi * mbar * mbar), rel_tol=2e-15)
 
 
-def test_gravity_amplitude_scales_with_kappa_e():
+def test_gravity_amplitude_uses_corrected_project_normalized_prefactor():
     ps, ea = polarizations(1.1, [0.1, 0.2, -0.3, 0.4])
     _, eb = polarizations(1.1, [0.2, -0.4, 0.1, 0.3])
     core = gravity_core(ps, ea, eb)
     for kappa_g in (0.3, 0.7, 1.4):
         amp = gravity_amplitude(ps, ea, eb, kappa_g)
-        assert math.isclose(amp, (kappa_g * kappa_g / 4.0) * core, rel_tol=2e-15, abs_tol=2e-15)
+        kappa_e = kappa_g * kappa_g / 4.0
+        assert abs(amp - (-1j) * (kappa_e / 4.0) * core) < 2e-15 * max(1.0, abs(amp), abs(core))
