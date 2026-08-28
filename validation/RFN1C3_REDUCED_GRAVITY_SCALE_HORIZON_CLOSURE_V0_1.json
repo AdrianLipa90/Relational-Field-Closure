@@ -1,0 +1,17 @@
+{
+  "schema": "RFC_RFN1C3_REDUCED_GRAVITY_SCALE_HORIZON_CLOSURE_V0_1",
+  "status": "PASS_ALGEBRAIC_REFERENCE",
+  "observed_date_utc": "2026-08-28",
+  "reference_test": "tests/reference/test_rfn1c3_reduced_gravity_scale_horizon_closure.py",
+  "local_result": "5 passed, 0 failed",
+  "exact_identities": [
+    "Mbar_G^2 = M_H kappa_H/(2 pi)",
+    "Mbar_G^2 = M_H T_H",
+    "Mbar_G^DC = M_star/(Gamma_DC g_YM^2)",
+    "Mbar_G^local = beta_W omega_Q/(12 Gamma_DC)",
+    "local-horizon equality reproduces beta_W^2 omega_Q^2 = 144 Gamma_DC^2 M_H T_H"
+  ],
+  "adversarial_temperature_perturbation_detected": true,
+  "physical_horizon_provenance": "OPEN",
+  "numerical_G_target_used_for_selection": false
+}
