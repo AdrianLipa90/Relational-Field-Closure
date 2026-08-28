@@ -1,0 +1,20 @@
+{
+  "schema": "RFC_RFE4_PHASE_KINETIC_STRESS_ENERGY_FIREWALL_V0_1",
+  "status": "PASS_EXACT_PHASE_STRESS_TENSOR_PRESSURE_FIREWALL",
+  "observed_date_utc": "2026-08-28",
+  "reference_test": "tests/reference/test_rfe4_phase_kinetic_stress_energy_firewall.py",
+  "local_result": "6 passed, 0 failed",
+  "identities": [
+    "T_mu_nu^phase = 2 A^2 q_mu q_nu - g_mu_nu A^2 q^2",
+    "pure normal phase: T_00 = K = E_theta",
+    "pure normal phase: p_x=p_y=p_z=K",
+    "phase-only active Einstein source epsilon+3p = 4K",
+    "homogeneous potential completion: epsilon=K+V, p=K-V, epsilon+3p=4K-2V",
+    "dust surface V=K",
+    "preserve phase-K as active source surface V=3K/2"
+  ],
+  "rfn1b2o_energy_density_match": true,
+  "total_matter_stress_energy": "OPEN",
+  "newton_source_promotion": "PRESSURE_STRESS_GATE_REQUIRED",
+  "gravity_output_used_for_selection": false
+}
