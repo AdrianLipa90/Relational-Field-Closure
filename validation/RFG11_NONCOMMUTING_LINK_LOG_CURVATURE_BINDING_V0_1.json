@@ -1,0 +1,22 @@
+{
+  "schema": "RFC_RFG11_NONCOMMUTING_LINK_LOG_CURVATURE_BINDING_V0_1",
+  "status": "PASS_PRINCIPAL_BRANCH_REFERENCE",
+  "observed_date_utc": "2026-08-28",
+  "reference_test": "tests/reference/test_rfg11_noncommuting_link_log_curvature_binding.py",
+  "local_result": "6 passed, 0 failed",
+  "checks": [
+    "Gell-Mann Gram matrix equals 2 delta_ab",
+    "all eight local SU(3) field components recover from principal link log",
+    "noncommuting lambda_1/lambda_2 superposition recovers",
+    "upstream-oriented plaquette converges to i g [A_x,A_y]",
+    "principal link-log field transforms by adjoint conjugation",
+    "branch-alias risk is rejected by the principal-domain firewall"
+  ],
+  "upstream_link_orientation": "sigma_link=+1",
+  "component_commutator_sign": "-g f^{abc} A_x^b A_y^c",
+  "random_full_su3_recovery_samples": 100,
+  "random_seed": 20260828,
+  "gravity_output_used_for_selection": false,
+  "direct_noncommuting_momentum_mode_assembly": "OPEN_NEXT_FRONTIER",
+  "project_four_point_amplitude": "OPEN"
+}
