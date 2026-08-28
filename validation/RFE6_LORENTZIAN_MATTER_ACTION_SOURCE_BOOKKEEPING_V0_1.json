@@ -1,0 +1,75 @@
+{
+  "schema": "RFC_RFE6_LORENTZIAN_MATTER_ACTION_SOURCE_BOOKKEEPING_V0_1",
+  "status": "PASS_CORRECTION_AUTHORITY",
+  "date": "2026-08-28",
+  "repository": "AdrianLipa90/Relational-Field-Closure",
+  "branch": "fix/rfe4-rfm4-lorentzian-action-sign-v0.1",
+  "base_main_commit": "ad6133b59ff279e5062fb570017123d835994126",
+  "tested_commit": "3083337b15742d9aebae802469aa93c17109aeb8",
+  "pull_request": 16,
+  "workflow": {
+    "name": "RFC reference suite",
+    "run_id": 33207514670,
+    "job_id": 98972226978,
+    "result": "470/470 PASS",
+    "elapsed": "11.80s",
+    "python": "3.12.14",
+    "runner_os": "Ubuntu 24.04.4"
+  },
+  "focused_rfe6": {
+    "file": "tests/reference/test_rfe6_lorentzian_matter_action_source_bookkeeping.py",
+    "tests": 11,
+    "status": "PASS",
+    "gates": [
+      "canonical RFC metric signature (-,+,+,+)",
+      "positive homogeneous scalar energy",
+      "finite-difference matter variation delta_L/delta_A = -J_Q/hbar",
+      "microscopic Maxwell current J_EM = +J_Q/hbar",
+      "single source-ledger equivalence and double-count adversarial control",
+      "RF-E4 energy/pressure relations preserved under signature transfer",
+      "RF-E5 on-shell dust/factor-two relations preserved",
+      "neutral Q=0 Maxwell-null control with finite matter action",
+      "EM/matter stress-energy exchange cancellation",
+      "mu_star/alpha_EM unit-normalization roundtrip",
+      "zero-hbar fail-closed handling"
+    ]
+  },
+  "correction_provenance": {
+    "canonical_signature_authority": "formalism/RFG0_LORENTZIAN_SIGNATURE_GATE.md",
+    "corrected_interfaces": [
+      "closure/maxwell/RF_M4_CHARGE_PROJECTED_NOETHER_MAXWELL_SOURCE.md",
+      "formalism/RFN1B2P_CHARGE_PROJECTED_EM_CURRENT_INTERTWINER.md",
+      "formalism/RFN1B2L_SCALAR_FIELD_ROTOR_INERTIA_REDUCTION.md",
+      "formalism/RFN1B2O_PHASE_ENERGY_CURRENT_SOURCE_BINDING.md",
+      "closure/einstein/RF_E0_AB_MAXWELL_STRESS_ENERGY_BRIDGE.md",
+      "closure/einstein/RF_E4_PHASE_KINETIC_STRESS_ENERGY_FIREWALL.md",
+      "closure/einstein/RF_E5_ONSHELL_SCALAR_CARRIER_ENERGY_FIREWALL.md",
+      "closure/einstein/RF_E6_LORENTZIAN_MATTER_ACTION_SOURCE_BOOKKEEPING_FIREWALL.md"
+    ],
+    "historical_receipt_retained": "validation/RFN1B2P_CHARGE_PROJECTED_EM_CURRENT_INTERTWINER_V0_1.json",
+    "superseded_coordinate": "RF-N1B2P v0.1 Maxwell-current sign under the previously mixed scalar-action/signature convention",
+    "correction_authority": "RF-E6 fixes the active RFC matter/action convention to (-,+,+,+), with J_EM=+J_Q/hbar for D_mu=nabla_mu+i A_mu Q/hbar and Psi'=exp(iQ Lambda/hbar)Psi, A'=A-dLambda"
+  },
+  "exact": [
+    "signature/action alignment",
+    "matter-variation current sign",
+    "charge-projected current composition at the action-convention level",
+    "microscopic versus effective source-ledger equivalence",
+    "charged-matter stress tensor variation",
+    "EM/matter exchange cancellation on shell",
+    "RF-E4/RF-E5 signature transfer",
+    "mu_star unit-convention conversion"
+  ],
+  "conditional": [
+    "physical RF-N1B2K carrier/measure realization",
+    "charged matter equations of motion for local exchange closure",
+    "physical alpha_EM input when calibrating mu_star numerically in SI"
+  ],
+  "open": [
+    "total matter stress-energy composition across all admitted sectors",
+    "first-principles alpha_EM prediction if pursued",
+    "cross-system physical G universality",
+    "independent dynamic Lambda0 action and stability",
+    "full Einstein/unified-limit audit"
+  ]
+}
