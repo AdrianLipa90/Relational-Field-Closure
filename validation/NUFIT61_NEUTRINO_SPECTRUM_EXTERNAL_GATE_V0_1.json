@@ -1,0 +1,24 @@
+{
+  "schema": "RFC_NUFIT61_NEUTRINO_SPECTRUM_EXTERNAL_GATE_V0_1",
+  "status": "DOWNSTREAM_NEUTRINO_EVIDENCE__NON_PROMOTING",
+  "date": "2026-08-28",
+  "rfc_base_commit": "01240c9d1f022cf59105b00ab15db1954e7f497a",
+  "source_evidence": {
+    "gremlin_branch": "feat/gremlin-nufit61-correlated-ratio-line-v2.6",
+    "gremlin_commit": "b9b20f573b95d63cc069cbd0aedfa01f56a28f89",
+    "receipt": "provenance/NUFIT61_TIR_RATIO33_CORRELATED_SURFACE_RECEIPT_V2_6.json",
+    "exact_relation": "Delta_m31^2 = 33 Delta_m21^2",
+    "TBoff_NO_delta_chi2_min": 0.9902209322450616,
+    "TByes_NO_delta_chi2_min": 0.44097506178386237
+  },
+  "rfc_role": {
+    "consumer_scope": "downstream neutrino-spectrum evidence for relational-field closure tests",
+    "RF_N1B2M_gauge_pullback_unchanged": true,
+    "RF_N1B2N_lapse_normal_phase_rate_unchanged": true,
+    "lambda_source_binding_promoted": false,
+    "current_promotion_promoted": false,
+    "geometry_to_neutrino_spectrum_binding_promoted": false
+  },
+  "next_gate": "A future RFC bridge must predict or constrain the admitted neutrino spectrum from the relational source/connection chain before this evidence can constrain RFC source closure.",
+  "claim_promotion": false
+}
