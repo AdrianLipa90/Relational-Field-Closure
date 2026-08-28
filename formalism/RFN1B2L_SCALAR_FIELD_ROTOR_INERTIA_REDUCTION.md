@@ -1,42 +1,52 @@
 # RF-N1B2L — Scalar-Field → Rotor Inertia Reduction Gate
 
-Status: `EXACT_COLLECTIVE_REDUCTION_PASS_CONDITIONAL / PHASE_RATE_BINDING_OPEN / COMMON_MEASURE_BINDING_OPEN`
+Status: `EXACT_COLLECTIVE_REDUCTION_PASS_CONDITIONAL / RF_E6_LORENTZIAN_SIGN_ALIGNMENT_PASS / PHASE_RATE_BINDING_OPEN / COMMON_MEASURE_BINDING_OPEN`
 
-RF-N1B2L consumes IDT 01AB and fixes the rotor inertia through the collective-coordinate reduction of the same Euler–Noether scalar phase field once the common phase/rate/measure/support premises are admitted.
+RF-N1B2L consumes the scalar phase carrier and fixes the rotor inertia through the collective-coordinate reduction of the same Euler–Noether phase field once the common phase/rate/measure/support premises are admitted.
 
 ## 1. Upstream scalar-field coefficient
 
-For
+With the canonical RFC signature `(-,+,+,+)`, use
 
 \[
-\mathcal L=\partial_\mu\psi^*\partial^\mu\psi-V(|\psi|^2),
+\boxed{
+\mathcal L=-\partial_\mu\psi^*\partial^\mu\psi-V(|\psi|^2),
 \qquad
-\psi=Ae^{i\vartheta},
+\psi=Ae^{i\vartheta}.
+}
 \]
 
-the phase kinetic sector is
+The pure phase sector is
 
 \[
-A^2(\partial_\mu\vartheta)(\partial^\mu\vartheta)
+\boxed{
+\mathcal L_{phase}=-A^2(\partial_\mu\vartheta)(\partial^\mu\vartheta).
+}
 \]
 
-and
+The phase Noether current is oriented as
 
 \[
-J_\vartheta^\mu=2A^2\partial^\mu\vartheta.
+\boxed{
+J_\vartheta^\mu=2A^2\partial^\mu\vartheta
+}
 \]
 
-On the collective phase mode identified with the rotor coordinate and rate,
+with the sign convention synchronized to RF-M4/RF-E6.
+
+On a pure normal collective phase mode,
 
 \[
 D_\tau\vartheta\leftrightarrow D_\tau\chi,
 \]
 
-the integrated pure phase-rate term is
+the Lorentzian contraction contributes a negative `q^2`, so the reduced one-dimensional kinetic term is positive:
 
 \[
+\boxed{
 L_{\rm phase}^{field}
 =\int_\Sigma A^2(D_\tau\chi)^2dV_h.
+}
 \]
 
 Define
@@ -75,7 +85,7 @@ Matching the same collective quadratic phase mode on the same measure gives
 
 The linear intention term leaves this quadratic coefficient unchanged.
 
-Therefore the RF-N1B2J inertia coordinate
+Therefore
 
 \[
 \Delta_I^{J}=\left|\frac{I_A}{I_\phi}-1\right|
@@ -134,11 +144,11 @@ Therefore
 =\boxed{\frac12D_\tau\chi}.
 \]
 
-The admitted collective reduction therefore fixes the rotor-inertia contribution to the source normalization.
+The canonical Lorentzian sign therefore reproduces the same positive reduced rotor energy used by the downstream source normalization.
 
 ## 5. Remaining interface conditions
 
-The exact coefficient theorem is conditional on one common reduction:
+The coefficient theorem is conditional on one common reduction:
 
 ```text
 same scalar phase mode theta <-> chi                 OPEN interface binding
@@ -150,35 +160,25 @@ Delta_I^J                                             ZERO EXACT after binding
 Q_theta = P_Phi                                      PASS EXACT CONDITIONAL
 ```
 
-Thus the common reduction premises determine the inertia equality before downstream RFC current promotion.
+## 6. Relation to RF-N1B2K / RF-E6
 
-## 6. Relation to RF-N1B2K
+RF-N1B2K independently audits the physical RFC carrier against the phase Noether carrier. RF-E6 fixes the covariant action sign and the corresponding Maxwell charge-projection sign while preserving the rotor reduction.
 
-RF-N1B2K independently audits the physical RFC current bridge
-
-\[
-J_Q^\mu\stackrel{?}{\longleftrightarrow}J_\vartheta^\mu
-\]
-
-through \(\Delta_J,\Delta_V,\Delta_\Sigma\) and side flux.
-
-After RF-N1B2L and RF-N1B2K pass on the same physical carrier sector,
+After the admitted carrier and reduction gates close on the same physical sector,
 
 \[
 \boxed{Q_\Sigma=Q_\vartheta=P_\Phi^{EB}}
 \]
 
-and the RFC normalization candidate becomes
+and
 
 \[
 \boxed{\epsilon_Q=\frac12D_\tau\chi.}
 \]
 
-Physical promotion of the current/state-space binding remains downstream of the measured RF-N1B2K gate.
-
 ## 7. Executable PNCS reduction coordinates
 
-For a finite-cell representation of the collective scalar mode,
+For a finite-cell representation,
 
 \[
 C_A:=\sum_a A_a^2V_a,
@@ -186,7 +186,7 @@ C_A:=\sum_a A_a^2V_a,
 I_A:=2C_A.
 \]
 
-PNCS receives `I_phi` independently and evaluates
+PNCS evaluates
 
 \[
 \boxed{
@@ -217,8 +217,6 @@ For one common positive covariant phase rate,
 =\Delta_Q^{red}
 =\Delta_\epsilon^{red}.}
 \]
-
-The RF-N1B2J coordinate \(\Delta_I^{J}=|I_A/I_\phi-1|\) and the executable reduction coordinate \(\Delta_I^{red}=|I_\phi-I_A|/I_A\) remain separately typed away from the exact reduction point and share the same zero set \(I_A=I_\phi\).
 
 Executable contract:
 
