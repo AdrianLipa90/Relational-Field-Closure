@@ -2,143 +2,153 @@
 
 Current gates:
 
-1. Lorentzian metric candidate `g_mu_nu` from RF-G0 + RF-02H/IDT temporal orientation — **STRUCTURAL / CONDITIONAL PASS**;
-2. compatible torsion-free metric connection on the admitted local RFC sector — **PASS at RF-02I**;
-3. local curvature tensors — **PASS at RF-02I conditional on the admitted coframe sector**;
-4. contracted Bianchi identity for the admitted Levi-Civita sector — **EXACT GEOMETRIC IDENTITY**;
-5. electromagnetic stress-energy source from RF-M1 AB curvature + Maxwell action — **CONDITIONAL PASS**;
-6. Maxwell ↔ Einstein Bianchi compatibility, including EM/matter Lorentz-force exchange — **PASS at RF-E0 under the admitted actions**;
-7. dynamic `Lambda0` transfer identity — **EXACT BOOKKEEPING / EXCHANGE IDENTITY**;
-8. Newton ↔ Einstein normalization `kappa_E=8piG/c^4` — **EXACT WEAK-FIELD NORMALIZATION TRANSFER at RF-N1C**;
-9. double-copy ↔ Einstein normalization `kappa_E=kappa_g^2/4` in natural units — **EXACT ALGEBRAIC TRANSFER at RF-N1C**;
-10. RFC source ↔ double-copy coupling holonomy — **EXACT ALGEBRAIC GATE at RF-N1C**;
-11. gauge-covariant phase carrier → phase-energy mass-density map — **PASS CONDITIONAL at RF-N1B2O**;
-12. phase-source reduction `S_R^DC=72 Gamma_DC^2 A^2/beta_W^2` — **EXACT at RF-N1C1 on the admitted sector**;
-13. reduced gravity scale `Mbar_G` and cross-system universality firewall — **EXACT REPARAMETERIZATION at RF-N1C2 / PHYSICAL EVIDENCE OPEN**;
-14. Einstein–Hilbert prefactor `2/kappa_g^2 = 1/(2 kappa_E)` — **EXACT ACTION NORMALIZATION TRANSFER at RF-E3**;
-15. standard metric variation to `G_mu_nu=kappa_E T_mu_nu` — **PASS at RF-E3 on the admitted action**;
-16. total physical matter stress-energy composition — **OPEN**;
-17. dynamic-`Lambda0` independent action variation and unified-limit audit — **OPEN**.
+1. Lorentzian metric candidate with canonical signature `(-,+,+,+)` — **PASS at RF-G0/RF-02H**;
+2. torsion-free metric connection and local curvature — **PASS at RF-02I on the admitted coframe sector**;
+3. contracted Bianchi identity — **EXACT GEOMETRIC IDENTITY**;
+4. AB-normalized electromagnetic curvature — **PASS at RF-M1**;
+5. charge-projected Maxwell current — **PASS algebraically at RF-M4/RF-N1B2P, with RF-E6 sign alignment**;
+6. energy-positive charged scalar/multiplet action under `(-,+,+,+)` — **PASS at RF-E6**;
+7. explicit charged-matter stress-energy tensor — **PASS at RF-E6 under the admitted action**;
+8. EM/matter Lorentz-force exchange cancellation — **PASS at RF-E0/RF-E6**;
+9. phase stress-energy / pressure firewall — **PASS at RF-E4 after canonical-signature transfer**;
+10. homogeneous on-shell massive scalar dust/factor-two gate — **PASS at RF-E5 after canonical-signature transfer**;
+11. `mu_*` unit normalization — **PASS as an exact convention map at RF-E6**;
+12. Newton ↔ Einstein normalization `kappa_E=8piG/c^4` — **EXACT TRANSFER at RF-N1C/RF-E3**;
+13. double-copy ↔ Einstein normalization `kappa_E=kappa_g^2/4` — **EXACT ALGEBRAIC TRANSFER**;
+14. Einstein–Hilbert prefactor `2/kappa_g^2=1/(2kappa_E)` — **PASS at RF-E3**;
+15. dynamic `Lambda0` transfer identity — **EXACT BIANCHI/EXCHANGE IDENTITY**;
+16. total physical matter stress-energy composition across all admitted sectors — **OPEN**;
+17. dynamic-`Lambda0` independent action and stability audit — **OPEN**.
 
-The Aharonov–Bohm route supplies a physically typed electromagnetic curvature
+## Canonical matter/source chain
+
+RF-E6 makes the Einstein-facing action convention explicit:
 
 \[
-F=\frac{\hbar}{q}d\mathfrak a_{AB},
+\boxed{\operatorname{signature}(g)=(-,+,+,+)}
 \]
 
-which removes the free potential rescaling from the Maxwell-side bridge and provides a concrete `T_EM` input to the Einstein–Bianchi gate.
-
-RF-N1C supplies the exact weak-field normalization chain
+and
 
 \[
 \boxed{
-\kappa_E
-=\frac{8\pi G}{c^4}
+\mathcal L_m
+=-(D_\mu\Psi)^\dagger D^\mu\Psi-U(\Psi).
 }
 \]
 
-and, in natural units on the admitted double-copy normalization surface,
+The charge-projected source is
 
 \[
 \boxed{
-\kappa_E
-=8\pi G
-=\frac{\kappa_g^2}{4}.
+J_{EM}^\mu=\frac1\hbar\mathcal J_Q^\mu
+=\frac1\hbar\Pi_Q[J_{RFC}]^\mu.
 }
 \]
 
-RF-N1B2O and RF-N1C1 provide a concrete phase-kinetic source specialization:
+For one charge eigenvalue,
+
+\[
+\boxed{J_{EM}^\mu=(q/\hbar)J_{RFC,\vartheta}^\mu.}
+\]
+
+The charged-matter stress tensor is
 
 \[
 \boxed{
-j_\vartheta=2A^2\omega_Q,
+T_{\mu\nu}^{matter}
+=(D_\mu\Psi)^\dagger D_\nu\Psi
++(D_\nu\Psi)^\dagger D_\mu\Psi
++g_{\mu\nu}\mathcal L_m.
+}
+\]
+
+Together with the Maxwell tensor,
+
+\[
+\boxed{
+\nabla^\mu(T^{EM}+T^{matter})_{\mu\nu}=0
+}
+\]
+
+on the admitted matter equations.
+
+## Phase-sector stress structure
+
+RF-E4 gives, for `K=A^2 r_n^2`,
+
+\[
+\boxed{
+\varepsilon=K+V,
 \qquad
-\rho_\vartheta=\frac{A^2\omega_Q^2}{c^2},
+p=K-V,
 \qquad
-\omega_Q=D_{\hat\tau}\chi.
+\varepsilon+3p=4K-2V.
 }
 \]
 
-On the local carrier-scale double-copy candidate,
+RF-E5 gives the homogeneous quadratic on-shell surface
+
+\[
+\boxed{V=K,\qquad p=0,\qquad \varepsilon=2K.}
+\]
+
+The phase-kinetic energy per Noether carrier remains `omega/2`, while total on-shell energy per carrier is `omega`.
+
+## Maxwell normalization
+
+RF-E6 binds
+
+\[
+\boxed{\mu_*=1}
+\]
+
+in rationalized Heaviside–Lorentz natural units and
+
+\[
+\boxed{\mu_*=\mu_0}
+\]
+
+in SI, with
 
 \[
 \boxed{
-G_{DC}
-=\frac{18\Gamma_{DC}^2}
-{\pi\beta_W^2\omega_Q^2}
+\alpha_{EM}=\frac{\mu_*e^2c}{4\pi\hbar}.
 }
 \]
 
-and therefore
+Thus an independently frozen electromagnetic coupling fixes the numerical field normalization in the selected unit convention.
+
+## Einstein normalization
+
+RF-N1C/RF-E3 provide
 
 \[
 \boxed{
-\mathcal S_R^{DC}
-=4\pi G_{DC}\rho_\vartheta
-=\frac{72\Gamma_{DC}^2}{\beta_W^2}A^2.
+\kappa_E=\frac{8\pi G}{c^4}
 }
 \]
 
-The same source follows from the weak-field Einstein equation because
+and in natural units
 
 \[
 \boxed{
-\frac12\kappa_E^{DC}\rho_\vartheta
-=\mathcal S_R^{DC}.
+\kappa_E=8\pi G=\frac{\kappa_g^2}{4}.
 }
 \]
 
-RF-N1C2 isolates the universal gravity normalization into
-
-\[
-\boxed{
-\bar M_G
-:=\frac{M_\star}{\Gamma_{DC}g_{YM}^2},
-\qquad
-G_{DC}=\frac{1}{8\pi\bar M_G^2}.
-}
-\]
-
-With the Wilson coordinate,
-
-\[
-\boxed{
-\bar M_G
-=\frac{\beta_WM_\star}{6\Gamma_{DC}}.
-}
-\]
-
-On `M_star=omega_Q/2`,
-
-\[
-\boxed{
-\bar M_G^{local}
-=\frac{\beta_W\omega_Q}{12\Gamma_{DC}}.
-}
-\]
-
-Cross-system equality of `G` is therefore tested as cross-system equality of this reduced gravity-scale coordinate.
-
-RF-E3 lifts the same normalization to the full Einstein–Hilbert action:
+The Einstein–Hilbert action is
 
 \[
 \boxed{
 S_{EH}
-=\frac{2}{\kappa_g^2}\int d^4x\sqrt{-g}\,R
-=\frac{1}{2\kappa_E}\int d^4x\sqrt{-g}\,R.
+=\frac{1}{2\kappa_E}\int d^4x\sqrt{-g}\,R
+=\frac{2}{\kappa_g^2}\int d^4x\sqrt{-g}\,R.
 }
 \]
 
-Using the project double-copy coordinates, the action prefactor is
+## Current frontier
 
-\[
-\boxed{
-A_{EH}^{DC}
-=\frac{\beta_W^2\omega_Q^2}
-{288\Gamma_{DC}^2}.
-}
-\]
+The immediate Einstein-facing frontier is now the **total-matter composition gate**: combine the already explicit phase/charged sector with amplitude-gradient, potential/rest and any additional admitted matter sectors under one stress-energy ledger, then test cross-system source universality. The independent dynamic-`Lambda0` action remains the following action gate.
 
-The source, double-copy and horizon routes remain tied by the RF-N1C coupling-holonomy syzygy. Physical promotion now separates cleanly into two tasks: total-matter stress-energy composition and cross-system universality of the independently frozen gravity normalization. The independent dynamical action for `Lambda0` remains the next Einstein-facing action gate.
-
-**Current status:** `GEOMETRIC_SPINE_PRESENT / AB_MAXWELL_SOURCE_BRIDGE_PRESENT / PHASE_SOURCE_BINDING_PRESENT / RFN1C_COUPLING_HOLONOMY_PRESENT / RFN1C2_UNIVERSALITY_FIREWALL_ACTIVE / RFE3_EINSTEIN_HILBERT_NORMALIZATION_PRESENT / TOTAL_MATTER_AND_DYNAMIC_LAMBDA_PROMOTION_OPEN`.
+**Current status:** `GEOMETRIC_SPINE_PRESENT / AB_MAXWELL_PRESENT / RF_E6_LORENTZIAN_MATTER_ACTION_PRESENT / EXPLICIT_CHARGED_MATTER_T_PRESENT / RFE4_RFE5_SIGNATURE_ALIGNED / MU_STAR_UNIT_BINDING_AVAILABLE / TOTAL_MATTER_AND_DYNAMIC_LAMBDA_PROMOTION_OPEN`.
