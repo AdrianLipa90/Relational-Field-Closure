@@ -1,0 +1,21 @@
+{
+  "schema": "RFC_RFG23_FIVE_POINT_KLT_REDUCED_SCALE_V0_1",
+  "status": "PASS_REFERENCE_HIGHER_POINT_KLT",
+  "observed_date_utc": "2026-08-28",
+  "reference_test": "tests/reference/test_rfg23_five_point_klt_reduced_scale.py",
+  "local_result": "6 passed, 0 failed",
+  "matrix_two_term_samples": 450,
+  "kernel_samples": 300,
+  "copy_exchange_samples": 200,
+  "identities": [
+    "det S5 = s12 s13 s23 (s12+s13+s23)",
+    "A_L^T S5 A_R equals the two-term five-point KLT representation in the frozen ordering convention",
+    "A_L^T S5 A_R = A_R^T S5 A_L",
+    "pure spin-2 little-group weights are +/-4",
+    "(kappa_g/2)^3 = 1/Mbar_G^3 = kappa_E/Mbar_G",
+    "1/Mbar_G^3 = 1/(M_H T_H)^(3/2) = (2 Gamma_DC/(alpha_c omega_Q))^3 on the common admitted surface"
+  ],
+  "full_project_five_point_graph_assembly": "OPEN",
+  "full_project_five_point_numerators": "OPEN",
+  "promotion_state": "REFERENCE_ADMISSION_ONLY"
+}
