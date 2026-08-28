@@ -1,0 +1,56 @@
+{
+  "schema": "RFC_RFE7_TOTAL_SCALAR_STRESS_ENERGY_COMPOSITION_V0_1",
+  "status": "PASS_STACKED_ON_RFE6",
+  "date": "2026-08-28",
+  "repository": "AdrianLipa90/Relational-Field-Closure",
+  "branch": "feat/rfe7-total-scalar-stress-energy-composition-v0.1",
+  "stacked_on_branch": "fix/rfe4-rfm4-lorentzian-action-sign-v0.1",
+  "stacked_on_head": "e9d665c0b3b31719868d92bfd30631ba540a9a83",
+  "pull_request": 17,
+  "tested_commit": "904d641948b48ca564dbbfb38a9442e7ca6ab078",
+  "workflow": {
+    "name": "RFC reference suite",
+    "run_id": 33207870117,
+    "job_id": 98973459240,
+    "result": "479/479 PASS",
+    "elapsed": "11.96s",
+    "python": "3.12.14",
+    "runner_os": "Ubuntu 24.04.4"
+  },
+  "focused_rfe7": {
+    "file": "tests/reference/test_rfe7_total_scalar_stress_energy_composition.py",
+    "tests": 9,
+    "status": "PASS",
+    "gates": [
+      "polar amplitude/phase mixed-term cancellation",
+      "exact T_scalar = T_amp + T_phase + T_pot recomposition",
+      "synchronized gauge invariance",
+      "RF-E4 homogeneous phase limit",
+      "RF-E5 on-shell massive dust and factor-two limit",
+      "anisotropic amplitude-gradient principal stress",
+      "neutral scalar finite gravitational stress with zero Maxwell current",
+      "Einstein source tensor ledger sum",
+      "four-vector and zero-hbar fail-closed handling"
+    ]
+  },
+  "exact": [
+    "D_mu psi polar kinetic decomposition",
+    "amplitude/phase cross-term cancellation",
+    "full scalar stress-tensor recomposition",
+    "gauge covariance through q_mu",
+    "RF-E4 and RF-E5 limit recovery",
+    "amplitude-gradient anisotropic stress",
+    "single-complex-scalar total matter tensor"
+  ],
+  "conditional": [
+    "RF-E6 canonical scalar action",
+    "coupled on-shell conservation when combined with Maxwell",
+    "RF-N1B2K physical carrier/measure realization for carrier-source interpretation"
+  ],
+  "open": [
+    "multispecies/additional matter stress-energy composition",
+    "cross-system physical G universality",
+    "dynamic Lambda0 independent action",
+    "full Einstein/unified-limit audit"
+  ]
+}
