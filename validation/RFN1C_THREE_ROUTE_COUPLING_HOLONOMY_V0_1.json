@@ -7,6 +7,13 @@
     "local_precommit_result": "6 passed, 0 failed",
     "runtime_seconds": 0.10
   },
+  "stress_test": {
+    "seed": 20260828,
+    "samples": 10000,
+    "max_relative_syzygy_residual": 3.205820800548275e-12,
+    "max_relative_closed_surface_residual": 1.1382740160766765e-15,
+    "status": "PASS"
+  },
   "exact_identities": [
     "G_DC = 18 Gamma_DC^2 / (pi beta_W^2 omega_Q^2)",
     "kappa_E = 8 pi G = kappa_g^2 / 4",
