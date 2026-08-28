@@ -1,6 +1,6 @@
 {
-  "schema": "RFC_CROSS_REFERENCE_LOCK_V0_23",
-  "status": "PHASE_SOURCE_PROJECT_YM_BCJ_KLT_SPIN2_DOUBLE_COPY_EINSTEIN_GFREE_COUPLING_HOLONOMY_PINNED",
+  "schema": "RFC_CROSS_REFERENCE_LOCK_V0_24",
+  "status": "PHASE_SOURCE_PROJECT_YM_BCJ_KLT_SPIN2_POLE_DOUBLE_COPY_EINSTEIN_GFREE_COUPLING_HOLONOMY_PINNED",
   "created": "2026-08-27",
   "updated": "2026-08-28",
   "upstreams": [
@@ -93,6 +93,7 @@
     "RFG18 physical transverse tensor-product decomposition and pure spin-2 external-state projector",
     "RFG19 spin-2 helicity selection and little-group weight-two gate",
     "RFG20 project four-point KLT equivalence -u A_1234 Atilde_1324",
+    "RFG21 massless t-channel pole factorization into cubic double-copy currents",
     "RFG7 double-copy factorization invariant Mbar_G=2/kappa_g",
     "RF-N1C three-route Newton/double-copy/Einstein holonomy",
     "RF-N1C3 horizon reduced-scale closure",
@@ -127,6 +128,7 @@
     "validation/gremlin/RFG18_PURE_SPIN2_EXTERNAL_STATE_PROJECTION_FIREWALL_v0.1.md",
     "validation/gremlin/RFG19_SPIN2_HELICITY_SELECTION_LITTLE_GROUP_GATE_v0.1.md",
     "validation/gremlin/RFG20_PROJECT_FOUR_POINT_KLT_EQUIVALENCE_GATE_v0.1.md",
+    "validation/gremlin/RFG21_PROJECT_GRAVITY_POLE_FACTORIZATION_GATE_v0.1.md",
     "closure/einstein/RF_E3_DOUBLE_COPY_EINSTEIN_HILBERT_NORMALIZATION.md"
   ],
   "validation_receipts": [
@@ -151,6 +153,7 @@
     "validation/RFG18_PURE_SPIN2_EXTERNAL_STATE_PROJECTION_V0_1.json",
     "validation/RFG19_SPIN2_HELICITY_SELECTION_LITTLE_GROUP_V0_1.json",
     "validation/RFG20_PROJECT_FOUR_POINT_KLT_EQUIVALENCE_V0_1.json",
+    "validation/RFG21_PROJECT_GRAVITY_POLE_FACTORIZATION_V0_1.json",
     "validation/RFE3_EINSTEIN_HILBERT_NORMALIZATION_V0_1.json"
   ],
   "key_source_chain": [
@@ -168,6 +171,7 @@
     "RFG18: 2x2 transverse product -> spin2 symmetric-traceless + B antisymmetric + trace scalar; Einstein external branch uses spin2 projector",
     "RFG19: h_(+/-2)=epsilon_(+/-) tensor epsilon_(+/-), all-plus/single-minus zero and little-group phase weight two",
     "RFG20: direct double-copy core = -u A_1234 Atilde_1324 with project partial amplitudes",
+    "RFG21: Res_(t=0) M4_project = i kappa_E X_t Xtilde_t with rank-two cubic-current factorization",
     "RFG7: Mbar_G=M_star/(Gamma_DC g_YM^2)=2/kappa_g",
     "RF-N1C3: Mbar_G^2=M_H T_H",
     "RF-E3: 2/kappa_g^2=1/(2 kappa_E)=1/(16 pi G)"
@@ -178,10 +182,10 @@
       "rfc": "74/74 PASS"
     },
     "current_branch_local_additions": {
-      "rfc": "126/126 PASS",
+      "rfc": "132/132 PASS",
       "idt_01AE": "4/4 PASS"
     },
-    "recent_direct_replay": "RFG14-RFG20: 42/42 PASS",
+    "recent_direct_replay": "RFG14-RFG21: 48/48 PASS",
     "github_actions_current_branch_full_suite": "NOT_EXECUTED"
   },
   "promotion_firewall": {
@@ -199,7 +203,8 @@
     "pure_spin2_external_state_projection": "PASS_RFG18",
     "spin2_helicity_little_group_signature": "PASS_RFG19",
     "project_four_point_KLT_equivalence": "PASS_RFG20",
-    "higher_point_project_BCJ_KLT": "OPEN",
+    "project_four_point_massless_pole_factorization": "PASS_RFG21",
+    "higher_point_project_BCJ_KLT_factorization": "OPEN",
     "internal_state_loop_spectrum_audit": "OPEN",
     "Gamma_DC": "FACTORIZATION_INVARIANT_PASS_NUMERICAL_PROMOTION_OPEN",
     "M_star_scale": "OPEN_RFN1C2_RFG7_FIREWALL",
@@ -209,5 +214,5 @@
     "total_matter_stress_energy": "OPEN",
     "dynamic_Lambda0_action": "OPEN"
   },
-  "pinning_rule": "RFC v0.23 pins the phase-energy source handoff, same-sector Yang-Mills normalization, direct project holonomy-to-field/momentum witnesses, cubic and quartic interaction normalization, a complete gauge-invariant four-gluon project amplitude, an unfitted matched-Jacobi project numerator representation, the resulting project four-point double-copy amplitude with exact Einstein coupling prefactor kappa_E=(kappa_g/2)^2=8 pi G, the G-free cross-route amplitude coupling reduction kappa_E=1/(M_H T_H)=4 Gamma_DC^2/(alpha_c^2 omega_Q^2), the explicit pure-spin2 transverse projector and helicity-weight-two external branch, and an independent project KLT representation of the same four-point double-copy core. Higher-point project BCJ/KLT, internal-state/loop spectrum audit, numerical Gamma_DC/M_star promotion, cross-system Mbar_G universality, total matter stress-energy and dynamic-Lambda0 action remain independently gated."
+  "pinning_rule": "RFC v0.24 pins the phase-energy source handoff, same-sector Yang-Mills normalization, direct project holonomy-to-field/momentum witnesses, cubic and quartic interaction normalization, a complete gauge-invariant four-gluon project amplitude, an unfitted matched-Jacobi project numerator representation, the resulting project four-point double-copy amplitude with exact Einstein coupling prefactor kappa_E=(kappa_g/2)^2=8 pi G, the G-free cross-route amplitude coupling reduction kappa_E=1/(M_H T_H)=4 Gamma_DC^2/(alpha_c^2 omega_Q^2), the explicit pure-spin2 transverse projector and helicity-weight-two external branch, an independent project KLT representation, and massless-channel pole factorization into cubic double-copy currents. Higher-point project BCJ/KLT/factorization, internal-state/loop spectrum audit, numerical Gamma_DC/M_star promotion, cross-system Mbar_G universality, total matter stress-energy and dynamic-Lambda0 action remain independently gated."
 }
