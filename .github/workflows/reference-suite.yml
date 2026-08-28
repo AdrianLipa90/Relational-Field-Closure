@@ -3,9 +3,18 @@ name: RFC reference suite
 on:
   push:
     branches:
-      - feat/rfc-gremlin-pnv-holonomy-v0.1
+      - main
+    paths:
+      - 'closure/**'
+      - 'formalism/**'
+      - 'experiments/**'
+      - 'tests/reference/**'
+      - 'validation/**'
+      - 'CROSS_REFERENCE_LOCK.json'
+      - '.github/workflows/reference-suite.yml'
   pull_request:
     paths:
+      - 'closure/**'
       - 'formalism/**'
       - 'experiments/**'
       - 'tests/reference/**'
