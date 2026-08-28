@@ -1,0 +1,19 @@
+{
+  "schema": "RFC_RFG20_PROJECT_FOUR_POINT_KLT_EQUIVALENCE_V0_1",
+  "status": "PASS_PROJECT_KLT_EQUIVALENCE_FOUR_POINT",
+  "observed_date_utc": "2026-08-28",
+  "reference_test": "tests/reference/test_rfg20_project_four_point_klt_equivalence.py",
+  "local_result": "6 passed, 0 failed",
+  "project_partials": {
+    "A_1234": "n_s/s - n_u/u",
+    "A_1324": "n_t/t + n_u/u"
+  },
+  "bcj_relation": "s A_1234 = t A_1324",
+  "klt_identity": "sum_i n_i ntilde_i/D_i = -u A_1234 Atilde_1324",
+  "random_bcj_samples": 500,
+  "random_independent_copy_klt_samples": 500,
+  "copy_exchange_samples": 250,
+  "partial_amplitude_gauge_samples": 120,
+  "gravity_output_used_for_numerator_selection": false,
+  "higher_point_project_KLT_BCJ": "OPEN"
+}
