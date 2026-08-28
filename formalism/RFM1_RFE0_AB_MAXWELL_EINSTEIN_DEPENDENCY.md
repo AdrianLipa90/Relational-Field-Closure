@@ -1,6 +1,6 @@
 # RF-M1 / RF-E0 — Aharonov–Bohm → Maxwell → Einstein dependency bridge
 
-Status: `HOMOGENEOUS_MAXWELL_EXACT / SOURCED_MAXWELL_CONDITIONAL / IDT_01AG_VARIATION_CURRENT_BRIDGE_PASS / RFC_CHARGE_PROJECTED_CURRENT_INTERTWINER_ACTIVE / EINSTEIN_BIANCHI_BRIDGE_HARDENED / COUPLING_AND_TOTAL_SOURCE_PROMOTION_OPEN`
+Status: `HOMOGENEOUS_MAXWELL_EXACT / SOURCED_MAXWELL_CONDITIONAL / RF_E6_LORENTZIAN_ACTION_ALIGNMENT_PASS / RFC_CHARGE_PROJECTED_CURRENT_INTERTWINER_ACTIVE / EINSTEIN_BIANCHI_BRIDGE_HARDENED / TOTAL_SOURCE_AND_PHYSICAL_COUPLING_PROMOTION_OPEN`
 
 ```text
 physical Aharonov–Bohm phase
@@ -12,183 +12,237 @@ RF-M1 physical AB connection
   A = (hbar/q) a_AB       [q != 0]
   |
   v
-local EM curvature
-  F = dA = (hbar/q) d a_AB
+F = dA = (hbar/q) d a_AB
   |
-  +--> Stokes / Wilson-loop flux
-  |      phi_AB[partial Sigma] = (q/hbar) integral_Sigma F
-  |
-  +--> homogeneous Maxwell
-  |      dF = 0
-  |      nabla_[a F_bc] = 0
+  +--> dF = 0
   |
   v
-IDT 01AG charged-matter variation
-  delta S_m / delta A_mu = J_Q^mu / hbar
-  J_EM^mu = -J_Q^mu / hbar
-  single charge: J_EM^mu = -(q/hbar) J_theta^mu
+RF-E6 canonical Lorentzian matter action
+  signature (-,+,+,+)
+  L_m = -(D Psi)^dagger D Psi - U(Psi)
+  delta S_m/delta A_mu = -J_Q^mu/hbar
   |
   v
-RF-N1B2P typed current intertwiner
-  RFC phase carrier --Pi_Q--> J_Q --(-1/hbar)--> J_EM
-  single charge: J_EM^mu = -(q/hbar) J_RFC,theta^mu
-  neutral Q=0: J_EM^mu=0 with finite matter carrier allowed
+RF-M4 / RF-N1B2P charge projection
+  J_EM^mu = +J_Q^mu/hbar
+  J_EM^mu = +(1/hbar) Pi_Q[J_RFC]^mu
+  single charge: J_EM^mu = +(q/hbar) J_RFC,theta^mu
+  neutral Q=0: J_EM^mu = 0
   |
   v
-admitted lowest-derivative Abelian action
-  S_EM = integral sqrt(-g)[-F^2/(4 mu_*) - J_EM.A]
+Maxwell equation
+  nabla_mu F^(mu nu) = mu_* J_EM^nu
   |
-  +--> sourced Maxwell
-  |      nabla_mu F^(mu nu) = mu_* J_EM^nu
+  +--> T_EM
   |
-  +--> current conservation
+  +--> RF-E6 T_matter
+  |      nabla T_matter = +F.J_EM
+  |      nabla T_EM     = -F.J_EM
+  |      nabla(T_EM+T_matter)=0
   |
-  +--> metric variation
-         T_EM(mu,nu)
-         |
-         v
-RF-E0 EM/matter exchange
-  nabla^mu T_EM(mu,nu)     = -F_(nu lambda) J_EM^lambda
-  nabla^mu T_matter(mu,nu) = +F_(nu lambda) J_EM^lambda
-  ------------------------------------------------------
-  nabla^mu (T_EM + T_matter)_(mu,nu) = 0
-         |
-         v
+  v
+RF-E4 / RF-E5 matter stress-energy structure
+  epsilon = K+V
+  p = K-V
+  on-shell massive homogeneous scalar: V=K, p=0, epsilon=2K
+  |
+  v
 RFC geometric spine
-  RF-02H rank-3 spatial metric
-    -> RF-G0 Lorentzian signature
-    -> RF-02I metric connection / curvature
-    -> contracted Bianchi identity
-         |
-         v
-Einstein source gate
-  G_mu_nu + Lambda g_mu_nu = kappa_E T_total(mu,nu)
-  kappa_E = 8 pi G / c^4 after RF-N1C fixes G
-         |
-         +--> constant Lambda: nabla^mu T_total(mu,nu)=0
-         |
-         +--> dynamic Lambda0:
-                kappa_E nabla^mu T_total(mu,nu)=nabla_nu Lambda0
-                T_Lambda(mu,nu)=-(Lambda0/kappa_E)g_mu_nu
-                nabla^mu(T_total+T_Lambda)_(mu,nu)=0
+  RF-02H -> RF-G0 -> RF-02I -> contracted Bianchi
+  |
+  v
+RF-N1C / RF-E3 Einstein normalization
+  G_mu_nu + Lambda g_mu_nu = kappa_E T_total_mu_nu
+  kappa_E = 8 pi G / c^4
+  |
+  v
+RF-E0 dynamic Lambda0 transfer
+  kappa_E nabla^mu T_total_mu_nu = nabla_nu Lambda0
 ```
 
-## Exact and conditional layers
-
-### Exact structural layer
+## 1. Exact structural layer
 
 For an admitted nonzero probe charge and regular local gauge patch,
 
 \[
+\boxed{
 \mathfrak a_{AB}=\frac q\hbar A,
 \qquad
 F=\frac\hbar q d\mathfrak a_{AB}=dA,
 \qquad
-\boxed{dF=0}.
+dF=0.
+}
 \]
-
-The AB coupling fixes the physical potential normalization on this branch. The hardened RF-M1 gate additionally checks that distinct nonzero probe-charge representations reconstruct the same physical potential.
 
 For the admitted RFC Levi-Civita geometry,
 
 \[
-\boxed{\nabla^\mu G_{\mu\nu}=0},
+\boxed{\nabla^\mu G_{\mu\nu}=0,}
 \qquad
-\boxed{\nabla^\mu g_{\mu\nu}=0}.
+\boxed{\nabla^\mu g_{\mu\nu}=0.}
 \]
 
-For the dynamic scalar closure with spacetime-constant Einstein coupling coordinate `kappa_E`,
+## 2. Action-consistent source layer
+
+RF-G0 fixes
 
 \[
-G_{\mu\nu}+\Lambda_0 g_{\mu\nu}=\kappa_E T^{total}_{\mu\nu}
+\operatorname{signature}(g)=(-,+,+,+).
 \]
 
-implies
+RF-E6 aligns the scalar/multiplet action with that signature:
 
 \[
-\boxed{\kappa_E\nabla^\mu T^{total}_{\mu\nu}=\nabla_\nu\Lambda_0}.
+\boxed{
+\mathcal L_m
+=-(\mathcal D_\mu\Psi)^\dagger\mathcal D^\mu\Psi-U(\Psi).
+}
 \]
 
-### Conditional action layer
-
-After admitting the local Maxwell action with spacetime-constant field normalization `mu_*` and the charged-matter exchange action,
+With
 
 \[
+\mathcal J_Q^\mu
+=i\left[(\mathcal D^\mu\Psi)^\dagger Q\Psi
+-\Psi^\dagger Q\mathcal D^\mu\Psi\right],
+\]
+
+matter variation gives
+
+\[
+\boxed{
+\frac{1}{\sqrt{-g}}\frac{\delta S_m}{\delta A_\mu}
+=-\frac1\hbar\mathcal J_Q^\mu.
+}
+\]
+
+Combined with the Maxwell kinetic action,
+
+\[
+\boxed{
 \nabla_\mu F^{\mu\nu}=\mu_*J_{EM}^\nu,
+\qquad
+J_{EM}^\nu=\frac1\hbar\mathcal J_Q^\nu.
+}
 \]
 
+RF-N1B2P therefore carries
+
 \[
-T^{EM}_{\mu\nu}
+\boxed{
+J_{EM}^\mu=\frac1\hbar\Pi_Q[J_{RFC}]^\mu,
+}
+\]
+
+and for one charge eigenvalue,
+
+\[
+\boxed{
+J_{EM}^\mu=\frac q\hbar J_{RFC,\vartheta}^\mu.
+}
+\]
+
+## 3. Source bookkeeping firewall
+
+RF-E6 keeps two source representations separately typed:
+
+- microscopic matter action with coupling inside `D_mu Psi`;
+- effective external-current action with `-J_EM^mu A_mu`.
+
+Each representation yields the same sourced Maxwell equation. The action ledger uses one representation for a given carrier realization.
+
+## 4. Stress-energy layer
+
+RF-E6 supplies
+
+\[
+\boxed{
+T_{\mu\nu}^{matter}
+=(\mathcal D_\mu\Psi)^\dagger\mathcal D_\nu\Psi
++(\mathcal D_\nu\Psi)^\dagger\mathcal D_\mu\Psi
++g_{\mu\nu}\mathcal L_m.
+}
+\]
+
+Together with
+
+\[
+T_{\mu\nu}^{EM}
 =\frac1{\mu_*}
 \left(F_{\mu\alpha}F_\nu{}^\alpha-\frac14g_{\mu\nu}F^2\right),
 \]
 
-and the EM/matter exchange closes to a conserved combined source.
-
-IDT 01AG fixes the variation-level conversion from the charged Noether current to the Maxwell source current:
-
-\[
-\boxed{J_{EM}^\mu=-\frac1\hbar\mathcal J_Q^\mu},
-\]
-
-with single-charge reduction
-
-\[
-\boxed{J_{EM}^\mu=-\frac q\hbar J_\vartheta^\mu}.
-\]
-
-RF-N1B2P composes this with the RFC carrier audit. The physical promotion coordinate is therefore the charge-projected intertwiner
-
-\[
-\boxed{J_{EM}^\mu=-\frac1\hbar\Pi_Q[J_{RFC}]^\mu},
-\]
-
-conditional on the independently measured RF-N1B2K carrier/Noether match. Raw equality `J_RFC=J_EM` is not used as a promotion condition; the charge projection and `-1/hbar` normalization are explicit parts of the map.
-
-## Current promotion coordinates
-
-1. close the RF-N1B2K independently constructed RFC carrier ↔ Noether-current/measure gate;
-2. close RF-N1B2P against independently supplied charge-resolved current packets, including the neutral and unequal-charge controls;
-3. derive or empirically bind the vacuum field normalization `mu_*` in the selected physical unit convention;
-4. complete the admitted charged-matter stress-energy action and total-matter composition;
-5. finish RF-N1C and determine `G`, hence `kappa_E`;
-6. derive the dynamic `Lambda0` sector at action level;
-7. run the full Einstein field-equation and unified-limit audit.
-
-## Hardened validation snapshot — 2026-08-28
-
-RFC branch `audit/relativistic-bridge-hardening-v0.1`, PR #14:
-
-- focused RF-M1 gate: `9/9 PASS`;
-- focused RF-E0 gate: `7/7 PASS`;
-- first full hardening run `33202996446`: `447 passed, 1 failed`; the fail-closed result exposed schema drift in `CROSS_REFERENCE_LOCK.json` where earlier TIR/IDT/PNCS source-holonomy provenance had been displaced;
-- additive lock repair `RFC_CROSS_REFERENCE_LOCK_V0_35` restored the upstream provenance and eight PNCS source-holonomy loops while preserving RFG29–RFG34;
-- attested RFC commit `6be45ab1abe56da1ad98255bc7f1ccc1a271cd1d`;
-- full RFC reference suite run `33203140994`: `448 passed, 0 failed`.
-
-IDT peer branch `audit/relativistic-bridge-01ag-hardening-v0.1`, PR #22:
-
-- focused IDT 01AG gate: `5/5 PASS`;
-- attested IDT commit `82faeffd77e9b6bab0fb879cf76af39b4673d7d2`;
-- full IDT reference suite run `33203002798`: `437 passed, 0 failed`.
-
-The hardened evidence chain is
+one has on shell
 
 \[
 \boxed{
-\mathrm{IDT\ 01AC}
-\rightarrow
-\mathrm{IDT\ 01AG}
-\rightarrow
-\mathrm{RF\!\! -\! M1}
-\rightarrow
-\mathrm{RF\!\! -\! N1B2P}
-\rightarrow
-\mathrm{RF\!\! -\! E0}
-\rightarrow
-\mathrm{Einstein\ closure\ gate}.
+\nabla^\mu T^{EM}_{\mu\nu}=-F_{\nu\lambda}J_{EM}^\lambda,
+\qquad
+\nabla^\mu T^{matter}_{\mu\nu}=+F_{\nu\lambda}J_{EM}^\lambda.
 }
 \]
 
-Validation receipt for the prior hardening checkpoint: `validation/RFM1_RFE0_RELATIVISTIC_BRIDGE_HARDENING_V0_1.json`.
-RF-N1B2P receives its own hosted receipt after the branch reference suite closes.
+Hence
+
+\[
+\boxed{
+\nabla^\mu(T^{EM}+T^{matter})_{\mu\nu}=0.
+}
+\]
+
+RF-E4/RF-E5 preserve their physical pressure and on-shell carrier-energy results after transfer to the canonical `(-,+,+,+)` convention.
+
+## 5. `mu_*` normalization
+
+RF-E6 closes the unit-convention map
+
+\[
+\boxed{\mu_*=1}
+\]
+
+for canonically normalized rationalized Heaviside–Lorentz natural units, and
+
+\[
+\boxed{\mu_*=\mu_0}
+\]
+
+for SI electromagnetic fields/currents. In the SI normalization,
+
+\[
+\boxed{
+\alpha_{EM}=\frac{\mu_*e^2c}{4\pi\hbar},
+\qquad
+\mu_*=\frac{4\pi\alpha_{EM}\hbar}{e^2c}.
+}
+\]
+
+A frozen independent `alpha_EM` therefore calibrates `mu_*` exactly in that convention. First-principles `alpha_EM` prediction remains a separate physical gate.
+
+## 6. Einstein layer
+
+RF-N1C/RF-E3 provide
+
+\[
+\boxed{\kappa_E=\frac{8\pi G}{c^4}}
+\]
+
+as the Newton↔Einstein normalization transfer, with project-side physical promotion tied to the independent gravity-coupling gates.
+
+For dynamic `Lambda0` and spacetime-constant `kappa_E`, RF-E0 gives
+
+\[
+\boxed{
+\kappa_E\nabla^\mu T^{total}_{\mu\nu}=\nabla_\nu\Lambda_0.
+}
+\]
+
+## 7. Current frontier
+
+1. RF-N1B2K physical current/measure realization;
+2. total-matter composition across phase, amplitude-gradient, potential/rest and additional admitted sectors;
+3. cross-system physical `G` universality;
+4. first-principles `alpha_EM` only if pursued as a project prediction;
+5. independent dynamic-`Lambda0` action and stability gate;
+6. full Einstein/unified-limit audit.
+
+RF-E6 validation is carried by its dedicated reference suite and receipt on the correction branch.
