@@ -1,0 +1,28 @@
+{
+  "schema": "RFC_RFE3_EINSTEIN_HILBERT_NORMALIZATION_V0_1",
+  "status": "PASS_ALGEBRAIC_REFERENCE",
+  "observed_date_utc": "2026-08-28",
+  "reference_tests": {
+    "path": "tests/reference/test_rfe3_einstein_hilbert_normalization.py",
+    "local_precommit_result": "4 passed, 0 failed",
+    "runtime_seconds": 0.04
+  },
+  "exact_identities": [
+    "kappa_E = kappa_g^2 / 4",
+    "kappa_E = 8 pi G in natural units",
+    "2/kappa_g^2 = 1/(2 kappa_E) = 1/(16 pi G)",
+    "kappa_E^DC = 144 Gamma_DC^2 / (beta_W^2 omega_Q^2)",
+    "A_EH^DC = beta_W^2 omega_Q^2 / (288 Gamma_DC^2)",
+    "S_R^DC = (kappa_E^DC/2) rho_m = 36 Gamma_DC^2 j_Q/(beta_W^2 omega_Q)"
+  ],
+  "test_classes": {
+    "einstein_hilbert_inverse_coupling": "PASS",
+    "graviton_to_einstein_action_normalization": "PASS",
+    "weak_field_source_roundtrip": "PASS",
+    "newton_einstein_normalization_triangle": "PASS"
+  },
+  "promotion_state": "FORMALISM_FRONTIER_CONDITIONAL",
+  "dynamic_lambda0_action_status": "OPEN_INDEPENDENT_GATE",
+  "numerical_G_target_used_for_selection": false,
+  "static_runtime_fallback": false
+}
