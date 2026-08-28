@@ -1,14 +1,14 @@
 import numpy as np
 
-ETA = np.diag([1.0, -1.0, -1.0, -1.0])
+ETA = np.diag([-1.0, 1.0, 1.0, 1.0])
 
 
 def stress_phase(A, q_cov, V=0.0):
     q_cov = np.asarray(q_cov, float)
     q_con = ETA @ q_cov
     q2 = float(q_cov @ q_con)
-    L = A * A * q2 - V
-    return 2 * A * A * np.outer(q_cov, q_cov) - ETA * L
+    L = -A * A * q2 - V
+    return 2 * A * A * np.outer(q_cov, q_cov) + ETA * L
 
 
 def active_density_from_orthonormal(T):
