@@ -1,0 +1,25 @@
+{
+  "schema": "RFC_RFG4F_HOLONOMIC_LINK_COUPLING_RESCALE_FIREWALL_V0_1",
+  "status": "PASS_ALGEBRAIC_REFERENCE",
+  "observed_date_utc": "2026-08-28",
+  "reference_test": "tests/reference/test_rfg4f_holonomic_link_coupling_rescale_firewall.py",
+  "local_result": "5 passed, 0 failed",
+  "exact_identities": [
+    "q_mu^a = g_0 A_mu^a / 2 for v4.1 lambda-basis links versus T=lambda/2 convention",
+    "(g,A)->(lambda g,A/lambda) leaves local link exponent invariant",
+    "A_mu^a = 2 q_mu^a / g_0",
+    "on g_0=alpha_c^-1/2: A_mu^a = 2 q_mu^a sqrt(alpha_c)",
+    "naive q=A forces g_0=2 on nonzero components"
+  ],
+  "source_provenance": [
+    "AdrianLipa90/Metatime:NoParamSM/gluons.py",
+    "AdrianLipa90/Metatime:NoParamSM/gluonsfull.py",
+    "AdrianLipa90/Metatime-Relation_of_Information_Framework:archive/lineage/41_holonomic_yang_mills_local_connection_v4_1/scripts/holonomic_yang_mills_local_connection_v4_1.py"
+  ],
+  "physical_link_coupling_normalization": "OPEN",
+  "available_closure_routes": [
+    "RFG4E project plaquette action coefficient C_p",
+    "independent matter-current/vertex normalization"
+  ],
+  "numerical_G_target_used_for_selection": false
+}
