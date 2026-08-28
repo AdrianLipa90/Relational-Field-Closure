@@ -11,11 +11,14 @@ Current gates:
 7. dynamic `Lambda0` transfer identity — **EXACT BOOKKEEPING / EXCHANGE IDENTITY**;
 8. Newton ↔ Einstein normalization `kappa_E=8piG/c^4` — **EXACT WEAK-FIELD NORMALIZATION TRANSFER at RF-N1C**;
 9. double-copy ↔ Einstein normalization `kappa_E=kappa_g^2/4` in natural units — **EXACT ALGEBRAIC TRANSFER at RF-N1C**;
-10. RFC source ↔ double-copy coupling holonomy — **EXACT ALGEBRAIC GATE / PHYSICAL INPUT PROMOTION OPEN at RF-N1C**;
-11. Einstein–Hilbert prefactor `2/kappa_g^2 = 1/(2 kappa_E)` — **EXACT ACTION NORMALIZATION TRANSFER at RF-E3**;
-12. standard metric variation to `G_mu_nu=kappa_E T_mu_nu` — **PASS at RF-E3 on the admitted action**;
-13. complete physical RFC/IDT current and matter stress-energy binding — **OPEN**;
-14. dynamic-`Lambda0` independent action variation and unified-limit audit — **OPEN**.
+10. RFC source ↔ double-copy coupling holonomy — **EXACT ALGEBRAIC GATE at RF-N1C**;
+11. gauge-covariant phase carrier → phase-energy mass-density map — **PASS CONDITIONAL at RF-N1B2O**;
+12. phase-source reduction `S_R^DC=72 Gamma_DC^2 A^2/beta_W^2` — **EXACT at RF-N1C1 on the admitted sector**;
+13. reduced gravity scale `Mbar_G` and cross-system universality firewall — **EXACT REPARAMETERIZATION at RF-N1C2 / PHYSICAL EVIDENCE OPEN**;
+14. Einstein–Hilbert prefactor `2/kappa_g^2 = 1/(2 kappa_E)` — **EXACT ACTION NORMALIZATION TRANSFER at RF-E3**;
+15. standard metric variation to `G_mu_nu=kappa_E T_mu_nu` — **PASS at RF-E3 on the admitted action**;
+16. total physical matter stress-energy composition — **OPEN**;
+17. dynamic-`Lambda0` independent action variation and unified-limit audit — **OPEN**.
 
 The Aharonov–Bohm route supplies a physically typed electromagnetic curvature
 
@@ -44,27 +47,79 @@ and, in natural units on the admitted double-copy normalization surface,
 }
 \]
 
-After the separately gated carrier-scale and Wilson bindings,
+RF-N1B2O and RF-N1C1 provide a concrete phase-kinetic source specialization:
 
 \[
 \boxed{
-\kappa_E^{DC}
-=\frac{144\Gamma_{DC}^2}
-{\beta_W^2(D_{\hat\tau}\chi)^2}.
+j_\vartheta=2A^2\omega_Q,
+\qquad
+\rho_\vartheta=\frac{A^2\omega_Q^2}{c^2},
+\qquad
+\omega_Q=D_{\hat\tau}\chi.
 }
 \]
 
-The corresponding RFC lapse-source prediction is
+On the local carrier-scale double-copy candidate,
+
+\[
+\boxed{
+G_{DC}
+=\frac{18\Gamma_{DC}^2}
+{\pi\beta_W^2\omega_Q^2}
+}
+\]
+
+and therefore
 
 \[
 \boxed{
 \mathcal S_R^{DC}
-=\frac{36\Gamma_{DC}^2}
-{\beta_W^2D_{\hat\tau}\chi}\,j_Q.
+=4\pi G_{DC}\rho_\vartheta
+=\frac{72\Gamma_{DC}^2}{\beta_W^2}A^2.
 }
 \]
 
-RF-E3 lifts the same normalization from the weak-field coordinate to the full Einstein–Hilbert action:
+The same source follows from the weak-field Einstein equation because
+
+\[
+\boxed{
+\frac12\kappa_E^{DC}\rho_\vartheta
+=\mathcal S_R^{DC}.
+}
+\]
+
+RF-N1C2 isolates the universal gravity normalization into
+
+\[
+\boxed{
+\bar M_G
+:=\frac{M_\star}{\Gamma_{DC}g_{YM}^2},
+\qquad
+G_{DC}=\frac{1}{8\pi\bar M_G^2}.
+}
+\]
+
+With the Wilson coordinate,
+
+\[
+\boxed{
+\bar M_G
+=\frac{\beta_WM_\star}{6\Gamma_{DC}}.
+}
+\]
+
+On `M_star=omega_Q/2`,
+
+\[
+\boxed{
+\bar M_G^{local}
+=\frac{\beta_W\omega_Q}{12\Gamma_{DC}}.
+}
+\]
+
+Cross-system equality of `G` is therefore tested as cross-system equality of this reduced gravity-scale coordinate.
+
+RF-E3 lifts the same normalization to the full Einstein–Hilbert action:
 
 \[
 \boxed{
@@ -79,11 +134,11 @@ Using the project double-copy coordinates, the action prefactor is
 \[
 \boxed{
 A_{EH}^{DC}
-=\frac{\beta_W^2(D_{\hat\tau}\chi)^2}
+=\frac{\beta_W^2\omega_Q^2}
 {288\Gamma_{DC}^2}.
 }
 \]
 
-The source, double-copy and horizon routes are tied by the RF-N1C coupling-holonomy syzygy. Physical promotion now depends on the already explicit current/matter binding, Yang–Mills/BCJ normalization, double-copy scale binding and cross-system universality gates. The independent dynamical action for `Lambda0` remains the next Einstein-facing action gate.
+The source, double-copy and horizon routes remain tied by the RF-N1C coupling-holonomy syzygy. Physical promotion now separates cleanly into two tasks: total-matter stress-energy composition and cross-system universality of the independently frozen gravity normalization. The independent dynamical action for `Lambda0` remains the next Einstein-facing action gate.
 
-**Current status:** `GEOMETRIC_SPINE_PRESENT / AB_MAXWELL_SOURCE_BRIDGE_PRESENT / RFN1C_COUPLING_HOLONOMY_PRESENT / RFE3_EINSTEIN_HILBERT_NORMALIZATION_PRESENT / PHYSICAL_COUPLING_AND_DYNAMIC_LAMBDA_PROMOTION_OPEN`.
+**Current status:** `GEOMETRIC_SPINE_PRESENT / AB_MAXWELL_SOURCE_BRIDGE_PRESENT / PHASE_SOURCE_BINDING_PRESENT / RFN1C_COUPLING_HOLONOMY_PRESENT / RFN1C2_UNIVERSALITY_FIREWALL_ACTIVE / RFE3_EINSTEIN_HILBERT_NORMALIZATION_PRESENT / TOTAL_MATTER_AND_DYNAMIC_LAMBDA_PROMOTION_OPEN`.
