@@ -1,0 +1,22 @@
+{
+  "schema": "RFC_RFG24_PROJECT_FIVE_POINT_BERENDS_GIELE_BCJ_V0_1",
+  "status": "PASS_DIRECT_PROJECT_FIVE_POINT_YM",
+  "observed_date_utc": "2026-08-28",
+  "reference_test": "tests/reference/test_rfg24_project_five_point_berends_giele_bcj.py",
+  "local_result": "6 passed, 0 failed",
+  "ward_samples": 180,
+  "bcj_samples": 220,
+  "reflection_decoupling_samples": 150,
+  "identities": [
+    "P^2 J_P = sqrt(2) sum_XY [J_X,J_Y] + sum_XYZ {J_X,J_Y,J_Z}",
+    "all five project single-leg Ward identities vanish",
+    "fundamental five-point BCJ relation holds for direct project BG amplitudes",
+    "A(12345)=-A(54321)",
+    "five-point photon-decoupling insertion sum vanishes",
+    "removing the quartic current term breaks Ward closure",
+    "A5_project scales as g_YM^3 with g_YM^2=1/alpha_c"
+  ],
+  "gravity_output_used_for_selection": false,
+  "project_five_point_KLT": "NEXT",
+  "explicit_15_graph_numerator_set": "OPEN"
+}
