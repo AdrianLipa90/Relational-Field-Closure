@@ -1,0 +1,20 @@
+{
+  "schema":"RFC_RFG29_EXPLICIT_FIFTEEN_GRAPH_PROJECT_BCJ_CURRENT_FACTORIZATION_V0_1",
+  "status":"PASS_EXPLICIT_FIFTEEN_GRAPH_PROJECT_BCJ_AND_CURRENT_FACTORIZATION",
+  "observed_date_utc":"2026-08-28",
+  "reference_test":"tests/reference/test_rfg29_explicit_fifteen_graph_project_bcj_current_factorization.py",
+  "local_result":"6 passed, 0 failed",
+  "tether_status":"ACTIVE",
+  "cubic_graph_count":15,
+  "ddm_master_count":6,
+  "propagator_matrix_rank":2,
+  "jacobi_triplets_checked":10,
+  "independent_jacobi_rank":9,
+  "project_basis_map":"A_project=2 A_BG",
+  "canonical_representative":"m_star=pinv(F) A_project; n=B m_star",
+  "s12_project_residue":"n_{12|3|45}/s45-n_{12|5|34}/s34",
+  "current_factorization":"Res A_BG=N12 dot J_(12)|345",
+  "klt_residue":"Res C5_BG=(s13+s23)(N12 dot J4)(Ntilde12 dot Jtilde4)",
+  "gravity_target_used_to_construct_numerators":false,
+  "next_gate":"RFG30_EXPLICIT_FIFTEEN_GRAPH_DOUBLE_COPY_KLT_EQUIVALENCE"
+}
