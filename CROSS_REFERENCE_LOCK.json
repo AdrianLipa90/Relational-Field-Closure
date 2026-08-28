@@ -1,6 +1,6 @@
 {
-  "schema":"RFC_CROSS_REFERENCE_LOCK_V0_37",
-  "status":"RFE6_ACTION_CORRECTION_AND_RFE7_SINGLE_SCALAR_TOTAL_MATTER_PINNED",
+  "schema":"RFC_CROSS_REFERENCE_LOCK_V0_38",
+  "status":"RFE6_ACTION_RFE7_SCALAR_MATTER_AND_RFL2_DYNAMIC_LAMBDA_ACTION_PINNED",
   "created":"2026-08-27",
   "updated":"2026-08-28",
   "upstreams":[
@@ -21,7 +21,7 @@
     "SOURCE.PHASE.NOETHER.GAUGE_COVARIANT_PULLBACK.ROUNDTRIP"
   ],
   "relativistic_bridge_holonomy":{
-    "chain":["IDT-01AC","IDT-01AG-HISTORICAL","RF-M1","RF-N1B2P","RF-E6","RF-E7","RF-E0","EINSTEIN_CLOSURE"],
+    "chain":["IDT-01AC","IDT-01AG-HISTORICAL","RF-M1","RF-N1B2P","RF-E6","RF-E7","RF-L2","RF-E0","EINSTEIN_CLOSURE"],
     "idt_repository":"AdrianLipa90/Informational-Dynamics-of-Time",
     "idt_pr":22,
     "idt_tested_commit":"82faeffd77e9b6bab0fb879cf76af39b4673d7d2",
@@ -36,18 +36,25 @@
     "rfc_rfe6_final_ci_job_id":98972879666,
     "rfc_rfe6_final_suite":"470/470 PASS",
     "rfc_rfe7_pr":17,
-    "rfc_rfe7_branch":"feat/rfe7-total-scalar-stress-energy-composition-v0.1",
-    "rfc_rfe7_tested_commit":"904d641948b48ca564dbbfb38a9442e7ca6ab078",
-    "rfc_rfe7_ci_run_id":33207870117,
-    "rfc_rfe7_ci_job_id":98973459240,
-    "rfc_rfe7_full_suite":"479/479 PASS",
-    "rfc_rfe7_focused":"9/9 PASS",
+    "rfc_rfe7_final_head":"ab433a32a8271ac629ef7c0863e3eaec9ee50ffd",
+    "rfc_rfe7_final_ci_run_id":33208035997,
+    "rfc_rfe7_final_ci_job_id":98974027431,
+    "rfc_rfe7_final_suite":"479/479 PASS",
+    "rfc_rfl2_pr":18,
+    "rfc_rfl2_branch":"feat/rfl2-dynamic-lambda-action-stability-v0.1",
+    "rfc_rfl2_tested_commit":"38c9589608abe77bdcf05d46e997731ef5d6e430",
+    "rfc_rfl2_ci_run_id":33208242527,
+    "rfc_rfl2_ci_job_id":98974734417,
+    "rfc_rfl2_full_suite":"489/489 PASS",
+    "rfc_rfl2_focused":"10/10 PASS",
     "active_current_convention":"signature (-,+,+,+); D_mu=nabla_mu+iA_muQ/hbar; L_m=-(D Psi)^dagger D Psi-U; J_EM=+J_Q/hbar",
     "single_scalar_total_matter":"T_scalar=T_amp+T_phase+T_pot EXACT",
+    "dynamic_lambda_action":"Lambda0=Lambda_ref+kappa_E U_L(phi_L); T_kin retained on source side; RF-E0 transfer recovered on shell",
     "historical_receipts_retained":["validation/RFM1_RFE0_RELATIVISTIC_BRIDGE_HARDENING_V0_1.json","validation/RFN1B2P_CHARGE_PROJECTED_EM_CURRENT_INTERTWINER_V0_1.json"],
     "correction_receipt":"validation/RFE6_LORENTZIAN_MATTER_ACTION_SOURCE_BOOKKEEPING_V0_1.json",
     "composition_receipt":"validation/RFE7_TOTAL_SCALAR_STRESS_ENERGY_COMPOSITION_V0_1.json",
-    "interfaces":["closure/maxwell/RF_M1_AHARONOV_BOHM_MAXWELL_HOLONOMY.md","closure/maxwell/RF_M4_CHARGE_PROJECTED_NOETHER_MAXWELL_SOURCE.md","formalism/RFN1B2P_CHARGE_PROJECTED_EM_CURRENT_INTERTWINER.md","closure/einstein/RF_E0_AB_MAXWELL_STRESS_ENERGY_BRIDGE.md","closure/einstein/RF_E6_LORENTZIAN_MATTER_ACTION_SOURCE_BOOKKEEPING_FIREWALL.md","closure/einstein/RF_E7_TOTAL_SCALAR_STRESS_ENERGY_COMPOSITION.md"]
+    "lambda_action_receipt":"validation/RFL2_DYNAMIC_LAMBDA0_ACTION_STABILITY_V0_1.json",
+    "interfaces":["closure/maxwell/RF_M1_AHARONOV_BOHM_MAXWELL_HOLONOMY.md","closure/maxwell/RF_M4_CHARGE_PROJECTED_NOETHER_MAXWELL_SOURCE.md","formalism/RFN1B2P_CHARGE_PROJECTED_EM_CURRENT_INTERTWINER.md","closure/einstein/RF_E0_AB_MAXWELL_STRESS_ENERGY_BRIDGE.md","closure/einstein/RF_E6_LORENTZIAN_MATTER_ACTION_SOURCE_BOOKKEEPING_FIREWALL.md","closure/einstein/RF_E7_TOTAL_SCALAR_STRESS_ENERGY_COMPOSITION.md","closure/lambda0/RF_L1_DYNAMIC_LAMBDA0_BINDING.md","closure/lambda0/RF_L2_DYNAMIC_LAMBDA0_ACTION_REALIZABILITY_STABILITY.md"]
   },
   "canonical_rfg_lineage":[
     "RFG29 Explicit Fifteen-Graph Project BCJ / Current-Factorization Gate",
@@ -73,7 +80,8 @@
     "validation/gremlin/RFG33_EXPLICIT_LOOP_INTERNAL_SPIN2_PROJECTOR_GATE_v0.1.md",
     "validation/gremlin/RFG34_PROJECTED_LOOP_CUT_CHANNEL_COVARIANCE_GATE_v0.1.md",
     "closure/einstein/RF_E6_LORENTZIAN_MATTER_ACTION_SOURCE_BOOKKEEPING_FIREWALL.md",
-    "closure/einstein/RF_E7_TOTAL_SCALAR_STRESS_ENERGY_COMPOSITION.md"
+    "closure/einstein/RF_E7_TOTAL_SCALAR_STRESS_ENERGY_COMPOSITION.md",
+    "closure/lambda0/RF_L2_DYNAMIC_LAMBDA0_ACTION_REALIZABILITY_STABILITY.md"
   ],
   "receipts":[
     "validation/RFG29_EXPLICIT_FIFTEEN_GRAPH_PROJECT_BCJ_CURRENT_FACTORIZATION_V0_1.json",
@@ -86,7 +94,8 @@
     "validation/RFM1_RFE0_RELATIVISTIC_BRIDGE_HARDENING_V0_1.json",
     "validation/RFN1B2P_CHARGE_PROJECTED_EM_CURRENT_INTERTWINER_V0_1.json",
     "validation/RFE6_LORENTZIAN_MATTER_ACTION_SOURCE_BOOKKEEPING_V0_1.json",
-    "validation/RFE7_TOTAL_SCALAR_STRESS_ENERGY_COMPOSITION_V0_1.json"
+    "validation/RFE7_TOTAL_SCALAR_STRESS_ENERGY_COMPOSITION_V0_1.json",
+    "validation/RFL2_DYNAMIC_LAMBDA0_ACTION_STABILITY_V0_1.json"
   ],
   "validation_state":{
     "RFG29":"6/6 PASS",
@@ -98,7 +107,8 @@
     "IDT_01AG":"5/5 FOCUSED PASS; 437/437 FULL CI PASS RUN 33203002798; historical sign convention retained for provenance",
     "RFC_RFN1B2P":"459/459 PASS BEFORE RF-E6 SIGNATURE/ACTION RECONCILIATION",
     "RFC_RFE6":"470/470 FINAL PASS RUN 33207702078; ACTIVE SIGN/ACTION CORRECTION AUTHORITY",
-    "RFC_RFE7":"9/9 FOCUSED; 479/479 FULL CI PASS RUN 33207870117; SINGLE-SCALAR TOTAL MATTER COMPOSITION PASS",
+    "RFC_RFE7":"479/479 FINAL PASS RUN 33208035997; SINGLE-SCALAR TOTAL MATTER COMPOSITION PASS",
+    "RFC_RFL2":"10/10 FOCUSED; 489/489 FULL CI PASS RUN 33208242527; DYNAMIC LAMBDA ACTION/STABILITY PASS",
     "github_actions_attested_hardening_commit":"PASS"
   },
   "promotion_firewall":{
@@ -117,7 +127,10 @@
     "mu_star_unit_binding":"PASS_RFE6_CONVENTION_MAP",
     "first_principles_alpha_EM":"OPEN_IF_PURSUED",
     "IDT_01AG_reciprocal_sign_alignment":"OPEN_CROSS_REPOSITORY_HOLONOMY",
-    "dynamic_Lambda0_action":"NEXT_ACTION_FRONTIER"
+    "dynamic_Lambda0_action":"PASS_RFL2",
+    "RFC_invariant_U_L_reconstruction":"NEXT_LAMBDA_FRONTIER",
+    "Lambda0_parameter_free_calibration":"OPEN",
+    "Lambda0_global_nonlinear_stability":"OPEN"
   },
-  "pinning_rule":"RFC v0.37 stacks RF-E7 on the RF-E6 Lorentzian action correction, preserving historical provenance while pinning exact single-complex-scalar stress-energy composition after hosted 479/479 PASS."
+  "pinning_rule":"RFC v0.38 stacks RF-L2 on RF-E7/RF-E6, preserving historical provenance while pinning the action-derived dynamic Lambda0 transfer and local stability gate after hosted 489/489 PASS."
 }
