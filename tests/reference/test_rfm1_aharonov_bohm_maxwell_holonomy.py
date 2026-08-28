@@ -20,6 +20,20 @@ def test_ab_curvature_recovers_physical_field_normalization():
     assert math.isclose(recovered, F, rel_tol=2e-15, abs_tol=2e-15)
 
 
+def test_probe_charge_representations_recover_same_physical_potential():
+    hbar = 1.91
+    physical_A = (0.43, -0.82, 1.17, 0.09)
+    recovered = []
+    for q in (0.37, -1.6):
+        a_ab = tuple((q / hbar) * value for value in physical_A)
+        recovered.append(tuple((hbar / q) * value for value in a_ab))
+    for candidate in recovered:
+        for actual, expected in zip(candidate, physical_A):
+            assert math.isclose(actual, expected, rel_tol=2e-15, abs_tol=2e-15)
+    for x, y in zip(recovered[0], recovered[1]):
+        assert math.isclose(x, y, rel_tol=2e-15, abs_tol=2e-15)
+
+
 def test_closed_ab_loop_equals_flux_for_constant_field():
     B = 0.73
     width = 1.8
@@ -96,10 +110,61 @@ def test_curvature_is_invariant_under_symmetric_hessian_gauge_term():
 
 
 def test_homogeneous_maxwell_bianchi_identity_on_nontrivial_polynomial_potential():
-    assert 0.0 + 1.0 - 1.0 == 0.0
-    assert 0.0 - 1.0 + 1.0 == 0.0
-    assert 0.0 + 0.0 + 0.0 == 0.0
-    assert -1.0 + 0.0 + 1.0 == 0.0
+    b = (0.2, -0.4, 0.7, 0.1)
+    M = [
+        [0.1, 0.8, -0.2, 0.3],
+        [-0.5, 0.2, 0.6, -0.7],
+        [0.4, -0.1, 0.3, 0.9],
+        [-0.6, 0.5, -0.8, 0.4],
+    ]
+
+    def hessian(nu, mu, rho):
+        return ((nu + 1) * (mu + rho + 2) + (mu + 1) * (rho + 1)) / 37.0
+
+    def potential(nu, x):
+        linear = sum(M[nu][mu] * x[mu] for mu in range(4))
+        quadratic = 0.5 * sum(
+            hessian(nu, mu, rho) * x[mu] * x[rho]
+            for mu in range(4)
+            for rho in range(4)
+        )
+        return b[nu] + linear + quadratic
+
+    def dA(nu, mu, x):
+        return M[nu][mu] + sum(hessian(nu, mu, rho) * x[rho] for rho in range(4))
+
+    def F(mu, nu, x):
+        return dA(nu, mu, x) - dA(mu, nu, x)
+
+    point = [0.31, -0.27, 0.44, 0.19]
+    eps = 1e-6
+
+    # Verify that the analytic first derivative really comes from the declared potential.
+    for nu in range(4):
+        for mu in range(4):
+            xp = point.copy()
+            xm = point.copy()
+            xp[mu] += eps
+            xm[mu] -= eps
+            numeric = (potential(nu, xp) - potential(nu, xm)) / (2.0 * eps)
+            assert math.isclose(numeric, dA(nu, mu, point), rel_tol=0.0, abs_tol=2e-10)
+
+    assert max(abs(F(mu, nu, point)) for mu in range(4) for nu in range(4)) > 0.1
+
+    def partial_F(alpha, beta, gamma):
+        xp = point.copy()
+        xm = point.copy()
+        xp[alpha] += eps
+        xm[alpha] -= eps
+        return (F(beta, gamma, xp) - F(beta, gamma, xm)) / (2.0 * eps)
+
+    for alpha, beta, gamma in ((0, 1, 2), (0, 1, 3), (0, 2, 3), (1, 2, 3)):
+        cyclic = (
+            partial_F(alpha, beta, gamma)
+            + partial_F(beta, gamma, alpha)
+            + partial_F(gamma, alpha, beta)
+        )
+        assert math.isclose(cyclic, 0.0, rel_tol=0.0, abs_tol=5e-10)
 
 
 def test_wilson_phase_tracks_flux_with_fixed_q_over_hbar():
