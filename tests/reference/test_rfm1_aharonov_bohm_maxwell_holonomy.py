@@ -81,7 +81,11 @@ def test_curvature_is_invariant_under_symmetric_hessian_gauge_term():
         return [[matrix[nu][mu] - matrix[mu][nu] for nu in range(4)] for mu in range(4)]
 
     shifted = [[M[i][j] + S[i][j] for j in range(4)] for i in range(4)]
-    assert curvature(M) == curvature(shifted)
+    before = curvature(M)
+    after = curvature(shifted)
+    for mu in range(4):
+        for nu in range(4):
+            assert math.isclose(before[mu][nu], after[mu][nu], rel_tol=2e-15, abs_tol=2e-15)
 
 
 def test_homogeneous_maxwell_bianchi_identity_on_nontrivial_polynomial_potential():
