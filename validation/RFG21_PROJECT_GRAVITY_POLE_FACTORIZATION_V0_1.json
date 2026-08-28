@@ -1,0 +1,15 @@
+{
+  "schema": "RFC_RFG21_PROJECT_GRAVITY_POLE_FACTORIZATION_V0_1",
+  "status": "PASS_FOUR_POINT_MASSLESS_POLE_FACTORIZATION",
+  "observed_date_utc": "2026-08-28",
+  "reference_test": "tests/reference/test_rfg21_project_gravity_pole_factorization.py",
+  "local_result": "6 passed, 0 failed",
+  "pole_channel": "t=(p1+p3)^2 -> 0 in forward-scattering sequence",
+  "project_numerator_identity": "n_t = X_t + t K_t",
+  "residue_identity": "lim_(t->0) t C_DC = X_t Xtilde_t",
+  "amplitude_residue": "Res_(t=0) M4_project = i kappa_E X_t Xtilde_t",
+  "rank2_factorization": "X_t Xtilde_t = J_L^(mu) Jtilde_L^(nu) eta_(mu alpha) eta_(nu beta) J_R^(alpha) Jtilde_R^(beta)",
+  "contact_residue_behavior": "FINITE_CONTACT_DISTRIBUTION_VANISHES_AS_O(t)",
+  "higher_point_multi_particle_factorization": "OPEN",
+  "loop_internal_state_spectrum": "OPEN"
+}
