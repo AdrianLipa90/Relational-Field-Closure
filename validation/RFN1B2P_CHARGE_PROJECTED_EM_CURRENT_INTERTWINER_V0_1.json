@@ -1,0 +1,60 @@
+{
+  "schema": "rfc.validation.receipt/v1",
+  "gate": "RF-N1B2P",
+  "title": "Charge-Projected RFC-Maxwell Current Intertwiner",
+  "status": "PASS_HOSTED_REFERENCE",
+  "repository": "AdrianLipa90/Relational-Field-Closure",
+  "base_main_sha": "786a872efa0dc75cad7c2b1591a8cb8a1dc45858",
+  "branch": "feat/rfn1b2p-charge-projected-em-current-intertwiner-v0.1",
+  "pull_request": 15,
+  "tested_code_checkpoint": "d37852fd02b26cc0bbb35cc45e43962cce10a753",
+  "hosted_run": {
+    "workflow": "RFC reference suite",
+    "run_id": 33206384854,
+    "run_number": 183,
+    "job_id": 98968385458,
+    "python": "3.12.14",
+    "os": "Ubuntu 24.04.4",
+    "command": "python -m pytest -q tests/reference",
+    "result": "459 passed in 8.77s",
+    "conclusion": "success"
+  },
+  "typed_result": {
+    "single_charge": "J_EM^mu = -(q/hbar) J_RFC,theta^mu on the RF-N1B2K zero-defect carrier-match surface",
+    "multiplet": "J_EM^mu = -(1/hbar) Pi_Q[J_RFC]^mu",
+    "neutral_control": "Q=0 implies J_EM^mu=0 while finite matter carrier remains admissible",
+    "charge_compatibility": "[M^2,Q]=0 required for the fixed-eigenvalue sector",
+    "gauge_covariance": "synchronized phase/potential gauge shift preserves the covariant phase carrier"
+  },
+  "adversarial_controls": [
+    "wrong Maxwell-current sign",
+    "charge-scale perturbation",
+    "opposite electric charge",
+    "neutral Q=0",
+    "equal-charge multiplet reduction",
+    "unequal-charge composition ambiguity",
+    "nonzero [M^2,Q] charge mixing",
+    "synchronized gauge shift",
+    "dimension mismatch",
+    "zero hbar fail-closed"
+  ],
+  "authority": {
+    "exact": [
+      "charge-projector algebra",
+      "single-charge composition algebra",
+      "neutral Maxwell-null control",
+      "equal-charge multiplet reduction"
+    ],
+    "conditional": [
+      "physical RFC carrier-current match through RF-N1B2K",
+      "charged-matter action realization",
+      "mu_* physical normalization",
+      "total-matter stress-energy promotion"
+    ]
+  },
+  "upstream_pins": {
+    "rfc_relativistic_bridge_main": "786a872efa0dc75cad7c2b1591a8cb8a1dc45858",
+    "idt_01ag_hardening_checkpoint": "82faeffd77e9b6bab0fb879cf76af39b4673d7d2"
+  },
+  "next_gate": "CHARGED_MATTER_STRESS_ENERGY_COMPOSITION_AND_MU_STAR_NORMALIZATION"
+}

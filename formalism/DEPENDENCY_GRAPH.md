@@ -3,8 +3,16 @@
 Status: `CURRENT_FRONTIER / CROSS_REFERENCE_LOCK_V0_34`
 
 ```text
-TIR/IDT -> Newton/Einstein source closure
- -> project Yang-Mills normalization and BCJ
+TIR/IDT -> RFC conserved carrier / phase-energy source
+ -> RF-N1B2K independent RFC↔Noether current/measure audit
+ -> RF-N1B2O phase-energy matter-source factorization
+ -> RF-N1B2P charge-projected RFC↔Maxwell current intertwiner       PASS
+ -> RF-E0 EM/matter stress-energy exchange
+ -> total-matter T_mn composition                                  NEXT
+ -> Einstein source closure
+
+Parallel coupling line:
+project Yang-Mills normalization and BCJ
  -> four-point double copy / spin-2 / Einstein normalization
  -> five-point BG / KLT / project normalization / pole
  -> RFG29 explicit 15-graph BCJ
@@ -15,6 +23,26 @@ TIR/IDT -> Newton/Einstein source closure
  -> RFG34 projected s/t/u loop-cut channel covariance              PASS
  -> RFG35 vector-polarization projected-cut Ward audit             NEXT
 ```
+
+RF-N1B2P preserves the typed split
+
+\[
+J_{RFC}^{\mu}=\sum_aJ_a^{\mu},
+\qquad
+\Pi_Q[J]^{\mu}=\sum_aq_aJ_a^{\mu},
+\qquad
+\boxed{J_{EM}^{\mu}=-\hbar^{-1}\Pi_Q[J]^{\mu}}.
+\]
+
+For one charge eigenvalue this reduces to
+
+\[
+\boxed{J_{EM}^{\mu}=-(q/\hbar)J_{RFC,\vartheta}^{\mu}}
+\]
+
+on the RF-N1B2K zero-defect carrier-match surface. The neutral `Q=0` sector remains an exact Maxwell-null control while retaining a finite matter carrier.
+
+Hosted authority for RF-N1B2P: run `33206384854`, job `98968385458`, tested code checkpoint `d37852fd02b26cc0bbb35cc45e43962cce10a753`, `459 passed in 8.77s`. Receipt: `validation/RFN1B2P_CHARGE_PROJECTED_EM_CURRENT_INTERTWINER_V0_1.json`.
 
 For one internal double-copy line, RFG33 uses
 
@@ -47,6 +75,9 @@ The projector commutes with copy exchange, simultaneous helicity reversal, and a
 ## Open firewalls
 
 ```text
+RF-N1B2K physical current/measure realization
+complete charged-matter and total-matter T_mn binding
+mu_* physical normalization
 RFG35 vector-polarization projected-cut Ward audit
 projected loop-integrand realization
 integrated loop amplitude
@@ -56,6 +87,5 @@ Gamma_DC numerical promotion
 M_star physical-scale promotion
 cross-system Mbar_G universality
 universal G evidence
-complete total-matter T_mn binding
 dynamic Lambda_0 action closure
 ```

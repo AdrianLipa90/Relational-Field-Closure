@@ -1,6 +1,6 @@
 # RF-M1 / RF-E0 — Aharonov–Bohm → Maxwell → Einstein dependency bridge
 
-Status: `HOMOGENEOUS_MAXWELL_EXACT / SOURCED_MAXWELL_CONDITIONAL / IDT_01AG_VARIATION_CURRENT_BRIDGE_PASS / EINSTEIN_BIANCHI_BRIDGE_HARDENED / COUPLING_AND_TOTAL_SOURCE_PROMOTION_OPEN`
+Status: `HOMOGENEOUS_MAXWELL_EXACT / SOURCED_MAXWELL_CONDITIONAL / IDT_01AG_VARIATION_CURRENT_BRIDGE_PASS / RFC_CHARGE_PROJECTED_CURRENT_INTERTWINER_ACTIVE / EINSTEIN_BIANCHI_BRIDGE_HARDENED / COUPLING_AND_TOTAL_SOURCE_PROMOTION_OPEN`
 
 ```text
 physical Aharonov–Bohm phase
@@ -27,6 +27,12 @@ IDT 01AG charged-matter variation
   delta S_m / delta A_mu = J_Q^mu / hbar
   J_EM^mu = -J_Q^mu / hbar
   single charge: J_EM^mu = -(q/hbar) J_theta^mu
+  |
+  v
+RF-N1B2P typed current intertwiner
+  RFC phase carrier --Pi_Q--> J_Q --(-1/hbar)--> J_EM
+  single charge: J_EM^mu = -(q/hbar) J_RFC,theta^mu
+  neutral Q=0: J_EM^mu=0 with finite matter carrier allowed
   |
   v
 admitted lowest-derivative Abelian action
@@ -131,16 +137,23 @@ with single-charge reduction
 \boxed{J_{EM}^\mu=-\frac q\hbar J_\vartheta^\mu}.
 \]
 
-The next current promotion coordinate is the measured equality between the independently constructed RFC carrier current and this charge-projected electromagnetic current.
+RF-N1B2P composes this with the RFC carrier audit. The physical promotion coordinate is therefore the charge-projected intertwiner
+
+\[
+\boxed{J_{EM}^\mu=-\frac1\hbar\Pi_Q[J_{RFC}]^\mu},
+\]
+
+conditional on the independently measured RF-N1B2K carrier/Noether match. Raw equality `J_RFC=J_EM` is not used as a promotion condition; the charge projection and `-1/hbar` normalization are explicit parts of the map.
 
 ## Current promotion coordinates
 
-1. promote the independently constructed RFC conserved carrier current against the IDT 01AG charge-projected electromagnetic current;
-2. derive or empirically bind the vacuum field normalization `mu_*` in the selected physical unit convention;
-3. complete the admitted charged-matter stress-energy action;
-4. finish RF-N1C and determine `G`, hence `kappa_E`;
-5. derive the dynamic `Lambda0` sector at action level;
-6. run the full Einstein field-equation and unified-limit audit.
+1. close the RF-N1B2K independently constructed RFC carrier ↔ Noether-current/measure gate;
+2. close RF-N1B2P against independently supplied charge-resolved current packets, including the neutral and unequal-charge controls;
+3. derive or empirically bind the vacuum field normalization `mu_*` in the selected physical unit convention;
+4. complete the admitted charged-matter stress-energy action and total-matter composition;
+5. finish RF-N1C and determine `G`, hence `kappa_E`;
+6. derive the dynamic `Lambda0` sector at action level;
+7. run the full Einstein field-equation and unified-limit audit.
 
 ## Hardened validation snapshot — 2026-08-28
 
@@ -169,10 +182,13 @@ The hardened evidence chain is
 \rightarrow
 \mathrm{RF\!\! -\! M1}
 \rightarrow
+\mathrm{RF\!\! -\! N1B2P}
+\rightarrow
 \mathrm{RF\!\! -\! E0}
 \rightarrow
 \mathrm{Einstein\ closure\ gate}.
 }
 \]
 
-Validation receipt: `validation/RFM1_RFE0_RELATIVISTIC_BRIDGE_HARDENING_V0_1.json`.
+Validation receipt for the prior hardening checkpoint: `validation/RFM1_RFE0_RELATIVISTIC_BRIDGE_HARDENING_V0_1.json`.
+RF-N1B2P receives its own hosted receipt after the branch reference suite closes.
