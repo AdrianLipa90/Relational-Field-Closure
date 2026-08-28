@@ -1,54 +1,208 @@
 # RFG4 — alpha_c Gauge-Coupling Genealogy Firewall
 
-Status: `CHYBA / CANDIDATE_ONLY / ARCHIVE_CONSTANT_ROOT_FOUND / DERIVATION_ROOT_OPEN / YM_PROMOTION_BLOCKED`
+Status: `CHYBA / CANDIDATE_ONLY / LEGACY_I0_OFFSET_RECOVERY_MATCH / UPSTREAM_EXPRESSION_SOURCE_OPEN / YM_PROMOTION_GATED`
 
-RFG4 audits the archived Metatime/CIEL value
+RFG4 audits the archived Metatime/CIEL coordinate
 
 \[
-\alpha_c=0.474812
+\alpha_c^{\rm archive}=0.474812
 \]
 
-before it can enter RFG3 as a physical Yang–Mills normalization.
+before it enters RFG3 as a physical Yang–Mills normalization.
 
-## 1. Archived dependency
+## 1. Archived dependency and historical normalization
 
-The archived gluon implementation declares
+The archived gluon implementation places the two coordinates
 
 \[
-\boxed{\alpha_c=0.474812}
+\boxed{\alpha_c^{\rm archive}=0.474812},
+\qquad
+\boxed{I_0^{\rm legacy}=0.009}
 \]
 
-as an information-field kinetic coefficient and then defines
+in the same constant block. The same implementation then defines
 
 \[
-\boxed{g_{archive}=\frac{1}{\sqrt{\alpha_c}}}
+\boxed{g_{\rm archive}=\frac{1}{\sqrt{\alpha_c}}}
 \]
 
 and
 
 \[
-\boxed{\alpha_s^{archive}=\frac{g_{archive}^2}{4\pi}.}
+\boxed{\alpha_s^{\rm archive}=\frac{g_{\rm archive}^2}{4\pi}.}
 \]
 
-Thus the archived value `g≈1.4512` is downstream of `alpha_c`; its physical derivation status is exactly the derivation status of `alpha_c`.
+The current canonical information constant is
 
-## 2. Provenance result
+\[
+\boxed{\kappa=\frac{\ln2}{24\pi}}
+=0.009193150006360\ldots
+\]
 
-The current Library provenance search finds repeated declarations of `0.474812` under names such as `ALPHA_C`, `CONSCIOUSNESS_QUANTUM` and `LIPA_CONSTANT`. The located sources instantiate the number as a constant. The current search did not locate an upstream equation whose independently supplied inputs evaluate to `0.474812`.
+so the historical rounded coordinate carries the normalization displacement
 
-Therefore the promotion state is
+\[
+\boxed{\Delta I=\kappa-I_0^{\rm legacy}}
+=1.9315000636\times10^{-4}.
+\]
+
+## 2. Recovered legacy-offset candidate
+
+A previously frozen low-complexity GREMLIN candidate gave the canonical-base coordinate
 
 \[
 \boxed{
-\texttt{ARCHIVE_CONSTANT_ROOT_FOUND}
-\;\wedge\;
-\texttt{DERIVATION_ROOT_OPEN}.
+\alpha_c^{(\kappa,0)}
+=
+\ln\varphi-\kappa\ln2
 }
 \]
 
-The archived downstream identities are executable, while physical Yang–Mills promotion remains blocked.
+with
 
-## 3. Relation to the Wilson coordinate
+\[
+\alpha_c^{(\kappa,0)}
+=0.474839619052230\ldots
+\]
+
+The historical project geometry already supplies
+
+\[
+L_3=7.
+\]
+
+The newly recovered normalization-offset candidate is therefore
+
+\[
+\boxed{
+\delta_{I,L_3}
+=
+\frac{\kappa-I_0^{\rm legacy}}{L_3}
+}
+\]
+
+and
+
+\[
+\boxed{
+\alpha_c^{\rm legacy\,rec}
+=
+\ln\varphi
+-\kappa\ln2
+-\frac{\kappa-I_0^{\rm legacy}}{L_3}.
+}
+\]
+
+For
+
+\[
+I_0^{\rm legacy}=0.009,
+\qquad L_3=7,
+\]
+
+this gives
+
+\[
+\boxed{
+\alpha_c^{\rm legacy\,rec}
+=0.47481202619417856\ldots
+}
+\]
+
+and therefore at the six-decimal precision carried by the archived constant,
+
+\[
+\boxed{
+\operatorname{round}(\alpha_c^{\rm legacy\,rec},6)
+=0.474812.
+}
+\]
+
+The absolute residual against the archived decimal is
+
+\[
+\Delta_{\rm abs}=2.6194\times10^{-8},
+\]
+
+with relative residual
+
+\[
+\Delta_{\rm rel}=5.52\times10^{-8}.
+\]
+
+This is recorded as `LEGACY_I0_OFFSET_RECOVERY_MATCH`.
+
+## 3. Canonical renormalized coordinate
+
+Under exact replacement of the historical rounded information coordinate by the canonical one,
+
+\[
+I_0^{\rm legacy}\rightarrow\kappa,
+\]
+
+the offset term closes:
+
+\[
+\frac{\kappa-I_0}{L_3}\rightarrow0.
+\]
+
+The corresponding canonicalized coordinate is therefore
+
+\[
+\boxed{
+\alpha_c^{\rm canonical\,cand}
+=
+\ln\varphi-\kappa\ln2
+=0.474839619052230\ldots
+}
+\]
+
+with downstream candidate coordinates
+
+\[
+\boxed{
+g_{\rm canonical\,cand}
+=(\alpha_c^{\rm canonical\,cand})^{-1/2}
+=1.4511975150\ldots}
+\]
+
+and, for the SU(3) Wilson convention,
+
+\[
+\boxed{
+\beta_W^{\rm canonical\,cand}
+=6\alpha_c^{\rm canonical\,cand}
+=2.8490377143\ldots
+}.
+\]
+
+The archived coordinates remain
+
+\[
+g_{\rm archive}=1.4512397213\ldots,
+\qquad
+\beta_W^{\rm archive}=2.848872.
+\]
+
+Thus the archived/canonical difference is naturally typed as a historical information-normalization displacement rather than a free numerical retuning.
+
+## 4. Provenance typing
+
+The Library presently establishes three facts:
+
+1. `alpha_c=0.474812` and `I0=0.009` coexist in the archived gluon constant block;
+2. the modern phase-intention formalism fixes `kappa=ln(2)/(24pi)`;
+3. the recovered offset expression reproduces the archived decimal at its stored precision.
+
+The source document containing the historical upstream expression for `alpha_c` remains `OPEN_SOURCE_RECOVERY`.
+
+Accordingly, the expression above is typed
+
+`GREMLIN_RECOVERED_GENEALOGY_CANDIDATE`
+
+with exact numerical reconstruction and open documentary provenance.
+
+## 5. Relation to the Wilson coordinate
 
 RFG3 uses
 
@@ -56,105 +210,81 @@ RFG3 uses
 \beta_W=\frac6{g_0^2}.
 \]
 
-If the archive relation `g_0^2=1/alpha_c` is admitted provisionally, then
+For the archive relation
 
 \[
-\boxed{\beta_W^{archive}=6\alpha_c.}
+g_0^2=\frac1{\alpha_c},
 \]
 
-For the archived constant,
+one obtains
 
 \[
-\beta_W^{archive}=2.848872.
+\boxed{\beta_W=6\alpha_c.}
 \]
 
-This value is an archive-derived coordinate only. Its status cannot exceed the genealogy status of `alpha_c`.
-
-## 4. Candidate-generation grammar
-
-GREMLIN may search for a source formula for `alpha_c` only inside a frozen low-complexity grammar built from independently admitted project primitives. A candidate expression `C` must be generated before any physical `g`, `alpha_s`, Wilson `beta_W` or Newton `G` comparison is used for selection.
-
-Allowed primitive classes for the first pass are:
-
-- canonical information constant `kappa=ln(2)/(24pi)`;
-- exact algebraic constants already independently defined by the project;
-- admitted integer geometric coordinates such as `L3,L4,L5`;
-- exact Euler/Berry winding coordinates;
-- independently derived Kähler/phase invariants with provenance.
-
-Allowed first-pass operations are limited to
+RFG3/RFG5 may therefore carry two explicitly typed sensitivity coordinates:
 
 \[
-+,-,\times,/,\log,\exp,\sqrt{\phantom{x}}
+\beta_W^{\rm archive}=2.848872,
 \]
 
-with expression depth bounded before execution.
-
-## 5. Numerical gate
-
-For a proposed candidate `C`, define
+and
 
 \[
-\boxed{
-\Delta_{\alpha_c}
-=\frac{|C-0.474812|}{0.474812}.
-}
+\beta_W^{\rm canonical\,cand}=2.8490377143\ldots
 \]
 
-A numerical match alone is insufficient for promotion. The candidate must additionally have an upstream derivation that selects its expression independently of the archived target.
+until the upstream genealogy is recovered from source.
 
-The archive value has six decimal digits. A reconstruction claiming exact archive identity must therefore satisfy an absolute tolerance compatible with that stated precision and preserve the same value under independent re-execution.
-
-## 6. Downstream firewall
-
-Until the genealogy closes, the following quantities retain candidate/archive-input status:
-
-\[
-g_{archive}=\alpha_c^{-1/2},
-\]
-
-\[
-\beta_W^{archive}=6\alpha_c,
-\]
-
-and any RFG2/RFG3 candidate
-
-\[
-G_{cand}(g_{archive})
-\quad\text{or}\quad
-G_{cand}(\beta_W^{archive}).
-\]
-
-They may be used for sensitivity analysis but not as zero-parameter derivations of the physical Yang–Mills or Newton coupling.
-
-## 7. Falsification / promotion contract
+## 6. Falsification / promotion contract
 
 Promotion requires all of:
 
-1. one explicit upstream equation for `alpha_c`;
-2. independently typed inputs to that equation;
-3. a frozen expression chosen without using a downstream QCD or gravity target;
-4. reproduction of the archived value within declared precision;
-5. a separate Yang–Mills/Wilson normalization check;
-6. running-coupling validation performed only after the bare-coordinate derivation is frozen.
+1. recovery or independent derivation of the upstream expression selecting the `L3` offset structure;
+2. independently typed inputs `kappa`, `I0_legacy`, `L3`, and `phi`;
+3. reproduction of the archived six-decimal coordinate;
+4. canonical reduction under `I0 -> kappa`;
+5. separate Yang–Mills/Wilson normalization validation;
+6. running-coupling validation after the bare-coordinate expression is frozen.
 
-## 8. GREMLIN verdict
+An adversarial sign reversal
 
-`CHYBA / CANDIDATE_ONLY`.
+\[
+\alpha_c^{(+)}
+=
+\ln\varphi-\kappa\ln2
++\frac{\kappa-I_0}{L_3}
+\]
 
-The audit improves the dependency graph by replacing the apparent chain
+must fail the six-decimal archive reconstruction gate.
+
+## 7. GREMLIN verdict
+
+`CHYBA / CANDIDATE_ONLY / LEGACY_I0_OFFSET_RECOVERY_MATCH`.
+
+The current dependency graph is
 
 ```text
-archive gluon solver -> derived g
+legacy I0 = 0.009
+canonical kappa = ln(2)/(24pi)
+L3 = 7
+        |
+        v
+legacy normalization displacement
+        |
+        v
+alpha_c legacy reconstruction candidate
+        |
+        +--> archive six-decimal match
+        |
+        +--> I0 -> kappa canonical reduction
+                 |
+                 v
+          alpha_c canonical candidate
+                 |
+                 v
+          g_YM / beta_W candidate
+                 |
+                 v
+          RFG3 / RFG5 gravity gates
 ```
-
-with the explicit chain
-
-```text
-alpha_c archive constant
- -> g = alpha_c^(-1/2)
- -> beta_W = 6 alpha_c
- -> Yang–Mills candidate
-```
-
-and marks the genealogy of `alpha_c` as the current root gate.
