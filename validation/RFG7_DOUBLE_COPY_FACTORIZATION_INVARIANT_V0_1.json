@@ -1,0 +1,23 @@
+{
+  "schema": "RFC_RFG7_DOUBLE_COPY_FACTORIZATION_INVARIANT_V0_1",
+  "status": "PASS_ALGEBRAIC_REFERENCE",
+  "observed_date_utc": "2026-08-28",
+  "reference_test": "tests/reference/test_rfg7_double_copy_factorization_invariant.py",
+  "local_result": "7 passed, 0 failed",
+  "exact_identities": [
+    "Gamma_DC = kappa_g M_star/(2 g_YM^2) on self-copy",
+    "Mbar_G = M_star/(Gamma_DC g_YM^2) = 2/kappa_g",
+    "G = kappa_g^2/(32 pi) = 1/(8 pi Mbar_G^2)",
+    "M_star -> lambda M_star and Gamma_DC -> lambda Gamma_DC preserve Mbar_G"
+  ],
+  "conditional_transfers": [
+    "RFG4G: g_YM^2 = 1/alpha_c",
+    "RF-N1C3: Mbar_G^2 = M_H T_H",
+    "Gamma_DC = alpha_c M_star/sqrt(M_H T_H)",
+    "on M_star=omega_Q/2: Gamma_DC = alpha_c omega_Q/(2 sqrt(M_H T_H))"
+  ],
+  "gamma_one_surface": "M_star = 2 g_YM^2/kappa_g",
+  "numerical_G_target_used_for_selection": false,
+  "Gamma_DC_numerical_promotion": "OPEN_PENDING_M_star_AND_INDEPENDENT_REDUCED_SCALE_EVIDENCE",
+  "BCJ_project_amplitude_binding": "OPEN_RFG6_FRONTIER"
+}
