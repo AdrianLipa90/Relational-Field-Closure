@@ -1,0 +1,20 @@
+{
+  "schema": "RFC_RFG10_HOLONOMIC_PLANE_WAVE_MODE_BINDING_V0_1",
+  "status": "PASS_COMMUTING_COLOR_REFERENCE",
+  "observed_date_utc": "2026-08-28",
+  "reference_test": "tests/reference/test_rfg10_holonomic_plane_wave_mode_binding.py",
+  "local_result": "6 passed, 0 failed",
+  "checks": [
+    "lambda_3 local links are SU(3)",
+    "principal-branch link phase recovers A_mu^3(x) pointwise",
+    "single injected Fourier momentum mode is recovered",
+    "two commuting-color modes are recovered simultaneously",
+    "transverse momentum/polarization witness satisfies k dot epsilon = 0",
+    "full-Gell-Mann coordinate obeys q=gA/2"
+  ],
+  "alpha_c": 0.47483961905223004,
+  "g_YM_source": "g^2=1/alpha_c on RFG4G admitted same-sector surface",
+  "gravity_output_used_for_selection": false,
+  "noncommuting_multi_color_extension": "OPEN",
+  "direct_project_four_gluon_amplitude": "OPEN_AFTER_NONABELIAN_MODE_BINDING"
+}
