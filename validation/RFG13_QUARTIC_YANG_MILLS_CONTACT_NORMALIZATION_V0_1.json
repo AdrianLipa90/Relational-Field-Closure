@@ -1,0 +1,19 @@
+{
+  "schema": "RFC_RFG13_QUARTIC_YANG_MILLS_CONTACT_NORMALIZATION_V0_1",
+  "status": "PASS_QUARTIC_ACTION_REFERENCE",
+  "observed_date_utc": "2026-08-28",
+  "reference_test": "tests/reference/test_rfg13_quartic_yang_mills_contact_normalization.py",
+  "local_result": "6 passed, 0 failed",
+  "checks": [
+    "matrix and structure-constant component quartic densities agree on 200 random field pairs",
+    "quartic density is independent of link orientation sign",
+    "common field scaling is lambda^4",
+    "quartic interaction scales as g^2",
+    "C_p=2 alpha_c reconstructs the quartic density from Wilson plaquette bytes",
+    "C_p=alpha_c is falsified by the factor-of-two normalization gate"
+  ],
+  "random_seed": 20260828,
+  "gravity_output_used_for_selection": false,
+  "additional_quartic_coupling_coordinate": false,
+  "direct_project_four_point_amplitude_assembly": "OPEN_NEXT_FRONTIER"
+}
