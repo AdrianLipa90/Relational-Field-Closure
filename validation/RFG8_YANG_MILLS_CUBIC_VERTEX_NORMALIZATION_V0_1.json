@@ -1,19 +1,26 @@
 {
   "schema": "RFC_RFG8_YANG_MILLS_CUBIC_VERTEX_NORMALIZATION_V0_1",
-  "status": "PASS_REFERENCE_CONDITIONAL_LOCAL_COMPLETION",
+  "status": "PASS_REFERENCE_CONDITIONAL_LOCAL_COMPLETION_LINK_ORIENTATION_EXPLICIT",
   "observed_date_utc": "2026-08-28",
   "reference_test": "tests/reference/test_rfg8_yang_mills_cubic_vertex_normalization.py",
   "local_result": "5 passed, 0 failed",
+  "link_orientation": {
+    "symbol": "sigma_link",
+    "upstream_v4_1": 1,
+    "link": "W_mu=exp(i sigma_link g a A_mu)",
+    "component_commutator": "-sigma_link g f^{abc} A_mu^b A_nu^c",
+    "cubic_vertex_prefactor": "-sigma_link g f^{abc}"
+  },
   "identities": [
     "V_bac(q,p,r) = -V_abc(p,q,r) at the kinematic tensor level",
-    "f_bac V_bac = f_abc V_abc under simultaneous boson-leg exchange",
+    "oriented color x kinematics vertex is symmetric under simultaneous boson-leg exchange",
     "p^mu V_mu_nu_rho = P_nu_rho(r)-P_nu_rho(q)",
     "g^2=1/alpha_c and beta_W=6 alpha_c on RFG4G same-sector surface",
-    "cubic vertex normalization is linear in g"
+    "four-point common coupling normalization is independent of sigma_link because (-sigma_link g)^2=g^2"
   ],
   "random_ward_samples": 250,
   "random_seed": 20260828,
+  "orientation_audit": "RFG11_DIRECT_NONCOMMUTING_LINK_CURVATURE_BINDING",
   "gravity_output_used_for_selection": false,
-  "four_point_project_amplitude": "OPEN",
-  "BCJ_numerator_binding": "OPEN_RFG6_RFG9_FRONTIER"
+  "direct_project_four_point_binding": "OPEN"
 }
