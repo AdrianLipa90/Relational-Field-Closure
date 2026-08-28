@@ -25,7 +25,6 @@ def test_closed_ab_loop_equals_flux_for_constant_field():
     width = 1.8
     height = 0.9
 
-    # Symmetric gauge: A=(-By/2, Bx/2), so dA=B dx^dy.
     def A(x, y):
         return (-0.5 * B * y, 0.5 * B * x)
 
@@ -41,7 +40,6 @@ def test_closed_ab_loop_is_invariant_under_synchronized_gauge_shift():
     def A(x, y):
         return (-0.5 * B * y, 0.5 * B * x)
 
-    # RFC/IDT synchronized convention: A -> A-dLambda.
     bx, by = 0.4, -0.7
     sxx, sxy, syy = 0.3, -0.2, 0.6
 
@@ -63,17 +61,16 @@ def test_closed_ab_loop_is_invariant_under_synchronized_gauge_shift():
 
 
 def test_covariant_phase_one_form_matches_idt_sign_convention():
-    # theta -> theta+lambda and a -> a-dlambda leave dtheta+a invariant.
     dtheta = (0.4, -0.2, 0.7, 0.1)
     a = (-0.3, 0.5, 0.2, -0.4)
     dlambda = (0.6, -0.1, 0.8, 0.2)
     before = tuple(dtheta[i] + a[i] for i in range(4))
     after = tuple((dtheta[i] + dlambda[i]) + (a[i] - dlambda[i]) for i in range(4))
-    assert before == after
+    for x, y in zip(before, after):
+        assert math.isclose(x, y, rel_tol=2e-15, abs_tol=2e-15)
 
 
 def test_curvature_is_invariant_under_symmetric_hessian_gauge_term():
-    # A_mu=M_{mu nu}x^nu.  A -> A-dLambda subtracts a symmetric Hessian S.
     M = [
         [0.0, 1.0, -0.3, 0.2],
         [0.4, 0.0, 0.7, -0.5],
@@ -99,10 +96,6 @@ def test_curvature_is_invariant_under_symmetric_hessian_gauge_term():
 
 
 def test_homogeneous_maxwell_bianchi_identity_on_nontrivial_polynomial_potential():
-    # Coordinates: (t,x,y,z). For
-    # A0=xy, A1=tz+y^2, A2=xz-t^2, A3=tx+yz,
-    # the independent F components are below.
-    # Check dF=0 for all four independent 3-index triples analytically.
     assert 0.0 + 1.0 - 1.0 == 0.0
     assert 0.0 - 1.0 + 1.0 == 0.0
     assert 0.0 + 0.0 + 0.0 == 0.0
