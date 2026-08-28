@@ -1,0 +1,21 @@
+{
+  "schema": "RFC_RFN1B2O_PHASE_ENERGY_CURRENT_SOURCE_BINDING_V0_1",
+  "status": "PASS_ALGEBRAIC_REFERENCE",
+  "observed_date_utc": "2026-08-28",
+  "reference_test": "tests/reference/test_rfn1b2o_phase_energy_current_source_binding.py",
+  "local_result": "7 passed, 0 failed",
+  "exact_identities": [
+    "j_theta = 2 A^2 r_n",
+    "E_theta = A^2 r_n^2",
+    "E_theta = (r_n/2) j_theta",
+    "epsilon_N = r_n/2",
+    "rho_theta = epsilon_N j_theta / c^2",
+    "common-rate H_theta / Q_theta = r_n/2"
+  ],
+  "nonuniform_local_cell_factorization": "PASS",
+  "phase_source_specialization": "PASS_CONDITIONAL",
+  "charge_projection": "SEPARATE_RF_M4_BRANCH",
+  "total_matter_composition": "OPEN_DOWNSTREAM_GATE",
+  "positive_source_fail_closed": true,
+  "github_actions_full_suite_executed": false
+}
