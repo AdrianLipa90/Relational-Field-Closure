@@ -1,8 +1,38 @@
 {
-  "schema":"RFC_CROSS_REFERENCE_LOCK_V0_34",
-  "status":"PROJECTED_LOOP_CUT_CHANNEL_COVARIANCE_PINNED",
+  "schema":"RFC_CROSS_REFERENCE_LOCK_V0_35",
+  "status":"PROJECTED_LOOP_CUT_CHANNEL_COVARIANCE_AND_RELATIVISTIC_BRIDGE_HOLONOMY_PINNED",
   "created":"2026-08-27",
   "updated":"2026-08-28",
+  "upstreams":[
+    {"role":"relational_information_geometry_phase_clock_area_hexahedral_rank3_and_claim_typing","repository":"AdrianLipa90/The-Fundamental-Theory-of-Informational-Relations","ref":"agent/hexahedral-bloch-frame-v0.1","commit":"a2e7003599b13a7b38c0860ecfdcf1c012780c92","interfaces":["TIR/integration/TIR_IDT_INFORMATION_AREA_CURVATURE_V0_2.md","TIR/integration/TIR_HEXAHEDRAL_BLOCH_DUAL_FRAME_V0_1.md","TIR/CLAIM_HIERARCHY.md"]},
+    {"role":"half_spinorial_critical_interface","repository":"AdrianLipa90/Secret-of-a-Half","ref":"main","commit":"206e49e306b246c4b0f4d182b0d32d5511739408"},
+    {"role":"dynamic_time_phase_clock_information_curvature_relational_lapse_and_onsager_response","repository":"AdrianLipa90/Informational-Dynamics-of-Time","ref":"main","commit":"3ac1f53af5223d16f8818dba99a63a6af2ba9498","interfaces":["formalism/00C_relational_density_viscosity.md","formalism/01D_shannon_onsager_response_tensor.md","formalism/01K_temporal_information_curvature_interface.md","formalism/05A_internal_elapsed_activity.md","formalism/05C_relational_lapse_interface.md"]},
+    {"role":"shape_euler_noether_local_current_scalar_field_rotor_gauge_pullback_and_maxwell_source_interface","repository":"AdrianLipa90/Informational-Dynamics-of-Time","ref":"audit/relativistic-bridge-01ag-hardening-v0.1","commit":"82faeffd77e9b6bab0fb879cf76af39b4673d7d2","interfaces":["formalism/01X_RFC_normalized_shape_extensive_scale_interface.md","formalism/01Y_phase_intention_energy_per_charge_interface.md","formalism/01Z_noether_collective_phase_carrier_interface.md","formalism/01AA_noether_rfc_conserved_current_binding.md","formalism/01AB_scalar_field_rotor_inertia_reduction.md","formalism/01AC_gauge_covariant_phase_pullback_noether_generator.md","formalism/01AG_charge_projected_noether_maxwell_source.md","tests/reference/test_01AG_charge_projected_noether_maxwell_source.py"]},
+    {"role":"gremlin_pnv_candidate_authoring_information_holonomy_and_source_loop_contracts","repository":"AdrianLipa90/PhaseNav-Natural-Coding-System","ref":"feat/gremlin-pnv-authoring-v0.2","commit":"b741460dba15d979a6387305daf93f476becb54e","contracts":["PNCS_GREMLIN_NATIVE_PNV_BRIDGE_V0_2","PNCS_PNV_INFORMATION_HOLONOMY_V0_1","PNCS_PNV_SOURCE_HOLONOMY_LOOPS_V0_1","PNCS_PNV_NOETHER_COLLECTIVE_CARRIER_V0_1","PNCS_PNV_NOETHER_RFC_CURRENT_BINDING_V0_1","PNCS_PNV_SCALAR_FIELD_ROTOR_INERTIA_REDUCTION_V0_1","PNCS_PNV_GAUGE_COVARIANT_PHASE_PULLBACK_V0_1"],"interfaces":["src/phasenav_natural_code/gremlin_pnv_bridge_v02.py","src/phasenav_natural_code/gremlin_pnv_holonomy_v01.py","src/phasenav_natural_code/pnv_source_holonomy_v01.py","src/phasenav_natural_code/pnv_noether_collective_holonomy_v01.py","src/phasenav_natural_code/pnv_noether_rfc_current_holonomy_v01.py","src/phasenav_natural_code/pnv_scalar_field_rotor_reduction_v01.py","src/phasenav_natural_code/pnv_gauge_covariant_phase_pullback_v01.py"],"native_ci_state":"CI_EXECUTION_UNRESOLVED_PRE_TEST"}
+  ],
+  "pncs_source_holonomy_loops":[
+    "SOURCE.CARRIER.NORMALIZATION.ROUNDTRIP",
+    "SOURCE.CARRIER.Q0_OCCUPATION.ROUNDTRIP",
+    "SOURCE.CARRIER.EPSILON_MASS_DENSITY.ROUNDTRIP",
+    "SOURCE.PHASE_INTENTION.EULER_CHARGE_ENERGY.ROUNDTRIP",
+    "SOURCE.PHASE_NOETHER.COLLECTIVE_CARRIER.ROUNDTRIP",
+    "SOURCE.PHASE_NOETHER.RFC_CONSERVED_CURRENT.ROUNDTRIP",
+    "SOURCE.PHASE_NOETHER.ROTOR_INERTIA.REDUCTION.ROUNDTRIP",
+    "SOURCE.PHASE.NOETHER.GAUGE_COVARIANT_PULLBACK.ROUNDTRIP"
+  ],
+  "relativistic_bridge_holonomy":{
+    "chain":["IDT-01AC","IDT-01AG","RF-M1","RF-E0","EINSTEIN_CLOSURE"],
+    "idt_repository":"AdrianLipa90/Informational-Dynamics-of-Time",
+    "idt_pr":22,
+    "idt_tested_commit":"82faeffd77e9b6bab0fb879cf76af39b4673d7d2",
+    "idt_ci_run_id":33203002798,
+    "idt_ci_status":"PASS",
+    "rfc_repository":"AdrianLipa90/Relational-Field-Closure",
+    "rfc_pr":14,
+    "rfc_branch":"audit/relativistic-bridge-hardening-v0.1",
+    "rfc_ci_status":"RETRY_AFTER_CROSS_REFERENCE_REPAIR",
+    "interfaces":["formalism/01AG_charge_projected_noether_maxwell_source.md","closure/maxwell/RF_M1_AHARONOV_BOHM_MAXWELL_HOLONOMY.md","closure/einstein/RF_E0_AB_MAXWELL_STRESS_ENERGY_BRIDGE.md"]
+  },
   "canonical_rfg_lineage":[
     "RFG29 Explicit Fifteen-Graph Project BCJ / Current-Factorization Gate",
     "RFG30 Explicit Fifteen-Graph Double-Copy / KLT Equivalence Gate",
@@ -33,7 +63,8 @@
     "validation/RFG31_INTERNAL_STATE_TREE_FACTORIZATION_PURE_SPIN2_V0_1.json",
     "validation/RFG32_LOOP_INTERNAL_STATE_SPECTRUM_V0_1.json",
     "validation/RFG33_EXPLICIT_LOOP_INTERNAL_SPIN2_PROJECTOR_V0_1.json",
-    "validation/RFG34_PROJECTED_LOOP_CUT_CHANNEL_COVARIANCE_V0_1.json"
+    "validation/RFG34_PROJECTED_LOOP_CUT_CHANNEL_COVARIANCE_V0_1.json",
+    "validation/IDT_RFC_PNCS_SOURCE_HOLONOMY_PAIR_V0_1.json"
   ],
   "validation_state":{
     "RFG29":"6/6 PASS",
@@ -42,7 +73,9 @@
     "RFG32":"6/6 PASS FIREWALL",
     "RFG33":"6/6 PASS EXPLICIT CUT PROJECTOR",
     "RFG34":"6/6 PASS CHANNEL COVARIANCE FRESH LIVE-SURFACE",
-    "github_actions_current_branch_full_suite":"NOT_EXECUTED"
+    "IDT_01AG":"5/5 LOCAL PASS; FULL CI PASS RUN 33203002798",
+    "RFC_RF_M1_RF_E0":"HARDENING RETRY ACTIVE",
+    "github_actions_current_branch_full_suite":"RETRY_ACTIVE"
   },
   "promotion_firewall":{
     "tree_internal_spin2":"PASS_RFG31",
@@ -58,5 +91,5 @@
     "total_matter_stress_energy":"OPEN",
     "dynamic_Lambda0_action":"OPEN"
   },
-  "pinning_rule":"RFC v0.34 pins channel-aware internal-state projection: the (--++) s cut is automatically matched on MHV support, while t/u require the explicit RFG33 projector. RFG35 must test the projected prescription in a vector-polarization Ward representation before loop-integrand promotion."
+  "pinning_rule":"RFC v0.35 preserves the RFG29-RFG34 channel-aware internal-state projection lineage together with the restored TIR/IDT/PNCS source-holonomy provenance and the executable IDT-01AG to RF-M1/RF-E0 relativistic bridge checkpoint."
 }
