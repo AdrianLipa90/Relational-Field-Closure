@@ -1,6 +1,6 @@
 # RF-M1 / RF-E0 — Aharonov–Bohm → Maxwell → Einstein dependency bridge
 
-Status: `HOMOGENEOUS_MAXWELL_EXACT / SOURCED_MAXWELL_CONDITIONAL / EINSTEIN_BIANCHI_BRIDGE_PRESENT / COUPLING_AND_TOTAL_SOURCE_BINDING_OPEN`
+Status: `HOMOGENEOUS_MAXWELL_EXACT / SOURCED_MAXWELL_CONDITIONAL / IDT_01AG_VARIATION_CURRENT_BRIDGE_PASS / EINSTEIN_BIANCHI_BRIDGE_HARDENED / COUPLING_AND_TOTAL_SOURCE_PROMOTION_OPEN`
 
 ```text
 physical Aharonov–Bohm phase
@@ -23,11 +23,17 @@ local EM curvature
   |      nabla_[a F_bc] = 0
   |
   v
+IDT 01AG charged-matter variation
+  delta S_m / delta A_mu = J_Q^mu / hbar
+  J_EM^mu = -J_Q^mu / hbar
+  single charge: J_EM^mu = -(q/hbar) J_theta^mu
+  |
+  v
 admitted lowest-derivative Abelian action
-  S_EM = integral sqrt(-g)[-F^2/(4 mu_*) - J.A]
+  S_EM = integral sqrt(-g)[-F^2/(4 mu_*) - J_EM.A]
   |
   +--> sourced Maxwell
-  |      nabla_mu F^(mu nu) = mu_* J^nu
+  |      nabla_mu F^(mu nu) = mu_* J_EM^nu
   |
   +--> current conservation
   |
@@ -36,9 +42,9 @@ admitted lowest-derivative Abelian action
          |
          v
 RF-E0 EM/matter exchange
-  nabla^mu T_EM(mu,nu)     = -F_(nu lambda) J^lambda
-  nabla^mu T_matter(mu,nu) = +F_(nu lambda) J^lambda
-  ---------------------------------------------------
+  nabla^mu T_EM(mu,nu)     = -F_(nu lambda) J_EM^lambda
+  nabla^mu T_matter(mu,nu) = +F_(nu lambda) J_EM^lambda
+  ------------------------------------------------------
   nabla^mu (T_EM + T_matter)_(mu,nu) = 0
          |
          v
@@ -51,7 +57,7 @@ RFC geometric spine
          v
 Einstein source gate
   G_mu_nu + Lambda g_mu_nu = kappa_E T_total(mu,nu)
-  kappa_E = 8 pi G / c^4 only after RF-N1C fixes G
+  kappa_E = 8 pi G / c^4 after RF-N1C fixes G
          |
          +--> constant Lambda: nabla^mu T_total(mu,nu)=0
          |
@@ -61,11 +67,11 @@ Einstein source gate
                 nabla^mu(T_total+T_Lambda)_(mu,nu)=0
 ```
 
-## Exact/conditional firewall
+## Exact and conditional layers
 
 ### Exact structural layer
 
-For an admitted nonzero probe charge and regular local gauge patch:
+For an admitted nonzero probe charge and regular local gauge patch,
 
 \[
 \mathfrak a_{AB}=\frac q\hbar A,
@@ -75,9 +81,9 @@ F=\frac\hbar q d\mathfrak a_{AB}=dA,
 \boxed{dF=0}.
 \]
 
-The AB coupling therefore fixes the potential normalization on this branch and removes the independent `alpha_A` rescaling used by the older generic Berry-to-Maxwell candidate.
+The AB coupling fixes the physical potential normalization on this branch. The hardened RF-M1 gate additionally checks that distinct nonzero probe-charge representations reconstruct the same physical potential.
 
-For the admitted RFC Levi-Civita geometry:
+For the admitted RFC Levi-Civita geometry,
 
 \[
 \boxed{\nabla^\mu G_{\mu\nu}=0},
@@ -85,13 +91,13 @@ For the admitted RFC Levi-Civita geometry:
 \boxed{\nabla^\mu g_{\mu\nu}=0}.
 \]
 
-For a dynamic scalar closure,
+For the dynamic scalar closure with spacetime-constant Einstein coupling coordinate `kappa_E`,
 
 \[
 G_{\mu\nu}+\Lambda_0 g_{\mu\nu}=\kappa_E T^{total}_{\mu\nu}
 \]
 
-implies exactly
+implies
 
 \[
 \boxed{\kappa_E\nabla^\mu T^{total}_{\mu\nu}=\nabla_\nu\Lambda_0}.
@@ -99,37 +105,74 @@ implies exactly
 
 ### Conditional action layer
 
-After admitting the local Maxwell action and the charged-matter exchange action:
+After admitting the local Maxwell action with spacetime-constant field normalization `mu_*` and the charged-matter exchange action,
 
 \[
-\nabla_\mu F^{\mu\nu}=\mu_*J^\nu,
+\nabla_\mu F^{\mu\nu}=\mu_*J_{EM}^\nu,
 \]
 
 \[
 T^{EM}_{\mu\nu}
 =\frac1{\mu_*}
-\left(F_{\mu\alpha}F_\nu{}^\alpha-rac14g_{\mu\nu}F^2\right),
+\left(F_{\mu\alpha}F_\nu{}^\alpha-\frac14g_{\mu\nu}F^2\right),
 \]
 
-and EM/matter exchange closes to a conserved combined source.
+and the EM/matter exchange closes to a conserved combined source.
 
-## Current open promotion coordinates
+IDT 01AG fixes the variation-level conversion from the charged Noether current to the Maxwell source current:
 
-1. bind the RFC/IDT conserved current to physical electromagnetic current:
-   \[
-   J_Q^\mu\stackrel{?}{\longleftrightarrow}J_{EM}^\mu;
-   \]
-2. derive or empirically bind the vacuum field normalization `mu_*`;
-3. complete the admitted matter stress-energy action;
+\[
+\boxed{J_{EM}^\mu=-\frac1\hbar\mathcal J_Q^\mu},
+\]
+
+with single-charge reduction
+
+\[
+\boxed{J_{EM}^\mu=-\frac q\hbar J_\vartheta^\mu}.
+\]
+
+The next current promotion coordinate is the measured equality between the independently constructed RFC carrier current and this charge-projected electromagnetic current.
+
+## Current promotion coordinates
+
+1. promote the independently constructed RFC conserved carrier current against the IDT 01AG charge-projected electromagnetic current;
+2. derive or empirically bind the vacuum field normalization `mu_*` in the selected physical unit convention;
+3. complete the admitted charged-matter stress-energy action;
 4. finish RF-N1C and determine `G`, hence `kappa_E`;
 5. derive the dynamic `Lambda0` sector at action level;
 6. run the full Einstein field-equation and unified-limit audit.
 
-## Validation snapshot
+## Hardened validation snapshot — 2026-08-28
 
-On branch `feat/rfm1-ab-maxwell-holonomy-v0.1`:
+RFC branch `audit/relativistic-bridge-hardening-v0.1`, PR #14:
 
-- RF-M1 Maxwell-only checkpoint after the floating-point test correction: `94 passed, 0 failed`;
-- RF-M1 + RF-E0 checkpoint: `99 passed, 0 failed`.
+- focused RF-M1 gate: `9/9 PASS`;
+- focused RF-E0 gate: `7/7 PASS`;
+- first full hardening run `33202996446`: `447 passed, 1 failed`; the fail-closed result exposed schema drift in `CROSS_REFERENCE_LOCK.json` where earlier TIR/IDT/PNCS source-holonomy provenance had been displaced;
+- additive lock repair `RFC_CROSS_REFERENCE_LOCK_V0_35` restored the upstream provenance and eight PNCS source-holonomy loops while preserving RFG29–RFG34;
+- attested RFC commit `6be45ab1abe56da1ad98255bc7f1ccc1a271cd1d`;
+- full RFC reference suite run `33203140994`: `448 passed, 0 failed`.
 
-The initial RF-M1 run produced `93 passed, 1 failed`; the sole failure was an exact Python float-list comparison (`-0.6` versus `-0.6000000000000001`). It was corrected to tolerance-aware comparison before the green checkpoints above.
+IDT peer branch `audit/relativistic-bridge-01ag-hardening-v0.1`, PR #22:
+
+- focused IDT 01AG gate: `5/5 PASS`;
+- attested IDT commit `82faeffd77e9b6bab0fb879cf76af39b4673d7d2`;
+- full IDT reference suite run `33203002798`: `437 passed, 0 failed`.
+
+The hardened evidence chain is
+
+\[
+\boxed{
+\mathrm{IDT\ 01AC}
+\rightarrow
+\mathrm{IDT\ 01AG}
+\rightarrow
+\mathrm{RF\!\! -\! M1}
+\rightarrow
+\mathrm{RF\!\! -\! E0}
+\rightarrow
+\mathrm{Einstein\ closure\ gate}.
+}
+\]
+
+Validation receipt: `validation/RFM1_RFE0_RELATIVISTIC_BRIDGE_HARDENING_V0_1.json`.
