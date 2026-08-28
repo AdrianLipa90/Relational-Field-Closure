@@ -1,0 +1,28 @@
+{
+  "schema": "RFC_RFG20_EINSTEIN_MHV_DOUBLE_COPY_NORMALIZATION_V0_1",
+  "status": "PASS_NORMALIZATION_FIREWALL_OLD_PROJECT_PREFACTOR_REJECTED",
+  "observed_date_utc": "2026-08-28",
+  "reference_test": "tests/reference/test_rfg20_einstein_mhv_double_copy_normalization.py",
+  "local_result": "6 passed, 0 failed",
+  "identities": [
+    "A_project(1234) = -2 i A_ParkeTaylor(1234)",
+    "project MHV core = -4 s^3/(t u)",
+    "project numerator convention uses kappa_g/4 double-copy transfer",
+    "M4_project = -i (kappa_g/4)^2 core = -i (kappa_E/4) core",
+    "MHV closed form = i kappa_E s^3/(t u)",
+    "old +i(kappa_g/2)^2 project transfer / Einstein target = -4",
+    "physical kappa_E=kappa_g^2/4=8 pi G unchanged"
+  ],
+  "old_project_prefactor": "FAIL_EXACT_FACTOR_MINUS4",
+  "project_numerators_modified": false,
+  "bcj_jacobi_modified": false,
+  "einstein_field_coupling_modified": false,
+  "downstreams": [
+    "RFG16 amplitude normalization consumes RFG20",
+    "RFG17 project-core prefactor consumes RFG20",
+    "RFG21 pole amplitude residue consumes RFG20",
+    "RFG22 KLT amplitude coefficient consumes RFG20",
+    "RFG23 begins higher-point BCJ/soft reference"
+  ],
+  "gravity_target_used_to_fit_numerators": false
+}
