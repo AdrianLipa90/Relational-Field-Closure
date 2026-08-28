@@ -1,0 +1,91 @@
+{
+  "schema": "RFC_RFG4B_ALPHA_C_EXTRACTION_REPLAY_CONTRACT_V0_1",
+  "status": "CHYBA_CANDIDATE_ONLY_EXACT_REPLAY_GATED",
+  "historical_report": {
+    "alpha_c_mean": 0.474812,
+    "alpha_c_reported_half_width": 0.000007,
+    "simulation_run_count": 1024,
+    "method_status": "PAPER_METHOD_RECOVERED"
+  },
+  "paper_method": {
+    "alpha_update_sign": 1,
+    "eta_numerator": 0.01,
+    "eta_rule": "0.01/(1+sqrt(sum_i(dL_dtheta_i^2)))",
+    "spectral_rule": "omega_n=n*alpha_c*c_eff/hbar_eff",
+    "spatial_method": "FOURTH_ORDER_FINITE_DIFFERENCE",
+    "time_method": "SYMPLECTIC_ADAPTIVE",
+    "boundary_method": "PML"
+  },
+  "optimiser_ancestry": {
+    "status": "OPTIMISER_ANCESTRY_RECOVERED",
+    "source_family": "ciel_quantum_optimiser.py -> ext2.py",
+    "default_learning_rate": 0.05,
+    "default_steps": 50,
+    "finite_difference_epsilon": 0.001,
+    "update_sign": -1,
+    "objective": "(1-coherence)^2+(1-fidelity)^2+ethics_penalty"
+  },
+  "typed_count_firewall": {
+    "simulation_run_count": 1024,
+    "batch17_time_series_sample_count": 1024,
+    "identity_authority": false
+  },
+  "required_driver_coordinates": [
+    "psi_initialization",
+    "symbolic_field_S_initialization",
+    "temporal_field_tau_initialization",
+    "field_dimensionality",
+    "spatial_domain",
+    "grid_resolution",
+    "grid_spacing",
+    "random_seed_schedule",
+    "alpha_c_initialization",
+    "beta_s_initialization",
+    "gamma_t_initialization",
+    "optimized_coordinate_list",
+    "fixed_coordinate_list",
+    "fourth_order_stencil",
+    "symplectic_update_map",
+    "initial_timestep",
+    "adaptive_timestep_law",
+    "adaptive_timestep_bounds",
+    "integration_horizon",
+    "pml_width",
+    "pml_profile",
+    "pml_strength",
+    "extraction_objective",
+    "optimizer_iterations_per_run",
+    "stopping_criterion",
+    "gradient_realization",
+    "coupled_constant_update_policy",
+    "unstable_run_policy",
+    "spectral_observable",
+    "sampling_cadence",
+    "windowing_rule",
+    "detrending_rule",
+    "frequency_grid",
+    "peak_detector",
+    "spectral_integer_assignment",
+    "run_level_alpha_estimator",
+    "ensemble_seed_schedule",
+    "ensemble_central_estimator",
+    "ensemble_uncertainty_estimator",
+    "ensemble_outlier_policy"
+  ],
+  "analytic_crosscheck": {
+    "status": "GREMLIN_ANALYTIC_RECONSTRUCTION_CANDIDATE",
+    "legacy_I0": 0.009,
+    "L3": 7,
+    "formula": "ln(phi)-kappa*ln(2)-(kappa-I0)/L3",
+    "alpha_c_legacy_reconstruction": 0.47481202619417856,
+    "inside_historical_reported_interval": true
+  },
+  "promotion_sequence": [
+    "PAPER_METHOD_RECOVERED",
+    "OPTIMISER_ANCESTRY_RECOVERED",
+    "HISTORICAL_DRIVER_COORDINATES_RECOVERED",
+    "CLEAN_ROOM_REPLAY_EXECUTED",
+    "ENSEMBLE_STATISTICS_REPRODUCED",
+    "EXTRACTION_REPLAY_PASS"
+  ]
+}
