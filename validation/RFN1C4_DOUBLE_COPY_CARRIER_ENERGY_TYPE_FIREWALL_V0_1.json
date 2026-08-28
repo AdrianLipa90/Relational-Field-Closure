@@ -1,0 +1,18 @@
+{
+  "schema": "RFC_RFN1C4_DOUBLE_COPY_CARRIER_ENERGY_TYPE_FIREWALL_V0_1",
+  "status": "PASS_EXACT_SCALE_TYPE_FACTORIZATION_PHYSICAL_TYPE_OPEN",
+  "observed_date_utc": "2026-08-28",
+  "reference_test": "tests/reference/test_rfn1c4_double_copy_carrier_energy_type.py",
+  "local_result": "6 passed, 0 failed",
+  "identities": [
+    "zeta_M=M_star/epsilon_N",
+    "kinetic carrier: zeta_M=1, M_star=omega_Q/2",
+    "total on-shell rest: zeta_M=2, M_star=omega_Q",
+    "kappa_E=4 Gamma_DC^2/(zeta_M^2 alpha_c^2 omega_Q^2)",
+    "kappa_E(rest)=kappa_E(kin)/4",
+    "Gamma_DC/zeta_M=alpha_c omega_Q/(2 sqrt(M_H T_H))"
+  ],
+  "m_star_physical_type": "OPEN_INDEPENDENT_EVIDENCE",
+  "gamma_dc_over_type_invariant": "AVAILABLE_FOR_IDENTIFIABILITY_AUDIT",
+  "gravity_output_used_for_selection": false
+}
