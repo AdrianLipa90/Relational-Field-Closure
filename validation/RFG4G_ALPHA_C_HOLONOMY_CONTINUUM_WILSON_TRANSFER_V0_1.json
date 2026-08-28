@@ -1,0 +1,55 @@
+{
+  "schema": "RFC_RFG4G_ALPHA_C_HOLONOMY_CONTINUUM_WILSON_TRANSFER_V0_1",
+  "status": "PASS_CONDITIONAL_SAME_SECTOR_REFERENCE",
+  "observed_date_utc": "2026-08-28",
+  "reference_test": "tests/reference/test_rfg4g_alpha_c_holonomy_continuum_wilson_transfer.py",
+  "local_result": "6 passed, 0 failed",
+  "source_provenance": [
+    {
+      "repository": "AdrianLipa90/Metatime",
+      "commit": "04078d162e74f482d2cb0d80f19c089a8a2c1615",
+      "paths": [
+        "NoParamSM/gluons.py",
+        "NoParamSM/gluonsfull.py"
+      ],
+      "binding": "alpha_c=1/g^2; T^a=lambda^a/2"
+    },
+    {
+      "repository": "AdrianLipa90/Metatime-Relation_of_Information_Framework",
+      "commit": "7498d8c6349573f8d58895145342e849d36983c8",
+      "path": "archive/lineage/41_holonomic_yang_mills_local_connection_v4_1/scripts/holonomic_yang_mills_local_connection_v4_1.py",
+      "binding": "W_mu=exp(i a q lambda); plaquette curvature proxy; L_link=(1/2)Tr(H^2)"
+    }
+  ],
+  "exact_or_limit_identities": [
+    "q_mu^a=g A_mu^a/2",
+    "H_munu -> g F_munu on the common local SU(3) continuum sector",
+    "L_link -> (g^2/2) Tr(F_munu^2)",
+    "L_YM,pair=(2/g^2)L_link",
+    "D_p/a^4 -> L_link",
+    "C_p=2/g^2",
+    "alpha_c=1/g^2 => C_p=2 alpha_c",
+    "beta_W=3 C_p=6 alpha_c"
+  ],
+  "reference_parameters": {
+    "alpha_c_archive": 0.474812,
+    "q_x": "sqrt(2)/7",
+    "q_y": "sqrt(3)/11",
+    "a_values": [0.08, 0.04, 0.02]
+  },
+  "continuum_relative_errors": [
+    0.0001400000736673158,
+    0.00003499389111658676,
+    0.000008748089698433268
+  ],
+  "adversarial_check": {
+    "coefficient": "C_p=alpha_c",
+    "expected_behavior": "approximately half-normalized continuum action",
+    "verdict": "REJECTED"
+  },
+  "beta_archive": 2.848872,
+  "beta_canonical_candidate": 2.84903771431338,
+  "same_sector_binding": "CONDITIONAL_ADMISSION",
+  "alpha_c_physical_source_selection": "RFG4_RFG4C_RFG4D_EVIDENCE_GATE",
+  "numerical_G_target_used_for_selection": false
+}
