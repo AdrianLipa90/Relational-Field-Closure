@@ -1,0 +1,117 @@
+{
+  "schema": "RFC_RFN1B2H_NORMALIZED_SHAPE_HOLONOMY_V0_1",
+  "status": "PASS_ANALYTIC_REFERENCE_AND_RFC_SUITE__PNCS_NATIVE_CI_PRE_TEST__PHYSICAL_CROSS_BINDING_OPEN",
+  "rfc_base": {
+    "branch": "feat/rfn1b2-conserved-source-carrier-v0.1",
+    "commit": "66a6f9385a62dc473a0b2a02c0bfed26175b123a"
+  },
+  "rfc_artifacts": {
+    "formalism": "formalism/RFN1B2H_NORMALIZED_SHAPE_HOLONOMY.md",
+    "formalism_commit": "2e4a20cf0a9244b37fc5ed7cf1fdd29e227f41b9",
+    "dependency_graph_commit": "6f9d49b21b5ba660733bb1d424caf208121cb4cf",
+    "pnv": "experiments/gremlin_pnv/RFN1B2H_NORMALIZED_SHAPE_HOLONOMY.pnv",
+    "pnv_commit": "4d2e60c91b6da9dda001d97e2a96fd7c20ebe480",
+    "reference_test": "tests/reference/test_rfn1b2h_normalized_shape_holonomy.py",
+    "reference_test_commit": "f9cfe73379edb2d5186373e8b88d529057c5d921"
+  },
+  "idt_export": {
+    "repository": "AdrianLipa90/Informational-Dynamics-of-Time",
+    "branch": "feat/idt-rfc-normalized-shape-holonomy-v0.1",
+    "interface": "formalism/01X_RFC_normalized_shape_extensive_scale_interface.md",
+    "interface_commit": "7be599b9c7d99123521fd8f82ac2bdc4c735b3cf",
+    "dependency_graph_commit": "c398e005b183738bfbcbf930b7ae4db9b0537a7f"
+  },
+  "pncs_contract": {
+    "repository": "AdrianLipa90/PhaseNav-Natural-Coding-System",
+    "branch": "feat/gremlin-pnv-authoring-v0.2",
+    "code_head": "5f3bf90998b8c3547d51e7c47bddaf0d6be25d60",
+    "bridge": "PNCS_GREMLIN_NATIVE_PNV_BRIDGE_V0_2",
+    "information_holonomy": "PNCS_PNV_INFORMATION_HOLONOMY_V0_1",
+    "source_holonomy": "PNCS_PNV_SOURCE_HOLONOMY_LOOPS_V0_1",
+    "native_executor_blob": "8b1a8e00e9ccaeacd9522a64c329a5c77cca1321",
+    "source_loops": [
+      "SOURCE.CARRIER.NORMALIZATION.ROUNDTRIP",
+      "SOURCE.CARRIER.Q0_OCCUPATION.ROUNDTRIP",
+      "SOURCE.CARRIER.EPSILON_MASS_DENSITY.ROUNDTRIP"
+    ],
+    "native_ci": {
+      "run_id": 33119729046,
+      "job_id": 98683307108,
+      "classification": "CI_EXECUTION_UNRESOLVED_PRE_TEST",
+      "steps": null
+    }
+  },
+  "paired_receipt": "validation/IDT_RFC_PNCS_SOURCE_HOLONOMY_PAIR_V0_1.json",
+  "analytic_result": {
+    "normalization": "N(Q)=Q/Q_Sigma",
+    "lift": "L_s(p)=s p",
+    "holonomy": "H_s(Q)=(s/Q_Sigma) Q",
+    "relative_l1_defect": "Delta_ext=abs(1-s/Q_Sigma)",
+    "exact_closure_condition": "s=Q_Sigma"
+  },
+  "constructive_probe": {
+    "Q1": [2, 3, 5],
+    "Q2": [4, 6, 10],
+    "normalized_shape": [0.2, 0.3, 0.5],
+    "shape_defect_max_abs": 0.0,
+    "scale_aware_roundtrip_Q1_relative_l1": 0.0,
+    "scale_aware_roundtrip_Q2_relative_l1": 0.0,
+    "unit_lift_Q1_relative_l1": 0.9,
+    "unit_lift_Q1_exact": "9/10",
+    "unit_lift_Q2_relative_l1": 0.95,
+    "unit_lift_Q2_exact": "19/20",
+    "epsilon_scale_ratio": 3.0,
+    "epsilon_normalized_shape_defect": 0.0
+  },
+  "source_mass_factorization": {
+    "definition": "M_Q=epsilon_Q Q_Sigma/c^2",
+    "cell_mass": "m_Q,a=M_Q p_a^(Q)",
+    "cell_density": "rho_Q,a=M_Q p_a^(Q)/V_a"
+  },
+  "reference_execution": {
+    "combined_rfc_idt_fixture": "11 passed in 0.13s",
+    "rfc_interface_tests": 6,
+    "idt_interface_tests": 5,
+    "failed": 0
+  },
+  "rfc_full_reference_suite": {
+    "commit": "48d229d5e8374710900822a89e02ccd3eefd5e09",
+    "workflow": "RFC reference suite",
+    "run_id": 33120038218,
+    "job_id": 98684356166,
+    "result": "PASS",
+    "passed": 32,
+    "failed": 0
+  },
+  "idt_full_reference_suite": {
+    "commit": "f6e36990e8055280c924fca17353820aa8d6c814",
+    "workflow": "Reference suite",
+    "run_id": 33120017246,
+    "job_id": 98684287374,
+    "result": "PASS",
+    "passed": 340,
+    "failed": 0
+  },
+  "pnv_subset_conformance": {
+    "status": "PASS",
+    "source_sha256": "c4f6bac9c2a2b11d73cd56809dfeb9b4cf2a9c82eca7e7c28e478a5924a7136c",
+    "assertions": {
+      "SHAPE_SAME": true,
+      "Q1_CLOSED": true,
+      "Q2_CLOSED": true,
+      "EPS_SHAPE_SAME": true
+    },
+    "open_scale_gates": [
+      "Q1_UNIT_SCALE",
+      "Q2_UNIT_SCALE",
+      "EPSILON_SCALE"
+    ],
+    "classification": "PNV1_SUBSET_SEMANTICS_EQUIVALENT_HARNESS",
+    "native_module_gate": "CI_EXECUTION_UNRESOLVED_PRE_TEST"
+  },
+  "gremlin_invariant": "positive extensive state -> normalization quotient -> simplex shape -> explicit positive scale lift -> exact round trip iff scale coordinate is preserved",
+  "epistemic_state": "CHYBA",
+  "rfn1c_reserved": true,
+  "newton_G_role": "TARGET_DIAGNOSTIC_ONLY",
+  "main_mutated": false
+}
