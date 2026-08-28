@@ -1,0 +1,19 @@
+{
+  "schema": "RFC_RFG14_PROJECT_FOUR_GLUON_EXCHANGE_CONTACT_WARD_V0_1",
+  "status": "PASS_PROJECT_FOUR_GLUON_GAUGE_INVARIANCE_REFERENCE",
+  "observed_date_utc": "2026-08-28",
+  "reference_test": "tests/reference/test_rfg14_project_four_gluon_exchange_contact_ward.py",
+  "local_result": "6 passed, 0 failed",
+  "random_kinematic_samples": 80,
+  "color_witnesses": 3,
+  "ward_replacements_per_state": 4,
+  "identities": [
+    "A4 = g^2 (s-channel + t-channel + u-channel + quartic contact)",
+    "all four single-leg Ward replacements vanish to numerical tolerance",
+    "reversing the relative contact sign produces an O(1) Ward defect",
+    "A4 scales as g^2 = alpha_c^-1 on the RFG4G surface",
+    "the v4.1 link-orientation sign squares out at four points"
+  ],
+  "gravity_output_used_for_selection": false,
+  "bcj_numerator_binding": "NEXT_RFG15_FRONTIER"
+}
