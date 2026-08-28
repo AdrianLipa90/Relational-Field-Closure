@@ -1,106 +1,67 @@
 # Relational Field Closure — Canonical Dependency Graph
 
-Status: `CURRENT_FRONTIER / CROSS_REFERENCE_LOCK_V0_27`
+Status: `CURRENT_FRONTIER / CROSS_REFERENCE_LOCK_V0_28`
 
-## 1. Source and geometry spine
-
-```text
-TIR geometry -> RF02H/RF02I -> Lorentzian/Riemann/Einstein geometry
-IDT phase clock -> RFN0 -> RFN1 -> RFN1B2 -> RFN1B2O phase-energy source
-RFN1B2O -> RFN1C -> RFN1C1/C2/C3/C4 -> RF-E3/E4/E5
-```
-
-\[
-\omega_Q=D_{\hat\tau}\chi=\frac{D_t\chi}{N_R},\quad
-\epsilon_N=\omega_Q/2,\quad
-j_\vartheta=2A^2\omega_Q,\quad
-\rho_\vartheta=A^2\omega_Q^2/c^2.
-\]
-
-\[
-\bar M_G=\frac{2}{\kappa_g},\qquad
-\kappa_E=\frac{\kappa_g^2}{4}=8\pi G=\frac1{\bar M_G^2},\qquad
-\bar M_G^2=M_HT_H.
-\]
-
-## 2. Yang–Mills / four-point gravity spine
+## Core dependency spine
 
 ```text
-RFG3 -> RFG4G -> RFG8/RFG10/RFG11/RFG12/RFG13
- -> RFG14 complete A4 Ward gate
- -> RFG15 matched-Jacobi project numerators
- -> RFG16 project double copy
- -> RFG18 spin-2 projector
- -> RFG19 helicity/little-group
- -> RFG20 Einstein MHV normalization
- -> RFG21 pole factorization
- -> RFG22 four-point KLT
-```
-
-RFG20 fixes
-
-\[
-A_4^{project}=2A_4^{PT(raw)},\qquad
-\mathcal M_4^{project}=-\frac{i}{4}\left(\frac{\kappa_g}{2}\right)^2\mathcal C_4^{project}.
-\]
-
-RFG17 simultaneously supplies
-
-\[
-\kappa_E=\frac1{M_HT_H}=\frac{4\Gamma_{DC}^2}{\alpha_c^2\omega_Q^2}.
-\]
-
-## 3. Higher-point tree spine
-
-```text
-RFG22 four-point KLT
- -> RFG23 five-point BCJ / conserved gauge soft reference
- -> RFG24 five-point KLT kernel / reduced-scale coordinate
- -> RFG25 direct vertex Berends-Giele / BCJ
- -> RFG26 direct BG x BG KLT gravity core
+TIR/IDT geometry + phase source
+ -> RFN1C three-route coupling holonomy
+ -> RF-E3/E4/E5 Einstein/source closures
+ -> RFG3/RFG4G Yang-Mills normalization
+ -> RFG8-RFG15 project interaction + four-point BCJ
+ -> RFG16-RFG22 four-point double-copy / spin-2 / normalization / pole / KLT
+ -> RFG23 five-point BCJ + conserved gauge soft reference
+ -> RFG24 five-point KLT kernel + reduced scale
+ -> RFG25 direct Berends-Giele / BCJ
+ -> RFG26 direct BG x BG KLT core
  -> RFG27 project normalization + conserved gravity soft transport
- -> RFG28 five-point multi-particle pole residue audit          NEXT
+ -> RFG28 non-soft s12 KLT pole factorization
+ -> RFG29 explicit 15-cubic-graph/project-current residue expansion     NEXT
 ```
 
-RFG27 identifies the color-order basis map
+Four-point physical coupling remains
 
 \[
-\boxed{\eta_A=2},\qquad
-\boxed{A_5^{project}=2A_5^{BG}},
+\kappa_E=\frac{\kappa_g^2}{4}=8\pi G=\frac1{\bar M_G^2}=\frac1{M_HT_H}.
 \]
 
-so the KLT bilinear maps as
+RFG27 fixes the five-point color-order map and amplitude coefficient:
 
 \[
-\boxed{\mathcal C_5^{project}=4\mathcal C_5^{BG}}.
+A_5^{project}=2A_5^{BG},\qquad
+C_5^{project}=4C_5^{BG},
 \]
-
-For the reduced-scale coordinate
 
 \[
-P_5=\left(\frac{\kappa_g}{2}\right)^3=\frac1{\bar M_G^3},
+\boxed{M_5^{project}=-\frac{i}{4}\left(\frac{\kappa_g}{2}\right)^3C_5^{project}=-i\left(\frac{\kappa_g}{2}\right)^3C_5^{BG}}.
 \]
 
-the momentum-conserving gravity soft gate gives
+RFG28 adds the independent non-soft factorization channel
 
 \[
-\boxed{\frac{\mathcal C_5^{project}}{S_5^+\mathcal C_4^{project}}\to1},
+s_{12}\to0,
 \]
 
-and therefore
+with
 
 \[
-\boxed{\mathcal M_5^{project}=-\frac{i}{4}P_5\mathcal C_5^{project}=-iP_5\mathcal C_5^{BG}}.
+\boxed{C_5^{BG}\sim1/s_{12}},\qquad
+\boxed{\operatorname*{Res}_{s_{12}=0}C_5^{BG}=(s_{13}+s_{23})R_L^{YM}R_R^{YM}}.
 \]
 
-The previous `+i P5 C5_BG` expression is rejected by an exact soft-limit phase ratio `-1`.
+The KLT residue is rank one: cross and finite basis contributions vanish after multiplication by `s12`. On the project surface,
 
-## 4. Current open firewalls
+\[
+\boxed{\operatorname*{Res}M_5^{project}=-i\left(\frac{\kappa_g}{2}\right)^3\operatorname*{Res}C_5^{BG}}.
+\]
+
+## Open firewalls
 
 ```text
-RFG28 five-point multi-particle pole residue audit
-explicit 15-cubic-graph project BCJ numerator representation
-higher-point per-vertex normalization beyond the pinned color-order map
+RFG29 explicit 15-cubic-graph project BCJ numerator representation
+RFG29 explicit 3pt x 4pt project-current residue expansion
+higher-point per-vertex normalization beyond the pinned eta_A map
 internal-state / loop spectrum and pure-Einstein audit
 Gamma_DC numerical promotion
 M_star physical-scale promotion

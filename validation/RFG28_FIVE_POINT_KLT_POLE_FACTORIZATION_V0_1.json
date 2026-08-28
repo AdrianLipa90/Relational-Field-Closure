@@ -1,0 +1,19 @@
+{
+  "schema":"RFC_RFG28_FIVE_POINT_KLT_POLE_FACTORIZATION_V0_1",
+  "status":"PASS_FIVE_POINT_NONSOFT_KLT_POLE_FACTORIZATION",
+  "observed_date_utc":"2026-08-28",
+  "reference_test":"tests/reference/test_rfg28_five_point_klt_pole_factorization.py",
+  "fresh_local_result":"6 passed, 0 failed",
+  "channel":"s12=<12>[21] -> 0",
+  "family":"lambda2=lambda1+epsilon chi with exact momentum-conservation re-solve",
+  "identities":[
+    "C5_BG ~ 1/s12",
+    "s12^2 C5_BG -> 0",
+    "Res C5_BG=(s13+s23) R_L_YM R_R_YM",
+    "s12 times KLT cross and finite terms -> 0",
+    "Res C5_project=4 Res C5_BG",
+    "Res M5_project=-i (kappa_g/2)^3 Res C5_BG"
+  ],
+  "random_residue_families":30,
+  "next":"RFG29 explicit 15-cubic-graph/project-current residue expansion"
+}
