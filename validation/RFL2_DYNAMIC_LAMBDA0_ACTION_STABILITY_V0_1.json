@@ -1,0 +1,60 @@
+{
+  "schema": "RFC_RFL2_DYNAMIC_LAMBDA0_ACTION_STABILITY_V0_1",
+  "status": "PASS_STACKED_ON_RFE7",
+  "date": "2026-08-28",
+  "repository": "AdrianLipa90/Relational-Field-Closure",
+  "branch": "feat/rfl2-dynamic-lambda-action-stability-v0.1",
+  "stacked_on_branch": "feat/rfe7-total-scalar-stress-energy-composition-v0.1",
+  "stacked_on_head": "ab433a32a8271ac629ef7c0863e3eaec9ee50ffd",
+  "pull_request": 18,
+  "tested_commit": "38c9589608abe77bdcf05d46e997731ef5d6e430",
+  "workflow": {
+    "name": "RFC reference suite",
+    "run_id": 33208242527,
+    "job_id": 98974734417,
+    "result": "489/489 PASS",
+    "elapsed": "12.97s",
+    "python": "3.12.14",
+    "runner_os": "Ubuntu 24.04.4"
+  },
+  "focused_rfl2": {
+    "file": "tests/reference/test_rfl2_dynamic_lambda0_action_stability.py",
+    "tests": 10,
+    "status": "PASS",
+    "gates": [
+      "exact scalar stress kinetic/potential split",
+      "stationary pure metric-proportional vacuum stress",
+      "Lambda0 = Lambda_ref + kappa_E U_L action split",
+      "homogeneous epsilon=K+U and p=K-U",
+      "stationary vacuum equation of state",
+      "RF-E0 Bianchi transfer from scalar equation of motion",
+      "homogeneous full scalar energy conservation",
+      "spatial-gradient anisotropic kinetic stress",
+      "stationary-point linear stability classification from U_L''",
+      "constant Lambda_ref derivative independence and fail-closed handling"
+    ]
+  },
+  "exact": [
+    "generally covariant scalar action construction",
+    "T_L = T_kin + T_pot split",
+    "Lambda0 action mapping",
+    "on-shell Bianchi transfer",
+    "stationary constant-Lambda vacuum limit",
+    "homogeneous dynamic equation of state",
+    "spatial-gradient stress typing",
+    "local linear non-tachyonic stability criterion"
+  ],
+  "conditional": [
+    "base-sector separate conservation for the displayed transfer split",
+    "canonical scalar kinetic sign inherited from RF-E6",
+    "local stability statement at the admitted stationary point"
+  ],
+  "open": [
+    "RFC-invariant reconstruction of U_L",
+    "parameter-free physical calibration of the Lambda0 sector",
+    "global/nonlinear stability",
+    "multispecies/additional matter composition",
+    "cross-system physical G universality",
+    "full Einstein/unified-limit audit"
+  ]
+}
