@@ -1,6 +1,6 @@
 # Relational Field Closure — Canonical Dependency Graph
 
-Status: `CURRENT_FRONTIER / CROSS_REFERENCE_LOCK_V0_31`
+Status: `CURRENT_FRONTIER / CROSS_REFERENCE_LOCK_V0_32`
 
 ```text
 TIR/IDT -> Newton/Einstein source closure
@@ -10,31 +10,35 @@ TIR/IDT -> Newton/Einstein source closure
  -> RFG29 explicit 15-graph BCJ
  -> RFG30 explicit 15-graph double-copy <-> KLT
  -> RFG31 matched-helicity internal tree spin-2 factorization
- -> RFG32 loop internal-state spectrum firewall                    NEXT
+ -> RFG32 raw-loop mixed internal-state spectrum firewall
+ -> RFG33 explicit pure-spin2 internal-state projector              NEXT
 ```
 
-On the RFG31 `s12` matched-helicity branch,
+RFG31 pins the selected tree factorization residue to the symmetric-traceless spin-two sector.
+
+RFG32 shows that the corresponding loop state isolation is not automatic. On a generic two-particle t-channel cut, each Yang-Mills copy admits internal assignments `(+,-)` and `(-,+)`. Independent copy sums therefore generate both matched spin-two and crossed helicity-zero tensor-product states:
 
 \[
-T_3^{\mu\nu}=N^\mu N^\nu,\qquad P_{12}\cdot N=0,\qquad N^2=0.
+\boxed{\mathcal C_{raw}=(x_A+x_B)^2},
+\qquad
+\boxed{\mathcal C_{spin2}=x_A^2+x_B^2},
+\qquad
+\boxed{\mathcal C_{mixed}=2x_Ax_B\neq0}.
 \]
 
-Thus `T3` is symmetric-traceless in the physical transverse quotient. For the downstream tensor `T4=J_L tensor J_R`,
+Thus
 
 \[
-\boxed{T_3:T_4=(T_3)_{ST}:(T_4)_{ST}=(N\cdot J_L)(N\cdot J_R)}.
+\boxed{\mathcal C_{raw}=\mathcal C_{spin2}+\mathcal C_{mixed}}
 \]
 
-The trace and antisymmetric coordinates contribute zero to this selected residue. RFG30 therefore gives
-
-\[
-\boxed{\operatorname*{Res}\mathcal C_{5,15g}^{project}=-4(s_{13}+s_{23})(N\cdot J_L)(N\cdot J_R)}.
-\]
+and loop-level Einstein promotion requires an explicit internal-state projector or an independently validated equivalent subtraction/cancellation mechanism.
 
 ## Open firewalls
 
 ```text
-RFG32 loop internal-state spectrum / pure-spin2 closure
+RFG33 explicit loop pure-spin2 internal-state projector
+projected-cut Ward / factorization / crossing audit
 permutation-complete tree internal-state extension
 direct diagram-local alternative numerator representative
 Gamma_DC numerical promotion

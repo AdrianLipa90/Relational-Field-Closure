@@ -1,0 +1,19 @@
+{
+  "schema":"RFG32_LOOP_INTERNAL_STATE_SPECTRUM_V0_1",
+  "status":"PASS_FIREWALL_RAW_LOOP_PURE_SPIN2_OPEN",
+  "branch":"feat/rfn1c-three-route-coupling-holonomy-v0.1",
+  "date":"2026-08-28",
+  "tests":"tests/reference/test_rfg32_loop_internal_state_spectrum_firewall.py",
+  "result":{"passed":6,"failed":0},
+  "verified_claims":[
+    "exact massless momentum-conserving t-channel cut family",
+    "both one-copy internal helicity assignments (+,-) and (-,+) are generically nonzero",
+    "matched copy assignments map to internal helicity +/-2",
+    "crossed copy assignments map to helicity-zero tensor-product states",
+    "C_raw=C_spin2+C_mixed with C_mixed=2*xA*xB",
+    "C_mixed is generically nonzero",
+    "raw YMxYM loop cut differs from pure-spin2 projected cut"
+  ],
+  "promotion":{"tree_pure_spin2":"PRESERVED_RFG31","raw_loop_pure_spin2":"OPEN","next":"RFG33_EXPLICIT_INTERNAL_STATE_PROJECTOR"},
+  "github_actions_full_suite":"NOT_EXECUTED"
+}
