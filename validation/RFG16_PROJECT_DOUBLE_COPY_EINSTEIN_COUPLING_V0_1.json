@@ -1,10 +1,10 @@
 {
   "schema": "RFC_RFG16_PROJECT_DOUBLE_COPY_EINSTEIN_COUPLING_V0_1",
-  "status": "PASS_PROJECT_FOUR_POINT_DOUBLE_COPY_WITH_RFG20_NORMALIZATION_CORRECTION",
+  "status": "PASS_PROJECT_FOUR_POINT_DOUBLE_COPY_WITH_RFG22_NORMALIZATION_CORRECTION",
   "observed_date_utc": "2026-08-28",
   "reference_test": "tests/reference/test_rfg16_project_double_copy_einstein_coupling.py",
   "local_result": "6 passed, 0 failed",
-  "normalization_patch": "RFG20",
+  "normalization_patch": "RFG22",
   "identities": [
     "both project numerator copies satisfy matched four-point Jacobi",
     "single-copy Ward replacement vanishes independently in either copy",
@@ -12,10 +12,10 @@
     "M4 = -i (kappa_g/4)^2 sum_i n_i tilde_n_i / D_i",
     "project-core coefficient = -i kappa_E/4",
     "physical kappa_E = kappa_g^2/4 = 8 pi G = 1/Mbar_G^2",
-    "RFG20 MHV core -4 s^3/(tu) restores i kappa_E s^3/(tu)"
+    "RFG22 MHV core -4 s^3/(tu) restores i kappa_E s^3/(tu)"
   ],
   "superseded_identity": "+i(kappa_g/2)^2 project-core prefactor",
-  "superseded_identity_verdict": "FAIL_EXACT_FACTOR_MINUS4_RFG20",
+  "superseded_identity_verdict": "FAIL_EXACT_FACTOR_MINUS4_RFG22",
   "gravity_amplitude_used_to_fit_numerators": false,
   "bcj_numerators_modified": false,
   "scope": "TREE_LEVEL_FOUR_POINT_PROJECT_SECTOR",
