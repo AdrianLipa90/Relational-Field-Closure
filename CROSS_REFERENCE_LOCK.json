@@ -1,13 +1,13 @@
 {
-  "schema":"RFC_CROSS_REFERENCE_LOCK_V0_35",
-  "status":"PROJECTED_LOOP_CUT_CHANNEL_COVARIANCE_AND_RELATIVISTIC_BRIDGE_HOLONOMY_PINNED",
+  "schema":"RFC_CROSS_REFERENCE_LOCK_V0_36",
+  "status":"PROJECTED_LOOP_CUT_CHANNEL_COVARIANCE_RELATIVISTIC_BRIDGE_AND_RFE6_ACTION_CORRECTION_PINNED",
   "created":"2026-08-27",
   "updated":"2026-08-28",
   "upstreams":[
     {"role":"relational_information_geometry_phase_clock_area_hexahedral_rank3_and_claim_typing","repository":"AdrianLipa90/The-Fundamental-Theory-of-Informational-Relations","ref":"agent/hexahedral-bloch-frame-v0.1","commit":"a2e7003599b13a7b38c0860ecfdcf1c012780c92","interfaces":["TIR/integration/TIR_IDT_INFORMATION_AREA_CURVATURE_V0_2.md","TIR/integration/TIR_HEXAHEDRAL_BLOCH_DUAL_FRAME_V0_1.md","TIR/CLAIM_HIERARCHY.md"]},
     {"role":"half_spinorial_critical_interface","repository":"AdrianLipa90/Secret-of-a-Half","ref":"main","commit":"206e49e306b246c4b0f4d182b0d32d5511739408"},
     {"role":"dynamic_time_phase_clock_information_curvature_relational_lapse_and_onsager_response","repository":"AdrianLipa90/Informational-Dynamics-of-Time","ref":"main","commit":"3ac1f53af5223d16f8818dba99a63a6af2ba9498","interfaces":["formalism/00C_relational_density_viscosity.md","formalism/01D_shannon_onsager_response_tensor.md","formalism/01K_temporal_information_curvature_interface.md","formalism/05A_internal_elapsed_activity.md","formalism/05C_relational_lapse_interface.md"]},
-    {"role":"shape_euler_noether_local_current_scalar_field_rotor_gauge_pullback_and_maxwell_source_interface","repository":"AdrianLipa90/Informational-Dynamics-of-Time","ref":"audit/relativistic-bridge-01ag-hardening-v0.1","commit":"82faeffd77e9b6bab0fb879cf76af39b4673d7d2","interfaces":["formalism/01X_RFC_normalized_shape_extensive_scale_interface.md","formalism/01Y_phase_intention_energy_per_charge_interface.md","formalism/01Z_noether_collective_phase_carrier_interface.md","formalism/01AA_noether_rfc_conserved_current_binding.md","formalism/01AB_scalar_field_rotor_inertia_reduction.md","formalism/01AC_gauge_covariant_phase_pullback_noether_generator.md","formalism/01AG_charge_projected_noether_maxwell_source.md","tests/reference/test_01AG_charge_projected_noether_maxwell_source.py"]},
+    {"role":"shape_euler_noether_local_current_scalar_field_rotor_gauge_pullback_and_historical_maxwell_source_interface","repository":"AdrianLipa90/Informational-Dynamics-of-Time","ref":"audit/relativistic-bridge-01ag-hardening-v0.1","commit":"82faeffd77e9b6bab0fb879cf76af39b4673d7d2","interfaces":["formalism/01X_RFC_normalized_shape_extensive_scale_interface.md","formalism/01Y_phase_intention_energy_per_charge_interface.md","formalism/01Z_noether_collective_phase_carrier_interface.md","formalism/01AA_noether_rfc_conserved_current_binding.md","formalism/01AB_scalar_field_rotor_inertia_reduction.md","formalism/01AC_gauge_covariant_phase_pullback_noether_generator.md","formalism/01AG_charge_projected_noether_maxwell_source.md","tests/reference/test_01AG_charge_projected_noether_maxwell_source.py"],"rfc_reconciliation":"RF-E6 is the current RFC authority for the Lorentzian action/current sign; reciprocal IDT 01AG convention alignment remains a cross-repository holonomy gate"},
     {"role":"gremlin_pnv_candidate_authoring_information_holonomy_and_source_loop_contracts","repository":"AdrianLipa90/PhaseNav-Natural-Coding-System","ref":"feat/gremlin-pnv-authoring-v0.2","commit":"b741460dba15d979a6387305daf93f476becb54e","contracts":["PNCS_GREMLIN_NATIVE_PNV_BRIDGE_V0_2","PNCS_PNV_INFORMATION_HOLONOMY_V0_1","PNCS_PNV_SOURCE_HOLONOMY_LOOPS_V0_1","PNCS_PNV_NOETHER_COLLECTIVE_CARRIER_V0_1","PNCS_PNV_NOETHER_RFC_CURRENT_BINDING_V0_1","PNCS_PNV_SCALAR_FIELD_ROTOR_INERTIA_REDUCTION_V0_1","PNCS_PNV_GAUGE_COVARIANT_PHASE_PULLBACK_V0_1"],"interfaces":["src/phasenav_natural_code/gremlin_pnv_bridge_v02.py","src/phasenav_natural_code/gremlin_pnv_holonomy_v01.py","src/phasenav_natural_code/pnv_source_holonomy_v01.py","src/phasenav_natural_code/pnv_noether_collective_holonomy_v01.py","src/phasenav_natural_code/pnv_noether_rfc_current_holonomy_v01.py","src/phasenav_natural_code/pnv_scalar_field_rotor_reduction_v01.py","src/phasenav_natural_code/pnv_gauge_covariant_phase_pullback_v01.py"],"native_ci_state":"CI_EXECUTION_UNRESOLVED_PRE_TEST"}
   ],
   "pncs_source_holonomy_loops":[
@@ -21,25 +21,32 @@
     "SOURCE.PHASE.NOETHER.GAUGE_COVARIANT_PULLBACK.ROUNDTRIP"
   ],
   "relativistic_bridge_holonomy":{
-    "chain":["IDT-01AC","IDT-01AG","RF-M1","RF-E0","EINSTEIN_CLOSURE"],
+    "chain":["IDT-01AC","IDT-01AG-HISTORICAL","RF-M1","RF-N1B2P","RF-E6","RF-E0","EINSTEIN_CLOSURE"],
     "idt_repository":"AdrianLipa90/Informational-Dynamics-of-Time",
     "idt_pr":22,
     "idt_tested_commit":"82faeffd77e9b6bab0fb879cf76af39b4673d7d2",
     "idt_ci_run_id":33203002798,
     "idt_ci_job_id":98956893800,
-    "idt_full_suite":"437/437 PASS",
-    "idt_focused_01AG":"5/5 PASS",
+    "idt_full_suite":"437/437 PASS HISTORICAL CONVENTION CHECKPOINT",
+    "idt_focused_01AG":"5/5 PASS HISTORICAL CONVENTION CHECKPOINT",
     "rfc_repository":"AdrianLipa90/Relational-Field-Closure",
-    "rfc_pr":14,
-    "rfc_branch":"audit/relativistic-bridge-hardening-v0.1",
-    "rfc_tested_commit":"6be45ab1abe56da1ad98255bc7f1ccc1a271cd1d",
-    "rfc_ci_run_id":33203140994,
-    "rfc_ci_job_id":98957357027,
-    "rfc_full_suite":"448/448 PASS",
-    "rfc_focused_RF_M1":"9/9 PASS",
-    "rfc_focused_RF_E0":"7/7 PASS",
-    "receipt":"validation/RFM1_RFE0_RELATIVISTIC_BRIDGE_HARDENING_V0_1.json",
-    "interfaces":["formalism/01AG_charge_projected_noether_maxwell_source.md","closure/maxwell/RF_M1_AHARONOV_BOHM_MAXWELL_HOLONOMY.md","closure/einstein/RF_E0_AB_MAXWELL_STRESS_ENERGY_BRIDGE.md"]
+    "rfc_hardening_pr":14,
+    "rfc_hardening_tested_commit":"6be45ab1abe56da1ad98255bc7f1ccc1a271cd1d",
+    "rfc_hardening_ci_run_id":33203140994,
+    "rfc_hardening_ci_job_id":98957357027,
+    "rfc_hardening_full_suite":"448/448 PASS",
+    "rfc_rfn1b2p_merge_commit":"ad6133b59ff279e5062fb570017123d835994126",
+    "rfc_rfe6_pr":16,
+    "rfc_rfe6_branch":"fix/rfe4-rfm4-lorentzian-action-sign-v0.1",
+    "rfc_rfe6_tested_commit":"3083337b15742d9aebae802469aa93c17109aeb8",
+    "rfc_rfe6_ci_run_id":33207514670,
+    "rfc_rfe6_ci_job_id":98972226978,
+    "rfc_rfe6_full_suite":"470/470 PASS",
+    "rfc_rfe6_focused":"11/11 PASS",
+    "active_current_convention":"signature (-,+,+,+); D_mu=nabla_mu+iA_muQ/hbar; L_m=-(D Psi)^dagger D Psi-U; J_EM=+J_Q/hbar",
+    "historical_receipts_retained":["validation/RFM1_RFE0_RELATIVISTIC_BRIDGE_HARDENING_V0_1.json","validation/RFN1B2P_CHARGE_PROJECTED_EM_CURRENT_INTERTWINER_V0_1.json"],
+    "correction_receipt":"validation/RFE6_LORENTZIAN_MATTER_ACTION_SOURCE_BOOKKEEPING_V0_1.json",
+    "interfaces":["closure/maxwell/RF_M1_AHARONOV_BOHM_MAXWELL_HOLONOMY.md","closure/maxwell/RF_M4_CHARGE_PROJECTED_NOETHER_MAXWELL_SOURCE.md","formalism/RFN1B2P_CHARGE_PROJECTED_EM_CURRENT_INTERTWINER.md","closure/einstein/RF_E0_AB_MAXWELL_STRESS_ENERGY_BRIDGE.md","closure/einstein/RF_E6_LORENTZIAN_MATTER_ACTION_SOURCE_BOOKKEEPING_FIREWALL.md"]
   },
   "canonical_rfg_lineage":[
     "RFG29 Explicit Fifteen-Graph Project BCJ / Current-Factorization Gate",
@@ -63,7 +70,8 @@
     "validation/gremlin/RFG31_INTERNAL_STATE_TREE_FACTORIZATION_PURE_SPIN2_FIREWALL_v0.1.md",
     "validation/gremlin/RFG32_LOOP_INTERNAL_STATE_SPECTRUM_FIREWALL_v0.1.md",
     "validation/gremlin/RFG33_EXPLICIT_LOOP_INTERNAL_SPIN2_PROJECTOR_GATE_v0.1.md",
-    "validation/gremlin/RFG34_PROJECTED_LOOP_CUT_CHANNEL_COVARIANCE_GATE_v0.1.md"
+    "validation/gremlin/RFG34_PROJECTED_LOOP_CUT_CHANNEL_COVARIANCE_GATE_v0.1.md",
+    "closure/einstein/RF_E6_LORENTZIAN_MATTER_ACTION_SOURCE_BOOKKEEPING_FIREWALL.md"
   ],
   "receipts":[
     "validation/RFG29_EXPLICIT_FIFTEEN_GRAPH_PROJECT_BCJ_CURRENT_FACTORIZATION_V0_1.json",
@@ -73,7 +81,9 @@
     "validation/RFG33_EXPLICIT_LOOP_INTERNAL_SPIN2_PROJECTOR_V0_1.json",
     "validation/RFG34_PROJECTED_LOOP_CUT_CHANNEL_COVARIANCE_V0_1.json",
     "validation/IDT_RFC_PNCS_SOURCE_HOLONOMY_PAIR_V0_1.json",
-    "validation/RFM1_RFE0_RELATIVISTIC_BRIDGE_HARDENING_V0_1.json"
+    "validation/RFM1_RFE0_RELATIVISTIC_BRIDGE_HARDENING_V0_1.json",
+    "validation/RFN1B2P_CHARGE_PROJECTED_EM_CURRENT_INTERTWINER_V0_1.json",
+    "validation/RFE6_LORENTZIAN_MATTER_ACTION_SOURCE_BOOKKEEPING_V0_1.json"
   ],
   "validation_state":{
     "RFG29":"6/6 PASS",
@@ -82,8 +92,10 @@
     "RFG32":"6/6 PASS FIREWALL",
     "RFG33":"6/6 PASS EXPLICIT CUT PROJECTOR",
     "RFG34":"6/6 PASS CHANNEL COVARIANCE FRESH LIVE-SURFACE",
-    "IDT_01AG":"5/5 FOCUSED PASS; 437/437 FULL CI PASS RUN 33203002798",
+    "IDT_01AG":"5/5 FOCUSED PASS; 437/437 FULL CI PASS RUN 33203002798; historical sign convention retained for provenance",
     "RFC_RF_M1_RF_E0":"9/9 RF-M1; 7/7 RF-E0; 448/448 FULL CI PASS RUN 33203140994",
+    "RFC_RFN1B2P":"459/459 PASS BEFORE RF-E6 SIGNATURE/ACTION RECONCILIATION",
+    "RFC_RFE6":"11/11 FOCUSED; 470/470 FULL CI PASS RUN 33207514670; ACTIVE SIGN/ACTION CORRECTION AUTHORITY",
     "github_actions_attested_hardening_commit":"PASS"
   },
   "promotion_firewall":{
@@ -97,8 +109,13 @@
     "Gamma_DC":"FACTORIZATION_INVARIANT_PASS_NUMERICAL_PROMOTION_OPEN",
     "M_star_scale":"OPEN_RFN1C2_RFG7_FIREWALL",
     "universal_G":"OPEN_CROSS_SYSTEM_EVIDENCE",
-    "total_matter_stress_energy":"OPEN",
+    "RF_N1B2K_physical_current_measure":"OPEN",
+    "charged_matter_stress_energy":"PASS_RFE6_CONDITIONAL_ON_ADMITTED_ACTION",
+    "total_matter_stress_energy":"OPEN_NEXT",
+    "mu_star_unit_binding":"PASS_RFE6_CONVENTION_MAP",
+    "first_principles_alpha_EM":"OPEN_IF_PURSUED",
+    "IDT_01AG_reciprocal_sign_alignment":"OPEN_CROSS_REPOSITORY_HOLONOMY",
     "dynamic_Lambda0_action":"OPEN"
   },
-  "pinning_rule":"RFC v0.35 preserves the RFG29-RFG34 channel-aware internal-state projection lineage together with restored TIR/IDT/PNCS source-holonomy provenance and the attested executable IDT-01AG to RF-M1/RF-E0 relativistic bridge checkpoint."
+  "pinning_rule":"RFC v0.36 preserves the RFG29-RFG34 internal-state projection lineage and TIR/IDT/PNCS source-holonomy provenance while pinning RF-E6 as the active RFC Lorentzian matter-action/current-sign correction authority after hosted 470/470 PASS. Historical RF-M4/RF-N1B2P/IDT-01AG receipts remain provenance checkpoints and are not rewritten."
 }
