@@ -1,6 +1,6 @@
 {
-  "schema": "RFC_CROSS_REFERENCE_LOCK_V0_21",
-  "status": "PHASE_SOURCE_PROJECT_YM_BCJ_DOUBLE_COPY_EINSTEIN_COUPLING_HOLONOMY_PINNED",
+  "schema": "RFC_CROSS_REFERENCE_LOCK_V0_22",
+  "status": "PHASE_SOURCE_PROJECT_YM_BCJ_DOUBLE_COPY_EINSTEIN_GFREE_COUPLING_HOLONOMY_PINNED",
   "created": "2026-08-27",
   "updated": "2026-08-28",
   "upstreams": [
@@ -89,6 +89,7 @@
     "RFG14 gauge-invariant project four-gluon exchange-plus-contact amplitude",
     "RFG15 project BCJ numerators n_i=X_i+D_i K_i with matched Jacobi",
     "RFG16 project four-point double copy with kappa_E=(kappa_g/2)^2=8 pi G",
+    "RFG17 G-free amplitude coupling holonomy kappa_E=1/(M_H T_H)=4 Gamma_DC^2/(alpha_c^2 omega_Q^2)",
     "RFG7 double-copy factorization invariant Mbar_G=2/kappa_g",
     "RF-N1C three-route Newton/double-copy/Einstein holonomy",
     "RF-N1C3 horizon reduced-scale closure",
@@ -119,6 +120,7 @@
     "validation/gremlin/RFG14_PROJECT_FOUR_GLUON_EXCHANGE_CONTACT_WARD_GATE_v0.1.md",
     "validation/gremlin/RFG15_PROJECT_FOUR_GLUON_BCJ_NUMERATOR_BINDING_v0.1.md",
     "validation/gremlin/RFG16_PROJECT_DOUBLE_COPY_EINSTEIN_COUPLING_GATE_v0.1.md",
+    "validation/gremlin/RFG17_G_FREE_AMPLITUDE_COUPLING_HOLONOMY_v0.1.md",
     "closure/einstein/RF_E3_DOUBLE_COPY_EINSTEIN_HILBERT_NORMALIZATION.md"
   ],
   "validation_receipts": [
@@ -139,6 +141,7 @@
     "validation/RFG14_PROJECT_FOUR_GLUON_EXCHANGE_CONTACT_WARD_V0_1.json",
     "validation/RFG15_PROJECT_FOUR_GLUON_BCJ_NUMERATOR_BINDING_V0_1.json",
     "validation/RFG16_PROJECT_DOUBLE_COPY_EINSTEIN_COUPLING_V0_1.json",
+    "validation/RFG17_G_FREE_AMPLITUDE_COUPLING_HOLONOMY_V0_1.json",
     "validation/RFE3_EINSTEIN_HILBERT_NORMALIZATION_V0_1.json"
   ],
   "key_source_chain": [
@@ -152,6 +155,7 @@
     "RFG14: complete project A4 satisfies four-leg Ward identities",
     "RFG15: c_s-c_t+c_u=0 and n_s-n_t+n_u=0 with n_i=X_i+D_iK_i",
     "RFG16: M4=i kappa_E sum_i n_i tilde_n_i/D_i and gravitational Ward PASS",
+    "RFG17: kappa_E=1/(M_H T_H)=4 Gamma_DC^2/(alpha_c^2 omega_Q^2) on common admitted surface",
     "RFG7: Mbar_G=M_star/(Gamma_DC g_YM^2)=2/kappa_g",
     "RF-N1C3: Mbar_G^2=M_H T_H",
     "RF-E3: 2/kappa_g^2=1/(2 kappa_E)=1/(16 pi G)"
@@ -162,10 +166,10 @@
       "rfc": "74/74 PASS"
     },
     "current_branch_local_additions": {
-      "rfc": "102/102 PASS",
+      "rfc": "108/108 PASS",
       "idt_01AE": "4/4 PASS"
     },
-    "recent_direct_replay": "RFG14-RFG16: 18/18 PASS",
+    "recent_direct_replay": "RFG14-RFG17: 24/24 PASS",
     "github_actions_current_branch_full_suite": "NOT_EXECUTED"
   },
   "promotion_firewall": {
@@ -179,6 +183,7 @@
     "project_BCJ_numerator_binding": "PASS_FOUR_POINT_RFG15",
     "project_four_point_double_copy": "PASS_RFG16",
     "einstein_coupling_amplitude_match": "PASS_EXACT_RFG16_RFE3",
+    "g_free_amplitude_coupling_holonomy": "PASS_EXACT_ALGEBRAIC_RFG17",
     "higher_point_project_BCJ": "OPEN",
     "Gamma_DC": "FACTORIZATION_INVARIANT_PASS_NUMERICAL_PROMOTION_OPEN",
     "M_star_scale": "OPEN_RFN1C2_RFG7_FIREWALL",
@@ -188,5 +193,5 @@
     "total_matter_stress_energy": "OPEN",
     "dynamic_Lambda0_action": "OPEN"
   },
-  "pinning_rule": "RFC v0.21 pins the phase-energy source handoff, same-sector Yang-Mills normalization, direct project holonomy-to-field/momentum witnesses, cubic and quartic interaction normalization, a complete gauge-invariant four-gluon project amplitude, an unfitted matched-Jacobi project numerator representation, and the resulting project four-point double-copy amplitude with exact Einstein coupling prefactor kappa_E=(kappa_g/2)^2=8 pi G. Higher-point project BCJ, numerical Gamma_DC/M_star promotion, cross-system Mbar_G universality, total matter stress-energy and dynamic-Lambda0 action remain independently gated."
+  "pinning_rule": "RFC v0.22 pins the phase-energy source handoff, same-sector Yang-Mills normalization, direct project holonomy-to-field/momentum witnesses, cubic and quartic interaction normalization, a complete gauge-invariant four-gluon project amplitude, an unfitted matched-Jacobi project numerator representation, the resulting project four-point double-copy amplitude with exact Einstein coupling prefactor kappa_E=(kappa_g/2)^2=8 pi G, and the G-free cross-route amplitude coupling reduction kappa_E=1/(M_H T_H)=4 Gamma_DC^2/(alpha_c^2 omega_Q^2). Higher-point project BCJ, numerical Gamma_DC/M_star promotion, cross-system Mbar_G universality, total matter stress-energy and dynamic-Lambda0 action remain independently gated."
 }
