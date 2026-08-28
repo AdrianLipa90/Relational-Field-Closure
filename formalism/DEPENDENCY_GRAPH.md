@@ -58,6 +58,11 @@ specialization            universality firewall
 S_R^DC =                  Mbar_G = M_star/(Gamma_DC g_YM^2)
 72 Gamma_DC^2 A^2/beta_W^2
   |                           |
+  |                        RF-N1C3
+  |                        reduced gravity-scale
+  |                        horizon/thermal closure
+  |                        Mbar_G^2 = M_H kappa_H/(2 pi) = M_H T_H
+  |                           |
   +-------------+-------------+
                 |
 RF-E3 Einstein-Hilbert action normalization
@@ -81,7 +86,7 @@ holonomic SU(3)
   -> RFG3 Wilson continuum/Yang-Mills normalization
   -> RFG6 kinematic Jacobi / BCJ gate
   -> RFG2 double-copy coupling coordinate
-  -> RF-N1C / RF-N1C2
+  -> RF-N1C / RF-N1C2 / RF-N1C3
 ```
 
 The Maxwell electric-charge projection and the gravitational phase-energy carrier remain separately typed. RF-N1B2O uses the charge-independent phase Noether carrier; RF-M4 applies the electric-charge projection only on the Maxwell source branch.
@@ -104,6 +109,7 @@ The Maxwell electric-charge projection and the gravitational phase-energy carrie
 - `RF-N1C`: Newton↔double-copy↔Einstein normalization and three-route off-shell syzygy — EXACT ALGEBRAIC FRONTIER, physical inputs gated.
 - `RF-N1C1`: phase-source reduction and reciprocal `G`/`rho` phase-rate scaling — EXACT.
 - `RF-N1C2`: reduced gravity-scale reparameterization and universal-G equivalence — EXACT; cross-system evidence gate open.
+- `RF-N1C3`: `Mbar_G^2=M_H kappa_H/(2 pi)=M_H T_H` horizon/thermal estimator closure — EXACT G-FREE REDUCTION; independent horizon provenance gate open.
 - `RF-E3`: Einstein-Hilbert coefficient transfer and metric-variation normalization — EXACT on admitted conventions.
 
 ## Phase-source bridge
@@ -154,7 +160,7 @@ G_{DC}\mapsto\lambda^{-2}G_{DC},
 \mathcal S_R^{DC}\mapsto\mathcal S_R^{DC}.
 \]
 
-## Universal gravity-scale firewall
+## Universal gravity-scale firewall and horizon estimator
 
 RF-N1C2 defines
 
@@ -184,7 +190,35 @@ On `M_star=omega_Q/2`,
 }
 \]
 
-For independently admitted systems `a,b`,
+RF-N1C3 gives the independently typed horizon/thermal estimators
+
+\[
+\boxed{
+\bar M_G^{H}
+=\sqrt{\frac{M_H\kappa_H}{2\pi}},
+\qquad
+\bar M_G^{T}=\sqrt{M_HT_H}.
+}
+\]
+
+Hence the zero-fit cross-route closure is
+
+\[
+\boxed{
+\bar M_G^{DC}=\bar M_G^{H}=\bar M_G^{T}
+}
+\]
+
+and, on the local carrier candidate,
+
+\[
+\boxed{
+\frac{\beta_W\omega_Q}{12\Gamma_{DC}}
+=\sqrt{M_HT_H}.
+}
+\]
+
+For independently admitted weak-field systems `a,b`,
 
 \[
 \boxed{
@@ -243,6 +277,16 @@ ebdeb9729f21db17bebe4e14302a9687cdc33f4e
 
 The PNCS main state contains GREMLIN live authoring v0.3 provenance and canonical NOEMA AutoBoot V3 integration. GREMLIN remains candidate-only and has no independent canon or runtime execution authority.
 
+IDT source-interface provenance:
+
+```text
+AdrianLipa90/Informational-Dynamics-of-Time
+feat/idt-rfc-normalized-shape-holonomy-v0.1
+e6c57b314bcf2e04de679c46c0be309f46cba053
+01AD -> normal proper-time phase rate
+01AE -> phase-energy/source handoff
+```
+
 ## Current physical frontier
 
 ```text
@@ -251,11 +295,13 @@ Newton <-> Einstein normalization             PASS EXACT TRANSFER
 Einstein-Hilbert prefactor                    PASS EXACT TRANSFER
 local phase-source/double-copy closure        PASS ALGEBRAIC
 reduced gravity-scale coordinate              PASS EXACT
+horizon/thermal reduced-scale estimator       PASS EXACT REDUCTION
 project beta_W physical normalization         OPEN
 project BCJ-compatible numerator binding      OPEN
 Gamma_DC physical normalization               OPEN
 M_star scale promotion                        OPEN / RF-N1C2 firewall
 cross-system Mbar_G universality               OPEN EVIDENCE GATE
+independent horizon provenance                 OPEN EVIDENCE GATE
 total matter stress-energy composition         OPEN
 independent dynamic-Lambda0 action             OPEN
 ```
