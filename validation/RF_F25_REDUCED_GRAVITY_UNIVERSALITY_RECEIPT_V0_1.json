@@ -4,7 +4,14 @@
   "title": "Reduced-Gravity Scale Cross-System Universality Receipt",
   "stack_parent": "0920cbd3664bc387cdd277a04c585c228a5f7c60",
   "implementation_head": "252ee8dd2f262a14157a4a8f99fffa7618c7df8b",
-  "status": "REFERENCE_IMPLEMENTED_AWAITING_CI",
+  "validated_head": "4b789af3b10a647dcdee0b5554f2ecb85d733a07",
+  "status": "REFERENCE_SUITE_PASS",
+  "hosted_validation": {
+    "workflow": "RFC reference suite",
+    "run_number": 363,
+    "run_id": 33274469545,
+    "conclusion": "success"
+  },
   "reference_module": "src/rfc/reduced_gravity_universality_receipt.py",
   "reference_tests": "tests/reference/test_rff25_reduced_gravity_universality_receipt.py",
   "units": "natural for RF-N1C2/RF-N1C3 reduced-scale comparisons",
