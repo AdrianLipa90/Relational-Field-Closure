@@ -4,7 +4,14 @@
   "title": "RF-N1B2K Current/Measure Realization Receipt",
   "stack_parent": "bdc256cd57ae0895ebb088c59122f15df5870237",
   "implementation_head": "b5315a84df46341385499b213c55abf393cffa2d",
-  "status": "REFERENCE_IMPLEMENTED_AWAITING_CI",
+  "validated_head": "3b213f2df9e9528ec5fc42e1b07dfe959f4c120a",
+  "status": "REFERENCE_SUITE_PASS",
+  "hosted_ci": {
+    "workflow": "RFC reference suite",
+    "run_number": 361,
+    "run_id": 33274280691,
+    "conclusion": "success"
+  },
   "reference_module": "src/rfc/current_measure_realization_receipt.py",
   "reference_tests": "tests/reference/test_rff24_current_measure_realization_receipt.py",
   "exact_targets": [
