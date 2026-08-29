@@ -13,7 +13,7 @@ def _synthetic_failure(path, test_name, line_zero_based):
     )
 
 
-def _assert_exact_mapping(path, test_name, expected_claim):
+def _assert_exact_mapping(path, test_name, expected_claim, expected_source="formalism/DEPENDENCY_GRAPH.md"):
     plugin = FpdgFailurePlugin(load_bindings())
     plugin.pytest_runtest_logreport(_synthetic_failure(path, test_name, 10))
     assert len(plugin.failures) == 1
@@ -22,7 +22,7 @@ def _assert_exact_mapping(path, test_name, expected_claim):
     assert failure["source_locator"]["path"] == path
     assert failure["source_locator"]["line_start"] == 11
     assert failure["source_locator"]["test_id"].endswith(f"::{test_name}")
-    assert "claim-source:formalism/DEPENDENCY_GRAPH.md" in failure["evidence_refs"]
+    assert f"claim-source:{expected_source}" in failure["evidence_refs"]
 
 
 def test_conserved_carrier_failure_maps_to_exact_fpdg_source_claim():
@@ -94,6 +94,55 @@ def test_matter_action_chain_failures_map_to_exact_fpdg_claims():
     )
     for path, test_name, expected_claim in cases:
         _assert_exact_mapping(path, test_name, expected_claim)
+
+
+def test_lambda_chain_failures_map_to_exact_fpdg_claims():
+    cases = (
+        (
+            "tests/reference/test_rfl1_oriented_holonomy_identities.py",
+            "test_half_angle_partition_closes_energy",
+            "RFC.L1.LAMBDA_TARGET",
+            "formalism/RFL1_RELATIONAL_LAMBDA_ORIENTED_HOLONOMY.md",
+        ),
+        (
+            "tests/reference/test_rfl2_dynamic_lambda0_action_stability.py",
+            "test_action_split_maps_potential_to_dynamic_lambda_coordinate",
+            "RFC.L2.LAMBDA_ACTION_STABILITY",
+            "closure/lambda0/RF_L2_DYNAMIC_LAMBDA0_ACTION_REALIZABILITY_STABILITY.md",
+        ),
+        (
+            "tests/reference/test_rfl3_information_scalar_potential_reconstruction.py",
+            "test_exact_information_scalar_potential_roundtrip",
+            "RFC.L3.INFORMATION_SCALAR_POTENTIAL",
+            "closure/lambda0/RF_L3_INFORMATION_SCALAR_POTENTIAL_RECONSTRUCTION.md",
+        ),
+        (
+            "tests/reference/test_rfl4_information_curvature_canonical_pullback.py",
+            "test_square_root_coordinate_roundtrip",
+            "RFC.L4.INFORMATION_CURVATURE_PULLBACK",
+            "closure/lambda0/RF_L4_INFORMATION_CURVATURE_CANONICAL_PULLBACK.md",
+        ),
+        (
+            "tests/reference/test_rfl4a_shannon_fisher_local_normalization.py",
+            "test_beta_sqrt2_matches_local_fisher_radial_coordinate",
+            "RFC.L4A.SHANNON_FISHER_NORMALIZATION",
+            "closure/lambda0/RF_L4A_SHANNON_FISHER_LOCAL_NORMALIZATION.md",
+        ),
+        (
+            "tests/reference/test_rfl5_shannon_onsager_klein_gordon_bridge.py",
+            "test_uniform_onsager_stiffness_roundtrip_exact_normalization",
+            "RFC.L5.TEMPORAL_WAVE_KG_BRIDGE",
+            "closure/lambda0/RF_L5_SHANNON_ONSAGER_TEMPORAL_WAVE_KLEIN_GORDON_BRIDGE.md",
+        ),
+        (
+            "tests/reference/test_rfl5a_premetric_dimensional_calibration_firewall.py",
+            "test_lightcone_ratio_is_exact",
+            "RFC.L5A.PREMETRIC_CALIBRATION",
+            "closure/lambda0/RF_L5A_PREMETRIC_DIMENSIONAL_CALIBRATION_FIREWALL.md",
+        ),
+    )
+    for path, test_name, expected_claim, expected_source in cases:
+        _assert_exact_mapping(path, test_name, expected_claim, expected_source)
 
 
 def test_rfe20_failure_maps_to_exact_fpdg_claim_and_test_coordinate():
