@@ -4,7 +4,14 @@
   "title": "Project Coupling Promotion Firewall",
   "stack_parent": "70a9f28058a292ada1a22ff537cdd38027cad095",
   "implementation_head": "8d9254b5848566d7389ca5cea58aa25ff2b1b70b",
-  "status": "REFERENCE_IMPLEMENTED_AWAITING_CI",
+  "validated_head": "e6458abc145774810dfe7b226179026b809fe6bb",
+  "status": "REFERENCE_SUITE_PASS",
+  "hosted_validation": {
+    "workflow": "RFC reference suite",
+    "run_number": 365,
+    "run_id": 33276216416,
+    "conclusion": "success"
+  },
   "reference_module": "src/rfc/project_coupling_promotion_firewall.py",
   "reference_tests": "tests/reference/test_rff26_project_coupling_promotion_firewall.py",
   "admitted_reference_evidence": [
