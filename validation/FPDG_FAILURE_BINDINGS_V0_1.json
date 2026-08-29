@@ -1,0 +1,67 @@
+{
+  "schema": "RFC_FPDG_FAILURE_BINDINGS_V0_1",
+  "repository_id": "RFC",
+  "repository": "AdrianLipa90/Relational-Field-Closure",
+  "purpose": "Explicit source-side test-to-claim bindings for exact FPDG failure localization",
+  "bindings": {
+    "tests/reference/test_rfe8_adm_kinematic_assembly.py": {
+      "claim_id": "RFC.ADM.E8",
+      "claim_source": "formalism/DEPENDENCY_GRAPH.md"
+    },
+    "tests/reference/test_rfe9_extrinsic_curvature_geometry.py": {
+      "claim_id": "RFC.ADM.E9",
+      "claim_source": "formalism/DEPENDENCY_GRAPH.md"
+    },
+    "tests/reference/test_rfe10_gauss_codazzi_projections.py": {
+      "claim_id": "RFC.ADM.E10",
+      "claim_source": "formalism/DEPENDENCY_GRAPH.md"
+    },
+    "tests/reference/test_rfe11_matter_projection_source_typing.py": {
+      "claim_id": "RFC.ADM.E11",
+      "claim_source": "formalism/DEPENDENCY_GRAPH.md"
+    },
+    "tests/reference/test_rfe12_action_projected_constraints.py": {
+      "claim_id": "RFC.ADM.E12",
+      "claim_source": "formalism/DEPENDENCY_GRAPH.md"
+    },
+    "tests/reference/test_rfe13_constraint_propagation_bianchi.py": {
+      "claim_id": "RFC.ADM.E13",
+      "claim_source": "formalism/DEPENDENCY_GRAPH.md"
+    },
+    "tests/reference/test_rfe14_adm_directional_relative_entropy.py": {
+      "claim_id": "RFC.E14.DIRECTIONAL_RELATIVE_ENTROPY",
+      "claim_source": "closure/einstein/RF_E14_ADM_DIRECTIONAL_RELATIVE_ENTROPY_POTENTIAL.md"
+    },
+    "tests/reference/test_rfe15_information_legendre_hamiltonian.py": {
+      "claim_id": "RFC.E15.INFORMATION_LEGENDRE_HAMILTONIAN",
+      "claim_source": "closure/einstein/RF_E15_INFORMATION_LEGENDRE_HAMILTONIAN_AUDIT.md"
+    },
+    "tests/reference/test_rfe16_adm_shift_noether_phase_energy.py": {
+      "claim_id": "RFC.E16.SHIFT_NOETHER_FIREWALL",
+      "claim_source": "closure/einstein/RF_E16_ADM_SHIFT_NOETHER_PHASE_ENERGY_BINDING.md"
+    },
+    "tests/reference/test_rfe17_clock_information_scalar_action.py": {
+      "claim_id": "RFC.E17.CLOCK_INFORMATION_SCALAR_ACTION",
+      "claim_source": "closure/einstein/RF_E17_CLOCK_INFORMATION_SCALAR_ACTION_POTENTIAL.md"
+    },
+    "tests/reference/test_rfe18_adm_shift_velocity_gauge_firewall.py": {
+      "claim_id": "RFC.E18.PHYSICAL_VELOCITY_FIREWALL",
+      "claim_source": "closure/einstein/RF_E18_ADM_SHIFT_VELOCITY_GAUGE_FIREWALL.md"
+    },
+    "tests/reference/test_rfe19_noether_current_material_congruence.py": {
+      "claim_id": "RFC.E19.NOETHER_MATERIAL_CONGRUENCE",
+      "claim_source": "closure/einstein/RF_E19_NOETHER_CURRENT_MATERIAL_CONGRUENCE.md"
+    },
+    "tests/reference/test_rfe20_tetra_clock_mass_scale_closure.py": {
+      "claim_id": "RFC.E20.TETRA_CLOCK_MASS_SCALE",
+      "claim_source": "closure/einstein/RF_E20_TETRA_CLOCK_MASS_SCALE_CLOSURE.md",
+      "validation_receipt": "validation/RF_E20_TETRA_CLOCK_MASS_SCALE_CLOSURE_V0_1.json"
+    }
+  },
+  "authority": {
+    "binding_owner": "Relational-Field-Closure",
+    "fpdg_consumes_as_evidence": true,
+    "claim_promotion_authority": false,
+    "candidate_generation_authority": false
+  }
+}
