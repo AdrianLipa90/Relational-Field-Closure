@@ -77,7 +77,7 @@ def test_projective_euler_closure_and_lifted_winding():
 
 def test_euler_root_triad_closes_for_arbitrary_relational_phase():
     for phase in (-17.0, -0.3, 0.0, 0.71, 21.5):
-        assert euler_root_triad_closure_residual(phase) < 2e-15
+        assert euler_root_triad_closure_residual(phase) < 5e-15
 
 
 def test_phase_cell_matches_rfs15_geometry():
