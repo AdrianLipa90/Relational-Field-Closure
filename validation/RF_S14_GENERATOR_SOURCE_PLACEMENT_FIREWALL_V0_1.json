@@ -1,0 +1,30 @@
+{
+  "gate": "RF-S14",
+  "title": "Relational Generator Matter/Vacuum Source-Placement Firewall",
+  "version": "0.1",
+  "status": "REFERENCE_IMPLEMENTED_AWAITING_CI",
+  "stack_parent": {
+    "gate": "RF-S13",
+    "head": "9e91a507a9cb55223d1dd5a3700e67939505ac19",
+    "reference_suite": 279,
+    "conclusion": "success"
+  },
+  "source_density": "rho_G=[B*omega*N/(A*R)]*(phi+kappa)",
+  "exact_criterion": "p_G=-rho_G iff T_G=-rho_G*g and the source is algebraically absorbable into Lambda",
+  "lambda_shift": "DeltaLambda_G=kappa_E*rho_G",
+  "residual": "R_mn=kappa_E*T_G_mn+DeltaLambda_G*g_mn",
+  "normalized_defect": "2*abs(rho_G+p_G)/(abs(rho_G)+abs(p_G))",
+  "reference_tests": [
+    "vacuum w=-1 exact absorbability",
+    "dust w=0 rejection",
+    "Einstein residual vanishes only on vacuum surface",
+    "DeltaLambda=kappa_E*rho_G",
+    "zero-source typing",
+    "fail-closed invalid inputs"
+  ],
+  "open_inputs": [
+    "physical pressure/equation-of-state receipt",
+    "physical matter-vs-vacuum placement",
+    "parameter-free kappa_E/G promotion"
+  ]
+}
