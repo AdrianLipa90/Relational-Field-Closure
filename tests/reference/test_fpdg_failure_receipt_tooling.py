@@ -3,6 +3,30 @@ from types import SimpleNamespace
 from tools.run_reference_suite_with_fpdg_receipt import FpdgFailurePlugin, load_bindings
 
 
+def test_conserved_carrier_failure_maps_to_exact_fpdg_source_claim():
+    plugin = FpdgFailurePlugin(load_bindings())
+    path = "tests/reference/test_rfn1b2_conserved_source_carrier.py"
+    report = SimpleNamespace(
+        failed=True,
+        nodeid=f"{path}::test_internal_continuity_flux_conserves_total_carrier",
+        when="call",
+        location=(path, 30, "test_internal_continuity_flux_conserves_total_carrier"),
+        longrepr=None,
+    )
+
+    plugin.pytest_runtest_logreport(report)
+
+    assert len(plugin.failures) == 1
+    failure = plugin.failures[0]
+    assert failure["claim_id"] == "RFC.SOURCE.CONSERVED_CARRIER"
+    assert failure["source_locator"]["path"] == path
+    assert failure["source_locator"]["line_start"] == 31
+    assert failure["source_locator"]["test_id"].endswith(
+        "::test_internal_continuity_flux_conserves_total_carrier"
+    )
+    assert "claim-source:formalism/DEPENDENCY_GRAPH.md" in failure["evidence_refs"]
+
+
 def test_rfe20_failure_maps_to_exact_fpdg_claim_and_test_coordinate():
     plugin = FpdgFailurePlugin(load_bindings())
     path = "tests/reference/test_rfe20_tetra_clock_mass_scale_closure.py"
