@@ -33,6 +33,10 @@ def diag(a, b, c, d):
     )
 
 
+def assert_matrix_close(actual, expected, *, abs_tol=1e-12):
+    assert max_abs_matrix_difference(actual, expected) <= abs_tol
+
+
 def test_dynamic_minus_fixed_source_is_exactly_u_hat_metric():
     rest = diag(3.0, 1.0, 2.0, 4.0)
     D = diag(0.2, 0.3, 0.4, 0.5)
@@ -40,7 +44,7 @@ def test_dynamic_minus_fixed_source_is_exactly_u_hat_metric():
     dynamic = assemble_dynamic_lambda_source(rest, MINK, eta=0.37, u_hat=7.0, projector_stress=D)
     difference = source_repartition_difference(dynamic, fixed)
     expected = tuple(tuple(7.0 * MINK[i][j] for j in range(4)) for i in range(4))
-    assert difference == pytest.approx(expected)
+    assert_matrix_close(difference, expected)
 
 
 def test_einstein_residual_is_identical_under_lambda_repartition():
@@ -65,21 +69,20 @@ def test_lambda0_shift_is_kappa_times_u_hat():
 
 
 def test_eta_zero_recovers_l2_repartition_endpoint():
-    D = ZERO4
-    fixed = fixed_reference_u_sector(MINK, eta=0.0, u_hat=5.0, projector_stress=D)
-    dynamic = dynamic_lambda_u_sector(MINK, eta=0.0, u_hat=5.0, projector_stress=D)
-    assert fixed == pytest.approx(tuple(tuple(-5.0 * MINK[i][j] for j in range(4)) for i in range(4)))
-    assert dynamic == pytest.approx(ZERO4)
+    fixed = fixed_reference_u_sector(MINK, eta=0.0, u_hat=5.0, projector_stress=ZERO4)
+    dynamic = dynamic_lambda_u_sector(MINK, eta=0.0, u_hat=5.0, projector_stress=ZERO4)
+    expected_fixed = tuple(tuple(-5.0 * MINK[i][j] for j in range(4)) for i in range(4))
+    assert_matrix_close(fixed, expected_fixed)
+    assert_matrix_close(dynamic, ZERO4)
 
 
 def test_eta_one_fixed_ledger_keeps_only_projector_stress():
     D = diag(1.0, 2.0, 3.0, 4.0)
     fixed = fixed_reference_u_sector(MINK, eta=1.0, u_hat=5.0, projector_stress=D)
     dynamic = dynamic_lambda_u_sector(MINK, eta=1.0, u_hat=5.0, projector_stress=D)
-    assert fixed == pytest.approx(D)
-    assert source_repartition_difference(dynamic, fixed) == pytest.approx(
-        tuple(tuple(5.0 * MINK[i][j] for j in range(4)) for i in range(4))
-    )
+    assert_matrix_close(fixed, D)
+    expected_difference = tuple(tuple(5.0 * MINK[i][j] for j in range(4)) for i in range(4))
+    assert_matrix_close(source_repartition_difference(dynamic, fixed), expected_difference)
 
 
 def test_frozen_f20_response_eta_one_half_slope_gives_rank_one_u_vv():
