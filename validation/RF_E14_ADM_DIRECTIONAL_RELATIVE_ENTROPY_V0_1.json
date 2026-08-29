@@ -1,0 +1,28 @@
+{
+  "schema": "RFC_RF_E14_ADM_DIRECTIONAL_RELATIVE_ENTROPY_V0_1",
+  "status": "CANDIDATE_PENDING_HOSTED_CI",
+  "parents": [
+    "RF-E8 ADM kinematic assembly",
+    "IDT 05D local clock relative-entropy potential"
+  ],
+  "local_orthonormal_chart": "N=1,h11=1",
+  "null_rates": {
+    "cooriented": "1-beta_shift",
+    "counteroriented": "1+beta_shift"
+  },
+  "reciprocal_factors": {
+    "cooriented": "1/(1-beta_shift)",
+    "counteroriented": "1/(1+beta_shift)"
+  },
+  "information_generator": "Phi(x)=x-1-ln(x)",
+  "exact_branches": {
+    "cooriented": "ln(1-beta)+beta/(1-beta)",
+    "counteroriented": "ln(1+beta)-beta/(1+beta)"
+  },
+  "parity": "I_co(beta)=I_counter(-beta)",
+  "rapidity": "x_co=gamma exp(eta); x_counter=gamma exp(-eta)",
+  "energy_binding": "OPEN_RF_E15",
+  "shift_velocity_binding": "OPEN_SOURCE_GATE",
+  "newton_scale": "IF_ENERGY_AND_BETA_V_OVER_C_BINDINGS_PASS_THEN_ESTAR=mc^2",
+  "external_formula_used_as_premise": false
+}
