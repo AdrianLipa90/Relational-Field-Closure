@@ -3,10 +3,15 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
 REGISTRY = ROOT / "validation" / "FPDG_RF_SCALE_EXPORT_V0_1.json"
+BINDINGS = ROOT / "validation" / "FPDG_RF_SCALE_FAILURE_BINDINGS_V0_1.json"
 
 
 def _load():
     return json.loads(REGISTRY.read_text(encoding="utf-8"))
+
+
+def _load_bindings():
+    return json.loads(BINDINGS.read_text(encoding="utf-8"))
 
 
 def test_rf_scale_registry_is_complete_and_source_bound():
@@ -67,9 +72,27 @@ def test_rf_s13_s22_matches_canonical_branched_scale_index():
     assert expected <= edges
 
 
+def test_failure_bindings_match_registry_exactly():
+    data = _load()
+    bindings = _load_bindings()
+    assert bindings["schema"] == "RFC_FPDG_RF_SCALE_FAILURE_BINDINGS_V0_1"
+    by_test = {c["validation_test"]: c for c in data["claims"]}
+    assert set(bindings["bindings"]) == set(by_test)
+    for test_path, binding in bindings["bindings"].items():
+        claim = by_test[test_path]
+        assert binding["claim_id"] == claim["claim_id"]
+        assert binding["claim_source"] == claim["source_path"]
+        assert binding["canonical_gate_id"] == claim["canonical_gate_id"]
+
+
 def test_registry_has_no_promotion_authority():
     authority = _load()["authority"]
     assert authority["source_repository_owns_claim_status"] is True
     assert authority["fpdg_may_consume_as_evidence"] is True
     assert authority["claim_promotion_authority"] is False
     assert authority["gremlin_candidate_generation_authority"] is False
+
+    binding_authority = _load_bindings()["authority"]
+    assert binding_authority["fpdg_consumes_as_evidence"] is True
+    assert binding_authority["claim_promotion_authority"] is False
+    assert binding_authority["candidate_generation_authority"] is False
