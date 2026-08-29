@@ -2,7 +2,7 @@
   "schema": "RFC_VALIDATION_RECEIPT_V0_1",
   "gate": "RF-S12",
   "title": "Tetrahedral Role-Permutation Source-Binding Reduction",
-  "status": "REFERENCE_CANDIDATE_PENDING_HOSTED_CI",
+  "status": "HOSTED_REFERENCE_PASS_PENDING_EXACT_HEAD_RECHECK",
   "stack_parent": "RF-S11",
   "stack_parent_head": "1822db1a805ca9b67fdbd25df192beff1a3983c5",
   "tir_source": {
@@ -52,7 +52,8 @@
   "reference_tests": "tests/reference/test_rfs12_tetra_role_permutation_source_binding.py",
   "hosted_ci": {
     "workflow": "RFC reference suite",
-    "run": null,
-    "conclusion": "PENDING"
+    "run": 277,
+    "conclusion": "SUCCESS",
+    "validated_head": "5d7098f2c8579a1c4851f648729fb418a397beaf"
   }
 }
