@@ -2,7 +2,7 @@
   "schema": "RFC_VALIDATION_RECEIPT_V0_1",
   "gate": "RF-S2",
   "title": "Light-Cone Spectral Scale Reduction",
-  "status": "REFERENCE_CANDIDATE_PENDING_HOSTED_CI",
+  "status": "REFERENCE_PASS / HOSTED_CI_PASS",
   "parent_rfc_main": "1a351a3dec2beb4371190fa040925a985aa6ce3d",
   "source_idt_main": "ed902458b6e0ad338ca4ba637d8d8228bc7c549b",
   "source_tir_tetra_congruence_merge": "ccc89fc04e1d85e9c6a60b7bb92e62a5d22d5f44",
@@ -33,7 +33,9 @@
   "reference_tests": "tests/reference/test_rfs2_lightcone_spectral_scale_reduction.py",
   "hosted_ci": {
     "workflow": "RFC reference suite",
-    "run": null,
-    "conclusion": "PENDING"
-  }
+    "run": 253,
+    "tested_head": "5005ddaace5ec89b1308b5c40f891dd26f49ffc5",
+    "conclusion": "SUCCESS"
+  },
+  "post_ci_delta": "receipt bookkeeping only; exact-head rerun required before merge"
 }
