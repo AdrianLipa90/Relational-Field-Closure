@@ -1,0 +1,30 @@
+{
+  "schema": "RFC_REFERENCE_VALIDATION_V0_1",
+  "gate": "RF-F15",
+  "title": "Microscopic Scalar <-> Phase-Cell Transport Closure",
+  "stack_parent": "a46315fa118da4343dd4d0310b2b6c69df6769e1",
+  "status": "REFERENCE_IMPLEMENTED_AWAITING_CI",
+  "reference_module": "src/rfc/microscopic_phase_cell_transport.py",
+  "reference_tests": "tests/reference/test_rff15_microscopic_phase_cell_transport.py",
+  "exact_targets": [
+    "current binding fixes A^2=q0*N*omega^2/(2*a_FS*c^3)",
+    "K=A^2*omega^2=K0*omega^4",
+    "total scalar binding gives P/q0=(1+x+v)/2",
+    "microscopic/phase-cell transport ODE dD/dlnomega=2*(1-x-2v)",
+    "constant composition gives radiation fixed point x+2v=1",
+    "fixed-x solution v=(1-x)/2+C_Lambda/omega^4",
+    "fixed-x stress decomposes as radiation plus constant vacuum density",
+    "dust surface v=1-x/3 integrates to x+3=C_d/omega",
+    "dust P/q0=C_d/(3*omega)",
+    "dust energy/action-charge C_d/3 is constant",
+    "dust density scales as omega^3",
+    "RF-F12 converts omega powers to radiation a^-4, dust a^-3 and constant vacuum"
+  ],
+  "promotion_inputs": [
+    "zero-defect physical RF-N1B2K local current/measure receipt",
+    "physical constant-vacuum component <-> RF-L2 Lambda0 attribution",
+    "multispecies transport composition",
+    "absolute project-side kappa_E/G promotion"
+  ],
+  "main_merge": "NOT_PERFORMED"
+}
