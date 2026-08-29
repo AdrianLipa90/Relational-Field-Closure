@@ -24,6 +24,26 @@
       "claim_source": "formalism/DEPENDENCY_GRAPH.md",
       "binding_evidence": "the source-owned test directly checks the charge-projected RFC-to-Maxwell current intertwiner, charge sign and scale response, neutral sector, multiplet resolution, gauge-compatible transport and fail-closed dimensional gates"
     },
+    "tests/reference/test_rfe4_phase_kinetic_stress_energy_firewall.py": {
+      "claim_id": "RFC.E4.PHASE_STRESS_ENERGY_FIREWALL",
+      "claim_source": "formalism/DEPENDENCY_GRAPH.md",
+      "binding_evidence": "the source-owned test directly checks phase-kinetic stress-energy, energy-pressure typing, active-source response, dust condition and the Newton-target firewall"
+    },
+    "tests/reference/test_rfe5_onshell_scalar_carrier_energy.py": {
+      "claim_id": "RFC.E5.ON_SHELL_SCALAR_ENERGY",
+      "claim_source": "formalism/DEPENDENCY_GRAPH.md",
+      "binding_evidence": "the source-owned test directly checks the on-shell harmonic scalar condition, pressureless massive limit and the exact factor-two distinction between phase kinetic and total energy per Noether charge"
+    },
+    "tests/reference/test_rfe6_lorentzian_matter_action_source_bookkeeping.py": {
+      "claim_id": "RFC.E6.LORENTZIAN_MATTER_ACTION",
+      "claim_source": "formalism/DEPENDENCY_GRAPH.md",
+      "binding_evidence": "the source-owned test directly checks the mostly-plus Lorentzian matter action, gauge-covariant charge current, Maxwell source normalization, source bookkeeping, energy-pressure transfer and fail-closed hbar gates"
+    },
+    "tests/reference/test_rfe7_total_scalar_stress_energy_composition.py": {
+      "claim_id": "RFC.MATTER.SINGLE_COMPLEX_SCALAR",
+      "claim_source": "formalism/DEPENDENCY_GRAPH.md",
+      "binding_evidence": "the source-owned test directly checks exact polar kinetic decomposition, total scalar stress-energy recomposition, gauge invariance, homogeneous E4/E5 limits, neutral gravitational sourcing and exact Einstein source ledger composition"
+    },
     "tests/reference/test_rfe8_adm_kinematic_assembly.py": {
       "claim_id": "RFC.ADM.E8",
       "claim_source": "formalism/DEPENDENCY_GRAPH.md"
