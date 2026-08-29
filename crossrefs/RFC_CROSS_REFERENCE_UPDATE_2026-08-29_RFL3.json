@@ -1,0 +1,36 @@
+{
+  "schema": "RFC_CROSS_REFERENCE_UPDATE_V1",
+  "date": "2026-08-29",
+  "node": "RF-L3_INFORMATION_SCALAR_POTENTIAL_RECONSTRUCTION",
+  "status": "STACKED_CROSS_REPOSITORY_BINDING",
+  "pins": {
+    "IDT_01L2": {
+      "repository": "AdrianLipa90/Informational-Dynamics-of-Time",
+      "branch": "feat/01l-rfl3-information-scalar-potential-holonomy-v0.1",
+      "commit": "3d5961aa5b6d173af6d6de572bb27b2abac8e223",
+      "path": "formalism/01L2_rfc_information_scalar_potential_reconstruction_holonomy.md"
+    },
+    "RFC_RF_L3": {
+      "repository": "AdrianLipa90/Relational-Field-Closure",
+      "branch": "feat/rfl3-information-scalar-potential-reconstruction-v0.1",
+      "content_commit_before_crossref": "fdb845139e34710d86f589791d8945286be929ce",
+      "path": "closure/lambda0/RF_L3_INFORMATION_SCALAR_POTENTIAL_RECONSTRUCTION.md",
+      "test_path": "tests/reference/test_rfl3_information_scalar_potential_reconstruction.py"
+    }
+  },
+  "interface": {
+    "information_scalar": "Xi_I=J_pi/A_rel; [Xi_I]=L^-2",
+    "scalar_displacement": "DeltaLambda_I=alpha_I*Xi_I",
+    "potential_reconstruction": "U_I=alpha_I*Xi_I/kappa_E",
+    "lambda_roundtrip": "Lambda0=Lambda_ref+kappa_E*U_I=Lambda_ref+alpha_I*Xi_I",
+    "bianchi_transfer": "kappa_E*nabla^mu T_displayed_mu_nu=alpha_I*nabla_nu Xi_I",
+    "temporal_holonomy": "tau_R=wrap_pi(Phi_T(C)); transported unchanged",
+    "stability_pullback": "m_LI^2=(alpha_I/kappa_E)*Xi_I''(phi_L)"
+  },
+  "open_gates": [
+    "alpha_I physical calibration or bound",
+    "parameter-free alpha_I derivation",
+    "physical phi_L <-> Xi_I pullback attribution",
+    "global/nonlinear stability"
+  ]
+}
