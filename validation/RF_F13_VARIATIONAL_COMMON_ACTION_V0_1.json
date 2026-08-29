@@ -3,7 +3,7 @@
   "gate": "RF-F13",
   "title": "Variational Integrability and Common-Action Gate",
   "parent_main": "58655c7fe9d25d09c13545965e951f171316e6b2",
-  "status": "PASS_REFERENCE_ALGEBRA_CONDITIONAL_PHYSICAL_BINDING",
+  "status": "PASS_BRANCH_REFERENCE_SUITE_CONDITIONAL_PHYSICAL_BINDING",
   "reference_module": "src/rfc/variational_common_action.py",
   "reference_tests": "tests/reference/test_rff13_variational_common_action.py",
   "local_validation": {
@@ -11,6 +11,14 @@
     "python_compile": "PASS",
     "symbolic_identity": "F11_LHS - partial_phi(H_G)*phi_dot = 0 for H_G=P*h(X,phi_L)",
     "symbolic_backend": "sympy"
+  },
+  "github_actions": {
+    "workflow": "RFC reference suite",
+    "run_number": 320,
+    "run_id": 33270477593,
+    "job_id": 99147941888,
+    "tested_head": "e3be679a04cd9eab041a034eb159754c882844ba",
+    "conclusion": "SUCCESS"
   },
   "exact_results": [
     "P=B*(Phi_C+kappa)",
