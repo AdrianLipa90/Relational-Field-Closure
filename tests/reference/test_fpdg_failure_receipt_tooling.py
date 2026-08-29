@@ -13,6 +13,18 @@ def _synthetic_failure(path, test_name, line_zero_based):
     )
 
 
+def _assert_exact_mapping(path, test_name, expected_claim):
+    plugin = FpdgFailurePlugin(load_bindings())
+    plugin.pytest_runtest_logreport(_synthetic_failure(path, test_name, 10))
+    assert len(plugin.failures) == 1
+    failure = plugin.failures[0]
+    assert failure["claim_id"] == expected_claim
+    assert failure["source_locator"]["path"] == path
+    assert failure["source_locator"]["line_start"] == 11
+    assert failure["source_locator"]["test_id"].endswith(f"::{test_name}")
+    assert "claim-source:formalism/DEPENDENCY_GRAPH.md" in failure["evidence_refs"]
+
+
 def test_conserved_carrier_failure_maps_to_exact_fpdg_source_claim():
     plugin = FpdgFailurePlugin(load_bindings())
     path = "tests/reference/test_rfn1b2_conserved_source_carrier.py"
@@ -54,15 +66,34 @@ def test_early_source_chain_failures_map_to_exact_fpdg_claims():
         ),
     )
     for path, test_name, expected_claim in cases:
-        plugin = FpdgFailurePlugin(load_bindings())
-        plugin.pytest_runtest_logreport(_synthetic_failure(path, test_name, 10))
-        assert len(plugin.failures) == 1
-        failure = plugin.failures[0]
-        assert failure["claim_id"] == expected_claim
-        assert failure["source_locator"]["path"] == path
-        assert failure["source_locator"]["line_start"] == 11
-        assert failure["source_locator"]["test_id"].endswith(f"::{test_name}")
-        assert "claim-source:formalism/DEPENDENCY_GRAPH.md" in failure["evidence_refs"]
+        _assert_exact_mapping(path, test_name, expected_claim)
+
+
+def test_matter_action_chain_failures_map_to_exact_fpdg_claims():
+    cases = (
+        (
+            "tests/reference/test_rfe4_phase_kinetic_stress_energy_firewall.py",
+            "test_phase_only_active_einstein_source_is_four_times_energy_density",
+            "RFC.E4.PHASE_STRESS_ENERGY_FIREWALL",
+        ),
+        (
+            "tests/reference/test_rfe5_onshell_scalar_carrier_energy.py",
+            "test_phase_kinetic_and_total_energy_per_noether_charge_differ_by_two",
+            "RFC.E5.ON_SHELL_SCALAR_ENERGY",
+        ),
+        (
+            "tests/reference/test_rfe6_lorentzian_matter_action_source_bookkeeping.py",
+            "test_matter_variation_has_minus_charge_current_over_hbar",
+            "RFC.E6.LORENTZIAN_MATTER_ACTION",
+        ),
+        (
+            "tests/reference/test_rfe7_total_scalar_stress_energy_composition.py",
+            "test_full_scalar_tensor_recomposes_from_three_exact_parts",
+            "RFC.MATTER.SINGLE_COMPLEX_SCALAR",
+        ),
+    )
+    for path, test_name, expected_claim in cases:
+        _assert_exact_mapping(path, test_name, expected_claim)
 
 
 def test_rfe20_failure_maps_to_exact_fpdg_claim_and_test_coordinate():
