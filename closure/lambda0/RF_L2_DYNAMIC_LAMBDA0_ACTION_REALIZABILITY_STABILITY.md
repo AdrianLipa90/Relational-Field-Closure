@@ -1,6 +1,6 @@
 # RF-L2 — Dynamic Lambda0 Action Realizability / Stability Gate
 
-Status: `EXACT_ACTION_SPLIT / EXACT_DYNAMIC_TRANSFER / STATIONARY_VACUUM_LIMIT_PASS / HOMOGENEOUS_STABILITY_CRITERION_EXACT / RFC_INVARIANT_POTENTIAL_BINDING_OPEN`
+Status: `EXACT_ACTION_SPLIT / EXACT_DYNAMIC_TRANSFER / STATIONARY_VACUUM_LIMIT_PASS / HOMOGENEOUS_STABILITY_CRITERION_EXACT / RF_L3_INFORMATION_SCALAR_RECONSTRUCTION_PASS_CONDITIONAL / ALPHA_I_CALIBRATION_OPEN`
 
 RF-L2 consumes RF-L1, RF-E0 and the RF-E6/RF-E7 matter-action closure. It gives an independent generally covariant action realization of the dynamic `Lambda0` transfer law and separates the metric-proportional vacuum contribution from the kinetic stress of the field that carries the dynamics.
 
@@ -26,9 +26,7 @@ Here `Lambda_ref` is a constant reference vacuum coordinate and `L_base` contain
 The scalar equation is
 
 \[
-\boxed{
-\Box\phi_L-U_L'(\phi_L)=0.
-}
+\boxed{\Box\phi_L-U_L'(\phi_L)=0.}
 \]
 
 ## 2. Scalar stress tensor
@@ -39,10 +37,7 @@ Metric variation gives
 \boxed{
 T^{L}_{\mu\nu}
 =\nabla_\mu\phi_L\nabla_\nu\phi_L
--g_{\mu\nu}
-\left[
-\frac12(\nabla\phi_L)^2+U_L
-\right].
+-g_{\mu\nu}\left[\frac12(\nabla\phi_L)^2+U_L\right].
 }
 \]
 
@@ -50,9 +45,7 @@ Split it into
 
 \[
 \boxed{
-T^{kin}_{\mu\nu}
-=\nabla_\mu\phi_L\nabla_\nu\phi_L
--\frac12g_{\mu\nu}(\nabla\phi_L)^2
+T^{kin}_{\mu\nu}=\nabla_\mu\phi_L\nabla_\nu\phi_L-\frac12g_{\mu\nu}(\nabla\phi_L)^2
 }
 \]
 
@@ -74,19 +67,13 @@ The Einstein equation from the action is
 
 \[
 G_{\mu\nu}+\Lambda_{ref}g_{\mu\nu}
-=\kappa_E
-\left(
-T^{base}_{\mu\nu}+T^{kin}_{\mu\nu}-U_Lg_{\mu\nu}
-\right).
+=\kappa_E\left(T^{base}_{\mu\nu}+T^{kin}_{\mu\nu}-U_Lg_{\mu\nu}\right).
 \]
 
 Move the potential contribution to the geometric side and define
 
 \[
-\boxed{
-\Lambda_0(x)
-:=\Lambda_{ref}+\kappa_EU_L(\phi_L(x)).
-}
+\boxed{\Lambda_0(x):=\Lambda_{ref}+\kappa_EU_L(\phi_L(x)).}
 \]
 
 Then
@@ -94,8 +81,7 @@ Then
 \[
 \boxed{
 G_{\mu\nu}+\Lambda_0(x)g_{\mu\nu}
-=\kappa_E
-\left(T^{base}_{\mu\nu}+T^{kin}_{\mu\nu}\right).
+=\kappa_E\left(T^{base}_{\mu\nu}+T^{kin}_{\mu\nu}\right).
 }
 \]
 
@@ -106,8 +92,7 @@ This is the RF-L1 target form with an explicit action origin for the varying met
 For a canonical scalar,
 
 \[
-\nabla^\mu T^{kin}_{\mu\nu}
-=(\Box\phi_L)\nabla_\nu\phi_L.
+\nabla^\mu T^{kin}_{\mu\nu}=(\Box\phi_L)\nabla_\nu\phi_L.
 \]
 
 Using the field equation,
@@ -119,19 +104,14 @@ Using the field equation,
 one obtains
 
 \[
-\boxed{
-\nabla^\mu T^{kin}_{\mu\nu}
-=\nabla_\nu U_L.
-}
+\boxed{\nabla^\mu T^{kin}_{\mu\nu}=\nabla_\nu U_L.}
 \]
 
 Therefore, when the base sector is separately conserved,
 
 \[
 \boxed{
-\kappa_E\nabla^\mu
-\left(T^{base}_{\mu\nu}+T^{kin}_{\mu\nu}\right)
-=\nabla_\nu\Lambda_0,
+\kappa_E\nabla^\mu\left(T^{base}_{\mu\nu}+T^{kin}_{\mu\nu}\right)=\nabla_\nu\Lambda_0,
 }
 \]
 
@@ -140,20 +120,14 @@ which is precisely the RF-E0 dynamic-`Lambda0` transfer identity.
 Equivalently, if
 
 \[
-T^{\Lambda}_{\mu\nu}
-=-\frac{\Lambda_0}{\kappa_E}g_{\mu\nu},
+T^{\Lambda}_{\mu\nu}=-\frac{\Lambda_0}{\kappa_E}g_{\mu\nu},
 \]
 
 then
 
 \[
 \boxed{
-\nabla^\mu
-\left(
-T^{base}_{\mu\nu}
-+T^{kin}_{\mu\nu}
-+T^{\Lambda}_{\mu\nu}
-\right)=0.
+\nabla^\mu\left(T^{base}_{\mu\nu}+T^{kin}_{\mu\nu}+T^{\Lambda}_{\mu\nu}\right)=0.
 }
 \]
 
@@ -162,11 +136,7 @@ T^{base}_{\mu\nu}
 At a stationary point
 
 \[
-\boxed{
-\nabla_\mu\phi_L=0,
-\qquad
-U_L'(\phi_{L0})=0,
-}
+\boxed{\nabla_\mu\phi_L=0,\qquad U_L'(\phi_{L0})=0,}
 \]
 
 one has
@@ -178,20 +148,13 @@ T^{kin}_{\mu\nu}=0
 and
 
 \[
-\boxed{
-\Lambda_0
-=\Lambda_{ref}+\kappa_EU_L(\phi_{L0})
-=\mathrm{constant}.
-}
+\boxed{\Lambda_0=\Lambda_{ref}+\kappa_EU_L(\phi_{L0})=\mathrm{constant}.}
 \]
 
 The scalar stress becomes exactly metric-proportional:
 
 \[
-\boxed{
-T^L_{\mu\nu}
-=-U_L(\phi_{L0})g_{\mu\nu}.
-}
+\boxed{T^L_{\mu\nu}=-U_L(\phi_{L0})g_{\mu\nu}.}
 \]
 
 This recovers the constant cosmological-term sector of RF-L1/RF-E0.
@@ -201,31 +164,19 @@ This recovers the constant cosmological-term sector of RF-L1/RF-E0.
 For a spatially homogeneous scalar in a local orthonormal frame,
 
 \[
-\phi_L=\phi_L(t),
-\]
-
-let
-
-\[
-K_L:=\frac12\dot\phi_L^2.
+\phi_L=\phi_L(t),\qquad K_L:=\frac12\dot\phi_L^2.
 \]
 
 Then
 
 \[
-\boxed{
-\varepsilon_L=K_L+U_L,
-\qquad
-p_L=K_L-U_L,
-}
+\boxed{\varepsilon_L=K_L+U_L,\qquad p_L=K_L-U_L,}
 \]
 
 so
 
 \[
-\boxed{
-\varepsilon_L+p_L=\dot\phi_L^2.
-}
+\boxed{\varepsilon_L+p_L=\dot\phi_L^2.}
 \]
 
 The exact metric-proportional vacuum equation of state is reached on the zero-kinetic surface `dot(phi_L)=0`. Away from that surface the kinetic tensor remains an explicit part of the Einstein source.
@@ -241,10 +192,7 @@ A spatial gradient also carries non-vacuum stress. For
 in an orthonormal frame, the kinetic tensor is
 
 \[
-\boxed{
-T^{kin}_{\hat a\hat b}
-=\frac12\operatorname{diag}(g^2,g^2,-g^2,-g^2).
-}
+\boxed{T^{kin}_{\hat a\hat b}=\frac12\operatorname{diag}(g^2,g^2,-g^2,-g^2).}
 \]
 
 Thus the action keeps gradient anisotropy explicitly typed rather than absorbing it into the metric-proportional potential coordinate.
@@ -254,19 +202,13 @@ Thus the action keeps gradient anisotropy explicitly typed rather than absorbing
 Let
 
 \[
-\phi_L=\phi_{L0}+\delta\phi,
-\qquad
-U_L'(\phi_{L0})=0.
+\phi_L=\phi_{L0}+\delta\phi,\qquad U_L'(\phi_{L0})=0.
 \]
 
 Linearization gives
 
 \[
-\boxed{
-\left(\Box-m_L^2\right)\delta\phi=0,
-\qquad
-m_L^2:=U_L''(\phi_{L0}).
-}
+\boxed{(\Box-m_L^2)\delta\phi=0,\qquad m_L^2:=U_L''(\phi_{L0}).}
 \]
 
 For the local canonical scalar sector,
@@ -279,33 +221,45 @@ is the non-tachyonic small-perturbation stability condition. A strictly positive
 
 ## 9. RFC invariant reconstruction interface
 
-RF-L1 requires the dynamic closure coordinate to be reconstructed from admitted RFC scalar invariants. RF-L2 moves that requirement to the potential map
+RF-L1 requires the dynamic closure coordinate to be reconstructed from admitted RFC scalar invariants. RF-L3 now supplies the first explicit typed reconstruction for the IDT information sector. From the admitted inverse-area scalar
+
+\[
+\Xi_I=\frac{\mathcal J_\pi}{\mathcal A_{rel}},\qquad [\Xi_I]=L^{-2},
+\]
+
+and the dimensionless coupling coordinate `alpha_I`, RF-L3 defines
 
 \[
 \boxed{
-U_L(\phi_L)
-\longleftrightarrow
-U_L\bigl(\mathcal I_{RFC}\bigr),
+\Delta\Lambda_I:=\Lambda_0-\Lambda_{ref}=\alpha_I\Xi_I,
+\qquad
+U_I=\frac{\alpha_I}{\kappa_E}\Xi_I.
 }
 \]
 
-where admissible scalar inputs may include independently typed information/time invariants, matter invariants and electromagnetic scalars after dimensional and provenance audits.
-
-The physical dimensional requirement is
+This gives the exact roundtrip
 
 \[
-\boxed{[\Lambda_0]=L^{-2}.}
+\boxed{\Lambda_{ref}+\kappa_EU_I=\Lambda_{ref}+\alpha_I\Xi_I.}
 \]
 
-Therefore
+The physical dimensional requirement remains
 
 \[
-\boxed{[\kappa_EU_L]=L^{-2}}
+\boxed{[\Lambda_0]=L^{-2},\qquad [\kappa_EU_I]=L^{-2}.}
 \]
 
-in the selected unit convention.
+For an admitted pullback `Xi_I=Xi_I(phi_L)`, the RF-L2 differential gates become
 
-The explicit RFC-invariant potential and its parameter-free physical calibration remain the next promotion coordinates for this line.
+\[
+\boxed{
+U_I'=\frac{\alpha_I}{\kappa_E}\Xi_I',
+\qquad
+U_I''=\frac{\alpha_I}{\kappa_E}\Xi_I''.
+}
+\]
+
+The functional reconstruction is therefore closed conditionally on the admitted scalar lineage and `alpha_I`; the physical derivation or bound of `alpha_I`, the physical `phi_L <-> Xi_I` attribution and global/nonlinear stability remain subsequent promotion coordinates.
 
 ## 10. Executable reference gates
 
@@ -322,6 +276,8 @@ RF-L2 tests verify:
 9. constant `Lambda_ref` leaves the transfer derivative unchanged;
 10. finite/nonzero coupling and finite-state fail-closed handling.
 
+RF-L3 adds an independent reference gate for the `Xi_I -> U_I -> Lambda0` roundtrip, differential pullback, coupling-sign visibility, holonomy-coordinate preservation and nonfinite-state fail-closed behavior.
+
 ## 11. Advancement
 
 ```text
@@ -334,6 +290,9 @@ stationary constant-Lambda vacuum limit              PASS EXACT
 homogeneous dynamic equation of state                PASS EXACT
 spatial-gradient anisotropic stress                  PASS EXACT
 local non-tachyonic stability U''>=0                 PASS EXACT LINEAR CRITERION
-RFC-invariant potential reconstruction               OPEN
-parameter-free physical calibration                  OPEN
+RF-L3 Xi_I functional potential reconstruction       PASS EXACT CONDITIONAL
+IDT tau_R orientation transport                      PASS EXACT
+alpha_I physical calibration                         OPEN
+physical phi_L <-> Xi_I pullback                     OPEN
+global/nonlinear stability                           OPEN
 ```
