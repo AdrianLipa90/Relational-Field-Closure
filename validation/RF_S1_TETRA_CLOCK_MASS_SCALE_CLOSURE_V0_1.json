@@ -9,6 +9,12 @@
     "IDT 01L phase-clock length",
     "TIR PR #104 tetra FS/spatial shape crosswalk"
   ],
+  "rfe17_parent_merge_commit": "d40ccc89b7669f4b16f1c70a7ed7c7f7282de75e",
+  "rfe17_parent_validation": "RFC_REFERENCE_SUITE_234_SUCCESS",
+  "rfe18_parent_merge_commit": "8864b7b9e9f0f5a67b1aea2583621ab6b690e685",
+  "rfe18_parent_validation": "RFC_REFERENCE_SUITE_236_SUCCESS",
+  "rfe19_parent_merge_commit": "26e8cad44de14abc604c55b88e4ce165c884d48c",
+  "rfe19_parent_validation": "RFC_REFERENCE_SUITE_240_SUCCESS",
   "tir_parent_candidate_head": "ea4bfd74e803e00c27d14499d88d7f48b442310a",
   "tir_parent_merge_commit": "267a6c2022237fcc49284788d7d25c0c3580ff68",
   "tir_parent_validation": "7_OF_7_HOSTED_WORKFLOWS_SUCCESS",
