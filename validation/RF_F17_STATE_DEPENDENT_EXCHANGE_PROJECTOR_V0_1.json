@@ -1,0 +1,31 @@
+{
+  "schema": "RFC_REFERENCE_VALIDATION_V0_1",
+  "gate": "RF-F17",
+  "title": "State-Dependent Exchange Projector Theorem",
+  "stack_parent": "42f1d7e0bb2d4c208338bac9a77cec37e36bfcf0",
+  "status": "REFERENCE_IMPLEMENTED_AWAITING_CI",
+  "reference_module": "src/rfc/state_dependent_exchange_projector.py",
+  "reference_tests": "tests/reference/test_rff17_state_dependent_exchange_projector.py",
+  "local_reference_tests": "11/11 PASS",
+  "exact_targets": [
+    "f(1)=1 preserves dL_int/dphi=eta U_L'",
+    "projector surface preserves RF-F16 scalar force coefficient",
+    "T_U=-(1-eta)U g-2 eta U f'(1) dC/dg on C=1",
+    "eta=1 residual tensor=-2 U f'(1) dC/dg",
+    "clock-gradient projector dC/dg=-u_mu u_nu",
+    "clock-gradient eta=1 residual stress=2 f'(1) U u_mu u_nu",
+    "f'(1)=1/2 gives dust normalization rho=U"
+  ],
+  "candidate_only": [
+    "clock-gradient physical projector",
+    "Noether-norm projector",
+    "Hamiltonian projector"
+  ],
+  "promotion_inputs": [
+    "clock one-form <-> RF-E19 material-congruence binding",
+    "clock normalization scale mu_T",
+    "physical projector profile f",
+    "zero-defect RF-N1B2K current/measure binding"
+  ],
+  "main_merge": "NOT_PERFORMED"
+}
