@@ -3,7 +3,8 @@
 
 The pytest exit status is preserved. The receipt records only coordinates supplied by
 pytest plus explicit RFC-owned test-to-claim bindings; no equation or scientific-source
-line is inferred from a test name.
+line is inferred from a test name. File-level bindings may be narrowed by explicit
+per-test overrides when one source test module validates more than one FPDG claim.
 """
 
 from __future__ import annotations
@@ -41,6 +42,18 @@ def source_commit() -> str:
     return value
 
 
+def _validate_claim_binding(path: str, row: dict[str, Any], label: str) -> None:
+    claim_id = row.get("claim_id")
+    if not isinstance(claim_id, str) or not claim_id.startswith("RFC."):
+        raise BindingError(f"{path}:{label}: invalid RFC claim_id")
+    claim_source = row.get("claim_source")
+    if claim_source is not None and (not isinstance(claim_source, str) or not claim_source):
+        raise BindingError(f"{path}:{label}: claim_source must be non-empty string")
+    receipt = row.get("validation_receipt")
+    if receipt is not None and (not isinstance(receipt, str) or not receipt):
+        raise BindingError(f"{path}:{label}: validation_receipt must be non-empty string")
+
+
 def load_bindings() -> dict[str, dict[str, Any]]:
     payload = json.loads(BINDINGS_PATH.read_text(encoding="utf-8"))
     if payload.get("schema") != "RFC_FPDG_FAILURE_BINDINGS_V0_1":
@@ -52,9 +65,16 @@ def load_bindings() -> dict[str, dict[str, Any]]:
     for path, row in rows.items():
         if not isinstance(path, str) or not path or not isinstance(row, dict):
             raise BindingError("invalid binding entry")
-        claim_id = row.get("claim_id")
-        if not isinstance(claim_id, str) or not claim_id.startswith("RFC."):
-            raise BindingError(f"{path}: invalid RFC claim_id")
+        _validate_claim_binding(path, row, "file")
+        overrides = row.get("test_claim_overrides", {})
+        if not isinstance(overrides, dict):
+            raise BindingError(f"{path}: test_claim_overrides must be an object")
+        for test_name, override in overrides.items():
+            if not isinstance(test_name, str) or not test_name or "::" in test_name:
+                raise BindingError(f"{path}: invalid test_claim_overrides key")
+            if not isinstance(override, dict):
+                raise BindingError(f"{path}:{test_name}: override must be an object")
+            _validate_claim_binding(path, override, test_name)
         out[path] = row
     return out
 
@@ -72,6 +92,26 @@ def _repo_relative(path: str) -> str:
 def _node_path(report: Any) -> str:
     nodeid = str(getattr(report, "nodeid", ""))
     return _repo_relative(nodeid.split("::", 1)[0]) if nodeid else "tests/reference"
+
+
+def _test_name(nodeid: str) -> str | None:
+    parts = nodeid.split("::")
+    if len(parts) < 2:
+        return None
+    value = parts[-1]
+    return value if value else None
+
+
+def _resolved_binding(binding: dict[str, Any] | None, nodeid: str) -> dict[str, Any] | None:
+    if binding is None:
+        return None
+    test_name = _test_name(nodeid)
+    overrides = binding.get("test_claim_overrides", {})
+    if test_name is not None and isinstance(overrides, dict):
+        override = overrides.get(test_name)
+        if isinstance(override, dict):
+            return override
+    return binding
 
 
 def _failure_location(report: Any) -> tuple[str, int | None]:
@@ -113,7 +153,7 @@ class FpdgFailurePlugin:
         self._seen.add(key)
 
         test_path = _node_path(report)
-        binding = self.bindings.get(test_path)
+        binding = _resolved_binding(self.bindings.get(test_path), nodeid)
         failure_path, line = _failure_location(report)
         locator: dict[str, Any] = {
             "path": failure_path,
