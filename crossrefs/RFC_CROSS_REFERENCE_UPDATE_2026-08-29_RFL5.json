@@ -1,0 +1,73 @@
+{
+  "schema": "RFC_CROSS_REFERENCE_UPDATE_V1",
+  "date": "2026-08-29",
+  "node": "RF-L5_SHANNON_ONSAGER_TEMPORAL_WAVE_KLEIN_GORDON_BRIDGE",
+  "status": "STACKED_DISCRETE_KG_AND_PREMETRIC_CONTINUUM_BRIDGE",
+  "pins": {
+    "RFC_RF_L5": {
+      "repository": "AdrianLipa90/Relational-Field-Closure",
+      "branch": "feat/rfl5-shannon-onsager-klein-gordon-bridge-v0.1",
+      "commit": "db821ac4f42b0bda3cec2391eb69220157175614",
+      "path": "closure/lambda0/RF_L5_SHANNON_ONSAGER_TEMPORAL_WAVE_KLEIN_GORDON_BRIDGE.md"
+    },
+    "RFC_RF_L5_TEST": {
+      "repository": "AdrianLipa90/Relational-Field-Closure",
+      "branch": "feat/rfl5-shannon-onsager-klein-gordon-bridge-v0.1",
+      "commit": "85cc73e5963c3d94b06b388acea48f3846f201a8",
+      "path": "tests/reference/test_rfl5_shannon_onsager_klein_gordon_bridge.py"
+    },
+    "IDT_01D": {
+      "repository": "AdrianLipa90/Informational-Dynamics-of-Time",
+      "branch": "main",
+      "blob_sha": "5aa10203358014509720c7f2a2b38fce4b2b5113",
+      "path": "formalism/01D_shannon_onsager_response_tensor.md"
+    },
+    "IDT_02A": {
+      "repository": "AdrianLipa90/Informational-Dynamics-of-Time",
+      "branch": "main",
+      "blob_sha": "da8473884ce977f52a3369024055127f629ba848",
+      "path": "formalism/02A_temporal_wave_gauge_laplacian.md"
+    },
+    "IDT_02B": {
+      "repository": "AdrianLipa90/Informational-Dynamics-of-Time",
+      "branch": "main",
+      "blob_sha": "4ed8585f7643712cb6b0c1c6c44b38236a383758",
+      "path": "formalism/02B_temporal_wave_mobility_viscosity.md"
+    },
+    "IDT_02C": {
+      "repository": "AdrianLipa90/Informational-Dynamics-of-Time",
+      "branch": "main",
+      "blob_sha": "58749288be91d224cf4c50ffd53a7293fc4cc043",
+      "path": "formalism/02C_temporal_wave_heterogeneous_continuum.md"
+    },
+    "IDT_05C": {
+      "repository": "AdrianLipa90/Informational-Dynamics-of-Time",
+      "branch": "main",
+      "blob_sha": "b9f80500dee98d596c7686d429a3a9e0eaeeccb1",
+      "path": "formalism/05C_relational_lapse_interface.md"
+    },
+    "IDT_02E": {
+      "repository": "AdrianLipa90/Informational-Dynamics-of-Time",
+      "branch": "feat/02e-rfl5-shannon-onsager-klein-gordon-bridge-v0.1",
+      "commit": "bf933fde8109d29d346b8e4fdca347a1a407d1fe",
+      "path": "formalism/02E_rfl5_shannon_onsager_klein_gordon_bridge.md"
+    }
+  },
+  "exact_relations": {
+    "uniform_onsager_stiffness": "G_u^(2)(u) = (ln2/N_s) K0",
+    "inverse_stiffness": "K0 = (N_s/ln2) G_u^(2)(u)",
+    "rf_l4a_mass": "m_I^2 = alpha_I/kappa_E",
+    "graph_kg": "ddot(phi_I) + (K0 + m_I^2 I) phi_I = 0",
+    "shannon_graph_kg": "ddot(phi_I) + [(N_s/ln2) G_u^(2)(u) + (alpha_I/kappa_E) I] phi_I = 0",
+    "modal_dispersion": "omega_r^2 = lambda_r + m_I^2",
+    "premetric_continuum": "omega^2 = M_eff k^2 + m_I^2"
+  },
+  "open_gates": [
+    "calibrate IDT 02C premetric wave coefficient M_eff to the physical light-cone coefficient c^2 using a common 05C metric-time clock",
+    "select an independently admitted phase-clock spectral line for the homogeneous mass-frequency comparison",
+    "test omega_0 = |omega_t| under common calibrated physical time",
+    "derive the physical alpha_I equivalently m_I scale",
+    "extend the local flat/premetric bridge to a curved covariant spacetime receipt",
+    "supply an environmental covariant energy ledger before using nonzero C_eta in a closed Einstein source"
+  ]
+}
