@@ -1,0 +1,40 @@
+{
+  "gate": "RF-S19",
+  "title": "Conserved Four-Current to Relativistic Dust Tensor Closure",
+  "version": "0.1",
+  "status": "REFERENCE_IMPLEMENTED_AWAITING_CI",
+  "stack_parent": {
+    "gate": "RF-S18",
+    "head": "179eff3c31fbec7cb90e6d95b46e93ba394f83ff",
+    "reference_suite": 284,
+    "conclusion": "success"
+  },
+  "exact_relations": [
+    "q=sqrt(-J_mu J^mu)",
+    "u^mu=J^mu/q",
+    "beta^i=J^i/J^0",
+    "gamma=J^0/q",
+    "rho_0=epsilon_Q*q",
+    "T_mn=epsilon_Q*J_m*J_n/q",
+    "rho_n=epsilon_Q*(J^0)^2/q",
+    "j_i^ADM=epsilon_Q*J^0*J^i/q",
+    "S_ij=epsilon_Q*J^i*J^j/q",
+    "T_mn invariant under J->lambda J and epsilon_Q->epsilon_Q/lambda"
+  ],
+  "reference_tests": [
+    "proper-current density and normalized four-velocity",
+    "rest energy from energy-per-charge",
+    "RF-E11 projection signs",
+    "velocity reconstruction directly from current",
+    "dust trace and rank-one identities",
+    "full tensor carrier-normalization invariance",
+    "static-current rest reduction",
+    "timelike Minkowski norm",
+    "fail-closed future/timelike/input gates"
+  ],
+  "open_inputs": [
+    "physical future-timelike conserved four-current receipt",
+    "physical energy-per-charge realization",
+    "absolute project-side kappa_E/G promotion"
+  ]
+}
