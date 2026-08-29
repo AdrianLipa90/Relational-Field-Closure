@@ -1,0 +1,35 @@
+{
+  "schema": "RFC_REFERENCE_VALIDATION_V0_1",
+  "gate": "RF-F28",
+  "title": "Tree-Amplitude Identifiability No-Go",
+  "stack_parent": "fb6582c158142198362bf76ff881d2a7c0ee153d",
+  "implementation_head": "fd77281cea93e29c7c78ef95743597ed8773711b",
+  "status": "REFERENCE_IMPLEMENTED_AWAITING_CI",
+  "reference_module": "src/rfc/tree_amplitude_identifiability_no_go.py",
+  "reference_tests": "tests/reference/test_rff28_tree_amplitude_identifiability_no_go.py",
+  "exact_targets": [
+    "kappa_g=2*Gamma_DC*g1*g2/M_star",
+    "M_star=zeta_M*epsilon_Q implies kappa_g depends on Gamma_DC/zeta_M",
+    "common positive scaling of Gamma_DC zeta_M and M_star leaves kappa_g invariant",
+    "kappa_E and Mbar_G are invariant under the same scaling",
+    "all tree prefactors (kappa_g/2)^(n-2) are invariant for every integer n>=3",
+    "log sensitivity in (ln Gamma_DC, ln zeta_M) has rank one",
+    "the common null direction is (1,1)",
+    "the identifiable combination is Gamma_DC/zeta_M",
+    "kinetic and total-rest carrier branches can be exactly gravitationally degenerate when Gamma_DC scales with zeta_M"
+  ],
+  "formal_parents": [
+    "RF-F27 Gamma/carrier identifiability firewall",
+    "RF-F26 project coupling promotion firewall",
+    "RF-N1C4 double-copy carrier-energy type firewall",
+    "RFG2 double-copy coupling coordinate",
+    "RFG29/RFG30 explicit five-point project BCJ/double-copy reference receipts"
+  ],
+  "promotion_inputs": [
+    "independent non-gravitational physical typing of M_star/zeta_M",
+    "realized RF-F27 source/current/rate/alpha_c receipt",
+    "cross-system RF-F25 universality evidence"
+  ],
+  "numerical_G_target_used_for_selection": false,
+  "main_merge": "NOT_PERFORMED"
+}
