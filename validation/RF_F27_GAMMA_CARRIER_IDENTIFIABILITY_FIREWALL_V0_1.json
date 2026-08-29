@@ -4,7 +4,14 @@
   "title": "Gamma_DC / Carrier-Type Identifiability Firewall",
   "stack_parent": "aac03a9b57525772f72e3da20f32ac897a1a2868",
   "implementation_head": "826f835ace4164dd3a13627859e650f38f6168d7",
-  "status": "REFERENCE_IMPLEMENTED_AWAITING_CI",
+  "validated_head": "3d051fc86f928b141f3801969e61aa4cf304fccb",
+  "status": "REFERENCE_SUITE_PASS",
+  "hosted_validation": {
+    "workflow": "RFC reference suite",
+    "run_number": 367,
+    "run_id": 33276373023,
+    "conclusion": "success"
+  },
   "reference_module": "src/rfc/gamma_carrier_identifiability_firewall.py",
   "reference_tests": "tests/reference/test_rff27_gamma_carrier_identifiability_firewall.py",
   "exact_targets": [
