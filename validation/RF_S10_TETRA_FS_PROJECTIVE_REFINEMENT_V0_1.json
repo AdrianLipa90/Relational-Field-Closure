@@ -2,7 +2,7 @@
   "schema": "RFC_VALIDATION_RECEIPT_V0_1",
   "gate": "RF-S10",
   "title": "Tetrahedral Fubini-Study Projective Refinement",
-  "status": "REFERENCE_CANDIDATE_PENDING_HOSTED_CI",
+  "status": "HOSTED_REFERENCE_PASS",
   "stack_parent": "RF-S9",
   "stack_parent_head": "b0b0b51336aadc8a0664b907170e0eb050964808",
   "tir_source": {
@@ -49,7 +49,8 @@
   "reference_tests": "tests/reference/test_rfs10_tetra_fs_projective_refinement.py",
   "hosted_ci": {
     "workflow": "RFC reference suite",
-    "run": null,
-    "conclusion": "PENDING"
+    "run": 273,
+    "conclusion": "SUCCESS",
+    "validated_head": "40a0279240314b3fb26de716c8327fb8e3dfca38"
   }
 }
