@@ -134,7 +134,7 @@ def _system_receipt(system: CouplingSystem) -> dict[str, object]:
         "source_local": symmetric_defect(source, source_pred_local),
     }
 
-    horizon: dict[str, float] | None = None
+    horizon: dict[str, float | None] | None = None
     if system.horizon_mass is not None:
         m_h = _positive("horizon_mass", system.horizon_mass)
         mbar_h: float | None = None
@@ -153,8 +153,8 @@ def _system_receipt(system: CouplingSystem) -> dict[str, object]:
                 2.0 * math.pi * system.horizon_temperature,
             )
         horizon = {
-            "mbar_h": float("nan") if mbar_h is None else mbar_h,
-            "mbar_t": float("nan") if mbar_t is None else mbar_t,
+            "mbar_h": mbar_h,
+            "mbar_t": mbar_t,
         }
         if system.provenance.horizon_provenance_id == system.provenance.double_copy_receipt_id:
             defects["horizon_provenance_independence"] = 1.0
@@ -238,4 +238,6 @@ def receipt_passes(receipt: dict[str, object], *, atol: float = 0.0) -> bool:
     tol = _finite("atol", atol)
     if tol < 0.0:
         raise ReducedGravityReceiptError("atol must be nonnegative")
-    return abs(_finite("max_defect", receipt.get("max_defect", float("nan")))) <= tol
+    if "max_defect" not in receipt:
+        raise ReducedGravityReceiptError("receipt must contain max_defect")
+    return abs(_finite("max_defect", receipt["max_defect"])) <= tol
