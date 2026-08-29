@@ -4,7 +4,14 @@
   "title": "Tree-Amplitude Identifiability No-Go",
   "stack_parent": "fb6582c158142198362bf76ff881d2a7c0ee153d",
   "implementation_head": "fd77281cea93e29c7c78ef95743597ed8773711b",
-  "status": "REFERENCE_IMPLEMENTED_AWAITING_CI",
+  "validated_head": "d621df408aba1ac86d1448c54c0689fa2817918e",
+  "status": "REFERENCE_SUITE_PASS",
+  "hosted_validation": {
+    "workflow": "RFC reference suite",
+    "run_number": 369,
+    "run_id": 33276487322,
+    "conclusion": "success"
+  },
   "reference_module": "src/rfc/tree_amplitude_identifiability_no_go.py",
   "reference_tests": "tests/reference/test_rff28_tree_amplitude_identifiability_no_go.py",
   "exact_targets": [
