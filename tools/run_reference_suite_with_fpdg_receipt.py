@@ -14,9 +14,15 @@ import sys
 from pathlib import Path
 from typing import Any
 
-import pytest
-
 ROOT = Path(__file__).resolve().parents[1]
+# Executing this wrapper from tools/ would otherwise make tools/ sys.path[0], unlike
+# `python -m pytest` which exposes the repository root. Preserve the original import
+# semantics so `src.rfc...` remains importable.
+if str(ROOT) not in sys.path:
+    sys.path.insert(0, str(ROOT))
+
+import pytest  # noqa: E402
+
 BINDINGS_PATH = ROOT / "validation" / "FPDG_FAILURE_BINDINGS_V0_1.json"
 BUILD_DIR = ROOT / "build"
 RECEIPT_PATH = BUILD_DIR / "FPDG_VALIDATION_FAILURE_RECEIPT.json"
@@ -63,7 +69,12 @@ def _repo_relative(path: str) -> str:
     return candidate.as_posix()
 
 
-def _failure_location(report: pytest.TestReport) -> tuple[str, int | None]:
+def _node_path(report: Any) -> str:
+    nodeid = str(getattr(report, "nodeid", ""))
+    return _repo_relative(nodeid.split("::", 1)[0]) if nodeid else "tests/reference"
+
+
+def _failure_location(report: Any) -> tuple[str, int | None]:
     """Return the finest repository source coordinate explicitly exposed by pytest."""
     longrepr = getattr(report, "longrepr", None)
     traceback = getattr(longrepr, "reprtraceback", None)
@@ -85,8 +96,7 @@ def _failure_location(report: pytest.TestReport) -> tuple[str, int | None]:
             line = zero_line + 1 if isinstance(zero_line, int) and zero_line >= 0 else None
             return _repo_relative(path), line
 
-    node_path = str(report.nodeid).split("::", 1)[0]
-    return _repo_relative(node_path), None
+    return _node_path(report), None
 
 
 class FpdgFailurePlugin:
@@ -95,30 +105,33 @@ class FpdgFailurePlugin:
         self.failures: list[dict[str, Any]] = []
         self._seen: set[tuple[str, str]] = set()
 
-    def pytest_runtest_logreport(self, report: pytest.TestReport) -> None:
-        if not report.failed:
-            return
-        phase = str(getattr(report, "when", "call"))
-        key = (str(report.nodeid), phase)
+    def _record(self, report: Any, phase: str) -> None:
+        nodeid = str(getattr(report, "nodeid", "")) or _node_path(report)
+        key = (nodeid, phase)
         if key in self._seen:
             return
         self._seen.add(key)
 
-        test_path = _repo_relative(str(report.nodeid).split("::", 1)[0])
+        test_path = _node_path(report)
         binding = self.bindings.get(test_path)
         failure_path, line = _failure_location(report)
         locator: dict[str, Any] = {
             "path": failure_path,
-            "test_id": str(report.nodeid),
+            "test_id": nodeid,
         }
         if line is not None:
             locator["line_start"] = line
 
-        refs = [f"pytest-nodeid:{report.nodeid}", f"pytest-phase:{phase}"]
+        refs = [f"pytest-nodeid:{nodeid}", f"pytest-phase:{phase}"]
+        longreprtext = getattr(report, "longreprtext", None)
+        if isinstance(longreprtext, str):
+            message = longreprtext[-4000:]
+        else:
+            message = str(getattr(report, "longrepr", ""))[-4000:]
         row: dict[str, Any] = {
             "failure_id": f"PYTEST.{len(self.failures) + 1:04d}",
             "kind": "TEST_FAILURE",
-            "message": str(getattr(report, "longreprtext", ""))[-4000:],
+            "message": message,
             "source_locator": locator,
             "evidence_refs": refs,
         }
@@ -131,6 +144,14 @@ class FpdgFailurePlugin:
             if isinstance(receipt, str):
                 refs.append(f"validation-receipt:{receipt}")
         self.failures.append(row)
+
+    def pytest_runtest_logreport(self, report: pytest.TestReport) -> None:
+        if report.failed:
+            self._record(report, str(getattr(report, "when", "call")))
+
+    def pytest_collectreport(self, report: Any) -> None:
+        if getattr(report, "failed", False):
+            self._record(report, "collection")
 
     def pytest_sessionfinish(self, session: pytest.Session, exitstatus: int) -> None:
         if not self.failures:
