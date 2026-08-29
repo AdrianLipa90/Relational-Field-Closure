@@ -1,0 +1,38 @@
+{
+  "gate": "RF-S15",
+  "title": "Phase-Clock Relational Volume Reduction",
+  "version": "0.1",
+  "status": "REFERENCE_IMPLEMENTED_AWAITING_CI",
+  "stack_parent": {
+    "gate": "RF-S14",
+    "head": "78faa79da182e5d70a851d746dcf9f75d0d325bb",
+    "reference_suite": 280,
+    "conclusion": "success"
+  },
+  "exact_relations": [
+    "R=c/abs(omega)",
+    "A=(c^2/omega^2)*a_FS",
+    "V_R=A*R=a_FS*c^3/abs(omega)^3",
+    "V_tet=pi*c^3/abs(omega)^3",
+    "V_face=V_tet/4",
+    "rho_G=B*N*omega*abs(omega)^3*(phi+kappa)/(a_FS*c^3)",
+    "rho_G=B*N*omega^4*(phi+kappa)/(pi*c^3) for positive omega and FULL_TETRA_CP1",
+    "rho_kin=q_A*N*omega^4/(2*pi*c^3)",
+    "rho_tot=q_A*N*omega^4/(pi*c^3)",
+    "rho_tot=2*rho_kin"
+  ],
+  "reference_tests": [
+    "full tetra phase-clock volume",
+    "face/full volume ratio",
+    "exact reduced generator closed form",
+    "signed omega handling",
+    "omega^4 positive-rate scaling",
+    "kinetic/total factor-two normalization",
+    "fail-closed invalid inputs"
+  ],
+  "open_inputs": [
+    "physical common carrier ID for projective area and radial phase-clock length",
+    "physical occupation receipt",
+    "physical carrier-energy branch selection"
+  ]
+}
