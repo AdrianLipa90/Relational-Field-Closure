@@ -1,0 +1,69 @@
+{
+  "schema": "RFC_CROSS_REFERENCE_UPDATE_V1",
+  "date": "2026-08-29",
+  "node": "RF-L5A_PREMETRIC_DIMENSIONAL_CALIBRATION_FIREWALL",
+  "status": "STACKED_PHYSICAL_COORDINATE_TYPING_REPAIR",
+  "pins": {
+    "RFC_RF_L5A": {
+      "repository": "AdrianLipa90/Relational-Field-Closure",
+      "branch": "feat/rfl5a-premetric-dimensional-calibration-firewall-v0.1",
+      "commit": "26858dc92c6a91c1e81be3561c1803e988ba5a60",
+      "path": "closure/lambda0/RF_L5A_PREMETRIC_DIMENSIONAL_CALIBRATION_FIREWALL.md"
+    },
+    "RFC_RF_L5_RETYPE": {
+      "repository": "AdrianLipa90/Relational-Field-Closure",
+      "branch": "feat/rfl5a-premetric-dimensional-calibration-firewall-v0.1",
+      "commit": "f7957cc03a668ef36d1fae17bde8780786860308",
+      "path": "closure/lambda0/RF_L5_SHANNON_ONSAGER_TEMPORAL_WAVE_KLEIN_GORDON_BRIDGE.md"
+    },
+    "RFC_RF_L5A_TEST": {
+      "repository": "AdrianLipa90/Relational-Field-Closure",
+      "branch": "feat/rfl5a-premetric-dimensional-calibration-firewall-v0.1",
+      "commit": "9f9c29518063257afe27d83d1568cbbc4557fcac",
+      "path": "tests/reference/test_rfl5a_premetric_dimensional_calibration_firewall.py"
+    },
+    "IDT_02B": {
+      "repository": "AdrianLipa90/Informational-Dynamics-of-Time",
+      "branch": "main",
+      "blob_sha": "4ed8585f7643712cb6b0c1c6c44b38236a383758",
+      "path": "formalism/02B_temporal_wave_mobility_viscosity.md"
+    },
+    "IDT_02C": {
+      "repository": "AdrianLipa90/Informational-Dynamics-of-Time",
+      "branch": "main",
+      "blob_sha": "58749288be91d224cf4c50ffd53a7293fc4cc043",
+      "path": "formalism/02C_temporal_wave_heterogeneous_continuum.md"
+    },
+    "IDT_05C": {
+      "repository": "AdrianLipa90/Informational-Dynamics-of-Time",
+      "branch": "main",
+      "blob_sha": "b9f80500dee98d596c7686d429a3a9e0eaeeccb1",
+      "path": "formalism/05C_relational_lapse_interface.md"
+    },
+    "IDT_02F": {
+      "repository": "AdrianLipa90/Informational-Dynamics-of-Time",
+      "branch": "feat/02f-rfl5a-premetric-dimensional-calibration-v0.1",
+      "commit": "5dbaf442f808359c2b35630fabb523f42abc79b7",
+      "path": "formalism/02F_rfl5a_premetric_dimensional_calibration_interface.md"
+    }
+  },
+  "exact_relations": {
+    "premetric_graph_equation": "d2(phi)/dlambda2 + [K0 + mu_lambda^2 I] phi = 0",
+    "affine_time_map": "t-t_star = Gamma_t (lambda-lambda_star)",
+    "affine_length_map": "X-X_star = Gamma_x (xi-xi_star)",
+    "calibrated_wave_speed": "c_cal^2 = M_eff Gamma_x^2/Gamma_t^2",
+    "calibrated_mass_frequency": "Omega_m^2 = mu_lambda^2/Gamma_t^2",
+    "lightcone_condition": "M_eff Gamma_x^2/Gamma_t^2 = c^2",
+    "mass_slot_condition": "mu_lambda^2 = Gamma_t^2 c^2 alpha_I/kappa_E",
+    "05C_clock_factor": "Gamma_t = T_ref phi_ref",
+    "cell_factor": "Gamma_x = L_h/h",
+    "physical_homogeneous_frequency": "(omega_t^KG)^2 = c^2 alpha_I/kappa_E"
+  },
+  "open_gates": [
+    "derive or empirically bind the physical cell width L_h from an admitted IDT/TIR spatial carrier",
+    "carry variable N_R, Gamma_t and Gamma_x derivatives into the curved covariant scalar operator",
+    "select an independently admitted phase-clock spectral line for the homogeneous physical mass-frequency comparison",
+    "derive the physical alpha_I equivalently m_I scale",
+    "extend the local Fisher normalization to finite-distance/global information geometry"
+  ]
+}
