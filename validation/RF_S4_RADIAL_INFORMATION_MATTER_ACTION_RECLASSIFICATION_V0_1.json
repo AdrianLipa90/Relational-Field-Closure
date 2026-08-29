@@ -1,0 +1,47 @@
+{
+  "schema": "RFC_VALIDATION_RECEIPT_V0_1",
+  "gate": "RF-S4",
+  "title": "Radial Information / Matter Action Reclassification",
+  "status": "REFERENCE_PASS / HOSTED_CI_PASS",
+  "parent_rfc_main": "acb5b7fb55f269ef0c29b79429558be7531ab3fa",
+  "parents": [
+    "RF-E6 canonical complex matter action and polar phase sector",
+    "RF-L2 dynamic Lambda0 scalar action split",
+    "RF-L4 information-curvature canonical pullback",
+    "RF-L4A Shannon-Fisher beta_I=sqrt(2) normalization",
+    "RF-S3 on-shell matter/information mass spectral firewall"
+  ],
+  "exact_or_conditional_identities": [
+    "phi_A = sqrt(2) A [canonical complex-scalar radial coordinate]",
+    "phi_I = sqrt(2 barXi_I) [local RF-L4A Fisher-normalized chart]",
+    "Delta_AXi=0 iff A^2=barXi_I iff phi_A=phi_I [nondegenerate nonnegative branch]",
+    "single-carrier original/reclassified polar actions differ only by radial mass coefficient",
+    "action equality on nonzero bound radial support forces m_Psi^2=m_I^2 and positive branch m_Psi=m_I",
+    "barXi_I=A^2 -> U_I=m_I^2 barXi_I=m_Psi^2 A^2",
+    "alpha_I=kappa_E m_I^2 -> kappa_E U_I=alpha_I barXi_I"
+  ],
+  "active_firewalls": [
+    "exactly one radial kinetic/potential representation per physical action instance",
+    "phase/Noether term remains explicit after radial reclassification",
+    "RF-E5 factor-two observable separation remains active",
+    "RF-L4A normalization is local Fisher-sector authority"
+  ],
+  "separate_downstream_gates": [
+    "RADIAL_INFORMATION_SOURCE_BINDING",
+    "GLOBAL_FISHER_EXTENSION",
+    "CLOCK_ALPHA_BINDING",
+    "TIR_CONTINUUM_COORDINATE_BIND",
+    "TRANSLATIONAL_OBSERVABLE",
+    "DIRECTIONAL_CUBIC_TEST",
+    "GENERAL_MATTER_MULTIPLET"
+  ],
+  "reference_implementation": "src/rfc/radial_information_matter_action_reclassification.py",
+  "reference_tests": "tests/reference/test_rfs4_radial_information_matter_action_reclassification.py",
+  "hosted_ci": {
+    "workflow": "RFC reference suite",
+    "run": 259,
+    "tested_head": "b011be50c9bd10250e3c7fc670d39ed4938010b7",
+    "conclusion": "SUCCESS"
+  },
+  "post_ci_delta": "receipt bookkeeping only; exact-head rerun required before merge"
+}
