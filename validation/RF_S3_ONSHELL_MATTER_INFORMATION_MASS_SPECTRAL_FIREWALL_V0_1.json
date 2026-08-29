@@ -1,0 +1,46 @@
+{
+  "schema": "RFC_VALIDATION_RECEIPT_V0_1",
+  "gate": "RF-S3",
+  "title": "On-Shell Matter / Information Mass Spectral Firewall",
+  "status": "REFERENCE_PASS / HOSTED_CI_PASS",
+  "parent_rfc_main": "70ea7eed254f07fbadc4c469e356e98c05a43c71",
+  "source_idt_main": "ed902458b6e0ad338ca4ba637d8d8228bc7c549b",
+  "parents": [
+    "RF-E5 homogeneous on-shell scalar carrier-energy firewall",
+    "RF-E6 canonical Lorentzian matter action",
+    "RF-E16 ADM shift / Noether phase-energy binding",
+    "IDT 01AC gauge-covariant phase pullback",
+    "RF-L5A premetric dimensional calibration firewall",
+    "RF-S2 light-cone spectral scale reduction"
+  ],
+  "exact_or_conditional_identities": [
+    "abs(omega_t^Psi) = c m_Psi [RF-E5 on-shell, dimensional restoration]",
+    "omega_t^I = c m_I [RF-L5A calibrated patch]",
+    "rho_omega = m_Psi/m_I [common-U1 phase carrier on-shell surface]",
+    "Delta_omega = Delta_mass",
+    "m_target=m_Psi -> r_m=r_PsiI=rho_omega",
+    "r_alpha r_PsiI zeta_s^3 = 1/C_Delta_FS [same-matter target closure]"
+  ],
+  "active_firewall": [
+    "RF-E5 phase kinetic energy/carrier = omega/2",
+    "RF-E5 full on-shell scalar energy/carrier = omega",
+    "spectral mass-gap identity does not select the translational observable"
+  ],
+  "separate_downstream_gates": [
+    "MATTER_INFORMATION_MASS_BINDING",
+    "CLOCK_ALPHA_BINDING",
+    "TIR_CONTINUUM_COORDINATE_BIND",
+    "TRANSLATIONAL_OBSERVABLE",
+    "DIRECTIONAL_CUBIC_TEST",
+    "GENERAL_MATTER_MULTIPLET"
+  ],
+  "reference_implementation": "src/rfc/onshell_matter_information_mass_spectral_firewall.py",
+  "reference_tests": "tests/reference/test_rfs3_onshell_matter_information_mass_spectral_firewall.py",
+  "hosted_ci": {
+    "workflow": "RFC reference suite",
+    "run": 256,
+    "tested_head": "4100b8dfaa1fa1ac16f7be88ceabf0752ee50b2a",
+    "conclusion": "SUCCESS"
+  },
+  "post_ci_delta": "receipt bookkeeping only; exact-head rerun required before merge"
+}
