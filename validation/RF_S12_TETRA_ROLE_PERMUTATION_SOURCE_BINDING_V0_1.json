@@ -1,0 +1,58 @@
+{
+  "schema": "RFC_VALIDATION_RECEIPT_V0_1",
+  "gate": "RF-S12",
+  "title": "Tetrahedral Role-Permutation Source-Binding Reduction",
+  "status": "REFERENCE_CANDIDATE_PENDING_HOSTED_CI",
+  "stack_parent": "RF-S11",
+  "stack_parent_head": "1822db1a805ca9b67fdbd25df192beff1a3983c5",
+  "tir_source": {
+    "repository": "AdrianLipa90/The-Fundamental-Theory-of-Informational-Relations",
+    "commit": "ccc89fc06bdf42c1937c0a2303d3e477db487e0f",
+    "path": "TIR/integration/TIR_TETRAHEDRAL_CONGRUENCE_CLASS_CLOSURE_V0_1.md"
+  },
+  "parents": [
+    "TIR exact common tetrahedral Gram matrix",
+    "TIR explicit orthogonal congruence Q=(3/4)MN^T",
+    "RF-S11 full four-outcome tetrahedral projective scope"
+  ],
+  "exact_identities": [
+    "G = (4/3) I_4 - (1/3) 11^T",
+    "for each sigma in S4: Q_sigma=(3/4) M_sigma N^T",
+    "Q_sigma N = M_sigma",
+    "Q_sigma Q_sigma^T = I_3",
+    "unoriented residual role set has 24 elements",
+    "compatible orientation gives det(Q_sigma)=sgn(sigma)",
+    "orientation-preserving residual role set is A4 with 12 elements",
+    "D_role(sigma)^2 = sum_a ||s_a-q_sigma(a)||^2",
+    "unique zero-defect candidate selects the role map"
+  ],
+  "independent_reference_checks": [
+    "enumerate all 24 S4 permutations",
+    "enumerate all 12 A4 permutations",
+    "verify congruence and orthogonality for every permutation",
+    "verify determinant equals permutation parity in canonical orientation",
+    "verify unique even source-signature assignment",
+    "verify odd exact binding is excluded by oriented ledger",
+    "verify symmetric signatures preserve residual multiplicity",
+    "verify mismatch and malformed inputs fail closed"
+  ],
+  "separate_downstream_gates": [
+    "PHYSICAL_TETRA_ROLE_SIGNATURE_RECEIPT",
+    "PHYSICAL_MINIMAL_IC_CARRIER_SELECTION",
+    "PHYSICAL_JOINT_INFORMATION_STATE_BINDING",
+    "ABSOLUTE_ALPHA_NORMALIZATION",
+    "PHYSICAL_RADIAL_ZERO_DEFECT_DATA",
+    "RADIAL_BINDING_DYNAMICAL_TRANSPORT",
+    "TRANSLATIONAL_OBSERVABLE",
+    "DIRECTIONAL_CUBIC_TEST",
+    "GENERAL_MATTER_MULTIPLET",
+    "GLOBAL_INFORMATION_GEODESIC_EXTENSION"
+  ],
+  "reference_implementation": "src/rfc/tetra_role_permutation_source_binding.py",
+  "reference_tests": "tests/reference/test_rfs12_tetra_role_permutation_source_binding.py",
+  "hosted_ci": {
+    "workflow": "RFC reference suite",
+    "run": null,
+    "conclusion": "PENDING"
+  }
+}
