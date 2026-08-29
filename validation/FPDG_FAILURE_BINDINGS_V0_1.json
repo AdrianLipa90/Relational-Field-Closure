@@ -4,6 +4,11 @@
   "repository": "AdrianLipa90/Relational-Field-Closure",
   "purpose": "Explicit source-side test-to-claim bindings for exact FPDG failure localization",
   "bindings": {
+    "tests/reference/test_rfn1b2_conserved_source_carrier.py": {
+      "claim_id": "RFC.SOURCE.CONSERVED_CARRIER",
+      "claim_source": "formalism/DEPENDENCY_GRAPH.md",
+      "binding_evidence": "the source-owned test directly checks continuity conservation, normalized carrier shape, extensive-scale freedom, charge occupation and carrier-to-mass-density typing"
+    },
     "tests/reference/test_rfe8_adm_kinematic_assembly.py": {
       "claim_id": "RFC.ADM.E8",
       "claim_source": "formalism/DEPENDENCY_GRAPH.md"
