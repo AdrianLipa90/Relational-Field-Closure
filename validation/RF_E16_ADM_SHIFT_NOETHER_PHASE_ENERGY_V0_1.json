@@ -1,0 +1,20 @@
+{
+  "schema": "RFC_RF_E16_ADM_SHIFT_NOETHER_PHASE_ENERGY_V0_1",
+  "status": "CANDIDATE_PENDING_HOSTED_CI",
+  "parents": [
+    "RF-E8 ADM kinematic assembly",
+    "RF-E14 ADM directional relative-entropy potential",
+    "RF-E15 information Legendre audit",
+    "RF-N1B2O phase-energy/Noether source binding"
+  ],
+  "normal_phase_rate": "r_n=(D_t theta-c b^i D_i theta)/N",
+  "directional_null_phase": "R_s=r_n/r_0=1-s b",
+  "reciprocal": "x_s=1/(1-s b)",
+  "phase_energy_per_carrier_ratio": "epsilon_s/epsilon_0=R_s",
+  "phase_energy_density_ratio": "Ephase_s/Ephase_0=R_s^2",
+  "relative_information": "I_s=Phi(1/R_s)",
+  "legendre_conjugate": "p_s=s b",
+  "candidate_information_energy_scale": "epsilon_0=omega/2",
+  "physical_energy_functional_selection": "OPEN_RF_E17",
+  "project_Mstar_promotion": "OPEN_EXISTING_GATE"
+}
