@@ -6,9 +6,12 @@ from src.rfc.tetra_clock_mass_scale_closure import (
     TetraClockMassScaleClosureError,
     closure_defect,
     directional_energy_natural,
+    directional_phi,
     energy_scale_natural,
     inverse_shape_coefficient,
     kappa_shape_coefficient,
+    physical_directional_energy_natural,
+    physical_directional_phi,
     required_q_s,
     required_r_alpha,
     tetra_fs_shape_coefficient,
@@ -91,6 +94,18 @@ def test_directional_energy_branch_after_scale_closure():
     assert e_minus == pytest.approx(expected_minus)
 
 
+def test_superseded_rfe19_physical_directional_api_is_preserved_as_rfe20_alias():
+    beta = 0.37
+    mass = 2.3
+    for orientation in (-1, 1):
+        assert physical_directional_phi(beta, orientation) == pytest.approx(
+            directional_phi(beta, orientation)
+        )
+        assert physical_directional_energy_natural(beta, orientation, mass) == pytest.approx(
+            directional_energy_natural(beta, orientation, mass)
+        )
+
+
 @pytest.mark.parametrize("value", [0.0, -1.0, math.inf, math.nan])
 def test_positive_scale_inputs_fail_closed(value):
     with pytest.raises(TetraClockMassScaleClosureError):
@@ -101,3 +116,5 @@ def test_positive_scale_inputs_fail_closed(value):
 def test_directional_domain_fails_closed(beta):
     with pytest.raises(TetraClockMassScaleClosureError):
         directional_energy_natural(beta, +1, 1.0)
+    with pytest.raises(TetraClockMassScaleClosureError):
+        physical_directional_energy_natural(beta, +1, 1.0)
