@@ -1,0 +1,58 @@
+{
+  "schema": "RFC_VALIDATION_RECEIPT_V0_1",
+  "gate": "RF-S8",
+  "title": "Joint-KL Clock / Radial Action Composition",
+  "status": "HOSTED_REFERENCE_PASS / FINAL_HEAD_RERUN_PENDING",
+  "parent_rfc_main": "466d364f3d903215b94e2ba66e1fd1fac23e7a30",
+  "parents": [
+    "IDT 01C radial Shannon relative information in bits",
+    "IDT 01K exact bit-to-natural-log conversion J_R=(ln2) I_R",
+    "RF-I1 / IDT 05F positive-rate clock natural-log KL",
+    "RF-L3 information-curvature potential map",
+    "RF-S5 fixed-amplitude clock/radial state separation"
+  ],
+  "exact_identities": [
+    "J_C = D_KL(f_rs||f_r0) = Phi(r0/rs)",
+    "product state -> J_RC = J_R + J_C",
+    "general product-reference chain -> J_RC = J_R + J_C + I(R;C)",
+    "common area -> Xi_RC = Xi_R + Xi_C + Xi_X",
+    "U_J = alpha_J Xi_RC/kappa_E",
+    "U_D = (alpha_I Xi_R + alpha_clk Xi_C + alpha_X Xi_X)/kappa_E"
+  ],
+  "conditional_coefficient_forcing": [
+    "same dynamic information action represented jointly and decomposed",
+    "common selected relational area",
+    "stationary zero-baseline dynamic chart",
+    "radial and clock coordinates independently variable",
+    "radial-only variation -> alpha_I=alpha_J",
+    "clock-only variation -> alpha_clk=alpha_J",
+    "therefore alpha_clk=alpha_I and r_alpha=1",
+    "correlation-only variation additionally gives alpha_X=alpha_J when independently admitted"
+  ],
+  "scale_consequence_on_separately_admitted_rf_s4_surface": [
+    "r_alpha=1",
+    "zeta_s^3 = 1/C_Delta_FS = 9 sqrt(3) pi / 8",
+    "zeta_s = C_Delta_FS^(-1/3)"
+  ],
+  "separate_downstream_gates": [
+    "PHYSICAL_JOINT_INFORMATION_STATE_BINDING",
+    "COMMON_RELATIONAL_AREA_SOURCE_BINDING",
+    "ABSOLUTE_ALPHA_NORMALIZATION",
+    "PHYSICAL_RADIAL_ZERO_DEFECT_DATA",
+    "RADIAL_BINDING_DYNAMICAL_TRANSPORT",
+    "TIR_RFC_CELL_SOURCE_BINDING",
+    "TRANSLATIONAL_OBSERVABLE",
+    "DIRECTIONAL_CUBIC_TEST",
+    "GENERAL_MATTER_MULTIPLET",
+    "GLOBAL_INFORMATION_GEODESIC_EXTENSION"
+  ],
+  "reference_implementation": "src/rfc/joint_kl_clock_radial_action_composition.py",
+  "reference_tests": "tests/reference/test_rfs8_joint_kl_clock_radial_action_composition.py",
+  "hosted_ci": {
+    "workflow": "RFC reference suite",
+    "run": 268,
+    "conclusion": "SUCCESS",
+    "validated_head": "ddc6c5a9a3e62b51052bf9404610b5723a0f6cf7",
+    "post_validation_delta": "provenance wording only: 01C bits -> 01K natural-log conversion"
+  }
+}
