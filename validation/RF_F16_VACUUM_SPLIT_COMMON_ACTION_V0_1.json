@@ -3,10 +3,12 @@
   "gate": "RF-F16",
   "title": "Vacuum-Split Renormalization / Dynamic-Lambda Common-Action Closure",
   "stack_parent": "c3f7570827836e5ec071e88c72c3fc6408849dc6",
-  "status": "REFERENCE_IMPLEMENTED_AWAITING_CI",
+  "status": "REFERENCE_SUITE_PASS",
   "reference_module": "src/rfc/vacuum_split_common_action.py",
   "reference_tests": "tests/reference/test_rff16_vacuum_split_common_action.py",
   "local_reference_tests": "12/12 PASS",
+  "hosted_reference_suite": "RUN_330_SUCCESS",
+  "exact_head": "abe796f561b5235a7ba0233c3233b0fa4b081abc",
   "exact_targets": [
     "Lambda_star=Lambda_ref+kappa_E*(rho_C+U_0)",
     "Lambda0=Lambda_star+kappa_E*Uhat",
