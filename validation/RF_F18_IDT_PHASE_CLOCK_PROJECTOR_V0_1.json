@@ -3,9 +3,11 @@
   "gate": "RF-F18",
   "title": "IDT Gauge-Covariant Phase-Clock Projector Binding",
   "stack_parent": "110da304b83616fef5962413bcb21d4b59869c0b",
-  "status": "REFERENCE_IMPLEMENTED_AWAITING_CI",
+  "status": "REFERENCE_SUITE_PASS",
   "reference_module": "src/rfc/idt_phase_clock_projector.py",
   "reference_tests": "tests/reference/test_rff18_idt_phase_clock_projector.py",
+  "hosted_reference_suite": "RUN_340_SUCCESS",
+  "exact_head": "f0d7d74ee3ce2a4c8a29b55faee43dc733bdab1a",
   "exact_targets": [
     "IDT 01AC gauge-covariant q_mu=d_mu vartheta+A_mu^ABE is reused without a new field",
     "C_vartheta=-g^{mn}q_m q_n/mu_vartheta^2 is gauge invariant",
