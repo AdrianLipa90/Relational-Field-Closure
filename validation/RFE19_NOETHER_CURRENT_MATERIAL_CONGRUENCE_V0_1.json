@@ -1,0 +1,36 @@
+{
+  "schema": "RFC_RFE19_NOETHER_CURRENT_MATERIAL_CONGRUENCE_V0_1",
+  "status": "CANDIDATE_PENDING_HOSTED_REFERENCE_SUITE",
+  "parents": [
+    "RF-N1B2K Noether-RFC conserved-current binding",
+    "RF-N1B2O phase-energy current source binding",
+    "RF-E18 ADM shift velocity gauge firewall"
+  ],
+  "domain_gate": {
+    "future_current": "q=-n.J>0",
+    "timelike_current": "j^2<q^2",
+    "nonzero_current": true
+  },
+  "exact_outputs": [
+    "J^mu=q n^mu+j^mu",
+    "J^2=-q^2+j^2",
+    "V^mu=j^mu/q",
+    "beta_phys^2=j^2/q^2<1",
+    "proper_density=sqrt(-J^2)=q/gamma",
+    "u^mu=J^mu/sqrt(-J^2)=gamma(n^mu+V^mu)",
+    "w^i=N V^i-b^i",
+    "V^i=(J^i+b^i J^0)/(N J^0)"
+  ],
+  "promotion": {
+    "noether_current_to_material_flow": "PASS_CONDITIONAL_ON_TIMELIKE_DOMAIN",
+    "beta_phys_external_input_required": false,
+    "translational_energy_observable_binding": "OPEN",
+    "E_star_physical_scale": "OPEN"
+  },
+  "next_gates": [
+    "PHYSICAL_TIMELIKE_DOMAIN_AUDIT_FOR_RFC_MATTER_SECTORS",
+    "RF_E17_TRANSLATIONAL_KINETIC_OBSERVABLE_BINDING",
+    "E_STAR_COUPLING_CELL_GEOMETRY_PROMOTION",
+    "RELATIVISTIC_DISPERSION_COMPARISON"
+  ]
+}
