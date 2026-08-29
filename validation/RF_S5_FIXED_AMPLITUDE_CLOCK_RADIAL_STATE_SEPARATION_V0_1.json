@@ -2,7 +2,7 @@
   "schema": "RFC_VALIDATION_RECEIPT_V0_1",
   "gate": "RF-S5",
   "title": "Fixed-Amplitude Clock / Radial State-Separation Firewall",
-  "status": "REFERENCE_CANDIDATE_PENDING_HOSTED_CI",
+  "status": "REFERENCE_PASS / HOSTED_CI_PASS",
   "parent_rfc_main": "d9280129c8fa4300e5360265e06ed5451c2c3055",
   "parents": [
     "RF-E16 fixed-amplitude directional phase/Noether carrier",
@@ -36,7 +36,9 @@
   "reference_tests": "tests/reference/test_rfs5_fixed_amplitude_clock_radial_state_separation.py",
   "hosted_ci": {
     "workflow": "RFC reference suite",
-    "run": null,
-    "conclusion": "PENDING"
-  }
+    "run": 262,
+    "tested_head": "b95dcaa7414726b7b599ad3b8f4185911f99fad1",
+    "conclusion": "SUCCESS"
+  },
+  "post_ci_delta": "receipt bookkeeping only; exact-head rerun required before merge"
 }
