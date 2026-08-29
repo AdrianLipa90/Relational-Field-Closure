@@ -1,0 +1,32 @@
+{
+  "schema": "RFC_RFE8_ADM_KINEMATIC_ASSEMBLY_V0_1",
+  "status": "ALGEBRAIC_REFERENCE_CANDIDATE",
+  "source_contract": {
+    "spatial_metric": "TIR local h_ij positive definite",
+    "lapse": "IDT N_R > 0",
+    "shift": "typed independent b^i input at RF-E8"
+  },
+  "identities": {
+    "line_element": "ds^2 = -N_R^2 (dx0)^2 + h_ij (dx^i+b^i dx0)(dx^j+b^j dx0)",
+    "g00": "-N_R^2 + h_ij b^i b^j",
+    "g0i": "b_i = h_ij b^j",
+    "gij": "h_ij",
+    "inverse_g00": "-1/N_R^2",
+    "inverse_g0i": "b^i/N_R^2",
+    "inverse_gij": "h^ij - b^i b^j/N_R^2",
+    "determinant": "det(g) = -N_R^2 det(h)",
+    "volume": "sqrt(-g) = N_R sqrt(h)",
+    "unit_normal": "n_mu=(-N_R,0); n^mu=(1/N_R,-b^i/N_R)"
+  },
+  "gremlin_candidate": {
+    "shift_source": "TIR SE(3) local-frame displacement rate -> b^i",
+    "promotion": "SOURCE_BINDING_REQUIRED"
+  },
+  "next_gates": [
+    "extrinsic-curvature dimensional convention",
+    "Hamiltonian constraint derivation",
+    "momentum constraint derivation",
+    "constraint propagation",
+    "Einstein field-equation closure"
+  ]
+}
