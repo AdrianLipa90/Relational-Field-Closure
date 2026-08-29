@@ -1,0 +1,26 @@
+{
+  "schema": "RFC_RFE11_MATTER_PROJECTION_SOURCE_TYPING_V0_1",
+  "status": "EXACT_TENSOR_DECOMPOSITION_CANDIDATE",
+  "signature": "(-,+,+,+)",
+  "definitions": {
+    "rho_n": "T_mn n^m n^n",
+    "j_mu": "-h_mu^a T_ab n^b",
+    "S_mn": "h_m^a h_n^b T_ab",
+    "S": "h^mn S_mn"
+  },
+  "identities": {
+    "j_spatial": "n^mu j_mu = 0",
+    "S_spatial": "n^mu S_mn = 0",
+    "reconstruction": "T_mn = rho_n n_m n_n + n_m j_n + j_m n_n + S_mn",
+    "trace": "T = -rho_n + S",
+    "projection_linearity": "sector projections add exactly"
+  },
+  "geometry_alignment": {
+    "RF_E10_G_H": "2 G_nn",
+    "RF_E10_G_Mi": "-G_ni",
+    "matter_energy": "rho_n = T_nn",
+    "matter_momentum": "j_i = -T_ni"
+  },
+  "geometry_matter_proportionality": "OPEN_NEXT_DYNAMICAL_GATE",
+  "source_constraint_status": "GATED"
+}
