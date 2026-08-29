@@ -1,0 +1,37 @@
+{
+  "schema": "RFC_RF_E20_TETRA_CLOCK_MASS_SCALE_CLOSURE_V0_1",
+  "status": "CANDIDATE_PENDING_HOSTED_CI_AFTER_RENUMBER",
+  "parents": [
+    "RF-E17 clock-information scalar action potential",
+    "RF-E18 ADM shift/velocity gauge firewall",
+    "RF-E19 timelike Noether-current material congruence",
+    "RF-L4A Shannon-Fisher mass normalization",
+    "IDT 01L phase-clock length",
+    "TIR PR #104 tetra FS/spatial shape crosswalk"
+  ],
+  "tir_parent_candidate_head": "ea4bfd74e803e00c27d14499d88d7f48b442310a",
+  "tir_parent_merge_commit": "267a6c2022237fcc49284788d7d25c0c3580ff68",
+  "tir_parent_validation": "7_OF_7_HOSTED_WORKFLOWS_SUCCESS",
+  "tir_parent_promotion": "PASS_PROMOTED_TO_MAIN",
+  "shape_coefficient": "C=8/(9 sqrt(3) pi)=64 kappa/(3 sqrt(3) ln2)",
+  "scale_ratio": "q_s=ell_s/ell_phi",
+  "coupling_ratio": "r_alpha=alpha_clk/alpha_I",
+  "phase_ratio": "mu_phi=E_phi/m_I",
+  "target_mass_ratio": "r_m=m_target/m_I",
+  "closure_equation": "r_alpha q_s^3 = r_m mu_phi / C",
+  "unit_binding_q_target": "q_s=(9 sqrt(3) pi/8)^(1/3)",
+  "unit_binding_q_numeric": 1.82931154035502,
+  "common_scale_coupling_target": "r_alpha=9 sqrt(3) pi/8",
+  "common_scale_coupling_numeric": 6.12157285429049,
+  "motion_source": "RF-E19 beta_e from future-timelike RFC Noether current",
+  "physical_bindings_open": [
+    "TETRA_SIC_TO_SPATIAL_CELL_PHYSICAL_SCALE",
+    "CLOCK_KL_TO_XI_PHYSICAL_ATTRIBUTION",
+    "ALPHA_RATIO",
+    "SPATIAL_PHASE_SCALE",
+    "PHASE_MASS_RATIO",
+    "TARGET_MASS_BINDING",
+    "NOETHER_FLOW_TIMELIKE_DOMAIN",
+    "OBSERVABLE_SELECTION"
+  ]
+}
