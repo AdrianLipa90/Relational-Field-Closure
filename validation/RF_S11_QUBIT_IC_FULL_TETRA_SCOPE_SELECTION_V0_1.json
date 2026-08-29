@@ -1,0 +1,65 @@
+{
+  "schema": "RFC_VALIDATION_RECEIPT_V0_1",
+  "gate": "RF-S11",
+  "title": "Qubit Informational-Completeness Tetrahedral Scope Selection",
+  "status": "HOSTED_REFERENCE_PASS_PENDING_EXACT_HEAD_RECHECK",
+  "stack_parent": "RF-S10",
+  "stack_parent_head": "85384de31a8300e688e55735e67a077d6b11e3e0",
+  "tir_source": {
+    "repository": "AdrianLipa90/The-Fundamental-Theory-of-Informational-Relations",
+    "commit": "ccc89fc06bdf42c1937c0a2303d3e477db487e0f",
+    "path": "TIR/foundations/TIR_QUBIT_TETRAHEDRAL_INFORMATIONAL_COMPLETENESS_V0_1.md"
+  },
+  "parents": [
+    "TIR generic qubit Bloch dimension = 3",
+    "TIR minimal normalized IC outcome lower bound m >= 4",
+    "TIR exact tetrahedral SIC reconstruction",
+    "RF-S10 discrete projective scope contract"
+  ],
+  "exact_identities": [
+    "d_qubit = 3",
+    "normalized m-outcome capacity = m - 1",
+    "minimal qubit IC requires m = 4",
+    "FACE carries 3 tetrahedral outcome directions -> capacity 2",
+    "FULL_TETRA_CP1 carries 4 tetrahedral outcome directions -> capacity 3",
+    "r = 3 sum_a p_a n_a",
+    "minimal-IC scope = FULL_TETRA_CP1",
+    "a_FS^IC = pi",
+    "A_IC = pi c^2 / omega^2",
+    "Xi_IC = (J/pi)(omega/c)^2"
+  ],
+  "selection_surface": [
+    "generic local qubit C^2 carrier",
+    "normalized symmetric tetrahedral probe",
+    "minimal informational completeness target",
+    "RF-S10 scope set {FACE, FULL_TETRA_CP1}"
+  ],
+  "independent_reference_checks": [
+    "dimension lower-bound selection",
+    "regular tetrahedral Bloch-frame geometry",
+    "tetrahedral probabilities sum to one",
+    "Bloch reconstruction across mixed/interior/pure states",
+    "IDT 01K full-scope area specialization",
+    "fail-closed invalid inputs"
+  ],
+  "separate_downstream_gates": [
+    "PHYSICAL_MINIMAL_IC_CARRIER_SELECTION",
+    "TIR_PROJECTIVE_TO_SPATIAL_CELL_SOURCE_BINDING",
+    "PHYSICAL_JOINT_INFORMATION_STATE_BINDING",
+    "ABSOLUTE_ALPHA_NORMALIZATION",
+    "PHYSICAL_RADIAL_ZERO_DEFECT_DATA",
+    "RADIAL_BINDING_DYNAMICAL_TRANSPORT",
+    "TRANSLATIONAL_OBSERVABLE",
+    "DIRECTIONAL_CUBIC_TEST",
+    "GENERAL_MATTER_MULTIPLET",
+    "GLOBAL_INFORMATION_GEODESIC_EXTENSION"
+  ],
+  "reference_implementation": "src/rfc/qubit_ic_full_tetra_scope_selection.py",
+  "reference_tests": "tests/reference/test_rfs11_qubit_ic_full_tetra_scope_selection.py",
+  "hosted_ci": {
+    "workflow": "RFC reference suite",
+    "run": 275,
+    "conclusion": "SUCCESS",
+    "validated_head": "970fab692bed4fb125fefba7887ac202dea188c6"
+  }
+}
