@@ -1,0 +1,21 @@
+{
+  "schema": "RFC_RFE9_EXTRINSIC_CURVATURE_GEOMETRY_V0_1",
+  "status": "EXACT_DIFFERENTIAL_GEOMETRY_CANDIDATE",
+  "convention": "K_ij = -1/2 L_n h_ij",
+  "adm_expression": "K_ij = (-partial_0 h_ij + D_i b_j + D_j b_i)/(2N)",
+  "dimension": "L^-1 when x0=ct",
+  "identities": [
+    "K = h^ij K_ij",
+    "A_ij = K_ij - h_ij K/3",
+    "h^ij A_ij = 0",
+    "static metric + zero shift -> K_ij=0",
+    "static metric + Killing shift -> K_ij=0",
+    "h_ij=a^2 delta_ij, b=0 -> K_ij=-(a'/aN)h_ij"
+  ],
+  "parents": [
+    "RF_E8_ADM_KINEMATIC_ASSEMBLY",
+    "TIR_SPATIAL_METRIC_AND_CONNECTION",
+    "IDT_POSITIVE_RELATIONAL_LAPSE"
+  ],
+  "next_gate": "RF_E10_GAUSS_CODAZZI_EINSTEIN_TENSOR_PROJECTIONS"
+}
