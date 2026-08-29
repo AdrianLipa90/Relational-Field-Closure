@@ -1,0 +1,42 @@
+{
+  "schema": "RFC_REFERENCE_VALIDATION_V0_1",
+  "gate": "RF-F20",
+  "title": "ABE Euler Off-Shell Metric-Response Firewall",
+  "stack_parent": "4c52bb17be0093661f20baf4e358348dcda4db25",
+  "implementation_head": "e2487e38b4dd4d83d8742e4ebcd3eff618b5d08f",
+  "validated_head": "f4f22d2f77ef337768fef7ee55b185268b803dd3",
+  "status": "REFERENCE_SUITE_PASS",
+  "hosted_ci": {
+    "workflow": "RFC reference suite",
+    "run_number": 351,
+    "run_id": 33273577963,
+    "conclusion": "success"
+  },
+  "reference_module": "src/rfc/abe_euler_metric_response.py",
+  "reference_tests": "tests/reference/test_rff20_abe_euler_metric_response.py",
+  "exact_targets": [
+    "Pi_ABE=Pi_AB+Pi_B+Pi_E",
+    "R_mn=g^{ab}q_a partial_g A^ABE_b",
+    "R_mn=R_AB_mn+R_B_mn+R_E_mn",
+    "Delta T_phase_mn=4*A^2*R_mn",
+    "R_mn=0 recovers the current RF-E4 frozen-connection stress tensor",
+    "partial_g C=-(q_m q_n+2R_mn)/mu^2-2*C*S_mn",
+    "eta=1 stress includes rank-one + ABE-response + phase-scale-response terms",
+    "f'(1)=1/2 with R=0 and S=0 gives Uhat*v_m*v_n"
+  ],
+  "repository_audit": [
+    "RF-N1B2M explicitly defines A^ABE=A_AB+A_B+A_E and q=dvartheta+A^ABE",
+    "RF-E4 supplies the frozen-covector phase stress tensor",
+    "RF-F18 supplies the contracted response coordinate R_mn",
+    "RF-F19 supplies the independent scale response S_mn",
+    "local off-shell metric functionals for the active ABE channels remain promotion inputs"
+  ],
+  "promotion_inputs": [
+    "local off-shell ABE channel metric-response receipt",
+    "contracted R_mn receipt on the RF-F18/F19 phase-clock branch",
+    "RF-F19 rotor/lapse S_mn response receipt",
+    "independent IDT field/rotor rate receipt",
+    "phase-clock to material-current alignment receipt"
+  ],
+  "main_merge": "NOT_PERFORMED"
+}
