@@ -1,0 +1,46 @@
+{
+  "schema": "RFC_REFERENCE_VALIDATION_V0_1",
+  "gate": "RF-F25",
+  "title": "Reduced-Gravity Scale Cross-System Universality Receipt",
+  "stack_parent": "0920cbd3664bc387cdd277a04c585c228a5f7c60",
+  "implementation_head": "252ee8dd2f262a14157a4a8f99fffa7618c7df8b",
+  "status": "REFERENCE_IMPLEMENTED_AWAITING_CI",
+  "reference_module": "src/rfc/reduced_gravity_universality_receipt.py",
+  "reference_tests": "tests/reference/test_rff25_reduced_gravity_universality_receipt.py",
+  "units": "natural for RF-N1C2/RF-N1C3 reduced-scale comparisons",
+  "exact_targets": [
+    "g_YM^2 and 6/beta_W remain independently audited coordinates",
+    "Mbar_G^DC=M_star/(Gamma_DC*g_YM^2)",
+    "Mbar_G^W=beta_W*M_star/(6*Gamma_DC)",
+    "M_star and omega_Q/2 remain independently audited coordinates",
+    "Mbar_G^local=beta_W*omega_Q/(12*Gamma_DC)",
+    "S_R general and local double-copy predictions are audited against independent source input",
+    "optional Mbar_G^H=sqrt(M_H*kappa_H/(2*pi))",
+    "optional Mbar_G^T=sqrt(M_H*T_H)",
+    "horizon provenance cannot reuse the double-copy receipt ID",
+    "cross-system universality requires at least two unique systems in one gravity sector",
+    "Mbar_G universality and G_DC universality are separately audited",
+    "fixed beta_W and Gamma_DC with changed omega_Q fails local universal-G candidate"
+  ],
+  "formal_parents": [
+    "RF-N1C three-route coupling holonomy",
+    "RF-N1C1 phase-source specialization",
+    "RF-N1C2 carrier-scale universality firewall",
+    "RF-N1C3 reduced-gravity-scale horizon closure",
+    "RF-F21 independent phase-rate receipt",
+    "RF-F24 current/measure realization receipt",
+    "RF-F22 total Einstein source assembly"
+  ],
+  "promotion_inputs": [
+    "realized RF-F24 current/measure receipts from at least two systems",
+    "realized RF-F21 phase-rate receipts from the same systems",
+    "independently frozen beta_W and g_YM^2 normalization",
+    "independently frozen Gamma_DC and BCJ-compatible double-copy provenance",
+    "independently frozen M_star or tested local carrier-scale binding",
+    "independently sourced RFC source operator values",
+    "optional logically independent horizon mass/surface-gravity/temperature provenance",
+    "cross-system zero-fit reduced-scale universality"
+  ],
+  "numerical_G_target_used_for_selection": false,
+  "main_merge": "NOT_PERFORMED"
+}
