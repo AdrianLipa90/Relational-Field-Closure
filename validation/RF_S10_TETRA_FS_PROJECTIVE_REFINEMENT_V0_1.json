@@ -1,0 +1,55 @@
+{
+  "schema": "RFC_VALIDATION_RECEIPT_V0_1",
+  "gate": "RF-S10",
+  "title": "Tetrahedral Fubini-Study Projective Refinement",
+  "status": "REFERENCE_CANDIDATE_PENDING_HOSTED_CI",
+  "stack_parent": "RF-S9",
+  "stack_parent_head": "b0b0b51336aadc8a0664b907170e0eb050964808",
+  "tir_source": {
+    "repository": "AdrianLipa90/The-Fundamental-Theory-of-Informational-Relations",
+    "commit": "ccc89fc06bdf42c1937c0a2303d3e477db487e0f",
+    "path": "TIR/integration/TIR_TETRA_FS_SPATIAL_SHAPE_CROSSWALK_V0_1.md"
+  },
+  "parents": [
+    "TIR exact tetrahedral projective FS face/full areas",
+    "IDT 01K phase-clock relational-area map",
+    "RF-S9 common projective-cell area ownership"
+  ],
+  "exact_identities": [
+    "a_FS^face = pi/4",
+    "a_FS^tet = pi = 4 a_FS^face",
+    "A_face = pi c^2/(4 omega^2)",
+    "A_tet = pi c^2/omega^2",
+    "common uniform rate -> A_tet = 4 A_face",
+    "general nonuniform tetra partition -> A_tet = sum_{f=1}^4 A_f",
+    "same supplied J and common rate -> Xi_face = 4 Xi_tet"
+  ],
+  "discrete_scope_contract": [
+    "FACE with face_id in {1,2,3,4}",
+    "FULL_TETRA_CP1 with full four-face projective support"
+  ],
+  "type_firewall": [
+    "projective tetrahedral geometry consumed from TIR",
+    "spatial tetrahedral source binding remains separately gated"
+  ],
+  "separate_downstream_gates": [
+    "PHYSICAL_PROJECTIVE_SCOPE_SELECTION",
+    "PHYSICAL_PROJECTIVE_CELL_SELECTION",
+    "TIR_PROJECTIVE_TO_SPATIAL_CELL_SOURCE_BINDING",
+    "PHYSICAL_JOINT_INFORMATION_STATE_BINDING",
+    "ABSOLUTE_ALPHA_NORMALIZATION",
+    "PHYSICAL_RADIAL_ZERO_DEFECT_DATA",
+    "RADIAL_BINDING_DYNAMICAL_TRANSPORT",
+    "TRANSLATIONAL_OBSERVABLE",
+    "DIRECTIONAL_CUBIC_TEST",
+    "GENERAL_MATTER_MULTIPLET",
+    "GLOBAL_INFORMATION_GEODESIC_EXTENSION"
+  ],
+  "reference_implementation": "src/rfc/tetra_fs_projective_refinement.py",
+  "reference_tests": "tests/reference/test_rfs10_tetra_fs_projective_refinement.py",
+  "hosted_ci": {
+    "workflow": "RFC reference suite",
+    "run": null,
+    "conclusion": "PENDING"
+  }
+}
