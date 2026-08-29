@@ -1,0 +1,62 @@
+{
+  "schema": "RFC_STACK_DEPENDENCY_SIDECAR_V0_1",
+  "authority": "NONCANONICAL_STACKED_SIDECAR",
+  "repository": "AdrianLipa90/Relational-Field-Closure",
+  "canonical_main_anchor": "58655c7fe9d25d09c13545965e951f171316e6b2",
+  "canonical_export_source_commit": "45659a5fbbcd0faa06ab2a7d8a81d1eb7215d4c0",
+  "canonical_export_explicit_frontier": "RF-F13",
+  "stack_frontier": "RF-F28",
+  "main_merge": "NOT_PERFORMED",
+  "canonical_export_mutation": "DEFERRED_UNTIL_EXPLICIT_POST_MERGE_REGENERATION",
+  "nodes": [
+    {"gate":"RF-F13","pr":68,"branch_head":"a14da535354f30ad8b0b672713863a9734970328","validated_head":"45659a5fbbcd0faa06ab2a7d8a81d1eb7215d4c0","suite":321,"status":"REFERENCE_PASS"},
+    {"gate":"RF-F14","pr":69,"branch_head":"a46315fa118da4343dd4d0310b2b6c69df6769e1","suite":324,"status":"REFERENCE_PASS"},
+    {"gate":"RF-F15","pr":71,"branch_head":"c3f7570827836e5ec071e88c72c3fc6408849dc6","suite":326,"status":"REFERENCE_PASS"},
+    {"gate":"RF-F16","pr":72,"branch_head":"42f1d7e0bb2d4c208338bac9a77cec37e36bfcf0","validated_head":"abe796f561b5235a7ba0233c3233b0fa4b081abc","suite":330,"status":"REFERENCE_PASS"},
+    {"gate":"RF-F17","pr":73,"branch_head":"110da304b83616fef5962413bcb21d4b59869c0b","validated_head":"f88012118a3209785a548cdc3771821a34b47ad1","suite":332,"status":"REFERENCE_PASS"},
+    {"gate":"RF-F18","pr":74,"branch_head":"5705717e94293bba3b39719dde108eec2a3dbda8","validated_head":"f0d7d74ee3ce2a4c8a29b55faee43dc733bdab1a","suite":340,"status":"REFERENCE_PASS"},
+    {"gate":"RF-F19","pr":75,"branch_head":"4c52bb17be0093661f20baf4e358348dcda4db25","validated_head":"c326b0ebbad2c180cfdde5ac11c157bd36d2c801","suite":344,"status":"REFERENCE_PASS"},
+    {"gate":"RF-F20","pr":76,"branch_head":"e537b81df0dae5d4b455e46090c61c7e4e8380b5","validated_head":"f4f22d2f77ef337768fef7ee55b185268b803dd3","suite":351,"status":"REFERENCE_PASS"},
+    {"gate":"RF-F21","pr":77,"branch_head":"e28584e6253507c6b5672396794cf7f1636c5513","validated_head":"71a7c1217533d4650f782d5ae01d5140c6cba98a","suite":353,"status":"REFERENCE_PASS"},
+    {"gate":"RF-F22","pr":78,"branch_head":"24ff4dcbde9b5b069664f158da2661556da748fd","validated_head":"f3d7f504aa71d368b190502b85edab450558e2ab","suite":355,"status":"REFERENCE_PASS"},
+    {"gate":"RF-F23","pr":79,"validated_head":"241843acf8cc009d7f76a7cdb529d5615fea543a","suite":357,"status":"REFERENCE_PASS"},
+    {"gate":"RF-F24","pr":80,"branch_head":"0920cbd3664bc387cdd277a04c585c228a5f7c60","validated_head":"3b213f2df9e9528ec5fc42e1b07dfe959f4c120a","suite":361,"status":"REFERENCE_PASS"},
+    {"gate":"RF-F25","pr":81,"branch_head":"70a9f28058a292ada1a22ff537cdd38027cad095","validated_head":"4b789af3b10a647dcdee0b5554f2ecb85d733a07","suite":363,"status":"REFERENCE_PASS"},
+    {"gate":"RF-F26","pr":82,"branch_head":"aac03a9b57525772f72e3da20f32ac897a1a2868","validated_head":"e6458abc145774810dfe7b226179026b809fe6bb","suite":365,"status":"REFERENCE_PASS"},
+    {"gate":"RF-F27","pr":83,"branch_head":"fb6582c158142198362bf76ff881d2a7c0ee153d","validated_head":"3d051fc86f928b141f3801969e61aa4cf304fccb","suite":367,"status":"REFERENCE_PASS"},
+    {"gate":"RF-F28","pr":84,"validated_head":"d621df408aba1ac86d1448c54c0689fa2817918e","suite":369,"status":"REFERENCE_PASS"}
+  ],
+  "edges": [
+    ["RF-F13","RF-F14"],["RF-F14","RF-F15"],["RF-F15","RF-F16"],["RF-F16","RF-F17"],
+    ["RF-F17","RF-F18"],["RF-F18","RF-F19"],["RF-F19","RF-F20"],["RF-F20","RF-F21"],
+    ["RF-F21","RF-F22"],["RF-F22","RF-F23"],["RF-F23","RF-F24"],["RF-F24","RF-F25"],
+    ["RF-F25","RF-F26"],["RF-F26","RF-F27"],["RF-F27","RF-F28"]
+  ],
+  "frontier_verdict": {
+    "formal_action_level_einstein_source_assembly": "PASS",
+    "bianchi_dynamic_lambda_repartition": "PASS",
+    "reference_rate_alignment_current_measure_contracts": "PASS",
+    "reduced_gravity_universality_contract": "PASS_REFERENCE",
+    "project_coupling_promotion_firewall": "PASS_REFERENCE",
+    "gamma_zeta_identifiability": "PASS",
+    "tree_amplitude_identifiability_no_go": "PASS",
+    "physical_coupling_promotion": "CONDITIONAL_EVIDENCE_GATED"
+  },
+  "physical_evidence_frontier": [
+    "realized RF-F24 current/measure arrays",
+    "realized RF-F21 field/rotor phase-rate receipt",
+    "independently sourced RFC source operator S_R",
+    "independently admitted alpha_c/Yang-Mills normalization provenance",
+    "independent physical M_star/zeta_M carrier typing",
+    "realized RF-F20 response receipts for the selected ABE/scale branch",
+    "optional logically independent horizon provenance",
+    "at least two admitted systems for RF-F25 zero-fit universality"
+  ],
+  "promotion_sequence": [
+    "explicit stacked-source merge authorization",
+    "exact post-merge RFC main commit",
+    "canonical DEPENDENCY_EXPORT regeneration",
+    "source_commit/export_commit freshness lock",
+    "FPDG federation from the locked source state"
+  ]
+}

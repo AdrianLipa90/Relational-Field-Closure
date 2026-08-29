@@ -1,0 +1,47 @@
+{
+  "schema": "RFC_REFERENCE_VALIDATION_V0_1",
+  "gate": "RF-F21",
+  "title": "IDT RFC Independent Phase-Rate Receipt",
+  "stack_parent": "e537b81df0dae5d4b455e46090c61c7e4e8380b5",
+  "idt_main": "ed902458b6e0ad338ca4ba637d8d8228bc7c549b",
+  "implementation_head": "3e5d4258fc6621a602df9734f9e8b94ed04fddc9",
+  "validated_head": "71a7c1217533d4650f782d5ae01d5140c6cba98a",
+  "status": "REFERENCE_SUITE_PASS",
+  "hosted_ci": {
+    "workflow": "RFC reference suite",
+    "run_number": 353,
+    "run_id": 33273701861,
+    "conclusion": "success"
+  },
+  "reference_module": "src/rfc/idt_rfc_independent_rate_receipt.py",
+  "reference_tests": "tests/reference/test_rff21_idt_rfc_independent_rate_receipt.py",
+  "exact_targets": [
+    "field and rotor coordinate rates are separate inputs",
+    "field normal and rotor proper rates are separate inputs",
+    "Delta_t audits field versus rotor coordinate rate",
+    "Delta_Nf audits field coordinate rate versus N_R field proper rate",
+    "Delta_Nr audits rotor coordinate rate versus N_R rotor proper rate",
+    "Delta_tau audits field proper versus rotor proper rate",
+    "I_A and I_phi remain separate inputs",
+    "Delta_Q audits Q_vartheta versus P_Phi",
+    "RFC omega is independently audited against field proper rate",
+    "mu_vartheta=|r_tau_rotor|/c",
+    "bundle patch connection clock coframe measure support IDs are independently audited"
+  ],
+  "cross_repo_sources": [
+    "IDT 01AC gauge-covariant phase pullback and Noether generator",
+    "IDT 01AD relational-lapse normal phase-rate bridge",
+    "RFC RF-N1B2M gauge-covariant phase pullback",
+    "RFC RF-N1B2N relational-lapse normal phase rate",
+    "RFC RF-F3 proper phase rate",
+    "RFC RF-F19 independent rotor-lapse phase scale"
+  ],
+  "promotion_inputs": [
+    "independently sourced realized-system field coordinate rate",
+    "independently sourced realized-system field normal proper rate",
+    "independently sourced realized-system rotor coordinate and proper rates",
+    "realized-system bundle/connection/clock/coframe/measure/support lineage IDs",
+    "physical current/measure promotion RF-N1B2K"
+  ],
+  "main_merge": "NOT_PERFORMED"
+}

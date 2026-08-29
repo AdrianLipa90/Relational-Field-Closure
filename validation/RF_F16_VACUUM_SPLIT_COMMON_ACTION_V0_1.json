@@ -1,0 +1,35 @@
+{
+  "schema": "RFC_REFERENCE_VALIDATION_V0_1",
+  "gate": "RF-F16",
+  "title": "Vacuum-Split Renormalization / Dynamic-Lambda Common-Action Closure",
+  "stack_parent": "c3f7570827836e5ec071e88c72c3fc6408849dc6",
+  "status": "REFERENCE_SUITE_PASS",
+  "reference_module": "src/rfc/vacuum_split_common_action.py",
+  "reference_tests": "tests/reference/test_rff16_vacuum_split_common_action.py",
+  "local_reference_tests": "12/12 PASS",
+  "hosted_reference_suite": "RUN_330_SUCCESS",
+  "exact_head": "abe796f561b5235a7ba0233c3233b0fa4b081abc",
+  "exact_targets": [
+    "Lambda_star=Lambda_ref+kappa_E*(rho_C+U_0)",
+    "Lambda0=Lambda_star+kappa_E*Uhat",
+    "constant vacuum repartition invariance",
+    "minimal common action contains -Uhat+eta*Uhat",
+    "scalar EOM Box(phi_L)-(1-eta)*U_L'=0",
+    "generator divergence coefficient eta*U_L'",
+    "kinetic divergence coefficient (1-eta)*U_L'",
+    "total nonvacuum divergence coefficient U_L'",
+    "source-modified RF-F15 D'=2(1-x-2v)-eta/K*dUhat/dlnomega",
+    "fixed-x V_G=(1-x)K/2+rho_C-eta*Uhat",
+    "transport reconstruction dL_G/dphi=eta*U_L'",
+    "m_eff^2=(1-eta)*U_L''",
+    "eta=0 RF-L2 endpoint",
+    "eta=1 RF-F7 ledger endpoint and minimal-counterterm degeneracy"
+  ],
+  "promotion_inputs": [
+    "zero-defect physical RF-N1B2K current/measure binding",
+    "physical phi_L <-> RFC invariant lineage",
+    "state-dependent nontrivial eta=1 interaction receipt",
+    "absolute project-side kappa_E/G promotion"
+  ],
+  "main_merge": "NOT_PERFORMED"
+}

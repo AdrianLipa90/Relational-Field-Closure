@@ -1,0 +1,44 @@
+{
+  "schema": "RFC_REFERENCE_VALIDATION_V0_1",
+  "gate": "RF-F23",
+  "title": "Phase-Clock Material-Congruence Independent Alignment Receipt",
+  "stack_parent": "24ff4dcbde9b5b069664f158da2661556da748fd",
+  "implementation_head": "9c2b764f079c6a67aabed6289606be5a16c9a89f",
+  "validated_head": "241843acf8cc009d7f76a7cdb529d5615fea543a",
+  "status": "REFERENCE_SUITE_PASS",
+  "hosted_ci": {
+    "workflow": "RFC reference suite",
+    "run_number": 357,
+    "run_id": 33274038336,
+    "conclusion": "success"
+  },
+  "reference_module": "src/rfc/phase_clock_material_alignment_receipt.py",
+  "reference_tests": "tests/reference/test_rff23_phase_clock_material_alignment_receipt.py",
+  "exact_targets": [
+    "q_mu and mu_vartheta remain independent inputs",
+    "J^mu and slice normal n^mu remain independent inputs",
+    "C_vartheta is audited against one rather than self-normalized",
+    "future-timelike RF-E19 current domain is enforced",
+    "nu_J=J/sqrt(-J^2) is invariant under positive current rescaling",
+    "phase and current future orientation are separately audited",
+    "gamma_varthetaJ=-v_vartheta_mu*nu_J^mu",
+    "Delta_varthetaJ=|gamma_varthetaJ-1|",
+    "zero alignment defect on future unit timelike sector gives local congruence alignment",
+    "metric/inverse-metric consistency is independently audited",
+    "bundle patch connection slice coframe measure support lineage mismatches block promotion"
+  ],
+  "formal_parents": [
+    "RF-F18 IDT gauge-covariant phase-clock projector binding",
+    "RF-E19 timelike Noether current to material congruence",
+    "RF-F21 independent field-rotor phase-rate receipt",
+    "RF-F22 total Einstein source assembly"
+  ],
+  "promotion_inputs": [
+    "independently sourced realized-system q_mu and mu_vartheta",
+    "independently sourced realized-system material current J^mu",
+    "realized-system common slice/coframe/measure/support lineage",
+    "RF-N1B2K current/measure physical realization",
+    "RF-F20 physical response receipts for the selected projector branch"
+  ],
+  "main_merge": "NOT_PERFORMED"
+}

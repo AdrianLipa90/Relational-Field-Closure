@@ -1,0 +1,48 @@
+{
+  "schema": "RFC_REFERENCE_VALIDATION_V0_1",
+  "gate": "RF-F22",
+  "title": "Total Einstein Source Assembly and Bianchi Repartition",
+  "stack_parent": "e28584e6253507c6b5672396794cf7f1636c5513",
+  "implementation_head": "d958c8fdd4a62133ad4ba7af34772476111f8cc0",
+  "validated_head": "f3d7f504aa71d368b190502b85edab450558e2ab",
+  "status": "REFERENCE_SUITE_PASS",
+  "hosted_ci": {
+    "workflow": "RFC reference suite",
+    "run_number": 355,
+    "run_id": 33273896718,
+    "conclusion": "success"
+  },
+  "reference_module": "src/rfc/total_einstein_source_assembly.py",
+  "reference_tests": "tests/reference/test_rff22_total_einstein_source_assembly.py",
+  "exact_targets": [
+    "D_mn=-2*eta*Uhat*f'(1)*partial_g C_mn",
+    "T_fixed=T_rest-(1-eta)*Uhat*g+D",
+    "T_dynamic=T_rest+eta*Uhat*g+D",
+    "T_dynamic-T_fixed=Uhat*g",
+    "Lambda0=Lambda_star+kappa_E*Uhat",
+    "Einstein residual dynamic equals Einstein residual fixed",
+    "kappa_E div(T_dynamic)-grad(Lambda0)=kappa_E div(T_fixed)",
+    "fixed on-shell conservation is equivalent to dynamic-Lambda exchange",
+    "identity is independent of the realized R_mn and S_mn values when D_mn is retained consistently",
+    "eta=0 and eta=1 endpoints reproduce their source allocations",
+    "eta=1 f'(1)=1/2 R=0 S=0 gives D_mn=Uhat*v_m*v_n"
+  ],
+  "formal_parents": [
+    "RF-E7 total scalar stress-energy composition",
+    "RF-E10 through RF-E13 Einstein ADM constraints evolution and Bianchi propagation",
+    "RF-F16 vacuum split and dynamic-Lambda common action",
+    "RF-F17 state-dependent exchange projector",
+    "RF-F20 ABE Euler off-shell metric response",
+    "RF-F21 independent IDT RFC phase-rate receipt"
+  ],
+  "promotion_inputs": [
+    "physical ABE response R_mn receipt",
+    "physical rotor/lapse scale response S_mn receipt",
+    "realized-system independent field/rotor rate and lineage receipt",
+    "RF-N1B2K current/measure realization",
+    "phase-clock/material-current alignment",
+    "physical f(C) and eta selection",
+    "physical kappa_E/G universality promotion"
+  ],
+  "main_merge": "NOT_PERFORMED"
+}
