@@ -1,0 +1,33 @@
+{
+  "schema": "RFC_REFERENCE_VALIDATION_V0_1",
+  "gate": "RF-F18",
+  "title": "IDT Gauge-Covariant Phase-Clock Projector Binding",
+  "stack_parent": "110da304b83616fef5962413bcb21d4b59869c0b",
+  "status": "REFERENCE_IMPLEMENTED_AWAITING_CI",
+  "reference_module": "src/rfc/idt_phase_clock_projector.py",
+  "reference_tests": "tests/reference/test_rff18_idt_phase_clock_projector.py",
+  "exact_targets": [
+    "IDT 01AC gauge-covariant q_mu=d_mu vartheta+A_mu^ABE is reused without a new field",
+    "C_vartheta=-g^{mn}q_m q_n/mu_vartheta^2 is gauge invariant",
+    "independent mu_vartheta prevents self-normalization tautology",
+    "self-normalized mu_vartheta^2=-g^{-1}(q,q) gives delta_g C_vartheta=0",
+    "dC/dg=-(q_m q_n+2R_mn)/mu_vartheta^2",
+    "eta=1 stress=2 Uhat f'(1) v_m v_n+4 Uhat f'(1) R_mn/mu_vartheta^2",
+    "R_mn=0 and f'(1)=1/2 gives T_mn=Uhat v_m v_n",
+    "phase-clock/material alignment gamma=-v_m nu_J^m and Delta=|gamma-1|"
+  ],
+  "cross_repo_parents": [
+    "IDT formalism/01AC_gauge_covariant_phase_pullback_noether_generator.md",
+    "IDT formalism/01AD_relational_lapse_normal_phase_rate.md",
+    "IDT formalism/05D_local_clock_relative_entropy_potential.md",
+    "RFC RF-E19 material congruence"
+  ],
+  "promotion_inputs": [
+    "independent physical phase-clock calibration mu_vartheta",
+    "ABE/Euler off-shell metric-response receipt R_mn",
+    "IDT phase-clock <-> RF-E19 material lineage receipt",
+    "zero-defect RF-N1B2K current/measure binding",
+    "physical projector profile f"
+  ],
+  "main_merge": "NOT_PERFORMED"
+}
