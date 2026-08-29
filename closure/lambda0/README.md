@@ -119,13 +119,77 @@ Current sequence:
    \kappa=\frac{\ln2}{24\pi}.
    }
    \]
-18. The current dynamical frontier is the projection of the admitted IDT 01D Shannon–Onsager response along an admitted Fisher-radial / 01K trajectory and its bridge to the RF-L2 Lorentzian scalar propagation. The physical scale `m_I` (equivalently `alpha_I`) remains the scalar calibration coordinate; finite-distance/global information-geodesic extension remains separate.
+18. RF-L5 uses the exact IDT 01D uniform-equilibrium identity
+   \[
+   \boxed{
+   G_u^{(2)}(u)=\frac{\ln2}{N_s}K_0,
+   \qquad
+   K_0=\frac{N_s}{\ln2}G_u^{(2)}(u),
+   }
+   \]
+   where 02B identifies `K0` as the untwisted Temporal Wave relational-mobility stiffness.
+19. In the conservative `C_eta=0` sector, composing `K0` with the RF-L4A potential gives the finite-graph scalar action
+   \[
+   L_I
+   =\frac12\dot\phi_I^\top\dot\phi_I
+   -\frac12\phi_I^\top K_0\phi_I
+   -\frac12m_I^2\phi_I^\top\phi_I
+   \]
+   and the exact graph Klein–Gordon equation
+   \[
+   \boxed{
+   \ddot\phi_I+(K_0+m_I^2I)\phi_I=0.
+   }
+   \]
+20. The same equation written directly in the Shannon response coordinate is
+   \[
+   \boxed{
+   \ddot\phi_I+
+   \left[
+   \frac{N_s}{\ln2}G_u^{(2)}(u)
+   +\frac{\alpha_I}{\kappa_E}I
+   \right]\phi_I=0.
+   }
+   \]
+21. For `K0 v_r=lambda_r v_r`, the conservative modal spectrum is
+   \[
+   \boxed{\omega_r^2=\lambda_r+m_I^2.}
+   \]
+   The connected-graph constant mode has `lambda_0=0`, so
+   \[
+   \boxed{\omega_0^2=m_I^2=\alpha_I/\kappa_E.}
+   \]
+22. IDT 02C supplies the premetric long-wave coefficient
+   \[
+   \boxed{c_{eff}^2=M_{eff}},
+   \]
+   yielding
+   \[
+   \boxed{
+   \partial_t^2\phi_I
+   -M_{eff}\partial_x^2\phi_I
+   +m_I^2\phi_I=0,
+   \qquad
+   \omega^2=M_{eff}k^2+m_I^2.
+   }
+   \]
+23. IDT 05C supplies the exact relational lapse ratio and physical-time coframe candidate. The current continuum geometry gate is the common calibrated comparison
+   \[
+   \boxed{M_{eff}=c_{eff}^2\stackrel{gate}{=}c^2.}
+   \]
+24. The current scalar-scale gate is a common-clock comparison between the RF-L5 homogeneous mass frequency and an independently admitted IDT phase-clock spectral line. If that future gate establishes `omega_0=|omega_t|`, then
+   \[
+   m_I^2=(\omega_t/c)^2,
+   \qquad
+   \alpha_I=\kappa_E(\omega_t/c)^2.
+   \]
 
 Validation authority:
 
 - RF-L2 tested commit `38c9589608abe77bdcf05d46e997731ef5d6e430`, workflow run `33208242527`, job `98974734417`, **489/489 PASS**.
 - RF-L3 PR #19 tested head `2666ced59b4210e1afb2eb2c98ba61f09e674d98`, workflow run `33243796567`, **SUCCESS**.
 - RF-L4 PR #20 tested head `99621c0848b36ef93cd6c41e9f3d88be3023cb1a`, workflow run `33245133095`, job `99081186401`, **522/522 PASS**.
-- RF-L4A carries its own reference gates and requires its independent workflow receipt before promotion.
+- RF-L4A PR #21 tested head `7fcedd30a1ba59ae82750eb6b5f89b9e3288d162`, workflow run `33245318290`, job `99081667619`, **543/543 PASS**.
+- RF-L5 carries its own graph/operator reference gates and requires its independent workflow receipt before promotion.
 
-**Current branch status:** `RF_L1_TARGET_ADMITTED / RF_L2_ACTION_REALIZATION_PASS / RF_L3_FUNCTIONAL_RECONSTRUCTION_PASS / RF_L4_CANONICAL_PULLBACK_522_OF_522_PASS / RF_L4A_BETA_I_SQRT2_LOCAL_FISHER_PASS_CANDIDATE / IDT_XI_I_HOLONOMY_PRESERVED / ONSAGER_TO_LORENTZIAN_DYNAMICAL_BRIDGE_OPEN / ALPHA_I_EQUIV_M_I_PHYSICAL_SCALE_OPEN / GLOBAL_INFORMATION_GEODESIC_EXTENSION_OPEN`.
+**Current branch status:** `RF_L1_TARGET_ADMITTED / RF_L2_ACTION_REALIZATION_PASS / RF_L3_FUNCTIONAL_RECONSTRUCTION_PASS / RF_L4_CANONICAL_PULLBACK_522_OF_522_PASS / RF_L4A_LOCAL_FISHER_NORMALIZATION_543_OF_543_PASS / RF_L5_SHANNON_ONSAGER_GRAPH_KG_CANDIDATE / IDT_XI_I_HOLONOMY_PRESERVED / METRIC_TIME_CEFF_TO_C_CALIBRATION_OPEN / PHASE_CLOCK_MASS_SCALE_OPEN / CURVED_COVARIANT_CONTINUUM_RECEIPT_DOWNSTREAM / GLOBAL_INFORMATION_GEODESIC_EXTENSION_OPEN`.
