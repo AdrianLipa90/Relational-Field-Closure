@@ -3,15 +3,23 @@ from types import SimpleNamespace
 from tools.run_reference_suite_with_fpdg_receipt import FpdgFailurePlugin, load_bindings
 
 
+def _synthetic_failure(path, test_name, line_zero_based):
+    return SimpleNamespace(
+        failed=True,
+        nodeid=f"{path}::{test_name}",
+        when="call",
+        location=(path, line_zero_based, test_name),
+        longrepr=None,
+    )
+
+
 def test_conserved_carrier_failure_maps_to_exact_fpdg_source_claim():
     plugin = FpdgFailurePlugin(load_bindings())
     path = "tests/reference/test_rfn1b2_conserved_source_carrier.py"
-    report = SimpleNamespace(
-        failed=True,
-        nodeid=f"{path}::test_internal_continuity_flux_conserves_total_carrier",
-        when="call",
-        location=(path, 30, "test_internal_continuity_flux_conserves_total_carrier"),
-        longrepr=None,
+    report = _synthetic_failure(
+        path,
+        "test_internal_continuity_flux_conserves_total_carrier",
+        30,
     )
 
     plugin.pytest_runtest_logreport(report)
@@ -27,16 +35,40 @@ def test_conserved_carrier_failure_maps_to_exact_fpdg_source_claim():
     assert "claim-source:formalism/DEPENDENCY_GRAPH.md" in failure["evidence_refs"]
 
 
+def test_early_source_chain_failures_map_to_exact_fpdg_claims():
+    cases = (
+        (
+            "tests/reference/test_rfn1b2k_noether_rfc_conserved_current_binding.py",
+            "test_exact_rfc_noether_current_and_measure_binding_has_zero_defects",
+            "RFC.N1B2K.CURRENT_MEASURE",
+        ),
+        (
+            "tests/reference/test_rfn1b2o_phase_energy_current_source_binding.py",
+            "test_local_energy_current_factorization",
+            "RFC.N1B2O.MATTER_SOURCE_FACTORIZATION",
+        ),
+        (
+            "tests/reference/test_rfn1b2p_charge_projected_em_current_intertwiner.py",
+            "test_single_charge_intertwiner_is_exact",
+            "RFC.N1B2P.MAXWELL_INTERTWINER",
+        ),
+    )
+    for path, test_name, expected_claim in cases:
+        plugin = FpdgFailurePlugin(load_bindings())
+        plugin.pytest_runtest_logreport(_synthetic_failure(path, test_name, 10))
+        assert len(plugin.failures) == 1
+        failure = plugin.failures[0]
+        assert failure["claim_id"] == expected_claim
+        assert failure["source_locator"]["path"] == path
+        assert failure["source_locator"]["line_start"] == 11
+        assert failure["source_locator"]["test_id"].endswith(f"::{test_name}")
+        assert "claim-source:formalism/DEPENDENCY_GRAPH.md" in failure["evidence_refs"]
+
+
 def test_rfe20_failure_maps_to_exact_fpdg_claim_and_test_coordinate():
     plugin = FpdgFailurePlugin(load_bindings())
     path = "tests/reference/test_rfe20_tetra_clock_mass_scale_closure.py"
-    report = SimpleNamespace(
-        failed=True,
-        nodeid=f"{path}::test_mass_scale",
-        when="call",
-        location=(path, 40, "test_mass_scale"),
-        longrepr=None,
-    )
+    report = _synthetic_failure(path, "test_mass_scale", 40)
 
     plugin.pytest_runtest_logreport(report)
 
