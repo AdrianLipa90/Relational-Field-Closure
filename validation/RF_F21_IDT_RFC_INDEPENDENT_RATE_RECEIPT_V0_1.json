@@ -5,7 +5,14 @@
   "stack_parent": "e537b81df0dae5d4b455e46090c61c7e4e8380b5",
   "idt_main": "ed902458b6e0ad338ca4ba637d8d8228bc7c549b",
   "implementation_head": "3e5d4258fc6621a602df9734f9e8b94ed04fddc9",
-  "status": "REFERENCE_IMPLEMENTED_AWAITING_CI",
+  "validated_head": "71a7c1217533d4650f782d5ae01d5140c6cba98a",
+  "status": "REFERENCE_SUITE_PASS",
+  "hosted_ci": {
+    "workflow": "RFC reference suite",
+    "run_number": 353,
+    "run_id": 33273701861,
+    "conclusion": "success"
+  },
   "reference_module": "src/rfc/idt_rfc_independent_rate_receipt.py",
   "reference_tests": "tests/reference/test_rff21_idt_rfc_independent_rate_receipt.py",
   "exact_targets": [
