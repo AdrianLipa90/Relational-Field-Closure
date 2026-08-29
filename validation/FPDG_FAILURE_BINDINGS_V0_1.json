@@ -17,7 +17,7 @@
     "tests/reference/test_rfn1b2o_phase_energy_current_source_binding.py": {
       "claim_id": "RFC.N1B2O.MATTER_SOURCE_FACTORIZATION",
       "claim_source": "formalism/DEPENDENCY_GRAPH.md",
-      "binding_evidence": "the source-owned test directly checks the local phase-energy/current factorization, rho=energy/c^2 typing, nonuniform-cell integration, common-rate reduction and separation of extra energy sectors"
+      "binding_evidence": "the source-owned test directly checks the local phase-energy/current source factorization, rho=energy/c^2 typing, nonuniform-cell integration, common-rate reduction and separation of extra energy sectors"
     },
     "tests/reference/test_rfn1b2p_charge_projected_em_current_intertwiner.py": {
       "claim_id": "RFC.N1B2P.MAXWELL_INTERTWINER",
@@ -25,22 +25,22 @@
       "binding_evidence": "the source-owned test directly checks the charge-projected RFC-to-Maxwell current intertwiner, charge sign and scale response, neutral sector, multiplet resolution, gauge-compatible transport and fail-closed dimensional gates"
     },
     "tests/reference/test_rfe4_phase_kinetic_stress_energy_firewall.py": {
-      "claim_id": "RFC.E4.PHASE_STRESS_ENERGY_FIREWALL",
+      "claim_id": "RFC.E4.PHASE_STRESS_ENERGY",
       "claim_source": "formalism/DEPENDENCY_GRAPH.md",
       "binding_evidence": "the source-owned test directly checks phase-kinetic stress-energy, energy-pressure typing, active-source response, dust condition and the Newton-target firewall"
     },
     "tests/reference/test_rfe5_onshell_scalar_carrier_energy.py": {
-      "claim_id": "RFC.E5.ON_SHELL_SCALAR_ENERGY",
+      "claim_id": "RFC.E5.CARRIER_ENERGY",
       "claim_source": "formalism/DEPENDENCY_GRAPH.md",
       "binding_evidence": "the source-owned test directly checks the on-shell harmonic scalar condition, pressureless massive limit and the exact factor-two distinction between phase kinetic and total energy per Noether charge"
     },
     "tests/reference/test_rfe6_lorentzian_matter_action_source_bookkeeping.py": {
-      "claim_id": "RFC.E6.LORENTZIAN_MATTER_ACTION",
+      "claim_id": "RFC.E6.LORENTZIAN_ACTION",
       "claim_source": "formalism/DEPENDENCY_GRAPH.md",
       "binding_evidence": "the source-owned test directly checks the mostly-plus Lorentzian matter action, gauge-covariant charge current, Maxwell source normalization, source bookkeeping, energy-pressure transfer and fail-closed hbar gates"
     },
     "tests/reference/test_rfe7_total_scalar_stress_energy_composition.py": {
-      "claim_id": "RFC.MATTER.SINGLE_COMPLEX_SCALAR",
+      "claim_id": "RFC.E7.SCALAR_T_DECOMPOSITION",
       "claim_source": "formalism/DEPENDENCY_GRAPH.md",
       "binding_evidence": "the source-owned test directly checks exact polar kinetic decomposition, total scalar stress-energy recomposition, gauge invariance, homogeneous E4/E5 limits, neutral gravitational sourcing and exact Einstein source ledger composition"
     },
