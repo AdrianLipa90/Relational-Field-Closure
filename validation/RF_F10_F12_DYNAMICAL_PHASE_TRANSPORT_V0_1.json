@@ -1,0 +1,48 @@
+{
+  "gate": "RF-F10-F12",
+  "title": "Dynamical Phase Transport, EOS Integration and FLRW Limit",
+  "version": "0.1",
+  "status": "REFERENCE_IMPLEMENTED_AWAITING_CI",
+  "stack_parent": {
+    "gate": "RF-F0-F9",
+    "head": "aeab9ca6da2553e3013d9351e0f743809f3b2829",
+    "reference_suite": 308,
+    "conclusion": "success"
+  },
+  "exact_relations": [
+    "Theta_G=B*X*Dtheta with X=Phi_C+kappa",
+    "dTheta_G=X*dB wedge Dtheta + B*X*F_minus on dPhi_C=Dtheta",
+    "div[(B/2)X^2 J]=rho_G+(X^2/2)J.dB+(B X^2/2)divJ",
+    "epsilon_dot=Bdot*omega*X+B*omega_dot*X+B*omega^2",
+    "epsilon_dot=-Lambda_dot/(kappa_E*n) on the RF-F7 dust exchange branch",
+    "constant Lambda -> d(B*omega*X)/dtau=0",
+    "constant B and Lambda -> X*omega=C and X^2=X0^2+2C DeltaTau",
+    "constant w -> B*X=C_w*|omega|^(3w-1)",
+    "constant w -> epsilon=sgn(omega) C_w |omega|^(3w)",
+    "homogeneous isotropic continuity -> a*|omega|=constant",
+    "ell_phi scales as a, area_R as a^2, volume_R as a^3",
+    "rho_G scales as a^[-3(1+w)]"
+  ],
+  "reference_tests": [
+    "phase-energy curvature zero on constant-B flat patch",
+    "phase-energy curvature dB and F contributions",
+    "boundary-flux source identity",
+    "variable-B/current-divergence corrections",
+    "phase-energy derivative",
+    "dynamic-Lambda transport residual",
+    "constant-Lambda constant-B dust invariant",
+    "integrated X^2 dust solution",
+    "constant-w prefactor family",
+    "constant-w carrier-energy family",
+    "FLRW phase-cell geometry scaling",
+    "FLRW a*omega invariant",
+    "FLRW dust/radiation/vacuum density laws",
+    "fail-closed invalid inputs"
+  ],
+  "physical_open_inputs": [
+    "common phase-cell cosmological binding",
+    "physical EOS receipt",
+    "physical B transport law",
+    "physical Lambda exchange receipt"
+  ]
+}

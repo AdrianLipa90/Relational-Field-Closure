@@ -1,27 +1,32 @@
 # RFC Canonical Formalization Index
 
-Status: `FOUNDATIONAL_SPINE_AUTHORITY / DERIVATION_GATES_PRESERVED`
+Status: `FOUNDATIONAL_AND_DYNAMICAL_SPINE_AUTHORITY / DERIVATION_GATES_PRESERVED`
 
 The RFC formalism is organized into three complementary layers.
 
-## 1. Foundational spine
+## 1. Foundational and dynamical spine
 
 ```text
-RF-F0  Primitive typed state
-RF-F1  Connection-sign bridge + gauge-dressed lifted relational phase
-RF-F2  Euler/Berry + Euler-root closure
-RF-F3  Gauge-covariant phase rate + relational phase cell
-RF-F4  Occupation + conserved four-current
-RF-F5  Relational phase-energy one-form
-RF-F6  Covariant relational source theorem
-RF-F7  Stress-energy + Bianchi/dynamic-Lambda balance
-RF-F8  Phase-cell continuity + equation-of-state theorem
-RF-F9  Noether/Hamiltonian + Einstein/ADM global closure
+RF-F0   Primitive typed state
+RF-F1   Connection-sign bridge + gauge-dressed lifted relational phase
+RF-F2   Euler/Berry + Euler-root closure
+RF-F3   Gauge-covariant phase rate + relational phase cell
+RF-F4   Occupation + conserved four-current
+RF-F5   Relational phase-energy one-form
+RF-F6   Covariant relational source theorem
+RF-F7   Stress-energy + Bianchi/dynamic-Lambda balance
+RF-F8   Phase-cell continuity + equation-of-state theorem
+RF-F9   Noether/Hamiltonian + Einstein/ADM global closure
+RF-F10  Phase-energy curvature + boundary-flux theorem
+RF-F11  Comoving phase-energy transport + integrated constant-w family
+RF-F12  Homogeneous-isotropic phase-clock / FLRW scaling limit
 ```
 
-Canonical document:
+Canonical documents:
 
 `formalism/RF_F0_F9_FOUNDATIONAL_FORMALIZATION_SPINE.md`
+
+`formalism/RF_F10_F12_DYNAMICAL_PHASE_TRANSPORT.md`
 
 The F-series provides the compact theorem-level statement of the system.
 
@@ -38,7 +43,7 @@ RF-S13-S22     relational generator, source geometry, current, tensor and profil
 RFG...         double-copy / coupling-normalization program
 ```
 
-The F-series crosslinks these results without replacing their proofs or validation receipts.
+The F-series crosslinks these results while preserving their proofs and validation receipts.
 
 ## 3. Central canonical equations
 
@@ -110,16 +115,56 @@ Comoving phase-cell equation-of-state theorem:
 
 on the separately conserved perfect-fluid branch specified by RF-F8.
 
+Phase-energy curvature:
+
+\[
+\boxed{
+\mathcal K_G=d\Theta_G
+=(\Phi_C+\kappa)dB\wedge\mathscr D\vartheta
++B(\Phi_C+\kappa)\mathcal F_-.
+}
+\]
+
+Comoving phase-energy transport:
+
+\[
+\boxed{
+(\Phi_C+\kappa)(\dot B\,\omega+B\dot\omega)
++B\omega^2
+=-\frac{\dot\Lambda_0}{\kappa_E n}.
+}
+\]
+
+Homogeneous-isotropic phase-clock invariant:
+
+\[
+\boxed{a|\omega|=\mathrm{const}},
+\qquad
+\boxed{\rho_G\propto a^{-3(1+w_G)}}.
+\]
+
 ## 4. Validation authority
 
-Executable formalization:
+Foundational executable formalization:
 
 `src/rfc/foundational_phase_source_formalism.py`
 
-Reference suite:
+Foundational reference suite:
 
 `tests/reference/test_rff_foundational_phase_source_formalism.py`
 
-Validation ledger:
+Foundational validation ledger:
 
 `validation/RF_F0_F9_FOUNDATIONAL_FORMALIZATION_V0_1.json`
+
+Dynamical executable formalization:
+
+`src/rfc/dynamical_phase_transport.py`
+
+Dynamical reference suite:
+
+`tests/reference/test_rff10_f12_dynamical_phase_transport.py`
+
+Dynamical validation ledger:
+
+`validation/RF_F10_F12_DYNAMICAL_PHASE_TRANSPORT_V0_1.json`
