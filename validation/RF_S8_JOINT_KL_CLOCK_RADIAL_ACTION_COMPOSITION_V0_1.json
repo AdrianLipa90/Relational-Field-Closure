@@ -2,11 +2,12 @@
   "schema": "RFC_VALIDATION_RECEIPT_V0_1",
   "gate": "RF-S8",
   "title": "Joint-KL Clock / Radial Action Composition",
-  "status": "REFERENCE_CANDIDATE_PENDING_HOSTED_CI",
+  "status": "HOSTED_REFERENCE_PASS / FINAL_HEAD_RERUN_PENDING",
   "parent_rfc_main": "466d364f3d903215b94e2ba66e1fd1fac23e7a30",
   "parents": [
-    "IDT 01C radial natural-log relative information",
-    "RF-I1 / IDT 05F positive-rate clock KL",
+    "IDT 01C radial Shannon relative information in bits",
+    "IDT 01K exact bit-to-natural-log conversion J_R=(ln2) I_R",
+    "RF-I1 / IDT 05F positive-rate clock natural-log KL",
     "RF-L3 information-curvature potential map",
     "RF-S5 fixed-amplitude clock/radial state separation"
   ],
@@ -19,7 +20,7 @@
     "U_D = (alpha_I Xi_R + alpha_clk Xi_C + alpha_X Xi_X)/kappa_E"
   ],
   "conditional_coefficient_forcing": [
-    "same physical information action represented jointly and decomposed",
+    "same dynamic information action represented jointly and decomposed",
     "common selected relational area",
     "stationary zero-baseline dynamic chart",
     "radial and clock coordinates independently variable",
@@ -49,7 +50,9 @@
   "reference_tests": "tests/reference/test_rfs8_joint_kl_clock_radial_action_composition.py",
   "hosted_ci": {
     "workflow": "RFC reference suite",
-    "run": null,
-    "conclusion": "PENDING"
+    "run": 268,
+    "conclusion": "SUCCESS",
+    "validated_head": "ddc6c5a9a3e62b51052bf9404610b5723a0f6cf7",
+    "post_validation_delta": "provenance wording only: 01C bits -> 01K natural-log conversion"
   }
 }
