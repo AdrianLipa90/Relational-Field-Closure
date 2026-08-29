@@ -1,0 +1,54 @@
+{
+  "schema": "RFC_REFERENCE_VALIDATION_V0_1",
+  "gate": "RF-F26",
+  "title": "Project Coupling Promotion Firewall",
+  "stack_parent": "70a9f28058a292ada1a22ff537cdd38027cad095",
+  "implementation_head": "8d9254b5848566d7389ca5cea58aa25ff2b1b70b",
+  "validated_head": "e6458abc145774810dfe7b226179026b809fe6bb",
+  "status": "REFERENCE_SUITE_PASS",
+  "hosted_validation": {
+    "workflow": "RFC reference suite",
+    "run_number": 365,
+    "run_id": 33276216416,
+    "conclusion": "success"
+  },
+  "reference_module": "src/rfc/project_coupling_promotion_firewall.py",
+  "reference_tests": "tests/reference/test_rff26_project_coupling_promotion_firewall.py",
+  "admitted_reference_evidence": [
+    "validation/RFG29_EXPLICIT_FIFTEEN_GRAPH_PROJECT_BCJ_CURRENT_FACTORIZATION_V0_1.json",
+    "validation/RFG30_EXPLICIT_FIFTEEN_GRAPH_DOUBLE_COPY_KLT_EQUIVALENCE_V0_1.json"
+  ],
+  "candidate_only_inputs": [
+    "validation/gremlin/RFG3_WILSON_CONTINUUM_YANG_MILLS_NORMALIZATION_v0.1.md"
+  ],
+  "exact_targets": [
+    "GREMLIN_CANDIDATE is rejected as promotion authority",
+    "five-point project BCJ reference surface requires 15 graphs and independent Jacobi rank 9",
+    "Jacobi reconstruction KLT and Ward defects remain independent audit coordinates",
+    "g_YM^2 is independently audited against 6/beta_W",
+    "Gamma_DC remains an independently sourced positive normalization input",
+    "gravity output may not be used to select BCJ beta_W Gamma_DC or M_star",
+    "BCJ Wilson Gamma_DC and carrier-scale provenance IDs may not collide with gravity-output provenance",
+    "zeta_M=M_star/epsilon_Q is audited against the declared carrier type",
+    "kinetic and total-rest carrier surfaces differ by exactly factor four in kappa_E",
+    "Mbar_G=M_star/(Gamma_DC*g_YM^2) and kappa_E=1/Mbar_G^2 are outputs after input freezing"
+  ],
+  "formal_parents": [
+    "RF-F25 reduced-gravity cross-system universality receipt",
+    "RF-N1C2 carrier-scale universality firewall",
+    "RF-N1C4 double-copy carrier-energy type firewall",
+    "RF-E3 double-copy Einstein-Hilbert normalization",
+    "RFG29 explicit five-point BCJ reference receipt",
+    "RFG30 explicit fifteen-graph double-copy/KLT reference receipt"
+  ],
+  "promotion_inputs": [
+    "independently frozen project beta_W or equivalent Yang-Mills action normalization",
+    "independently frozen Gamma_DC normalization",
+    "independent physical typing of M_star",
+    "realized BCJ/reference evidence with frozen provenance",
+    "cross-system RF-F25 inputs"
+  ],
+  "numerical_G_target_used_for_selection": false,
+  "gremlin_promotion_authority": false,
+  "main_merge": "NOT_PERFORMED"
+}
