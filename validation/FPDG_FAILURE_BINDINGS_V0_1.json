@@ -1,0 +1,149 @@
+{
+  "schema": "RFC_FPDG_FAILURE_BINDINGS_V0_1",
+  "repository_id": "RFC",
+  "repository": "AdrianLipa90/Relational-Field-Closure",
+  "purpose": "Explicit source-side test-to-claim bindings for exact FPDG failure localization",
+  "bindings": {
+    "tests/reference/test_rfn1b2_conserved_source_carrier.py": {
+      "claim_id": "RFC.SOURCE.CONSERVED_CARRIER",
+      "claim_source": "formalism/DEPENDENCY_GRAPH.md",
+      "binding_evidence": "the source-owned test directly checks continuity conservation, normalized carrier shape, extensive-scale freedom, charge occupation and carrier-to-mass-density typing"
+    },
+    "tests/reference/test_rfn1b2k_noether_rfc_conserved_current_binding.py": {
+      "claim_id": "RFC.N1B2K.CURRENT_MEASURE",
+      "claim_source": "formalism/DEPENDENCY_GRAPH.md",
+      "binding_evidence": "the source-owned test directly checks local RFC-Noether current and measure defects, exact local binding, conserved finite charge, normalized profile preservation and fail-closed support gates"
+    },
+    "tests/reference/test_rfn1b2o_phase_energy_current_source_binding.py": {
+      "claim_id": "RFC.N1B2O.MATTER_SOURCE_FACTORIZATION",
+      "claim_source": "formalism/DEPENDENCY_GRAPH.md",
+      "binding_evidence": "the source-owned test directly checks the local phase-energy/current source factorization, rho=energy/c^2 typing, nonuniform-cell integration, common-rate reduction and separation of extra energy sectors"
+    },
+    "tests/reference/test_rfn1b2p_charge_projected_em_current_intertwiner.py": {
+      "claim_id": "RFC.N1B2P.MAXWELL_INTERTWINER",
+      "claim_source": "formalism/DEPENDENCY_GRAPH.md",
+      "binding_evidence": "the source-owned test directly checks the charge-projected RFC-to-Maxwell current intertwiner, charge sign and scale response, neutral sector, multiplet resolution, gauge-compatible transport and fail-closed dimensional gates"
+    },
+    "tests/reference/test_rfe4_phase_kinetic_stress_energy_firewall.py": {
+      "claim_id": "RFC.E4.PHASE_STRESS_ENERGY",
+      "claim_source": "formalism/DEPENDENCY_GRAPH.md",
+      "binding_evidence": "the source-owned test directly checks phase-kinetic stress-energy, energy-pressure typing, active-source response, dust condition and the Newton-target firewall"
+    },
+    "tests/reference/test_rfe5_onshell_scalar_carrier_energy.py": {
+      "claim_id": "RFC.E5.CARRIER_ENERGY",
+      "claim_source": "formalism/DEPENDENCY_GRAPH.md",
+      "binding_evidence": "the source-owned test directly checks the on-shell harmonic scalar condition, pressureless massive limit and the exact factor-two distinction between phase kinetic and total energy per Noether charge"
+    },
+    "tests/reference/test_rfe6_lorentzian_matter_action_source_bookkeeping.py": {
+      "claim_id": "RFC.E6.LORENTZIAN_ACTION",
+      "claim_source": "formalism/DEPENDENCY_GRAPH.md",
+      "binding_evidence": "the source-owned test directly checks the mostly-plus Lorentzian matter action, gauge-covariant charge current, Maxwell source normalization, source bookkeeping, energy-pressure transfer and fail-closed hbar gates"
+    },
+    "tests/reference/test_rfe7_total_scalar_stress_energy_composition.py": {
+      "claim_id": "RFC.E7.SCALAR_T_DECOMPOSITION",
+      "claim_source": "formalism/DEPENDENCY_GRAPH.md",
+      "binding_evidence": "the source-owned test module checks exact polar kinetic decomposition, total scalar stress-energy recomposition, gauge invariance, homogeneous E4/E5 limits, neutral gravitational sourcing and exact Einstein source ledger composition",
+      "test_claim_overrides": {
+        "test_einstein_source_ledger_is_exact_tensor_sum": {
+          "claim_id": "RFC.MATTER.SCALAR_TMN",
+          "claim_source": "closure/einstein/RF_E7_TOTAL_SCALAR_STRESS_ENERGY_COMPOSITION.md",
+          "binding_evidence": "RF-E7 section 9 closes the admitted single-complex-scalar total matter tensor and section 10 defines the Einstein source ledger; this exact test checks the total Einstein source tensor ledger as EM plus scalar-total"
+        }
+      }
+    },
+    "tests/reference/test_rfl1_oriented_holonomy_identities.py": {
+      "claim_id": "RFC.L1.LAMBDA_TARGET",
+      "claim_source": "formalism/RFL1_RELATIONAL_LAMBDA_ORIENTED_HOLONOMY.md",
+      "binding_evidence": "the source-owned test directly checks Lambda-to-energy dimensional closure, support-volume energy closure, half-angle channel partition, cosine imbalance, oriented complex magnitude and orientation reversal"
+    },
+    "tests/reference/test_rfl2_dynamic_lambda0_action_stability.py": {
+      "claim_id": "RFC.L2.LAMBDA_ACTION_STABILITY",
+      "claim_source": "closure/lambda0/RF_L2_DYNAMIC_LAMBDA0_ACTION_REALIZABILITY_STABILITY.md",
+      "binding_evidence": "the source-owned test directly checks scalar stress decomposition, dynamic Lambda0 action coordinate, homogeneous equation of state, Bianchi transfer, on-shell energy conservation, anisotropic kinetic stress and stability classification"
+    },
+    "tests/reference/test_rfl3_information_scalar_potential_reconstruction.py": {
+      "claim_id": "RFC.L3.INFORMATION_SCALAR_POTENTIAL",
+      "claim_source": "closure/lambda0/RF_L3_INFORMATION_SCALAR_POTENTIAL_RECONSTRUCTION.md",
+      "binding_evidence": "the source-owned test directly checks exact information-scalar potential reconstruction, Lambda0 roundtrip, derivative and stability pullbacks, degenerate coupling behavior and holonomy-coordinate preservation"
+    },
+    "tests/reference/test_rfl4_information_curvature_canonical_pullback.py": {
+      "claim_id": "RFC.L4.INFORMATION_CURVATURE_PULLBACK",
+      "claim_source": "closure/lambda0/RF_L4_INFORMATION_CURVATURE_CANONICAL_PULLBACK.md",
+      "binding_evidence": "the source-owned test directly checks Xi-to-phi canonical pullback, baseline-shift preservation of Lambda0, quadratic mass parameterization, kinetic Jacobian, Bianchi chart equivalence and Bloch-sphere specialization"
+    },
+    "tests/reference/test_rfl4a_shannon_fisher_local_normalization.py": {
+      "claim_id": "RFC.L4A.SHANNON_FISHER_NORMALIZATION",
+      "claim_source": "closure/lambda0/RF_L4A_SHANNON_FISHER_LOCAL_NORMALIZATION.md",
+      "binding_evidence": "the source-owned test directly checks KL/Fisher Hessian structure, tangent first variation, quadratic Fisher normalization, cubic remainder scaling, beta=sqrt(2), local Xi metric, mass-alpha relation and Bianchi transfer"
+    },
+    "tests/reference/test_rfl5_shannon_onsager_klein_gordon_bridge.py": {
+      "claim_id": "RFC.L5.TEMPORAL_WAVE_KG_BRIDGE",
+      "claim_source": "closure/lambda0/RF_L5_SHANNON_ONSAGER_TEMPORAL_WAVE_KLEIN_GORDON_BRIDGE.md",
+      "binding_evidence": "the source-owned test directly checks Shannon-Onsager stiffness normalization, PSD/null structure, premetric gap, modal frequency, conservative/dissipative energy response and heterogeneous continuum dispersion"
+    },
+    "tests/reference/test_rfl5a_premetric_dimensional_calibration_firewall.py": {
+      "claim_id": "RFC.L5A.PREMETRIC_CALIBRATION",
+      "claim_source": "closure/lambda0/RF_L5A_PREMETRIC_DIMENSIONAL_CALIBRATION_FIREWALL.md",
+      "binding_evidence": "the source-owned test directly checks affine wave calibration, exact lightcone ratio, premetric-to-physical KG mass-frequency mapping, Gamma_t clock calibration, Gamma_x cell-width calibration and fail-closed dimensional gates"
+    },
+    "tests/reference/test_rfe8_adm_kinematic_assembly.py": {
+      "claim_id": "RFC.ADM.E8",
+      "claim_source": "formalism/DEPENDENCY_GRAPH.md"
+    },
+    "tests/reference/test_rfe9_extrinsic_curvature_geometry.py": {
+      "claim_id": "RFC.ADM.E9",
+      "claim_source": "formalism/DEPENDENCY_GRAPH.md"
+    },
+    "tests/reference/test_rfe10_gauss_codazzi_projections.py": {
+      "claim_id": "RFC.ADM.E10",
+      "claim_source": "formalism/DEPENDENCY_GRAPH.md"
+    },
+    "tests/reference/test_rfe11_matter_projection_source_typing.py": {
+      "claim_id": "RFC.ADM.E11",
+      "claim_source": "formalism/DEPENDENCY_GRAPH.md"
+    },
+    "tests/reference/test_rfe12_action_projected_constraints.py": {
+      "claim_id": "RFC.ADM.E12",
+      "claim_source": "formalism/DEPENDENCY_GRAPH.md"
+    },
+    "tests/reference/test_rfe13_constraint_propagation_bianchi.py": {
+      "claim_id": "RFC.ADM.E13",
+      "claim_source": "formalism/DEPENDENCY_GRAPH.md"
+    },
+    "tests/reference/test_rfe14_adm_directional_relative_entropy.py": {
+      "claim_id": "RFC.E14.DIRECTIONAL_RELATIVE_ENTROPY",
+      "claim_source": "closure/einstein/RF_E14_ADM_DIRECTIONAL_RELATIVE_ENTROPY_POTENTIAL.md"
+    },
+    "tests/reference/test_rfe15_information_legendre_hamiltonian.py": {
+      "claim_id": "RFC.E15.INFORMATION_LEGENDRE_HAMILTONIAN",
+      "claim_source": "closure/einstein/RF_E15_INFORMATION_LEGENDRE_HAMILTONIAN_AUDIT.md"
+    },
+    "tests/reference/test_rfe16_adm_shift_noether_phase_energy.py": {
+      "claim_id": "RFC.E16.SHIFT_NOETHER_FIREWALL",
+      "claim_source": "closure/einstein/RF_E16_ADM_SHIFT_NOETHER_PHASE_ENERGY_BINDING.md"
+    },
+    "tests/reference/test_rfe17_clock_information_scalar_action.py": {
+      "claim_id": "RFC.E17.CLOCK_INFORMATION_SCALAR_ACTION",
+      "claim_source": "closure/einstein/RF_E17_CLOCK_INFORMATION_SCALAR_ACTION_POTENTIAL.md"
+    },
+    "tests/reference/test_rfe18_adm_shift_velocity_gauge_firewall.py": {
+      "claim_id": "RFC.E18.PHYSICAL_VELOCITY_FIREWALL",
+      "claim_source": "closure/einstein/RF_E18_ADM_SHIFT_VELOCITY_GAUGE_FIREWALL.md"
+    },
+    "tests/reference/test_rfe19_noether_current_material_congruence.py": {
+      "claim_id": "RFC.E19.NOETHER_MATERIAL_CONGRUENCE",
+      "claim_source": "closure/einstein/RF_E19_NOETHER_CURRENT_MATERIAL_CONGRUENCE.md"
+    },
+    "tests/reference/test_rfe20_tetra_clock_mass_scale_closure.py": {
+      "claim_id": "RFC.E20.TETRA_CLOCK_MASS_SCALE",
+      "claim_source": "closure/einstein/RF_E20_TETRA_CLOCK_MASS_SCALE_CLOSURE.md",
+      "validation_receipt": "validation/RF_E20_TETRA_CLOCK_MASS_SCALE_CLOSURE_V0_1.json"
+    }
+  },
+  "authority": {
+    "binding_owner": "Relational-Field-Closure",
+    "fpdg_consumes_as_evidence": true,
+    "claim_promotion_authority": false,
+    "candidate_generation_authority": false
+  }
+}
