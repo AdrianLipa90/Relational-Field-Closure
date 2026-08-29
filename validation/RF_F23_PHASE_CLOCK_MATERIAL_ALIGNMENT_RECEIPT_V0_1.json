@@ -4,7 +4,14 @@
   "title": "Phase-Clock Material-Congruence Independent Alignment Receipt",
   "stack_parent": "24ff4dcbde9b5b069664f158da2661556da748fd",
   "implementation_head": "9c2b764f079c6a67aabed6289606be5a16c9a89f",
-  "status": "REFERENCE_IMPLEMENTED_AWAITING_CI",
+  "validated_head": "241843acf8cc009d7f76a7cdb529d5615fea543a",
+  "status": "REFERENCE_SUITE_PASS",
+  "hosted_ci": {
+    "workflow": "RFC reference suite",
+    "run_number": 357,
+    "run_id": 33274038336,
+    "conclusion": "success"
+  },
   "reference_module": "src/rfc/phase_clock_material_alignment_receipt.py",
   "reference_tests": "tests/reference/test_rff23_phase_clock_material_alignment_receipt.py",
   "exact_targets": [
