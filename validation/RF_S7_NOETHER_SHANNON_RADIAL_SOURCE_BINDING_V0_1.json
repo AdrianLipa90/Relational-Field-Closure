@@ -1,0 +1,56 @@
+{
+  "schema": "RFC_VALIDATION_RECEIPT_V0_1",
+  "gate": "RF-S7",
+  "title": "Noether-Shannon Radial Source-Binding Gate",
+  "status": "HOSTED_REFERENCE_PASS",
+  "parent_rfc_main": "466d364f3d903215b94e2ba66e1fd1fac23e7a30",
+  "source_idt_main": "ed902458b6e0ad338ca4ba637d8d8228bc7c549b",
+  "parents": [
+    "IDT 01C Shannon relative information",
+    "IDT 01K temporal information curvature",
+    "RF-L4 baseline-resolved information scalar",
+    "RF-L4A local Shannon-Fisher normalization",
+    "RF-S4 radial information/matter action reclassification",
+    "RF-S5 Noether amplitude reconstruction"
+  ],
+  "exact_identities": [
+    "J_pi = sum_a p_a ln(p_a/pi_a)",
+    "barXi_I = (J_pi - Xi_star A_rel)/A_rel",
+    "A_N^2 = j_vartheta/(2 r_s)",
+    "R_NS = A_rel j_vartheta - 2 r_s (J_pi - Xi_star A_rel)",
+    "R_NS=0 iff A_N^2=barXi_I",
+    "Delta_NS = abs(A_N^2-barXi_I)/(A_N^2+barXi_I)",
+    "Xi_star=0 -> A_rel j_vartheta = 2 r_s J_pi on zero defect"
+  ],
+  "local_fisher_limit": [
+    "J_pi = (1/2) s_F^2 + O(||delta p||^3)",
+    "barXi_I^(2) = s_F^2/(2 A_star)",
+    "R_F^(2) = A_star j_vartheta - r_s s_F^2"
+  ],
+  "promotion_surface": [
+    "shared support/cell/baseline ledger admitted",
+    "Delta_NS = 0",
+    "RF-S4 Delta_AXi = 0 consequence",
+    "RF-S4 m_Psi=m_I consequence",
+    "RF-S3 rho_omega=1 consequence"
+  ],
+  "separate_downstream_gates": [
+    "PHYSICAL_RADIAL_ZERO_DEFECT_DATA",
+    "RADIAL_BINDING_DYNAMICAL_TRANSPORT",
+    "CLOCK_RADIAL_ACTION_COMPOSITION",
+    "CLOCK_ALPHA_BINDING",
+    "TIR_RFC_CELL_SOURCE_BINDING",
+    "TRANSLATIONAL_OBSERVABLE",
+    "DIRECTIONAL_CUBIC_TEST",
+    "GENERAL_MATTER_MULTIPLET",
+    "GLOBAL_INFORMATION_GEODESIC_EXTENSION"
+  ],
+  "reference_implementation": "src/rfc/noether_shannon_radial_source_binding.py",
+  "reference_tests": "tests/reference/test_rfs7_noether_shannon_radial_source_binding.py",
+  "hosted_ci": {
+    "workflow": "RFC reference suite",
+    "run": 266,
+    "conclusion": "SUCCESS",
+    "validated_head": "445a6acf4ef1f39132f2108c02e958bcbc91da79"
+  }
+}
