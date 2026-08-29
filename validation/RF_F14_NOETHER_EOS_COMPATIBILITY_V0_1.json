@@ -1,0 +1,29 @@
+{
+  "schema": "RFC_REFERENCE_VALIDATION_V0_1",
+  "gate": "RF-F14",
+  "title": "Noether Energy / Phase-Cell EOS Sector Compatibility Firewall",
+  "stack_parent": "a14da535354f30ad8b0b672713863a9734970328",
+  "status": "REFERENCE_IMPLEMENTED_AWAITING_CI",
+  "reference_module": "src/rfc/noether_eos_compatibility.py",
+  "reference_tests": "tests/reference/test_rff14_noether_eos_compatibility.py",
+  "exact_targets": [
+    "Noether-bound q0 has action type and epsilon_Q=P*omega/q0 has inverse-time type",
+    "pure normal phase kinetic branch has w=1 and P/q0=1/2",
+    "general isotropic-average microscopic w=(1-x/3-v)/(1+x+v)",
+    "microscopic radiation surface is x+2v=1",
+    "isotropic null branch has w=1/3 and P/q0=1",
+    "homogeneous V=K/2 radiation completion has w=1/3 and P/q0=3/4",
+    "homogeneous RF-E5 dust has w=0 and total-energy P/q0=1",
+    "RF-F8 phase-cell prefactor slope requirement is 3w-1",
+    "constant prefactor gives effective phase-cell w=1/3",
+    "nonzero phase current has strictly positive rho+p",
+    "metric-proportional potential vacuum lies on the zero-phase-current boundary"
+  ],
+  "promotion_inputs": [
+    "zero-defect physical RF-N1B2K current/measure binding",
+    "common microscopic-to-phase-cell transport receipt",
+    "multispecies/additional matter composition",
+    "absolute project-side kappa_E/G promotion"
+  ],
+  "main_merge": "NOT_PERFORMED"
+}
