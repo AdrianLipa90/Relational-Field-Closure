@@ -2,7 +2,7 @@
   "schema": "RFC_VALIDATION_RECEIPT_V0_1",
   "gate": "RF-S9",
   "title": "Common Projective-Cell Area Binding",
-  "status": "REFERENCE_CANDIDATE_PENDING_HOSTED_CI",
+  "status": "HOSTED_REFERENCE_PASS",
   "stack_parent": "RF-S8",
   "stack_parent_head": "01c178ab7aff77f8328aaa9c8703dac72c7eac91",
   "parents": [
@@ -43,7 +43,8 @@
   "reference_tests": "tests/reference/test_rfs9_common_projective_cell_area_binding.py",
   "hosted_ci": {
     "workflow": "RFC reference suite",
-    "run": null,
-    "conclusion": "PENDING"
+    "run": 271,
+    "conclusion": "SUCCESS",
+    "validated_head": "697899269bbe2500e7c0b39e0708bfb5980e3ded"
   }
 }
