@@ -1,0 +1,150 @@
+{
+  "schema": "RFC_STACKED_DEPENDENCY_EXPORT_V0_1",
+  "repository": "AdrianLipa90/Relational-Field-Closure",
+  "status": "STACKED_REFERENCE_FRONTIER_NONCANONICAL",
+  "canonical_main_anchor": "58655c7fe9d25d09c13545965e951f171316e6b2",
+  "canonical_dependency_export_source_commit": "45659a5fbbcd0faa06ab2a7d8a81d1eb7215d4c0",
+  "stack_tip_before_sidecar": "60c6708564083233f9579b30946673ba0c2e1c4e",
+  "canonical_export_mutated": false,
+  "main_mutated": false,
+  "nodes": [
+    {
+      "gate": "RF-F13",
+      "role": "VARIATIONAL_COMMON_ACTION",
+      "pr": 68,
+      "branch": "feat/rff13-variational-integrability-common-action-v0.1",
+      "branch_head": "a14da535354f30ad8b0b672713863a9734970328",
+      "validated_head": "45659a5fbbcd0faa06ab2a7d8a81d1eb7215d4c0",
+      "validation": "SUITE_321_SUCCESS"
+    },
+    {
+      "gate": "RF-F14",
+      "role": "NOETHER_EOS_COMPATIBILITY",
+      "pr": 69,
+      "branch": "feat/rff14-noether-eos-compatibility-v0.1",
+      "branch_head": "a46315fa118da4343dd4d0310b2b6c69df6769e1",
+      "validated_head": "a46315fa118da4343dd4d0310b2b6c69df6769e1",
+      "validation": "SUITE_324_SUCCESS"
+    },
+    {
+      "gate": "RF-F15",
+      "role": "MICROSCOPIC_PHASE_CELL_TRANSPORT",
+      "pr": 71,
+      "branch": "feat/rff15-microscopic-phase-cell-transport-v0.1",
+      "branch_head": "c3f7570827836e5ec071e88c72c3fc6408849dc6",
+      "validated_head": "c3f7570827836e5ec071e88c72c3fc6408849dc6",
+      "validation": "SUITE_326_SUCCESS"
+    },
+    {
+      "gate": "RF-F16",
+      "role": "VACUUM_SPLIT_DYNAMIC_LAMBDA_COMMON_ACTION",
+      "pr": 72,
+      "branch": "feat/rff16-vacuum-split-common-action-v0.1",
+      "branch_head": "42f1d7e0bb2d4c208338bac9a77cec37e36bfcf0",
+      "validated_head": "abe796f561b5235a7ba0233c3233b0fa4b081abc",
+      "validation": "SUITE_330_SUCCESS"
+    },
+    {
+      "gate": "RF-F17",
+      "role": "STATE_DEPENDENT_EXCHANGE_PROJECTOR",
+      "pr": 73,
+      "branch": "feat/rff17-state-dependent-exchange-projector-v0.1",
+      "branch_head": "110da304b83616fef5962413bcb21d4b59869c0b",
+      "validated_head": "f88012118a3209785a548cdc3771821a34b47ad1",
+      "validation": "SUITE_332_SUCCESS"
+    },
+    {
+      "gate": "RF-F18",
+      "role": "IDT_PHASE_CLOCK_PROJECTOR_BINDING",
+      "pr": 74,
+      "branch": "feat/rff18-idt-phase-clock-projector-binding-v0.1",
+      "branch_head": "5705717e94293bba3b39719dde108eec2a3dbda8",
+      "validated_head": "f0d7d74ee3ce2a4c8a29b55faee43dc733bdab1a",
+      "validation": "SUITE_340_SUCCESS"
+    },
+    {
+      "gate": "RF-F19",
+      "role": "INDEPENDENT_ROTOR_LAPSE_PHASE_SCALE",
+      "pr": 75,
+      "branch": "feat/rff19-independent-rotor-lapse-calibration-v0.1",
+      "branch_head": "4c52bb17be0093661f20baf4e358348dcda4db25",
+      "validated_head": "c326b0ebbad2c180cfdde5ac11c157bd36d2c801",
+      "validation": "SUITE_344_SUCCESS"
+    },
+    {
+      "gate": "RF-F20",
+      "role": "ABE_EULER_OFFSHELL_METRIC_RESPONSE",
+      "pr": 76,
+      "branch": "feat/rff20-abe-euler-metric-response-v0.1",
+      "branch_head": "e537b81df0dae5d4b455e46090c61c7e4e8380b5",
+      "validated_head": "f4f22d2f77ef337768fef7ee55b185268b803dd3",
+      "validation": "SUITE_351_SUCCESS"
+    },
+    {
+      "gate": "RF-F21",
+      "role": "IDT_RFC_INDEPENDENT_RATE_RECEIPT",
+      "pr": 77,
+      "branch": "feat/rff21-idt-rfc-independent-rate-receipt-v0.1",
+      "branch_head": "e28584e6253507c6b5672396794cf7f1636c5513",
+      "validated_head": "71a7c1217533d4650f782d5ae01d5140c6cba98a",
+      "validation": "SUITE_353_SUCCESS"
+    },
+    {
+      "gate": "RF-F22",
+      "role": "TOTAL_EINSTEIN_SOURCE_ASSEMBLY",
+      "pr": 78,
+      "branch": "feat/rff22-total-einstein-source-assembly-v0.1",
+      "branch_head": "24ff4dcbde9b5b069664f158da2661556da748fd",
+      "validated_head": "f3d7f504aa71d368b190502b85edab450558e2ab",
+      "validation": "SUITE_355_SUCCESS"
+    },
+    {
+      "gate": "RF-F23",
+      "role": "PHASE_CLOCK_MATERIAL_ALIGNMENT_RECEIPT",
+      "pr": 79,
+      "branch": "feat/rff23-phase-clock-material-alignment-receipt-v0.1",
+      "branch_head_before_sidecar": "60c6708564083233f9579b30946673ba0c2e1c4e",
+      "validated_head": "241843acf8cc009d7f76a7cdb529d5615fea543a",
+      "validation": "SUITE_357_SUCCESS"
+    }
+  ],
+  "edges": [
+    ["RF-F13", "RF-F14"],
+    ["RF-F14", "RF-F15"],
+    ["RF-F15", "RF-F16"],
+    ["RF-F16", "RF-F17"],
+    ["RF-F17", "RF-F18"],
+    ["RF-F18", "RF-F19"],
+    ["RF-F19", "RF-F20"],
+    ["RF-F20", "RF-F21"],
+    ["RF-F21", "RF-F22"],
+    ["RF-F22", "RF-F23"]
+  ],
+  "cross_edges": [
+    ["RF-F13", "RF-L2"],
+    ["RF-F13", "RF-E13"],
+    ["RF-F14", "RF-N1B2K"],
+    ["RF-F15", "RF-F8"],
+    ["RF-F15", "RF-F12"],
+    ["RF-F18", "IDT-01AC"],
+    ["RF-F18", "IDT-01AD"],
+    ["RF-F21", "IDT-01AC"],
+    ["RF-F21", "IDT-01AD"],
+    ["RF-F23", "RF-E19"]
+  ],
+  "frontier": {
+    "formal_action_level_einstein_source_assembly": "PASS",
+    "reference_phase_clock_material_alignment_contract": "PASS",
+    "physical_source_promotion": "CONDITIONAL_RECEIPT_GATED"
+  },
+  "promotion_inputs": [
+    "RF-N1B2K realized current/measure receipt",
+    "realized ABE off-shell response R_mn",
+    "realized rotor/lapse scale response S_mn^(vartheta)",
+    "realized IDT-RFC independent field/rotor rate receipt",
+    "realized phase-clock/material-current alignment receipt",
+    "physical f(C) and eta selection",
+    "physical kappa_E/G universality promotion"
+  ],
+  "promotion_rule": "Merge RFC stack only on explicit authorization; then regenerate canonical DEPENDENCY_EXPORT.json against exact post-merge main and lock source/export freshness before FPDG promotion."
+}
