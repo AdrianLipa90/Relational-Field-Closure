@@ -74,8 +74,7 @@ u^{(\vartheta)}_\mu:=\frac{q_\mu}{\mu_\vartheta}.}
 Then
 
 \[
-\boxed{
-u^{(\vartheta)}_\mu u_{(\vartheta)}^\mu=-1.}
+\boxed{u^{(\vartheta)}_\mu u_{(\vartheta)}^\mu=-1.}
 \]
 
 The projector is gauge invariant because `q_mu` is gauge invariant and `mu_vartheta` is a gauge-scalar calibration input.
@@ -114,7 +113,7 @@ as an off-shell identity and therefore
 }
 \]
 
-That surface produces no RF-F17 state-dependent projector stress. The independent phase-clock calibration is therefore an exact integrability condition for a nontrivial realization.
+That surface produces zero RF-F17 state-dependent projector stress. The independent phase-clock calibration is therefore an exact integrability condition for a nontrivial realization.
 
 IDT 05D supplies the dimensionless relative-information clock potential `Phi(N_R)` and delegates physical action/Hamiltonian/energy scaling downstream. IDT 01AD supplies the reference-clock calibration into physical elapsed time. RF-F18 consequently leaves `mu_vartheta` as an explicit downstream phase-rate calibration coordinate rather than constructing it from the same metric norm being varied.
 
@@ -122,7 +121,7 @@ IDT 05D supplies the dimensionless relative-information clock potential `Phi(N_R
 
 ## 3. Metric-response ledger for the ABE connection
 
-The simple frozen-one-form variation is valid only on a surface where `q_mu` is held independent in the metric variation.
+The simple frozen-one-form variation is valid on a surface where `q_mu` is held independent in the metric variation.
 
 Define the possible connection/one-form metric-response contraction
 
