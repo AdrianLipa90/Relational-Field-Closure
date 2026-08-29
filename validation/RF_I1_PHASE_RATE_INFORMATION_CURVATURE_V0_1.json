@@ -1,0 +1,46 @@
+{
+  "schema": "RFC_RF_I1_PHASE_RATE_INFORMATION_CURVATURE_V0_1",
+  "status": "CANDIDATE_PENDING_HOSTED_REFERENCE_SUITE",
+  "parents": {
+    "RFC_RF_E16": "ADM shift / Noether phase-energy binding",
+    "RFC_RF_E17": "clock-information scalar action potential",
+    "RFC_RF_L3": "information-scalar potential reconstruction",
+    "IDT_01K": "temporal information curvature interface",
+    "IDT_05E": "clock-KL 01C refinement completion",
+    "IDT_05F": "maximum-entropy positive-rate information embedding",
+    "IDT_MAIN_PIN": "feb8c92ffb8605c0057a29356c9e1da9c09b8d47"
+  },
+  "source": {
+    "directional_rate": "r_s=r_n^(s)>0",
+    "reference_rate": "r_0>0",
+    "R_s": "r_s/r_0",
+    "x_s": "r_0/r_s"
+  },
+  "information_binding": {
+    "J_phase": "D_KL(E_rate(r_s)||E_rate(r_0))=Phi(x_s)",
+    "Phi": "x-1-ln(x)",
+    "01c_lineage": "IDT 05E refinement completion",
+    "01k_numerator_type": "PASS_CANDIDATE",
+    "requires_x_s_equals_activity_lapse": false,
+    "requires_physical_exponential_dwell_law": false
+  },
+  "curvature_binding": {
+    "Xi_phase": "J_phase/A_rel",
+    "dimension": "L^-2",
+    "constant_cell": "Xi_phase=(Phi(x_s)/a_FS)(r_0/c)^2 when omega_P=r_0"
+  },
+  "action_route": {
+    "U_clock": "(alpha_clock/kappa_E) Xi_phase",
+    "homogeneous_H": "E_star Phi(x_s)",
+    "E_star": "(alpha_clock/kappa_E)(V_cell/A_rel)",
+    "scale_owner": "RF-S1"
+  },
+  "promotion": {
+    "CLOCK_KL_TO_XI_INFORMATION_SOURCE_BINDING": "PASS_CANDIDATE",
+    "PHYSICAL_PROJECTIVE_CELL_SELECTION": "OPEN",
+    "ALPHA_CLOCK_CALIBRATION": "OPEN",
+    "TIMELIKE_MATTER_FLOW_DOMAIN": "OPEN_CONDITIONAL_RF_E19",
+    "TRANSLATIONAL_OBSERVABLE_SELECTION": "OPEN",
+    "DIRECTIONAL_DISPERSION_TEST": "OPEN"
+  }
+}
