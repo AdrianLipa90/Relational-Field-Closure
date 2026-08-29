@@ -1,8 +1,8 @@
 # RF-S1 — Tetra / Phase-Clock Mass-Scale Closure
 
-Status: `EXACT_SCALE_COMPOSITION / TIR_PR_104_PARENT_PROMOTED / NOETHER_FLOW_SOURCE_AVAILABLE_CONDITIONAL / PHYSICAL_MASS_BINDINGS_OPEN`
+Status: `EXACT_SCALE_COMPOSITION / TIR_SHAPE_CLASS_PROMOTED / RF_I1_INFORMATION_SOURCE_PROMOTED / NOETHER_FLOW_SOURCE_AVAILABLE_CONDITIONAL / PHYSICAL_MASS_BINDINGS_OPEN`
 
-RF-S1 is the first dedicated scale-closure gate. It consumes the RF-E17 clock-information action scale, the promoted RF-E18 velocity-gauge firewall, the promoted RF-E19 future-timelike Noether-current material congruence, the RF-L4A Shannon-Fisher mass coordinate, the IDT phase-clock length, and the TIR PR #104 tetrahedral FS/spatial shape crosswalk.
+RF-S1 is the first dedicated scale-closure gate. It consumes the RF-E17 clock-information action scale, the promoted RF-E18 velocity-gauge firewall, the promoted RF-E19 future-timelike Noether-current material congruence, the RF-L4A Shannon-Fisher mass coordinate, the IDT phase-clock length, the RF-I1 phase-rate information-curvature source binding, and the promoted TIR tetrahedral FS/spatial shape-class crosswalk.
 
 The purpose is to replace a free energy prefactor by one explicit dimensionless relation among already typed coupling, spatial-scale, phase-scale and mass/energy coordinates.
 
@@ -37,9 +37,21 @@ x_s^{phys}=\frac1{1-s\beta_e},}
 
 where `beta_e=V_mu e^mu` is generated from a future-timelike RFC Noether flow on the admitted matter sector.
 
+RF-I1 supplies the promoted information-source chain
+
+\[
+\boxed{
+\mathcal J_{phase}^{(s)}=\Phi(x_s),
+\qquad
+\Xi_{phase}^{(s)}=\frac{\Phi(x_s)}{\mathcal A_{rel}},
+}
+\]
+
+so the clock/phase relative-information numerator is already admitted into the RF-L3/RF-E17 action route.
+
 ## 2. Tetrahedral dual-shape crosswalk
 
-TIR PR #104 derives on the shared tetrahedral Bloch realization
+TIR PR #104 derives on the tetrahedral Bloch realization
 
 \[
 \hat V_{\Delta^3}=\frac{8}{9\sqrt3},
@@ -56,6 +68,8 @@ C_{\Delta/FS}
 =\frac{8}{9\sqrt3\pi}.
 }
 \]
+
+TIR PR #105 subsequently promotes the common tetrahedral congruence class of the independently typed minimal spatial-isotropy frame and minimal symmetric qubit informational-completeness frame. Their common Gram matrix fixes the shape invariants used here up to the admitted orthogonal congruence class.
 
 Let `ell_s` be the physical conversion scale of the spatial Pauli/Bloch relation carrier and let
 
@@ -78,7 +92,7 @@ The shape crosswalk gives
 }
 \]
 
-The exact TIR parent was promoted after 7/7 hosted workflows: candidate head `ea4bfd74e803e00c27d14499d88d7f48b442310a`, TIR merge commit `267a6c2022237fcc49284788d7d25c0c3580ff68`.
+The exact TIR shape parent was promoted after 7/7 hosted workflows in PR #104 at merge commit `267a6c2022237fcc49284788d7d25c0c3580ff68`. The exact congruence-class closure was promoted after 7/7 hosted workflows in PR #105 at merge commit `ccc89fc04e1d85e9c6a60b7bb92e62a5d22d5f44`.
 
 ## 3. Coupling-ratio coordinate
 
@@ -182,6 +196,31 @@ r_\alpha q_s^3
 }
 \]
 
+RF-S2 refines the coordinate chart of this same equation by introducing
+
+\[
+\rho_\omega
+=\frac{|\omega_t^\varphi|}{\omega_t^{KG}},
+\qquad
+\zeta_s=m_I\ell_s,
+\]
+
+and proving
+
+\[
+\boxed{\mu_\varphi=\rho_\omega,}
+\qquad
+\boxed{q_s=\rho_\omega\zeta_s}
+\]
+
+in the RF-S1 natural-unit convention. Therefore the same target equation becomes
+
+\[
+\boxed{
+r_\alpha\rho_\omega^2\zeta_s^3
+=\frac{r_m}{C_{\Delta/FS}}.}
+\]
+
 ## 5. Two falsifiable specializations
 
 If the separately gated identifications
@@ -219,6 +258,27 @@ r_\alpha=\frac{9\sqrt3\pi}{8}\approx6.12157285429049.}
 
 Thus spatial/phase scale calibration and coupling calibration are experimentally distinguishable once either side is fixed independently.
 
+RF-S2 gives a more resolved spectral-match specialization. On
+
+\[
+\rho_\omega=1,
+\]
+
+one has
+
+\[
+\ell_\varphi=1/m_I,
+\qquad
+q_s=\zeta_s=m_I\ell_s,
+\]
+
+so the unit coupling/unit target surface predicts the same numerical value as a dimensionless spatial-mass target,
+
+\[
+\boxed{
+m_I\ell_s\approx1.82931154035502.}
+\]
+
 ## 6. Directional physical corollary
 
 RF-E19 supplies, on the future-timelike RFC Noether-current sector,
@@ -253,16 +313,17 @@ H_{clk}^{(-)}
 }
 \]
 
-The branch shape is inherited from the exact IDT 05D / RF-E14 relative-information construction. RF-S1 supplies the conditional scale closure only.
+The branch shape is inherited from the exact IDT 05D / RF-E14 relative-information construction. RF-S1 supplies the conditional scale closure.
 
 ## 7. Falsification ledger
 
 ```text
-TIR_SHARED_TETRA_CARRIER      PASS parent promoted from TIR PR #104
-CLOCK_KL_TO_XI                physical/source attribution remains gated
+TIR_TETRA_SHAPE_CLASS         PASS TIR PR #104 + PR #105
+CLOCK_KL_TO_XI                PASS RF-I1 promoted on RFC main
+RF_S2_RATIO_REDUCTION         q_s=rho_omega zeta_s; mu_phi=rho_omega
 ALPHA_RATIO                   r_alpha=alpha_clk/alpha_I open calibration
-SPATIAL_PHASE_SCALE           q_s=ell_s/ell_phi open calibration
-PHASE_MASS_RATIO              mu_phi=E_phi/m_I open calibration
+SPATIAL_MASS_COORDINATE       zeta_s=m_I ell_s open physical/continuum binding
+PHASE_KG_SPECTRAL_MATCH       rho_omega open independent spectral comparison
 TARGET_MASS_BINDING           r_m=m_target/m_I open physical binding
 NOETHER_FLOW_DOMAIN           RF-E19 future-timelike sector conditional
 OBSERVABLE_SELECTION          H_clk as translational kinetic observable open
@@ -276,3 +337,5 @@ A failed gate localizes the physical interpretation while preserving the exact u
 Reference implementation: `src/rfc/tetra_clock_mass_scale_closure.py`.
 Reference tests: `tests/reference/test_rfs1_tetra_clock_mass_scale_closure.py`.
 Validation receipt: `validation/RF_S1_TETRA_CLOCK_MASS_SCALE_CLOSURE_V0_1.json`.
+
+RF-S2 reduction authority: `closure/scale/RF_S2_LIGHTCONE_SPECTRAL_SCALE_REDUCTION.md`.
