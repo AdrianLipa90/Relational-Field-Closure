@@ -4,7 +4,14 @@
   "title": "Total Einstein Source Assembly and Bianchi Repartition",
   "stack_parent": "e28584e6253507c6b5672396794cf7f1636c5513",
   "implementation_head": "d958c8fdd4a62133ad4ba7af34772476111f8cc0",
-  "status": "REFERENCE_IMPLEMENTED_AWAITING_CI",
+  "validated_head": "f3d7f504aa71d368b190502b85edab450558e2ab",
+  "status": "REFERENCE_SUITE_PASS",
+  "hosted_ci": {
+    "workflow": "RFC reference suite",
+    "run_number": 355,
+    "run_id": 33273896718,
+    "conclusion": "success"
+  },
   "reference_module": "src/rfc/total_einstein_source_assembly.py",
   "reference_tests": "tests/reference/test_rff22_total_einstein_source_assembly.py",
   "exact_targets": [
