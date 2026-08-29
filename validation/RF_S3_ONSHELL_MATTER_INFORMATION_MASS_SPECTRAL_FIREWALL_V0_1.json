@@ -2,7 +2,7 @@
   "schema": "RFC_VALIDATION_RECEIPT_V0_1",
   "gate": "RF-S3",
   "title": "On-Shell Matter / Information Mass Spectral Firewall",
-  "status": "REFERENCE_CANDIDATE_PENDING_HOSTED_CI",
+  "status": "REFERENCE_PASS / HOSTED_CI_PASS",
   "parent_rfc_main": "70ea7eed254f07fbadc4c469e356e98c05a43c71",
   "source_idt_main": "ed902458b6e0ad338ca4ba637d8d8228bc7c549b",
   "parents": [
@@ -38,7 +38,9 @@
   "reference_tests": "tests/reference/test_rfs3_onshell_matter_information_mass_spectral_firewall.py",
   "hosted_ci": {
     "workflow": "RFC reference suite",
-    "run": null,
-    "conclusion": "PENDING"
-  }
+    "run": 256,
+    "tested_head": "4100b8dfaa1fa1ac16f7be88ceabf0752ee50b2a",
+    "conclusion": "SUCCESS"
+  },
+  "post_ci_delta": "receipt bookkeeping only; exact-head rerun required before merge"
 }
