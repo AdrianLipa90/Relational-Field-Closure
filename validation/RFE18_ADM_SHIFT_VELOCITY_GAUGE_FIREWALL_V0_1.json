@@ -1,0 +1,30 @@
+{
+  "schema": "RFC_RFE18_ADM_SHIFT_VELOCITY_GAUGE_FIREWALL_V0_1",
+  "status": "CANDIDATE_PENDING_HOSTED_REFERENCE_SUITE",
+  "parents": [
+    "RF-E8 ADM kinematic assembly",
+    "RF-E14 directional relative-information branches",
+    "RF-E17 clock-information scalar action route"
+  ],
+  "exact_identities": [
+    "V^i=(w^i+b^i)/N",
+    "b'^i=b^i-xi_dot^i",
+    "w'^i=w^i+xi_dot^i",
+    "w'^i+b'^i=w^i+b^i",
+    "local_1p1_null_coordinate_rates=-b+/-N",
+    "local_1p1_null_normal_relative_speeds=+/-1",
+    "material_adapted_w=0 => V=b/N"
+  ],
+  "firewall": {
+    "adm_shift_alone_physical_velocity": false,
+    "shift_only_phi_physical_observable": false,
+    "material_adapted_shift_velocity_binding": "CONDITIONAL",
+    "physical_directional_carrier": "x_s=1/(1-s beta_phys)"
+  },
+  "next_gates": [
+    "RFC_MATTER_CONGRUENCE_SOURCE_BINDING",
+    "RF_E17_TRANSLATIONAL_OBSERVABLE_BINDING",
+    "E_STAR_COUPLING_CELL_GEOMETRY_PROMOTION",
+    "RELATIVISTIC_DISPERSION_COMPARISON"
+  ]
+}
