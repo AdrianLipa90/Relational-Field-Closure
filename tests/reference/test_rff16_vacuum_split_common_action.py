@@ -2,7 +2,7 @@ import math
 
 import pytest
 
-from rfc.vacuum_split_common_action import (
+from src.rfc.vacuum_split_common_action import (
     VacuumSplitError,
     dynamic_lambda,
     effective_scalar_mass_sq,
