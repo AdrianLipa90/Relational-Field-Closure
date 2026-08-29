@@ -1,0 +1,38 @@
+{
+  "schema": "RFC_REFERENCE_VALIDATION_V0_1",
+  "gate": "RF-F24",
+  "title": "RF-N1B2K Current/Measure Realization Receipt",
+  "stack_parent": "bdc256cd57ae0895ebb088c59122f15df5870237",
+  "implementation_head": "b5315a84df46341385499b213c55abf393cffa2d",
+  "status": "REFERENCE_IMPLEMENTED_AWAITING_CI",
+  "reference_module": "src/rfc/current_measure_realization_receipt.py",
+  "reference_tests": "tests/reference/test_rff24_current_measure_realization_receipt.py",
+  "exact_targets": [
+    "Noether and RFC local currents remain separate inputs",
+    "Noether and RFC cell measures remain separate inputs",
+    "Delta_J and Delta_V remain separate coordinates",
+    "Delta_Sigma<=Delta_J+Delta_V is audited by a zero bound margin",
+    "integrated charge equality alone does not promote local current identity",
+    "normalized carrier profiles are independently compared",
+    "side flux is an independent conservation defect",
+    "slice normal-orientation semantic-measure and ordered-cell lineage are independently audited",
+    "optional RF-S16 occupation current is a third independently audited route",
+    "zero local current and measure defects imply Q_Sigma=Q_vartheta"
+  ],
+  "formal_parents": [
+    "RF-N1B2K Noether RFC conserved-current binding",
+    "RF-S16 occupation Noether current binding",
+    "RF-F21 independent IDT RFC phase-rate receipt",
+    "RF-F22 total Einstein source assembly",
+    "RF-F23 phase-clock material-congruence alignment receipt"
+  ],
+  "promotion_inputs": [
+    "realized-system Noether current density per ordered cell",
+    "realized-system RFC current density per ordered cell",
+    "realized-system independent cell measures",
+    "realized-system common slice orientation measure and ordered-cell lineage",
+    "realized-system side-flux or admitted boundary-condition receipt",
+    "optional independently sourced occupation and q0 route"
+  ],
+  "main_merge": "NOT_PERFORMED"
+}
