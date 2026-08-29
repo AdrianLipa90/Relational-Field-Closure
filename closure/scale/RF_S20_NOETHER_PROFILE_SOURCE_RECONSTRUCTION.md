@@ -1,10 +1,12 @@
-# RF-S18 — Noether-Profile Source Reconstruction
+# RF-S20 — Noether-Profile Source Reconstruction
 
 Status: `EXACT_PROFILE_TO_OCCUPATION_RECONSTRUCTION / Q0_FREE_LOCAL_SOURCE_MAP / CURRENT_SCALE_INVARIANT`
 
-RF-S18 is stacked on exact-green RF-S17. RF-N1B2K supplies a normalized conserved-current profile on a common slice and measure, RF-S16 proves equality of the conserved-current and occupation profiles on the admitted local binding surface, and RF-S17 proves that the source density is independent of the arbitrary positive carrier-unit normalization `q0`.
+Canonical ID: `RF-S20`. Historical pre-canonical label: `RF-S18` (profile branch).
 
-RF-S18 therefore reconstructs the local orbital occupation and the relational generator source directly from the Noether-current profile plus one independently supplied total occupation.
+RF-S20 branches from exact-green RF-S17. RF-N1B2K supplies a normalized conserved-current profile on a common slice and measure, RF-S16 proves equality of the conserved-current and occupation profiles on the admitted local binding surface, and RF-S17 proves that the source density is independent of the arbitrary positive carrier-unit normalization `q0`.
+
+RF-S20 reconstructs the local orbital occupation and the relational generator source directly from the Noether-current profile plus one independently supplied total occupation.
 
 ## 1. Noether-current profile
 
@@ -137,7 +139,7 @@ and therefore
 \boxed{\rho_{G,a}'=\rho_{G,a}.}
 \]
 
-This realizes RF-S17 invariance locally, without ever selecting an absolute carrier-charge convention.
+This realizes RF-S17 invariance locally, without selecting an absolute carrier-charge convention.
 
 ## 5. Integrated source energy
 
@@ -171,7 +173,7 @@ RF-S13 gives
 \mathcal S_{R,a}=\frac{\kappa_E}{2}\rho_{G,a}
 \]
 
-on the matter/Newton branch. Therefore RF-S18 yields
+on the matter/Newton branch. Therefore RF-S20 yields
 
 \[
 \boxed{
@@ -219,7 +221,7 @@ physical carrier-energy branch                                OPEN INPUT
 ## 9. Validation authority
 
 Reference implementation: `src/rfc/noether_profile_source_reconstruction.py`.
-Reference tests: `tests/reference/test_rfs18_noether_profile_source_reconstruction.py`.
-Validation receipt: `validation/RF_S18_NOETHER_PROFILE_SOURCE_RECONSTRUCTION_V0_1.json`.
+Reference tests: `tests/reference/test_rfs20_noether_profile_source_reconstruction.py`.
+Validation receipt: `validation/RF_S20_NOETHER_PROFILE_SOURCE_RECONSTRUCTION_V0_1.json`.
 
-Stack parent: RF-S17 exact-green head `34255471c3b56d8e21578bb212b27e5330d7d300`, RFC reference suite #283 SUCCESS.
+Historical implementation head: `f52a90a8d6c24cb4dde0cde742f2c58c34a73193`; RFC reference suite #286 SUCCESS. Canonicalization changes gate identity and file paths only; equations and executable implementation are unchanged.

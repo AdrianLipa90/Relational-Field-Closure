@@ -19,7 +19,6 @@ def test_extensive_hamiltonian_fixes_total_occupation_for_nonuniform_carrier_ene
     B = (2.0, 1.0, 4.0)
     omega = (5.0, 7.0, 3.0)
     phase = (0.2, 0.1, 0.4)
-
     out = close_source_from_noether_hamiltonian(H, j, volumes, B, omega, phase)
     mean = sum(out.noether_profile[i] * out.carrier_energies[i] for i in range(3))
     assert math.isclose(out.mean_carrier_energy, mean, rel_tol=1e-15)
@@ -44,7 +43,6 @@ def test_uniform_carrier_energy_source_is_H_over_Q_times_noether_current():
     B = (2.0, 2.0, 2.0)
     omega = (3.0, 3.0, 3.0)
     phase = (0.4, 0.4, 0.4)
-
     out = close_source_from_noether_hamiltonian(H, j, volumes, B, omega, phase)
     direct = hamiltonian_profile_density(H, j, volumes)
     assert all(math.isclose(a, b, rel_tol=1e-15, abs_tol=1e-15) for a, b in zip(out.source_energy_densities, direct))

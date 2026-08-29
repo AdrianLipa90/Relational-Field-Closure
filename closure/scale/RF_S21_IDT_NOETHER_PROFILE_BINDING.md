@@ -1,8 +1,10 @@
-# RF-S19 — IDT ↔ Noether Profile Source Binding
+# RF-S21 — IDT ↔ Noether Profile Source Binding
 
 Status: `EXACT_PROFILE_DEFECT / ZERO_DEFECT_SOURCE_EQUIVALENCE / PHYSICAL_STATE_BINDING_OPEN`
 
-RF-S19 is stacked on exact-green RF-S18. RF-S18 reconstructs the local relational-generator source from the normalized Noether-current profile plus total occupation. IDT independently supplies a normalized finite ensemble profile `p_a`. RF-S19 places those two normalized state descriptions on one explicit comparison surface.
+Canonical ID: `RF-S21`. Historical pre-canonical label: `RF-S19` (profile branch).
+
+RF-S21 is stacked on canonical RF-S20. RF-S20 reconstructs the local relational-generator source from the normalized Noether-current profile plus total occupation. IDT independently supplies a normalized finite ensemble profile `p_a`. RF-S21 places those two normalized state descriptions on one explicit comparison surface.
 
 ## 1. Two normalized profiles
 
@@ -14,7 +16,7 @@ Let
 
 be the IDT ensemble profile on an ordered finite cell ledger.
 
-For the same ordered cells and physical measure, RF-N1B2K/RF-S18 supplies
+For the same ordered cells and physical measure, RF-N1B2K/RF-S20 supplies
 
 \[
 \boxed{
@@ -53,7 +55,7 @@ and
 \boxed{H^2=0\iff p^{IDT}=p^\vartheta.}
 \]
 
-RF-S19 also records
+RF-S21 also records
 
 \[
 \boxed{
@@ -73,14 +75,14 @@ The executable zero-defect rule uses an explicitly supplied finite-precision tol
 
 ## 3. Source equivalence on the zero-defect surface
 
-RF-S18 gives, from the Noether profile,
+RF-S20 gives, from the Noether profile,
 
 \[
 \mathcal N_a
 =\mathcal N_{tot}p_a^\vartheta.
 \]
 
-If RF-S19 closes with
+If RF-S21 closes with
 
 \[
 \boxed{p_a^{IDT}=p_a^\vartheta,}
@@ -107,7 +109,7 @@ B_a\omega_a(\phi_a+\kappa),
 }
 \]
 
-This is identical to the RF-S18 Noether reconstruction on the zero-defect profile-binding surface.
+This is identical to the RF-S20 Noether reconstruction on the zero-defect profile-binding surface.
 
 ## 4. Current-normalization invariance
 
@@ -155,7 +157,7 @@ Hence the profile-binding defect has a direct source-level error bound rather th
 
 The Hellinger defect remains finite when one or more cell probabilities vanish. This avoids introducing a KL singularity solely for the cross-profile equality test. IDT's own relative-information/KL dynamics remain independently preserved in their existing gates.
 
-## 7. Source chain after RF-S19
+## 7. Source chain after RF-S21
 
 On a physical zero-defect receipt the source chain is
 
@@ -186,7 +188,7 @@ Noether normalized finite profile                            PASS PARENT TYPE
 Hellinger/L1/Linf defects                                    PASS EXACT
 zero defect iff normalized profiles agree                    PASS EXACT
 profile defects invariant under current normalization        PASS EXACT
-zero-defect IDT source = RF-S18 Noether source               PASS EXACT
+zero-defect IDT source = RF-S20 Noether source               PASS EXACT
 source-energy mismatch bounded by N_tot Emax D1              PASS EXACT
 physical IDT <-> Noether state-space identity                OPEN RECEIPT
 common ordered cell/support/measure identity                 OPEN PHYSICAL INPUT
@@ -196,7 +198,7 @@ physical total occupation N_tot                              OPEN INPUT
 ## 9. Validation authority
 
 Reference implementation: `src/rfc/idt_noether_profile_binding.py`.
-Reference tests: `tests/reference/test_rfs19_idt_noether_profile_binding.py`.
-Validation receipt: `validation/RF_S19_IDT_NOETHER_PROFILE_BINDING_V0_1.json`.
+Reference tests: `tests/reference/test_rfs21_idt_noether_profile_binding.py`.
+Validation receipt: `validation/RF_S21_IDT_NOETHER_PROFILE_BINDING_V0_1.json`.
 
-Stack parent: RF-S18 exact-green head `f52a90a8d6c24cb4dde0cde742f2c58c34a73193`, RFC reference suite #286 SUCCESS.
+Historical implementation head: `85d5897c46aa854cc4584073a6a139ee41971989`; RFC reference suite #287 SUCCESS. Canonicalization changes gate identity and file paths only; equations and executable implementation are unchanged.

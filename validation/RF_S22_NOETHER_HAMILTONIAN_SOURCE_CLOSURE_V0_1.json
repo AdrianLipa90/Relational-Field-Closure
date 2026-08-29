@@ -1,14 +1,15 @@
 {
-  "gate": "RF-S20",
+  "gate": "RF-S22",
+  "canonicalized_from": "RF-S20_PROFILE_BRANCH",
   "title": "Noether-Hamiltonian Extensive Source Closure",
   "version": "0.1",
-  "status": "REFERENCE_IMPLEMENTED_AWAITING_CI",
-  "stack_parent": {
-    "gate": "RF-S19",
-    "head": "85d5897c46aa854cc4584073a6a139ee41971989",
-    "reference_suite": 287,
+  "status": "REFERENCE_VALIDATED_PRE_CANONICALIZATION",
+  "origin": {
+    "head": "35a2439860bda2e30a3dcff1e60ac715794f8b43",
+    "reference_suite": 288,
     "conclusion": "success"
   },
+  "dependency_parent": "RF-S21",
   "exact_relations": [
     "p_a=V_a j_theta,a/Q_theta",
     "epsilon_a=B_a omega_a(phi_a+kappa)",

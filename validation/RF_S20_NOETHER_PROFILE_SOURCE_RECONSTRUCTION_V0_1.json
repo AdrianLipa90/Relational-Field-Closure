@@ -1,14 +1,15 @@
 {
-  "gate": "RF-S18",
+  "gate": "RF-S20",
+  "canonicalized_from": "RF-S18_PROFILE_BRANCH",
   "title": "Noether-Profile Source Reconstruction",
   "version": "0.1",
-  "status": "REFERENCE_IMPLEMENTED_AWAITING_CI",
-  "stack_parent": {
-    "gate": "RF-S17",
-    "head": "34255471c3b56d8e21578bb212b27e5330d7d300",
-    "reference_suite": 283,
+  "status": "REFERENCE_VALIDATED_PRE_CANONICALIZATION",
+  "origin": {
+    "head": "f52a90a8d6c24cb4dde0cde742f2c58c34a73193",
+    "reference_suite": 286,
     "conclusion": "success"
   },
+  "dependency_parent": "RF-S17",
   "exact_relations": [
     "Q_theta=sum_a V_a j_theta,a",
     "p_theta,a=V_a j_theta,a/Q_theta",

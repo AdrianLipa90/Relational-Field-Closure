@@ -40,10 +40,8 @@ def test_global_current_rescaling_leaves_occupation_and_source_density_invariant
     omega = (3.0, 4.0, 5.0, 6.0)
     phase = (0.2, 0.3, 0.4, 0.5)
     N_total = 17.0
-
     base = reconstruct_generator_source_from_noether_profile(j, volumes, N_total, B, omega, phase)
     scaled = reconstruct_generator_source_from_noether_profile(tuple(13.0 * x for x in j), volumes, N_total, B, omega, phase)
-
     assert all(math.isclose(a, b, rel_tol=1e-15, abs_tol=1e-15) for a, b in zip(base.profile, scaled.profile))
     assert all(math.isclose(a, b, rel_tol=1e-15, abs_tol=1e-15) for a, b in zip(base.occupations, scaled.occupations))
     assert all(math.isclose(a, b, rel_tol=1e-15, abs_tol=1e-15) for a, b in zip(base.source_energy_densities, scaled.source_energy_densities))
@@ -58,7 +56,6 @@ def test_reconstructed_source_matches_direct_orbital_generator_cellwise():
     B = (1.2, 2.3, 3.4)
     omega = (7.0, 8.0, 9.0)
     phase = (0.1, 0.2, 0.3)
-
     out = reconstruct_generator_source_from_noether_profile(j, volumes, N_total, B, omega, phase)
     for i in range(3):
         direct = (out.occupations[i] / volumes[i]) * B[i] * omega[i] * (phase[i] + KAPPA_INFO)
@@ -74,7 +71,6 @@ def test_uniform_carrier_energy_gives_total_energy_N_times_epsilon():
     B = (2.0, 2.0, 2.0)
     omega = (5.0, 5.0, 5.0)
     phase = (0.25, 0.25, 0.25)
-
     out = reconstruct_generator_source_from_noether_profile(j, volumes, N_total, B, omega, phase)
     epsilon = 2.0 * 5.0 * (0.25 + KAPPA_INFO)
     assert math.isclose(out.integrated_source_energy, N_total * epsilon, rel_tol=1e-15)

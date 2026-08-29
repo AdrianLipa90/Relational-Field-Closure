@@ -17,7 +17,6 @@ def test_zero_defect_when_idt_matches_noether_profile():
     charges = tuple(j[i] * volumes[i] for i in range(3))
     total = sum(charges)
     p = tuple(x / total for x in charges)
-
     out = compare_idt_noether_profiles(p, j, volumes)
     assert out.zero_defect
     assert out.hellinger_squared < 1e-15
@@ -56,10 +55,8 @@ def test_zero_defect_idt_source_matches_noether_reconstruction():
     B = (2.0, 3.0, 4.0)
     omega = (5.0, 6.0, 7.0)
     phase = (0.1, 0.2, 0.3)
-
     idt = reconstruct_source_from_idt_profile(p, volumes, N_total, B, omega, phase)
     noether = reconstruct_generator_source_from_noether_profile(j, volumes, N_total, B, omega, phase)
-
     assert all(math.isclose(a, b, rel_tol=1e-15, abs_tol=1e-15) for a, b in zip(idt.occupations, noether.occupations))
     assert all(math.isclose(a, b, rel_tol=1e-15, abs_tol=1e-15) for a, b in zip(idt.source_energy_densities, noether.source_energy_densities))
     assert math.isclose(idt.integrated_source_energy, noether.integrated_source_energy, rel_tol=1e-15)
@@ -72,7 +69,6 @@ def test_l1_source_mismatch_bound_is_respected():
     N_total = 7.0
     E = (2.0, -1.0, 3.0)
     Emax = max(abs(x) for x in E)
-
     q = tuple(j[i] / sum(j) for i in range(3))
     actual = abs(N_total * sum(E[i] * (p[i] - q[i]) for i in range(3)))
     bound = source_profile_mismatch_bound(p, j, volumes, N_total, Emax)

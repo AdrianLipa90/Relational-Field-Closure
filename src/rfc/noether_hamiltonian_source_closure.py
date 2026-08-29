@@ -51,7 +51,7 @@ def close_source_from_noether_hamiltonian(
     """Close total occupation by matching the generator to an extensive Hamiltonian.
 
     RF-N1B2K supplies the finite Noether charge/current profile and downstream
-    epsilon=H/Q. RF-S18/S19 supply the occupation-profile source form. For
+    epsilon=H/Q. RF-S20/RF-S21 supply the occupation-profile source form. For
     local per-occupation energies epsilon_a=B_a*omega_a*(phi_a+kappa), define
 
         epsilon_bar = sum_a p_a epsilon_a.

@@ -1,10 +1,12 @@
-# RF-S20 — Noether-Hamiltonian Extensive Source Closure
+# RF-S22 — Noether-Hamiltonian Extensive Source Closure
 
 Status: `EXTENSIVE_SOURCE_AMOUNT_CLOSED_CONDITIONAL / TOTAL_OCCUPATION_INFERRED / Q0_FREE`
 
-RF-S20 is stacked on exact-green RF-S19. RF-N1B2K already carries the finite Euler–Noether charge `Q_theta` and Hamiltonian `H_Phi^EB`, with downstream energy-per-charge coordinate `epsilon_Q=H_Phi^EB/Q_theta`. RF-S18/RF-S19 reconstruct source shape from the normalized Noether/IDT profile but still carry an independently supplied total occupation `N_tot`.
+Canonical ID: `RF-S22`. Historical pre-canonical label: `RF-S20` (profile branch).
 
-RF-S20 removes that remaining extensive occupation input on the positive-generator branch by imposing equality of the integrated relational-generator source and the already available extensive Hamiltonian.
+RF-S22 is stacked on canonical RF-S21. RF-N1B2K already carries the finite Euler–Noether charge `Q_theta` and Hamiltonian `H_Phi^EB`, with downstream energy-per-charge coordinate `epsilon_Q=H_Phi^EB/Q_theta`. RF-S20/RF-S21 reconstruct source shape from the normalized Noether/IDT profile but still carry an independently supplied total occupation `N_tot`.
+
+RF-S22 removes that remaining extensive occupation input on the positive-generator branch by imposing equality of the integrated relational-generator source and the already available extensive Hamiltonian.
 
 ## 1. Normalized source profile
 
@@ -18,7 +20,7 @@ Q_\vartheta=\sum_aV_aj_{\vartheta,a}>0,
 \sum_ap_a=1.
 \]
 
-RF-S19 may additionally identify this profile with the IDT ensemble profile on a separately measured zero-defect state-binding surface.
+RF-S21 may additionally identify this profile with the IDT ensemble profile on a separately measured zero-defect state-binding surface.
 
 ## 2. Local generator energy
 
@@ -48,7 +50,7 @@ On the positive-source branch require
 
 ## 3. Extensive matching closes total occupation
 
-RF-S18 gives
+RF-S20 gives
 
 \[
 E_G=\sum_a\mathcal N_a\epsilon_a
@@ -153,7 +155,7 @@ Q_\vartheta\mapsto\lambda Q_\vartheta,
 
 the profile `p_a` is unchanged. Therefore `bar epsilon`, inferred `N_tot`, and every `rho_G,a` remain unchanged.
 
-RF-S20 is consequently independent of the arbitrary carrier-charge normalization already removed by RF-S17.
+RF-S22 is consequently independent of the arbitrary carrier-charge normalization already removed by RF-S17.
 
 ## 7. Newton/Einstein source
 
@@ -185,7 +187,7 @@ physical carrier-energy branch                         OPEN INPUT
 ## 9. Validation authority
 
 Reference implementation: `src/rfc/noether_hamiltonian_source_closure.py`.
-Reference tests: `tests/reference/test_rfs20_noether_hamiltonian_source_closure.py`.
-Validation receipt: `validation/RF_S20_NOETHER_HAMILTONIAN_SOURCE_CLOSURE_V0_1.json`.
+Reference tests: `tests/reference/test_rfs22_noether_hamiltonian_source_closure.py`.
+Validation receipt: `validation/RF_S22_NOETHER_HAMILTONIAN_SOURCE_CLOSURE_V0_1.json`.
 
-Stack parent: RF-S19 exact-green head `85d5897c46aa854cc4584073a6a139ee41971989`, RFC reference suite #287 SUCCESS.
+Historical implementation head: `35a2439860bda2e30a3dcff1e60ac715794f8b43`; RFC reference suite #288 SUCCESS. Canonicalization changes gate identity, references and file paths only; equations and executable implementation are unchanged.
