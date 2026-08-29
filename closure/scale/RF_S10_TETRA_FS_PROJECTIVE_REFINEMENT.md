@@ -2,7 +2,7 @@
 
 Status: `EXACT_TETRA_FS_REFINEMENT / DISCRETE_PROJECTIVE_SCOPE_REDUCTION / IDT_01K_AREA_SPECIALIZATION / PHYSICAL_SCOPE_SELECTION_OPEN`
 
-RF-S10 is stacked on RF-S9. It consumes only the exact projective geometry exported by TIR's tetrahedral Fubini–Study crosswalk and the IDT 01K phase-clock area map.
+RF-S10 is stacked on RF-S9. It consumes the exact projective geometry exported by TIR's tetrahedral Fubini–Study crosswalk and the IDT 01K phase-clock area map.
 
 TIR source pinned for this gate:
 
@@ -11,7 +11,7 @@ TIR source pinned for this gate:
 Source theorem:
 `TIR/integration/TIR_TETRA_FS_SPATIAL_SHAPE_CROSSWALK_V0_1.md`.
 
-The TIR spatial-adjacency promotion remains separately typed. RF-S10 uses the projective `CP1` area identities only.
+The TIR spatial-adjacency promotion remains separately typed. RF-S10 uses the projective `CP1` area identities.
 
 ## 1. Exact tetrahedral FS areas
 
@@ -201,7 +201,7 @@ The stronger relation
 \mathcal A_{tet}=4\mathcal A_{face}
 \]
 
-requires equal face-area contributions, for example one phase-rate magnitude shared uniformly across the congruent faces. RF-S10 keeps exact additivity separate from this uniform-face specialization.
+requires equal face-area contributions, for example one phase-rate magnitude shared uniformly across the congruent faces. RF-S10 carries exact additivity and the uniform-face specialization as separately typed relations.
 
 ## 6. RF-S9 ownership consequence
 
@@ -214,7 +214,7 @@ a_{FS}\in\left\{\frac\pi4,\pi\right\}}
 
 with the scope label carried explicitly.
 
-Therefore the RF-S9 source ledger no longer requires an unconstrained continuous tetrahedral `a_FS` value. It requires instead:
+The RF-S9 tetrahedral source ledger is therefore parameterized by:
 
 ```text
 projective carrier ID
@@ -228,7 +228,7 @@ The physical selection of which scope is realized in a target measurement remain
 
 ## 7. Type firewall
 
-RF-S10 consumes the TIR projective geometry theorem only. The spatial tetrahedral carrier and projective tetrahedral carrier remain separately typed until their dedicated source-binding gate is admitted.
+RF-S10 consumes the TIR projective geometry theorem. The spatial tetrahedral carrier and projective tetrahedral carrier remain separately typed until their dedicated source-binding gate is admitted.
 
 The exact RF-S10 advancement is therefore:
 
