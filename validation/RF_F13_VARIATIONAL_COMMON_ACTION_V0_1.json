@@ -1,0 +1,34 @@
+{
+  "schema": "RFC_REFERENCE_VALIDATION_V0_1",
+  "gate": "RF-F13",
+  "title": "Variational Integrability and Common-Action Gate",
+  "parent_main": "58655c7fe9d25d09c13545965e951f171316e6b2",
+  "status": "PASS_REFERENCE_ALGEBRA_CONDITIONAL_PHYSICAL_BINDING",
+  "reference_module": "src/rfc/variational_common_action.py",
+  "reference_tests": "tests/reference/test_rff13_variational_common_action.py",
+  "local_validation": {
+    "pytest": "12 passed",
+    "python_compile": "PASS",
+    "symbolic_identity": "F11_LHS - partial_phi(H_G)*phi_dot = 0 for H_G=P*h(X,phi_L)",
+    "symbolic_backend": "sympy"
+  },
+  "exact_results": [
+    "P=B*(Phi_C+kappa)",
+    "Theta_G=P*dX on the local relational-lift branch",
+    "H_G=P*dH_G/dP implies H_G=P*omega=epsilon_G",
+    "degree-one family H_G=P*h(X,phi_L)",
+    "RF-F11 left side equals partial_phi(H_G)*phi_dot",
+    "n*partial_phi(H_G)=-eta*U_L_prime partitions dynamic-Lambda exchange",
+    "eta=0 reproduces RF-L2 allocation",
+    "eta=1 reproduces RF-F7 allocation",
+    "constant-B constant-Lambda branch gives omega*X=C",
+    "carrier-normalized H/Q binding is covariant under positive q0 rescaling"
+  ],
+  "promotion_inputs": [
+    "zero-defect physical J_Q^mu <-> J_vartheta^mu current/measure receipt",
+    "physical H_Phi^EB/Q_vartheta <-> H_G/q0 Hamiltonian receipt",
+    "complete admitted current/rest matter-sector composition",
+    "absolute project-side kappa_E/G promotion"
+  ],
+  "main_merge": "NOT_PERFORMED"
+}
