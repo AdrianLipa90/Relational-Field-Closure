@@ -177,9 +177,9 @@ On the unit-clock surface,
 Define
 
 \[
-u_\mu:=\frac{t_\mu}{\mu_T},
+u^{(T)}_\mu:=\frac{t_\mu}{\mu_T},
 \qquad
-u_\mu u^\mu=-1.
+u^{(T)}_\mu u_{(T)}^\mu=-1.
 \]
 
 Then
@@ -188,7 +188,7 @@ Then
 \boxed{
 \frac{\partial\mathcal C_T}{\partial g^{\mu\nu}}
 =
--u_\mu u_\nu.
+-u^{(T)}_\mu u^{(T)}_\nu.
 }
 \]
 
@@ -198,7 +198,7 @@ Therefore the `eta=1` stress is
 \boxed{
 T^{U,T}_{\mu\nu}
 =
-2f'(1)\widehat U_L\,u_\mu u_\nu.
+2f'(1)\widehat U_L\,u^{(T)}_\mu u^{(T)}_\nu.
 }
 \]
 
@@ -216,7 +216,7 @@ then
 \boxed{
 T^{U,T}_{\mu\nu}
 =
-\widehat U_L\,u_\mu u_\nu.
+\widehat U_L\,u^{(T)}_\mu u^{(T)}_\nu.
 }
 \]
 
