@@ -91,3 +91,23 @@ def directional_energy_natural(
 ) -> float:
     target_mass = _positive("target_mass", target_mass)
     return target_mass * directional_phi(beta, orientation)
+
+
+def physical_directional_phi(beta_phys: float, orientation: int) -> float:
+    """Canonical RF-E20 alias preserving the superseded RF-E19 API name.
+
+    ``beta_phys`` is the physical normal-relative directional speed supplied by
+    the RF-E18/RF-E19 flow chain.  The numerical map is identical to
+    ``directional_phi``; the alias keeps the physical typing explicit without
+    reintroducing the superseded RF-E19 gate number.
+    """
+    return directional_phi(beta_phys, orientation)
+
+
+def physical_directional_energy_natural(
+    beta_phys: float,
+    orientation: int,
+    target_mass: float,
+) -> float:
+    """Physical-typing alias for the RF-E20 directional energy map."""
+    return directional_energy_natural(beta_phys, orientation, target_mass)
