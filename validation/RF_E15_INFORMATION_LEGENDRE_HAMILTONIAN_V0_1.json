@@ -1,0 +1,19 @@
+{
+  "schema": "RFC_RF_E15_INFORMATION_LEGENDRE_HAMILTONIAN_V0_1",
+  "status": "CANDIDATE_PENDING_HOSTED_CI",
+  "parent": "RF-E14 ADM directional relative-entropy potential",
+  "primal": "Phi(x)=x-1-ln(x)",
+  "conjugate": "p=1-1/x",
+  "inverse": "x=1/(1-p)",
+  "dual": "Psi(p)=-ln(1-p)",
+  "fenchel": "Phi(x)+Psi(p)=p*x at p=Phi'(x)",
+  "directional_binding": {
+    "cooriented": "p=+beta_shift",
+    "counteroriented": "p=-beta_shift"
+  },
+  "dual_even": "ln(gamma)",
+  "dual_odd": "rapidity",
+  "physical_energy_selection": "OPEN_RF_E16_ACTION_PULLBACK",
+  "energy_scale_binding": "OPEN",
+  "epistemic": "EXACT_MATHEMATICAL_DUALITY_PHYSICAL_SELECTION_OPEN"
+}
