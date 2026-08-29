@@ -74,22 +74,22 @@ def test_matter_action_chain_failures_map_to_exact_fpdg_claims():
         (
             "tests/reference/test_rfe4_phase_kinetic_stress_energy_firewall.py",
             "test_phase_only_active_einstein_source_is_four_times_energy_density",
-            "RFC.E4.PHASE_STRESS_ENERGY_FIREWALL",
+            "RFC.E4.PHASE_STRESS_ENERGY",
         ),
         (
             "tests/reference/test_rfe5_onshell_scalar_carrier_energy.py",
             "test_phase_kinetic_and_total_energy_per_noether_charge_differ_by_two",
-            "RFC.E5.ON_SHELL_SCALAR_ENERGY",
+            "RFC.E5.CARRIER_ENERGY",
         ),
         (
             "tests/reference/test_rfe6_lorentzian_matter_action_source_bookkeeping.py",
             "test_matter_variation_has_minus_charge_current_over_hbar",
-            "RFC.E6.LORENTZIAN_MATTER_ACTION",
+            "RFC.E6.LORENTZIAN_ACTION",
         ),
         (
             "tests/reference/test_rfe7_total_scalar_stress_energy_composition.py",
             "test_full_scalar_tensor_recomposes_from_three_exact_parts",
-            "RFC.MATTER.SINGLE_COMPLEX_SCALAR",
+            "RFC.E7.SCALAR_T_DECOMPOSITION",
         ),
     )
     for path, test_name, expected_claim in cases:
