@@ -1,0 +1,49 @@
+{
+  "schema": "RFC_CROSS_REFERENCE_UPDATE_V1",
+  "date": "2026-08-29",
+  "node": "RF-L4_INFORMATION_CURVATURE_CANONICAL_PULLBACK",
+  "status": "STACKED_CROSS_REPOSITORY_KINETIC_CLOSURE_TARGET",
+  "pins": {
+    "RFC_RF_L4": {
+      "repository": "AdrianLipa90/Relational-Field-Closure",
+      "branch": "feat/rfl4-information-curvature-canonical-pullback-v0.1",
+      "commit": "0cc7f7999241adadf00683d26c2a27a4fb9a3dcd",
+      "path": "closure/lambda0/RF_L4_INFORMATION_CURVATURE_CANONICAL_PULLBACK.md"
+    },
+    "IDT_01K": {
+      "repository": "AdrianLipa90/Informational-Dynamics-of-Time",
+      "branch": "main",
+      "commit": "3763000ac6f94519701e3b4987080c473fceeae9",
+      "path": "formalism/01K_temporal_information_curvature_interface.md"
+    },
+    "IDT_01D": {
+      "repository": "AdrianLipa90/Informational-Dynamics-of-Time",
+      "branch": "main",
+      "commit": "5aa10203358014509720c7f2a2b38fce4b2b5113",
+      "path": "formalism/01D_shannon_onsager_response_tensor.md"
+    },
+    "IDT_01L3": {
+      "repository": "AdrianLipa90/Informational-Dynamics-of-Time",
+      "branch": "feat/01l3-rfl4-information-curvature-canonical-pullback-v0.1",
+      "commit": "8a3619e929e251b4a27064b6c7405a100cc93002",
+      "path": "formalism/01L3_rfl4_information_curvature_canonical_pullback_interface.md"
+    }
+  },
+  "exact_relations": {
+    "dynamic_information_curvature": "barXi_I = Xi_I - Xi_star",
+    "canonical_coordinate": "phi_I = beta_I * sqrt(barXi_I)",
+    "inverse_coordinate": "barXi_I = phi_I^2 / beta_I^2",
+    "reference_shift": "Lambda_star = Lambda_ref + alpha_I * Xi_star",
+    "quadratic_potential": "U_I = alpha_I * phi_I^2 / (kappa_E * beta_I^2)",
+    "mass_relation": "m_I^2 = 2 * alpha_I / (kappa_E * beta_I^2)",
+    "rfc_kinetic_metric": "Z_I^RFC = beta_I^2 / (4 * (Xi_I - Xi_star))",
+    "kinetic_closure_target": "Z_I^IDT = Z_I^RFC"
+  },
+  "open_gates": [
+    "reduce IDT 01D tangent metric along an admitted 01K information-curvature trajectory",
+    "test Z_I^IDT = Z_I^RFC",
+    "fix beta_I from the upstream kinetic metric",
+    "derive or calibrate alpha_I equivalently through m_I",
+    "extend local quadratic stability to nonlinear/global stability"
+  ]
+}
