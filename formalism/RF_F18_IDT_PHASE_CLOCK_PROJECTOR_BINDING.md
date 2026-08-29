@@ -2,21 +2,20 @@
 
 Status: `IDT_01AC_ONE_FORM_REUSE_PASS / IDT_01AD_CLOCK_RATE_PARENT_PASS / INDEPENDENT_PHASE_SCALE_FIREWALL_EXACT / METRIC_RESPONSE_LEDGER_EXACT / RF_E19_ALIGNMENT_GATE_DEFINED / PHYSICAL_PROJECTOR_PROMOTION_CONDITIONAL`
 
-RF-F18 is stacked on RF-F17. It audits whether the RF-F17 state-dependent exchange projector can be realized from an already-existing IDT field rather than by introducing an additional clock degree of freedom.
+RF-F18 is stacked on RF-F17. Its purpose is to realize the RF-F17 projector from an already-existing IDT phase-clock field while keeping every additional physical binding explicit.
 
-The selected upstream object is the IDT 01AC gauge-invariant phase one-form
+## 1. Existing IDT phase-clock one-form
+
+IDT 01AC supplies the gauge-invariant one-form
 
 \[
 \boxed{
-q_\mu
-:=
-\mathscr D_\mu\vartheta
-=
-\partial_\mu\vartheta+\mathcal A^{ABE}_\mu.
+q_\mu:=\mathscr D_\mu\vartheta
+=\partial_\mu\vartheta+\mathcal A^{ABE}_\mu.
 }
 \]
 
-IDT 01AC gives the gauge transformation
+Under
 
 \[
 \vartheta\mapsto\vartheta+\lambda,
@@ -24,37 +23,32 @@ IDT 01AC gives the gauge transformation
 \mathcal A^{ABE}\mapsto\mathcal A^{ABE}-d\lambda,
 \]
 
-and therefore
+one has exactly
 
 \[
 \boxed{q_\mu\mapsto q_\mu.}
 \]
 
-IDT 01AD independently binds the normal pullback of this same one-form to the relational-lapse proper-time phase rate,
+IDT 01AD binds the normal pullback of the same one-form to the relational-lapse proper-time phase rate,
 
 \[
 \boxed{
 D_{\hat\tau}\chi
-=
-r_n^{(\tau)}
-=
-c\,e_{\hat0}\lrcorner\mathscr D\vartheta.
+=r_n^{(\tau)}
+=c\,e_{\hat0}\lrcorner\mathscr D\vartheta.
 }
 \]
 
-Thus `q_mu` already has the required phase-clock lineage.
+Thus `q_mu` already carries the required gauge-covariant phase-clock lineage.
 
----
+## 2. Phase-clock projector
 
-## 1. Projector definition
-
-Introduce one positive independent phase-clock norm scale `mu_vartheta` with the same norm units as `q_mu`, and define
+Introduce a positive independent calibration scale `mu_vartheta` with the same norm units as `q_mu` and define
 
 \[
 \boxed{
 \mathcal C_\vartheta
-:=
--\frac{g^{\mu\nu}q_\mu q_\nu}{\mu_\vartheta^2}.
+:=-\frac{g^{\mu\nu}q_\mu q_\nu}{\mu_\vartheta^2}.
 }
 \]
 
@@ -64,14 +58,14 @@ The RF-F17 projector surface is
 \boxed{\mathcal C_\vartheta=1.}
 \]
 
-On this surface define
+On that surface define
 
 \[
 \boxed{
 u^{(\vartheta)}_\mu:=\frac{q_\mu}{\mu_\vartheta}.}
 \]
 
-Then
+The intended unit-timelike condition is
 
 \[
 \boxed{u^{(\vartheta)}_\mu u_{(\vartheta)}^\mu=-1.}
@@ -79,11 +73,9 @@ Then
 
 The projector is gauge invariant because `q_mu` is gauge invariant and `mu_vartheta` is a gauge-scalar calibration input.
 
----
+## 3. Independent-scale firewall
 
-## 2. Independent-scale firewall
-
-The normalization scale must be independent under the metric variation used to define the stress tensor:
+The scale used in the stress-tensor variation is required to satisfy
 
 \[
 \boxed{
@@ -91,45 +83,36 @@ The normalization scale must be independent under the metric variation used to d
 }
 \]
 
-A self-normalized definition
+If instead one defines the scale from the same metric norm,
 
 \[
-\mu_\vartheta^2
-:=
--g^{\alpha\beta}q_\alpha q_\beta
+\mu_\vartheta^2:=-g^{\alpha\beta}q_\alpha q_\beta,
 \]
 
-would give
+then
 
 \[
 \mathcal C_\vartheta\equiv1
 \]
 
-as an off-shell identity and therefore
+as an off-shell identity and hence
 
 \[
-\boxed{
-\delta_g\mathcal C_\vartheta=0.
-}
+\boxed{\delta_g\mathcal C_\vartheta=0.}
 \]
 
-That surface produces zero RF-F17 state-dependent projector stress. The independent phase-clock calibration is therefore an exact integrability condition for a nontrivial realization.
+The corresponding RF-F17 projector stress is then identically zero. An independent `mu_vartheta` is therefore an exact nontriviality condition.
 
-IDT 05D supplies the dimensionless relative-information clock potential `Phi(N_R)` and delegates physical action/Hamiltonian/energy scaling downstream. IDT 01AD supplies the reference-clock calibration into physical elapsed time. RF-F18 consequently leaves `mu_vartheta` as an explicit downstream phase-rate calibration coordinate rather than constructing it from the same metric norm being varied.
+IDT 05D supplies the dimensionless relative-information clock scalar `Phi(N_R)` and its Fisher geometry. IDT 01AD supplies physical elapsed-time calibration. RF-F18 keeps `mu_vartheta` as a downstream phase-rate calibration coordinate to be fixed by an independent receipt.
 
----
+## 4. Off-shell metric-response ledger
 
-## 3. Metric-response ledger for the ABE connection
-
-The simple frozen-one-form variation is valid on a surface where `q_mu` is held independent in the metric variation.
-
-Define the possible connection/one-form metric-response contraction
+Because the ABE connection includes a geometrical Euler sector, retain the possible metric response of `q_mu` explicitly. Define
 
 \[
 \boxed{
 R_{\mu\nu}
-:=
-g^{\alpha\beta}q_\alpha
+:=g^{\alpha\beta}q_\alpha
 \frac{\partial q_\beta}{\partial g^{\mu\nu}}.
 }
 \]
@@ -139,60 +122,54 @@ With independent `mu_vartheta`, direct differentiation gives
 \[
 \boxed{
 \frac{\partial\mathcal C_\vartheta}{\partial g^{\mu\nu}}
-=
--\frac{q_\mu q_\nu+2R_{\mu\nu}}
-{\mu_\vartheta^2}.
+=-\frac{q_\mu q_\nu+2R_{\mu\nu}}{\mu_\vartheta^2}.
 }
 \]
 
-Equivalently,
+Writing
+
+\[
+u^{(\vartheta)}_\mu:=q_\mu/\mu_\vartheta,
+\]
+
+this is
 
 \[
 \boxed{
 \frac{\partial\mathcal C_\vartheta}{\partial g^{\mu\nu}}
-=
--u^{(\vartheta)}_\mu u^{(\vartheta)}_\nu
--
-\frac{2R_{\mu\nu}}{\mu_\vartheta^2}.
+=-u^{(\vartheta)}_\mu u^{(\vartheta)}_\nu
+-\frac{2R_{\mu\nu}}{\mu_\vartheta^2}.
 }
 \]
 
-The frozen-one-form branch is the sufficient condition
+The sufficient frozen-one-form condition is
 
 \[
 \boxed{R_{\mu\nu}=0.}
 \]
 
-RF-F18 keeps `R_mn` explicit because the ABE connection includes a geometrical Euler sector whose off-shell metric typing must be audited independently.
+RF-F18 therefore does not obtain a dust tensor by silently freezing the Euler/ABE connection: the response tensor remains an explicit audit coordinate.
 
----
+## 5. RF-F17 eta=1 stress
 
-## 4. RF-F17 eta=1 stress
-
-RF-F17 gives, at `eta=1`,
+RF-F17 gives
 
 \[
 T^U_{\mu\nu}
-=
--2\widehat U_L f'(1)
-\frac{\partial\mathcal C_\vartheta}{\partial g^{\mu\nu}}.
+=-2\widehat U_L f'(1)
+\frac{\partial\mathcal C_\vartheta}{\partial g^{\mu\nu}}
 \]
 
-Therefore
+on the `eta=1`, `C_vartheta=1` surface. Therefore
 
 \[
 \boxed{
 T^U_{\mu\nu}
-=
-2\widehat U_L f'(1)
+=2\widehat U_L f'(1)
  u^{(\vartheta)}_\mu u^{(\vartheta)}_\nu
-+
-\frac{4\widehat U_L f'(1)}{\mu_\vartheta^2}
-R_{\mu\nu}.
++\frac{4\widehat U_L f'(1)}{\mu_\vartheta^2}R_{\mu\nu}.
 }
 \]
-
-This is the exact metric-response ledger.
 
 On the frozen-one-form branch,
 
@@ -200,13 +177,12 @@ On the frozen-one-form branch,
 R_{\mu\nu}=0,
 \]
 
-one obtains
+this reduces exactly to
 
 \[
 \boxed{
 T^U_{\mu\nu}
-=
-2\widehat U_L f'(1)
+=2\widehat U_L f'(1)
  u^{(\vartheta)}_\mu u^{(\vartheta)}_\nu.
 }
 \]
@@ -217,140 +193,105 @@ For
 \boxed{f'(1)=\frac12},
 \]
 
-this reduces to
+one obtains
 
 \[
 \boxed{
 T^U_{\mu\nu}
-=
-\widehat U_L
+=\widehat U_L
 u^{(\vartheta)}_\mu u^{(\vartheta)}_\nu.
 }
 \]
 
-Thus the already-existing IDT gauge-covariant phase one-form supplies the exact RF-F17 pressureless rank-one projector algebra on the independently calibrated, timelike, frozen-one-form branch.
+Thus the existing IDT gauge-covariant phase one-form supplies the RF-F17 pressureless rank-one projector algebra on the independently calibrated, timelike, frozen-one-form branch. For nonzero `R_mn`, the displayed correction remains part of the source tensor.
 
-If `R_mn` is nonzero, its tensor correction remains explicit and the resulting stress is classified by the measured/calculated response tensor rather than by the frozen-one-form reduction.
+## 6. Binding to the RF-E19 material congruence
 
----
-
-## 5. Material-congruence binding to RF-E19
-
-RF-E19 supplies the normalized future-timelike material congruence from the admitted Noether current,
+RF-E19 supplies the future-unit-timelike material direction
 
 \[
 \boxed{
-\nu_J^\mu
-=
-\frac{J^\mu}{\sqrt{-J^2}}.
+\nu_J^\mu=\frac{J^\mu}{\sqrt{-J^2}}.
 }
 \]
 
-On the RF-F18 unit phase-clock surface define the relative alignment coordinate
+Define the local relative alignment coordinate
 
 \[
 \boxed{
 \gamma_{\vartheta J}
-:=-u^{(\vartheta)}_\mu\nu_J^\mu.
+:=-u^{(\vartheta)}_\mu\nu_J^\mu
 }
 \]
 
-For two future unit timelike directions,
-
-\[
-\gamma_{\vartheta J}\ge1.
-\]
-
-Define
+and defect
 
 \[
 \boxed{
-\Delta_{\vartheta J}
-:=
-|\gamma_{\vartheta J}-1|.
+\Delta_{\vartheta J}:=|\gamma_{\vartheta J}-1|.
 }
 \]
 
-Then
+For future unit timelike directions,
 
 \[
-\boxed{
-\Delta_{\vartheta J}=0
-}
+\gamma_{\vartheta J}\ge1,
 \]
 
-is the exact local alignment surface on the future-unit-timelike sector.
-
-The physical binding target is therefore
+and the zero-defect surface
 
 \[
-\boxed{
- u^{(\vartheta)\mu}
-\stackrel{?}{\longleftrightarrow}
-\nu_J^\mu
-}
+\boxed{\Delta_{\vartheta J}=0}
 \]
 
-with the same orientation, slice, measure, support and lineage receipts already required by RF-N1B2K/RF-E19.
+is the exact local alignment condition. Physical promotion also carries the RF-N1B2K/RF-E19 orientation, slice, measure, support and lineage receipts.
 
----
-
-## 6. Relation to IDT 05D and 01AD
-
-The three IDT clock surfaces now have separate typed roles:
+## 7. Typed IDT clock roles
 
 ```text
-IDT 05D:
+IDT 05D
   Phi(N_R)=N_R-1-ln N_R
-  role: relative-information clock scalar / Fisher potential
+  -> relative-information clock scalar / Fisher potential
 
-IDT 01AD:
+IDT 01AD
   d tau_hat=N_R dt
-  D_tauhat chi = c e_0 ⌟ Dvartheta
-  role: lapse-calibrated proper phase-clock rate
+  D_tauhat chi=c e_0 ⌟ Dvartheta
+  -> lapse-calibrated proper phase-clock rate
 
-IDT 01AC:
+IDT 01AC
   q_mu=D_mu vartheta
-  role: gauge-invariant spacetime phase-clock one-form
+  -> gauge-invariant spacetime phase-clock one-form
 ```
 
-RF-F18 consumes the 01AC one-form and the 01AD clock-rate lineage. The 05D information scalar remains a compatible upstream clock-information coordinate and a possible later calibration/constitutive input.
+RF-F18 consumes the 01AC one-form and 01AD rate lineage. The 05D scalar remains an upstream clock-information coordinate and a possible later constitutive/calibration input.
 
----
-
-## 7. Promotion ledger
+## 8. Promotion ledger
 
 ```text
 IDT 01AC q_mu=D_mu vartheta reuse                         PASS EXACT PARENT
 01AC gauge invariance of q_mu                            PASS EXACT PARENT
-IDT 01AD q_mu normal pullback -> proper phase-clock rate PASS EXACT CONDITIONAL PARENT
+IDT 01AD normal pullback -> proper phase-clock rate      PASS EXACT CONDITIONAL PARENT
 C_vartheta=-g^{-1}(q,q)/mu_vartheta^2                   PASS EXACT DEFINITION
 projector gauge invariance                               PASS EXACT
 independent mu_vartheta requirement                      PASS EXACT FIREWALL
-self-normalized mu^2=-g^{-1}(q,q) -> delta_g C=0        PASS EXACT NO-GO
-metric-response tensor R_mn ledger                       PASS EXACT
+self-normalization -> delta_g C=0                        PASS EXACT NO-GO
+metric-response tensor R_mn                              PASS EXACT LEDGER
 R_mn=0 -> rank-one projector derivative                 PASS EXACT CONDITIONAL
-eta=1 stress with R_mn correction                        PASS EXACT
-R_mn=0 and f'(1)=1/2 -> T=Uhat u_theta u_theta          PASS EXACT CONDITIONAL
-phase-clock/material alignment gamma_thetaJ              PASS EXACT COORDINATE
-Delta_thetaJ=0 local congruence binding                  PASS EXACT CONDITIONAL
+eta=1 stress including R_mn correction                   PASS EXACT
+R_mn=0, f'(1)=1/2 -> T=Uhat u_theta u_theta             PASS EXACT CONDITIONAL
+phase-clock/material alignment coordinate                PASS EXACT
+gamma_thetaJ=1 local congruence binding                  PASS EXACT CONDITIONAL
 mu_vartheta physical calibration                         OPEN PROMOTION INPUT
 ABE/Euler off-shell metric-response receipt              OPEN PROMOTION INPUT
-IDT phase-clock <-> RF-E19 material lineage receipt      OPEN PROMOTION INPUT
+IDT phase-clock <-> RF-E19 lineage receipt               OPEN PROMOTION INPUT
 RF-N1B2K current/measure physical binding                OPEN PROMOTION INPUT
 physical projector profile f                             OPEN PROMOTION INPUT
 ```
 
-## 8. Validation authority
+## 9. Validation authority
 
-Reference implementation:
+Reference implementation: `src/rfc/idt_phase_clock_projector.py`.
 
-`src/rfc/idt_phase_clock_projector.py`
+Reference tests: `tests/reference/test_rff18_idt_phase_clock_projector.py`.
 
-Reference tests:
-
-`tests/reference/test_rff18_idt_phase_clock_projector.py`
-
-Validation receipt:
-
-`validation/RF_F18_IDT_PHASE_CLOCK_PROJECTOR_V0_1.json`
+Validation receipt: `validation/RF_F18_IDT_PHASE_CLOCK_PROJECTOR_V0_1.json`.
