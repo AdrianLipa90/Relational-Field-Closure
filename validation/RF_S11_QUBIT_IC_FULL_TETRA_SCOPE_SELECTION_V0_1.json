@@ -2,7 +2,7 @@
   "schema": "RFC_VALIDATION_RECEIPT_V0_1",
   "gate": "RF-S11",
   "title": "Qubit Informational-Completeness Tetrahedral Scope Selection",
-  "status": "REFERENCE_CANDIDATE_PENDING_HOSTED_CI",
+  "status": "HOSTED_REFERENCE_PASS_PENDING_EXACT_HEAD_RECHECK",
   "stack_parent": "RF-S10",
   "stack_parent_head": "85384de31a8300e688e55735e67a077d6b11e3e0",
   "tir_source": {
@@ -58,7 +58,8 @@
   "reference_tests": "tests/reference/test_rfs11_qubit_ic_full_tetra_scope_selection.py",
   "hosted_ci": {
     "workflow": "RFC reference suite",
-    "run": null,
-    "conclusion": "PENDING"
+    "run": 275,
+    "conclusion": "SUCCESS",
+    "validated_head": "970fab692bed4fb125fefba7887ac202dea188c6"
   }
 }
