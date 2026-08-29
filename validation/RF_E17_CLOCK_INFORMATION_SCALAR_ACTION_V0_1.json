@@ -1,0 +1,22 @@
+{
+  "schema": "RFC_RF_E17_CLOCK_INFORMATION_SCALAR_ACTION_V0_1",
+  "status": "CANDIDATE_PENDING_HOSTED_CI",
+  "parents": [
+    "IDT 05D local clock relative entropy",
+    "RF-E14 ADM directional information",
+    "RF-E16 common directional rate carrier",
+    "RF-L3 information-scalar potential reconstruction"
+  ],
+  "clock_information_scalar": "Xi_clk=Phi(x_s)/A_rel",
+  "rf_l3_potential": "U_clk=alpha_clk Phi(x_s)/(kappa_E A_rel)",
+  "homogeneous_cell_energy": "H_clk=E_star Phi(x_s)",
+  "energy_scale": "E_star=alpha_clk V_cell/(kappa_E A_rel)",
+  "natural_units_dimension": "[E_star]=L^-1",
+  "newton_binding_target": "E_star=m",
+  "si_binding_target": "E_star=mc^2",
+  "clock_KL_to_Xi_source_binding": "OPEN_TYPED_GATE",
+  "shift_velocity_binding": "OPEN_TYPED_GATE",
+  "cell_scale_binding": "OPEN_RF_E18",
+  "alpha_clk_binding": "OPEN_RF_E18",
+  "observable_assignment": "ACTION_SECTOR_DEPENDENT"
+}
