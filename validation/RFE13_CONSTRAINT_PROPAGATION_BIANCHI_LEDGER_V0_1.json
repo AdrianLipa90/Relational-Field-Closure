@@ -1,0 +1,23 @@
+{
+  "schema": "RFC_RFE13_CONSTRAINT_PROPAGATION_BIANCHI_LEDGER_V0_1",
+  "status": "ACTION_EVOLUTION_PROJECTION_AND_HOMOGENEOUS_PROPAGATION_CANDIDATE",
+  "metric_evolution": "(partial_0-L_b) h_ij = -2 N K_ij",
+  "extrinsic_curvature_evolution": "(partial_0-L_b) K_ij = -D_iD_jN + N(R3_ij + K K_ij - 2 K_ik K^k_j) + N kappa_E[1/2 h_ij(S-rho_n)-S_ij]",
+  "dynamic_lambda_extra_term": "-N Lambda0 h_ij",
+  "base_residuals": {
+    "H": "R3 + K^2 - K_ij K^ij - 2 kappa_E rho_n",
+    "M_i": "D_j K^j_i - D_i K - kappa_E j_i"
+  },
+  "dynamic_lambda_residual": "H_Lambda = H - 2 Lambda0",
+  "bianchi_ledgers": {
+    "base": "nabla^mu T_mn = 0 -> nabla^mu E_mn = 0",
+    "dynamic_lambda": "kappa_E nabla^mu T_mn = nabla_n Lambda0 -> nabla^mu E^Lambda_mn = 0"
+  },
+  "propagation": {
+    "H": "(partial_0-L_b)H = 2 N K H - 2 N D_i M^i - 4 M^i D_i N",
+    "M_i": "(partial_0-L_b)M_i = -1/2 N D_i H - H D_i N + N K M_i"
+  },
+  "zero_residual_surface": "INVARIANT_UNDER_STATED_EVOLUTION_AND_SOURCE_LEDGER",
+  "project_kappa_E_value_status": "CONDITIONAL_RF_E3_GATES",
+  "next_frontier": "UPSTREAM_TIR_IDT_CARRIER_AND_PHYSICAL_COUPLING_PROMOTION"
+}
