@@ -1,0 +1,35 @@
+{
+  "schema": "RFC_REFERENCE_VALIDATION_V0_1",
+  "gate": "RF-F19",
+  "title": "Independent Rotor-Lapse Phase-Scale Calibration",
+  "stack_parent": "5705717e94293bba3b39719dde108eec2a3dbda8",
+  "status": "REFERENCE_IMPLEMENTED_AWAITING_CI",
+  "reference_module": "src/rfc/independent_rotor_lapse_calibration.py",
+  "reference_tests": "tests/reference/test_rff19_independent_rotor_lapse_calibration.py",
+  "exact_targets": [
+    "mu_vartheta=|r_t^rotor|/(N_R*c)",
+    "Delta_tau=0 implies C_vartheta=1 on the pure-normal branch",
+    "independent rotor/lapse calibration avoids metric self-normalization",
+    "S_vartheta=S_rotor-S_N distinguishes metric response from spacetime evolution",
+    "projector scale-response correction=-2*C*S_vartheta",
+    "eta=1 scale-response stress correction=4*Uhat*f'(1)*S_vartheta on C=1",
+    "common IDT/RFC proper phase rate gives |omega|=c*mu_vartheta",
+    "V_R=a_FS/mu_vartheta^3",
+    "n=N*mu_vartheta^3/a_FS",
+    "RF-F15 radiation/dust/vacuum scale as mu^4/mu^3/mu^0",
+    "RF-F12 gives a*mu_vartheta=constant"
+  ],
+  "cross_repo_parents": [
+    "IDT 01AC independently audited field/rotor phase rates",
+    "IDT 01AD relational lapse and proper phase rate",
+    "RFC RF-F3 gauge-covariant proper phase rate and phase cell",
+    "RFC RF-F12 FLRW phase scaling",
+    "RFC RF-F15 microscopic transport"
+  ],
+  "promotion_inputs": [
+    "hosted independent field/rotor rate receipt",
+    "off-shell rotor-rate and lapse metric-response receipts",
+    "common IDT 01AD <-> RFC RF-F3 proper-rate lineage"
+  ],
+  "main_merge": "NOT_PERFORMED"
+}
