@@ -1,0 +1,39 @@
+{
+  "schema": "RFC_VALIDATION_RECEIPT_V0_1",
+  "gate": "RF-S2",
+  "title": "Light-Cone Spectral Scale Reduction",
+  "status": "REFERENCE_CANDIDATE_PENDING_HOSTED_CI",
+  "parent_rfc_main": "1a351a3dec2beb4371190fa040925a985aa6ce3d",
+  "source_idt_main": "ed902458b6e0ad338ca4ba637d8d8228bc7c549b",
+  "source_tir_tetra_congruence_merge": "ccc89fc04e1d85e9c6a60b7bb92e62a5d22d5f44",
+  "parents": [
+    "RF-L5A premetric dimensional calibration firewall",
+    "IDT 01L phase-clock length scale",
+    "RF-S1 tetra/phase-clock mass-scale closure"
+  ],
+  "exact_identities": [
+    "rho_omega = abs(omega_lambda_phase)/mu_lambda",
+    "ell_phi = 1/(rho_omega m_I)",
+    "mu_phi_hat = E_phi/(hbar c m_I) = rho_omega",
+    "zeta_s = m_I ell_s",
+    "q_s = rho_omega zeta_s",
+    "zeta_s = sigma_x mu_lambda/sqrt(M_eff)",
+    "E_star = r_alpha C_Delta_FS rho_omega^2 zeta_s^3 m_I [natural units]",
+    "r_alpha rho_omega^2 zeta_s^3 = r_m/C_Delta_FS [target surface]"
+  ],
+  "separate_downstream_gates": [
+    "PHASE_KG_SPECTRAL_MATCH",
+    "TIR_CONTINUUM_COORDINATE_BIND",
+    "CLOCK_ALPHA_BINDING",
+    "TARGET_MASS_BINDING",
+    "TRANSLATIONAL_OBSERVABLE",
+    "DIRECTIONAL_CUBIC_TEST"
+  ],
+  "reference_implementation": "src/rfc/lightcone_spectral_scale_reduction.py",
+  "reference_tests": "tests/reference/test_rfs2_lightcone_spectral_scale_reduction.py",
+  "hosted_ci": {
+    "workflow": "RFC reference suite",
+    "run": null,
+    "conclusion": "PENDING"
+  }
+}
