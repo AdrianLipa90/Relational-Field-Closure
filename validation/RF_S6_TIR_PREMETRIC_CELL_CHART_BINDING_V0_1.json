@@ -1,0 +1,45 @@
+{
+  "schema": "RFC_VALIDATION_RECEIPT_V0_1",
+  "gate": "RF-S6",
+  "title": "TIR / Premetric Cell-Chart Binding",
+  "status": "REFERENCE_CANDIDATE_PENDING_HOSTED_CI",
+  "parent_rfc_main": "466d364f3d903215b94e2ba66e1fd1fac23e7a30",
+  "source_tir_main": "ccc89fc06bdf42c1937c0a2303d3e477db487e0f",
+  "parents": [
+    "TIR normalized tetrahedral edge and physical spatial scale map",
+    "RF-L5A premetric cell calibration Gamma_x=L_h/h",
+    "RF-L5A light-cone and positive mass-slot calibration",
+    "RF-S2 zeta_s=sigma_x mu_lambda/sqrt(M_eff)",
+    "RF-S4 same-mass conditional target surface"
+  ],
+  "exact_or_conditional_identities": [
+    "h=hat_a and L_h=ell_s hat_a -> Gamma_x=ell_s",
+    "sigma_x=ell_s/Gamma_x=1 on the common TIR/RFC cell-chart surface",
+    "zeta_s=m_I ell_s=mu_lambda/sqrt(M_eff)",
+    "mu_lambda/sqrt(M_eff)=m_I Gamma_x gives an independent RF-L5A roundtrip",
+    "r_alpha (mu_lambda/sqrt(M_eff))^3 = 1/C_Delta_FS on the RF-S4 same-mass same-target surface",
+    "C_Delta_FS=8/(9 sqrt(3) pi)"
+  ],
+  "chart_defects": [
+    "Delta_h=abs(h/hat_a-1)",
+    "Delta_L=abs(L_h/(ell_s hat_a)-1)",
+    "Delta_sigma=abs(sigma_x-1)"
+  ],
+  "separate_downstream_gates": [
+    "TIR_RFC_CELL_CHART_SOURCE_BINDING",
+    "RADIAL_INFORMATION_SOURCE_BINDING",
+    "CLOCK_RADIAL_ACTION_COMPOSITION",
+    "CLOCK_ALPHA_BINDING",
+    "TRANSLATIONAL_OBSERVABLE",
+    "DIRECTIONAL_CUBIC_TEST",
+    "GENERAL_MATTER_MULTIPLET",
+    "VARIABLE_LAPSE_GLOBAL_EXTENSION"
+  ],
+  "reference_implementation": "src/rfc/tir_premetric_cell_chart_binding.py",
+  "reference_tests": "tests/reference/test_rfs6_tir_premetric_cell_chart_binding.py",
+  "hosted_ci": {
+    "workflow": "RFC reference suite",
+    "run": null,
+    "conclusion": "PENDING"
+  }
+}
