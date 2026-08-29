@@ -2,7 +2,7 @@
   "schema": "RFC_VALIDATION_RECEIPT_V0_1",
   "gate": "RF-S7",
   "title": "Noether-Shannon Radial Source-Binding Gate",
-  "status": "REFERENCE_CANDIDATE_PENDING_HOSTED_CI",
+  "status": "HOSTED_REFERENCE_PASS",
   "parent_rfc_main": "466d364f3d903215b94e2ba66e1fd1fac23e7a30",
   "source_idt_main": "ed902458b6e0ad338ca4ba637d8d8228bc7c549b",
   "parents": [
@@ -49,7 +49,8 @@
   "reference_tests": "tests/reference/test_rfs7_noether_shannon_radial_source_binding.py",
   "hosted_ci": {
     "workflow": "RFC reference suite",
-    "run": null,
-    "conclusion": "PENDING"
+    "run": 266,
+    "conclusion": "SUCCESS",
+    "validated_head": "445a6acf4ef1f39132f2108c02e958bcbc91da79"
   }
 }
