@@ -44,6 +44,41 @@
       "claim_source": "formalism/DEPENDENCY_GRAPH.md",
       "binding_evidence": "the source-owned test directly checks exact polar kinetic decomposition, total scalar stress-energy recomposition, gauge invariance, homogeneous E4/E5 limits, neutral gravitational sourcing and exact Einstein source ledger composition"
     },
+    "tests/reference/test_rfl1_oriented_holonomy_identities.py": {
+      "claim_id": "RFC.L1.LAMBDA_TARGET",
+      "claim_source": "formalism/RFL1_RELATIONAL_LAMBDA_ORIENTED_HOLONOMY.md",
+      "binding_evidence": "the source-owned test directly checks Lambda-to-energy dimensional closure, support-volume energy closure, half-angle channel partition, cosine imbalance, oriented complex magnitude and orientation reversal"
+    },
+    "tests/reference/test_rfl2_dynamic_lambda0_action_stability.py": {
+      "claim_id": "RFC.L2.LAMBDA_ACTION_STABILITY",
+      "claim_source": "closure/lambda0/RF_L2_DYNAMIC_LAMBDA0_ACTION_REALIZABILITY_STABILITY.md",
+      "binding_evidence": "the source-owned test directly checks scalar stress decomposition, dynamic Lambda0 action coordinate, homogeneous equation of state, Bianchi transfer, on-shell energy conservation, anisotropic kinetic stress and stability classification"
+    },
+    "tests/reference/test_rfl3_information_scalar_potential_reconstruction.py": {
+      "claim_id": "RFC.L3.INFORMATION_SCALAR_POTENTIAL",
+      "claim_source": "closure/lambda0/RF_L3_INFORMATION_SCALAR_POTENTIAL_RECONSTRUCTION.md",
+      "binding_evidence": "the source-owned test directly checks exact information-scalar potential reconstruction, Lambda0 roundtrip, derivative and stability pullbacks, degenerate coupling behavior and holonomy-coordinate preservation"
+    },
+    "tests/reference/test_rfl4_information_curvature_canonical_pullback.py": {
+      "claim_id": "RFC.L4.INFORMATION_CURVATURE_PULLBACK",
+      "claim_source": "closure/lambda0/RF_L4_INFORMATION_CURVATURE_CANONICAL_PULLBACK.md",
+      "binding_evidence": "the source-owned test directly checks Xi-to-phi canonical pullback, baseline-shift preservation of Lambda0, quadratic mass parameterization, kinetic Jacobian, Bianchi chart equivalence and Bloch-sphere specialization"
+    },
+    "tests/reference/test_rfl4a_shannon_fisher_local_normalization.py": {
+      "claim_id": "RFC.L4A.SHANNON_FISHER_NORMALIZATION",
+      "claim_source": "closure/lambda0/RF_L4A_SHANNON_FISHER_LOCAL_NORMALIZATION.md",
+      "binding_evidence": "the source-owned test directly checks KL/Fisher Hessian structure, tangent first variation, quadratic Fisher normalization, cubic remainder scaling, beta=sqrt(2), local Xi metric, mass-alpha relation and Bianchi transfer"
+    },
+    "tests/reference/test_rfl5_shannon_onsager_klein_gordon_bridge.py": {
+      "claim_id": "RFC.L5.TEMPORAL_WAVE_KG_BRIDGE",
+      "claim_source": "closure/lambda0/RF_L5_SHANNON_ONSAGER_TEMPORAL_WAVE_KLEIN_GORDON_BRIDGE.md",
+      "binding_evidence": "the source-owned test directly checks Shannon-Onsager stiffness normalization, PSD/null structure, premetric gap, modal frequency, conservative/dissipative energy response and heterogeneous continuum dispersion"
+    },
+    "tests/reference/test_rfl5a_premetric_dimensional_calibration_firewall.py": {
+      "claim_id": "RFC.L5A.PREMETRIC_CALIBRATION",
+      "claim_source": "closure/lambda0/RF_L5A_PREMETRIC_DIMENSIONAL_CALIBRATION_FIREWALL.md",
+      "binding_evidence": "the source-owned test directly checks affine wave calibration, exact lightcone ratio, premetric-to-physical KG mass-frequency mapping, Gamma_t clock calibration, Gamma_x cell-width calibration and fail-closed dimensional gates"
+    },
     "tests/reference/test_rfe8_adm_kinematic_assembly.py": {
       "claim_id": "RFC.ADM.E8",
       "claim_source": "formalism/DEPENDENCY_GRAPH.md"
