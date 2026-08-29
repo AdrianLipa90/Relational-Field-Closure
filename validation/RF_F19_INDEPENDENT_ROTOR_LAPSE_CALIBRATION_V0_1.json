@@ -3,9 +3,16 @@
   "gate": "RF-F19",
   "title": "Independent Rotor-Lapse Phase-Scale Calibration",
   "stack_parent": "5705717e94293bba3b39719dde108eec2a3dbda8",
-  "status": "REFERENCE_IMPLEMENTED_AWAITING_CI",
+  "status": "REFERENCE_SUITE_PASS",
   "reference_module": "src/rfc/independent_rotor_lapse_calibration.py",
   "reference_tests": "tests/reference/test_rff19_independent_rotor_lapse_calibration.py",
+  "exact_head": "c326b0ebbad2c180cfdde5ac11c157bd36d2c801",
+  "hosted_ci": {
+    "workflow": "RFC reference suite",
+    "run_number": 344,
+    "run_id": 33273068766,
+    "conclusion": "success"
+  },
   "exact_targets": [
     "mu_vartheta=|r_t^rotor|/(N_R*c)",
     "Delta_tau=0 implies C_vartheta=1 on the pure-normal branch",
