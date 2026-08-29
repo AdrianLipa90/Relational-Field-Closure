@@ -1,0 +1,40 @@
+{
+  "gate": "RF-S18",
+  "title": "Relational Generator to Relativistic Dust Stress-Energy Lift",
+  "version": "0.1",
+  "status": "REFERENCE_IMPLEMENTED_AWAITING_CI",
+  "stack_parent": {
+    "gate": "RF-S17",
+    "head": "34255471c3b56d8e21578bb212b27e5330d7d300",
+    "reference_suite": 283,
+    "conclusion": "success"
+  },
+  "exact_relations": [
+    "T_mn=rho_0*u_m*u_n",
+    "rho_n=rho_0*gamma^2",
+    "j_i=rho_0*gamma^2*beta_i",
+    "S_ij=rho_0*gamma^2*beta_i*beta_j",
+    "rho_0=rho_n-S",
+    "beta_i=j_i/rho_n",
+    "|j|^2=rho_n*S",
+    "RF-E12 H_rhs=2*kappa_E*rho_n",
+    "RF-E12 M_rhs_i=kappa_E*j_i",
+    "RF-E13 matter_ij=kappa_E[0.5 delta_ij(S-rho_n)-S_ij]"
+  ],
+  "reference_tests": [
+    "rest-frame reduction",
+    "RF-E11 sign/projection convention",
+    "trace/rest-density reconstruction",
+    "rank-one dust momentum-stress identity",
+    "velocity reconstruction from ADM momentum",
+    "relational generator to dust roundtrip",
+    "RF-E12/RF-E13 source terms",
+    "subluminal relativistic scaling",
+    "fail-closed invalid inputs"
+  ],
+  "open_inputs": [
+    "physical local transport velocity",
+    "physical dust equation-of-state selection",
+    "absolute project-side kappa_E/G promotion"
+  ]
+}
