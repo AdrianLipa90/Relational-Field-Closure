@@ -1,0 +1,25 @@
+{
+  "schema": "RFC_RFE10_GAUSS_CODAZZI_PROJECTIONS_V0_1",
+  "status": "EXACT_DIFFERENTIAL_GEOMETRY_CANDIDATE",
+  "signature": "(-,+,+,+)",
+  "extrinsic_curvature_convention": "K_ij = -1/2 L_n h_ij",
+  "identities": {
+    "normal_normal": "2 G_mn n^m n^n = R3 + K^2 - K_ij K^ij",
+    "geometric_hamiltonian_carrier": "G_H = R3 + K^2 - K_ij K^ij",
+    "mixed": "h_i^m n^n G_mn = D_i K - D_j K^j_i",
+    "geometric_momentum_carrier": "G_Mi = D_j K^j_i - D_i K = -h_i^m n^n G_mn"
+  },
+  "dimensions": {
+    "G_H": "L^-2",
+    "G_Mi": "L^-2"
+  },
+  "controls": [
+    "static flat null control",
+    "flat isotropic nonzero normal-normal certificate",
+    "direct 4D nonhomogeneous curvature component audit",
+    "mixed-projection sign audit"
+  ],
+  "matter_source_status": "SEPARATE_DOWNSTREAM_GATE",
+  "einstein_source_binding_status": "OPEN_DOWNSTREAM_GATE",
+  "next_gate": "RF_E11_MATTER_PROJECTION_SOURCE_TYPING"
+}
