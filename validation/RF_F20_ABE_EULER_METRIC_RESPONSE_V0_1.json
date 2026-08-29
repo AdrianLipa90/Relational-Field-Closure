@@ -4,7 +4,14 @@
   "title": "ABE Euler Off-Shell Metric-Response Firewall",
   "stack_parent": "4c52bb17be0093661f20baf4e358348dcda4db25",
   "implementation_head": "e2487e38b4dd4d83d8742e4ebcd3eff618b5d08f",
-  "status": "REFERENCE_IMPLEMENTED_AWAITING_CI",
+  "validated_head": "f4f22d2f77ef337768fef7ee55b185268b803dd3",
+  "status": "REFERENCE_SUITE_PASS",
+  "hosted_ci": {
+    "workflow": "RFC reference suite",
+    "run_number": 351,
+    "run_id": 33273577963,
+    "conclusion": "success"
+  },
   "reference_module": "src/rfc/abe_euler_metric_response.py",
   "reference_tests": "tests/reference/test_rff20_abe_euler_metric_response.py",
   "exact_targets": [
