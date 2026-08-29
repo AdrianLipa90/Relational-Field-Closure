@@ -3,10 +3,20 @@
   "gate": "RF-F14",
   "title": "Noether Energy / Phase-Cell EOS Sector Compatibility Firewall",
   "stack_parent": "a14da535354f30ad8b0b672713863a9734970328",
-  "status": "REFERENCE_IMPLEMENTED_AWAITING_CI",
+  "status": "PASS_BRANCH_REFERENCE_SUITE_CONDITIONAL_PHYSICAL_BINDING",
   "reference_module": "src/rfc/noether_eos_compatibility.py",
   "reference_tests": "tests/reference/test_rff14_noether_eos_compatibility.py",
-  "exact_targets": [
+  "validation": {
+    "focused_tests_defined": 13,
+    "independent_numeric_branch_check": "PASS",
+    "github_actions_workflow": "RFC reference suite",
+    "github_actions_run_number": 323,
+    "github_actions_run_id": 33271113027,
+    "github_actions_job_id": 99149637602,
+    "tested_head": "edd15ec7d47397e11b682a7ac3d4408bcb86582a",
+    "conclusion": "SUCCESS"
+  },
+  "exact_results": [
     "Noether-bound q0 has action type and epsilon_Q=P*omega/q0 has inverse-time type",
     "pure normal phase kinetic branch has w=1 and P/q0=1/2",
     "general isotropic-average microscopic w=(1-x/3-v)/(1+x+v)",
