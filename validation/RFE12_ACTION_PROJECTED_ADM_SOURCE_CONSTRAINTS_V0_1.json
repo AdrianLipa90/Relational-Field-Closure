@@ -1,0 +1,21 @@
+{
+  "schema": "RFC_RFE12_ACTION_PROJECTED_ADM_SOURCE_CONSTRAINTS_V0_1",
+  "status": "EXACT_ACTION_PROJECTION_COMPOSITION_PROJECT_COUPLING_CONDITIONAL",
+  "parents": [
+    "RF_E3_DOUBLE_COPY_EINSTEIN_HILBERT_NORMALIZATION",
+    "RF_E10_GAUSS_CODAZZI_EINSTEIN_TENSOR_PROJECTIONS",
+    "RF_E11_MATTER_PROJECTION_SOURCE_TYPING"
+  ],
+  "base_constraints": {
+    "hamiltonian": "R3 + K^2 - K_ij K^ij = 2 kappa_E rho_n",
+    "momentum": "D_j K^j_i - D_i K = kappa_E j_i"
+  },
+  "dynamic_lambda_branch": {
+    "hamiltonian": "R3 + K^2 - K_ij K^ij - 2 Lambda0 = 2 kappa_E rho_n",
+    "momentum": "D_j K^j_i - D_i K = kappa_E j_i"
+  },
+  "normalization_triangle": "kappa_g^2 = 4 kappa_E; 2/kappa_g^2 = 1/(2 kappa_E)",
+  "action_variation_status": "EXACT_ON_RF_E3_STATED_ACTION",
+  "project_kappa_E_value_status": "CONDITIONAL_RF_E3_PHYSICAL_GATES",
+  "next_gate": "RF_E13_CONSTRAINT_PROPAGATION_AND_BIANCHI_SOURCE_LEDGER"
+}
