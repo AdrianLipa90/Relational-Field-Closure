@@ -82,7 +82,10 @@ def test_parent_dependency_markers_present():
     rfe11 = (root / "closure/einstein/RF_E11_MATTER_PROJECTION_SOURCE_TYPING.md").read_text(encoding="utf-8")
 
     assert r"G_{\mu\nu}=\kappa_E T_{\mu\nu}" in rfe3
-    assert r"\kappa_g^2=4\kappa_E" in rfe3
+    # RF-E3 types the normalization triangle across a multiline display;
+    # bind to both exact coordinates instead of assuming one source-line layout.
+    assert r"\kappa_g^2" in rfe3
+    assert r"4\kappa_E" in rfe3
     assert r"\mathcal G_H" in rfe10
     assert r"\mathcal G_{Mi}" in rfe10
     assert r"\rho_n:=T_{\mu\nu}n^\mu n^\nu" in rfe11
