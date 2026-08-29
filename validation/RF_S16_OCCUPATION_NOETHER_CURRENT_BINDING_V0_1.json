@@ -1,0 +1,39 @@
+{
+  "gate": "RF-S16",
+  "title": "Orbital Occupation to Conserved Noether Current Binding",
+  "version": "0.1",
+  "status": "REFERENCE_IMPLEMENTED_AWAITING_CI",
+  "stack_parent": {
+    "gate": "RF-S15",
+    "head": "504ae049778e9395821ed39395c1c7a55d17a44d",
+    "reference_suite": 281,
+    "conclusion": "success"
+  },
+  "exact_relations": [
+    "j_Q,a=q0*N_a/V_a",
+    "N_a=V_a*j_Q,a/q0",
+    "Q_Sigma=q0*sum_a N_a",
+    "p_Q,a=N_a/sum_b N_b",
+    "Delta_Sigma<=Delta_J on a common cell measure",
+    "rho_G=[B*omega/q0]*(phi+kappa)*j_Q",
+    "epsilon_Q=[B*omega/q0]*(phi+kappa)",
+    "rho_G=epsilon_Q*j_Q",
+    "FULL_TETRA_CP1: j_Q=q0*N*abs(omega)^3/(pi*c^3)"
+  ],
+  "reference_tests": [
+    "cellwise occupation-current exact map",
+    "extensive charge identity",
+    "normalized occupation/current profile identity",
+    "current-to-occupation roundtrip",
+    "zero-defect exact current binding",
+    "equal total charge does not imply local binding",
+    "Delta_Sigma bounded by Delta_J",
+    "generator current-form roundtrip",
+    "fail-closed invalid inputs"
+  ],
+  "open_inputs": [
+    "physical j_Q to j_theta local binding receipt",
+    "physical carrier quantum q0",
+    "physical orbital occupation receipt"
+  ]
+}
