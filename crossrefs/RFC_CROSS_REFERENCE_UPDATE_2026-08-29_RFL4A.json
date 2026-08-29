@@ -1,0 +1,61 @@
+{
+  "schema": "RFC_CROSS_REFERENCE_UPDATE_V1",
+  "date": "2026-08-29",
+  "node": "RF-L4A_SHANNON_FISHER_LOCAL_NORMALIZATION",
+  "status": "STACKED_LOCAL_INFORMATION_GEOMETRY_NORMALIZATION",
+  "pins": {
+    "RFC_RF_L4A": {
+      "repository": "AdrianLipa90/Relational-Field-Closure",
+      "branch": "feat/rfl4a-shannon-fisher-local-normalization-v0.1",
+      "commit": "7d4a78e3b10827a4a08b8570be300dbfd663e96b",
+      "path": "closure/lambda0/RF_L4A_SHANNON_FISHER_LOCAL_NORMALIZATION.md"
+    },
+    "RFC_RF_L4A_TEST": {
+      "repository": "AdrianLipa90/Relational-Field-Closure",
+      "branch": "feat/rfl4a-shannon-fisher-local-normalization-v0.1",
+      "commit": "65cb47f2dda7d1542e0ca5fc8cf67a7708c28bdb",
+      "path": "tests/reference/test_rfl4a_shannon_fisher_local_normalization.py"
+    },
+    "IDT_01C": {
+      "repository": "AdrianLipa90/Informational-Dynamics-of-Time",
+      "branch": "main",
+      "blob_sha": "d8a076679e838308274919237e96657218b4fc97",
+      "path": "formalism/01C_shannon_relative_information_monotonicity.md"
+    },
+    "IDT_01D": {
+      "repository": "AdrianLipa90/Informational-Dynamics-of-Time",
+      "branch": "main",
+      "blob_sha": "5aa10203358014509720c7f2a2b38fce4b2b5113",
+      "path": "formalism/01D_shannon_onsager_response_tensor.md"
+    },
+    "IDT_01K": {
+      "repository": "AdrianLipa90/Informational-Dynamics-of-Time",
+      "branch": "main",
+      "blob_sha": "3763000ac6f94519701e3b4987080c473fceeae9",
+      "path": "formalism/01K_temporal_information_curvature_interface.md"
+    },
+    "IDT_01L4": {
+      "repository": "AdrianLipa90/Informational-Dynamics-of-Time",
+      "branch": "feat/01l4-rfl4a-shannon-fisher-local-normalization-v0.1",
+      "commit": "add400424940d98790521c2e8a4c11216b35d219",
+      "path": "formalism/01L4_rfl4a_shannon_fisher_local_normalization_interface.md"
+    }
+  },
+  "local_exact_relations": {
+    "shannon_hessian": "H_F(pi) = diag(1/pi_a) on the simplex tangent space",
+    "kl_local_expansion": "J_pi = (1/2) s_F^2 + O(||delta p||^3)",
+    "xi_local_expansion": "Xi_I = s_F^2/(2 A_star) + O(||delta p||^3)",
+    "fisher_radial_coordinate": "phi_F = s_F/sqrt(A_star)",
+    "field_normalization": "beta_I = sqrt(2) in the local stationary-reference Fisher sector",
+    "local_xi_metric": "Z_I^RFC = 1/(2 Xi_I)",
+    "mass_relation": "m_I^2 = alpha_I/kappa_E",
+    "coupling_relation": "alpha_I = kappa_E m_I^2"
+  },
+  "open_gates": [
+    "project IDT 01D Onsager response along an admitted Fisher-radial / 01K trajectory",
+    "construct the response-to-Lorentzian-propagation dynamical bridge",
+    "derive or calibrate the physical scalar scale m_I equivalently alpha_I",
+    "extend the local Fisher result to finite-distance/global information geometry",
+    "extend local quadratic stability to nonlinear/global stability"
+  ]
+}
