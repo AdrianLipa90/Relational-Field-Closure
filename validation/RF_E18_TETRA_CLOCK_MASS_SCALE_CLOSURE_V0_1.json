@@ -1,14 +1,16 @@
 {
   "schema": "RFC_RF_E18_TETRA_CLOCK_MASS_SCALE_CLOSURE_V0_1",
-  "status": "CANDIDATE_PENDING_HOSTED_CI_AND_TIR_PARENT_PROMOTION",
+  "status": "CANDIDATE_PENDING_HOSTED_CI_WITH_TIR_PARENT_PROMOTED",
   "parents": [
     "RF-E17 clock-information scalar action potential",
     "RF-L4A Shannon-Fisher mass normalization",
     "IDT 01L phase-clock length",
     "TIR PR #104 tetra FS/spatial shape crosswalk"
   ],
-  "tir_parent_head": "ea4bfd74e803e00c27d14499d88d7f48b442310a",
-  "tir_parent_promotion": "PENDING_FULL_CI_AND_MERGE",
+  "tir_parent_candidate_head": "ea4bfd74e803e00c27d14499d88d7f48b442310a",
+  "tir_parent_merge_commit": "267a6c2022237fcc49284788d7d25c0c3580ff68",
+  "tir_parent_validation": "7_OF_7_HOSTED_WORKFLOWS_SUCCESS",
+  "tir_parent_promotion": "PASS_PROMOTED_TO_MAIN",
   "shape_coefficient": "C=8/(9 sqrt(3) pi)=64 kappa/(3 sqrt(3) ln2)",
   "scale_ratio": "q_s=ell_s/ell_phi",
   "coupling_ratio": "r_alpha=alpha_clk/alpha_I",
