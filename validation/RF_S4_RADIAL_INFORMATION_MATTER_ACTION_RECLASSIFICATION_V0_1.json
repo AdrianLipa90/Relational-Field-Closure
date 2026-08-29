@@ -2,7 +2,7 @@
   "schema": "RFC_VALIDATION_RECEIPT_V0_1",
   "gate": "RF-S4",
   "title": "Radial Information / Matter Action Reclassification",
-  "status": "REFERENCE_CANDIDATE_PENDING_HOSTED_CI",
+  "status": "REFERENCE_PASS / HOSTED_CI_PASS",
   "parent_rfc_main": "acb5b7fb55f269ef0c29b79429558be7531ab3fa",
   "parents": [
     "RF-E6 canonical complex matter action and polar phase sector",
@@ -39,7 +39,9 @@
   "reference_tests": "tests/reference/test_rfs4_radial_information_matter_action_reclassification.py",
   "hosted_ci": {
     "workflow": "RFC reference suite",
-    "run": null,
-    "conclusion": "PENDING"
-  }
+    "run": 259,
+    "tested_head": "b011be50c9bd10250e3c7fc670d39ed4938010b7",
+    "conclusion": "SUCCESS"
+  },
+  "post_ci_delta": "receipt bookkeeping only; exact-head rerun required before merge"
 }
