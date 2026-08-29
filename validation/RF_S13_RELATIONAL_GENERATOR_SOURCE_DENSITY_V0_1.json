@@ -1,0 +1,50 @@
+{
+  "gate": "RF-S13",
+  "title": "Relational Generator Source-Density Binding",
+  "version": "0.1",
+  "status": "REFERENCE_IMPLEMENTED_AWAITING_CI",
+  "stack_parent": {
+    "gate": "RF-S12",
+    "head": "7cd1ade094db2379c9d76b75819007451a84628e",
+    "reference_suite": 278,
+    "conclusion": "success"
+  },
+  "canonical_generator": "[B(t)*omega(t)*N(t)/(A(t)*R(t))]*(phi(t)+kappa)",
+  "kappa": "ln(2)/(24*pi)",
+  "typed_source_branch": {
+    "B": "action [J s]",
+    "omega": "angular phase rate [s^-1]",
+    "N": "dimensionless occupation",
+    "A": "area [m^2]",
+    "R": "radial length [m]",
+    "phi_plus_kappa": "dimensionless",
+    "AR": "relational cell volume [m^3]",
+    "epsilon_Psi": "B*omega*(phi+kappa) [J]",
+    "rho_E": "N*epsilon_Psi/(A*R) [J m^-3]",
+    "rho_m": "rho_E/c^2 [kg m^-3]"
+  },
+  "exact_crosswalks": [
+    "rho_E = [B*omega*N/(A*R)]*(phi+kappa)",
+    "S_R = 4*pi*G*rho_E/c^4 = (kappa_E/2)*rho_E",
+    "c^2*S_R = 4*pi*G*rho_m",
+    "B*(phi+kappa)=q_A/2 on the RFC half-rate carrier branch",
+    "B*(phi+kappa)=hbar/2 selects the RF-E5 kinetic carrier-energy surface",
+    "B*(phi+kappa)=hbar selects the RF-E5 total on-shell carrier-energy surface"
+  ],
+  "reference_tests": [
+    "canonical kappa",
+    "exact generator factorization",
+    "occupation/area/radius scaling",
+    "signed-generator preservation and positive-source typing",
+    "Newton-Einstein source normalization identity",
+    "RFC half-rate action normalization",
+    "fail-closed invalid inputs"
+  ],
+  "open_inputs": [
+    "physical B-action realization",
+    "physical occupation/current receipt",
+    "physical AR cell-volume receipt",
+    "RF-E5 physical carrier-observable selection",
+    "absolute project-side kappa_E/G promotion"
+  ]
+}
