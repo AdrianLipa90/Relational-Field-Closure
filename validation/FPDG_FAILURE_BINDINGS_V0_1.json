@@ -42,7 +42,14 @@
     "tests/reference/test_rfe7_total_scalar_stress_energy_composition.py": {
       "claim_id": "RFC.E7.SCALAR_T_DECOMPOSITION",
       "claim_source": "formalism/DEPENDENCY_GRAPH.md",
-      "binding_evidence": "the source-owned test directly checks exact polar kinetic decomposition, total scalar stress-energy recomposition, gauge invariance, homogeneous E4/E5 limits, neutral gravitational sourcing and exact Einstein source ledger composition"
+      "binding_evidence": "the source-owned test module checks exact polar kinetic decomposition, total scalar stress-energy recomposition, gauge invariance, homogeneous E4/E5 limits, neutral gravitational sourcing and exact Einstein source ledger composition",
+      "test_claim_overrides": {
+        "test_einstein_source_ledger_is_exact_tensor_sum": {
+          "claim_id": "RFC.MATTER.SCALAR_TMN",
+          "claim_source": "closure/einstein/RF_E7_TOTAL_SCALAR_STRESS_ENERGY_COMPOSITION.md",
+          "binding_evidence": "RF-E7 section 9 closes the admitted single-complex-scalar total matter tensor and section 10 defines the Einstein source ledger; this exact test checks the total Einstein source tensor ledger as EM plus scalar-total"
+        }
+      }
     },
     "tests/reference/test_rfl1_oriented_holonomy_identities.py": {
       "claim_id": "RFC.L1.LAMBDA_TARGET",
