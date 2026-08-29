@@ -1,0 +1,33 @@
+{
+  "gate": "RF-S17",
+  "title": "Carrier-Normalization Invariance",
+  "version": "0.1",
+  "status": "REFERENCE_IMPLEMENTED_AWAITING_CI",
+  "stack_parent": {
+    "gate": "RF-S16",
+    "head": "71d4762a5a1396d75a8db5454db56ec4c0998319",
+    "reference_suite": 282,
+    "conclusion": "success"
+  },
+  "exact_relations": [
+    "q0' = lambda*q0",
+    "j_Q' = lambda*j_Q",
+    "epsilon_Q' = epsilon_Q/lambda",
+    "Q_Sigma' = lambda*Q_Sigma",
+    "epsilon_Q'*j_Q' = epsilon_Q*j_Q = rho_G",
+    "p_Q' = p_Q = p_N",
+    "rho_G=(N/V_R)*epsilon_occ is independent of q0"
+  ],
+  "reference_tests": [
+    "global carrier rescaling",
+    "energy-density invariance",
+    "occupation-density times per-occupied-carrier energy",
+    "profile invariance",
+    "composition of rescalings",
+    "fail-closed invalid inputs"
+  ],
+  "open_inputs": [
+    "absolute physical current-charge unit when independently required",
+    "physical local current/profile receipt"
+  ]
+}
