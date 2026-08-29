@@ -1,0 +1,62 @@
+{
+  "gate": "RF-F0-F9",
+  "title": "Foundational Relational Phase-Source Formalization Spine",
+  "version": "0.1",
+  "status": "REFERENCE_IMPLEMENTED_AWAITING_CI",
+  "canonical_kappa": "ln(2)/(24*pi)",
+  "canonical_connection_bridge": {
+    "RF01_RFM0": "A_plus=-i<u|du>, A_plus' = A_plus + d lambda",
+    "RFN1B2M": "A_minus=+i<u|du>=-A_plus, A_minus' = A_minus - d lambda",
+    "invariant_phase_one_form": "Dtheta=dtheta+A_minus=dtheta-A_plus"
+  },
+  "canonical_relational_phase": "Phi_C=theta(x)-theta(x_ref)+integral_C A_minus",
+  "exact_relations": [
+    "Phi_C is invariant under theta->theta+lambda and A_minus->A_minus-dlambda",
+    "Phi_C(C1)-Phi_C(C2)=closed-loop A_minus line integral",
+    "sum_k exp(i(Phi_C+2*pi*k/3))=0",
+    "omega=u^mu D_mu theta",
+    "V_R=a_FS*c^3/abs(omega)^3",
+    "n=N/V_R",
+    "epsilon_G=B*omega*(Phi_C+kappa)",
+    "S_Phi=(B/2)*(Phi_C+kappa)^2",
+    "epsilon_G=dS_Phi/dtau-(Bdot/2)*(Phi_C+kappa)^2",
+    "rho_G=n*epsilon_G=B*(Phi_C+kappa)*J^mu*D_mu theta",
+    "T_mn=epsilon_G*J_m*J_n/n on the dust branch",
+    "nabla^mu T_mn=n*(epsilon_dot*u_n+epsilon*a_n) for conserved J",
+    "w=q_epsilon/3 on the separately-conserved comoving phase-cell perfect-fluid branch",
+    "dln[B(Phi_C+kappa)]/dln|omega|=3w-1",
+    "rho_G scales as |omega|^(3(1+w)) on the same branch"
+  ],
+  "eos_scaling_surfaces": {
+    "dust": "w=0 -> B(Phi_C+kappa) proportional to |omega|^-1",
+    "radiation_like": "w=1/3 -> B(Phi_C+kappa) proportional to |omega|^0",
+    "vacuum_like": "w=-1 -> B(Phi_C+kappa) proportional to |omega|^-4"
+  },
+  "reference_tests": [
+    "canonical kappa",
+    "Berry/phase connection sign bridge",
+    "Wilson-line-dressed relational-phase gauge invariance",
+    "path holonomy difference",
+    "projective Euler closure",
+    "Euler-root triad closure",
+    "RF-S15 phase-cell geometry",
+    "constant-B phase-action rate identity",
+    "variable-B action-rate correction",
+    "exact recovery of RF-S13 generator",
+    "omega^4 state-family scaling",
+    "timelike-current proper density and dust tensor",
+    "dust divergence balance",
+    "EOS q/3 theorem",
+    "dust/radiation/vacuum prefactor slopes",
+    "perfect-fluid density scaling exponents",
+    "phase-rate/expansion continuity",
+    "fail-closed invalid inputs"
+  ],
+  "physical_open_inputs": [
+    "B-action realization",
+    "current/measure receipt",
+    "EOS/pressure receipt",
+    "common phase path/reference realization",
+    "absolute project-side kappa_E/G promotion"
+  ]
+}
