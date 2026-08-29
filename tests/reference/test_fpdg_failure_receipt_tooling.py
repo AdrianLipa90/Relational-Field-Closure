@@ -96,6 +96,15 @@ def test_matter_action_chain_failures_map_to_exact_fpdg_claims():
         _assert_exact_mapping(path, test_name, expected_claim)
 
 
+def test_scalar_total_matter_uses_exact_per_test_override():
+    _assert_exact_mapping(
+        "tests/reference/test_rfe7_total_scalar_stress_energy_composition.py",
+        "test_einstein_source_ledger_is_exact_tensor_sum",
+        "RFC.MATTER.SCALAR_TMN",
+        "closure/einstein/RF_E7_TOTAL_SCALAR_STRESS_ENERGY_COMPOSITION.md",
+    )
+
+
 def test_lambda_chain_failures_map_to_exact_fpdg_claims():
     cases = (
         (
