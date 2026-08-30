@@ -1,6 +1,6 @@
 {
   "schema": "RF_L6_VARIABLE_LAPSE_CURVED_COVARIANT_PROPAGATION_V0_1",
-  "status": "CANDIDATE_PENDING_EXACT_HEAD_CI",
+  "status": "PASS_SOURCE_HEAD_AFTER_IMPORT_PATH_REPAIR",
   "source_lock": {
     "TIR_main": "3f5a08ef04ec53c1a155263d23e8b10a96404370",
     "IDT_main": "84ce1886175af872ae4a56ba36f7e106d8e23635",
@@ -23,12 +23,29 @@
     "RF-L5A local affine Klein-Gordon limit",
     "constant-coefficient shift dispersion"
   ],
+  "failure_history": [
+    {
+      "tested_commit": "3020634309ea649ff6dfa551cc56da314b3c967a",
+      "workflow_run_id": 33326757083,
+      "workflow_job_id": 99298164401,
+      "conclusion": "FAIL",
+      "failure_artifact_id": 9736449413,
+      "failure_artifact_digest": "sha256:85708c0bc1e2e97cf14533b8247d6eb7f70afe4421c56c9f4ef4a690820457b3",
+      "failure": "pytest collection import path: ModuleNotFoundError for rfc",
+      "repair": "aligned test import with repository convention: src.rfc"
+    }
+  ],
+  "validation_receipt": {
+    "tested_commit": "f44f84cb2ee949a4960b4bcdf6fda0deedbec554",
+    "workflow_run_id": 33326839092,
+    "workflow_job_id": 99298382414,
+    "conclusion": "SUCCESS"
+  },
   "open_after_gate": [
     "global hyperbolicity and boundary-value well-posedness",
     "physical alpha_I/m_I scale selection",
     "independent phase-clock spectral match",
     "spatial cell calibration"
   ],
-  "expected_verdict": "PASS_RF_L6_VARIABLE_LAPSE_CURVED_COVARIANT_PROPAGATION",
-  "ci_verdict": "PENDING"
+  "verdict": "PASS_RF_L6_VARIABLE_LAPSE_CURVED_COVARIANT_PROPAGATION"
 }
