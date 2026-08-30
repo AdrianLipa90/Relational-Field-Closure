@@ -1,0 +1,24 @@
+{
+  "schema": "TIR_IDT_RFC_DIMENSION_CLOSURE_V0_7",
+  "status": "CANDIDATE_ONLY",
+  "canon_promotion": false,
+  "theorem_status": "EXACT_LOCAL_CARRIER_DIMENSION_THEOREM",
+  "dimension": {
+    "spatial_rank": 3,
+    "temporal_rank": 1,
+    "direct_sum_rank": 4,
+    "primitive_hermitian_upper_bound": 4,
+    "closed_dimension": 4
+  },
+  "dependencies": {
+    "TIR_spatial_carrier": "Herm_0(2)",
+    "IDT_temporal_uniqueness": "T(X)=alpha*Tr(X), alpha>0",
+    "RFC_transversality": "dual evaluation matrix I4"
+  },
+  "reference_validation": {
+    "RFC_premetric_transversality": "8 passed in 0.08s",
+    "IDT_temporal_trace_uniqueness": "7 passed in 0.08s",
+    "hosted_ci_authority": false
+  },
+  "downstream": "PHYSICAL_SPACETIME_SOLDERING_AND_FIELD_REALIZATION"
+}
