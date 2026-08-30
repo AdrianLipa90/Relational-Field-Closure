@@ -2,7 +2,7 @@ import math
 
 import pytest
 
-from rfc.shared_spacetime_atlas import (
+from src.rfc.shared_spacetime_atlas import (
     ADMPatch,
     AtlasOverlap,
     SharedSpacetimeAtlasError,
