@@ -1,0 +1,41 @@
+{
+  "schema": "RF_E21_EINSTEIN_UNIQUENESS_SELECTION_V0_1",
+  "status": "PASS_RF_E21_SELECTION_THEOREM_WITH_PROJECT_PREMISES_OPEN",
+  "authority": "FAIL_CLOSED_REFERENCE_GATE",
+  "mathematical_selection": {
+    "tensor_lovelock_4d": "PASS_ON_DECLARED_STANDARD_THEOREM_PREMISES",
+    "action_lovelock_4d": "PASS_CROSSCHECK_ON_ACTION_PREMISE",
+    "four_dimensional_spectrum": {
+      "0": "DYNAMIC_COSMOLOGICAL",
+      "1": "DYNAMIC_RICCI_SCALAR",
+      "2": "TOPOLOGICAL_GAUSS_BONNET",
+      "3_plus": "ZERO"
+    },
+    "selected_tensor_form": "A*G_mn+B*g_mn"
+  },
+  "project_premises": {
+    "local_rank3_spatial_carrier": "PASS_LOCAL_CARRIER",
+    "temporal_orientation": "PASS_PARENT_IDT",
+    "lorentzian_signature": "PASS_THEOREM_ON_CARRIER",
+    "positive_lapse_adm_metric": "PASS_KINEMATIC",
+    "local_metric_torsion_free_connection": "PASS_LOCAL_ON_REFERENCE_TORSION_FREE_SURFACE",
+    "global_refinement_levi_civita": "OPEN",
+    "full_4d_naturality_covariance": "OPEN",
+    "second_order_locality": "OPEN",
+    "divergence_free_selection_binding": "OPEN_SELECTION_BINDING",
+    "rf_e3_coupling_normalization": "PASS_ALGEBRA_PHYSICAL_VALUE_CONDITIONAL"
+  },
+  "hkt_independent_route": {
+    "spatial_metric_hij": "PRESENT",
+    "lapse_N": "PRESENT",
+    "shift_bi": "PRESENT_TYPED_INPUT",
+    "independent_gravitational_piij": "OPEN",
+    "independent_hypersurface_deformation_algebra": "OPEN",
+    "independent_hkt_crosscheck": "OPEN"
+  },
+  "promotion": {
+    "einstein_tensor_form_project_promoted": false,
+    "full_gr_derived": false,
+    "next_gate": "GLOBAL_LEVI_CIVITA_PLUS_4D_NATURALITY_PLUS_SECOND_ORDER_LOCALITY"
+  }
+}
