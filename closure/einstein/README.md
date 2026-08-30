@@ -18,8 +18,10 @@ Current gates:
 14. double-copy ↔ Einstein normalization `kappa_E=kappa_g^2/4` — **EXACT**;
 15. Einstein–Hilbert prefactor `2/kappa_g^2=1/(2kappa_E)` — **PASS at RF-E3**;
 16. dynamic `Lambda0` Bianchi transfer identity — **EXACT**;
-17. multispecies/additional matter composition — **OPEN**;
-18. dynamic-`Lambda0` independent action and stability gate — **NEXT ACTION FRONTIER**.
+17. TIR×IDT ADM four-coframe assembly — **PASS at RF-E8**;
+18. minimal Cartan–Palatini bulk action selection — **CONDITIONAL EXACT at RF-E21**;
+19. multispecies/additional matter composition — **OPEN**;
+20. dynamic-`Lambda0` independent action and stability gate — **NEXT ACTION FRONTIER**.
 
 ## Canonical matter/source chain
 
@@ -189,14 +191,44 @@ and in natural units
 \boxed{\kappa_E=8\pi G=\frac{\kappa_g^2}{4}.}
 \]
 
+## RF-E21 action-form selection
+
+RF-E8 assembles the Lorentzian four-coframe from the TIR spatial coframe and IDT positive lapse. RF-E21 then restricts the local gravitational bulk action to the declared minimal Cartan class. Four-form degree counting and Lorentz/orientation covariance select
+
+\[
+\boxed{
+\epsilon_{ABCD}E^A\wedge E^B\wedge R^{CD}
+}
+\]
+
+for the curvature term and
+
+\[
+\boxed{
+\epsilon_{ABCD}E^A\wedge E^B\wedge E^C\wedge E^D
+}
+\]
+
+for the volume term. On the torsion-free branch the resulting Cartan–Palatini action is exactly the metric Einstein–Hilbert action used by RF-E3,
+
+\[
+\boxed{
+S_g=\frac1{2\kappa_E}\int d^4x\sqrt{-g}(R-2\Lambda).
+}
+\]
+
+RF-E3 remains the normalization owner; RF-E21 owns the conditional action-form selection.
+
 ## Validation
 
 RF-E6 correction authority: PR #16, final run `33207702078`, job `98972879666`, **470/470 PASS**.
 
 RF-E7 stacked gate: PR #17, tested commit `904d641948b48ca564dbbfb38a9442e7ca6ab078`, run `33207870117`, job `98973459240`, **479/479 PASS**.
 
+RF-E21 reference target: `PASS_RF_E21_CARTAN_PALATINI_EINSTEIN_HILBERT_SELECTION`; exact-head CI receipt is owned by its feature PR.
+
 ## Current frontier
 
-The single-complex-scalar matter tensor is now composed exactly. The remaining matter-composition gate concerns additional independently admitted species/sectors. The next action-level Einstein gate is the independent dynamic-`Lambda0` action and stability closure, while the parallel coupling line continues through physical `G` universality.
+The Einstein–Hilbert bulk form now has an explicit conditional selection theorem from the TIR×IDT four-coframe rather than a free action-form insertion. The remaining matter-composition gate concerns additional independently admitted species/sectors. The next action-level Einstein gate is the independent dynamic-`Lambda0` action and stability closure, while the parallel coupling line continues through physical `G` universality and primitive promotion of the RF-E21 action-class assumptions.
 
-**Current status:** `GEOMETRIC_SPINE_PRESENT / AB_MAXWELL_PRESENT / RF_E6_LORENTZIAN_ACTION_PASS / RF_E7_SINGLE_SCALAR_TOTAL_MATTER_PASS / MU_STAR_UNIT_BINDING_AVAILABLE / MULTISPECIES_G_UNIVERSALITY_AND_DYNAMIC_LAMBDA_PROMOTION_OPEN`.
+**Current status:** `GEOMETRIC_SPINE_PRESENT / TIR_IDT_4COFRAME_PASS / CARTAN_PALATINI_EH_SELECTION_CONDITIONAL_EXACT / AB_MAXWELL_PRESENT / RF_E6_LORENTZIAN_ACTION_PASS / RF_E7_SINGLE_SCALAR_TOTAL_MATTER_PASS / MULTISPECIES_G_UNIVERSALITY_DYNAMIC_LAMBDA_AND_PRIMITIVE_ACTION_ASSUMPTION_PROMOTION_OPEN`.
