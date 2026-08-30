@@ -20,8 +20,14 @@ Current gates:
 16. dynamic `Lambda0` Bianchi transfer identity — **EXACT**;
 17. TIR×IDT ADM four-coframe assembly — **PASS at RF-E8**;
 18. minimal Cartan–Palatini bulk action selection — **CONDITIONAL EXACT at RF-E21**;
-19. multispecies/additional matter composition — **OPEN**;
-20. dynamic-`Lambda0` independent action and stability gate — **NEXT ACTION FRONTIER**.
+19. dynamic-`Lambda0` independent scalar action / stability — **PASS at RF-L2**;
+20. information-scalar potential reconstruction — **PASS CONDITIONAL at RF-L3**;
+21. local Fisher normalization / canonical pullback — **PASS at RF-L4/RF-L4A**;
+22. Shannon–Onsager Temporal Wave graph/operator bridge — **PASS at RF-L5**;
+23. premetric-to-physical light-cone and mass-frequency calibration firewall — **EXACT GIVEN CALIBRATION at RF-L5A**;
+24. tetra/phase-clock mass-scale composition — **EXACT SCALE COMPOSITION at RF-E20; physical bindings OPEN**;
+25. multispecies/additional matter composition — **OPEN**;
+26. primitive promotion of the RF-E21 action-class assumptions — **OPEN**.
 
 ## Canonical matter/source chain
 
@@ -219,16 +225,59 @@ S_g=\frac1{2\kappa_E}\int d^4x\sqrt{-g}(R-2\Lambda).
 
 RF-E3 remains the normalization owner; RF-E21 owns the conditional action-form selection.
 
+## Dynamic Lambda / information-scale chain
+
+The action-level variable vacuum sector is already carried by RF-L2,
+
+\[
+\boxed{\Lambda_0=\Lambda_{ref}+\kappa_EU_L(\phi_L),}
+\]
+
+with exact on-shell Bianchi transfer. RF-L3 through RF-L5A then connect the IDT information curvature and Temporal Wave coordinates to the physical scalar chart. The current exact calibration identities include
+
+\[
+\boxed{m_I^2=\frac{\alpha_I}{\kappa_E}}
+\]
+
+and
+
+\[
+\boxed{
+M_{eff}\frac{\Gamma_x^2}{\Gamma_t^2}=c^2,
+\qquad
+\mu_\lambda^2=\Gamma_t^2c^2m_I^2.
+}
+\]
+
+RF-E20 adds the tetra/phase-clock scale-composition equation
+
+\[
+\boxed{
+r_\alpha q_s^3
+=r_m\mu_\varphi\frac{9\sqrt3\pi}{8}.
+}
+\]
+
+These relations move the active frontier from action existence to physical scale binding and curved variable-lapse propagation.
+
 ## Validation
 
 RF-E6 correction authority: PR #16, final run `33207702078`, job `98972879666`, **470/470 PASS**.
 
 RF-E7 stacked gate: PR #17, tested commit `904d641948b48ca564dbbfb38a9442e7ca6ab078`, run `33207870117`, job `98973459240`, **479/479 PASS**.
 
-RF-E21 reference target: `PASS_RF_E21_CARTAN_PALATINI_EINSTEIN_HILBERT_SELECTION`; exact-head CI receipt is owned by its feature PR.
+RF-L2 authority: tested commit `38c9589608abe77bdcf05d46e997731ef5d6e430`, run `33208242527`, job `98974734417`, **489/489 PASS**.
+
+RF-L4 authority: tested head `99621c0848b36ef93cd6c41e9f3d88be3023cb1a`, run `33245133095`, job `99081186401`, **522/522 PASS**.
+
+RF-L4A authority: tested head `7fcedd30a1ba59ae82750eb6b5f89b9e3288d162`, run `33245318290`, job `99081667619`, **543/543 PASS**.
+
+RF-L5 graph/operator authority: tested head `ceac4269a9944e1a17d3a9321ab5d7975a4ce15d`, run `33245513490`, job `99082170070`, **561/561 PASS**.
+
+RF-E21 first exact-head regression: commit `225327b4d9c74161ab0bc5ed3c1a229a0b246b66`, run `33326298999`, job `99296909792`, **SUCCESS**. The final synchronized feature head requires its own exact-head receipt.
 
 ## Current frontier
 
-The Einstein–Hilbert bulk form now has an explicit conditional selection theorem from the TIR×IDT four-coframe rather than a free action-form insertion. The remaining matter-composition gate concerns additional independently admitted species/sectors. The next action-level Einstein gate is the independent dynamic-`Lambda0` action and stability closure, while the parallel coupling line continues through physical `G` universality and primitive promotion of the RF-E21 action-class assumptions.
+The Einstein–Hilbert bulk form now has an explicit conditional selection theorem from the TIR×IDT four-coframe. The dynamic information-vacuum action and its local information-field reconstruction are already present downstream. The active closure coordinates are now the RF-L5A variable-`N_R` curved covariant extension, independent physical phase-clock spectral matching, spatial cell/length calibration, RF-E20 physical scale bindings, multispecies matter composition, physical `G` universality, global/nonlinear information-field stability, and primitive promotion of the RF-E21 action-class assumptions.
 
-**Current status:** `GEOMETRIC_SPINE_PRESENT / TIR_IDT_4COFRAME_PASS / CARTAN_PALATINI_EH_SELECTION_CONDITIONAL_EXACT / AB_MAXWELL_PRESENT / RF_E6_LORENTZIAN_ACTION_PASS / RF_E7_SINGLE_SCALAR_TOTAL_MATTER_PASS / MULTISPECIES_G_UNIVERSALITY_DYNAMIC_LAMBDA_AND_PRIMITIVE_ACTION_ASSUMPTION_PROMOTION_OPEN`.
+**Current status:** `GEOMETRIC_SPINE_PRESENT / TIR_IDT_4COFRAME_PASS / CARTAN_PALATINI_EH_SELECTION_CONDITIONAL_EXACT / ADM_CONSTRAINT_EVOLUTION_BIANCHI_PRESENT / RF_L2_DYNAMIC_ACTION_PASS / RF_L3_L4_L4A_INFORMATION_PULLBACK_PRESENT / RF_L5_GRAPH_OPERATOR_PASS / RF_L5A_PHYSICAL_CALIBRATION_FIREWALL_PRESENT / RF_E20_SCALE_COMPOSITION_PRESENT / PHYSICAL_SCALE_BINDINGS_VARIABLE_LAPSE_COVARIANT_EXTENSION_MULTISPECIES_G_UNIVERSALITY_GLOBAL_STABILITY_AND_PRIMITIVE_ACTION_PROMOTION_OPEN`.

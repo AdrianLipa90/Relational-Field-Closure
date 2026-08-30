@@ -72,3 +72,20 @@ def test_parent_chain_markers_remain_present():
     assert r"G_{\mu\nu}=\kappa_E T_{\mu\nu}" in e3
     assert r"\mathcal G_H=2\kappa_E\rho_n" in e12
     assert "Bianchi" in e13
+
+
+def test_downstream_lambda_and_scale_ledger_is_not_regressed():
+    root = Path(__file__).resolve().parents[2]
+    l2 = (root / "closure/lambda0/RF_L2_DYNAMIC_LAMBDA0_ACTION_REALIZABILITY_STABILITY.md").read_text(encoding="utf-8")
+    l4a = (root / "closure/lambda0/RF_L4A_SHANNON_FISHER_LOCAL_NORMALIZATION.md").read_text(encoding="utf-8")
+    l5a = (root / "closure/lambda0/RF_L5A_PREMETRIC_DIMENSIONAL_CALIBRATION_FIREWALL.md").read_text(encoding="utf-8")
+    e20 = (root / "closure/einstein/RF_E20_TETRA_CLOCK_MASS_SCALE_CLOSURE.md").read_text(encoding="utf-8")
+    readme = (root / "closure/einstein/README.md").read_text(encoding="utf-8")
+
+    assert r"\Lambda_0(x):=\Lambda_{ref}+\kappa_EU_L" in l2
+    assert r"\beta_I=\sqrt2" in l4a
+    assert r"m_I^2=\frac{\alpha_I}{\kappa_E}" in l5a
+    assert r"r_\alpha q_s^3" in e20
+    assert "RF-L2" in readme
+    assert "RF-L5A" in readme
+    assert "RF-E20" in readme

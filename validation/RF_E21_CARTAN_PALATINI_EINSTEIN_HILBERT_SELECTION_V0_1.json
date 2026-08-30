@@ -1,6 +1,6 @@
 {
   "schema": "RF_E21_CARTAN_PALATINI_EINSTEIN_HILBERT_SELECTION_V0_1",
-  "status": "CANDIDATE_PENDING_EXACT_HEAD_CI",
+  "status": "SYNCHRONIZED_CANDIDATE_PENDING_FINAL_EXACT_HEAD_CI",
   "source_lock": {
     "TIR_main": "3f5a08ef04ec53c1a155263d23e8b10a96404370",
     "IDT_main": "84ce1886175af872ae4a56ba36f7e106d8e23635",
@@ -27,6 +27,20 @@
     "metric_cosmological_density_prefactor": "-Lambda/kappa_E",
     "RF_E3_triangle": "kappa_g^2 = 4 kappa_E = 32 pi G"
   },
+  "downstream_sync": {
+    "RF_L2": "dynamic Lambda0 scalar action and Bianchi transfer present",
+    "RF_L3": "information scalar potential reconstruction present",
+    "RF_L4A": "local Fisher normalization present",
+    "RF_L5": "Shannon-Onsager Temporal Wave graph/operator bridge present",
+    "RF_L5A": "premetric-to-physical calibration firewall present",
+    "RF_E20": "tetra/phase-clock exact scale composition present"
+  },
+  "preliminary_ci_receipt": {
+    "tested_commit": "225327b4d9c74161ab0bc5ed3c1a229a0b246b66",
+    "workflow_run_id": 33326298999,
+    "workflow_job_id": 99296909792,
+    "conclusion": "SUCCESS"
+  },
   "expected_verdict": "PASS_RF_E21_CARTAN_PALATINI_EINSTEIN_HILBERT_SELECTION",
-  "ci_verdict": "PENDING"
+  "ci_verdict": "PENDING_FINAL_SYNCHRONIZED_HEAD"
 }

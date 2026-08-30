@@ -1,6 +1,6 @@
 # RF-E21 — Cartan–Palatini Einstein–Hilbert Selection
 
-Status: `EXACT_CONDITIONAL_ACTION_FORM_SELECTION / TORSION_FREE_VARIATION_PASS / RF_E3_NORMALIZATION_REUSED / PRIMITIVE_ASSUMPTION_PROMOTION_OPEN`
+Status: `EXACT_CONDITIONAL_ACTION_FORM_SELECTION / TORSION_FREE_VARIATION_PASS / RF_E3_NORMALIZATION_REUSED / RF_L2_TO_L5A_DOWNSTREAM_SYNCED / PRIMITIVE_ASSUMPTION_PROMOTION_OPEN`
 
 ## 1. Purpose
 
@@ -28,6 +28,10 @@ RFC formalism/RF02I_HEXAHEDRAL_COFRAME_CONNECTION.md
 RFC closure/einstein/RF_E3_DOUBLE_COPY_EINSTEIN_HILBERT_NORMALIZATION.md
 RFC closure/einstein/RF_E12_ACTION_PROJECTED_ADM_SOURCE_CONSTRAINTS.md
 RFC closure/einstein/RF_E13_CONSTRAINT_PROPAGATION_BIANCHI_LEDGER.md
+RFC closure/lambda0/RF_L2_DYNAMIC_LAMBDA0_ACTION_REALIZABILITY_STABILITY.md
+RFC closure/lambda0/RF_L4A_SHANNON_FISHER_LOCAL_NORMALIZATION.md
+RFC closure/lambda0/RF_L5A_PREMETRIC_DIMENSIONAL_CALIBRATION_FIREWALL.md
+RFC closure/einstein/RF_E20_TETRA_CLOCK_MASS_SCALE_CLOSURE.md
 ```
 
 ## 3. TIR×IDT four-coframe
@@ -291,17 +295,60 @@ RF-E13
 
 The previous `Define S_EH` step is replaced by the explicit RF-E21 action-selection theorem inside its declared structural domain.
 
-## 10. Dynamic Lambda boundary
+## 10. Dynamic Lambda and information-scale handoff
 
 For constant `Lambda`, the selected volume term gives the standard cosmological contribution.
 
-For the RFC information-driven scalar coordinate `Lambda0(x)`, the metric-side insertion
+The variable information-driven sector is already represented downstream by the promoted RFC Lambda chain. RF-L2 supplies an independent generally covariant scalar action and defines
 
 \[
-\frac1{2\kappa_E}\int\sqrt{-g}\,[R-2\Lambda_0(x)]\,d^4x
+\boxed{
+\Lambda_0(x)=\Lambda_{ref}+\kappa_EU_L(\phi_L(x)),
+}
 \]
 
-is already recorded by RF-E3. An independently varied dynamic `Lambda0` requires its own kinetic/source/stability action and remains the dedicated Lambda-sector frontier.
+with exact on-shell Bianchi transfer, stationary vacuum limit and local linear stability criterion. RF-L3 reconstructs the information contribution through
+
+\[
+\boxed{
+\Delta\Lambda_I=\alpha_I\Xi_I,
+\qquad
+U_I=\frac{\alpha_I}{\kappa_E}\Xi_I.
+}
+\]
+
+RF-L4 and RF-L4A supply the canonical local information-field pullback and Fisher normalization. In the stationary-reference Fisher sector,
+
+\[
+\boxed{
+\beta_I=\sqrt2,
+\qquad
+m_I^2=\frac{\alpha_I}{\kappa_E}.
+}
+\]
+
+RF-L5 transfers the Shannon–Onsager response into the Temporal Wave graph/operator equation. RF-L5A then separates the premetric ordering-coordinate spectrum from physical spacetime calibration and derives
+
+\[
+\boxed{
+M_{eff}\frac{\Gamma_x^2}{\Gamma_t^2}=c^2,
+\qquad
+\mu_\lambda^2=\Gamma_t^2c^2m_I^2,
+}
+\]
+
+with `Gamma_t=T_ref phi_ref` on the fixed-reference IDT 05C clock patch.
+
+RF-E20 independently composes the tetrahedral FS/spatial crosswalk with the clock-information action scale and obtains the dimensionless scale relation
+
+\[
+\boxed{
+r_\alpha q_s^3
+=r_m\mu_\varphi\frac{9\sqrt3\pi}{8}.
+}
+\]
+
+The active frontier is therefore the physical promotion of these scale coordinates and the curved variable-lapse extension: spatial cell calibration, independently identified phase-clock spectral matching, physical `alpha_I/m_I` calibration, the RF-E20 `r_alpha/q_s/mu_phi/r_m` bindings, and global/nonlinear information-field stability.
 
 ## 11. Claim ledger
 
@@ -317,8 +364,15 @@ is already recorded by RF-E3. An independently varied dynamic `Lambda0` requires
 | metric equation `G+Lambda g=kappa_E T` | EXACT VARIATION RESULT |
 | `kappa_E` normalization | PARENT RF-E3 |
 | ADM projection and propagation | PARENT RF-E12/RF-E13 |
-| primitive derivation of all action-class assumptions | OPEN PROMOTION PROGRAM |
-| dynamical `Lambda0` action | OPEN LAMBDA-SECTOR GATE |
+| dynamic `Lambda0` independent scalar action / Bianchi transfer | PARENT RF-L2 PASS |
+| `Xi_I -> U_I -> Lambda0` reconstruction | PARENT RF-L3 CONDITIONAL PASS |
+| local Fisher normalization and `m_I^2=alpha_I/kappa_E` | PARENT RF-L4A PASS |
+| Shannon–Onsager Temporal Wave graph/operator bridge | PARENT RF-L5 PASS |
+| premetric-to-physical light-cone and mass-frequency firewall | PARENT RF-L5A EXACT GIVEN CALIBRATION |
+| tetra/phase-clock mass-scale composition | PARENT RF-E20 EXACT SCALE COMPOSITION |
+| primitive derivation of all RF-E21 action-class assumptions | OPEN PROMOTION PROGRAM |
+| physical scale/spectral bindings and variable-lapse covariant extension | OPEN PROMOTION PROGRAM |
+| global/nonlinear information-field stability | OPEN PROMOTION PROGRAM |
 | torsional/spin-current extension | SEPARATE EINSTEIN–CARTAN BRANCH |
 
 ## 12. Falsification and validation gates
@@ -331,7 +385,8 @@ RF-E21 fails if any of the following occurs inside the declared theorem domain:
 4. the cosmological coefficient fails to reduce to `-Lambda/kappa_E` times the volume density;
 5. connection variation on an invertible spinless branch retains nonzero torsion;
 6. the resulting metric equation differs from the RF-E3 Einstein equation convention;
-7. source locking no longer points to the frozen TIR/IDT/RFC parent commits.
+7. source locking no longer points to the frozen TIR/IDT/RFC parent commits;
+8. the Einstein closure ledger regresses the already promoted RF-L2/RF-L4A/RF-L5/RF-L5A/RF-E20 downstream coordinates.
 
 Validation target:
 
