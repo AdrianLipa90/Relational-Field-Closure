@@ -1,0 +1,74 @@
+{
+  "schema": "RFC_RF_L8_GLOBAL_HYPERBOLICITY_UNIFORM_TEMPORAL_V0_1",
+  "gate": "RF-L8",
+  "title": "Global Hyperbolicity from a Completely Uniform Relational Clock",
+  "date": "2026-08-30",
+  "repository": "AdrianLipa90/Relational-Field-Closure",
+  "stack_parent": "d9779608754aae294e3a37a5e5c9fef63ff37a39",
+  "parents": {
+    "IDT_05I": "regular smooth global-clock witness certifier",
+    "IDT_05G": "positive-lapse Frobenius foliation",
+    "RF-E8": "ADM Lorentzian carrier",
+    "RF-E25": "shared spacetime atlas/coframe cocycle certifier",
+    "RF-E26": "global Einstein carrier certifier for full GR composition",
+    "RF-L7": "local principal-hyperbolicity and Cauchy-data contract"
+  },
+  "exact_algebra": {
+    "adm_metric": "g(v,v) = -N^2 a^2 + h(Y,Y), a=dt(v), Y=X+b*a",
+    "future_causal_bound": "h(Y,Y) <= N^2 a^2",
+    "wick_metric": "W(v,v) = a^2 + h(Y,Y)",
+    "global_lapse_bound": "0 < N <= N_max < infinity",
+    "wick_bound": "W(v,v) <= (1+N_max^2) a^2",
+    "epsilon": "(1+N_max^2)^(-1/2)",
+    "complete_metric": "H = epsilon^2 W",
+    "steepness": "dt(v) >= ||v||_H for every future causal v"
+  },
+  "external_theorem": {
+    "name": "COMPLETELY_UNIFORM_TEMPORAL_GLOBAL_HYPERBOLICITY_CHARACTERIZATION",
+    "authority": [
+      "Patrick Bernard and Stefan Suhr, arXiv:1512.08410, Theorem 3",
+      "Patrick Bernard and Stefan Suhr, Proc. Amer. Math. Soc. 148 (2020) 4951-4966, DOI 10.1090/proc/15106",
+      "Antonio N. Bernal and Miguel Sanchez, Commun. Math. Phys. 257 (2005) 43-50, DOI 10.1007/s00220-005-1346-1"
+    ],
+    "promotion_policy": "EXTERNAL_THEOREM_APPLIES_ONLY_AFTER_RFC_SIDE_GLOBAL_PREMISES_ARE_CERTIFIED"
+  },
+  "promotion_inputs": {
+    "global_lorentzian_carrier": "OPEN_PRODUCTION_INPUT",
+    "global_regular_temporal_clock": "OPEN_PRODUCTION_INPUT",
+    "global_finite_lapse_upper_bound": "OPEN_PRODUCTION_INPUT",
+    "complete_adm_wick_metric": "OPEN_PRODUCTION_INPUT",
+    "global_einstein_carrier_for_full_gr_composition": "OPEN_PRODUCTION_INPUT"
+  },
+  "reference_controls": {
+    "epsilon_formula": "PASS_TARGET",
+    "null_boundary_steepness_saturation": "PASS_TARGET",
+    "timelike_positive_margin": "PASS_TARGET",
+    "shift_absorbed_by_Y": "PASS_TARGET",
+    "lapse_exceeds_bound": "FAIL_CLOSED_TARGET",
+    "spacelike_vector_declared_causal": "FAIL_CLOSED_TARGET",
+    "future_orientation_dt_positive": "FAIL_CLOSED_TARGET",
+    "invalid_global_lapse_bound": "FAIL_CLOSED_TARGET",
+    "all_global_geometry_witnesses_required": "FAIL_CLOSED_TARGET",
+    "global_Einstein_carrier_separate_from_causal_theorem": "PASS_TARGET",
+    "nonlinear_global_stability_separate": "PASS_TARGET"
+  },
+  "states": {
+    "local_adm_steepness_bound": "PASS_TARGET",
+    "completely_uniform_temporal_certifier": "IMPLEMENTED_PENDING_HOSTED_VALIDATION",
+    "GSC_6": "CERTIFIER_IMPLEMENTED_WITH_PRODUCTION_COMPLETENESS_AND_GLOBAL_BOUND_OPEN_INPUT",
+    "global_GR_Cauchy_carrier": "CONDITIONAL_ON_PRODUCTION_GSC_5_AND_GSC_6",
+    "nonlinear_global_stability": "OPEN_SEPARATE_GATE"
+  },
+  "validation": {
+    "implementation": "src/rfc/global_hyperbolicity_uniform_temporal.py",
+    "tests": "tests/reference/test_rfl8_global_hyperbolicity_uniform_temporal.py",
+    "external_theorem_ledger": "closure/lambda0/RF_L8_EXTERNAL_THEOREM_LEDGER.md",
+    "hosted_ci": "PENDING",
+    "target_verdict": "PASS_RF_L8_UNIFORM_TEMPORAL_GLOBAL_HYPERBOLICITY_CERTIFIER_WITH_COMPLETENESS_INPUT_OPEN"
+  },
+  "authority": {
+    "claim_owner": "Relational-Field-Closure",
+    "production_promotion_authority": false,
+    "external_theorem_does_not_supply_missing_RFC_inputs": true
+  }
+}
