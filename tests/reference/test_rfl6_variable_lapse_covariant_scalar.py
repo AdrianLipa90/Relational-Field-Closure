@@ -4,7 +4,7 @@ from pathlib import Path
 import numpy as np
 import pytest
 
-from rfc.variable_lapse_covariant_scalar import (
+from src.rfc.variable_lapse_covariant_scalar import (
     adm_scalar_densitized_flux,
     box_from_densitized_flux_divergence,
     constant_adm_kg_dispersion_residual,
