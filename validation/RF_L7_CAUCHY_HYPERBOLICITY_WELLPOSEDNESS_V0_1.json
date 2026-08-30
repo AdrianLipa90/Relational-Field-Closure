@@ -1,6 +1,6 @@
 {
   "schema": "RF_L7_CAUCHY_HYPERBOLICITY_WELLPOSEDNESS_V0_1",
-  "status": "CANDIDATE_PENDING_EXACT_HEAD_CI",
+  "status": "PASS_SOURCE_HEAD_LOCAL_HYPERBOLICITY_GLOBAL_CAUCHY_GATE_EXPLICIT",
   "stacked_parent": {
     "branch": "feat/rf-l6-variable-lapse-covariant-propagation-v0.1",
     "commit": "e19aeaef978f1bf46e37287759a7a6f67df54eb0",
@@ -23,12 +23,17 @@
     "reference": "Baer-Ginoux-Pfaeffle arXiv:0806.1036",
     "application": "normally hyperbolic Klein-Gordon Cauchy problem on globally hyperbolic spacetime"
   },
+  "validation_receipt": {
+    "tested_commit": "6c46a8008aa4bf3d3cd1d36e591a3de750305bc2",
+    "workflow_run_id": 33327147732,
+    "workflow_job_id": 99299195844,
+    "conclusion": "SUCCESS"
+  },
   "open_promotion_gate": [
     "RF-E8 foliation is a global Cauchy foliation",
     "global coefficient regularity and energy bounds",
     "boundary/asymptotic conditions where required",
     "coupled nonlinear Einstein-information global stability"
   ],
-  "expected_verdict": "PASS_RF_L7_LOCAL_CAUCHY_HYPERBOLICITY_CONTRACT",
-  "ci_verdict": "PENDING"
+  "verdict": "PASS_RF_L7_LOCAL_CAUCHY_HYPERBOLICITY_CONTRACT"
 }

@@ -131,8 +131,7 @@ Current sequence:
 19. IDT 02B differentiates with respect to the ordering coordinate `lambda`. RF-L5 therefore types the homogeneous graph gap as a premetric coefficient `mu_lambda^2` and writes
    \[
    \boxed{
-   \frac{d^2\phi_I}{d\lambda^2
-   }+(K_0+\mu_\lambda^2I)\phi_I=0.
+   \frac{d^2\phi_I}{d\lambda^2}+(K_0+\mu_\lambda^2I)\phi_I=0.
    \]
 20. The same premetric equation written directly through the Shannon response is
    \[
@@ -147,7 +146,6 @@ Current sequence:
    \[
    \boxed{
    \omega_{\lambda,r}^2=\lambda_r+\mu_\lambda^2.
-   }
    \]
    The connected-graph constant mode obeys
    \[
@@ -198,7 +196,7 @@ Current sequence:
    \frac{L_h}{hT_{ref}\phi_{ref}}
    =\frac{c}{\sqrt{M_{eff}}}.
    \]
-26. The physical homogeneous Klein–Gordon frequency is therefore
+26. The physical homogeneous Klein-Gordon frequency is therefore
    \[
    \boxed{
    (\omega_t^{KG})^2
@@ -227,7 +225,35 @@ Current sequence:
    \[
    \boxed{\Box_g\phi_I-m_I^2\phi_I=0,}
    \]
-   and its `N_R=1`, `b^i=0`, `h_ij=delta_ij` limit is exactly the RF-L5A physical Klein–Gordon equation.
+   and its `N_R=1`, `b^i=0`, `h_ij=delta_ij` limit is exactly the RF-L5A physical Klein-Gordon equation.
+28. RF-L7 evaluates the RF-L6 principal symbol on the RF-E8 ADM carrier. For `k_i != 0`,
+   \[
+   \boxed{
+   \sigma_2(P_I)
+   =-\frac{(\xi_0-b^ik_i)^2}{N_R^2}+h^{ij}k_i k_j,
+   }
+   \]
+   with characteristic roots
+   \[
+   \boxed{
+   \xi_0^{\pm}=b^ik_i\pm N_R\sqrt{h^{ij}k_i k_j}.
+   }
+   \]
+   Since `N_R>0` and `h^{ij}` is positive definite, the roots are real and separated by
+   \[
+   \boxed{
+   \Delta\xi_0=2N_R\sqrt{h^{ij}k_i k_j}>0.
+   }
+   \]
+   The RF-L6 information scalar is therefore strictly hyperbolic locally. RF-L7 also fixes the invertible Cauchy-data map
+   \[
+   \boxed{
+   \pi_I=\frac1{N_R}(\partial_0\phi_I-b^i\partial_i\phi_I),
+   \qquad
+   \partial_0\phi_I=N_R\pi_I+b^i\partial_i\phi_I.
+   }
+   \]
+   Global well-posedness is transferred from the standard normally-hyperbolic theorem only after the RF-E8 foliation is independently certified as a global Cauchy foliation with the required regularity and boundary/asymptotic contract.
 
 Validation authority:
 
@@ -237,6 +263,7 @@ Validation authority:
 - RF-L4A PR #21 tested head `7fcedd30a1ba59ae82750eb6b5f89b9e3288d162`, workflow run `33245318290`, job `99081667619`, **543/543 PASS**.
 - RF-L5 PR #22 tested head `ceac4269a9944e1a17d3a9321ab5d7975a4ce15d`, workflow run `33245513490`, job `99082170070`, **561/561 PASS** for the graph/operator algebraic suite.
 - RF-L5A carries the physical-dimensional correction and local affine calibration firewall.
-- RF-L6 reference target: `PASS_RF_L6_VARIABLE_LAPSE_CURVED_COVARIANT_PROPAGATION`; exact-head hosted receipt is required before promotion.
+- RF-L6 final receipt head `e19aeaef978f1bf46e37287759a7a6f67df54eb0`, workflow run `33326949593`, job `99298668274`, **SUCCESS**.
+- RF-L7 source head `6c46a8008aa4bf3d3cd1d36e591a3de750305bc2`, workflow run `33327147732`, job `99299195844`, **SUCCESS**; final receipt head requires its own exact-head rerun.
 
-**Current branch status:** `RF_L1_TARGET_ADMITTED / RF_L2_ACTION_REALIZATION_PASS / RF_L3_FUNCTIONAL_RECONSTRUCTION_PASS / RF_L4_CANONICAL_PULLBACK_522_OF_522_PASS / RF_L4A_LOCAL_FISHER_NORMALIZATION_543_OF_543_PASS / RF_L5_GRAPH_OPERATOR_ALGEBRA_561_OF_561_PASS / RF_L5A_PREMETRIC_DIMENSIONAL_FIREWALL_PRESENT / RF_L6_VARIABLE_LAPSE_CURVED_PROPAGATION_CANDIDATE / IDT_XI_I_HOLONOMY_PRESERVED / AFFINE_LIGHTCONE_RATIO_DERIVED / PHYSICAL_PHASE_CLOCK_SPECTRAL_MATCH_SPATIAL_SCALE_GLOBAL_WELLPOSEDNESS_AND_GLOBAL_INFORMATION_GEODESIC_EXTENSION_OPEN`.
+**Current branch status:** `RF_L1_TARGET_ADMITTED / RF_L2_ACTION_REALIZATION_PASS / RF_L3_FUNCTIONAL_RECONSTRUCTION_PASS / RF_L4_CANONICAL_PULLBACK_522_OF_522_PASS / RF_L4A_LOCAL_FISHER_NORMALIZATION_543_OF_543_PASS / RF_L5_GRAPH_OPERATOR_ALGEBRA_561_OF_561_PASS / RF_L5A_PREMETRIC_DIMENSIONAL_FIREWALL_PRESENT / RF_L6_VARIABLE_LAPSE_CURVED_PROPAGATION_PASS / RF_L7_LOCAL_STRICT_HYPERBOLICITY_AND_CAUCHY_DATA_PASS / IDT_XI_I_HOLONOMY_PRESERVED / AFFINE_LIGHTCONE_RATIO_DERIVED / GLOBAL_CAUCHY_FOLIATION_PHYSICAL_PHASE_CLOCK_SPECTRAL_MATCH_SPATIAL_SCALE_AND_COUPLED_NONLINEAR_STABILITY_OPEN`.
