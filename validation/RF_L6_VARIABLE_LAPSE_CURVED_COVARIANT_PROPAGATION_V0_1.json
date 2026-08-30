@@ -1,0 +1,34 @@
+{
+  "schema": "RF_L6_VARIABLE_LAPSE_CURVED_COVARIANT_PROPAGATION_V0_1",
+  "status": "CANDIDATE_PENDING_EXACT_HEAD_CI",
+  "source_lock": {
+    "TIR_main": "3f5a08ef04ec53c1a155263d23e8b10a96404370",
+    "IDT_main": "84ce1886175af872ae4a56ba36f7e106d8e23635",
+    "RFC_parent_main": "63418a88d686021c2a6fe6ab159d6152db303c19"
+  },
+  "parent_gates": [
+    "IDT-05C",
+    "RF-E8",
+    "RF-L2",
+    "RF-L4A",
+    "RF-L5A",
+    "RF-N0"
+  ],
+  "exact_targets": [
+    "ADM densitized scalar flux",
+    "variable-lapse/shift curved d'Alembertian",
+    "zero-shift static reduction",
+    "time-dependent homogeneous lapse reduction",
+    "IDT lapse-gradient substitution",
+    "RF-L5A local affine Klein-Gordon limit",
+    "constant-coefficient shift dispersion"
+  ],
+  "open_after_gate": [
+    "global hyperbolicity and boundary-value well-posedness",
+    "physical alpha_I/m_I scale selection",
+    "independent phase-clock spectral match",
+    "spatial cell calibration"
+  ],
+  "expected_verdict": "PASS_RF_L6_VARIABLE_LAPSE_CURVED_COVARIANT_PROPAGATION",
+  "ci_verdict": "PENDING"
+}
