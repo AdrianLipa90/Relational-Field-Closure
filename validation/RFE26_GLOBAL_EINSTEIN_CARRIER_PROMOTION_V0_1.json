@@ -1,0 +1,71 @@
+{
+  "schema": "RFC_RF_E26_GLOBAL_EINSTEIN_CARRIER_PROMOTION_V0_1",
+  "gate": "RF-E26",
+  "title": "Global Einstein Carrier Promotion from a Certified Shared Atlas",
+  "date": "2026-08-30",
+  "repository": "AdrianLipa90/Relational-Field-Closure",
+  "base_main": "5bb01438a44a68b0d747a3d1f9114aa648bd7395",
+  "parents": {
+    "RF-E24": {
+      "claim": "local Einstein field-equation form",
+      "status": "PARENT_PASS"
+    },
+    "RF-E25": {
+      "claim": "shared spacetime atlas/coframe cocycle certifier",
+      "status": "PARENT_PASS_WITH_PRODUCTION_SHARED_ATLAS_OPEN_INPUT"
+    },
+    "RF-L7": {
+      "claim": "local Cauchy hyperbolicity contract",
+      "status": "PARENT_PASS_GLOBAL_CAUCHY_PROMOTION_OPEN"
+    }
+  },
+  "theorem": {
+    "residual": "R_p = G_p + Lambda g_p - kappa_E T_p",
+    "overlap_rule": "X_p = J^T X_q J for X in {g,G,T,R}",
+    "common_constants_required": [
+      "Lambda",
+      "kappa_E"
+    ],
+    "global_promotion_requires": [
+      "RF-E25 shared-atlas certificate",
+      "target-domain coverage witness",
+      "patchwise zero Einstein residual",
+      "connected overlap incidence",
+      "tensor covariance on overlaps"
+    ]
+  },
+  "reference_controls": {
+    "single_patch_promotion_with_parent_and_coverage": "PASS_TARGET",
+    "missing_coverage_keeps_promotion_open": "PASS_TARGET",
+    "missing_RF_E25_parent_keeps_promotion_open": "PASS_TARGET",
+    "two_patch_nontrivial_spatial_rotation": "PASS_TARGET",
+    "nonzero_local_residual": "FAIL_CLOSED_TARGET",
+    "nonvacuum_exact_local_equation": "PASS_TARGET",
+    "cosmological_term": "PASS_TARGET",
+    "Lambda_mismatch": "FAIL_CLOSED_TARGET",
+    "kappa_E_mismatch": "FAIL_CLOSED_TARGET",
+    "metric_overlap_mismatch": "FAIL_CLOSED_TARGET",
+    "tensor_overlap_mismatch": "FAIL_CLOSED_TARGET",
+    "disconnected_atlas": "FAIL_CLOSED_TARGET",
+    "invalid_kappa_E": "FAIL_CLOSED_TARGET",
+    "singular_overlap": "FAIL_CLOSED_TARGET",
+    "nonsymmetric_tensor": "FAIL_CLOSED_TARGET"
+  },
+  "production_status": {
+    "production_shared_atlas": "OPEN_INPUT",
+    "production_domain_coverage": "OPEN_INPUT",
+    "GSC_5": "CERTIFIER_IMPLEMENTED_PENDING_HOSTED_VALIDATION_AND_PRODUCTION_INPUT",
+    "GSC_6_global_hyperbolicity": "OPEN_SEPARATE_RF_L7_GATE"
+  },
+  "validation": {
+    "implementation": "src/rfc/global_einstein_carrier.py",
+    "tests": "tests/reference/test_rfe26_global_einstein_carrier.py",
+    "hosted_ci": "PENDING",
+    "target_verdict": "PASS_RFE26_GLOBAL_EINSTEIN_CARRIER_CERTIFIER_WITH_PRODUCTION_INPUT_OPEN"
+  },
+  "authority": {
+    "claim_owner": "Relational-Field-Closure",
+    "production_promotion_authority": false,
+    "global_hyperbolicity_promotion_authority": false
+  }
+}
