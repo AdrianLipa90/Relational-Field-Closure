@@ -4,13 +4,18 @@ import pytest
 from src.rfc.einstein_action_selection import (
     Admissibility,
     EinsteinActionSelectionError,
+    NATIVE_FRONTIER,
+    SUPPORT_SURFACES,
+    conditional_gr_closure_ready,
     coupling_closure_ratio,
     eh_action_prefactor_si,
     einstein_coupling_from_prefactor,
     einstein_coupling_si,
     lorentz_signature,
+    native_promotion_frontier,
     selected_bulk_basis,
     source_bound_3plus1_ready,
+    support_surface_names,
 )
 
 
@@ -70,3 +75,49 @@ def test_prefactor_identity_symbolic_numeric_controls():
 def test_nonpositive_or_nonfinite_constants_fail_closed(G,c):
     with pytest.raises(EinsteinActionSelectionError):
         eh_action_prefactor_si(G,c)
+
+
+def test_support_surface_ledger_is_exact_and_nonpromoting():
+    assert support_surface_names() == SUPPORT_SURFACES
+    assert len(SUPPORT_SURFACES) == 8
+    assert any(x.startswith("RF-F13:") for x in SUPPORT_SURFACES)
+    assert any(x.startswith("RFG18:") for x in SUPPORT_SURFACES)
+    assert any(x.startswith("RFG29:") for x in SUPPORT_SURFACES)
+    assert any(x.startswith("RF-F26:") for x in SUPPORT_SURFACES)
+
+
+def test_native_frontier_is_reduced_to_exactly_three_coordinates():
+    assert native_promotion_frontier() == NATIVE_FRONTIER
+    assert NATIVE_FRONTIER == (
+        "NONLINEAR_ALL_ORDERS_GRAVITATIONAL_COVARIANCE_PROMOTION",
+        "NATIVE_LOCAL_SECOND_ORDER_METRIC_GRAVITY_SELECTION",
+        "REALIZED_INDEPENDENT_REDUCED_GRAVITY_UNIVERSALITY_ADMISSION",
+    )
+
+
+def test_support_surfaces_require_explicit_lovelock_admissibility():
+    partial = Admissibility(4, True, False, True, True)
+    assert SUPPORT_SURFACES
+    assert not conditional_gr_closure_ready(
+        partial,
+        rf_e3_normalization=True,
+        rf_e12_e13_adm_dynamics=True,
+    )
+
+
+def test_conditional_gr_closure_requires_all_declared_parents():
+    assert conditional_gr_closure_ready(
+        ready(),
+        rf_e3_normalization=True,
+        rf_e12_e13_adm_dynamics=True,
+    )
+    assert not conditional_gr_closure_ready(
+        ready(),
+        rf_e3_normalization=False,
+        rf_e12_e13_adm_dynamics=True,
+    )
+    assert not conditional_gr_closure_ready(
+        ready(),
+        rf_e3_normalization=True,
+        rf_e12_e13_adm_dynamics=False,
+    )

@@ -1,97 +1,150 @@
-# RF-E21 — TIR × IDT 4D Einstein-Action Selection Gate
+# RF-E21 — TIR × IDT 4D Einstein-Action Selection Gate v0.2
 
-Status: `SOURCE_BOUND_3PLUS1_CARRIER / LORENTZIAN_SIGNATURE_PARENT_EXACT / FOUR_DIMENSIONAL_LOVELOCK_SELECTION_PASS_CONDITIONAL / RF_E3_NORMALIZATION_EXACT_ON_PARENT_COUPLING / RF_E12_E13_ADM_DYNAMICS_INHERITED / NATIVE_ADMISSIBILITY_DERIVATION_OPEN`
+Status: `SOURCE_BOUND_3PLUS1_CARRIER / LORENTZIAN_SIGNATURE_PARENT_EXACT / COVARIANT_ACTION_SUPPORT_PRESENT / SPIN2_4PT_5PT_SUPPORT_PRESENT / FOUR_DIMENSIONAL_LOVELOCK_SELECTION_PASS_CONDITIONAL / RF_E3_NORMALIZATION_EXACT_ON_PARENT_COUPLING / RF_E12_E13_ADM_DYNAMICS_INHERITED / THREE_NATIVE_PROMOTION_GATES_OPEN`
+
+Supersedes the frontier classification in RF-E21 v0.1 while retaining its receipt as provenance.
 
 ## 1. Purpose
 
-RF-E21 isolates the remaining action-selection step between the project-native spatial/temporal carriers and the already implemented Einstein/ADM dynamics.
+RF-E21 owns the gravitational bulk-action selection step between project-native
+spatial/temporal carriers and the RFC Einstein/ADM dynamics.
 
-The upstream repositories now supply the following typed chain:
+The current dependency chain is
 
 ```text
 TIR rank-three positive spatial carrier
- + IDT oriented positive clock/lapse carrier
+ + IDT oriented positive lapse/clock carrier
  -> RF-G0 Lorentzian 3+1 metric
- -> RF-E21 gravitational bulk-action selection
- -> RF-E3 action normalization
- -> RF-E12 Einstein equation and ADM source constraints
- -> RF-E13 ADM evolution and Bianchi constraint propagation
+ -> RFC covariant/spin-2 support surfaces
+ -> RF-E21 4D gravitational action-selection gate
+ -> RF-E3 Einstein-Hilbert normalization
+ -> RF-E12 Einstein tensor equation + ADM source constraints
+ -> RF-E13 ADM evolution + Bianchi constraint propagation
 ```
 
-RF-E21 assigns one owner to the bulk gravitational-action selection. It keeps action selection, coupling normalization, matter composition and ADM propagation as separately auditable layers.
+The gate separates four logically different layers:
 
-## 2. Source-pinned 3+1 carrier
+1. source-bound spacetime carrier;
+2. evidence supporting gravitational covariance/action architecture;
+3. conditional mathematical action selection;
+4. physical coupling universality.
 
-### 2.1 TIR spatial parent
+## 2. Source-bound 3+1 carrier
 
-TIR main at
+### 2.1 Spatial parent
+
+TIR main parent:
 
 `3f5a08ef04ec53c1a155263d23e8b10a96404370`
 
-contains the promoted spatial chain through the Universal-Loop torsion source and the rank-three positive spatial carrier used by the RFC geometry line.
-
-The local spatial metric has rank
+The promoted TIR spatial line supplies a positive rank-three local carrier,
 
 \[
-\boxed{\operatorname{rank}h_\perp=3},
+\boxed{\operatorname{rank}h_\perp=3}.
 \]
 
-with positive quadratic form on the admitted instantaneous distribution.
+### 2.2 Temporal parent
 
-### 2.2 IDT temporal parent
-
-IDT main at
+IDT main parent:
 
 `84ce1886175af872ae4a56ba36f7e106d8e23635`
 
-supplies the activity-derived relational lapse
+The relational lapse surface supplies
 
 \[
 \boxed{
-N_R(x|r)=\frac{d\Theta_x}{d\Theta_r}
-=\frac{\mathfrak a_x}{\mathfrak a_r}>0
+N_R(x|r)
+=
+\frac{d\Theta_x}{d\Theta_r}
+=
+\frac{\mathfrak a_x}{\mathfrak a_r}>0
 }
 \]
 
-with exact reparameterization invariance and clock-reference composition.
-
-The calibrated temporal one-form exported to the relativistic bridge is
-
-\[
-\boxed{\Theta_R=N_R c\,dt}.
-\]
-
-IDT also supplies the exact hyperbolic kinetic invariant
+with exact reparameterization invariance and clock-reference composition.  Its
+relativistic export is
 
 \[
-\boxed{\mathfrak a^2-\mathfrak j^2=4M^2},
+\boxed{\Theta_R=N_Rc\,dt}.
 \]
 
-which provides an independent temporal orientation/magnitude decomposition.
-
-### 2.3 RF-G0 spacetime assembly
-
-RF-G0 constructs
+The temporal kinetic branch also carries
 
 \[
-\boxed{
-g=-\Theta\otimes\Theta+h_\perp
-}
+\boxed{\mathfrak a^2-\mathfrak j^2=4M^2}.
 \]
 
-from one oriented temporal covector and the positive rank-three spatial form. Its temporal-reflection theorem gives
+### 2.3 Lorentzian assembly
+
+RF-G0 assembles
+
+\[
+\boxed{g=-\Theta\otimes\Theta+h_\perp}
+\]
+
+and, for one temporal direction plus the positive spatial rank-three carrier,
+obtains
 
 \[
 \boxed{\operatorname{signature}(g)=(-,+,+,+)}.
 \]
 
-Thus the source-bound carrier entering RF-E21 is four-dimensional and Lorentzian.
+Thus RF-E21 receives a source-bound four-dimensional Lorentzian metric carrier.
 
-## 3. Action admissibility surface
+## 3. Existing covariance/action support surfaces
 
-RF-E21 now separates the carrier theorem from the gravitational action admissibility conditions.
+RF-E21 v0.2 distinguishes supporting receipts from theorem promotion.
 
-For the local bulk metric dynamics define the admissibility tuple
+### 3.1 Covariant common-action architecture — RF-F13
+
+RF-F13 already supplies a shared covariant action surface of the form
+
+\[
+S_{\rm common}
+=
+\int d^4x\,\sqrt{-g}\,\mathcal L_{\rm common},
+\]
+
+with metric variation, Bianchi/Noether bookkeeping and a common matter/source
+exchange ledger.
+
+RF-F13 therefore supports a project-compatible covariant action architecture.
+Its gravitational \(R\) term enters there as an admitted parent; RF-E21 owns
+the independent selection theorem for the Einstein-Hilbert term.
+
+### 3.2 Linearized spin-2 covariance — RFG18
+
+RFG18 passes the external-state linearized diffeomorphism Ward replacement
+
+\[
+\epsilon_{\mu\nu}
+\mapsto
+\epsilon_{\mu\nu}
++k_\mu\xi_\nu+k_\nu\xi_\mu
+\]
+
+on its four-point pure-spin-2 surface.
+
+This is a direct linearized covariance witness.
+
+### 3.3 Einstein / double-copy amplitude support
+
+The project gravity amplitude line contains:
+
+- `RFG20` — four-point Einstein MHV normalization firewall;
+- `RFG27` — five-point project normalization firewall;
+- `RFG29` — five-point BCJ root/Jacobi validation;
+- `RFG30` — five-point project pre-KLT closure.
+
+These surfaces show compatibility beyond one four-point sample and make the
+spin-2/Einstein normalization line substantially more constrained.
+
+Their publication role is finite-order support.  The all-orders nonlinear
+gravitational covariance promotion is owned by its dedicated gate below.
+
+## 4. Conditional 4D action selection
+
+Define the Lovelock admissibility tuple
 
 \[
 \boxed{
@@ -100,66 +153,62 @@ For the local bulk metric dynamics define the admissibility tuple
 (D=4,\;
 \text{Lorentzian metric},\;
 \text{diffeomorphism covariance},\;
-\text{local metric bulk action},\;
+\text{local metric bulk dynamics},\;
 \text{second-order metric equations})
 }.
 \]
 
-Current ownership is:
+The first two coordinates are source-bound by the TIR×IDT/RF-G0 chain.
 
-| Coordinate | Source / status |
-|---|---|
-| \(D=3+1=4\) | TIR spatial rank 3 + IDT temporal rank 1 — source bound |
-| Lorentzian metric | RF-G0 temporal-reflection theorem — exact parent |
-| diffeomorphism covariance | RFC gravitational admissibility condition — native derivation OPEN |
-| local metric bulk action | RFC gravitational admissibility condition — native derivation OPEN |
-| second-order metric equations | RFC gravitational admissibility condition — native derivation OPEN |
-
-The last three coordinates are explicit theorem hypotheses at this gate. Future native derivations may promote them individually without changing the downstream algebra.
-
-## 4. Four-dimensional Lovelock selection
+For the remaining coordinates, RFC now has substantial support:
+RF-F13 for covariant action architecture and RFG18/RFG20/RFG27/RFG29/RFG30
+for the spin-2 covariance/Einstein amplitude line.  The project-native theorem
+promoting this support to nonlinear all-orders covariance and the project
+selection principle forcing local second-order metric dynamics are explicit
+downstream gates.
 
 External mathematical parent: the four-dimensional Lovelock uniqueness theorem.
 
-On the complete admissibility surface \(\mathfrak A_{E21}\), the local metric field equation is generated, up to coupling constants and four-dimensional topological/boundary densities, by the cosmological and Einstein-Hilbert bulk terms.
-
-The selected local bulk basis is therefore
+On the complete admitted tuple \(\mathfrak A_{E21}\), the local metric bulk
+basis affecting the four-dimensional field equations is
 
 \[
 \boxed{
 \mathcal B_{\rm grav}^{(4)}
 =
-\{1,\;R\}.
+\{1,R\}
 }
 \]
 
-Equivalently, the bulk action may be written
+up to four-dimensional topological and boundary densities.  Hence
 
 \[
 \boxed{
 S_g
 =
-A\int d^4x\,\sqrt{-g}\,[R-2\Lambda]
+A\int d^4x\,\sqrt{-g}\,(R-2\Lambda)
 +
 S_{\rm top}
 +
-S_{\rm boundary},
+S_{\rm boundary}.
 }
 \]
 
-where the four-dimensional Euler/Gauss-Bonnet density may enter \(S_{\rm top}\) while carrying no additional local bulk metric equation, and the standard boundary contribution carries the well-posed metric-variation boundary data.
+The Euler/Gauss-Bonnet density may occur in the topological ledger while adding
+no independent local four-dimensional metric equation under this gate.
 
-This is a conditional selection theorem: the Lovelock parent closes the bulk basis once every coordinate of \(\mathfrak A_{E21}\) is admitted.
+This is a conditional selection theorem.  The deterministic implementation
+fails closed whenever a required admissibility coordinate is absent.
 
-## 5. RF-E3 normalization transfer
+## 5. Exact Einstein normalization transfer
 
-RF-E3 fixes the Einstein-Hilbert normalization convention
+RF-E3 owns
 
 \[
 \boxed{
 A=\frac{c^4}{16\pi G}
-=\frac{1}{2\kappa_E}.
-}
+=\frac{1}{2\kappa_E}
+}.
 \]
 
 Therefore
@@ -167,12 +216,14 @@ Therefore
 \[
 \boxed{
 \kappa_E
-=\frac1{2A}
-=\frac{8\pi G}{c^4}.
+=
+\frac{1}{2A}
+=
+\frac{8\pi G}{c^4}.
 }
 \]
 
-With the matter definition
+With
 
 \[
 T_{\mu\nu}
@@ -181,21 +232,23 @@ T_{\mu\nu}
 \frac{\delta S_m}{\delta g^{\mu\nu}},
 \]
 
-stationarity gives the RF-E12 tensor equation
+RF-E12 gives
 
 \[
 \boxed{
-G_{\mu\nu}+\Lambda g_{\mu\nu}
+G_{\mu\nu}
++
+\Lambda g_{\mu\nu}
 =
 \frac{8\pi G}{c^4}T_{\mu\nu}.
 }
 \]
 
-The coefficient transfer is exact once the RF-E3 \(G\)/\(\kappa_E\) parent is admitted.
+The coefficient transfer is exact on the admitted RF-E3 coupling parent.
 
-## 6. ADM inheritance
+## 6. ADM constraint/evolution closure
 
-RF-E10 and RF-E12 give the Hamiltonian and momentum source constraints. For constant \(\Lambda\),
+RF-E12 supplies the projected source constraints, including
 
 \[
 \boxed{
@@ -211,11 +264,11 @@ and
 \boxed{
 D_j(K^j{}_i-\delta^j_iK)
 =
-\kappa_E j_i.
+\kappa_Ej_i.
 }
 \]
 
-RF-E13 supplies the evolution equations
+RF-E13 supplies
 
 \[
 \boxed{
@@ -225,47 +278,134 @@ RF-E13 supplies the evolution equations
 }
 \]
 
-and
+and the corresponding \(K_{ij}\) evolution equation, together with homogeneous
+Bianchi propagation of the Hamiltonian and momentum residuals.
+
+Thus ADM kinematics, constraints, evolution and constraint propagation are
+downstream closed once the Einstein action branch is admitted.
+
+## 7. Reduced-gravity / Newton coupling line
+
+RF-F25 defines the project-side reduced-gravity coordinate
 
 \[
 \boxed{
-(\partial_t-\mathcal L_\beta)K_{ij}
+\bar M_{G,i}
 =
--D_iD_jN
-+
-N\left[
-{}^{(3)}R_{ij}
--2K_i{}^kK_{kj}
-+KK_{ij}
--\kappa_ES_{ij}
-+\frac{\kappa_E}{2}h_{ij}(S-\rho)
-\right]
+-\frac1{\beta_W}
+\ln\!\left[
+\frac{|\omega_{t,i}|^2}
+{16\pi\Gamma_{DC}M_\star^3}
+\right].
 }
 \]
 
-for the zero-\(\Lambda\) displayed parent convention, with the corresponding \(\Lambda\) contribution inherited from the selected action branch.
-
-The Bianchi/source-conservation ledger gives homogeneous propagation of the Hamiltonian and momentum residuals. Hence vanishing initial constraints remain vanishing under the admitted evolution system.
-
-## 7. Exact closure statement
-
-Define the parent set
+The reference pair gives
 
 \[
-\mathcal P_{GR}
-=
-\{
-\text{TIR rank-3 spatial carrier},
-\text{IDT oriented lapse/clock carrier},
-\text{RF-G0 Lorentz metric},
-\mathfrak A_{E21},
-\text{4D Lovelock theorem},
-\text{RF-E3 normalization},
-\text{RFC matter action}
-\}.
+\bar M_G=\beta_W^{-1}\ln2.
 \]
 
-Then RF-E21 records the conditional implication
+RF-F26 already defines the fail-closed promotion protocol:
+freeze the prerequisite normalization surfaces, admit at least two independent
+nondegenerate realized pairs, and require a common \(\bar M_G\) within the
+declared tolerance before promoting the physical \(G\).
+
+The architecture of the universality test is therefore present.  The remaining
+gate is the realized independent admission itself.
+
+## 8. Three-coordinate native completion frontier
+
+RF-E21 v0.2 reduces the broad Einstein-closure frontier to exactly three
+project-native promotion coordinates:
+
+```text
+NONLINEAR_ALL_ORDERS_GRAVITATIONAL_COVARIANCE_PROMOTION
+NATIVE_LOCAL_SECOND_ORDER_METRIC_GRAVITY_SELECTION
+REALIZED_INDEPENDENT_REDUCED_GRAVITY_UNIVERSALITY_ADMISSION
+```
+
+### 8.1 Nonlinear all-orders covariance promotion
+
+RF-F13 and the RFG18/RFG20/RFG27/RFG29/RFG30 sequence are strong supporting
+surfaces.  The remaining promotion target is a theorem or equivalent
+source-complete construction that extends the admitted gravitational covariance
+from the current covariant/finite-order surfaces to the nonlinear all-orders
+gravity object.
+
+### 8.2 Native local/second-order selection principle
+
+RF-E13 verifies that the selected Einstein system has second-order evolution.
+Upstream action selection is assigned to a separate project-native principle.
+
+The remaining target is that project-native principle selecting local,
+second-order metric gravitational dynamics before the external Lovelock theorem
+is invoked.
+
+### 8.3 Realized independent reduced-gravity universality
+
+RF-F25/RF-F26 provide the coordinate and promotion firewall.  The remaining
+target is the independently sourced multi-pair realization required by that
+firewall, with the prerequisite \(\beta_W,\Gamma_{DC},M_\star\) surfaces frozen.
+
+## 9. Standard-GR boundary
+
+For a constant cosmological term, the conditional RF-E21 → RF-E3 → RF-E12 →
+RF-E13 chain already carries the standard Einstein equation and ADM system.
+
+The independent dynamic-\(\Lambda\) action/stability programme is an extension
+frontier beyond the constant-\(\Lambda\) standard-GR closure.
+
+Additional matter species remain a matter-composition frontier alongside the
+RF-E21 gravitational action-selection logic.
+
+## 10. GREMLIN audit roles
+
+```text
+SPIDER  dependency ownership and cross-repository graph
+MOLE    coefficient/projection algebra
+HOUND   premise-leak, circularity and higher-derivative audit
+MANTIS  duplicate action/Einstein ownership audit
+OWL     source and commit provenance
+```
+
+GREMLIN is a bounded candidate/audit layer.  Promotion authority remains with
+the theorem/validator/evidence gates.
+
+## 11. Validation contract
+
+Reference implementation:
+
+`src/rfc/einstein_action_selection.py`
+
+Reference tests:
+
+`tests/reference/test_rfe21_einstein_action_selection.py`
+
+Receipts:
+
+- `validation/RF_E21_TIR_IDT_EINSTEIN_ACTION_SELECTION_V0_1.json`
+  — historical initial classification;
+- `validation/RF_E21_TIR_IDT_EINSTEIN_ACTION_SELECTION_V0_2.json`
+  — refined three-gate classification.
+
+The v0.2 deterministic checks cover:
+
+1. source-typed \(3+1\) rank composition;
+2. inherited \((-+++) \) signature encoding;
+3. fail-closed 4D Lovelock admissibility;
+4. selected local bulk basis \(\{1,R\}\);
+5. exact RF-E3 coefficient transfer;
+6. support-surface ownership with dedicated promotion boundaries;
+7. exactly three project-native completion coordinates.
+
+## 12. Closure statement
+
+Let \(\mathcal P_{GR}\) contain the source-bound TIR/IDT 3+1 carrier, RF-G0
+Lorentz metric, the complete admitted Lovelock tuple, the four-dimensional
+Lovelock theorem, RF-E3 normalization and the RFC matter action.
+
+Then
 
 \[
 \boxed{
@@ -277,64 +417,11 @@ G_{\mu\nu}+\Lambda g_{\mu\nu}
 }
 \]
 
-together with the RF-E12/RF-E13 ADM constraint, evolution and propagation system.
+with the RF-E12/RF-E13 ADM constraint, evolution and propagation system.
 
-The remaining first-principles programme is sharply localized to the native promotion of the three action-admissibility coordinates and the independent physical determination of the project-side \(G\)/\(\kappa_E\) value.
-
-## 8. GREMLIN audit roles
-
-GREMLIN remains bounded to candidate/audit authority:
+Current classification:
 
 ```text
-SPIDER  dependency graph from TIR/IDT carriers to RF-E21
-MOLE    coefficient and projection algebra
-HOUND   premise-leak and higher-derivative counterexample audit
-MANTIS  duplicate Einstein-action ownership audit
-OWL     cross-repository commit/source provenance
+CONDITIONAL_STANDARD_GR_CLOSURE              PASS
+PROJECT_NATIVE_FIRST_PRINCIPLES_GR_CLOSURE   THREE_NAMED_GATES_OPEN
 ```
-
-Promotion authority remains theorem/validator/evidence gated.
-
-## 9. Validation contract
-
-Reference implementation:
-
-`src/rfc/einstein_action_selection.py`
-
-Reference tests:
-
-`tests/reference/test_rfe21_einstein_action_selection.py`
-
-Validation receipt:
-
-`validation/RF_E21_TIR_IDT_EINSTEIN_ACTION_SELECTION_V0_1.json`
-
-The deterministic checks cover:
-
-1. source-typed \(3+1\) rank composition;
-2. \((-+++)\) signature encoding inherited from RF-G0;
-3. fail-closed Lovelock admissibility coordinates;
-4. selected local bulk basis \(\{1,R\}\);
-5. exact RF-E3 coefficient transfer
-   \[
-   c^4/(16\pi G)\mapsto8\pi G/c^4;
-   \]
-6. explicit separation between conditional action selection and native admissibility promotion.
-
-## 10. Promotion frontier
-
-```text
-TIR_SPATIAL_RANK3                         SOURCE BOUND / PROMOTED PARENT
-IDT_POSITIVE_RELATIONAL_LAPSE             SOURCE BOUND / EXACT RATIO
-RF_G0_LORENTZIAN_SIGNATURE                PARENT EXACT
-RF_E21_4D_LOVELOCK_BULK_SELECTION         PASS CONDITIONAL
-RF_E3_EH_NORMALIZATION                    PARENT EXACT ON ADMITTED COUPLING
-RF_E12_EINSTEIN_ADM_CONSTRAINTS           PARENT EXACT ON STATED ACTION
-RF_E13_ADM_EVOLUTION_PROPAGATION           PARENT EXACT
-NATIVE_DIFFEO_COVARIANCE_DERIVATION        OPEN
-NATIVE_LOCAL_METRIC_ACTION_DERIVATION      OPEN
-NATIVE_SECOND_ORDER_DYNAMICS_DERIVATION    OPEN
-PROJECT_SIDE_G_NEWTON_UNIVERSALITY         OPEN
-```
-
-RF-E21 therefore converts the broad “Einstein closure” frontier into four explicit remaining promotion coordinates rather than one undifferentiated gap.

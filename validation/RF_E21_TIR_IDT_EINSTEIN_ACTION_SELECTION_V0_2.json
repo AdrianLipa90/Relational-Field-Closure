@@ -1,0 +1,74 @@
+{
+  "checks": {
+    "adm_constraints_evolution_propagation_parent_available": true,
+    "covariant_common_action_support_present": true,
+    "eh_prefactor_to_einstein_coupling_algebra": true,
+    "five_point_bcj_pre_klt_support_present": true,
+    "four_point_einstein_support_present": true,
+    "gremlin_promotion_authority_false": true,
+    "linearized_diffeo_support_present": true,
+    "lorentz_signature_parent_exact": true,
+    "lovelock_basis_conditional_selection": true,
+    "positive_relational_lapse_source_bound": true,
+    "reduced_gravity_universality_firewall_available": true,
+    "spatial_rank_3_source_bound": true,
+    "support_requires_dedicated_all_orders_promotion": true,
+    "temporal_rank_1_source_bound": true
+  },
+  "external_theorem_parent": "four-dimensional Lovelock uniqueness theorem",
+  "focused_local_reference_test": "18/18 PASS",
+  "gremlin": {
+    "mode": "BOUNDED_CANDIDATE_AUDIT",
+    "promotion_authority": false,
+    "roles": [
+      "SPIDER",
+      "MOLE",
+      "HOUND",
+      "MANTIS",
+      "OWL"
+    ]
+  },
+  "native_promotion_frontier": [
+    "NONLINEAR_ALL_ORDERS_GRAVITATIONAL_COVARIANCE_PROMOTION",
+    "NATIVE_LOCAL_SECOND_ORDER_METRIC_GRAVITY_SELECTION",
+    "REALIZED_INDEPENDENT_REDUCED_GRAVITY_UNIVERSALITY_ADMISSION"
+  ],
+  "normalization": {
+    "action_prefactor_si": "c^4/(16*pi*G)",
+    "einstein_coupling_si": "8*pi*G/c^4",
+    "identity": "2*A*kappa_E=1"
+  },
+  "parents": {
+    "idt_main": "84ce1886175af872ae4a56ba36f7e106d8e23635",
+    "rf_e12": "closure/einstein/RF_E12_ACTION_PROJECTED_ADM_SOURCE_CONSTRAINTS.md",
+    "rf_e13": "closure/einstein/RF_E13_CONSTRAINT_PROPAGATION_BIANCHI_LEDGER.md",
+    "rf_e3": "closure/einstein/RF_E3_DOUBLE_COPY_EINSTEIN_HILBERT_NORMALIZATION.md",
+    "rf_f13": "formalism/RF_F13_VARIATIONAL_INTEGRABILITY_COMMON_ACTION.md",
+    "rf_f25": "formalism/RF_F25_REDUCED_GRAVITY_UNIVERSALITY_RECEIPT.md",
+    "rf_f26": "formalism/RF_F26_PROJECT_COUPLING_PROMOTION_FIREWALL.md",
+    "rf_g0": "formalism/RFG0_LORENTZIAN_SIGNATURE_GATE.md",
+    "rfc_base": "63418a88d686021c2a6fe6ab159d6152db303c19",
+    "tir_main": "3f5a08ef04ec53c1a155263d23e8b10a96404370"
+  },
+  "schema": "RF_E21_TIR_IDT_EINSTEIN_ACTION_SELECTION_V0_2",
+  "selected_local_bulk_basis": [
+    "cosmological_density",
+    "ricci_scalar"
+  ],
+  "standard_gr_boundary": {
+    "constant_lambda": "CONDITIONAL_CLOSURE_PASS",
+    "dynamic_lambda": "EXTENSION_FRONTIER"
+  },
+  "status": "PASS_CONDITIONAL_THREE_NATIVE_PROMOTION_GATES_OPEN",
+  "support_surfaces": [
+    "RF-F13:COVARIANT_COMMON_ACTION_ARCHITECTURE",
+    "RFG18:LINEARIZED_DIFFEO_WARD",
+    "RFG20:FOUR_POINT_EINSTEIN_MHV_NORMALIZATION",
+    "RFG27:FIVE_POINT_NORMALIZATION_FIREWALL",
+    "RFG29:FIVE_POINT_BCJ_ROOT_VALIDATION",
+    "RFG30:FIVE_POINT_PRE_KLT_CLOSURE",
+    "RF-F25:REDUCED_GRAVITY_UNIVERSALITY_COORDINATE",
+    "RF-F26:PROJECT_COUPLING_PROMOTION_FIREWALL"
+  ],
+  "supersedes_frontier_classification": "RF_E21_TIR_IDT_EINSTEIN_ACTION_SELECTION_V0_1"
+}

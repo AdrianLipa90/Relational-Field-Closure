@@ -1,10 +1,9 @@
 """RF-E21: conditional 4D Einstein-action selection helpers.
 
-This module encodes the gate inputs and coefficient algebra.  The mathematical
-uniqueness theorem itself is an external theorem-level parent (4D Lovelock);
-the code deliberately validates the declared admissibility surface and the
-normalization/field-equation coefficient transfer rather than numerically
-"proving" that theorem.
+The mathematical uniqueness theorem is an external theorem-level parent
+(4D Lovelock). This module validates the declared admissibility surface,
+source/support ownership, exact coefficient transfer, and the deliberately
+small project-native promotion frontier.
 """
 from __future__ import annotations
 
@@ -14,6 +13,24 @@ import math
 
 class EinsteinActionSelectionError(ValueError):
     pass
+
+
+SUPPORT_SURFACES = (
+    "RF-F13:COVARIANT_COMMON_ACTION_ARCHITECTURE",
+    "RFG18:LINEARIZED_DIFFEO_WARD",
+    "RFG20:FOUR_POINT_EINSTEIN_MHV_NORMALIZATION",
+    "RFG27:FIVE_POINT_NORMALIZATION_FIREWALL",
+    "RFG29:FIVE_POINT_BCJ_ROOT_VALIDATION",
+    "RFG30:FIVE_POINT_PRE_KLT_CLOSURE",
+    "RF-F25:REDUCED_GRAVITY_UNIVERSALITY_COORDINATE",
+    "RF-F26:PROJECT_COUPLING_PROMOTION_FIREWALL",
+)
+
+NATIVE_FRONTIER = (
+    "NONLINEAR_ALL_ORDERS_GRAVITATIONAL_COVARIANCE_PROMOTION",
+    "NATIVE_LOCAL_SECOND_ORDER_METRIC_GRAVITY_SELECTION",
+    "REALIZED_INDEPENDENT_REDUCED_GRAVITY_UNIVERSALITY_ADMISSION",
+)
 
 
 @dataclass(frozen=True)
@@ -39,13 +56,36 @@ def selected_bulk_basis(admissibility: Admissibility) -> tuple[str, ...]:
     """Return the 4D Lovelock bulk basis affecting local metric equations.
 
     Gauss-Bonnet/Euler and boundary densities may remain in the action ledger,
-    but they carry no additional local 4D metric equation under this gate.
+    but carry no additional local 4D metric equation under this conditional
+    gate.
     """
     if not admissibility.lovelock_4d_ready:
         raise EinsteinActionSelectionError(
             "RF-E21 action selection requires the complete 4D Lovelock admissibility surface"
         )
     return ("cosmological_density", "ricci_scalar")
+
+
+def support_surface_names() -> tuple[str, ...]:
+    return SUPPORT_SURFACES
+
+
+def native_promotion_frontier() -> tuple[str, ...]:
+    return NATIVE_FRONTIER
+
+
+def conditional_gr_closure_ready(
+    admissibility: Admissibility,
+    *,
+    rf_e3_normalization: bool,
+    rf_e12_e13_adm_dynamics: bool,
+) -> bool:
+    """Conditional closure requires explicit admissibility, normalization, and ADM parents."""
+    return (
+        admissibility.lovelock_4d_ready
+        and rf_e3_normalization
+        and rf_e12_e13_adm_dynamics
+    )
 
 
 def eh_action_prefactor_si(G: float, c: float) -> float:
