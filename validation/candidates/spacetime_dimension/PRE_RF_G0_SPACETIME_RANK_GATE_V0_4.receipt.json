@@ -1,0 +1,26 @@
+{
+  "schema": "PRE_RF_G0_SPACETIME_RANK_GATE_V0_4",
+  "status": "CANDIDATE_ONLY",
+  "canon_promotion": false,
+  "symbolic": {
+    "coframe_determinant": "a*(s11*s22*s33 - s11*s23*s32 - s12*s21*s33 + s12*s23*s31 + s13*s21*s32 - s13*s22*s31)",
+    "expected_factorization": "E0(e0) * det(S)",
+    "factorization_pass": true
+  },
+  "required_new_gate": "PREMETRIC_TEMPORAL_SPATIAL_TRANSVERSALITY",
+  "required_defects": [
+    "E1(e0)",
+    "E2(e0)",
+    "E3(e0)",
+    "E0(e1)",
+    "E0(e2)",
+    "E0(e3)"
+  ],
+  "dependency_order": [
+    "spatial_rank_3",
+    "temporal_nonzero_1form",
+    "premetric_transversality",
+    "dimension_4",
+    "lorentzian_signature"
+  ]
+}
