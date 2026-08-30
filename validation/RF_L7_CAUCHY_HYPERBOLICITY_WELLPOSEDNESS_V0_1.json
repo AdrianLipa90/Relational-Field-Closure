@@ -1,0 +1,39 @@
+{
+  "schema": "RF_L7_CAUCHY_HYPERBOLICITY_WELLPOSEDNESS_V0_1",
+  "status": "PASS_SOURCE_HEAD_LOCAL_HYPERBOLICITY_GLOBAL_CAUCHY_GATE_EXPLICIT",
+  "stacked_parent": {
+    "branch": "feat/rf-l6-variable-lapse-covariant-propagation-v0.1",
+    "commit": "e19aeaef978f1bf46e37287759a7a6f67df54eb0",
+    "pull_request": 89
+  },
+  "source_lock": {
+    "TIR_main": "3f5a08ef04ec53c1a155263d23e8b10a96404370",
+    "IDT_main": "84ce1886175af872ae4a56ba36f7e106d8e23635",
+    "RFC_main": "63418a88d686021c2a6fe6ab159d6152db303c19"
+  },
+  "exact_local_targets": [
+    "principal symbol from RF-E8 inverse ADM metric",
+    "real distinct characteristic roots for nonzero spatial covector",
+    "strict local hyperbolicity margin",
+    "mass independence of principal hyperbolicity",
+    "Cauchy normal/coordinate derivative invertibility",
+    "nonnegative instantaneous slice energy for nonnegative mass squared"
+  ],
+  "external_global_theorem": {
+    "reference": "Baer-Ginoux-Pfaeffle arXiv:0806.1036",
+    "application": "normally hyperbolic Klein-Gordon Cauchy problem on globally hyperbolic spacetime"
+  },
+  "validation_receipt": {
+    "tested_commit": "6c46a8008aa4bf3d3cd1d36e591a3de750305bc2",
+    "workflow_run_id": 33327147732,
+    "workflow_job_id": 99299195844,
+    "conclusion": "SUCCESS"
+  },
+  "open_promotion_gate": [
+    "RF-E8 foliation is a global Cauchy foliation",
+    "global coefficient regularity and energy bounds",
+    "boundary/asymptotic conditions where required",
+    "coupled nonlinear Einstein-information global stability"
+  ],
+  "verdict": "PASS_RF_L7_LOCAL_CAUCHY_HYPERBOLICITY_CONTRACT"
+}
