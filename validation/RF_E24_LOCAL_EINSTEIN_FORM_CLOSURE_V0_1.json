@@ -1,0 +1,33 @@
+{
+  "schema": "RF_E24_LOCAL_EINSTEIN_FORM_CLOSURE_VALIDATION_V0_1",
+  "technical_status": "PASS_LOCAL_CONTRACT",
+  "verdict_target": "PASS_RF_E24_LOCAL_EINSTEIN_FORM_CLOSURE",
+  "dependency_receipts": {
+    "tir_cartan_levi_civita_head": "59b820e74c3b7be0e4cd81aa95ec0a23184e4f24",
+    "tir_leading_loop_locality_head": "0ec6190f54a5bc64c5dfb89bdc77b48c6c144828",
+    "rfc_rfe21_selection_head": "eae69c6b23388a38224a4034b3b61a5f80de7c45",
+    "rfc_rfe22_binding_head": "c38110f4e852d521efebc0e3e1544cf78182e15d",
+    "rfc_rfe23_divergence_selection_head": "a20331f5bf195a95102ffbc3380b0ab16a4d1ac9"
+  },
+  "closure": {
+    "abstract_equation": "E_mn = C T_mn",
+    "lovelock_form": "E_mn = A G_mn + B g_mn",
+    "nondegenerate_branch": "A != 0",
+    "lambda_definition": "Lambda = B/A",
+    "coupling_definition": "kappa_E = C/A",
+    "local_field_equation": "G_mn + Lambda g_mn = kappa_E T_mn",
+    "si_normalization": "kappa_E = 8 pi G / c^4",
+    "adm_roundtrip": "RF-E12/RF-E13"
+  },
+  "selection_rules": {
+    "tir_leading_refinement_rule": "DECLARED_STRUCTURAL_SELECTION",
+    "rfc_universal_source_autonomy": "DECLARED_COUPLING_SELECTION"
+  },
+  "firewalls": {
+    "global_smooth_realization": "OPEN",
+    "project_absolute_G_promotion": "OPEN",
+    "independent_HKT_crosscheck": "OPEN",
+    "einstein_hilbert_as_selection_premise": false
+  },
+  "hosted_validation": "PENDING_EXACT_HEAD_REFERENCE_SUITE"
+}

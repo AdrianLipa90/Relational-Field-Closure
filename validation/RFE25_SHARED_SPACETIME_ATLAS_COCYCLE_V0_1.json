@@ -1,0 +1,61 @@
+{
+  "schema": "RFE25_SHARED_SPACETIME_ATLAS_COCYCLE_V0_1",
+  "date": "2026-08-30",
+  "status": "PASS_REFERENCE_CERTIFIER_WITH_PRODUCTION_SHARED_ATLAS_OPEN_INPUT",
+  "formalism": "closure/einstein/RF_E25_SHARED_SPACETIME_ATLAS_COCYCLE.md",
+  "implementation": "src/rfc/shared_spacetime_atlas.py",
+  "tests": "tests/reference/test_rfe25_shared_spacetime_atlas.py",
+  "parents": {
+    "TIR_A5": "global 3-manifold/smooth-realization certifier",
+    "IDT_05H": "global discrete event-clock exactness certifier",
+    "IDT_05G": "positive-lapse Frobenius temporal foliation gate",
+    "RFC_RF_E8": "local ADM kinematic coframe assembly",
+    "RFC_RF_E24": "local Einstein field-equation form"
+  },
+  "core_equations": {
+    "adm_coframe": "E_p=[[N_p,0],[e_p b_p,e_p]]",
+    "coframe_rank": "det(E_p)=N_p det(e_p) != 0",
+    "overlap_convention": "dx_q=J_{q<-p} dx_p",
+    "shared_clock": "(J_{q<-p})^0_mu=(1,0,0,0)",
+    "lorentz": "Lambda^T eta Lambda=eta",
+    "coframe_gluing": "E_q J_{q<-p}=Lambda_{q<-p} E_p",
+    "metric_gluing": "J^T g_q J=g_p",
+    "jacobian_cocycle": "J_{r<-p}=J_{r<-q}J_{q<-p}",
+    "lorentz_cocycle": "Lambda_{r<-p}=Lambda_{r<-q}Lambda_{q<-p}"
+  },
+  "reference_controls": [
+    "single ADM patch rank-four/Lorentz metric",
+    "identity overlap",
+    "proper spatial rotation overlap",
+    "nonzero-shift identity overlap",
+    "coframe mismatch rejection",
+    "non-positive/non-finite lapse rejection",
+    "singular triad rejection",
+    "non-Lorentz frame transition rejection",
+    "orientation-reversing overlap rejection",
+    "time-reversing overlap rejection",
+    "shared-clock mixing rejection",
+    "triple-overlap coordinate/frame cocycle pass",
+    "triple-overlap cocycle mismatch rejection",
+    "disconnected atlas rejection",
+    "metric pullback consequence"
+  ],
+  "fpdg_coordinate": "GSC-4",
+  "production_promotion": {
+    "shared_patch_realization": "OPEN_INPUT",
+    "required_data": [
+      "patchwise positive lapse",
+      "patchwise invertible triad and shift",
+      "overlap incidence",
+      "coordinate Jacobians",
+      "Lorentz frame transitions",
+      "declared triple overlaps"
+    ],
+    "required_verdict": "PASS_SHARED_SPACETIME_REALIZATION"
+  },
+  "downstream": {
+    "GSC-5": "global carrier for RF-E24 local Einstein form",
+    "GSC-6": "global hyperbolicity/Cauchy foliation remains separate"
+  },
+  "verdict": "PASS_RFE25_SHARED_SPACETIME_ATLAS_CERTIFIER_WITH_PRODUCTION_INPUT_OPEN"
+}
