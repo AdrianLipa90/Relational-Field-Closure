@@ -1,6 +1,6 @@
 import pytest
 
-from rfc.global_einstein_carrier import (
+from src.rfc.global_einstein_carrier import (
     EinsteinPatch,
     GlobalEinsteinCarrierError,
     TensorOverlap,
