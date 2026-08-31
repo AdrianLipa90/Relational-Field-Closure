@@ -1,38 +1,61 @@
 {
-  "schema": "RFC_GSC4D_ANCHORED_PHASE_SCALED_RIGID_GEOMETRY_RECEIPT_V0_1",
-  "status": "PASS_RFC_GSC4D_RIGID_SPATIAL_GEOMETRY_INPUT_REDUCTION_WITH_PRODUCTION_PACKET_OPEN",
+  "schema": "RFC_GSC4D_ANCHORED_PHASE_SCALED_RIGID_GEOMETRY_RECEIPT_V0_2",
+  "status": "PASS_RFC_GSC4D_POINTWISE_PHASE_FIELD_RIGID_SPATIAL_GEOMETRY_WITH_PRODUCTION_PACKET_OPEN",
   "date": "2026-08-31",
   "candidate_pr": 108,
-  "validated_head": "c60f69b5b9966bd10251b1401e6de87f88910efd",
+  "validated_head": "ac64c3f30aa25777b46daed66286e5741424b1b9",
   "hosted_validation": {
     "workflow": "RFC reference suite",
-    "run_number": 451,
-    "run_id": 33352198580,
-    "conclusion": "success"
+    "run_number": 456,
+    "run_id": 33352722099,
+    "job_id": 99369031335,
+    "conclusion": "success",
+    "pytest": "1383 passed, 1 warning in 14.64s"
   },
-  "failure_history": {
-    "initial_head": "237afd967707958aa15fdff8e85dddb361eb7698",
-    "run_number": 450,
-    "run_id": 33351893822,
-    "result": "1377 passed, 2 failed",
-    "classification": "TEST_ASSERTION_API_ONLY",
-    "cause": "pytest.approx did not support nested 3x3 tuple structures",
-    "repair": "row-wise pytest.approx comparisons; theorem and implementation unchanged"
-  },
+  "repair_history": [
+    {
+      "head": "237afd967707958aa15fdff8e85dddb361eb7698",
+      "run_number": 450,
+      "result": "1377 passed, 2 failed",
+      "classification": "TEST_ASSERTION_API_ONLY",
+      "repair": "row-wise matrix comparison; theorem and implementation unchanged"
+    },
+    {
+      "head": "c60f69b5b9966bd10251b1401e6de87f88910efd",
+      "run_number": 451,
+      "result": "SUCCESS",
+      "classification": "GSC4D_V0_1_HOSTED_PASS"
+    },
+    {
+      "discovery": "one phase rate stored per patch plus equality on every connected overlap can collapse the represented scale to a patch-graph constant",
+      "classification": "REPRESENTATION_OVERCONSTRAINT",
+      "repair": "production mode now uses overlap-local samples of the phase field; equality is checked between two chart representations of the same physical overlap sample"
+    }
+  ],
   "exact_results": [
     "A_qp=Q_q^T Q_p on the admitted anchored Pauli rigid-chart route",
     "R_qp=Q_q^T Q_p on the same declared internal-frame route",
-    "A_qp=R_qp is exact on this rigid specialization",
-    "e_p=s_p I with s_p=c/(sqrt(6)*abs(omega_t,p)) under the admitted phase-clock physicalization",
-    "shared overlap phase scale s_q=s_p yields e_q A_qp=R_qp e_p"
+    "A_qp=R_qp on the anchored rigid specialization",
+    "e_p(x)=c I/(sqrt(6)*abs(omega_t,p(x))) under the admitted phase-clock physicalization",
+    "pointwise shared phase magnitude on an overlap sample yields e_q(x) A_qp=R_qp e_p(x)",
+    "distinct overlap samples may carry distinct phase magnitudes on one connected cover",
+    "the RF02I variable phase-scale connection sector remains representable"
+  ],
+  "executable_controls": [
+    "connected p-q-r cover passes with magnitude 2 on p-q and magnitude 3 on q-r",
+    "multiple physical samples on one overlap pass with different magnitudes when both chart representations agree pointwise",
+    "pointwise magnitude mismatch fails closed",
+    "explicit production field mode requires at least one sample for every declared overlap"
   ],
   "open_source_inputs": [
     "PRODUCTION_TIR_ANCHOR_VECTORS",
     "PRODUCTION_TIR_SO3_FRAME_MATRICES",
-    "FINITE_NONZERO_PRODUCTION_PHASE_RATES",
-    "PRODUCTION_OVERLAP_PHASE_SCALE_IDENTITY"
+    "PRODUCTION_OVERLAP_LOCAL_PHASE_MAGNITUDE_FIELD_SAMPLES",
+    "PRODUCTION_PHASE_MAGNITUDE_FIELD_AND_CLOCK_PROVENANCE",
+    "PRODUCTION_PHYSICAL_OVERLAP_SAMPLE_IDENTITIES"
   ],
   "firewalls": {
+    "connected_patch_cover_implies_constant_phase_scale": false,
     "a_equals_r_general_smooth_atlas": false,
     "a5_incidence_determines_numeric_coframe_scale": false,
     "phase_rate_determines_idt_lapse": false,
@@ -42,11 +65,11 @@
     "runtime_surface": "/dev/shm/ciel_noema",
     "authority": "CANDIDATE_ONLY",
     "promotion_evidence": false,
-    "source_event_id": "gremlin:whisper:sha256:d0636efe65afa9f36db3c6c150dead63ca7c6b0835412e1b3c1233929f62f013",
-    "fused_event_id": "gremlin:whisper:sha256:7aa69593bd0fc36fe6f2b986e0923504b173c29ec384991461b02b0f6d7b3569",
-    "shape": [11, 36],
-    "terminal_receipt_sha256": "1127e32a58bf5ceaeff22d49fd16e5d2bdf00dc8db49e4bfe48540cf055a0e5f",
-    "trace_sha256": "2e77dc0eca59fa4440089bacf92b886b767fcc40977d4eb38951543ab7e30b89"
+    "source_event_id": "gremlin:whisper:sha256:d5f3e47aed480512db6b93d9a8ddeea28188e8047c54e9dba3782f274c919b3a",
+    "fused_event_id": "gremlin:whisper:sha256:5d7dfd7642a82e38dfced50254cccd81eb91256937391815bedf8e729db32907",
+    "shape": [12, 36],
+    "terminal_receipt_sha256": "92829605758bf777cd96b3fa6c354dc14806cb9deba6a47654c636b4b83214bb",
+    "trace_sha256": "db62978cab324ff034f5273a0e38f20f26cb3b818bad414e82d08d8a06e9e138"
   },
   "authority": {
     "gremlin_can_promote": false,
