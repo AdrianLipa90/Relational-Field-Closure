@@ -12,13 +12,19 @@ I3 = ((1.0, 0.0, 0.0), (0.0, 1.0, 0.0), (0.0, 0.0, 1.0))
 RZ90 = ((0.0, -1.0, 0.0), (1.0, 0.0, 0.0), (0.0, 0.0, 1.0))
 
 
+def assert_matrix_close(actual, expected):
+    assert len(actual) == len(expected)
+    for actual_row, expected_row in zip(actual, expected):
+        assert actual_row == pytest.approx(expected_row)
+
+
 def test_identity_anchored_overlap_gives_a_equals_r_and_scaled_identity_coframe():
     p = anchored_phase_patch("p", (0, 0, 0), I3, 2.0)
     q = anchored_phase_patch("q", (1, 0, 0), I3, 2.0)
     cert = certify_anchored_phase_scaled_rigid_geometry([p, q], [("p", "q")])
     ov = cert.overlaps[0]
-    assert ov.spatial_jacobian == pytest.approx(I3)
-    assert ov.spatial_rotation == pytest.approx(I3)
+    assert_matrix_close(ov.spatial_jacobian, I3)
+    assert_matrix_close(ov.spatial_rotation, I3)
     assert ov.translation == pytest.approx((-1.0, 0.0, 0.0))
     assert cert.max_coframe_residual == pytest.approx(0.0)
     assert p.coframe[0][0] == pytest.approx(299792458.0 / (math.sqrt(6.0) * 2.0))
@@ -30,8 +36,8 @@ def test_rotated_anchored_frames_give_same_rigid_jacobian_and_rotation():
     cert = certify_anchored_phase_scaled_rigid_geometry([p, q], [("p", "q")])
     ov = cert.overlaps[0]
     expected = ((0.0, 1.0, 0.0), (-1.0, 0.0, 0.0), (0.0, 0.0, 1.0))
-    assert ov.spatial_jacobian == pytest.approx(expected)
-    assert ov.spatial_rotation == pytest.approx(expected)
+    assert_matrix_close(ov.spatial_jacobian, expected)
+    assert_matrix_close(ov.spatial_rotation, expected)
     assert cert.max_coframe_residual == pytest.approx(0.0)
 
 
@@ -45,13 +51,13 @@ def test_phase_rate_sign_does_not_change_spatial_scale():
 def test_phase_scale_mismatch_fails_closed():
     p = anchored_phase_patch("p", (0, 0, 0), I3, 2.0)
     q = anchored_phase_patch("q", (0, 0, 0), I3, 3.0)
-    with pytest.raises(AnchoredRigidGeometryError, match="phase-clock spatial scale mismatch"):
+    with pytest.raises(AnchoredRigidGeometryError, match=r"phase-clock spatial scale mismatch"):
         certify_anchored_phase_scaled_rigid_geometry([p, q], [("p", "q")])
 
 
 def test_non_so3_frame_fails_closed():
     shear = ((1.0, 0.2, 0.0), (0.0, 1.0, 0.0), (0.0, 0.0, 1.0))
-    with pytest.raises(AnchoredRigidGeometryError, match="SO\(3\)"):
+    with pytest.raises(AnchoredRigidGeometryError, match=r"SO\(3\)"):
         anchored_phase_patch("p", (0, 0, 0), shear, 2.0)
 
 
