@@ -1,0 +1,26 @@
+{
+  "schema": "RFC_GSC3_PRODUCT_CLOCK_ATLAS_LIFT_VALIDATION_RECEIPT_V0_1",
+  "date": "2026-08-31",
+  "technical_status": "PASS",
+  "verdict": "PASS_RFC_GSC3_PRODUCT_CLOCK_ATLAS_LIFT_WITH_PHYSICAL_BINDING_OPEN",
+  "tested_head": "79352af03d492f7015962e130d25b034720c4237",
+  "hosted_validation": {
+    "workflow": "RFC reference suite",
+    "run_number": 404,
+    "run_id": 33345427308,
+    "conclusion": "success"
+  },
+  "exact_layer": {
+    "product_manifold_dimension": 4,
+    "global_clock": "t=pr_I",
+    "dt_nowhere_zero": true,
+    "shared_clock_jacobian_first_row": [1, 0, 0, 0],
+    "block_determinant_identity": "det(J)=det(D_x f)",
+    "triple_overlap_first_order_cocycle": "PASS_TARGET_HOSTED_PASS"
+  },
+  "physical_product_realization": "OPEN_BINDING",
+  "production_event_placement": "OPEN_INPUT",
+  "rf_e25_adm_coframe_realization": "DOWNSTREAM_PRODUCTION_GATE",
+  "canon_promotion": false,
+  "next_gate": "PHYSICAL_TIR_IDT_PRODUCT_REALIZATION_AND_EVENT_PLACEMENT_BINDING"
+}

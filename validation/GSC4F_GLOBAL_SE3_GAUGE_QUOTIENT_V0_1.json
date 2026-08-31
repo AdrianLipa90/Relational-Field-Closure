@@ -1,0 +1,55 @@
+{
+  "schema": "RFC_GSC4F_GLOBAL_SE3_GAUGE_QUOTIENT_RECEIPT_V0_1",
+  "status": "PASS_RFC_GSC4F_GLOBAL_SE3_GAUGE_QUOTIENT_WITH_RELATIVE_GEOMETRY_SOURCE_INPUT_OPEN",
+  "date": "2026-08-31",
+  "lineage": {
+    "stacked_parent_pr": 109,
+    "candidate_pr": 110,
+    "validated_head": "489553e7205517ba14cbdee8a235bea19ae2dfee"
+  },
+  "hosted_validation": {
+    "workflow": "RFC reference suite",
+    "run_number": 463,
+    "run_id": 33353264296,
+    "job_id": 99370505530,
+    "conclusion": "success",
+    "pytest": "1402 passed, 1 warning in 8.16s"
+  },
+  "exact_results": [
+    "A_qp=Q_q^T Q_p is invariant under one common global SE(3) gauge",
+    "t_qp=Q_q^T(r_p-r_q) is invariant under one common global SE(3) gauge",
+    "one reference patch can be fixed to r=0 and Q=I",
+    "the quotient removes six common ambient coordinates",
+    "relative rigid rotation/translation data remain source geometry"
+  ],
+  "falsification_controls": [
+    "common translation leaves overlap packet invariant",
+    "common rotation leaves overlap packet invariant",
+    "spatial rescaling changes relative translation packet",
+    "independent single-patch rotation changes relative overlap packet",
+    "non-SO(3) frames fail closed"
+  ],
+  "live_triad_audit": {
+    "runtime_surface": "/dev/shm/ciel_noema",
+    "generation": "7e28fb102af2a7015f0e73f7828a0f1bc611fd9d478919dd072a39779d7d60fd",
+    "authority": "CANDIDATE_ONLY",
+    "promotion_evidence": false,
+    "source_event_id": "gremlin:whisper:sha256:8609d93ffe0ef3804778db90384c299a7df7ef6fd3b8beb7f38511d17b5ef73e",
+    "fused_event_id": "gremlin:whisper:sha256:0970d60244e47887f1f3c127c5747810fb111dd1a6983cc9ec4ca1d6f0eafacf",
+    "shape": [12, 36],
+    "terminal_receipt_sha256": "db1df21b30f75fda97671ce4e235a67d2b27dcfad5e4dce3a82178215f0cf963",
+    "trace_sha256": "1031a3423894408b1f288097873789f411355c6f3e84c8d3568b3500d5b6682e"
+  },
+  "open_source_inputs": [
+    "relative rigid configuration modulo global SE(3)",
+    "GSC4E overlap-local phase magnitude field and provenance",
+    "GSC1 production topology witness",
+    "downstream shared clock/lapse and RF-E25 production route inputs"
+  ],
+  "authority": {
+    "gremlin_can_promote": false,
+    "terminal36d_can_promote": false,
+    "phasenav36d_can_promote": false,
+    "hosted_pass_closes_production_geometry": false
+  }
+}

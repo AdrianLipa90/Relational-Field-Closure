@@ -1,0 +1,31 @@
+{
+  "schema": "RFC_GSC3B_MATCHING_FLOW_RFE9_CROSSLINK_V0_1",
+  "status": "PASS_EXACT_KINEMATIC_CROSSLINK_WITH_PRODUCTION_SHIFT_SOURCE_BINDING_OPEN",
+  "validated_head": "7dcaf6ce8f78bc3cedcbf33fa51e6c09c4c94678",
+  "stacked_parent": {
+    "pull_request": 99,
+    "head": "caaf9d881aadb458f055ff5c2c3eb816222faebb"
+  },
+  "validation": {
+    "isolated_crosslink_tests": "6_OF_6_PASS",
+    "hosted_workflow": "RFC reference suite",
+    "hosted_run_number": 416,
+    "hosted_run_id": 33348668555,
+    "hosted_conclusion": "success"
+  },
+  "exact_results": [
+    "beta_t^i=c*b_0^i under x0=ct",
+    "X_t=c*X_0",
+    "Lie_X0 h_ij=partial_0 h_ij-D_i b_j-D_j b_i",
+    "K_ij=-(2N)^-1 Lie_X0 h_ij using existing RF-E9",
+    "K_ij=-(2Nc)^-1 Lie_Xt h_ij in coordinate-time representation"
+  ],
+  "reused_gate": "RF_E9_EXTRINSIC_CURVATURE_GEOMETRY",
+  "production_open": "TIR_BETA_MATCH_TO_RFC_SHIFT_PATCH_SOURCE_BINDING",
+  "live_36d_audit": {
+    "authority": "CANDIDATE_ONLY",
+    "promotion_evidence": false,
+    "receipt": "validation/gremlin/GSC3B_GREMLIN_PHASENAV_TERMINAL36D_AUDIT_V0_1.json"
+  },
+  "verdict": "PASS_RFC_GSC3B_MATCHING_FLOW_RFE9_KINEMATIC_CROSSLINK_WITH_PRODUCTION_SHIFT_SOURCE_BINDING_OPEN"
+}

@@ -1,0 +1,55 @@
+{
+  "schema": "RFC_GSC4H_INCIDENCE_NUMERIC_GEOMETRY_NONIDENTIFIABILITY_RECEIPT_V0_1",
+  "status": "PASS_RFC_GSC4H_INCIDENCE_NUMERIC_GEOMETRY_SEPARATION_WITH_NUMERIC_SE3_COCYCLE_SOURCE_INPUT_CONFIRMED",
+  "date": "2026-08-31",
+  "lineage": {
+    "stacked_parent_pr": 112,
+    "candidate_pr": 113,
+    "validated_head": "1b232919881db327920b48125effee75b7432e27"
+  },
+  "hosted_validation": {
+    "workflow": "RFC reference suite",
+    "run_number": 469,
+    "run_id": 33353839300,
+    "job_id": 99372123741,
+    "conclusion": "success",
+    "pytest": "1420 passed, 1 warning in 13.99s"
+  },
+  "exact_results": [
+    "one fixed directed incidence surface admits distinct valid numeric rigid SE(3) cocycles",
+    "positive scaling of all overlap translations preserves the rigid cocycle law",
+    "distinct overlap translations remain distinct after the GSC4F global SE(3) quotient",
+    "A5/GSC4C incidence therefore indexes but does not identify the numeric SE(3) cocycle"
+  ],
+  "minimal_witness": {
+    "incidence": "p->q",
+    "cocycle_a": {"A": "I3", "t": [1.0, 0.0, 0.0]},
+    "cocycle_b": {"A": "I3", "t": [2.0, 0.0, 0.0]},
+    "same_incidence": true,
+    "both_gsc4g_certified": true,
+    "inequivalent_mod_global_se3": true
+  },
+  "live_triad_audit": {
+    "runtime_surface": "/dev/shm/ciel_noema",
+    "generation": "7e28fb102af2a7015f0e73f7828a0f1bc611fd9d478919dd072a39779d7d60fd",
+    "authority": "CANDIDATE_ONLY",
+    "promotion_evidence": false,
+    "source_event_id": "gremlin:whisper:sha256:075c1a33cf6b232cca8cf916a1073a5a2497206e34613661cf9d72c21e817f25",
+    "fused_event_id": "gremlin:whisper:sha256:81a085c76098f7e17b52f708c82dd5d17cabb48c6915cf23bae29defd3d3d58c",
+    "shape": [12, 36],
+    "terminal_receipt_sha256": "4be4acbfb575cc7589205028c00f9e029ea692e1b98f0e5fd4db869a2f538447",
+    "trace_sha256": "d15b5e9db2c4a11f01e509321a144f899c63e0a3f99cec210190b98ba27390f4"
+  },
+  "source_typing": {
+    "topology_and_cover": "TIR_A5_GSC4C",
+    "numeric_relative_rigid_geometry": "RFC_GSC4G_NUMERIC_SE3_OVERLAP_COCYCLE",
+    "pointwise_spatial_scale": "RFC_GSC4E_PHASE_MAGNITUDE_FIELD"
+  },
+  "production_numeric_cocycle": "OPEN_SOURCE_INPUT",
+  "authority": {
+    "gremlin_can_promote": false,
+    "terminal36d_can_promote": false,
+    "phasenav36d_can_promote": false,
+    "hosted_pass_supplies_production_numeric_geometry": false
+  }
+}

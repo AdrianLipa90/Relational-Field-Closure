@@ -1,0 +1,47 @@
+{
+  "schema": "RFC_GSC4A_SOURCE_ASSEMBLED_SHARED_SPACETIME_ATLAS_V0_1",
+  "status": "PASS_EXACT_SOURCE_ASSEMBLY_WITH_PRODUCTION_SOURCE_PACKET_OPEN",
+  "validated_head": "61549c4050894cdb9b850c52b88a96e4a4f8c59e",
+  "hosted_validation": {
+    "workflow": "RFC reference suite",
+    "run_number": 433,
+    "run_id": 33349598142,
+    "conclusion": "SUCCESS"
+  },
+  "exact_results": [
+    "J=[[1,0],[v,A]] is constructed from the shared-clock spatial relabeling packet",
+    "Lambda=diag(1,R) is constructed from the TIR SO(3) spatial coframe transition",
+    "E=[[N,0],[e*b,e]] is constructed from lapse, triad and matching shift",
+    "N_q=N_p, e_q*A=R*e_p and b_q=A*b_p-v imply E_q*J=Lambda*E_p",
+    "Lambda preserves eta and lies in the proper time-oriented sector",
+    "det J=det A preserves orientation on oriented spatial overlaps",
+    "RF-E25 metric pullback follows from the constructed coframe equation",
+    "coordinate and Lorentz triple cocycles inherit from the source A,v,R cocycles",
+    "the implementation delegates the final verdict to certify_shared_spacetime_atlas"
+  ],
+  "derived_rf_e25_fields": [
+    "FULL_4D_COORDINATE_JACOBIAN_J",
+    "LORENTZ_TRANSITION_LAMBDA",
+    "ADM_COFRAME_E",
+    "LORENTZ_METRIC_G",
+    "METRIC_PULLBACK_WITNESS"
+  ],
+  "production_open": [
+    "TIR_SPATIAL_PATCH_COFRAME_PACKET",
+    "TIR_SPATIAL_OVERLAP_A_R_COCYCLES",
+    "IDT_SHARED_CLOCK_LAPSE_PACKET",
+    "GSC3_MATCHING_SHIFT_AND_DRIFT_PACKET",
+    "SOURCE_PATCH_CLOCK_IDENTIFIERS",
+    "PRODUCTION_OVERLAP_COVERAGE"
+  ],
+  "live_36d_audit": {
+    "authority": "CANDIDATE_ONLY",
+    "promotion_evidence": false,
+    "runtime_surface": "/dev/shm/ciel_noema",
+    "source_event_id": "gremlin:whisper:sha256:b2d11dec948b1a6c32f09c2ee3d088682476ef3fc1c55ce956fe693598907afc",
+    "terminal_receipt_sha256": "0446cdaf9c26c15597b4e2560ed79b60520ae820cac4a493d2d0649d5218dcf6",
+    "phasenav_trace_sha256": "69ddf4065b9c9fbdb5d9ae70641f7488ffe9f3be5583d172569501f13260ad71",
+    "shape": [7, 36]
+  },
+  "verdict": "PASS_RFC_GSC4A_SOURCE_ASSEMBLED_RFE25_ATLAS_WITH_PRODUCTION_SOURCE_PACKET_OPEN"
+}
