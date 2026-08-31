@@ -1,0 +1,50 @@
+{
+  "schema": "RFC_GSC5A_NATURAL_EINSTEIN_GLOBALIZATION_RECEIPT_V0_1",
+  "status": "PASS_GSC5A_NATURAL_EINSTEIN_GLOBALIZATION_INPUT_REDUCTION_WITH_PRODUCTION_PARENTS_OPEN",
+  "date": "2026-08-31",
+  "candidate_pr": 111,
+  "stacked_parent_pr": 95,
+  "validated_head": "ae51f712de5a76749cf41872693e9d52f15f7c36",
+  "hosted_validation": {
+    "workflow": "RFC reference suite",
+    "run_number": 464,
+    "run_id": 33353321463,
+    "job_id": 99370665954,
+    "conclusion": "success",
+    "pytest": "1356 passed in 15.19s"
+  },
+  "exact_results": [
+    "on a smooth shared metric atlas the RF-E24 Einstein tensor overlap law is derived from naturality of G[g]",
+    "patchwise RF-E24 solutions with common Lambda and positive kappa_E derive stress-tensor overlap covariance",
+    "Einstein residual overlap covariance is derived from the metric, Einstein and stress tensor laws",
+    "zero patchwise residual on a covered atlas globalizes to zero residual on the represented target domain",
+    "independent production overlap matrices for G, T and residual are unnecessary on this sufficient route"
+  ],
+  "reduced_production_contract": [
+    "PRODUCTION_SMOOTH_RF_E25_SHARED_METRIC_ATLAS",
+    "PRODUCTION_PATCHWISE_RF_E24_LOCAL_SOLUTION_RECEIPTS",
+    "COMMON_FINITE_LAMBDA",
+    "COMMON_POSITIVE_FINITE_KAPPA_E",
+    "COMMON_PHYSICAL_SOURCE_FIELD_LINEAGE_ID",
+    "CONNECTED_OVERLAP_INCIDENCE",
+    "TARGET_DOMAIN_COVERAGE"
+  ],
+  "derived_coordinates": [
+    "EINSTEIN_TENSOR_OVERLAP_COVARIANCE",
+    "STRESS_TENSOR_OVERLAP_COVARIANCE",
+    "EINSTEIN_RESIDUAL_OVERLAP_COVARIANCE",
+    "ZERO_GLOBAL_RESIDUAL_ON_COVERED_DOMAIN"
+  ],
+  "firewalls": {
+    "metric_atlas_alone_supplies_physical_source_lineage": false,
+    "local_solution_receipts_alone_supply_target_domain_coverage": false,
+    "gsc5a_promotes_gsc6_cauchy_structure": false,
+    "hosted_pass_closes_production_parents": false
+  },
+  "authority": {
+    "promotion_authority": false,
+    "canonical_graph_mutation": false,
+    "production_source_lineage_required": true,
+    "production_domain_coverage_required": true
+  }
+}
