@@ -2,7 +2,7 @@ from __future__ import annotations
 
 from dataclasses import dataclass
 import math
-from typing import Iterable, Sequence
+from typing import Sequence
 
 
 C = 299_792_458.0
@@ -13,27 +13,39 @@ class PhaseMagnitudeBindingError(ValueError):
 
 
 @dataclass(frozen=True)
-class PhaseMagnitudePatch:
-    patch_id: str
+class PhaseMagnitudeOverlapSample:
+    source_patch: str
+    target_patch: str
+    sample_id: str
     clock_id: str
     phase_magnitude_field_id: str
-    omega_t: float
+    source_omega_t: float
+    target_omega_t: float
 
     @property
-    def magnitude(self) -> float:
-        return abs(self.omega_t)
+    def source_magnitude(self) -> float:
+        return abs(self.source_omega_t)
 
     @property
-    def spatial_scale(self) -> float:
-        return C / (math.sqrt(6.0) * self.magnitude)
+    def target_magnitude(self) -> float:
+        return abs(self.target_omega_t)
+
+    @property
+    def source_spatial_scale(self) -> float:
+        return C / (math.sqrt(6.0) * self.source_magnitude)
+
+    @property
+    def target_spatial_scale(self) -> float:
+        return C / (math.sqrt(6.0) * self.target_magnitude)
 
 
 @dataclass(frozen=True)
 class PhaseMagnitudeOverlapResult:
-    patch_p: str
-    patch_q: str
-    same_clock: bool
-    same_magnitude_field: bool
+    source_patch: str
+    target_patch: str
+    sample_id: str
+    clock_id: str
+    phase_magnitude_field_id: str
     magnitude_defect: float
     scale_defect: float
     signed_rate_equal: bool
@@ -42,67 +54,83 @@ class PhaseMagnitudeOverlapResult:
 
 @dataclass(frozen=True)
 class PhaseMagnitudeBindingCertificate:
-    overlaps: tuple[PhaseMagnitudeOverlapResult, ...]
+    samples: tuple[PhaseMagnitudeOverlapResult, ...]
     max_magnitude_defect: float
     max_scale_defect: float
     signed_rate_identity_required: bool
+    overlap_local_field_semantics: bool
     spatial_scale_binding_certified: bool
     production_status: str
 
 
-def phase_magnitude_patch(
-    patch_id: str,
+def phase_magnitude_overlap_sample(
+    source_patch: str,
+    target_patch: str,
+    sample_id: str,
     clock_id: str,
     phase_magnitude_field_id: str,
-    omega_t: float,
-) -> PhaseMagnitudePatch:
-    value = float(omega_t)
-    if not patch_id or not clock_id or not phase_magnitude_field_id:
-        raise PhaseMagnitudeBindingError("patch, clock and magnitude-field identifiers must be non-empty")
-    if not math.isfinite(value) or value == 0.0:
-        raise PhaseMagnitudeBindingError("phase rate must be finite and nonzero")
-    return PhaseMagnitudePatch(
-        patch_id=str(patch_id),
-        clock_id=str(clock_id),
-        phase_magnitude_field_id=str(phase_magnitude_field_id),
-        omega_t=value,
+    source_omega_t: float,
+    target_omega_t: float,
+) -> PhaseMagnitudeOverlapSample:
+    source = str(source_patch).strip()
+    target = str(target_patch).strip()
+    sid = str(sample_id).strip()
+    clock = str(clock_id).strip()
+    field_id = str(phase_magnitude_field_id).strip()
+    if not source or not target or source == target:
+        raise PhaseMagnitudeBindingError("sample must reference two distinct non-empty patch ids")
+    if not sid or not clock or not field_id:
+        raise PhaseMagnitudeBindingError("sample, clock and magnitude-field identifiers must be non-empty")
+    source_rate = float(source_omega_t)
+    target_rate = float(target_omega_t)
+    if not math.isfinite(source_rate) or source_rate == 0.0:
+        raise PhaseMagnitudeBindingError("source phase rate must be finite and nonzero")
+    if not math.isfinite(target_rate) or target_rate == 0.0:
+        raise PhaseMagnitudeBindingError("target phase rate must be finite and nonzero")
+    return PhaseMagnitudeOverlapSample(
+        source_patch=source,
+        target_patch=target,
+        sample_id=sid,
+        clock_id=clock,
+        phase_magnitude_field_id=field_id,
+        source_omega_t=source_rate,
+        target_omega_t=target_rate,
     )
 
 
 def certify_phase_rate_magnitude_binding(
-    patches: Sequence[PhaseMagnitudePatch],
-    overlaps: Iterable[tuple[str, str]],
+    samples: Sequence[PhaseMagnitudeOverlapSample],
     *,
     tolerance: float = 1.0e-12,
 ) -> PhaseMagnitudeBindingCertificate:
     if not math.isfinite(tolerance) or tolerance < 0.0:
         raise PhaseMagnitudeBindingError("tolerance must be finite and nonnegative")
-    by_id = {patch.patch_id: patch for patch in patches}
-    if len(by_id) != len(patches):
-        raise PhaseMagnitudeBindingError("patch identifiers must be unique")
-
+    seen: set[tuple[str, str, str]] = set()
     results: list[PhaseMagnitudeOverlapResult] = []
-    for patch_p, patch_q in overlaps:
-        if patch_p not in by_id or patch_q not in by_id:
-            raise PhaseMagnitudeBindingError("overlap references unknown patch")
-        p = by_id[patch_p]
-        q = by_id[patch_q]
-        same_clock = p.clock_id == q.clock_id
-        same_field = p.phase_magnitude_field_id == q.phase_magnitude_field_id
-        magnitude_defect = abs(p.magnitude - q.magnitude)
-        scale_defect = abs(p.spatial_scale - q.spatial_scale)
-        signed_equal = math.isclose(p.omega_t, q.omega_t, rel_tol=0.0, abs_tol=tolerance)
-        spatial_binding = same_clock and same_field and magnitude_defect <= tolerance
+    for sample in samples:
+        key = (sample.source_patch, sample.target_patch, sample.sample_id)
+        if key in seen:
+            raise PhaseMagnitudeBindingError("overlap sample identifiers must be unique per directed overlap")
+        seen.add(key)
+        magnitude_defect = abs(sample.source_magnitude - sample.target_magnitude)
+        scale_defect = abs(sample.source_spatial_scale - sample.target_spatial_scale)
+        signed_equal = math.isclose(
+            sample.source_omega_t,
+            sample.target_omega_t,
+            rel_tol=0.0,
+            abs_tol=tolerance,
+        )
         results.append(
             PhaseMagnitudeOverlapResult(
-                patch_p=patch_p,
-                patch_q=patch_q,
-                same_clock=same_clock,
-                same_magnitude_field=same_field,
+                source_patch=sample.source_patch,
+                target_patch=sample.target_patch,
+                sample_id=sample.sample_id,
+                clock_id=sample.clock_id,
+                phase_magnitude_field_id=sample.phase_magnitude_field_id,
                 magnitude_defect=magnitude_defect,
                 scale_defect=scale_defect,
                 signed_rate_equal=signed_equal,
-                spatial_scale_binding=spatial_binding,
+                spatial_scale_binding=magnitude_defect <= tolerance,
             )
         )
 
@@ -110,12 +138,13 @@ def certify_phase_rate_magnitude_binding(
     max_scale = max((r.scale_defect for r in results), default=0.0)
     certified = all(r.spatial_scale_binding for r in results)
     return PhaseMagnitudeBindingCertificate(
-        overlaps=tuple(results),
+        samples=tuple(results),
         max_magnitude_defect=max_mag,
         max_scale_defect=max_scale,
         signed_rate_identity_required=False,
+        overlap_local_field_semantics=True,
         spatial_scale_binding_certified=certified,
-        production_status="PRODUCTION_PHASE_MAGNITUDE_FIELD_SOURCE_OPEN",
+        production_status="PRODUCTION_OVERLAP_LOCAL_PHASE_MAGNITUDE_FIELD_SOURCE_OPEN",
     )
 
 
