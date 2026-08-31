@@ -1,236 +1,225 @@
 # RF-GSC4D — Anchored Phase-Scaled Rigid Spatial-Geometry Route
 
-Status: `EXACT_ANCHORED_RIGID_TRANSITION / EXACT_PHASE_SCALED_COFRAME_SPECIALIZATION / GSC4_SPATIAL_GEOMETRY_INPUT_REDUCTION / PRODUCTION_ANCHOR_FRAME_PHASE_RATE_PACKET_OPEN`
+Status: `EXACT_ANCHORED_RIGID_TRANSITION / EXACT_POINTWISE_PHASE_SCALED_COFRAME_SPECIALIZATION / GSC4_SPATIAL_GEOMETRY_INPUT_REDUCTION / PRODUCTION_ANCHOR_FRAME_PHASE_FIELD_PACKET_OPEN`
 
 Date: 2026-08-31
 
 ## 1. Purpose
 
-RF-GSC4A accepts a general spatial source packet consisting of local spatial coframes `e_p`, oriented spatial coordinate Jacobians `A_qp`, and internal frame rotations `R_qp`, constrained by
+RF-GSC4A accepts a general spatial source packet with local coframes `e_p`, oriented spatial Jacobians `A_qp`, and frame rotations `R_qp`, constrained by
 
 \[
 \boxed{e_qA_{qp}=R_{qp}e_p.}
 \]
 
-TIR already contains two narrower source structures:
+TIR supplies anchored Pauli/affine charts with orthonormal frames, while RF-02H/RF-02I supply the phase-clock spatial physicalization
 
-1. anchored Pauli/affine charts with orthonormal frames `Q_p in SO(3)`;
-2. the hexahedral phase-clock local coframe physicalization
-   \[
-   E^i=\frac{c}{\sqrt6|\omega_t|}\,\vartheta^i.
-   \]
+\[
+\boxed{E^i=a\,\vartheta^i,\qquad a(x)=\frac{c}{\sqrt6\,|\omega_t(x)|}.}
+\]
 
-RF-GSC4D composes these structures into one sufficient rigid-atlas route. It reduces the independent matrix packet `(e,A,R)` to anchored frames plus one source-bound phase-scale scalar on each represented overlap.
+RF-GSC4D composes these structures into one sufficient rigid-atlas route. Version 0.2 represents the phase scale as a scalar field and certifies its gluing pointwise on overlap samples. This preserves the RF-02I sector with spatially varying `a(x)` and its induced connection contribution.
 
-The general GSC4A smooth-atlas route remains a separate route.
+The general smooth GSC4A atlas remains a parallel sufficient route.
 
 ## 2. Anchored Pauli charts
 
-Let a local TIR chart `p` be specified by an anchor
+For patch `p`, let
 
 \[
-r_p\in\mathbb R^3
+r_p\in\mathbb R^3,
+\qquad Q_p\in SO(3),
 \]
 
-and an orthonormal frame
-
-\[
-Q_p\in SO(3).
-\]
-
-For one common Pauli affine carrier coordinate `r`, define
+and define
 
 \[
 \boxed{x_p=Q_p^{\mathsf T}(r-r_p).}
 \]
 
-For two charts `p,q`, eliminating `r` gives the exact TIR anchored transition
+On an overlap `p -> q`,
 
 \[
 \boxed{x_q=Q_q^{\mathsf T}Q_p x_p+Q_q^{\mathsf T}(r_p-r_q).}
 \]
 
-Hence
+Therefore
 
 \[
 \boxed{A_{qp}=Q_q^{\mathsf T}Q_p,}
-\]
-
-\[
+\qquad
 \boxed{t_{qp}=Q_q^{\mathsf T}(r_p-r_q).}
 \]
 
-The internal TIR frame rotation between the same anchored frames is
+The corresponding internal-frame rotation is
 
 \[
 \boxed{R_{qp}=Q_q^{\mathsf T}Q_p.}
 \]
 
-Therefore on this rigid anchored route
+Hence on the anchored rigid route
 
 \[
 \boxed{A_{qp}=R_{qp}\in SO(3).}
 \]
 
-This equality is a property of the admitted anchored rigid charts. It is not a restriction on the general smooth GSC4A atlas.
+This equality is the declared rigid specialization; the general GSC4A route retains arbitrary oriented smooth spatial Jacobians together with their own frame rotations.
 
-## 3. Dimensionless solder form on the anchored carrier
+## 3. Dimensionless solder specialization
 
-The TIR endpoint relation uses the Pauli displacement vector
-
-\[
-\Delta r=r_y-r_x.
-\]
-
-In the local anchored frame,
+The anchored Pauli displacement carrier uses
 
 \[
 \Delta x_p=Q_p^{\mathsf T}\Delta r.
 \]
 
-The same local frame extracts the internal displacement components as
-
-\[
-Q_p^{\mathsf T}\Delta r.
-\]
-
-Thus on the pure affine anchored carrier the dimensionless local solder/orientation coframe is represented by
+In the common affine carrier/frame pair, the dimensionless local orientation coframe is
 
 \[
 \boxed{\vartheta_p=dx_p,}
 \]
 
-so its coframe matrix in the local coordinate/internal-frame pair is
+with local matrix `I_3`.
+
+## 4. Phase-scale field
+
+Let the signed local phase rate be a field
 
 \[
-\boxed{I_3.}
+\omega_t:U\to\mathbb R\setminus\{0\}.
 \]
 
-This is the rigid anchored specialization of the discrete TIR solder source, not a statement about a general curved coordinate chart.
-
-## 4. Phase-clock spatial physicalization
-
-RF-02H/TIR hexahedral physicalization supplies
+Define its positive magnitude field and spatial scale field by
 
 \[
-\ell_\varphi=\frac{c}{|\omega_t|}
+\boxed{\nu(x):=|\omega_t(x)|>0,}
 \]
-
-for finite nonzero local phase rate `omega_t`, and
 
 \[
-\boxed{s:=\frac{\ell_\varphi}{\sqrt6}
-=\frac{c}{\sqrt6|\omega_t|}.}
+\boxed{a(x):=\frac{c}{\sqrt6\,\nu(x)}.}
 \]
 
-With `vartheta=dx`, the physical spatial coframe on patch `p` is
+On patch `p`, the physical coframe at a represented point `x` is
 
 \[
-\boxed{e_p=s_p I_3.}
+\boxed{e_p(x)=a_p(x)I_3.}
 \]
 
-The sign of `omega_t` does not change the spatial scale because `s` depends on its magnitude.
+A sign reversal of `omega_t` preserves `nu` and therefore preserves the spatial scale. Signed phase-rate information remains available to other dynamical sectors as a separately typed carrier.
 
-## 5. Overlap coframe theorem
+## 5. Pointwise overlap theorem
 
-At one common physical point represented by patches `p` and `q`, require the phase-clock spatial scale to be one source-bound scalar:
+Consider one physical overlap point `x` represented in patches `p` and `q`. A shared phase-magnitude field supplies
 
 \[
-\boxed{s_q=s_p.}
+\boxed{\nu_p(x)=\nu_q(x),}
 \]
 
-Then, using `A_qp=R_qp`,
+and therefore
+
+\[
+\boxed{a_p(x)=a_q(x).}
+\]
+
+Using `A_qp=R_qp`,
 
 \[
 \begin{aligned}
-e_qA_{qp}
-&=s_q I_3 A_{qp}\\
-&=s_p R_{qp}\\
-&=R_{qp}s_pI_3\\
-&=R_{qp}e_p.
+e_q(x)A_{qp}
+&=a_q(x)I_3A_{qp}\\
+&=a_p(x)R_{qp}\\
+&=R_{qp}a_p(x)I_3\\
+&=R_{qp}e_p(x).
 \end{aligned}
 \]
 
-Therefore
+Thus
 
 \[
-\boxed{e_qA_{qp}=R_{qp}e_p.}
+\boxed{e_q(x)A_{qp}=R_{qp}e_p(x)}
 \]
 
-The GSC4A spatial coframe compatibility equation is exact on the rigid anchored/phase-scaled route.
+holds pointwise on every certified overlap sample.
 
-## 6. Source packet reduction
+## 6. Spatial variation is retained
 
-The general GSC4A spatial packet
+The overlap law compares two chart representations of the same physical point. It does not equate the field at distinct physical points. Therefore two overlap samples `x` and `y` may satisfy
+
+\[
+\nu_p(x)=\nu_q(x),
+\qquad
+\nu_q(y)=\nu_r(y),
+\]
+
+while
+
+\[
+\boxed{\nu(x)\neq\nu(y).}
+\]
+
+Consequently
+
+\[
+\boxed{a(x)\neq a(y)}
+\]
+
+is admitted on a connected patch cover.
+
+This preserves the RF-02I exact local relation
+
+\[
+\boxed{f_i=E_i(\ln a)=-E_i(\ln|\omega|),}
+\]
+
+so spatial gradients of the phase-scale field remain available to the connection and curvature layers.
+
+## 7. Source-packet reduction
+
+On this sufficient route, the general spatial matrix packet
 
 ```text
-patch coframe matrices e_p
+local coframe matrices e_p(x)
 spatial Jacobians A_qp
-SO(3) rotations R_qp
+SO(3) frame rotations R_qp
 ```
 
-can be replaced on this sufficient route by
+is generated from
 
 ```text
 TIR anchor vectors r_p
-TIR orthonormal frame matrices Q_p
-finite nonzero phase rates omega_t,p
-shared phase-scale identity on each represented overlap
+TIR orthonormal frames Q_p
+overlap-local samples of the phase-magnitude field nu=|omega_t|
+shared magnitude-field provenance on each represented overlap
 ```
 
-with deterministic outputs
+through
 
 \[
-A_{qp}=R_{qp}=Q_q^TQ_p,
+\boxed{A_{qp}=R_{qp}=Q_q^TQ_p,}
 \]
 
 \[
-t_{qp}=Q_q^T(r_p-r_q),
+\boxed{t_{qp}=Q_q^T(r_p-r_q),}
 \]
 
 \[
-e_p=\frac{c}{\sqrt6|\omega_{t,p}|}I_3.
+\boxed{e_p(x)=\frac{c}{\sqrt6\,\nu_p(x)}I_3.}
 \]
 
-The remaining GSC4 inputs — temporal lapse, matching shift/drift route, and production coverage/source identities — retain their existing owners. GSC4C may supply the coverage indices from a production A5 tetrahedral complex.
+GSC4C can supply overlap incidence from the production A5 tetrahedral facet witness. The lapse and matching-flow/shift routes retain their existing owners.
 
-## 7. Scale-binding firewall
+## 8. Production witness
 
-The anchored frame algebra alone fixes `A`, `R` and `t`; it does not fix the physical scalar `s`. Two overlap representations with different `|omega_t|` produce
+The production rigid-route witness contains:
 
-\[
-e_qA_{qp}\ne R_{qp}e_p.
-\]
+1. source-owned anchor vectors `r_p`;
+2. source-owned `SO(3)` frame matrices `Q_p`;
+3. one declared phase-magnitude field identity and clock calibration;
+4. finite positive overlap-local magnitude samples `nu_p(x_alpha)`;
+5. pointwise equality of the two chart representatives on each physical overlap sample;
+6. provenance linking every sample to its physical overlap point.
 
-Therefore phase-scale equality on one physical overlap is an explicit source-binding condition.
-
-The event-clock exactness theorem 05H and the relational lapse 05C remain separately typed temporal structures. RF-GSC4D does not identify the phase rate with the lapse.
-
-## 8. Rigid-route firewall
-
-A general smooth spatial overlap may have
-
-\[
-A_{qp}=D_xf_{qp}\in GL^+(3)
-\]
-
-with shear or non-rigid stretch while the internal frame rotation remains
-
-\[
-R_{qp}\in SO(3).
-\]
-
-RF-GSC4D therefore exports
-
-\[
-\boxed{A=R}
-\]
-
-only on its declared anchored rigid-chart route. The general RF-GSC4A relation remains
-
-\[
-\boxed{e_qA=Re_p.}
-\]
+A compact one-rate-per-patch representation remains useful as a reference fixture. Production certification uses overlap-local field samples and therefore admits spatial variation across the represented domain.
 
 ## 9. Executable surface
 
@@ -242,38 +231,40 @@ Reference tests:
 
 `tests/reference/test_gsc4d_anchored_phase_scaled_rigid_geometry.py`
 
-The certifier checks:
+The executable surface checks:
 
-- finite anchors and phase rates;
+- finite anchors and rates;
 - `Q_p in SO(3)`;
-- nonzero `omega_t`;
-- exact anchored `A=R` construction;
-- anchored translation construction;
-- shared phase-scale agreement on each declared overlap;
-- `e_qA=Re_p`;
-- explicit separation from the general smooth GSC4A route.
+- anchored rigid `A=R` construction;
+- anchored translations;
+- overlap-local phase-field sample coverage;
+- pointwise phase-scale agreement;
+- `e_qA=Re_p` at each overlap sample;
+- connected-cover examples with distinct phase scales at distinct points;
+- separation from the general smooth GSC4A route.
 
 ## 10. Claim ledger
 
 | Statement | Status |
 |---|---|
-| anchored transition `A_qp=Q_q^T Q_p` | `EXACT TIR AFFINE ALGEBRA` |
-| internal frame rotation `R_qp=Q_q^T Q_p` | `EXACT` |
-| `A_qp=R_qp` on the anchored rigid route | `EXACT ROUTE SPECIALIZATION` |
-| dimensionless anchored solder `vartheta=dx` | `EXACT ON COMMON PAULI AFFINE CARRIER` |
-| `e=sI`, `s=c/(sqrt6 |omega_t|)` | `EXACT CONDITIONAL PHASE-CLOCK PHYSICALIZATION` |
-| shared scale gives `e_q A=R e_p` | `EXACT` |
-| executable route certifier | `PASS TARGET` |
-| production anchor/frame/phase-rate packet | `OPEN SOURCE INPUT` |
-| phase-scale identity across production overlap | `OPEN SOURCE BINDING` |
-| general smooth GSC4A atlas | `SEPARATE HOSTED-PASS ROUTE` |
+| `A_qp=Q_q^TQ_p` | `EXACT TIR AFFINE ALGEBRA` |
+| `R_qp=Q_q^TQ_p` | `EXACT` |
+| `A_qp=R_qp` on anchored rigid route | `EXACT ROUTE SPECIALIZATION` |
+| `vartheta=dx` on common anchored affine carrier | `EXACT ROUTE SPECIALIZATION` |
+| `e(x)=c I/(sqrt6 |omega_t(x)|)` | `EXACT CONDITIONAL PHASE-CLOCK PHYSICALIZATION` |
+| pointwise shared magnitude gives `e_qA=Re_p` | `EXACT` |
+| connected cover admits varying `a(x)` | `EXACT REPRESENTATION PROPERTY` |
+| executable overlap-local field certifier | `VALIDATION TARGET` |
+| production anchor/frame/magnitude-field packet | `OPEN SOURCE INPUT` |
+| production overlap sample provenance | `OPEN SOURCE BINDING` |
+| general smooth GSC4A route | `SEPARATE HOSTED-PASS ROUTE` |
 
 ## 11. Live 36D boundary
 
-The dependency reduction was audited through
+The v0.2 field-semantics correction was audited through the active
 
 ```text
 GREMLIN -> Terminal36D -> PhaseNav36D -> GREMLIN
 ```
 
-on the active `/dev/shm/ciel_noema` surface with `CANDIDATE_ONLY` authority. The runtime audit cannot promote source inputs or replace hosted deterministic validation.
+surface. The audit authority remains `CANDIDATE_ONLY`; deterministic hosted validation remains the executable theorem evidence surface.
