@@ -1,0 +1,41 @@
+{
+  "schema": "RFC_GSC3A_CLOCK_TRANSVERSE_MATCHING_FLOW_V0_1",
+  "status": "PASS_EXECUTABLE_GSC3A_WITH_PRODUCTION_INPUTS_OPEN",
+  "theorem_head_sha": "ee998b12e8a2be77943ce5dcfef9fddbf2bf8cf0",
+  "stacked_base": {
+    "branch": "feat/gsc3-product-clock-atlas-lift-v0.1",
+    "head_sha": "385528e1c87823dd6f681a0a7cdf277aa6389b38",
+    "pr": 97
+  },
+  "validation": {
+    "isolated_reference_tests": "9_OF_9_PASS",
+    "hosted_workflow": "RFC reference suite",
+    "hosted_run_number": 413,
+    "hosted_run_id": 33348254473,
+    "hosted_conclusion": "SUCCESS"
+  },
+  "exact_results": [
+    "dt(X)=1 for X=partial_t-b^i partial_i",
+    "spatial ADM coframe annihilates X",
+    "shared-clock overlap law b_q=A_qp b_p-v_qp",
+    "matching-field triple-overlap compatibility",
+    "interval-complete matching flow gives M diffeomorphic to I x Sigma_t0",
+    "proper global clock plus dt(X)=1 implies interval-complete matching flow",
+    "05H event-clock anchors share one additive calibration"
+  ],
+  "production_routes": {
+    "flow_coverage_route": "OPEN_ANALYTIC_INPUT",
+    "proper_clock_route": "OPEN_ANALYTIC_INPUT",
+    "route_logic": "EITHER_ROUTE_SUFFICIENT_FOR_PRODUCT_TRIVIALIZATION"
+  },
+  "production_open": [
+    "PHYSICAL_EVENT_PLACEMENT",
+    "RF_E25_LORENTZ_COFRAME_REALIZATION"
+  ],
+  "gremlin_phase36d_terminal36d_audit": {
+    "authority": "CANDIDATE_ONLY",
+    "receipt": "validation/gremlin/GSC3A_GREMLIN_PHASENAV_TERMINAL36D_AUDIT_V0_1.json",
+    "promotion_evidence": false
+  },
+  "verdict": "PASS_RFC_GSC3A_CLOCK_TRANSVERSE_MATCHING_FLOW_WITH_FLOW_OR_PROPERNESS_AND_EVENT_PLACEMENT_INPUTS_OPEN"
+}
