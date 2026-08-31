@@ -1,0 +1,62 @@
+{
+  "schema": "RFC_GSC4B_FLOW_ADAPTED_ZERO_SHIFT_ATLAS_RECEIPT_V0_1",
+  "status": "PASS_RFC_GSC4B_FLOW_ADAPTED_ZERO_SHIFT_SOURCE_ASSEMBLED_ATLAS_WITH_PRODUCT_PARENT_OPEN",
+  "date": "2026-08-31",
+  "lineage": {
+    "stacked_parent_pr": 105,
+    "stacked_parent_head": "2559609bbb7d0dbc2236b66021d5f86967aa9303",
+    "candidate_pr": 106,
+    "validated_head": "1f3522f24ef81a516069fd8553fc2b34f25d96f7"
+  },
+  "hosted_validation": {
+    "workflow": "RFC reference suite",
+    "run_number": 440,
+    "run_id": 33350893202,
+    "job_id": 99363907448,
+    "conclusion": "success",
+    "pytest": "1370 passed, 1 warning in 15.51s",
+    "warning_scope": "pre-existing GSC4A test string escape warning; no test failure"
+  },
+  "exact_results": [
+    "an admitted GSC3A product-flow chart transported from the reference spatial leaf has X=partial_t",
+    "in the RF-E25/GSC4A convention X=partial_t-b^i partial_i this fixes b=0 on the flow-adapted chart",
+    "spatial chart transitions extended from the reference leaf are time-independent and therefore v=0",
+    "the zero-shift/zero-drift specialization delegates to the hosted-validated GSC4A constructor and RF-E25 certifier",
+    "zero shift is coordinate-gauge specific and does not imply zero extrinsic curvature"
+  ],
+  "sufficient_route_inputs": [
+    "GSC3A product-trivialization parent",
+    "TIR spatial patch/coframe packet",
+    "TIR oriented spatial overlap A,R cocycle packet",
+    "IDT shared clock/lapse packet",
+    "source patch/clock identifiers",
+    "production overlap coverage"
+  ],
+  "removed_independent_inputs_on_this_route": [
+    "matching shift b packet",
+    "temporal spatial drift v packet"
+  ],
+  "live_triad_audit": {
+    "runtime_surface": "/dev/shm/ciel_noema",
+    "generation": "7e28fb102af2a7015f0e73f7828a0f1bc611fd9d478919dd072a39779d7d60fd",
+    "authority": "CANDIDATE_ONLY",
+    "promotion_evidence": false,
+    "source_event_id": "gremlin:whisper:sha256:fd68ef07a9c04fe45b60646940ee6f3fa1596894f17150cd66a58a721d6eb7d3",
+    "fused_event_id": "gremlin:whisper:sha256:31df05e09faf86e905214175179af4bd6d4acde9e56cf8f1a17689a9b857e37f",
+    "shape": [9, 36],
+    "terminal_receipt_sha256": "ccdedf9bc0d56aa89471c8e110180e66684e78000e3ac00ba6506fca0128345e",
+    "trace_sha256": "b1caea115a64ae1f7d65480928de2e2b5167351ec547a74d74f338c9d2fdad9f"
+  },
+  "authority": {
+    "gremlin_can_promote": false,
+    "terminal36d_can_promote": false,
+    "phasenav36d_can_promote": false,
+    "hosted_reference_pass_closes_production_inputs": false
+  },
+  "production_status": {
+    "product_trivialization_parent": "OPEN_INPUT",
+    "tir_spatial_source_packet": "OPEN_INPUT",
+    "idt_clock_lapse_packet": "OPEN_INPUT",
+    "overlap_coverage": "OPEN_INPUT"
+  }
+}
