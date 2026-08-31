@@ -1,0 +1,57 @@
+{
+  "schema": "RFC_GSC3C_BETA_MATCH_SHIFT_SOURCE_BINDING_RECEIPT_V0_1",
+  "status": "PASS_RFC_GSC3C_COVARIANT_FAMILY_AND_SOURCE_BINDING_CERTIFIER_WITH_PRODUCTION_BINDING_OPEN",
+  "date": "2026-08-31",
+  "lineage": {
+    "stacked_parent_pr": 100,
+    "stacked_parent_head": "8e38c4a66363ebc1859df43adf1e3ffb3e164cc6",
+    "candidate_pr": 103,
+    "validated_head": "f36c110944a1a4df754e61f4042b17b7a53ccd49"
+  },
+  "hosted_validation": {
+    "workflow": "RFC reference suite",
+    "run_number": 426,
+    "run_id": 33349279041,
+    "job_id": 99359307476,
+    "conclusion": "success",
+    "pytest": "1361 passed in 11.55s"
+  },
+  "exact_results": [
+    "beta_t and c*b_x0 occupy the same shared-clock affine overlap class",
+    "W=beta_t-c*b_x0 obeys W_q=A_qp W_p",
+    "the overlap-compatible family is parameterized by the spatial vector field W",
+    "the source-owned binding on a supplied common realization is the W=0 section"
+  ],
+  "minimal_binding_witness": [
+    "common realization_id",
+    "common clock_id",
+    "common patch identifiers",
+    "TIR beta_t patch values",
+    "RFC b_x0 patch values",
+    "shared overlap A_qp and v_t_qp",
+    "max_patch_norm(beta_t-c*b_x0)<=tolerance"
+  ],
+  "decisive_control": {
+    "construction": "beta_prime=c*b_x0+W with nonzero covariant W",
+    "overlap_covariance": "PASS",
+    "source_binding": "OPEN",
+    "purpose": "separate affine geometry from source-owned carrier identity"
+  },
+  "live_triad_audit": {
+    "runtime_surface": "/dev/shm/ciel_noema",
+    "authority": "CANDIDATE_ONLY",
+    "promotion_evidence": false,
+    "source_event_id": "gremlin:whisper:sha256:868cf87387825dc10f7c5dd75835b9cdf4db2298a4053cfc602020b6ed38cd45",
+    "fused_event_id": "gremlin:whisper:sha256:8f0855ed15b258fd52898efa89b3475e33366e8a2970f175659a9a3c501f8dc4",
+    "shape": [10, 36],
+    "terminal_receipt_sha256": "fcf03e4e62505e18b20d9b1ce38dfb3779c8f956ea3bb57b4fa65edbdf700d0c",
+    "trace_sha256": "b270f6b95335e1588bbb49dbb7aa33c3c4437593a0e57c3c943dd5ce1cfe2ac2"
+  },
+  "authority": {
+    "gremlin_can_promote": false,
+    "terminal36d_can_promote": false,
+    "phasenav36d_can_promote": false,
+    "hosted_certifier_pass_closes_production_binding": false
+  },
+  "production_source_binding": "OPEN_SOURCE_BINDING"
+}
