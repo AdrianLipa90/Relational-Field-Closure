@@ -1,0 +1,55 @@
+{
+  "schema": "RFC_GSC3B_MATCHING_FLOW_EXTRINSIC_CURVATURE_RECEIPT_V0_1",
+  "status": "PASS_RFC_GSC3B_MATCHING_FLOW_EXTRINSIC_CURVATURE_KINEMATIC_SEAM_WITH_PRODUCTION_INPUTS_OPEN",
+  "date": "2026-08-31",
+  "authority": {
+    "deterministic_tests": true,
+    "gremlin_candidate_authority": true,
+    "gremlin_canon_authority": false,
+    "automatic_promotion": false
+  },
+  "lineage": {
+    "base_gate": "RF-GSC3A",
+    "base_pr": 99,
+    "base_head": "19a53048dcae1783efaaae36e1db4b7fe6040282",
+    "candidate_pr": 101,
+    "validated_head": "696bf6d24991af5ad6ae8b2d9cb1cee303f9dcb7"
+  },
+  "hosted_validation": {
+    "workflow": "RFC reference suite",
+    "run_number": 422,
+    "run_id": 33348861879,
+    "job_id": 99358140823,
+    "conclusion": "success",
+    "pytest": "1356 passed in 10.97s"
+  },
+  "failure_history": {
+    "initial_head": "e7d7847d2d02afbcc99f184305eb49a83d47cd68",
+    "run_number": 420,
+    "run_id": 33348719261,
+    "result": "1 failed, 1355 passed",
+    "failure_class": "TEST_FLOAT_EQUALITY_ONLY",
+    "repair": "replace exact -1.2 tuple equality with pytest.approx; theorem and implementation unchanged"
+  },
+  "live_triad_audit": {
+    "path": "GREMLIN->Terminal36D->PhaseNav36D->GREMLIN",
+    "surface": "/dev/shm/ciel_noema",
+    "authority": "CANDIDATE_ONLY",
+    "source_event_id": "gremlin:whisper:sha256:7efca54e02d337b0f566bf8f1a53a62dfac34b19aa5d52470305906782fea06a",
+    "fused_event_id": "gremlin:whisper:sha256:2c6e0b55226276a5cd10dad8eb8f4361c14e19473586a040206aa6140b11e6c3",
+    "shape": [14, 36],
+    "terminal_receipt_sha256": "f6dba806817f9127721f6c7b5a13bbf6ddc5664c2e40f2d6ac73982ff325b573",
+    "trace_sha256": "750b8ed24af055f68b0d2067e460b329cf845f2827010d72c88e479d5b689e0d"
+  },
+  "exact_results": [
+    "L_X h = partial_t h - (D_i b_j + D_j b_i) on the spatial sector",
+    "K_ij = -(L_X h)_ij/(2N) in the declared TIR/RFC sign convention",
+    "K_ij = -(L_n h)_ij/2 for n=X/N on spatial arguments",
+    "GSC3A dragged coordinates give b'=0 as coordinate gauge and partial_t h=-2NK"
+  ],
+  "open_production_coordinates": {
+    "global_matching_flow_coverage": "UPSTREAM_GSC3A_OPEN_INPUT",
+    "physical_event_placement": "UPSTREAM_OPEN_INPUT",
+    "rf_e25_shared_lorentz_coframe_realization": "DOWNSTREAM_OPEN_INPUT"
+  }
+}
