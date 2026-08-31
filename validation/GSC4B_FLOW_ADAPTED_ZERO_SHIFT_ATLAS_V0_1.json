@@ -4,25 +4,29 @@
   "date": "2026-08-31",
   "lineage": {
     "stacked_parent_pr": 105,
-    "stacked_parent_head": "2559609bbb7d0dbc2236b66021d5f86967aa9303",
+    "stacked_parent_head": "23abf185bd77572eb16b7b3d2a7bb95fdee6c5c3",
     "candidate_pr": 106,
-    "validated_head": "1f3522f24ef81a516069fd8553fc2b34f25d96f7"
+    "validated_head": "bb427244d28c62e624557cf1b8cf532b49e490cf",
+    "merge_parents": [
+      "23abf185bd77572eb16b7b3d2a7bb95fdee6c5c3",
+      "083b0b8b63747f412320f9ace00c52d1176120ca"
+    ]
   },
   "hosted_validation": {
     "workflow": "RFC reference suite",
-    "run_number": 440,
-    "run_id": 33350893202,
-    "job_id": 99363907448,
+    "run_number": 448,
+    "run_id": 33351774458,
+    "job_id": 99366419375,
     "conclusion": "success",
-    "pytest": "1370 passed, 1 warning in 15.51s",
-    "warning_scope": "pre-existing GSC4A test string escape warning; no test failure"
+    "reference_step": "success"
   },
   "exact_results": [
     "an admitted GSC3A product-flow chart transported from the reference spatial leaf has X=partial_t",
     "in the RF-E25/GSC4A convention X=partial_t-b^i partial_i this fixes b=0 on the flow-adapted chart",
-    "spatial chart transitions extended from the reference leaf are time-independent and therefore v=0",
-    "the zero-shift/zero-drift specialization delegates to the hosted-validated GSC4A constructor and RF-E25 certifier",
-    "zero shift is coordinate-gauge specific and does not imply zero extrinsic curvature"
+    "spatial chart transitions extended from the reference Sigma are time-independent and therefore v=0",
+    "the zero-shift/zero-drift specialization remains valid on the provenance-aware GSC4A parent",
+    "the flow-adapted route constructs b=0 and v=0 and therefore does not consume an independent shift-source provenance packet",
+    "zero shift is coordinate-gauge specific and can coexist with nonzero extrinsic curvature"
   ],
   "sufficient_route_inputs": [
     "GSC3A product-trivialization parent",
@@ -34,18 +38,24 @@
   ],
   "removed_independent_inputs_on_this_route": [
     "matching shift b packet",
-    "temporal spatial drift v packet"
+    "temporal spatial drift v packet",
+    "GSC4A independent shift-source provenance packet"
   ],
+  "route_separation": {
+    "general_gsc4a": "RFC_INDEPENDENT_SHIFT OR (TIR_BETA_MATCH_BOUND + GSC3D + GSC3E_W0)",
+    "flow_adapted_gsc4b": "PRODUCT_TRIVIALIZATION + N + e + time-independent A -> b=0, v=0",
+    "gsc3e_w0_required_on_flow_adapted_route": false
+  },
   "live_triad_audit": {
     "runtime_surface": "/dev/shm/ciel_noema",
     "generation": "7e28fb102af2a7015f0e73f7828a0f1bc611fd9d478919dd072a39779d7d60fd",
     "authority": "CANDIDATE_ONLY",
     "promotion_evidence": false,
-    "source_event_id": "gremlin:whisper:sha256:fd68ef07a9c04fe45b60646940ee6f3fa1596894f17150cd66a58a721d6eb7d3",
-    "fused_event_id": "gremlin:whisper:sha256:31df05e09faf86e905214175179af4bd6d4acde9e56cf8f1a17689a9b857e37f",
-    "shape": [9, 36],
-    "terminal_receipt_sha256": "ccdedf9bc0d56aa89471c8e110180e66684e78000e3ac00ba6506fca0128345e",
-    "trace_sha256": "b1caea115a64ae1f7d65480928de2e2b5167351ec547a74d74f338c9d2fdad9f"
+    "source_event_id": "gremlin:whisper:sha256:f550736ee69dd8c10d2ab5efd75d6010f6e0347f12eeb431b07968af7f59c8b9",
+    "fused_event_id": "gremlin:whisper:sha256:7cab6695e3a08f47fe791e7f6750beabec65210a27e93d7b915c8471627eb177",
+    "shape": [11, 36],
+    "terminal_receipt_sha256": "29c18018db1722e116d5bfc257bce2fd027f01029c5c2c2bb242aa00d3c94ceb",
+    "trace_sha256": "199f2458bb17e74e8ebea40ead950900ea9fd1dd05baecb4c272fa2b65e32918"
   },
   "authority": {
     "gremlin_can_promote": false,
