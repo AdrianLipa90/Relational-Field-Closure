@@ -5,7 +5,8 @@
   "numbering": {
     "canonical_candidate_label": "GSC3E",
     "historical_branch_label": "gsc3c",
-    "reason": "PR #102 already owns GSC3C and PR #104 owns GSC3D"
+    "historical_file_label": "GSC3C",
+    "reason": "PR #102 owns GSC3C; PR #104 owns GSC3D"
   },
   "lineage": {
     "stacked_parent_pr": 100,
