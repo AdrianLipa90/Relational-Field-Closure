@@ -47,21 +47,95 @@ def test_invalid_or_closed_interval_data_fail_closed():
         interval.to_real(1.0)
 
 
-def test_finite_a5_compact_product_derives_proper_real_clock_and_gsc6b_route():
+def test_finite_a5_flow_derived_product_derives_proper_real_clock_and_gsc6b_route():
     route = certify_open_interval_product_route(
         interval=OpenInterval(left=0.0, right=1.0),
         finite_a5_spatial_carrier=True,
         a5_closed_3manifold_certified=True,
         global_product_trivialization=True,
+        product_trivialization_provenance="FLOW_COVERAGE",
         global_regular_product_clock=True,
         global_lorentzian_carrier=True,
         smooth_finite_positive_lapse=True,
     )
     assert route.compact_spatial_fiber_derived is True
+    assert route.product_provenance_independent_of_proper_clock is True
     assert route.orientation_preserving_interval_diffeomorphism_derived is True
     assert route.proper_real_temporal_clock_derived is True
     assert route.proper_clock_route.wick_complete_derived is True
     assert route.global_hyperbolicity_eligible is True
+
+
+def test_clock_properness_derived_product_is_rejected_by_circularity_firewall():
+    route = certify_open_interval_product_route(
+        interval=OpenInterval(),
+        finite_a5_spatial_carrier=True,
+        a5_closed_3manifold_certified=True,
+        global_product_trivialization=True,
+        product_trivialization_provenance="CLOCK_PROPERNESS",
+        global_regular_product_clock=True,
+        global_lorentzian_carrier=True,
+        smooth_finite_positive_lapse=True,
+    )
+    assert route.product_provenance_independent_of_proper_clock is False
+    assert route.proper_real_temporal_clock_derived is False
+    assert route.global_hyperbolicity_eligible is False
+
+
+def test_independent_source_receipt_requires_explicit_no_proper_clock_ancestry():
+    blocked = certify_open_interval_product_route(
+        interval=OpenInterval(),
+        finite_a5_spatial_carrier=True,
+        a5_closed_3manifold_certified=True,
+        global_product_trivialization=True,
+        product_trivialization_provenance="INDEPENDENT_SOURCE_RECEIPT",
+        independent_product_no_proper_clock_ancestry=False,
+        global_regular_product_clock=True,
+        global_lorentzian_carrier=True,
+        smooth_finite_positive_lapse=True,
+    )
+    admitted = certify_open_interval_product_route(
+        interval=OpenInterval(),
+        finite_a5_spatial_carrier=True,
+        a5_closed_3manifold_certified=True,
+        global_product_trivialization=True,
+        product_trivialization_provenance="INDEPENDENT_SOURCE_RECEIPT",
+        independent_product_no_proper_clock_ancestry=True,
+        global_regular_product_clock=True,
+        global_lorentzian_carrier=True,
+        smooth_finite_positive_lapse=True,
+    )
+    assert blocked.proper_real_temporal_clock_derived is False
+    assert admitted.proper_real_temporal_clock_derived is True
+
+
+def test_unknown_product_provenance_keeps_reduction_closed():
+    route = certify_open_interval_product_route(
+        interval=OpenInterval(),
+        finite_a5_spatial_carrier=True,
+        a5_closed_3manifold_certified=True,
+        global_product_trivialization=True,
+        product_trivialization_provenance="UNKNOWN",
+        global_regular_product_clock=True,
+        global_lorentzian_carrier=True,
+        smooth_finite_positive_lapse=True,
+    )
+    assert route.product_provenance_independent_of_proper_clock is False
+    assert route.proper_real_temporal_clock_derived is False
+
+
+def test_unsupported_product_provenance_fails_closed():
+    with pytest.raises(ValueError):
+        certify_open_interval_product_route(
+            interval=OpenInterval(),
+            finite_a5_spatial_carrier=True,
+            a5_closed_3manifold_certified=True,
+            global_product_trivialization=True,
+            product_trivialization_provenance="UNDECLARED_ROUTE",
+            global_regular_product_clock=True,
+            global_lorentzian_carrier=True,
+            smooth_finite_positive_lapse=True,
+        )
 
 
 def test_locally_finite_or_unfrozen_spatial_carrier_does_not_get_compactness_for_free():
@@ -70,6 +144,7 @@ def test_locally_finite_or_unfrozen_spatial_carrier_does_not_get_compactness_for
         finite_a5_spatial_carrier=False,
         a5_closed_3manifold_certified=True,
         global_product_trivialization=True,
+        product_trivialization_provenance="FLOW_COVERAGE",
         global_regular_product_clock=True,
         global_lorentzian_carrier=True,
         smooth_finite_positive_lapse=True,
@@ -85,6 +160,7 @@ def test_a5_certificate_is_required_for_compact_spatial_parent():
         finite_a5_spatial_carrier=True,
         a5_closed_3manifold_certified=False,
         global_product_trivialization=True,
+        product_trivialization_provenance="FLOW_COVERAGE",
         global_regular_product_clock=True,
         global_lorentzian_carrier=True,
         smooth_finite_positive_lapse=True,
@@ -99,6 +175,7 @@ def test_local_product_charts_do_not_promote_global_properness():
         finite_a5_spatial_carrier=True,
         a5_closed_3manifold_certified=True,
         global_product_trivialization=False,
+        product_trivialization_provenance="FLOW_COVERAGE",
         global_regular_product_clock=True,
         global_lorentzian_carrier=True,
         smooth_finite_positive_lapse=True,
@@ -113,6 +190,7 @@ def test_gr_cauchy_composition_stays_separate():
         finite_a5_spatial_carrier=True,
         a5_closed_3manifold_certified=True,
         global_product_trivialization=True,
+        product_trivialization_provenance="FLOW_COVERAGE",
         global_regular_product_clock=True,
         global_lorentzian_carrier=True,
         smooth_finite_positive_lapse=True,
