@@ -1,0 +1,55 @@
+{
+  "schema": "RFC_GSC4A_SHIFT_SOURCE_PROVENANCE_RECEIPT_V0_1",
+  "date": "2026-08-31",
+  "status": "PASS_GSC4A_DUAL_SHIFT_SOURCE_PROVENANCE_ADMISSION_WITH_SOURCE_OWNERSHIP_AND_PRODUCTION_INPUTS_OPEN",
+  "candidate_pr": 105,
+  "validated_head": "13a5492762934ca44326947c496d5452af2b59c2",
+  "hosted_validation": {
+    "workflow": "RFC reference suite",
+    "run_number": 445,
+    "run_id": 33351338275,
+    "job_id": 99365195714,
+    "conclusion": "success",
+    "reference_step": "success"
+  },
+  "routes": {
+    "RFC_INDEPENDENT_SHIFT": {
+      "status": "ADMITTED",
+      "requires_gsc3d": false,
+      "requires_gsc3e": false,
+      "source_owner": "RFC"
+    },
+    "TIR_BETA_MATCH_BOUND": {
+      "status": "ADMITTED_ON_DECLARED_RECEIPTS",
+      "requires_gsc3d": true,
+      "requires_gsc3e": true,
+      "source_owner": "TIR"
+    }
+  },
+  "live_triad_audit": {
+    "runtime_surface": "/dev/shm/ciel_noema",
+    "generation": "7e28fb102af2a7015f0e73f7828a0f1bc611fd9d478919dd072a39779d7d60fd",
+    "authority": "CANDIDATE_ONLY",
+    "promotion_evidence": false,
+    "source_event_id": "gremlin:whisper:sha256:757fb0c84a7ffbd838e7b20a8383ebab180c879ca4223f5bc55724f316c2dd93",
+    "fused_event_id": "gremlin:whisper:sha256:c28328cda7e1cb63af856bcb051998e60c238107849532eb246267e70f7cb035",
+    "shape": [8, 36],
+    "terminal_receipt_sha256": "ab56c861068b409fe86506b252d7b4c47962a5a5b90c64604fd1741edb4b5f29",
+    "phasenav_trace_sha256": "a9c05007bd747207c9d941e93c040d0b1887ce943f951781e1e34872fd1716f9"
+  },
+  "firewalls": {
+    "tir_route_can_bypass_gsc3d": false,
+    "tir_route_can_bypass_gsc3e_w0": false,
+    "rfc_independent_route_forced_through_tir_binding": false,
+    "declared_source_reference_proves_source_ownership": false,
+    "hosted_pass_closes_production_atlas": false,
+    "gremlin_can_promote": false,
+    "terminal36d_can_promote": false,
+    "phasenav36d_can_promote": false
+  },
+  "open_inputs": [
+    "SOURCE_CONTROLLED_PROVENANCE",
+    "PRODUCTION_TIR_IDT_OR_RFC_SOURCE_PACKET",
+    "PRODUCTION_OVERLAP_COVERAGE"
+  ]
+}
