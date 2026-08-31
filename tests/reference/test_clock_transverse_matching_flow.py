@@ -2,7 +2,7 @@ from __future__ import annotations
 
 import pytest
 
-from rfc.clock_transverse_matching_flow import (
+from src.rfc.clock_transverse_matching_flow import (
     ClockTransverseMatchingFlowError,
     EventClockAnchor,
     MatchingPatch,
