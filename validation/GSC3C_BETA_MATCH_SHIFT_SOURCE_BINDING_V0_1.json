@@ -1,7 +1,12 @@
 {
-  "schema": "RFC_GSC3C_BETA_MATCH_SHIFT_SOURCE_BINDING_RECEIPT_V0_1",
-  "status": "PASS_RFC_GSC3C_COVARIANT_FAMILY_AND_SOURCE_BINDING_CERTIFIER_WITH_PRODUCTION_BINDING_OPEN",
+  "schema": "RFC_GSC3E_BETA_MATCH_SHIFT_SOURCE_BINDING_RECEIPT_V0_1",
+  "status": "PASS_RFC_GSC3E_COVARIANT_FAMILY_AND_SOURCE_BINDING_CERTIFIER_WITH_PRODUCTION_BINDING_OPEN",
   "date": "2026-08-31",
+  "numbering": {
+    "canonical_candidate_label": "GSC3E",
+    "historical_branch_label": "gsc3c",
+    "reason": "PR #102 already owns GSC3C and PR #104 owns GSC3D"
+  },
   "lineage": {
     "stacked_parent_pr": 100,
     "stacked_parent_head": "8e38c4a66363ebc1859df43adf1e3ffb3e164cc6",
@@ -20,12 +25,13 @@
     "beta_t and c*b_x0 occupy the same shared-clock affine overlap class",
     "W=beta_t-c*b_x0 obeys W_q=A_qp W_p",
     "the overlap-compatible family is parameterized by the spatial vector field W",
-    "the source-owned binding on a supplied common realization is the W=0 section"
+    "shared matching-one-form identity is equivalent to the W=0 section after temporal scale calibration"
   ],
   "minimal_binding_witness": [
     "common realization_id",
     "common clock_id",
-    "common patch identifiers",
+    "common spatial patch/chart identifiers",
+    "declared shared matching-one-form carrier identity",
     "TIR beta_t patch values",
     "RFC b_x0 patch values",
     "shared overlap A_qp and v_t_qp",
@@ -35,7 +41,7 @@
     "construction": "beta_prime=c*b_x0+W with nonzero covariant W",
     "overlap_covariance": "PASS",
     "source_binding": "OPEN",
-    "purpose": "separate affine geometry from source-owned carrier identity"
+    "purpose": "separate affine geometry and identifier compatibility from shared carrier identity"
   },
   "live_triad_audit": {
     "runtime_surface": "/dev/shm/ciel_noema",
