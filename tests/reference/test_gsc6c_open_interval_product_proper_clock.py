@@ -3,6 +3,7 @@ import pytest
 from src.rfc.open_interval_product_proper_clock import (
     OpenInterval,
     certify_open_interval_product_route,
+    reparametrize_adm_time,
 )
 
 
@@ -45,6 +46,39 @@ def test_invalid_or_closed_interval_data_fail_closed():
         interval.to_real(0.0)
     with pytest.raises(ValueError):
         interval.to_real(1.0)
+
+
+def test_adm_time_reparametrization_scales_lapse_and_shift_by_inverse_psi_prime():
+    interval = OpenInterval(left=0.0, right=1.0)
+    result = reparametrize_adm_time(
+        interval=interval,
+        t_value=0.5,
+        lapse_t=3.0,
+        shift_t=(2.0, -4.0, 1.0),
+    )
+    assert result.psi_prime == pytest.approx(4.0)
+    assert result.lapse_tau == pytest.approx(0.75)
+    assert result.shift_tau == pytest.approx((0.5, -1.0, 0.25))
+
+
+def test_adm_reparametrization_keeps_positive_finite_lapse_on_half_line():
+    result = reparametrize_adm_time(
+        interval=OpenInterval(left=0.0),
+        t_value=2.0,
+        lapse_t=5.0,
+        shift_t=(1.0, 2.0, 3.0),
+    )
+    assert result.psi_prime == pytest.approx(0.5)
+    assert result.lapse_tau == pytest.approx(10.0)
+    assert all(abs(x) < float("inf") for x in result.shift_tau)
+
+
+def test_adm_reparametrization_requires_positive_finite_lapse_and_finite_shift():
+    interval = OpenInterval()
+    with pytest.raises(ValueError):
+        reparametrize_adm_time(interval=interval, t_value=0.0, lapse_t=0.0, shift_t=(0.0, 0.0, 0.0))
+    with pytest.raises(ValueError):
+        reparametrize_adm_time(interval=interval, t_value=0.0, lapse_t=1.0, shift_t=(0.0, float("inf"), 0.0))
 
 
 def test_finite_a5_flow_derived_product_derives_proper_real_clock_and_gsc6b_route():
