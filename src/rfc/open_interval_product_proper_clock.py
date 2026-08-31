@@ -108,6 +108,8 @@ class OpenIntervalProductRoute:
     a5_closed_3manifold_certified: bool
     compact_spatial_fiber_derived: bool
     global_product_trivialization: bool
+    product_trivialization_provenance: str
+    product_provenance_independent_of_proper_clock: bool
     orientation_preserving_interval_diffeomorphism_derived: bool
     proper_real_temporal_clock_derived: bool
     proper_clock_route: ProperClockRoute
@@ -121,12 +123,29 @@ class OpenIntervalProductRoute:
         return self.proper_clock_route.global_gr_cauchy_carrier_eligible
 
 
+def _independent_product_provenance(
+    provenance: str,
+    *,
+    independent_product_no_proper_clock_ancestry: bool,
+) -> bool:
+    tag = str(provenance).strip().upper()
+    if tag == "FLOW_COVERAGE":
+        return True
+    if tag == "INDEPENDENT_SOURCE_RECEIPT":
+        return bool(independent_product_no_proper_clock_ancestry)
+    if tag in {"CLOCK_PROPERNESS", "UNKNOWN", ""}:
+        return False
+    raise ValueError("unsupported product_trivialization_provenance")
+
+
 def certify_open_interval_product_route(
     *,
     interval: OpenInterval,
     finite_a5_spatial_carrier: bool,
     a5_closed_3manifold_certified: bool,
     global_product_trivialization: bool,
+    product_trivialization_provenance: str,
+    independent_product_no_proper_clock_ancestry: bool = False,
     global_regular_product_clock: bool,
     global_lorentzian_carrier: bool,
     smooth_finite_positive_lapse: bool,
@@ -134,19 +153,25 @@ def certify_open_interval_product_route(
 ) -> OpenIntervalProductRoute:
     """Compose the finite-A5 + open-interval product route with RF-GSC6B.
 
-    A finite A5-certified simplicial realization has compact geometric realization.
-    For a global product ``M=I x Sigma`` with compact ``Sigma``, projection to ``I``
-    is proper. Every nonempty open interval is orientation-preserving diffeomorphic
-    to ``R``; composition with that diffeomorphism gives a proper real-valued
-    temporal clock. The remaining hyperbolicity implications are delegated to
-    the existing RF-GSC6B certifier.
+    The route is admitted for proper-clock reduction only when the supplied global
+    product has provenance independent of the proper-clock premise being derived.
+    ``FLOW_COVERAGE`` is intrinsically independent. An
+    ``INDEPENDENT_SOURCE_RECEIPT`` is admitted when its ancestry receipt explicitly
+    certifies independence from proper-clock promotion. ``CLOCK_PROPERNESS`` and
+    unknown provenance remain outside this reduction route, preventing a
+    PROPER_CLOCK -> PRODUCT -> PROPER_CLOCK dependency cycle.
     """
 
     compact_sigma = bool(finite_a5_spatial_carrier and a5_closed_3manifold_certified)
     interval_diffeomorphism = True  # guaranteed constructively by OpenInterval
+    provenance_independent = _independent_product_provenance(
+        product_trivialization_provenance,
+        independent_product_no_proper_clock_ancestry=independent_product_no_proper_clock_ancestry,
+    )
     proper_real_clock = bool(
         compact_sigma
         and global_product_trivialization
+        and provenance_independent
         and global_regular_product_clock
         and interval_diffeomorphism
     )
@@ -165,6 +190,8 @@ def certify_open_interval_product_route(
         a5_closed_3manifold_certified=bool(a5_closed_3manifold_certified),
         compact_spatial_fiber_derived=compact_sigma,
         global_product_trivialization=bool(global_product_trivialization),
+        product_trivialization_provenance=str(product_trivialization_provenance).strip().upper(),
+        product_provenance_independent_of_proper_clock=provenance_independent,
         orientation_preserving_interval_diffeomorphism_derived=interval_diffeomorphism,
         proper_real_temporal_clock_derived=proper_real_clock,
         proper_clock_route=proper_route,
