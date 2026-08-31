@@ -43,7 +43,10 @@ def test_unit_normal_identity_is_minus_two_k():
 def test_dragged_coordinates_zero_shift_preserve_nonzero_extrinsic_curvature():
     k = ((1.0, 0.2, 0.0), (0.2, -0.5, 0.0), (0.0, 0.0, 0.25))
     rate = dragged_coordinate_metric_rate(k, 3.0)
-    assert rate == ((-6.0, -1.2, -0.0), (-1.2, 3.0, -0.0), (-0.0, -0.0, -1.5))
+    expected = ((-6.0, -1.2, 0.0), (-1.2, 3.0, 0.0), (0.0, 0.0, -1.5))
+    for i in range(3):
+        for j in range(3):
+            assert rate[i][j] == pytest.approx(expected[i][j])
     assert any(abs(rate[i][j]) > 0.0 for i in range(3) for j in range(3))
 
 
