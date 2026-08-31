@@ -1,30 +1,38 @@
 {
-  "schema": "RFC_GSC3A_GREMLIN_PHASE36D_TERMINAL36D_AUDIT_V0_1",
-  "status": "PASS_LIVE_TRIAD_CANDIDATE_AUDIT",
-  "runtime_surface": "/dev/shm/ciel_noema",
-  "generation": "7e28fb102af2a7015f0e73f7828a0f1bc611fd9d478919dd072a39779d7d60fd",
-  "source_event_id": "gremlin:whisper:sha256:a8a74821f6c75270db936a8d6641298122c258790ebeb824be651ad5da8ce3a5",
-  "terminal_receipt_sha256": "01dce6a2b6ca77d2bce2e3bda7cc8d379c356a73f8154438eb14df0642aab899",
-  "phasenav_trace_sha256": "d520c0dcdc0aeb57e8ce8a8f7b4f0ff0d6127bf6f8634d611eb5233727908b35",
-  "shape": [14, 36],
-  "runtime_admission": {
-    "aux_stream": "ACTIVE",
-    "ac_aux": "ACTIVE",
-    "tether": "ACTIVE",
-    "gremlin": "ACTIVE",
-    "terminal36d": "ACTIVE"
-  },
-  "epistemic": {
-    "authority": "CANDIDATE_ONLY",
-    "canon_allowed": false,
-    "phase_distance_is_dependency_authority": false,
-    "deterministic_repo_validation_required": true
-  },
   "candidate_checks": [
     "clock-transverse shift sign",
     "shared-clock overlap transformation law",
     "interval-complete flow product trivialization",
     "event-clock additive anchoring",
-    "connected-leaf edge realization"
-  ]
+    "connected-leaf edge realization",
+    "proper global clock as a sufficient interval-complete-flow route"
+  ],
+  "epistemic": {
+    "authority": "CANDIDATE_ONLY",
+    "canon_allowed": false,
+    "deterministic_repo_validation_required": true,
+    "phase_distance_is_dependency_authority": false
+  },
+  "generation": "7e28fb102af2a7015f0e73f7828a0f1bc611fd9d478919dd072a39779d7d60fd",
+  "phasenav_trace_sha256": "d520c0dcdc0aeb57e8ce8a8f7b4f0ff0d6127bf6f8634d611eb5233727908b35",
+  "proper_clock_route_audit": {
+    "authority": "CANDIDATE_ONLY",
+    "phasenav_trace_sha256": "769841f0207dc32badf3d64adbd0ea86c80171bb16c6745bf0518781fcb81395",
+    "shape": [9, 36],
+    "source_event_id": "gremlin:whisper:sha256:5ab73403ac443900cbf23ee5fba333fc16469ce5260b2205b5c3ca99d13d0521",
+    "terminal_receipt_sha256": "d2d48643552e441d848cbf0315a2c7abcc89fface6b4a0fd5153e0b2131845e0"
+  },
+  "runtime_admission": {
+    "ac_aux": "ACTIVE",
+    "aux_stream": "ACTIVE",
+    "gremlin": "ACTIVE",
+    "terminal36d": "ACTIVE",
+    "tether": "ACTIVE"
+  },
+  "runtime_surface": "/dev/shm/ciel_noema",
+  "schema": "RFC_GSC3A_GREMLIN_PHASE36D_TERMINAL36D_AUDIT_V0_1",
+  "shape": [14, 36],
+  "source_event_id": "gremlin:whisper:sha256:a8a74821f6c75270db936a8d6641298122c258790ebeb824be651ad5da8ce3a5",
+  "status": "PASS_LIVE_TRIAD_CANDIDATE_AUDIT",
+  "terminal_receipt_sha256": "01dce6a2b6ca77d2bce2e3bda7cc8d379c356a73f8154438eb14df0642aab899"
 }
