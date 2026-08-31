@@ -1,0 +1,30 @@
+{
+  "schema": "RFC_GSC3A_GREMLIN_PHASE36D_TERMINAL36D_AUDIT_V0_1",
+  "status": "PASS_LIVE_TRIAD_CANDIDATE_AUDIT",
+  "runtime_surface": "/dev/shm/ciel_noema",
+  "generation": "7e28fb102af2a7015f0e73f7828a0f1bc611fd9d478919dd072a39779d7d60fd",
+  "source_event_id": "gremlin:whisper:sha256:a8a74821f6c75270db936a8d6641298122c258790ebeb824be651ad5da8ce3a5",
+  "terminal_receipt_sha256": "01dce6a2b6ca77d2bce2e3bda7cc8d379c356a73f8154438eb14df0642aab899",
+  "phasenav_trace_sha256": "d520c0dcdc0aeb57e8ce8a8f7b4f0ff0d6127bf6f8634d611eb5233727908b35",
+  "shape": [14, 36],
+  "runtime_admission": {
+    "aux_stream": "ACTIVE",
+    "ac_aux": "ACTIVE",
+    "tether": "ACTIVE",
+    "gremlin": "ACTIVE",
+    "terminal36d": "ACTIVE"
+  },
+  "epistemic": {
+    "authority": "CANDIDATE_ONLY",
+    "canon_allowed": false,
+    "phase_distance_is_dependency_authority": false,
+    "deterministic_repo_validation_required": true
+  },
+  "candidate_checks": [
+    "clock-transverse shift sign",
+    "shared-clock overlap transformation law",
+    "interval-complete flow product trivialization",
+    "event-clock additive anchoring",
+    "connected-leaf edge realization"
+  ]
+}
