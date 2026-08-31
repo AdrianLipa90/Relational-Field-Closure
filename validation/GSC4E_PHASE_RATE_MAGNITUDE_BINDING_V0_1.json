@@ -1,0 +1,57 @@
+{
+  "schema": "RFC_GSC4E_OVERLAP_LOCAL_PHASE_MAGNITUDE_BINDING_RECEIPT_V0_1",
+  "status": "PASS_RFC_GSC4E_SPATIAL_SCALE_MAGNITUDE_QUOTIENT_WITH_PRODUCTION_FIELD_OPEN",
+  "date": "2026-08-31",
+  "candidate_pr": 109,
+  "stacked_parent_pr": 108,
+  "stack_sync_head": "d03fc91f7a1e6175d8891c71de01cb0c514fa66e",
+  "hosted_validation": {
+    "workflow": "RFC reference suite",
+    "run_number": 461,
+    "run_id": 33352893350,
+    "job_id": 99369498951,
+    "conclusion": "success",
+    "pytest": "1393 passed, 1 warning in 7.94s"
+  },
+  "exact_results": [
+    "nu(x)=abs(omega_t(x)) is the positive spatial phase-scale carrier",
+    "s(x)=c/(sqrt(6)*nu(x)) is injective as a function of positive nu",
+    "at one physical overlap sample s_p=s_q iff nu_p=nu_q",
+    "omega_q=-omega_p preserves the GSC4D spatial scale",
+    "distinct physical samples may carry distinct nu values on a connected cover",
+    "signed phase-rate identity is stronger information than the GSC4 rigid spatial packet requires"
+  ],
+  "open_source_inputs": [
+    "PRODUCTION_OVERLAP_LOCAL_PHASE_MAGNITUDE_FIELD_SAMPLES",
+    "PRODUCTION_PHASE_MAGNITUDE_FIELD_ID",
+    "PRODUCTION_CLOCK_CALIBRATION_ID",
+    "PRODUCTION_PHYSICAL_OVERLAP_SAMPLE_IDENTITIES"
+  ],
+  "separate_carriers": [
+    "SIGNED_PHASE_RATE_DYNAMICS",
+    "IDT_RELATIONAL_LAPSE",
+    "IDT_EVENT_CLOCK"
+  ],
+  "firewalls": {
+    "connected_cover_implies_constant_magnitude": false,
+    "spatial_scale_binding_requires_signed_rate_identity": false,
+    "magnitude_field_determines_idt_lapse": false,
+    "hosted_pass_closes_production_magnitude_field": false
+  },
+  "live_triad_audit": {
+    "runtime_surface": "/dev/shm/ciel_noema",
+    "authority": "CANDIDATE_ONLY",
+    "promotion_evidence": false,
+    "source_event_id": "gremlin:whisper:sha256:ced9d3a3dcefb203bae9d6e44cad7060b300ea3930b3b44c0791a76455aa5bd1",
+    "fused_event_id": "gremlin:whisper:sha256:9b66174e23ceee372413243591356143392e66ab07ef2db32344d65c523129c2",
+    "shape": [9, 36],
+    "terminal_receipt_sha256": "cc06387aa0a884bb91bb548c39cee1a8539fef89e70d70fb5bdea9b00c48c012",
+    "trace_sha256": "78920e9dbda03aebba5dab4976c3a51c684fd4f01a4a8143a1b0cb497d1663b3"
+  },
+  "authority": {
+    "gremlin_can_promote": false,
+    "terminal36d_can_promote": false,
+    "phasenav36d_can_promote": false,
+    "hosted_reference_pass_can_promote_production_source": false
+  }
+}
