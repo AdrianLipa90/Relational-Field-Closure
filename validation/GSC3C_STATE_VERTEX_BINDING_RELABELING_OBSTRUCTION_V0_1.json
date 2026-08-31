@@ -1,0 +1,33 @@
+{
+  "schema": "RFC_GSC3C_STATE_VERTEX_BINDING_RELABELING_OBSTRUCTION_V0_1",
+  "status": "PASS_EXACT_RELABELING_OBSTRUCTION_WITH_SOURCE_BINDING_OPEN",
+  "validated_head": "6301c1c68164f38154f8aa0be6ffaec5a925a79c",
+  "hosted_validation": {
+    "workflow": "RFC reference suite",
+    "run_number": 424,
+    "run_id": 33349159481,
+    "conclusion": "SUCCESS"
+  },
+  "exact_results": [
+    "independent identifier relabeling symmetry acts before a cross-repository state-to-vertex binding",
+    "for non-empty S and |V|>1 a target transposition changes at least one image of every proposed assignment",
+    "symmetry-breaking source information is required for an invariant binding",
+    "shared namespace and explicit source-owned state-to-vertex map are admitted binding routes",
+    "the one-vertex fixed-point sector is typed separately"
+  ],
+  "production_open": [
+    "IDT_TERMINAL_STATE_TO_TIR_SPATIAL_VERTEX_BINDING",
+    "PRODUCTION_OCCURRENCE_STATE_TABLE",
+    "PRODUCTION_EVENT_COMPLEX"
+  ],
+  "live_36d_audit": {
+    "authority": "CANDIDATE_ONLY",
+    "promotion_evidence": false,
+    "runtime_surface": "/dev/shm/ciel_noema",
+    "source_event_id": "gremlin:whisper:sha256:d5852c7bf1154c7107aee796d909a52bb03eba66066f88bbc6d54c2711db8087",
+    "terminal_receipt_sha256": "730819aab6a8cbf367f2c1ddb10fa23d99a2ed270aee8a7cc6a3bed2b66feb0e",
+    "phasenav_trace_sha256": "170c4d00626bc62ace45dd95e5ebfbf1b7cdb56b78349afcd7a9eb5745e742d8",
+    "shape": [6, 36]
+  },
+  "verdict": "PASS_RFC_GSC3C_RELABELING_OBSTRUCTION_WITH_SHARED_NAMESPACE_OR_EXPLICIT_SOURCE_BINDING_REQUIRED"
+}
