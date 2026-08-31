@@ -1,0 +1,98 @@
+{
+  "schema": "RFC_GSC6C_OPEN_INTERVAL_COMPACT_PRODUCT_PROPER_CLOCK_RECEIPT_V0_1",
+  "status": "PASS_RFC_GSC6C_OPEN_INTERVAL_COMPACT_PRODUCT_PROPER_CLOCK_REDUCTION_WITH_ACYCLIC_PRODUCT_PROVENANCE_AND_PRODUCTION_PARENTS_OPEN",
+  "date": "2026-08-31",
+  "lineage": {
+    "stacked_parent_pr": 115,
+    "stacked_parent_head": "a371c447c910e542dc4a9968f909deeec42ae64c",
+    "candidate_pr": 117,
+    "validated_theorem_head": "1da47473721169a2bb14fc9428e1227e7f738d14"
+  },
+  "hosted_validation": {
+    "workflow": "RFC reference suite",
+    "run_number": 481,
+    "run_id": 33356370033,
+    "job_id": 99379224932,
+    "conclusion": "success",
+    "pytest": "1397 passed in 10.56s",
+    "failure_receipt_upload": "skipped_green_suite"
+  },
+  "exact_results": [
+    "a finite A5-certified tetrahedral realization supplies a compact smooth spatial fiber Sigma",
+    "projection I x Sigma -> I is proper for every nonempty open interval I when Sigma is compact",
+    "every nonempty open interval admits an explicit orientation-preserving diffeomorphism psi:I->R",
+    "tau=psi o t is a proper real-valued temporal clock on the admitted product carrier",
+    "the GSC6B proper-clock premise is derived on product lineage independent of proper-clock promotion",
+    "FLOW_COVERAGE is an admitted independent GSC3 product provenance",
+    "CLOCK_PROPERNESS provenance is excluded from the GSC6C elimination route to prevent a dependency cycle",
+    "under tau=psi(t), ADM coefficients transport exactly as N_tau=N_t/psi_prime and b_tau=b_t/psi_prime"
+  ],
+  "dependency_firewall": {
+    "forbidden_cycle": "PROPER_CLOCK -> PRODUCT_TRIVIALIZATION -> PROPER_CLOCK",
+    "admitted_product_provenance": [
+      "FLOW_COVERAGE",
+      "INDEPENDENT_SOURCE_RECEIPT_WITH_NO_PROPER_CLOCK_ANCESTRY"
+    ],
+    "non_elimination_product_provenance": [
+      "CLOCK_PROPERNESS",
+      "UNKNOWN"
+    ]
+  },
+  "adm_time_reparametrization": {
+    "clock": "tau=psi(t)",
+    "orientation": "psi_prime>0",
+    "lapse": "N_tau=N_t/psi_prime",
+    "shift": "b_tau=b_t/psi_prime",
+    "new_independent_witness_required": false
+  },
+  "live_triad_audits": {
+    "open_interval_product": {
+      "runtime_surface": "/dev/shm/ciel_noema",
+      "generation": "7e28fb102af2a7015f0e73f7828a0f1bc611fd9d478919dd072a39779d7d60fd",
+      "authority": "CANDIDATE_ONLY",
+      "promotion_evidence": false,
+      "source_event_id": "gremlin:whisper:sha256:80eaca60f96dac3eaa22ee7f239e4b48e002a3a577ea92053fb4166cc7ec0e8f",
+      "fused_event_id": "gremlin:whisper:sha256:8b5d76e3a05bbc374a65121fef751e3d439e1c3dc85aa4b6614da4c0ef21ba87",
+      "terminal_receipt_sha256": "935bad81b9bb12ce1ae90094d30d7b453f88de1de034549b2195f384978406fa",
+      "phasenav_trace_sha256": "f735a350b6a9e5632a3d1e9bfdcf0a7f17f74cc8074e5f3d87ae890725f85ecc",
+      "shape": [14, 36]
+    },
+    "circularity_provenance": {
+      "runtime_surface": "/dev/shm/ciel_noema",
+      "generation": "7e28fb102af2a7015f0e73f7828a0f1bc611fd9d478919dd072a39779d7d60fd",
+      "authority": "CANDIDATE_ONLY",
+      "promotion_evidence": false,
+      "source_event_id": "gremlin:whisper:sha256:3a53ab8cd26a5db485ee264056ecc8fd781a36770ce28f160ba914c633ef2423",
+      "fused_event_id": "gremlin:whisper:sha256:67ba4ea9103f0b67708586b48dbf631cd43ea295fa94b281f3318e900969090a",
+      "terminal_receipt_sha256": "7f38986767f0de6804ccfee656ba1cbcea2ab561dde59cfcb3f38bbf01e1a9f0",
+      "phasenav_trace_sha256": "1a3afc8a2548cf7f04f5b77b1404f25eadd75ad0595e63cc3ab4472c24da4db7",
+      "shape": [12, 36]
+    },
+    "adm_time_transport": {
+      "runtime_surface": "/dev/shm/ciel_noema",
+      "generation": "7e28fb102af2a7015f0e73f7828a0f1bc611fd9d478919dd072a39779d7d60fd",
+      "authority": "CANDIDATE_ONLY",
+      "promotion_evidence": false,
+      "source_event_id": "gremlin:whisper:sha256:bf32223bd78c66d254b872c6d6fddcb97a9ef938cb109adc4e8b463d5f324fea",
+      "fused_event_id": "gremlin:whisper:sha256:13606256d94b7a3696a7d8870f96cc3b22b1cc34855d5f99b53ec39d3684b22d",
+      "terminal_receipt_sha256": "b2bd153085cde8321086c826d4280e6b5a2b99db1a67aee6aed4d64772feb863",
+      "phasenav_trace_sha256": "3f021a429058dc6fc6f56d12a677d0fc48b54fba62bfc06d8a85a25a8b71bef5",
+      "shape": [11, 36]
+    }
+  },
+  "production_parents": {
+    "finite_a5_gsc1_spatial_carrier": "OPEN_PRODUCTION_PARENT",
+    "global_gsc3_product_trivialization": "OPEN_PRODUCTION_PARENT",
+    "independent_product_lineage": "OPEN_PRODUCTION_OR_PROVENANCE_PARENT",
+    "production_rfe25_lorentzian_adm_carrier": "OPEN_PRODUCTION_PARENT",
+    "smooth_finite_positive_lapse": "OPEN_TYPED_PARENT",
+    "rfe26_gsc5_global_einstein_carrier_for_gr_cauchy": "OPEN_PRODUCTION_PARENT"
+  },
+  "authority": {
+    "gremlin_can_promote": false,
+    "terminal36d_can_promote": false,
+    "phasenav36d_can_promote": false,
+    "hosted_reference_pass_closes_production_parents": false,
+    "candidate_can_mutate_canonical_graph": false
+  }
+}
