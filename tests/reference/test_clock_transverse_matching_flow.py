@@ -113,4 +113,6 @@ def test_certificate_keeps_global_coverage_and_event_placement_typed_open():
     cert = certify_clock_transverse_matching_flow([MatchingPatch("p", (0.0, 0.0, 0.0))], [])
     assert cert.product_trivialization_theorem_status == "EXACT_ON_INTERVAL_COMPLETE_FLOW"
     assert cert.global_flow_coverage_status == "OPEN_ANALYTIC_INPUT"
+    assert cert.proper_clock_sufficient_route_status == "EXACT_PROPER_CLOCK_IMPLIES_INTERVAL_COMPLETE_FLOW"
+    assert cert.global_clock_properness_status == "OPEN_ANALYTIC_INPUT"
     assert cert.physical_event_placement_status == "OPEN_PRODUCTION_INPUT"
