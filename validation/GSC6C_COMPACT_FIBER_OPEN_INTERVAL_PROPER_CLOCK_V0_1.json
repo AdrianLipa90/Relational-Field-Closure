@@ -1,0 +1,55 @@
+{
+  "schema": "RFC_GSC6C_COMPACT_FIBER_OPEN_INTERVAL_PROPER_CLOCK_RECEIPT_V0_1",
+  "status": "PASS_RFC_GSC6C_COMPACT_FIBER_PRODUCT_ROUTE_WITH_SEPARATE_PROPERNESS_INPUT_REMOVED",
+  "date": "2026-08-31",
+  "lineage": {
+    "stacked_parent_pr": 115,
+    "stacked_parent_head": "a371c447c910e542dc4a9968f909deeec42ae64c",
+    "candidate_pr": 116,
+    "validated_head": "f1e557fce5f541ec1de6bb496213ad76d0e9d306"
+  },
+  "hosted_validation": {
+    "workflow": "RFC reference suite",
+    "run_number": 474,
+    "run_id": 33356128417,
+    "job_id": 99378538501,
+    "conclusion": "success",
+    "pytest": "1392 passed in 15.74s"
+  },
+  "exact_results": [
+    "regular onto GSC3A product clock has open interval image on the admitted smooth spacetime carrier",
+    "every open interval admits an orientation-preserving smooth diffeomorphism to R",
+    "positive clock reparametrization preserves temporal orientation",
+    "compact spatial fiber plus product trivialization gives a proper R-valued reparametrized clock",
+    "RF-GSC6B proper-clock input is derived on the compact-fiber product route"
+  ],
+  "production_parents": {
+    "GSC1_finite_closed_compact_spatial_carrier": "OPEN_SOURCE_INPUT",
+    "GSC3A_interval_complete_product_realization_and_common_clock": "OPEN_SOURCE_INPUT",
+    "RF_E25_global_lorentzian_ADM_carrier": "OPEN_SOURCE_INPUT",
+    "GSC5_RF_E26_for_global_GR_Cauchy_carrier": "OPEN_SOURCE_INPUT"
+  },
+  "derived_coordinate_removed": "SEPARATELY_SUPPLIED_GSC6_PROPER_CLOCK_OR_WICK_COMPLETENESS_OR_GLOBAL_LAPSE_BOUND_ON_THIS_ROUTE",
+  "parallel_routes_preserved": [
+    "RF_L8_NMAX_PLUS_COMPLETE_W",
+    "RF_GSC6A_COMPLETE_ADAPTIVE_HN",
+    "RF_GSC6B_DIRECT_PROPER_CLOCK"
+  ],
+  "live_triad_audit": {
+    "runtime_surface": "/dev/shm/ciel_noema",
+    "generation": "7e28fb102af2a7015f0e73f7828a0f1bc611fd9d478919dd072a39779d7d60fd",
+    "authority": "CANDIDATE_ONLY",
+    "promotion_evidence": false,
+    "source_event_id": "gremlin:whisper:sha256:28d14e4b42d0c9b860eeab8c7f5dd40b3d2377fd6fa3124fa8f7ff1060c754b7",
+    "fused_event_id": "gremlin:whisper:sha256:a00e284674c715c30ff40bef2e1c41df6e2a033cfc8247592aa836521bdd6962",
+    "shape": [10, 36],
+    "terminal_receipt_sha256": "83b828f66599427b4968c14757d9f50a5e982aedf007c1668756a5f09285bc26",
+    "trace_sha256": "bed9ad75952a708af37e3dcf2e1aa85e35b0bdec7479e73de6f565be7ee3267f"
+  },
+  "authority": {
+    "gremlin_can_promote": false,
+    "terminal36d_can_promote": false,
+    "phasenav36d_can_promote": false,
+    "hosted_certifier_pass_closes_production_parent_bindings": false
+  }
+}
