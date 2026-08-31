@@ -1,0 +1,9 @@
+{
+  "schema": "RFC_GSC3C_GREMLIN_PHASE36D_TERMINAL36D_AUDIT_V0_1",
+  "status": "PENDING_FRESH_LIVE_TRIAD_AUDIT",
+  "runtime_surface": "/dev/shm/ciel_noema",
+  "authority": "CANDIDATE_ONLY",
+  "promotion_evidence": false,
+  "target": "TIR beta_match <-> RFC RF-E8 shift source binding",
+  "firewall": "shared overlap covariance permits W = beta_match - c*b_x0; source identity is the W=0 section"
+}
