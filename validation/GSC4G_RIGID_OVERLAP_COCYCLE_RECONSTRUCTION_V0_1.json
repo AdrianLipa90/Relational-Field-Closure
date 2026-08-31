@@ -1,0 +1,48 @@
+{
+  "schema": "RFC_GSC4G_RIGID_OVERLAP_COCYCLE_RECONSTRUCTION_RECEIPT_V0_1",
+  "status": "PASS_RFC_GSC4G_RIGID_OVERLAP_COCYCLE_RECONSTRUCTION_WITH_NUMERIC_COCYCLE_INPUT_OPEN",
+  "date": "2026-08-31",
+  "lineage": {
+    "stacked_parent_pr": 110,
+    "candidate_pr": 112,
+    "validated_head": "460d0a9b86c8bd7859223fda3e3ed71fc7e09a5d"
+  },
+  "hosted_validation": {
+    "workflow": "RFC reference suite",
+    "run_number": 467,
+    "run_id": 33353609946,
+    "job_id": 99371479701,
+    "conclusion": "success",
+    "pytest": "1412 passed, 1 warning in 15.21s"
+  },
+  "exact_results": [
+    "rigid inverse and composition laws close in SE(3)",
+    "one connected spanning tree reconstructs every anchored chart after GSC4F root gauge fixing",
+    "N rigid patches modulo one global SE(3) carry 6N-6 continuous coordinates",
+    "N-1 spanning-tree overlap edges carry exactly 6(N-1) continuous coordinates",
+    "non-tree edges are path-independence / rotational-translational holonomy checks"
+  ],
+  "live_triad_audit": {
+    "runtime_surface": "/dev/shm/ciel_noema",
+    "generation": "7e28fb102af2a7015f0e73f7828a0f1bc611fd9d478919dd072a39779d7d60fd",
+    "authority": "CANDIDATE_ONLY",
+    "promotion_evidence": false,
+    "source_event_id": "gremlin:whisper:sha256:17298a9f3fbef8e1885f5aafe61f527bcff2c56c9a7f3bd0bbbc3491c34f18c4",
+    "fused_event_id": "gremlin:whisper:sha256:b53e11c0bd44409c67bf69a9fcfa473677e6ed0f09d67cdb1c7edc7d8935ca52",
+    "shape": [12, 36],
+    "terminal_receipt_sha256": "6a20188be0100f732dca2d5f5ffd34d2fd6d99fa5cc292cbec0e8e918e7f0043",
+    "trace_sha256": "8d2e7c4957ff5ee2ba844e7c0e1ef42a96c97c49450d0f599fd59c5e4bfaedc5"
+  },
+  "open_source_inputs": [
+    "production connected numeric SE(3) overlap cocycle on the admitted GSC4C cover",
+    "GSC4E overlap-local phase-magnitude field and provenance",
+    "GSC1 production tetrahedral topology witness",
+    "downstream temporal and RF-E25 route inputs"
+  ],
+  "authority": {
+    "gremlin_can_promote": false,
+    "terminal36d_can_promote": false,
+    "phasenav36d_can_promote": false,
+    "hosted_pass_closes_numeric_cocycle_input": false
+  }
+}
