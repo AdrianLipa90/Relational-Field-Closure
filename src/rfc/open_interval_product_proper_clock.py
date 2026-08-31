@@ -102,6 +102,45 @@ class OpenInterval:
 
 
 @dataclass(frozen=True)
+class ADMTemporalReparametrization:
+    psi_prime: float
+    lapse_tau: float
+    shift_tau: tuple[float, ...]
+
+
+def reparametrize_adm_time(
+    *,
+    interval: OpenInterval,
+    t_value: float,
+    lapse_t: float,
+    shift_t: tuple[float, ...] | list[float],
+) -> ADMTemporalReparametrization:
+    """Transport ADM lapse/shift through ``tau=psi(t)``.
+
+    With ``d tau = psi'(t) dt`` the same ADM carrier is represented by
+    ``N_tau=N_t/psi'`` and ``b_tau=b_t/psi'``. The canonical interval maps have
+    strictly positive derivative, preserving temporal orientation.
+    """
+
+    lapse = float(lapse_t)
+    if not isfinite(lapse) or lapse <= 0.0:
+        raise ValueError("lapse_t must be finite and positive")
+    shift = tuple(float(x) for x in shift_t)
+    if any(not isfinite(x) for x in shift):
+        raise ValueError("shift_t entries must be finite")
+
+    dpsi = float(interval.derivative(t_value))
+    if not isfinite(dpsi) or dpsi <= 0.0:
+        raise ValueError("interval diffeomorphism derivative must be finite and positive")
+
+    return ADMTemporalReparametrization(
+        psi_prime=dpsi,
+        lapse_tau=lapse / dpsi,
+        shift_tau=tuple(x / dpsi for x in shift),
+    )
+
+
+@dataclass(frozen=True)
 class OpenIntervalProductRoute:
     interval_kind: str
     finite_a5_spatial_carrier: bool
