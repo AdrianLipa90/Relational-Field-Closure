@@ -12,15 +12,15 @@
     "stacked_parent_pr": 100,
     "stacked_parent_head": "8e38c4a66363ebc1859df43adf1e3ffb3e164cc6",
     "candidate_pr": 103,
-    "validated_head": "5700e839c643b94a9cbe5cff913ae4dccc88c31c"
+    "validated_head": "ab31c1fba78094efd7b01625adaebc1a44868845"
   },
   "hosted_validation": {
     "workflow": "RFC reference suite",
-    "run_number": 431,
-    "run_id": 33349441120,
-    "job_id": 99359762016,
+    "run_number": 438,
+    "run_id": 33349672324,
+    "job_id": 99360427256,
     "conclusion": "success",
-    "pytest": "1361 passed in 15.26s"
+    "pytest": "1361 passed in 15.43s"
   },
   "exact_results": [
     "beta_t and c*b_x0 occupy the same shared-clock affine overlap class",
