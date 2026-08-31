@@ -1,6 +1,6 @@
-# RF-GSC3C — State-to-Vertex Binding Non-Identifiability
+# RF-GSC3C — Relabeling Obstruction and Source-Binding Requirement
 
-Status: `EXACT_RELABELING_NONIDENTIFIABILITY_THEOREM / EXECUTABLE_SYMMETRY_WITNESS / SHARED_NAMESPACE_OR_EXPLICIT_SOURCE_BINDING_REQUIRED`
+Status: `EXACT_RELABELING_OBSTRUCTION_THEOREM / EXECUTABLE_SYMMETRY_WITNESS / SHARED_NAMESPACE_OR_EXPLICIT_SOURCE_BINDING_REQUIRED`
 
 Date: 2026-08-31
 
@@ -14,7 +14,7 @@ a:S\to V(\Sigma),
 
 between the IDT 00F state-label carrier `S` and the TIR GSC-1 vertex-label carrier `V(Sigma)`.
 
-RF-GSC3C records the exact identifiability statement for this seam. The parent contracts admit independent relabelings of their identifiers. This symmetry determines when a source-free canonical state-to-vertex selection can be invariantly defined.
+RF-GSC3C records the exact identifiability statement for this seam. The parent contracts admit independent relabelings of their identifiers. This symmetry determines the source information required for an invariant state-to-vertex selection.
 
 ## 2. Parent identifier carriers
 
@@ -38,21 +38,21 @@ V=V(\Sigma)
 
 together with tetrahedral incidence. The manifold certificate depends on the incidence structure and is covariant under a consistent permutation of vertex labels.
 
-Thus, before a cross-repository binding is supplied, the identifier seam carries independent relabeling symmetry
+Before a cross-repository binding is supplied, the identifier seam therefore carries independent relabeling symmetry
 
 \[
 \boxed{\operatorname{Sym}(S)\times\operatorname{Sym}(V).}
 \]
 
-## 3. Non-identifiability theorem
+## 3. Relabeling-obstruction theorem
 
-Assume `S` is non-empty and `V` contains at least two vertices. Suppose a source-free canonical assignment
+Assume `S` is non-empty and `V` contains at least two vertices. Consider a source-free assignment
 
 \[
 f:S\to V
 \]
 
-is required to be natural under independent relabelings.
+required to be natural under independent relabelings.
 
 Hold the IDT labels fixed and apply an arbitrary vertex permutation
 
@@ -60,7 +60,7 @@ Hold the IDT labels fixed and apply an arbitrary vertex permutation
 \tau\in\operatorname{Sym}(V).
 \]
 
-Naturality would require
+Naturality requires
 
 \[
 \boxed{f(s)=\tau(f(s))}
@@ -80,9 +80,9 @@ Since `|V|>=2`, choose `v_1!=v_0` and let `tau` be the transposition exchanging 
 \tau(f(s_0))=v_1\ne v_0=f(s_0),
 \]
 
-contradicting relabeling naturality.
+so the proposed assignment fails relabeling naturality.
 
-Therefore the independent parent symmetries yield the exact obstruction
+The independent parent symmetries therefore yield the exact obstruction
 
 \[
 \boxed{
@@ -92,7 +92,7 @@ Therefore the independent parent symmetries yield the exact obstruction
 }
 \]
 
-The source information can be carried by either of the two RF-GSC3B admission routes:
+The source information can be carried by either RF-GSC3B admission route:
 
 1. a declared shared identifier namespace;
 2. an explicit source-owned map `state_id -> TIR spatial_vertex_id`.
@@ -101,7 +101,7 @@ The source information can be carried by either of the two RF-GSC3B admission ro
 
 For `|V|=1`, the target permutation group fixes the unique vertex, so one constant assignment exists. The GSC-1 closed three-manifold production sector uses a nontrivial tetrahedral carrier and therefore lies in the `|V|>1` theorem sector.
 
-This exceptional case is retained in the executable certifier so that the theorem is typed precisely rather than overgeneralized.
+The executable certifier retains this exceptional case as an explicit typed sector.
 
 ## 5. Relation to RF-GSC3B
 
@@ -119,13 +119,13 @@ RF-GSC3C sits one step upstream:
 IDT 00F state labels S
 + TIR GSC-1 vertex labels V(Sigma)
 + independent relabeling symmetry
--> RF-GSC3C non-identifiability theorem
+-> RF-GSC3C relabeling-obstruction theorem
 -> shared namespace OR explicit source-owned state->vertex map
 -> RF-GSC3B quotient-fibre constancy
 -> unique event spatial anchor
 ```
 
-The theorem therefore converts an informal mapping choice into a typed source-information coordinate.
+The theorem converts the mapping choice into a typed source-information coordinate.
 
 ## 6. Executable witness
 
@@ -135,7 +135,7 @@ The reference implementation accepts finite state and vertex identifier sets tog
 - leaves the IDT state carrier untouched;
 - changes at least one image of the proposed map.
 
-The returned witness demonstrates the independent relabeling orbit explicitly. It validates the symmetry obstruction; it does not select a physical binding.
+The returned witness demonstrates the independent relabeling orbit explicitly and certifies the symmetry-breaking source-information requirement.
 
 Implementation:
 
@@ -152,13 +152,13 @@ Tests:
 | IDT 00F terminal labels live in an abstract state set `S` | `PARENT IDT 00F` |
 | TIR GSC-1 vertices are explicit unique identifiers with incidence data | `PARENT TIR GSC-1 INPUT CONTRACT` |
 | independent identifier relabelings act before a cross-repo binding | `EXACT TYPING SYMMETRY` |
-| no invariant source-free map exists for non-empty `S` and `|V|>1` | `EXACT RELABELING NONIDENTIFIABILITY THEOREM` |
+| independent relabeling symmetry obstructs a source-free invariant assignment for non-empty `S` and `|V|>1` | `EXACT RELABELING OBSTRUCTION THEOREM` |
 | transposition witness changes any proposed map in the nontrivial target sector | `EXACT / EXECUTABLE` |
-| shared namespace or explicit source-owned map breaks the relabeling ambiguity | `SOURCE-BINDING ADMISSION CONTRACT` |
+| shared namespace or explicit source-owned map supplies the symmetry-breaking information | `SOURCE-BINDING ADMISSION CONTRACT` |
 | production state-to-TIR-vertex binding | `OPEN SOURCE INPUT` |
 
 ## 8. Promotion firewall
 
-RF-GSC3C certifies the identifiability boundary. Production event placement is promoted only after a source-owned namespace/binding receipt is supplied and RF-GSC3B quotient-fibre constancy passes on production occurrence/event data.
+RF-GSC3C certifies the identifiability boundary. Production event placement is promoted after a source-owned namespace/binding receipt is supplied and RF-GSC3B quotient-fibre constancy passes on production occurrence/event data.
 
 GREMLIN, PhaseNav and Terminal36D may audit candidate dependency structure with `CANDIDATE_ONLY` authority; deterministic source contracts and hosted validation remain the executable evidence surface.
