@@ -1,8 +1,9 @@
 {
   "schema": "RFC_GSC3B_RELATIONAL_EVENT_PLACEMENT_VALIDATION_V0_1",
   "date": "2026-08-31",
-  "technical_status": "REFERENCE_TARGET_DEFINED",
-  "verdict_target": "PASS_RFC_GSC3B_QUOTIENT_DESCENDED_EVENT_PLACEMENT_WITH_PRODUCTION_RELATIONAL_BINDING_OPEN",
+  "technical_status": "PASS_REFERENCE_CERTIFIER",
+  "verdict": "PASS_RFC_GSC3B_QUOTIENT_DESCENDED_EVENT_PLACEMENT_WITH_PRODUCTION_RELATIONAL_BINDING_OPEN",
+  "tested_head": "2160184288f7c4c00f4aa5f5c49c627a57f8cc8b",
   "parents": {
     "rfc_gsc3_head": "385528e1c87823dd6f681a0a7cdf277aa6389b38",
     "idt_00f": "formalism/00F_relational_composition_precedence.md",
@@ -14,10 +15,23 @@
     "placement": "iota(e)=(t_E(e)+C,a_bar(e))",
     "injectivity": "SEPARATE_OPTIONAL_GATE"
   },
+  "hosted_validation": {
+    "dedicated_gate": {
+      "workflow": "RFC GSC3B relational event placement",
+      "run_number": 1,
+      "run_id": 33347239318,
+      "conclusion": "success"
+    },
+    "full_reference_suite": {
+      "workflow": "RFC reference suite",
+      "run_number": 406,
+      "run_id": 33347239264,
+      "conclusion": "success"
+    }
+  },
   "production_relational_state_binding": "OPEN_INPUT",
   "production_occurrence_state_table": "OPEN_INPUT",
   "production_event_complex": "OPEN_INPUT",
-  "hosted_validation": "PENDING",
   "canon_promotion": false,
   "gremlin_promotion_authority": false
 }
