@@ -39,7 +39,7 @@ def test_causal_violation_is_reported():
 
 
 def test_future_orientation_fails_closed():
-    with pytest.raises(ValueError, match="dt\(v\)>0"):
+    with pytest.raises(ValueError, match=r"dt\(v\)>0"):
         certify_adaptive_steepness(lapse=1.0, dt_value=0.0, spatial_norm_sq=0.0)
 
 
