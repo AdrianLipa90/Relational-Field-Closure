@@ -1,6 +1,6 @@
 import pytest
 
-from rfc.product_clock_atlas_lift import (
+from src.rfc.product_clock_atlas_lift import (
     ProductClockAtlasLiftError,
     SpatialAtlasTransition,
     certify_product_clock_atlas_lift,
