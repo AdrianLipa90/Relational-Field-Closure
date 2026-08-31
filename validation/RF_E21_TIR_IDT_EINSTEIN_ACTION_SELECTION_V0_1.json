@@ -1,0 +1,53 @@
+{
+  "schema": "RF_E21_TIR_IDT_EINSTEIN_ACTION_SELECTION_V0_1",
+  "status": "PASS_CONDITIONAL_WITH_NATIVE_ADMISSIBILITY_GATES_OPEN",
+  "parents": {
+    "tir_main": "3f5a08ef04ec53c1a155263d23e8b10a96404370",
+    "idt_main": "84ce1886175af872ae4a56ba36f7e106d8e23635",
+    "rfc_base": "63418a88d686021c2a6fe6ab159d6152db303c19",
+    "rf_g0": "formalism/RFG0_LORENTZIAN_SIGNATURE_GATE.md",
+    "rf_e3": "closure/einstein/RF_E3_DOUBLE_COPY_EINSTEIN_HILBERT_NORMALIZATION.md",
+    "rf_e12": "closure/einstein/RF_E12_ACTION_PROJECTED_ADM_SOURCE_CONSTRAINTS.md",
+    "rf_e13": "closure/einstein/RF_E13_CONSTRAINT_PROPAGATION_BIANCHI_LEDGER.md"
+  },
+  "external_theorem_parent": "four-dimensional Lovelock uniqueness theorem",
+  "checks": {
+    "spatial_rank_3_source_bound": true,
+    "temporal_rank_1_source_bound": true,
+    "positive_relational_lapse_source_bound": true,
+    "lorentz_signature_parent_exact": true,
+    "lovelock_basis_conditional_selection": true,
+    "eh_prefactor_to_einstein_coupling_algebra": true,
+    "adm_constraints_parent_available": true,
+    "adm_evolution_parent_available": true,
+    "bianchi_constraint_propagation_parent_available": true,
+    "gremlin_promotion_authority_false": true
+  },
+  "selected_local_bulk_basis": [
+    "cosmological_density",
+    "ricci_scalar"
+  ],
+  "normalization": {
+    "action_prefactor_si": "c^4/(16*pi*G)",
+    "einstein_coupling_si": "8*pi*G/c^4",
+    "identity": "2*A*kappa_E=1"
+  },
+  "open_native_promotion_coordinates": [
+    "NATIVE_DIFFEO_COVARIANCE_DERIVATION",
+    "NATIVE_LOCAL_METRIC_ACTION_DERIVATION",
+    "NATIVE_SECOND_ORDER_DYNAMICS_DERIVATION",
+    "PROJECT_SIDE_G_NEWTON_UNIVERSALITY"
+  ],
+  "gremlin": {
+    "mode": "BOUNDED_CANDIDATE_AUDIT",
+    "promotion_authority": false,
+    "roles": [
+      "SPIDER",
+      "MOLE",
+      "HOUND",
+      "MANTIS",
+      "OWL"
+    ]
+  },
+  "local_reference_test": "14/14 PASS"
+}

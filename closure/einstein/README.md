@@ -1,6 +1,28 @@
 # Einstein closure
 
-Current gates:
+Current exact-head closure surface: RF-E21 stacked branch.
+
+## Canonical dependency chain
+
+```text
+TIR rank-three positive spatial carrier
+ + IDT positive relational lapse / temporal carrier
+ -> RF-G0 Lorentzian 3+1 metric
+ -> RF-02I torsion-free metric connection / curvature
+ -> RF-E3 Einstein-Hilbert normalization
+ -> RF-E6/RF-E7 matter action and stress-energy
+ -> RF-E8 ADM kinematics
+ -> RF-E9 extrinsic curvature
+ -> RF-E10 Gauss-Codazzi Einstein projections
+ -> RF-E11 matter projections
+ -> RF-E12 Einstein equation + ADM source constraints
+ -> RF-E13 ADM evolution + Bianchi constraint propagation
+ -> RF-E17 clock-information scalar action
+ -> RF-E20 tetra-clock mass-scale closure
+ -> RF-E21 gravitational action-selection gate
+```
+
+## Current gate ledger
 
 1. canonical Lorentzian signature `(-,+,+,+)` — **PASS at RF-G0/RF-02H**;
 2. torsion-free metric connection and curvature — **PASS at RF-02I**;
@@ -9,194 +31,163 @@ Current gates:
 5. charge-projected Maxwell current — **PASS at RF-M4/RF-N1B2P with RF-E6 sign alignment**;
 6. canonical energy-positive charged scalar/multiplet action — **PASS at RF-E6**;
 7. charged-matter stress tensor and EM/matter exchange — **PASS at RF-E0/RF-E6**;
-8. phase stress-energy / pressure firewall — **PASS at RF-E4**;
-9. homogeneous on-shell massive scalar dust/factor-two gate — **PASS at RF-E5**;
-10. exact amplitude/phase/potential scalar decomposition — **PASS at RF-E7**;
-11. single-complex-scalar total matter tensor — **CLOSED at RF-E7**;
-12. `mu_*` unit normalization — **PASS as convention map at RF-E6**;
-13. Newton ↔ Einstein normalization `kappa_E=8piG/c^4` — **EXACT TRANSFER at RF-N1C/RF-E3**;
-14. double-copy ↔ Einstein normalization `kappa_E=kappa_g^2/4` — **EXACT**;
-15. Einstein–Hilbert prefactor `2/kappa_g^2=1/(2kappa_E)` — **PASS at RF-E3**;
-16. dynamic `Lambda0` Bianchi transfer identity — **EXACT**;
-17. multispecies/additional matter composition — **OPEN**;
-18. dynamic-`Lambda0` independent action and stability gate — **NEXT ACTION FRONTIER**.
+8. exact amplitude/phase/potential scalar decomposition — **CLOSED at RF-E7**;
+9. Newton ↔ Einstein normalization `kappa_E=8piG/c^4` — **EXACT TRANSFER at RF-N1C/RF-E3**;
+10. double-copy ↔ Einstein normalization `kappa_E=kappa_g^2/4` — **EXACT**;
+11. ADM kinematics/extrinsic curvature — **PASS at RF-E8/RF-E9**;
+12. Gauss-Codazzi Einstein projections — **EXACT at RF-E10**;
+13. matter ADM projections — **PASS at RF-E11**;
+14. action-projected Hamiltonian/momentum constraints — **PASS at RF-E12**;
+15. ADM evolution and Bianchi constraint propagation — **PASS at RF-E13**;
+16. clock-information scalar action/potential — **PASS at RF-E17**;
+17. tetra-clock mass-scale bridge — **PASS at RF-E20**;
+18. TIR×IDT 4D gravitational action selection — **PASS CONDITIONAL at RF-E21**;
+19. reduced-gravity universality coordinate and promotion firewall — **PRESENT at RF-F25/RF-F26**;
+20. dynamic-`Lambda` independent action/stability — **EXTENSION FRONTIER**;
+21. additional independently admitted matter species — **MATTER-COMPOSITION FRONTIER**.
 
-## Canonical matter/source chain
+## RF-E21 action-selection closure
 
-RF-E6 fixes
-
-\[
-\boxed{\operatorname{signature}(g)=(-,+,+,+)}
-\]
-
-and
+RF-E21 receives the source-bound 3+1 carrier
 
 \[
-\boxed{
-\mathcal L_m=-(D_\mu\Psi)^\dagger D^\mu\Psi-U(\Psi).
-}
-\]
-
-The Maxwell source is
-
-\[
-\boxed{
-J_{EM}^\mu=\frac1\hbar\mathcal J_Q^\mu
-=\frac1\hbar\Pi_Q[J_{RFC}]^\mu.
-}
-\]
-
-For one charge eigenvalue,
-
-\[
-\boxed{J_{EM}^\mu=(q/\hbar)J_{RFC,\vartheta}^\mu.}
-\]
-
-## RF-E7 exact scalar composition
-
-For
-
-\[
-\psi=Ae^{i\vartheta},
+\operatorname{rank}h_\perp=3,
 \qquad
-q_\mu=\partial_\mu\vartheta+\frac q\hbar A_\mu^{EM},
+N_R=\frac{\mathfrak a_x}{\mathfrak a_r}>0,
 \]
 
-one has
+and RF-G0 assembles
 
 \[
-\boxed{
-D_\mu\psi=e^{i\vartheta}(\partial_\mu A+iAq_\mu)
-}
-\]
-
-and therefore
-
-\[
-\boxed{
-(D_\mu\psi)^*D^\mu\psi=(\partial A)^2+A^2q^2.
-}
-\]
-
-The mixed amplitude/phase terms cancel identically. The complete scalar stress tensor decomposes exactly as
-
-\[
-\boxed{
-T_{\mu\nu}^{scalar}
-=T_{\mu\nu}^{amp}
-+T_{\mu\nu}^{phase}
-+T_{\mu\nu}^{pot},
-}
-\]
-
-where
-
-\[
-T_{\mu\nu}^{amp}
-=2\partial_\mu A\partial_\nu A-g_{\mu\nu}(\partial A)^2,
-\]
-
-\[
-T_{\mu\nu}^{phase}
-=2A^2q_\mu q_\nu-g_{\mu\nu}A^2q^2,
-\]
-
-and
-
-\[
-T_{\mu\nu}^{pot}=-g_{\mu\nu}V.
-\]
-
-For the admitted single-scalar electromagnetic system the Einstein source ledger is
-
-\[
-\boxed{
-T_{\mu\nu}^{source}
-=T_{\mu\nu}^{EM}+T_{\mu\nu}^{scalar}.
-}
-\]
-
-RF-E6 supplies the coupled on-shell conservation law
-
-\[
-\boxed{
-\nabla^\mu T_{\mu\nu}^{source}=0.
-}
-\]
-
-## Phase and amplitude limits
-
-For homogeneous phase flow, RF-E4 is recovered:
-
-\[
-\boxed{
-\varepsilon=K+V,
+\boxed{g=-\Theta\otimes\Theta+h_\perp},
 \qquad
-p=K-V,
-\qquad
-\varepsilon+3p=4K-2V.
-}
+\boxed{\operatorname{signature}(g)=(-,+,+,+)}.
 \]
 
-For the homogeneous quadratic on-shell scalar, RF-E5 gives
+The conditional Lovelock admissibility tuple is
 
 \[
-\boxed{V=K,\qquad p=0,\qquad \varepsilon=2K.}
+\mathfrak A_{E21}
+=
+(D=4,\;
+\text{Lorentzian metric},\;
+\text{diffeomorphism covariance},\;
+\text{local metric bulk dynamics},\;
+\text{second-order metric equations}).
 \]
 
-For a pure spatial amplitude gradient `partial_hat A=(0,g,0,0)`, RF-E7 gives
+On the complete admitted tuple, the four-dimensional local bulk basis is
+
+\[
+\boxed{\mathcal B_{\rm grav}^{(4)}=\{1,R\}},
+\]
+
+up to topological and boundary densities, yielding
+
+\[
+S_g
+=
+A\int d^4x\,\sqrt{-g}(R-2\Lambda)
++
+S_{\rm top}
++
+S_{\rm boundary}.
+\]
+
+RF-E3 fixes
+
+\[
+A=\frac{c^4}{16\pi G}
+=\frac{1}{2\kappa_E},
+\qquad
+\kappa_E=\frac{8\pi G}{c^4}.
+\]
+
+RF-E12 then gives
 
 \[
 \boxed{
-T_{\hat a\hat b}^{amp}
-=\operatorname{diag}(g^2,g^2,-g^2,-g^2).
-}
+G_{\mu\nu}+\Lambda g_{\mu\nu}
+=
+\frac{8\pi G}{c^4}T_{\mu\nu}
+}.
 \]
 
-Thus the scalar ledger now contains phase energy, potential/rest energy and anisotropic amplitude-gradient stress in one exact tensor.
+RF-E13 carries the corresponding ADM evolution and homogeneous Bianchi
+constraint-propagation system.
 
-## Maxwell normalization
+## Covariance and amplitude support
 
-RF-E6 uses
+RF-E21 v0.2 binds the following project support surfaces:
+
+```text
+RF-F13  covariant common-action architecture
+RFG18   linearized diffeomorphism Ward firewall
+RFG20   four-point Einstein MHV normalization
+RFG27   five-point normalization firewall
+RFG29   five-point BCJ/Jacobi root validation
+RFG30   five-point pre-KLT closure
+```
+
+These surfaces support the finite-order/covariant gravity line.  The nonlinear
+all-orders promotion is assigned to its dedicated frontier coordinate.
+
+## Reduced-gravity universality
+
+RF-F25 defines the zero-fit project coordinate
 
 \[
-\boxed{\mu_*=1}
+\bar M_{G,i}
+=
+-\frac1{\beta_W}
+\ln\!\left[
+\frac{|\omega_{t,i}|^2}
+{16\pi\Gamma_{DC}M_\star^3}
+\right].
 \]
 
-in rationalized Heaviside–Lorentz natural units and
+RF-F26 owns the physical-coupling promotion firewall.  Its realized admission
+requires frozen prerequisite normalization surfaces plus multiple independent,
+nondegenerate source pairs sharing one \(\bar M_G\) within the declared
+tolerance.
 
-\[
-\boxed{\mu_*=\mu_0}
-\]
+## Three-coordinate project-native frontier
 
-in SI, with
+The broad Einstein-closure problem is now localized to:
 
-\[
-\boxed{\alpha_{EM}=\frac{\mu_*e^2c}{4\pi\hbar}.}
-\]
+```text
+NONLINEAR_ALL_ORDERS_GRAVITATIONAL_COVARIANCE_PROMOTION
+NATIVE_LOCAL_SECOND_ORDER_METRIC_GRAVITY_SELECTION
+REALIZED_INDEPENDENT_REDUCED_GRAVITY_UNIVERSALITY_ADMISSION
+```
 
-## Einstein normalization
+For constant \(\Lambda\), the current chain has **conditional standard-GR
+closure**.  Promotion to **project-native first-principles GR closure** is owned
+by the three coordinates above.
 
-RF-N1C/RF-E3 provide
-
-\[
-\boxed{\kappa_E=\frac{8\pi G}{c^4}}
-\]
-
-and in natural units
-
-\[
-\boxed{\kappa_E=8\pi G=\frac{\kappa_g^2}{4}.}
-\]
+Dynamic-\(\Lambda\) dynamics and additional matter species continue as parallel
+extension/composition programmes.
 
 ## Validation
 
-RF-E6 correction authority: PR #16, final run `33207702078`, job `98972879666`, **470/470 PASS**.
+RF-E21 theorem:
 
-RF-E7 stacked gate: PR #17, tested commit `904d641948b48ca564dbbfb38a9442e7ca6ab078`, run `33207870117`, job `98973459240`, **479/479 PASS**.
+`closure/einstein/RF_E21_TIR_IDT_EINSTEIN_ACTION_SELECTION_GATE.md`
 
-## Current frontier
+Implementation:
 
-The single-complex-scalar matter tensor is now composed exactly. The remaining matter-composition gate concerns additional independently admitted species/sectors. The next action-level Einstein gate is the independent dynamic-`Lambda0` action and stability closure, while the parallel coupling line continues through physical `G` universality.
+`src/rfc/einstein_action_selection.py`
 
-**Current status:** `GEOMETRIC_SPINE_PRESENT / AB_MAXWELL_PRESENT / RF_E6_LORENTZIAN_ACTION_PASS / RF_E7_SINGLE_SCALAR_TOTAL_MATTER_PASS / MU_STAR_UNIT_BINDING_AVAILABLE / MULTISPECIES_G_UNIVERSALITY_AND_DYNAMIC_LAMBDA_PROMOTION_OPEN`.
+Focused reference tests:
+
+`tests/reference/test_rfe21_einstein_action_selection.py`
+
+Receipts:
+
+```text
+validation/RF_E21_TIR_IDT_EINSTEIN_ACTION_SELECTION_V0_1.json
+validation/RF_E21_TIR_IDT_EINSTEIN_ACTION_SELECTION_V0_2.json
+```
+
+The v0.1 exact-head reference suite passed on
+`a761ed254e4535535a8ef6095deeaa6de47e75a0`, GitHub Actions run #377.
