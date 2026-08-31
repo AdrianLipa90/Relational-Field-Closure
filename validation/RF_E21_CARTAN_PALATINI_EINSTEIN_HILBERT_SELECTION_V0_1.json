@@ -1,0 +1,55 @@
+{
+  "schema": "RF_E21_CARTAN_PALATINI_EINSTEIN_HILBERT_SELECTION_V0_1",
+  "status": "PASS_SOURCE_HEAD_WITH_SYNCHRONIZED_DOWNSTREAM_LEDGER",
+  "source_lock": {
+    "TIR_main": "3f5a08ef04ec53c1a155263d23e8b10a96404370",
+    "IDT_main": "84ce1886175af872ae4a56ba36f7e106d8e23635",
+    "RFC_parent_main": "63418a88d686021c2a6fe6ab159d6152db303c19"
+  },
+  "selection_domain": [
+    "local_diffeomorphism_covariance",
+    "local_Lorentz_covariance",
+    "oriented_4D_coframe",
+    "no_extra_gravitational_field",
+    "polynomial_exterior_form_action",
+    "at_most_one_curvature_two_form_in_bulk",
+    "torsion_free_GR_branch",
+    "topological_and_boundary_terms_separated"
+  ],
+  "selected_bulk_basis": [
+    "epsilon_ABCD E^A wedge E^B wedge R^CD",
+    "epsilon_ABCD E^A wedge E^B wedge E^C wedge E^D"
+  ],
+  "normalization_contract": {
+    "palatini_curvature_prefactor": "1/(4 kappa_E)",
+    "metric_EH_prefactor": "1/(2 kappa_E)",
+    "cosmological_fourform_prefactor": "-Lambda/(24 kappa_E)",
+    "metric_cosmological_density_prefactor": "-Lambda/kappa_E",
+    "RF_E3_triangle": "kappa_g^2 = 4 kappa_E = 32 pi G"
+  },
+  "downstream_sync": {
+    "RF_L2": "dynamic Lambda0 scalar action and Bianchi transfer present",
+    "RF_L3": "information scalar potential reconstruction present",
+    "RF_L4A": "local Fisher normalization present",
+    "RF_L5": "Shannon-Onsager Temporal Wave graph/operator bridge present",
+    "RF_L5A": "premetric-to-physical calibration firewall present",
+    "RF_E20": "tetra/phase-clock exact scale composition present"
+  },
+  "validation_receipts": [
+    {
+      "tested_commit": "225327b4d9c74161ab0bc5ed3c1a229a0b246b66",
+      "workflow_run_id": 33326298999,
+      "workflow_job_id": 99296909792,
+      "conclusion": "SUCCESS",
+      "role": "initial_RF_E21_regression"
+    },
+    {
+      "tested_commit": "95c08d0864ce121aea62eb3b3328c4326614ff22",
+      "workflow_run_id": 33326511254,
+      "workflow_job_id": 99297485097,
+      "conclusion": "SUCCESS",
+      "role": "synchronized_source_head"
+    }
+  ],
+  "verdict": "PASS_RF_E21_CARTAN_PALATINI_EINSTEIN_HILBERT_SELECTION"
+}
