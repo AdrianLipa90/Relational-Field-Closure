@@ -132,6 +132,8 @@ class ClockTransverseMatchingFlowCertificate:
     local_soldering_status: str = "EXACT_CLOCK_TRANSVERSE_MATCHING_FIELD"
     product_trivialization_theorem_status: str = "EXACT_ON_INTERVAL_COMPLETE_FLOW"
     global_flow_coverage_status: str = "OPEN_ANALYTIC_INPUT"
+    proper_clock_sufficient_route_status: str = "EXACT_PROPER_CLOCK_IMPLIES_INTERVAL_COMPLETE_FLOW"
+    global_clock_properness_status: str = "OPEN_ANALYTIC_INPUT"
     physical_event_placement_status: str = "OPEN_PRODUCTION_INPUT"
 
 
