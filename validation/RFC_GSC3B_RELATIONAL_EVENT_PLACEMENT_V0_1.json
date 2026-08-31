@@ -1,0 +1,23 @@
+{
+  "schema": "RFC_GSC3B_RELATIONAL_EVENT_PLACEMENT_VALIDATION_V0_1",
+  "date": "2026-08-31",
+  "technical_status": "REFERENCE_TARGET_DEFINED",
+  "verdict_target": "PASS_RFC_GSC3B_QUOTIENT_DESCENDED_EVENT_PLACEMENT_WITH_PRODUCTION_RELATIONAL_BINDING_OPEN",
+  "parents": {
+    "rfc_gsc3_head": "385528e1c87823dd6f681a0a7cdf277aa6389b38",
+    "idt_00f": "formalism/00F_relational_composition_precedence.md",
+    "idt_05j_head": "44e2da0a7048df387f277f4e93e6970c445d4b67",
+    "tir_gsc1_head": "5aaf572e9e931525f16bb0fa105afbb0d34c59c9"
+  },
+  "exact_layer": {
+    "theorem": "quotient_fibre_constancy_iff_unique_spatial_anchor_descent",
+    "placement": "iota(e)=(t_E(e)+C,a_bar(e))",
+    "injectivity": "SEPARATE_OPTIONAL_GATE"
+  },
+  "production_relational_state_binding": "OPEN_INPUT",
+  "production_occurrence_state_table": "OPEN_INPUT",
+  "production_event_complex": "OPEN_INPUT",
+  "hosted_validation": "PENDING",
+  "canon_promotion": false,
+  "gremlin_promotion_authority": false
+}

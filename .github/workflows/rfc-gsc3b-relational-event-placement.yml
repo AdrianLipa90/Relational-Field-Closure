@@ -1,0 +1,27 @@
+name: RFC GSC3B relational event placement
+
+on:
+  pull_request:
+    paths:
+      - 'closure/einstein/RF_GSC3B_RELATIONAL_EVENT_PLACEMENT_BINDING.md'
+      - 'src/rfc/relational_event_placement_binding.py'
+      - 'tests/reference/test_rfgsc3b_relational_event_placement_binding.py'
+      - 'validation/RFC_GSC3B_RELATIONAL_EVENT_PLACEMENT_V0_1.json'
+      - '.github/workflows/rfc-gsc3b-relational-event-placement.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  gsc3b:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install GSC3B reference dependency
+        run: python -m pip install pytest
+      - name: Run GSC3B quotient-descended event-placement controls
+        run: python -m pytest -q tests/reference/test_rfgsc3b_relational_event_placement_binding.py
