@@ -1,0 +1,52 @@
+{
+  "authority": "CANDIDATE_ONLY",
+  "base_main_sha": "85bbb1d0754605be2720b6bd258b486b0a072345",
+  "branch": "candidate/qhtri-toe-solver-v0.1",
+  "canon_allowed": false,
+  "fresh_recovery_artifacts": ["revalidate_recovery.py","recovery_revalidation_v1.json","README.md","RECOVERY_MANIFEST.json"],
+  "fresh_revalidation": {
+    "archived_ledger_sha256": "6abc2bc8608fd2cd139b05a7c2e4900ceffd577c433f10de2f958bcd9289cc67",
+    "embedded_receipt_sha256": "7dcda6a368670598926f6e0e39fa8d61f861ca4bc474ca8f89e781a3f208f4d7",
+    "receipt": "recovery_revalidation_v1.json",
+    "status": "PASS"
+  },
+  "inventory_confirmed_bytes_pending_recovery": [
+    "e24_gsc5a_gsc5b_e26_reference_global_control_candidate.py",
+    "e24_gsc5a_gsc5b_e26_reference_global_control_receipt_v1.json",
+    "gsc5b_domain_coverage_conformance_candidate.py",
+    "gsc5b_domain_coverage_conformance_receipt_v1.json",
+    "tir_rfc_global_atlas_seam_candidate.py",
+    "tir_rfc_global_atlas_seam_receipt_v1.json"
+  ],
+  "original_runtime_inventory_count": 24,
+  "promotion": "NO_MAIN_MERGE_PERFORMED",
+  "recovered_archive_sha256": {
+    "adm_field_to_einstein_pipeline_receipt_v1.json": "2799326de3d92d92fbc28e0361834633351ce70e22b998a6b0420ff8f96691d4",
+    "adm_metric_field_provider_candidate.py": "e794017732f7abfc5eba54fa5256865c4a3740c0dde082a3fe76d7deeba4b222",
+    "conceptnav_closure_ledger_v0_2.json": "57b2f07fdf61612ad9e728d8091caabf55a40edc294d34ecc97a2cfe83cdb6fa",
+    "gmn_einstein_provider_candidate.py": "20510d7322939912baee47ac065f2c64b5bc65ab16eaaed8e69cb78563f691d6",
+    "gmn_einstein_provider_candidate_receipt_v1.json": "e528bd2b6f546de2deb5aaeda229d1cc4c197c00125312fa6f2269783385d8fb",
+    "gsc3a_gsc4b_shift_route_candidate.py": "0f1775e0f08d68b436a24a5ca3e638ed45d09972c9fb3db96e3db03d937405f7",
+    "gsc3a_gsc4b_shift_route_receipt_v1.json": "1966ab08e645cd15f1448ed98dd4f4f4095d5a02c5659bbb384911f119ba9b23",
+    "local_einstein_closure_solver_candidate.py": "dda65b3385a1c8235a8b749367faa4f00169ecd8b9dddfaed8a96b2b83b46686",
+    "local_einstein_closure_solver_receipt_v1.json": "7c9c8b15bebb7cbf6211bfa6dfa4539705c570a7f0bc37e08eb691f282fbf6de",
+    "metric_jet_provider_candidate.py": "753decbe677eec09f9fe1e3b67a464c6ec03cc7e1d35eebcb2e67d06a50299f1",
+    "metric_jet_to_einstein_pipeline_receipt_v1.json": "b0c90f47fd358824fa8067632d80d201f93495c641a3dd8acb78f54eb32eded9",
+    "multisector_source_cone_solver_candidate.py": "62aea8196fef99d535029555a81ef8e501962c5155ff4cb69273793f9334affd",
+    "multisector_source_cone_solver_receipt_v1.json": "4ef7df3d3d9b6c2dd474e9e2ff95ac672c90f0096c0a75e3a599fffcfee8a578",
+    "multisector_source_cone_solver_receipt_v2.json": "22265d419de0c7127b03d695e24bc8fcb414e9cde31534156033f9325445a3a3",
+    "qhtri_neutrino_total_stress_binding_candidate.py": "c99b187b272675808d407d9d111f3c9ab3193a2a59fabfa53ba143941cb64bdd",
+    "qhtri_neutrino_total_stress_binding_receipt_v1.json": "8083bdebf0598aec8dc328c1e61366263df53d535586d45006abca391eeddaef",
+    "rfn0_rf02h_local_metric_provider_receipt_v1.json": "813904e8e15e5d11935a6e09200f1eb5f1829fef9818bba5f866192a15bd241e",
+    "rfn0_rf02h_metric_provider_candidate.py": "a67c564641c89f4afc21a486f681aa2d48a316302b15be983ae5c3be18e9c626"
+  },
+  "recovered_original_inventory_count": 18,
+  "recovered_original_inventory_files": [
+    "adm_field_to_einstein_pipeline_receipt_v1.json","adm_metric_field_provider_candidate.py","conceptnav_closure_ledger_v0_2.json","gmn_einstein_provider_candidate.py","gmn_einstein_provider_candidate_receipt_v1.json","gsc3a_gsc4b_shift_route_candidate.py","gsc3a_gsc4b_shift_route_receipt_v1.json","local_einstein_closure_solver_candidate.py","local_einstein_closure_solver_receipt_v1.json","metric_jet_provider_candidate.py","metric_jet_to_einstein_pipeline_receipt_v1.json","multisector_source_cone_solver_candidate.py","multisector_source_cone_solver_receipt_v1.json","multisector_source_cone_solver_receipt_v2.json","qhtri_neutrino_total_stress_binding_candidate.py","qhtri_neutrino_total_stress_binding_receipt_v1.json","rfn0_rf02h_local_metric_provider_receipt_v1.json","rfn0_rf02h_metric_provider_candidate.py"
+  ],
+  "repository": "AdrianLipa90/Relational-Field-Closure",
+  "retained_history": {"multisector_v1":"FAIL_RETAINED","multisector_v2":"PASS_BVLS_REPAIR"},
+  "runtime_recovery_note": "The original /dev/shm scratch workspace was lost on a runtime reset. The committed core files were reconstructed from exact executed-command history where available, then freshly revalidated. Byte hashes below describe the recovered archive files and are not asserted to equal pre-reset scratch-file byte hashes.",
+  "schema": "QHTRI_TOE_SOLVER_CANDIDATE_RECOVERY_MANIFEST_V1",
+  "status": "CANDIDATE_ARCHIVE_RECOVERED_AND_FRESHLY_REVALIDATED"
+}
