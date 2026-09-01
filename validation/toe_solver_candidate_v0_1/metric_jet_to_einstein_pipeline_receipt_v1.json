@@ -1,0 +1,27 @@
+{
+  "authority": "CANDIDATE_ONLY",
+  "best": {
+    "h": 0.0003,
+    "max_G_error": 6.735619506592627e-09,
+    "max_ddg_error": 7.49192174964719e-09,
+    "max_dg_error": 1.4999928188430545e-08,
+    "scalar_R_error": 6.464190127619673e-09
+  },
+  "canon_allowed": false,
+  "created_unix_ns": 1788294286060637456,
+  "einstein_provider": "/dev/shm/ciel_noema/qhtri/toe_solver_candidate_v0_1/gmn_einstein_provider_candidate.py",
+  "metric_jet_provider": "/dev/shm/ciel_noema/qhtri/toe_solver_candidate_v0_1/metric_jet_provider_candidate.py",
+  "receipt_sha256": "04800c9fcb03d05132c12a132f90ef6ba44bbd1dcef656026be4601c93e19c50",
+  "reference": "RFC RF-E10 analytic exponential diagonal metric",
+  "remaining_blocker": "PRODUCTION_METRIC_FIELD_BINDING_TO_METRIC_FN",
+  "scan": [
+    {"h": 0.01,"max_G_error": 7.040125620583204e-06,"max_ddg_error": 8.333360558054892e-06,"max_dg_error": 1.6666749992122476e-05,"scalar_R_error": 7.066842023228936e-06},
+    {"h": 0.003,"max_G_error": 6.335895657572088e-07,"max_ddg_error": 7.500090803969073e-07,"max_dg_error": 1.5000006801102472e-06,"scalar_R_error": 6.359857152027359e-07},
+    {"h": 0.001,"max_G_error": 7.030703946808714e-08,"max_ddg_error": 8.340650481386547e-08,"max_dg_error": 1.6666668134490692e-07,"scalar_R_error": 7.031642762500567e-08},
+    {"h": 0.0003,"max_G_error": 6.735619506592627e-09,"max_ddg_error": 7.49192174964719e-09,"max_dg_error": 1.4999928188430545e-08,"scalar_R_error": 6.464190127619673e-09},
+    {"h": 0.0001,"max_G_error": 1.0582305060014008e-08,"max_ddg_error": 1.3238459328768215e-08,"max_dg_error": 1.6668897373506297e-09,"scalar_R_error": 2.7548118786135944e-09}
+  ],
+  "schema": "QHTRI_TOE_METRIC_JET_TO_EINSTEIN_PIPELINE_CANDIDATE_V1",
+  "scope": "metric_fn -> centered finite-difference jet -> direct Ricci/Einstein tensor",
+  "status": "PASS"
+}
