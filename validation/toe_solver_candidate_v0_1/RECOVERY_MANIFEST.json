@@ -3,7 +3,12 @@
   "base_main_sha": "85bbb1d0754605be2720b6bd258b486b0a072345",
   "branch": "candidate/qhtri-toe-solver-v0.1",
   "canon_allowed": false,
-  "fresh_recovery_artifacts": ["revalidate_recovery.py","recovery_revalidation_v1.json","README.md","RECOVERY_MANIFEST.json"],
+  "fresh_recovery_artifacts": [
+    "revalidate_recovery.py",
+    "recovery_revalidation_v1.json",
+    "README.md",
+    "RECOVERY_MANIFEST.json"
+  ],
   "fresh_revalidation": {
     "archived_ledger_sha256": "6abc2bc8608fd2cd139b05a7c2e4900ceffd577c433f10de2f958bcd9289cc67",
     "embedded_receipt_sha256": "7dcda6a368670598926f6e0e39fa8d61f861ca4bc474ca8f89e781a3f208f4d7",
@@ -18,9 +23,7 @@
     "tir_rfc_global_atlas_seam_candidate.py",
     "tir_rfc_global_atlas_seam_receipt_v1.json"
   ],
-  "original_runtime_inventory_count": 24,
-  "promotion": "NO_MAIN_MERGE_PERFORMED",
-  "recovered_archive_sha256": {
+  "local_recovery_staging_sha256": {
     "adm_field_to_einstein_pipeline_receipt_v1.json": "2799326de3d92d92fbc28e0361834633351ce70e22b998a6b0420ff8f96691d4",
     "adm_metric_field_provider_candidate.py": "e794017732f7abfc5eba54fa5256865c4a3740c0dde082a3fe76d7deeba4b222",
     "conceptnav_closure_ledger_v0_2.json": "57b2f07fdf61612ad9e728d8091caabf55a40edc294d34ecc97a2cfe83cdb6fa",
@@ -40,13 +43,35 @@
     "rfn0_rf02h_local_metric_provider_receipt_v1.json": "813904e8e15e5d11935a6e09200f1eb5f1829fef9818bba5f866192a15bd241e",
     "rfn0_rf02h_metric_provider_candidate.py": "a67c564641c89f4afc21a486f681aa2d48a316302b15be983ae5c3be18e9c626"
   },
+  "original_runtime_inventory_count": 24,
+  "promotion": "NO_MAIN_MERGE_PERFORMED",
   "recovered_original_inventory_count": 18,
   "recovered_original_inventory_files": [
-    "adm_field_to_einstein_pipeline_receipt_v1.json","adm_metric_field_provider_candidate.py","conceptnav_closure_ledger_v0_2.json","gmn_einstein_provider_candidate.py","gmn_einstein_provider_candidate_receipt_v1.json","gsc3a_gsc4b_shift_route_candidate.py","gsc3a_gsc4b_shift_route_receipt_v1.json","local_einstein_closure_solver_candidate.py","local_einstein_closure_solver_receipt_v1.json","metric_jet_provider_candidate.py","metric_jet_to_einstein_pipeline_receipt_v1.json","multisector_source_cone_solver_candidate.py","multisector_source_cone_solver_receipt_v1.json","multisector_source_cone_solver_receipt_v2.json","qhtri_neutrino_total_stress_binding_candidate.py","qhtri_neutrino_total_stress_binding_receipt_v1.json","rfn0_rf02h_local_metric_provider_receipt_v1.json","rfn0_rf02h_metric_provider_candidate.py"
+    "adm_field_to_einstein_pipeline_receipt_v1.json",
+    "adm_metric_field_provider_candidate.py",
+    "conceptnav_closure_ledger_v0_2.json",
+    "gmn_einstein_provider_candidate.py",
+    "gmn_einstein_provider_candidate_receipt_v1.json",
+    "gsc3a_gsc4b_shift_route_candidate.py",
+    "gsc3a_gsc4b_shift_route_receipt_v1.json",
+    "local_einstein_closure_solver_candidate.py",
+    "local_einstein_closure_solver_receipt_v1.json",
+    "metric_jet_provider_candidate.py",
+    "metric_jet_to_einstein_pipeline_receipt_v1.json",
+    "multisector_source_cone_solver_candidate.py",
+    "multisector_source_cone_solver_receipt_v1.json",
+    "multisector_source_cone_solver_receipt_v2.json",
+    "qhtri_neutrino_total_stress_binding_candidate.py",
+    "qhtri_neutrino_total_stress_binding_receipt_v1.json",
+    "rfn0_rf02h_local_metric_provider_receipt_v1.json",
+    "rfn0_rf02h_metric_provider_candidate.py"
   ],
   "repository": "AdrianLipa90/Relational-Field-Closure",
-  "retained_history": {"multisector_v1":"FAIL_RETAINED","multisector_v2":"PASS_BVLS_REPAIR"},
-  "runtime_recovery_note": "The original /dev/shm scratch workspace was lost on a runtime reset. The committed core files were reconstructed from exact executed-command history where available, then freshly revalidated. Byte hashes below describe the recovered archive files and are not asserted to equal pre-reset scratch-file byte hashes.",
+  "retained_history": {
+    "multisector_v1": "FAIL_RETAINED",
+    "multisector_v2": "PASS_BVLS_REPAIR"
+  },
+  "runtime_recovery_note": "The original /dev/shm scratch workspace was lost on a runtime reset. Core files were reconstructed from executed-command history where available and freshly revalidated. local_recovery_staging_sha256 records the local recovery staging bytes; archived GitHub JSON files may use formatting-equivalent text and therefore can have different byte/blob hashes. No pre-reset scratch-byte identity is asserted.",
   "schema": "QHTRI_TOE_SOLVER_CANDIDATE_RECOVERY_MANIFEST_V1",
   "status": "CANDIDATE_ARCHIVE_RECOVERED_AND_FRESHLY_REVALIDATED"
 }
