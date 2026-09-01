@@ -1,0 +1,31 @@
+{
+  "authority": "CANDIDATE_ONLY",
+  "boundaries": [
+    "REPRESENTATIVE_NEUTRINO_STREAM_PACKET_NOT_PHYSICAL_EVENT_PLACEMENT",
+    "PROJECTOR_STRESS_ZERO_CONTROL",
+    "GLOBAL_DOMAIN_COVERAGE_OPEN"
+  ],
+  "canon_allowed": false,
+  "checks": {
+    "dynamic_bianchi_repartition_identity": true,
+    "fixed_dynamic_einstein_residual_identity": true,
+    "neutrino_null_trace": true,
+    "neutrino_symmetric": true,
+    "repartition_difference_equals_Ug": true,
+    "residual_finite": true,
+    "residual_symmetric": true,
+    "zero_U_identity": true
+  },
+  "created_unix_ns": 1788295273266043771,
+  "metrics": {
+    "Gmax": 0.05999997539744875,
+    "bianchi_repartition_max": 0.0,
+    "einstein_residual_max": 0.08531897539744875,
+    "fixed_dynamic_residual_difference": 1.734723475976807e-18,
+    "neutrino_minkowski_trace": 0.0
+  },
+  "receipt_sha256": "18aa02caa8ee6537c750456eddc3dcb617a9438c5ebe7da0b009813ebbc62857",
+  "schema": "QHTRI_TOE_NEUTRINO_TOTAL_STRESS_BINDING_CANDIDATE_V1",
+  "scope": "IDT-style massless neutrino stress -> RFC fixed/dynamic total Einstein source assembly on RF-N0/RF-02H local metric",
+  "status": "PASS"
+}
