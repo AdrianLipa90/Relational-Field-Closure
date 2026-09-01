@@ -1,0 +1,70 @@
+{
+  "schema": "QHTRI_TOE_CONCEPTNAV_CLOSURE_LEDGER_V0_3",
+  "status": "PARTIAL_EXECUTABLE_CLOSURE_SOURCE_PACKET_RECONSTRUCTION_PASS",
+  "authority": "CANDIDATE_ONLY",
+  "canon_allowed": false,
+  "epistemic_boundary": "Local source-like clock-ratio/event and relational-edge packets can reconstruct N_R(x) and h_ij(x) and feed RF-E8 with machine-precision controls. Global/source-owned production capture, coverage/refinement and shift witnesses remain explicit inputs. QHTRI hardware witness remains unassessed.",
+  "live_executed_gates": [
+    {"gate":"G_MN_FROM_METRIC_DERIVATIVES","status":"PASS","receipt":"gmn_einstein_provider_candidate_receipt_v1.json"},
+    {"gate":"METRIC_CALLABLE_TO_G_MN","status":"PASS","receipt":"metric_jet_to_einstein_pipeline_receipt_v1.json"},
+    {"gate":"RF_E8_ADM_FIELD_TO_G_MN","status":"PASS","receipt":"adm_field_to_einstein_pipeline_receipt_v1.json"},
+    {"gate":"RFN0_RF02H_LOCAL_METRIC_TO_G_MN","status":"PASS","receipt":"rfn0_rf02h_local_metric_provider_receipt_v1.json"},
+    {"gate":"QHTRI_NEUTRINO_TOTAL_STRESS_BINDING","status":"PASS","receipt":"qhtri_neutrino_total_stress_binding_receipt_v1.json"},
+    {"gate":"GSC3A_GSC4B_SHIFT_ROUTE_LOCAL_CONFORMANCE","status":"PASS","receipt":"gsc3a_gsc4b_shift_route_receipt_v1.json"},
+    {"gate":"LOCAL_POSITIVE_MASSLESS_EINSTEIN_SOLVER","status":"PASS","receipt":"local_einstein_closure_solver_receipt_v1.json"},
+    {"gate":"MULTISECTOR_SOURCE_CONE_SOLVER_V2","status":"PASS","receipt":"multisector_source_cone_solver_receipt_v2.json"},
+    {"gate":"LOCAL_SOURCE_PACKET_TO_RF_E8_V0_3","status":"PASS","receipt":"production_metric_packet_receipt_v0_3.json","receipt_sha256":"84c9501196e2c87550b6b69dacbbd296ba3b11b486c62535d31416c7d8b709f3"}
+  ],
+  "new_source_packet_results": {
+    "lapse_reconstruction_max_error": 2.220446049250313e-16,
+    "lapse_graph_residual": 0.0,
+    "lapse_fit_residual": 6.938893903907228e-17,
+    "lapse_design_rank": 5,
+    "coframe_reconstruction_error": 1.0685896612017132e-15,
+    "spatial_metric_reconstruction_error": 1.9055937383605226e-15,
+    "coframe_fit_residual": 1.1934897514720433e-15,
+    "coframe_design_rank": 15,
+    "rf_e8_metric_reconstruction_error": 2.220446049250313e-15,
+    "rf_e8_inverse_identity_error": 4.440892098500626e-16,
+    "rf_e8_det_factorization_error": 2.220446049250313e-16
+  },
+  "fail_closed_controls": {
+    "inconsistent_clock_cycle_rejected": true,
+    "underdetermined_lapse_atlas_rejected": true,
+    "rank_deficient_solder_packet_rejected": true
+  },
+  "blocked_production_inputs": [
+    {"name":"SOURCE_OWNED_CLOCK_RATIO_AND_EVENT_EMBEDDING_PACKET","status":"BLOCKED_INPUT"},
+    {"name":"SOURCE_OWNED_GLOBAL_CLOCK_DOMAIN_COVERAGE_WITNESS","status":"BLOCKED_WITNESS"},
+    {"name":"SOURCE_OWNED_RELATIONAL_EDGE_REFINEMENT_PACKET","status":"BLOCKED_INPUT"},
+    {"name":"SOURCE_OWNED_GLOBAL_SPATIAL_COMPLEX_CAPTURE_AND_REFINEMENT_WITNESS","status":"BLOCKED_INPUT"},
+    {"name":"SHIFT_WITNESS_OR_CERTIFIED_FLOW_ADAPTED_ROUTE","status":"BLOCKED_WITNESS"}
+  ],
+  "source_verified_routes": {
+    "IDT_05H":"EXECUTABLE_EXACT_EVENT_CLOCK_FROM_SUPPLIED_POSITIVE_ELAPSED_EDGE_GRAPH",
+    "IDT_05I":"EXECUTABLE_REGULAR_SMOOTH_CLOCK_EXTENSION_CERTIFIER_REQUIRES_SUPPLIED_COVERAGE_WITNESS",
+    "IDT_05J":"EXECUTABLE_PRODUCTION_EVENT_COMPLEX_INPUT_CONTRACT_WITH_EXACT_CLOCK_HANDOFF",
+    "TIR_DISCRETE_SOLDER":"E_XY_TO_LOCAL_COFRAME_CONTINUUM_TARGET_DEFINED",
+    "TIR_CARTAN_REFINEMENT":"LOCAL_REFINEMENT_CONVERGENCE_AND_REGULAR_ENDPOINT_GATES_EXIST",
+    "TIR_GLOBAL_SPATIAL_COMPLEX":"SOURCE_CAPTURE_FREEZE_PLUS_A5_HANDOFF_DEFINED_PRODUCTION_CAPTURE_OPEN",
+    "GSC3A":"LOCAL_MATCHING_FLOW_EXECUTABLE_GLOBAL_FLOW_WITNESS_OPEN",
+    "RF_E8":"EXACT_ADM_KINEMATIC_ASSEMBLY"
+  },
+  "gremlin_qhtri_audit": {
+    "status":"PASS",
+    "phase_attention_R":0.2751533732210469,
+    "qhtri_norm_error":1.1102230246251565e-16,
+    "starter_validation":"22/22 PASS",
+    "hardware_witness_scope":"UNASSESSED",
+    "receipt":"production_metric_packet_gremlin_qhtri_audit_v0_3.json"
+  },
+  "retained_failures": [
+    {"gate":"MULTISECTOR_SOURCE_CONE_SOLVER_V1_NUMERICAL_CONTROL","status":"FAIL","receipt":"multisector_source_cone_solver_receipt_v1.json"}
+  ],
+  "summary": {
+    "live_pass": 9,
+    "live_fail": 0,
+    "retained_historical_candidate_fail": 1,
+    "blocked_production_inputs": 5
+  }
+}
