@@ -1,0 +1,44 @@
+{
+  "authority": "CANDIDATE_ONLY",
+  "canon_allowed": false,
+  "checks": [
+    {"name":"v0_5_generic_source_bundle_pass","pass":true},
+    {"name":"v0_6_typed_contract_bridge_pass","pass":true},
+    {"name":"v0_7_production_ingest_pass","pass":true},
+    {"name":"provider_discovery_no_missing_operator","pass":true},
+    {"name":"provider_discovery_keeps_three_physical_witnesses","pass":true},
+    {"name":"ledger_software_closure_ready","pass":true},
+    {"name":"ledger_zero_live_fail","pass":true},
+    {"name":"ledger_thirteen_live_pass","pass":true},
+    {"name":"ledger_zero_missing_provider_operators","pass":true},
+    {"name":"ledger_retains_historical_fail","pass":true},
+    {"name":"production_frontier_exactly_three","pass":true},
+    {"name":"candidate_authority_only","pass":true},
+    {"name":"no_canon_self_promotion","pass":true},
+    {"name":"no_physical_claim_from_fixture_gates","pass":true},
+    {"name":"ready_not_equal_physical_closure_firewall","pass":true},
+    {"name":"same_realization_required","pass":true},
+    {"name":"same_clock_required","pass":true},
+    {"name":"qhtri_scope_model_state_only","pass":true}
+  ],
+  "known_global_reference_v0_4_receipt_sha256":"d3560eef20de26bb69aed4688ae7afc988b527e64a64025f0c2818189a8e3809",
+  "physical_production_claim":false,
+  "release_semantics":"PASS means candidate software/provider/ingest archive is internally consistent; it does not certify physical production evidence, canon, or a physical ToE closure.",
+  "retained_historical_fail_policy":"PRESERVED_IN_CANDIDATE_HISTORY",
+  "schema":"QHTRI_TOE_CANDIDATE_SOFTWARE_RELEASE_GATE_V0_7",
+  "source_receipt_sha256":{
+    "ledger_v0_7":"ad41bd7160dc8666ec027e46bd2f0d71ce7392535d43ca9b868575ac04c0fab2",
+    "v0_5":"69d0ab9038933db81d86f413840103f0de8a711d201f8d8e83d60881cda74f8c",
+    "v0_6":"80c067c87b51053910fdbb145166cd0a5e36a443e2c3d28e62fba168a888b479",
+    "v0_6_discovery":"d22b99de75dd1de39792b23b800a86089d3565ec4736b62e97c774e8a5fd9aba",
+    "v0_7":"a84333d98e5dd39b93b5138f81d2746c9e77bc4d531880dcc6a6204b3402da71"
+  },
+  "status":"PASS_SOFTWARE_ARCHIVE_RELEASE_GATE",
+  "summary":{
+    "fail":0,
+    "pass":18,
+    "production_evidence_closure":"OPEN_3_SOURCE_WITNESSES",
+    "software_provider_operator_closure":"PASS"
+  },
+  "tested_candidate_head_before_gate_archive":"154ef2c4a162fa3f9f7416ff7c6276d30722f7ca"
+}
