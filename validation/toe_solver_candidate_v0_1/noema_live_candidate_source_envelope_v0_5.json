@@ -1,0 +1,22 @@
+{
+  "artifacts": {
+    "g": {"bytes":10368,"sha256":"038fe7aa91da6b64c99a66b1f3d429bc276eaa6ecc33da07df3cff24ef20b794"},
+    "omega": {"bytes":288,"sha256":"a78b037500632b283fa2ea665f9f169129c0aa7a1dd3ad8410a61933fa0acc69"},
+    "phi": {"bytes":288,"sha256":"5b35ecc2a6a99fcc1472faacf810b0ae48fc94e84ac465c362db3bf9337f968c"},
+    "tau": {"bytes":288,"sha256":"5239adcb95f0a6161ecec0c138596d74df5f5ce7a8888f0933b8b2280f39a4b5"}
+  },
+  "created_unix_ns":1788309586315349166,
+  "evidence_class":"CANDIDATE_SOURCE",
+  "firewalls":{
+    "g_36d_is_not_4d_spacetime_metric":true,
+    "omega_is_not_idt_lapse":true,
+    "runtime_telemetry_cannot_promote_production":true,
+    "tau_is_not_physical_clock_capture_without_source_binding":true
+  },
+  "live_root":"/dev/shm/ciel_noema",
+  "physical_production_claim":false,
+  "schema":"NOEMA_LIVE_SOURCE_ENVELOPE_V0_5",
+  "tether_failures":[],
+  "tether_status":"ACTIVE",
+  "tick":1246
+}
