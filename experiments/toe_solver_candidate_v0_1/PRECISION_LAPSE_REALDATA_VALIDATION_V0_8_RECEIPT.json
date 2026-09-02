@@ -1,0 +1,20 @@
+{
+  "authority": "CANDIDATE_ONLY",
+  "canon_allowed": false,
+  "checks": [
+    {"detail": {"collapsed": [true, true, true, true]}, "name": "legacy_float64_collapses_all_four_real_data_offsets", "status": "PASS"},
+    {"detail": {"max_abs_error": "0"}, "name": "decimal_log_ratio_roundtrip_real_data", "status": "PASS"},
+    {"detail": {"edge_count": 4, "max_log_residual": "0"}, "name": "real_data_star_reconstruction_exact_at_80_digits", "status": "PASS"},
+    {"detail": {"chi2": "1.4585116697179845258537013566497886766024533677196751331215123360835969133003277", "dof": 3, "sigma": "0.56167907568042397202224492309163135908706507721062290379612341792725309068448916", "slope": "-11.931497812058647330178150456210840554320038300818627288826189506893919006324977"}, "name": "weighted_fig3b_slope_reproduced", "status": "PASS"},
+    {"detail": {"reason": "additive log cocycle failed: residual=1.0000000000000000000000003173858218186574310363491010425326478222375177996285E-22"}, "name": "injected_1e-22_cycle_defect_detected", "status": "PASS"},
+    {"detail": {"fixed_loss": "0E-98", "legacy_loss": "2.429021469594861761852559533E-47"}, "name": "decimal_unary_negation_context_regression_fixed", "status": "PASS"}
+  ],
+  "failed": 0,
+  "firewall": "Real external process data are used as a precision benchmark only. This receipt is not an IDT production capture and makes no physical-production claim.",
+  "passed": 6,
+  "precision_digits": 80,
+  "receipt_sha256": "3af2b17f20ab85f3191d91bdb7b78ddc042f151ffb2f35f52edfa07a9073626b",
+  "schema": "QHTRI_TOE_PRECISION_LAPSE_REALDATA_VALIDATION_V0_8",
+  "source": {"doi": "10.5281/zenodo.8184043", "evidence_class": "EXTERNAL_PROCESS_DATA_REFERENCE", "fig3_md5": "257eab6f29cf3480c536cac73ed3998a", "file": "Fig3.csv", "physical_production_claim": false, "record_url": "https://zenodo.org/records/8184043"},
+  "status": "PASS"
+}
