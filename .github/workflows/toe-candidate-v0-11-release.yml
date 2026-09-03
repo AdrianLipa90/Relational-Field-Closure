@@ -1,0 +1,40 @@
+name: ToE candidate v0.11 release gates
+
+on:
+  push:
+    branches:
+      - candidate/qhtri-toe-solver-v0.1
+    paths:
+      - 'experiments/toe_solver_candidate_v0_1/**'
+      - 'validation/toe_solver_candidate_v0_1/**'
+      - '.github/workflows/toe-candidate-v0-11-release.yml'
+  pull_request:
+    paths:
+      - 'experiments/toe_solver_candidate_v0_1/**'
+      - 'validation/toe_solver_candidate_v0_1/**'
+      - '.github/workflows/toe-candidate-v0-11-release.yml'
+  workflow_dispatch:
+
+jobs:
+  release-gates:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install runtime dependency
+        run: python -m pip install numpy
+      - name: Empirical bounded-domain E2E validation
+        run: python experiments/toe_solver_candidate_v0_1/empirical_rindler_bounded_e2e_validation_v0_11.py > /tmp/empirical_rindler_v011.json
+      - name: Bounded-domain candidate release gate
+        run: >-
+          python experiments/toe_solver_candidate_v0_1/candidate_release_gate_v0_11.py
+          --receipt /tmp/empirical_rindler_v011.json
+          --qhtri validation/toe_solver_candidate_v0_1/QHTRI_VALIDATION_RECEIPT_V0_11.json
+      - name: Observational same-realization validation
+        run: python experiments/toe_solver_candidate_v0_1/igs_sp3_observational_validation_v0_11.py
+      - name: Observational adversarial suite
+        run: python experiments/toe_solver_candidate_v0_1/igs_sp3_observational_adversarial_v0_11.py
+      - name: Observational reproducibility release gate
+        run: python experiments/toe_solver_candidate_v0_1/candidate_release_reproducibility_gate_v0_11.py
