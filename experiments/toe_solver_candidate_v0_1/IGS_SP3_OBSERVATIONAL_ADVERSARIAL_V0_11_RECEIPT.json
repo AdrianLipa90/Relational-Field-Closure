@@ -1,0 +1,16 @@
+{
+  "authority": "CANDIDATE_ONLY",
+  "canon_allowed": false,
+  "checks": [
+    {"detail": "1.00000000000000000000000000000000000000000000000000000000000000E-30", "name": "clock_inverse_cycle_tamper_detected", "status": "PASS"},
+    {"detail": 4, "name": "open_spatial_complex_rejected", "status": "PASS"},
+    {"detail": 0.0009999999999998899, "name": "matching_tamper_detected", "status": "PASS"},
+    {"detail": "physical:igs-sp3:sha256:0000000000000000000000000000000000000000000000000000000000000000", "name": "realization_mismatch_rejected", "status": "PASS"},
+    {"detail": {"base": "physical:igs-sp3:sha256:e6c18e85a6f2b62c6820258b7ecfc514f8a177f1c2eaff54d6a5ff0b8fab2399", "changed": "physical:igs-sp3:sha256:4af607418ecd4f76033aa00f4ad2a5d89edf52a7bbde392a8df5422159d882d3"}, "name": "source_record_tamper_changes_realization_id", "status": "PASS"}
+  ],
+  "failed": 0,
+  "passed": 5,
+  "receipt_sha256": "ebe2fc40928a160453f0b4a847028d6399567695efb1eae53f4a0f95bf04bb69",
+  "schema": "QHTRI_TOE_IGS_SP3_OBSERVATIONAL_ADVERSARIAL_V0_11",
+  "status": "PASS"
+}
