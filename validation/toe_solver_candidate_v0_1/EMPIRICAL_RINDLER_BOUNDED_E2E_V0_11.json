@@ -1,0 +1,36 @@
+{
+  "archive_sha256": "a816cae4708d75d2bd248cd25a263e18a788f612ee91c97fdf69cdacc92b9513",
+  "authority": "CANDIDATE_ONLY",
+  "canon_allowed": false,
+  "claim_boundary": "External optical-clock data calibrate a bounded Rindler reference control. This validates the pipeline at reference scope and is not a full physical 3+1 production claim.",
+  "detailed_receipt_sha256": "7140cc7f10f4902f93293b58eaa4edebc8b67509fbabb325245b04db2a79ff11",
+  "metrics": {
+    "acceleration_m_s2": "-10.72349544867471818721970445",
+    "analytic_ddg_zz_g00": -2.8472128007832055e-32,
+    "analytic_dg_z_g00": 2.3862995624117294e-16,
+    "einstein_tensor_max_abs": 0.0,
+    "gamma_per_m": "-1.193149781205864733017815046E-16",
+    "legacy_float64_N_at_1cm": "1.0",
+    "perturbed_ddg_1pct_einstein_max_abs": 1.4236064003916025e-34,
+    "rf_e26_max_local_residual": 0.0,
+    "ricci_max_abs": 0.0,
+    "sigma_acceleration_m_s2": "0.5048119780558899690705511412",
+    "sigma_gamma_per_m": "5.616790756804239720222449231E-18"
+  },
+  "physical_production_claim": false,
+  "routing": {
+    "A5": "OPTIONAL_GLOBAL_MULTIPATCH_ROUTE",
+    "bounded_domain_coverage": "PASS",
+    "interleaf_beta_match": "OPTIONAL_MULTIPATCH_ROUTE",
+    "rf_e25_single_patch": "PASS",
+    "rf_e26_global_carrier": "PASS"
+  },
+  "schema": "QHTRI_TOE_EMPIRICAL_RINDLER_BOUNDED_E2E_ARCHIVE_V0_11",
+  "source": {
+    "doi": "10.5281/zenodo.8184043",
+    "file": "Fig3.csv",
+    "md5": "257eab6f29cf3480c536cac73ed3998a"
+  },
+  "status": "PASS",
+  "validation_checks": "10/10"
+}

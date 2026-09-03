@@ -1,0 +1,31 @@
+{
+  "authority": "CANDIDATE_ONLY",
+  "checks": {
+    "bad_topology_fail_control": {"pass": true},
+    "five_patch_reference_topology": {"pass": true, "tetrahedra": 5, "triangle_incidence_values": [2], "triangles": 10, "vertices": 5},
+    "flow_adapted_shift_reference_witness": {"pass": true, "scope": "REFERENCE_CONTROL_DECLARED_FLOW_ADAPTED", "shift": [0.0,0.0,0.0]},
+    "global_coframe_solder_gluing": {"max_residual": 2.220446049250313e-15, "pass": true},
+    "global_lapse_scalar_gluing": {"max_residual": 2.220446049250313e-16, "pass": true},
+    "global_rf_e8_metric_covariance_zero_shift_reference": {"max_residual": 4.884981308350689e-15, "pass": true},
+    "global_spatial_metric_covariance": {"max_residual": 4.884981308350689e-15, "pass": true},
+    "tampered_coframe_overlap_detected": {"pass": true, "residual": 0.011527999999999539},
+    "tampered_lapse_overlap_detected": {"pass": true, "residual": 0.010209667780351595}
+  },
+  "evidence_scope": "REFERENCE_CONTROL_GLOBAL_MULTI_PATCH_INTEGRATION",
+  "firewalls": {
+    "declared_reference_domain_coverage_proves_physical_global_coverage": false,
+    "flow_adapted_reference_shift_promotes_production_shift": false,
+    "global_reference_pass_promotes_canon": false,
+    "reference_control_counts_as_production_source": false
+  },
+  "patch_count": 5,
+  "production_delta_after_pass": [
+    "PRODUCTION_IDT_EVENT_CLOCK_RATIO_AND_SMOOTH_DOMAIN_CAPTURE",
+    "PRODUCTION_TIR_GLOBAL_RELATIONAL_COMPLEX_AND_EDGE_REFINEMENT_CAPTURE",
+    "PRODUCTION_SHIFT_OR_GLOBAL_FLOW_WITNESS"
+  ],
+  "reference_source_class": "REFERENCE_CONTROL",
+  "schema": "QHTRI_TOE_GLOBAL_REFERENCE_PACKET_INTEGRATION_V0_4",
+  "status": "PASS",
+  "topology": "BOUNDARY_OF_4_SIMPLEX_REFERENCE_S3_COMPLEX"
+}

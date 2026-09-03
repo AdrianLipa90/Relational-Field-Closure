@@ -1,0 +1,18 @@
+{
+  "authority": "CANDIDATE_ONLY",
+  "canon_allowed": false,
+  "checks": [
+    {"detail": {"authority":"CANDIDATE_ONLY","blockers":["IDT_05K_PRECISION_PRODUCTION_CAPTURE_DATASET","TIR_GSC1_PRODUCTION_SOURCE_CAPTURE"],"bundle_id":"v08-control","canon_allowed":false,"firewall":"READY requires precision-safe IDT, TIR and RFC source receipts from one realization; it is only eligibility for downstream physical closure and never a canon or physical-result claim.","input_sha256":"b32340961057d245585fd7ab1ad6a97dc07a78116a6b5b9c0cbd9b5149d5b7b0","max_log_residual":"0","physical_production_claim":false,"precision_digits":80,"precision_encoding":"DECIMAL_LOG_N","promotion_review_eligible":false,"ready_for_field_ingest":false,"receipt_sha256":"9220a1ef8fc57448bbc4c778304e335736e7023f51e5ebbacbeb7e64ca025d69","schema":"QHTRI_TOE_PRODUCTION_INGEST_RECEIPT_V0_8","source_evidence_class":"EXTERNAL_PROCESS_DATA_REFERENCE","status":"BLOCKED_PRODUCTION_EVIDENCE"},"name":"external_realdata_precision_receipt_admitted_but_not_promoted","status":"PASS"},
+    {"detail":"encoding must equal DECIMAL_LOG_N","name":"float64_encoding_rejected","status":"PASS"},
+    {"detail":"production_input requires source_evidence_class=PRODUCTION_SOURCE","name":"production_flag_without_production_source_rejected","status":"PASS"},
+    {"detail":"max_log_residual exceeds tolerance_log","name":"log_residual_above_tolerance_rejected","status":"PASS"},
+    {"detail":["IDT_05K_PRECISION_PRODUCTION_CAPTURE_DATASET","TIR_GSC1_PRODUCTION_SOURCE_CAPTURE","SAME_PHYSICAL_REALIZATION_BINDING"],"name":"same_realization_firewall_preserved","status":"PASS"},
+    {"detail":["IDT_05K_PRECISION_PRODUCTION_CAPTURE_DATASET","TIR_GSC1_PRODUCTION_SOURCE_CAPTURE","SAME_CLOCK_ID_BINDING"],"name":"same_clock_firewall_preserved","status":"PASS"}
+  ],
+  "failed": 0,
+  "passed": 6,
+  "production_ready_path_status": "OPEN_UNTIL_TRUE_PRODUCTION_SOURCE_RECEIPTS_EXIST",
+  "receipt_sha256": "0da69f10a0ef417c3d09a58bd671899fc668f2c3c7a1f4288dcf926c3b97b55b",
+  "schema": "QHTRI_TOE_PRODUCTION_INGEST_VALIDATION_V0_8",
+  "status": "PASS"
+}

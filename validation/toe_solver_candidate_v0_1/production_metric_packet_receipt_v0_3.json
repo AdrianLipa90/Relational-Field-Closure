@@ -1,0 +1,52 @@
+{
+  "authority": "CANDIDATE_ONLY",
+  "checks": {
+    "coframe_rank_fail_closed": {"pass": true},
+    "coframe_reconstruction": {
+      "coframe_error": 1.0685896612017132e-15,
+      "fit_residual": 1.1934897514720433e-15,
+      "metric_error": 1.9055937383605226e-15,
+      "min_abs_det": 1.239517552831983,
+      "min_metric_eigenvalue": 0.8897355371601909,
+      "pass": true,
+      "rank": 15
+    },
+    "lapse_inconsistent_cycle_fail_closed": {"pass": true},
+    "lapse_reconstruction": {
+      "fit_residual": 6.938893903907228e-17,
+      "graph_residual": 0.0,
+      "max_error": 2.220446049250313e-16,
+      "pass": true,
+      "rank": 5
+    },
+    "lapse_underdetermined_fail_closed": {"pass": true},
+    "source_packet_to_rf_e8": {
+      "det_factorization_error": 2.220446049250313e-16,
+      "inverse_identity_error": 4.440892098500626e-16,
+      "metric_reconstruction_error": 2.220446049250313e-15,
+      "pass": true,
+      "production_ready_synthetic_control": true
+    }
+  },
+  "evidence_scope": "SYNTHETIC_WITNESS_RECONSTRUCTION_AND_FAIL_CLOSED_CONTROLS",
+  "firewalls": {
+    "36d_state_aliases_4d_metric": false,
+    "finite_event_graph_proves_global_smooth_lapse": false,
+    "local_affine_coframe_fit_proves_global_continuum_existence": false,
+    "phase_magnitude_aliases_idt_lapse": false
+  },
+  "open_production_inputs": [
+    "SOURCE_OWNED_CLOCK_RATIO_AND_EVENT_EMBEDDING_PACKET",
+    "SOURCE_OWNED_GLOBAL_CLOCK_DOMAIN_COVERAGE_WITNESS",
+    "SOURCE_OWNED_RELATIONAL_EDGE_REFINEMENT_PACKET",
+    "SOURCE_OWNED_SPATIAL_OVERLAP_COCYCLE_AND_GLOBAL_REFINEMENT_WITNESS",
+    "SHIFT_WITNESS_OR_CERTIFIED_FLOW_ADAPTED_ROUTE"
+  ],
+  "schema": "QHTRI_TOE_PRODUCTION_METRIC_PACKET_CANDIDATE_V0_3",
+  "source_contracts": {
+    "IDT": "positive clock-ratio graph + event embeddings -> local affine log-lapse witness",
+    "RFC": "RF-E8 ADM block metric assembly",
+    "TIR": "relational edge-generator samples -> local affine coframe witness -> h=e^T e"
+  },
+  "status": "PASS"
+}

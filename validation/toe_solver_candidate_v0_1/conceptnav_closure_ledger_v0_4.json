@@ -1,0 +1,61 @@
+{
+  "schema": "QHTRI_TOE_CONCEPTNAV_CLOSURE_LEDGER_V0_4",
+  "status": "GLOBAL_REFERENCE_ARCHITECTURE_PASS_PRODUCTION_SOURCE_DELTA_ONLY",
+  "authority": "CANDIDATE_ONLY",
+  "canon_allowed": false,
+  "epistemic_boundary": "Local and five-patch global reference-control reconstruction/gluing are executable and fail-closed. No additional executable mathematical/global operator was identified by the GREMLIN/Phase36D audit. Production closure now depends on three source-owned witness captures. QHTRI hardware witness remains unassessed.",
+  "summary": {
+    "live_pass": 10,
+    "live_fail": 0,
+    "retained_historical_candidate_fail": 1,
+    "production_delta_source_witnesses": 3
+  },
+  "new_global_reference_gate": {
+    "gate": "GLOBAL_REFERENCE_SOURCE_PACKET_TO_RF_E8_V0_4",
+    "status": "PASS",
+    "receipt": "global_reference_packet_integration_receipt_v0_4.json",
+    "receipt_sha256": "d3560eef20de26bb69aed4688ae7afc988b527e64a64025f0c2818189a8e3809",
+    "patch_count": 5,
+    "topology": "BOUNDARY_OF_4_SIMPLEX_REFERENCE_S3_COMPLEX",
+    "global_lapse_scalar_gluing_residual": 2.220446049250313e-16,
+    "global_coframe_solder_gluing_residual": 2.220446049250313e-15,
+    "global_spatial_metric_covariance_residual": 4.884981308350689e-15,
+    "global_rf_e8_metric_covariance_residual": 4.884981308350689e-15
+  },
+  "production_delta": [
+    {
+      "name": "PRODUCTION_IDT_EVENT_CLOCK_RATIO_AND_SMOOTH_DOMAIN_CAPTURE",
+      "status": "SOURCE_WITNESS_REQUIRED",
+      "existing_contracts": ["IDT_05H_EXACT_EVENT_CLOCK", "IDT_05I_REGULAR_SMOOTH_CLOCK_EXTENSION", "IDT_05J_PRODUCTION_EVENT_COMPLEX_INPUT"]
+    },
+    {
+      "name": "PRODUCTION_TIR_GLOBAL_RELATIONAL_COMPLEX_AND_EDGE_REFINEMENT_CAPTURE",
+      "status": "SOURCE_WITNESS_REQUIRED",
+      "existing_contracts": ["TIR_GLOBAL_RELATIONAL_COMPLEX_CAPTURE_V0_1", "A5_HANDOFF", "TIR_DISCRETE_SOLDER", "TIR_CARTAN_CONTINUUM_REFINEMENT"]
+    },
+    {
+      "name": "PRODUCTION_SHIFT_OR_GLOBAL_FLOW_WITNESS",
+      "status": "SOURCE_WITNESS_REQUIRED",
+      "existing_contracts": ["RFC_GSC3A_CLOCK_TRANSVERSE_MATCHING_FLOW", "FLOW_ADAPTED_ZERO_SHIFT_ROUTE"]
+    }
+  ],
+  "gremlin_qhtri_audit": {
+    "status": "PASS",
+    "missing_executable_operator_detected": false,
+    "phase_attention_R": 0.2126652354039086,
+    "qhtri_norm_error": 1.1102230246251565e-16,
+    "starter_validation": "22/22 PASS",
+    "hardware_witness_scope": "UNASSESSED",
+    "receipt": "global_reference_gremlin_qhtri_audit_v0_4.json"
+  },
+  "firewalls": {
+    "reference_control_promotes_production": false,
+    "finite_local_or_global_reference_fit_proves_physical_source_capture": false,
+    "phase_magnitude_aliases_idt_lapse": false,
+    "36d_state_aliases_4d_metric": false,
+    "candidate_branch_promotes_canon": false
+  },
+  "retained_failures": [
+    {"gate":"MULTISECTOR_SOURCE_CONE_SOLVER_V1_NUMERICAL_CONTROL","status":"FAIL","receipt":"multisector_source_cone_solver_receipt_v1.json"}
+  ]
+}

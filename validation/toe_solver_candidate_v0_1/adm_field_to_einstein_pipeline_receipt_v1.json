@@ -1,0 +1,24 @@
+{
+  "authority": "CANDIDATE_ONLY",
+  "canon_allowed": false,
+  "checks": {
+    "de_sitter_G_max_error": 4.895952339725729e-09,
+    "fail_closed_lapse_and_spd": true,
+    "max_coframe_metric_residual": 1.7763568394002505e-15,
+    "max_det_factorization_residual": 4.547473508864641e-13,
+    "max_inverse_identity_residual": 3.999721622171168e-15,
+    "random_cases": 100,
+    "rindler_flat_G_max_abs": 1.7171811150817163e-09
+  },
+  "created_unix_ns": 1788295263356969431,
+  "receipt_sha256": "0d97676f38830b23ccc07887e72d14a7a0bf8d33b71668e3b7a8400d28f9ac57",
+  "remaining_blockers": [
+    "PRODUCTION_N_R_FIELD_PACKET",
+    "PRODUCTION_H_IJ_OR_TRIAD_FIELD_PACKET",
+    "PRODUCTION_SHIFT_FIELD_OR_ADMITTED_ZERO_SHIFT_GAUGE",
+    "DOMAIN_COVERAGE_WITNESS"
+  ],
+  "schema": "QHTRI_TOE_RF_E8_ADM_FIELD_TO_EINSTEIN_PIPELINE_V1",
+  "scope": "exact RF-E8 ADM field interface -> finite-difference metric jet -> Ricci/Einstein; upstream physical field packet still open",
+  "status": "PASS"
+}

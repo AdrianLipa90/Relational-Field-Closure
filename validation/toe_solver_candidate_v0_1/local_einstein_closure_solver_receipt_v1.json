@@ -1,0 +1,42 @@
+{
+  "anisotropic_BianchiI": {
+    "positive_solution": {
+      "Lambda": 0.019646404393759826,
+      "active_constraints": ["stream_pair_0_nonnegative_boundary","stream_pair_1_nonnegative_boundary"],
+      "max_abs_residual": 0.007886680391421472,
+      "rms_residual": 0.0024664138440288873,
+      "stream_pair_couplings": [1.1374149183855618e-21,1.1044509593447373e-17,0.0029666767934716917],
+      "success": false
+    },
+    "scalar_R": 0.07859999347245818,
+    "unconstrained_diagnostic": {
+      "coefficients": [0.01964999836811455,-0.00764999978602484,-0.0004499991779657587,0.006750000612625115],
+      "max_abs_residual": 1.1275702593849246e-17,
+      "requires_negative_stream_coupling": true
+    }
+  },
+  "authority": "CANDIDATE_ONLY",
+  "canon_allowed": false,
+  "checks": {
+    "anisotropic_positive_class_rejected": true,
+    "anisotropic_rejection_has_negative_diagnostic": true,
+    "anisotropic_unconstrained_exact": true,
+    "radiation_isotropic_streams": true,
+    "radiation_positive_closure": true,
+    "radiation_streams_positive": true
+  },
+  "created_unix_ns": 1788295680150741476,
+  "interpretation_boundary": "ALGEBRAIC_LOCAL_SOURCE_CLASS_SOLVER; normalized couplings; no production metric/source packet or physical kappa calibration claimed",
+  "radiation_FLRW": {
+    "Lambda": 8.32667269337837e-09,
+    "max_abs_residual": 5.551115123125783e-17,
+    "rms_residual": 2.4532694666933986e-17,
+    "scalar_R": 3.3306690738754696e-08,
+    "stream_pair_couplings": [0.06249999722456746,0.06249999722456747,0.06249999722456746],
+    "success": true
+  },
+  "receipt_sha256": "98d86fdec759e9f6985883c5f83ed6fdfaf5db4c4c7be4b209ddd3d244a88485",
+  "schema": "QHTRI_TOE_LOCAL_EINSTEIN_CONSTRAINED_CLOSURE_SOLVER_V1",
+  "scope": "zero-shift Lorentzian metric + Einstein tensor -> Lambda plus nonnegative orthonormal massless-stream pair couplings",
+  "status": "PASS"
+}

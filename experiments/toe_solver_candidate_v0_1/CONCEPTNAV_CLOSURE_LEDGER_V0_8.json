@@ -1,0 +1,43 @@
+{
+  "authority": "CANDIDATE_ONLY",
+  "canon_allowed": false,
+  "firewalls": [
+    "EXTERNAL_PROCESS_DATA_REFERENCE_NEQ_PRODUCTION_SOURCE",
+    "READY_NEQ_PHYSICAL_RESULT",
+    "NO_CANON_PROMOTION",
+    "NO_FLOAT64_N_FOR_SUB_EPSILON_CLOCK_OFFSETS"
+  ],
+  "historical_v07_release_gate_status": "PASS_RETAINED_AS_PRE_PRECISION_DISCOVERY",
+  "ledger_sha256": "069fd6e341d67e88b257f9065f87ea028ed0ce8086b76dc65243812e522a1d05",
+  "physical_production_claim": false,
+  "precision_ingest_validation": {
+    "failed": 0,
+    "passed": 6,
+    "receipt_sha256": "0da69f10a0ef417c3d09a58bd671899fc668f2c3c7a1f4288dcf926c3b97b55b",
+    "status": "PASS"
+  },
+  "precision_realdata_validation": {
+    "failed": 0,
+    "passed": 6,
+    "receipt_sha256": "3af2b17f20ab85f3191d91bdb7b78ddc042f151ffb2f35f52edfa07a9073626b",
+    "status": "PASS"
+  },
+  "production_frontier": [
+    "IDT_05K_PRECISION_PRODUCTION_CAPTURE_DATASET",
+    "TIR_GSC1_PRODUCTION_SOURCE_CAPTURE",
+    "RFC_GSC3C_SOURCE_OWNED_BINDING_ON_SAME_REALIZATION"
+  ],
+  "provider_status": {
+    "idt_05k_precision_layer": "IMPLEMENTED_CANDIDATE_VALIDATED_ON_EXTERNAL_REAL_DATA",
+    "rfc_gsc3c_shift_binding_provider": "PRESENT",
+    "tir_gsc1_spatial_capture_provider": "PRESENT"
+  },
+  "retained_failure": {
+    "observed_residual": "2.429021469594861761852559533E-47",
+    "receipt_sha256": "f734de96a9d8f8036a4eb8f606d761dbd019b696c542cbc661f4b3ac3b81fbc7",
+    "status": "FAIL_RETAINED"
+  },
+  "schema": "QHTRI_TOE_CONCEPTNAV_CLOSURE_LEDGER_V0_8",
+  "status": "PASS_SOFTWARE_PRECISION_PATCH_PRODUCTION_EVIDENCE_OPEN",
+  "supersedes_current_release_gate_for_precision_awareness": "QHTRI_TOE_CANDIDATE_SOFTWARE_RELEASE_GATE_V0_7"
+}

@@ -1,0 +1,67 @@
+{
+  "authority": "CANDIDATE_ONLY",
+  "canon_allowed": false,
+  "checks": {
+    "constant_flat": true,
+    "exp_lapse_nonzero": true,
+    "exp_omega_nonzero": true,
+    "finite_all": true,
+    "lapse_ratio_exact": true,
+    "rindler_flat_control": true,
+    "symmetry_all": true
+  },
+  "created_unix_ns": 1788295202464651798,
+  "production_boundaries": [
+    "PHYSICAL_PROPER_TIME_CALIBRATION_CANDIDATE",
+    "SPATIAL_COFRAME_PHYSICAL_BINDING_CANDIDATE",
+    "GLOBAL_INTEGRABILITY_OPEN",
+    "NO_G36_TO_G4_ALIAS"
+  ],
+  "receipt_sha256": "40e58e7c0c54942b82262588c856e4a828b979ddda6f73f0704c259b68a7aee5",
+  "scan": [
+    {
+      "cases": {
+        "constant": {"Gmax": 0.0,"Gsym": 0.0,"R": 0.0,"finite": true},
+        "coupled_exp": {"Gmax": 0.05999999580570166,"Gsym": 0.0,"R": -0.18719997726899731,"finite": true},
+        "exp_lapse": {"Gmax": 0.00489999985660211,"Gsym": 0.0,"R": -0.2351999931169012,"finite": true},
+        "exp_omega": {"Gmax": 0.059999995805701645,"Gsym": 0.0,"R": -0.11999999161140329,"finite": true},
+        "rindler_linear_lapse": {"Gmax": 4.510622778064467e-12,"Gsym": 0.0,"R": -2.1650989334709434e-10,"finite": true}
+      },
+      "h": 0.003
+    },
+    {
+      "cases": {
+        "constant": {"Gmax": 0.0,"Gsym": 0.0,"R": 0.0,"finite": true},
+        "coupled_exp": {"Gmax": 0.059999995276791396,"Gsym": 0.0,"R": -0.18719998181234543,"finite": true},
+        "exp_lapse": {"Gmax": 0.004899999835156861,"Gsym": 0.0,"R": -0.23519999208752923,"finite": true},
+        "exp_omega": {"Gmax": 0.059999995276791396,"Gsym": 0.0,"R": -0.11999999055358279,"finite": true},
+        "rindler_linear_lapse": {"Gmax": 3.86634214227799e-11,"Gsym": 0.0,"R": 1.8558442282934347e-09,"finite": true}
+      },
+      "h": 0.001
+    },
+    {
+      "cases": {
+        "constant": {"Gmax": 0.0,"Gsym": 0.0,"R": 0.0,"finite": true},
+        "coupled_exp": {"Gmax": 0.05999997539744875,"Gsym": 0.0,"R": -0.1871998770031516,"finite": true},
+        "exp_lapse": {"Gmax": 0.004899998464192101,"Gsym": 0.0,"R": -0.23519992628122074,"finite": true},
+        "exp_omega": {"Gmax": 0.059999975397448786,"Gsym": 0.0,"R": -0.11999995079489757,"finite": true},
+        "rindler_linear_lapse": {"Gmax": 4.580887794381391e-10,"Gsym": 0.0,"R": 2.198826141303067e-08,"finite": true}
+      },
+      "h": 0.0003
+    },
+    {
+      "cases": {
+        "constant": {"Gmax": 0.0,"Gsym": 0.0,"R": 0.0,"finite": true},
+        "coupled_exp": {"Gmax": 0.05999962017204413,"Gsym": 0.0,"R": -0.18719949240712241,"finite": true},
+        "exp_lapse": {"Gmax": 0.004900005251465929,"Gsym": 0.0,"R": -0.2352002520703645,"finite": true},
+        "exp_omega": {"Gmax": 0.05999962017204413,"Gsym": 0.0,"R": -0.11999924034408826,"finite": true},
+        "rindler_linear_lapse": {"Gmax": 8.176979189242208e-09,"Gsym": 0.0,"R": -3.9249500108362584e-07,"finite": true}
+      },
+      "h": 0.0001
+    }
+  ],
+  "schema": "QHTRI_TOE_RFN0_RF02H_LOCAL_METRIC_PROVIDER_CANDIDATE_V1",
+  "scope": "RF-N0 N_R + RF-02H isotropic local coframe -> zero-shift metric_fn -> jet -> full Einstein tensor",
+  "selected_h": 0.0003,
+  "status": "PASS"
+}

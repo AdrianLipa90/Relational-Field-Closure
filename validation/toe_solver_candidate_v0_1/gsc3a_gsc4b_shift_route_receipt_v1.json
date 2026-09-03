@@ -1,0 +1,42 @@
+{
+  "authority": "CANDIDATE_ONLY",
+  "canon_allowed": false,
+  "checks": {
+    "clock_transverse_pairing": true,
+    "conditional_elimination_status": true,
+    "identity_matching": true,
+    "mismatch_detected": true,
+    "nonzero_matching": true,
+    "zero_shift_not_silently_admitted": true
+  },
+  "created_unix_ns": 1788295451774464735,
+  "metrics": {
+    "adversarial_mismatch_residual": 0.10000000000000003,
+    "clock_pairing_residual": 0.0,
+    "identity_matching_residual": 0.0,
+    "nonzero_matching_residual": 0.0
+  },
+  "receipt_sha256": "acd19cdc053851fb0daccd5ec853bb792189b7022c1c4a46d9b42bb192697246",
+  "remaining_witnesses": [
+    "INTERVAL_COMPLETE_FLOW_OR_PROPER_GLOBAL_CLOCK",
+    "PRODUCT_TRIVIALIZATION_CERTIFICATE",
+    "PHYSICAL_EVENT_PLACEMENT",
+    "DOMAIN_COVERAGE"
+  ],
+  "route": {
+    "gsc3a_local_soldering": "EXECUTABLE_CONFORMANCE_AVAILABLE",
+    "gsc4b_zero_shift_admitted": false,
+    "interval_complete_flow_or_proper_clock_witness": false,
+    "physical_event_placement_witness": false,
+    "product_trivialization_certified": false,
+    "shift_blocker_status": "CONDITIONALLY_ELIMINABLE_BLOCKED_WITNESS"
+  },
+  "schema": "QHTRI_TOE_GSC3A_GSC4B_SHIFT_ROUTE_CANDIDATE_V1",
+  "source": {
+    "commit": "85bbb1d0754605be2720b6bd258b486b0a072345",
+    "gsc3a": "src/rfc/clock_transverse_matching_flow.py",
+    "gsc4b": "src/rfc/flow_adapted_zero_shift_atlas.py",
+    "repo": "AdrianLipa90/Relational-Field-Closure"
+  },
+  "status": "PASS"
+}

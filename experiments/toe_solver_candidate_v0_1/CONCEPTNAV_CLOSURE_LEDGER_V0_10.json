@@ -1,0 +1,47 @@
+{
+  "authority": "CANDIDATE_ONLY",
+  "canon_allowed": false,
+  "derived_downstream": [
+    "TIR_TO_RFC_RFE8_SHIFT_HANDOFF_V0_1",
+    "RFC_GSC3C_BETA_MATCH_SHIFT_BINDING"
+  ],
+  "external_source_packet_frontier": [
+    "IDT_05K_PRECISION_PRODUCTION_CLOCK_CAPTURE",
+    "TIR_GSC1_SOURCE_OWNED_GLOBAL_TETRAHEDRAL_INCIDENCE",
+    "TIR_INTERLEAF_MATCHING_FIELD_SOURCE_PACKET_SAME_PHYSICAL_REALIZATION"
+  ],
+  "identity_firewalls": [
+    "PNCS_PHASE_REALIZATION_ID_NEQ_PHYSICAL_REALIZATION_ID",
+    "RFC_SHIFT_DERIVED_NEQ_INDEPENDENT_SOURCE_WITNESS",
+    "REFERENCE_CONTROL_NEQ_PRODUCTION_SOURCE",
+    "EXTERNAL_PROCESS_DATA_REFERENCE_NEQ_PRODUCTION_SOURCE",
+    "NO_CANON_PROMOTION"
+  ],
+  "ledger_sha256": "516512dcd90fcb734fcd6cd2f12b1e09aaa7d81cb8f07eb0e9892b8ad7d917be",
+  "note": "No missing source-wiring operator was identified. Remaining closure is source-owned production data plus downstream same-realization validation.",
+  "open_evidence": [
+    "actual IDT production clock capture",
+    "actual TIR global tetrahedral incidence capture",
+    "actual TIR inter-leaf beta_match/A/v packet on same physical realization"
+  ],
+  "physical_production_claim": false,
+  "schema": "QHTRI_TOE_CONCEPTNAV_CLOSURE_LEDGER_V0_10",
+  "status": "PASS_SOFTWARE_SOURCE_WIRING_PRODUCTION_DATA_OPEN",
+  "validated_layers": {
+    "v0_10_tir_interleaf_bridge": {
+      "checks": "8/8",
+      "receipt_sha256": "3d451dcf676ca4d5ac8a054951e61137ac7869b8c36cde3bae4656eea888a3b5",
+      "status": "PASS"
+    },
+    "v0_8_precision_release_gate": {
+      "checks": "8/8",
+      "receipt_sha256": "e28811f98a298eb5da9afce7ca1a127b3c198d320e1ea2635c65d3a4188fc122",
+      "status": "PASS"
+    },
+    "v0_9_tir_gsc1_provenance_bridge": {
+      "checks": "8/8",
+      "receipt_sha256": "b0f336d12c71e66e36c0342ab2a4de87df40bc0479f9e50832bfffd3900b0d7d",
+      "status": "PASS"
+    }
+  }
+}

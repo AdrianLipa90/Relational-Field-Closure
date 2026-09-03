@@ -1,0 +1,58 @@
+name: ToE candidate v0.11 release gates
+
+on:
+  push:
+    branches:
+      - candidate/qhtri-toe-solver-v0.1
+    paths:
+      - 'experiments/toe_solver_candidate_v0_1/**'
+      - 'validation/toe_solver_candidate_v0_1/**'
+      - '.github/workflows/toe-candidate-v0-11-release.yml'
+  pull_request:
+    paths:
+      - 'experiments/toe_solver_candidate_v0_1/**'
+      - 'validation/toe_solver_candidate_v0_1/**'
+      - '.github/workflows/toe-candidate-v0-11-release.yml'
+  workflow_dispatch:
+
+jobs:
+  release-gates:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install runtime dependency
+        run: python -m pip install numpy
+      - name: Empirical bounded-domain E2E validation
+        run: python experiments/toe_solver_candidate_v0_1/empirical_rindler_bounded_e2e_validation_v0_11.py > /tmp/empirical_rindler_v011.json
+      - name: Bounded-domain candidate release gate
+        run: >-
+          python experiments/toe_solver_candidate_v0_1/candidate_release_gate_v0_11.py
+          --receipt /tmp/empirical_rindler_v011.json
+          --qhtri validation/toe_solver_candidate_v0_1/QHTRI_VALIDATION_RECEIPT_V0_11.json
+      - name: Observational same-realization validation
+        run: python experiments/toe_solver_candidate_v0_1/igs_sp3_observational_validation_v0_11.py > /tmp/sp3_validation_v011.json
+      - name: Observational adversarial suite
+        run: python experiments/toe_solver_candidate_v0_1/igs_sp3_observational_adversarial_v0_11.py
+      - name: Cross-runner semantic reproducibility gate
+        run: |
+          python - <<'PY'
+          import json, math, pathlib
+          p=pathlib.Path('/tmp/sp3_validation_v011.json')
+          d=json.loads(p.read_text())
+          expected_source='e6c18e85a6f2b62c6820258b7ecfc514f8a177f1c2eaff54d6a5ff0b8fab2399'
+          expected_g=7.182377096552681e-11
+          expected_r=4.042954178215425e-11
+          assert d['status']=='PASS'
+          assert len(d['checks'])==7 and all(d['checks'].values())
+          assert d['source_extract_sha256']==expected_source
+          sweep=d['bianchi_sweep']
+          assert len(sweep)==6
+          for row in sweep:
+              assert math.isclose(float(row['Gmax']), expected_g, rel_tol=1e-12, abs_tol=1e-24)
+              assert math.isclose(float(row['R']), expected_r, rel_tol=1e-12, abs_tol=1e-24)
+              assert abs(float(row['bianchi'])) < 1e-20
+          print('CROSS_RUNNER_SEMANTIC_REPRODUCIBILITY PASS')
+          PY

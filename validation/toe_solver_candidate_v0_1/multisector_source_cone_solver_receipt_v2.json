@@ -1,0 +1,25 @@
+{
+  "anisotropic_BianchiI": {
+    "full_positive_cone_residual": 0.004634958555339089,
+    "full_positive_cone_success": false,
+    "massless_only_residual": 0.007886680391421472,
+    "massless_plus_scalar_coefficients": {"Lambda":0.016499997650784862,"massless":[0.0,0.0,0.0],"scalar_amp":[0.0,0.0014174805130039263,0.005017480408299364]},
+    "massless_plus_scalar_residual": 0.004634958555339089,
+    "relative_residual_reduction": 0.41230551698523976
+  },
+  "authority": "CANDIDATE_ONLY",
+  "boundary": "LOCAL_NORMALIZED_SOURCE_CONE_TEST; no production fields, physical scale calibration, or universality claimed",
+  "canon_allowed": false,
+  "checks": {"adding_em_dust_does_not_fake_pass":true,"positive_multisector_still_rejects_selected_BianchiI":true,"radiation_still_closes":true,"scalar_sector_reduces_anisotropic_residual":true,"synthetic_scalar_cone_representable":true,"synthetic_scalar_recovery_equivalent":true},
+  "controls": {
+    "radiation_FLRW": {"max_abs_residual":5.551115123125783e-17,"success":true},
+    "synthetic_RF_E7_amplitude_gradient": {"max_abs_residual":8.326672684688674e-17,"solved_Lambda":0.029999999999999954,"solved_scalar_amp":[0.0,0.16999999999999998,0.0],"target_Lambda":0.03,"target_scalar_axis1":0.17}
+  },
+  "created_unix_ns": 1788295857901864619,
+  "numerical_solver": "scipy.optimize.lsq_linear(method=BVLS), nonnegative source coefficients, free Lambda",
+  "receipt_sha256": "8ef853cb4b737bae54abbeb3e399481a67cf029aa52693bc8ace901869798e1d",
+  "schema": "QHTRI_TOE_MULTI_SECTOR_SOURCE_CONE_SOLVER_V2",
+  "source_cone": ["nonnegative_massless_pair_couplings","nonnegative_RF_E7_scalar_amplitude_gradient_strengths","optional_nonnegative_Maxwell_axis_energy","optional_nonnegative_dust_density","free_Lambda"],
+  "status": "PASS",
+  "supersedes_failed_receipt": "multisector_source_cone_solver_receipt_v1.json (TRF synthetic-control conditioning FAIL retained for provenance)"
+}
