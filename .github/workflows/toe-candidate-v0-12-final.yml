@@ -1,0 +1,29 @@
+name: ToE candidate v0.12 final claim-boundary gate
+
+on:
+  push:
+    branches:
+      - candidate/qhtri-toe-solver-v0.1
+    paths:
+      - 'experiments/toe_solver_candidate_v0_1/*v0_12.py'
+      - '.github/workflows/toe-candidate-v0-12-final.yml'
+  pull_request:
+    paths:
+      - 'experiments/toe_solver_candidate_v0_1/*v0_12.py'
+      - '.github/workflows/toe-candidate-v0-12-final.yml'
+  workflow_dispatch:
+
+jobs:
+  final-gate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install runtime dependency
+        run: python -m pip install numpy
+      - name: Observational evidence typing validation
+        run: python experiments/toe_solver_candidate_v0_1/igs_sp3_observational_validation_v0_12.py
+      - name: Final repository candidate gate
+        run: python experiments/toe_solver_candidate_v0_1/candidate_final_gate_v0_12.py
