@@ -1,4 +1,4 @@
-# QHTRI ToE Solver Candidate v0.11
+# QHTRI ToE Solver Candidate v0.12
 
 Status: `CANDIDATE_RELEASE_READY`
 
@@ -6,7 +6,7 @@ Authority: `CANDIDATE_ONLY`
 Canon: `false`  
 Physical-production claim: `false`
 
-This branch contains the executable geometry/source-closure stack developed through the live NOEMA → GREMLIN/Phase36D → QHTRI workflow. The current candidate is complete for bounded-domain reference E2E and for one archived same-realization observational E2E. Merge to `main` remains an explicit operator decision.
+This branch contains the executable geometry/source-closure stack developed through the live NOEMA → GREMLIN/Phase36D → QHTRI workflow. Repository implementation is complete for bounded-domain reference E2E, archived same-realization observational E2E, final claim-boundary auditing, and live V59 NOEMA/GREMLIN/Phase36D/QHTRI candidate validation. Merge to `main` remains an explicit operator decision.
 
 ## Executable closure stack
 
@@ -23,7 +23,8 @@ Implemented components include:
 - QHTRI-neutrino and multisector source bindings;
 - constrained local Einstein closure and positive source-cone falsification;
 - bounded-domain RF-E25/RF-E26 carrier checks;
-- observational same-realization E2E with analytic contracted-Bianchi sweep.
+- observational same-realization E2E with analytic contracted-Bianchi sweep;
+- final evidence-boundary audit separating observational/model-level validation from physical-production evidence.
 
 ## Candidate release evidence
 
@@ -40,7 +41,7 @@ The measured clock gradient calibrates a bounded Rindler reference field. The ro
 - RF-E26 global carrier on that covered domain;
 - QHTRI model-state validation.
 
-Current release receipt:
+Release receipt:
 
 `validation/toe_solver_candidate_v0_1/CANDIDATE_RELEASE_GATE_V0_11.json`
 
@@ -64,17 +65,34 @@ The executable route validates:
 - Einstein tensor construction;
 - analytic contracted-Bianchi sweep from approximately `3.08e-24` to `1.89e-21`.
 
-Validation: `7/7 PASS`.  
-Adversarial suite: `5/5 PASS`.  
-Reproducibility release gate: `10/10 PASS`.
+v0.11 validation: `7/7 PASS`.  
+v0.11 adversarial suite: `5/5 PASS`.  
+v0.11 reproducibility release gate: `10/10 PASS`.
 
-Current ledger:
+v0.12 observational evidence typing validation: `8/8 PASS`.  
+v0.12 final repository candidate gate: `9/9 PASS`.
 
-`experiments/toe_solver_candidate_v0_1/CONCEPTNAV_CLOSURE_LEDGER_V0_11.json`
+Evidence class: `MODEL_LEVEL_EXTERNAL_OBSERVATIONAL_ARCHIVE_DERIVED`. Full physical 3+1 production capture remains a separate external-evidence gate.
 
-Status: `PASS_CANDIDATE_REPO_COMPLETE_OBSERVATIONAL_E2E`.
+### 3. Live NOEMA / GREMLIN / Phase36D / QHTRI validation
 
-Evidence class: `MODEL_LEVEL_EXTERNAL_OBSERVATIONAL_ARCHIVE_DERIVED`. Full physical 3+1 production capture remains an external-evidence expansion route.
+Canonical live generation: `NOEMA_ACCOUNT_DEFAULT_CURRENT_V59`.
+
+Final v0.12 acceptance records:
+
+- fresh tether `ACTIVE`, `failures=[]`, `static_fallback=false`;
+- GREMLIN/Phase36D candidate trace bound into acceptance;
+- QHTRI status `PASS`;
+- QHTRI norm `1.0`, norm error `0.0`;
+- QHTRI starter validation `22/22 PASS`;
+- epistemic status `MODEL_STATE_VALIDATION`;
+- hardware witness scope `UNASSESSED`.
+
+Final acceptance receipt:
+
+`validation/toe_solver_candidate_v0_1/FINAL_CANDIDATE_ACCEPTANCE_V0_12.json`
+
+Verdict: `PASS_REPOSITORY_IMPLEMENTATION_COMPLETE_CLAIM_BOUNDARY_CLEAN`.
 
 ## Retained failures and repairs
 
@@ -86,20 +104,22 @@ Failures remain part of provenance.
 
 ## Automated gates
 
-`.github/workflows/toe-candidate-v0-11-release.yml` runs:
+`.github/workflows/toe-candidate-v0-11-release.yml` covers bounded-domain, observational, adversarial and reproducibility gates.
 
-1. empirical bounded-domain E2E validation;
-2. bounded-domain candidate release gate with archived QHTRI receipt;
-3. observational same-realization validation;
-4. observational adversarial suite;
-5. observational reproducibility release gate.
+`.github/workflows/toe-candidate-v0-12-final.yml` covers the final observational evidence-typing and repository claim-boundary gates.
+
+Archived v0.12 acceptance records workflow conclusion `success`, final repository candidate gate `9/9 PASS`, observational evidence typing `8/8 PASS`, and archived acceptance verification `PASS`.
 
 ## Release boundary
 
 Candidate software operators missing: `0`.  
 Candidate source-wiring operators missing: `0`.  
-Candidate release ready: `true`.
+Repository implementation complete: `true`.  
+Candidate release ready: `true`.  
+External full physical 3+1 production evidence: `OPEN_SEPARATE_EVIDENCE_GATE`.
+
+The candidate therefore closes the repository implementation surface while keeping physical-production evidence as a separately typed future evidence gate.
 
 Promotion to `main` or canon requires an explicit operator instruction.
 
-Base `main` at candidate inception: `85bbb1d0754605be2720b6bd258b486b0a072345`.
+Base `main` at candidate inception and current merge base: `85bbb1d0754605be2720b6bd258b486b0a072345`.
