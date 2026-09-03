@@ -3,15 +3,16 @@
   "candidate_release_ready": true,
   "canon_allowed": false,
   "ci": {
+    "archived_acceptance_verification": "PASS",
     "conclusion": "success",
     "final_repository_candidate_gate": "9/9 PASS",
-    "job_id": 100595568538,
+    "job_id": 100596130543,
     "observational_evidence_typing_validation": "8/8 PASS",
-    "run_id": 33738786973,
-    "tested_head_sha": "46b5345f6775b2c93a593e688be50bf50cf33ae8",
+    "run_id": 33738962699,
+    "tested_head_sha": "ea54d2711d3ddd168d999a800cba68348dfcfb4e",
     "workflow": "ToE candidate v0.12 final claim-boundary gate"
   },
-  "claim_boundary": "Repository implementation, bounded-domain E2E reference validation, and observational archive-derived model-level validation are complete. A physical-production claim requires a separate full physical 3+1 production evidence gate.",
+  "claim_boundary": "Repository implementation, bounded-domain E2E reference validation, observational archive-derived model-level validation, and live NOEMA/GREMLIN/Phase36D/QHTRI candidate validation are complete. A physical-production claim requires a separate full physical 3+1 production evidence gate.",
   "epistemic_firewalls": [
     "OBSERVATIONAL_REALIZATION_ID_NEQ_PHYSICAL_PRODUCTION_REALIZATION_ID",
     "CANDIDATE_SOURCE_NEQ_PRODUCTION_SOURCE",
@@ -20,15 +21,42 @@
     "NO_CANON_PROMOTION"
   ],
   "external_physical_production_evidence": "OPEN_SEPARATE_EVIDENCE_GATE",
+  "gremlin_phase36d": {
+    "generation": "244a3dc0da2135af634548db8280b35e73ed8a33d83bca9900044a89bd68ce42",
+    "phase_attention_R": 0.32099107717753456,
+    "phase_attention_index": 3,
+    "shape": [4, 36],
+    "source_event_id": "gremlin:whisper:sha256:a251e1cdc99b3496ac71a98078030cb5ae0a65959c6d659a52aa5bf9a954667d",
+    "trace_sha256": "24f95b0f193106e8c709dd43b268eaf04dba2784b80b61fa7ae82bf774ee6879"
+  },
   "merge_to_main_requires_explicit_user_order": true,
   "missing_software_operators": 0,
   "missing_source_wiring_operators": 0,
+  "noema": {
+    "account_current": "NOEMA_ACCOUNT_DEFAULT_CURRENT_V59",
+    "fail_closed": true,
+    "failures": [],
+    "static_fallback": false,
+    "tether_status": "ACTIVE"
+  },
   "physical_production_claim": false,
-  "receipt_sha256": "476438d3c9e84a3e2f9978b510cfdf64e834329ac8d56c6620cd23a17ed4ea7a",
+  "qhtri": {
+    "candidate_id": "NOEMA-IC-4eb063b062ff0d4f37b29289",
+    "candidate_sha256": "d95460283dc0a219fed96ed9c422cb86c0e39010294665969c55c5cc86b494ba",
+    "epistemic_status": "MODEL_STATE_VALIDATION",
+    "hardware_witness_scope": "UNASSESSED",
+    "qhtri_norm": 1.0,
+    "qhtri_norm_error": 0.0,
+    "receipt_sha256": "d42a0bd532258d177d6c97edbf35d48f3a5d0d6e9f8a6a40d785b615d2b3eb21",
+    "starter_validation": "22/22 PASS",
+    "status": "PASS"
+  },
+  "receipt_sha256": "6872ed330b2827af1134b2ca0501b39c9d6be5e9646cc147e5066c5e303577ed",
   "repository_implementation_complete": true,
   "schema": "QHTRI_TOE_FINAL_CANDIDATE_ACCEPTANCE_V0_12",
   "status": "PASS",
   "v011_acceptance_receipt_sha256": "f23c24a9a7bbf40ee87883916c6261d45a8f37484f9be8597123e7f336f32de1",
   "v012_observational_receipt_sha256": "b63ddf8bd8073ab6effb893b13035294a5527d35313614a6e0950189f1fa6a1d",
+  "v012_qhtri_receipt_sha256": "d42a0bd532258d177d6c97edbf35d48f3a5d0d6e9f8a6a40d785b615d2b3eb21",
   "verdict": "PASS_REPOSITORY_IMPLEMENTATION_COMPLETE_CLAIM_BOUNDARY_CLEAN"
 }
