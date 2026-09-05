@@ -1,6 +1,6 @@
 # Relational Field Closure — Canonical Dependency Graph
 
-Status: `CURRENT_FRONTIER / ACTION_LEVEL_ADM_SPINE_CLOSED_THROUGH_RF_E13`
+Status: `CURRENT_FRONTIER / ACTION_LEVEL_ADM_SPINE_CLOSED_THROUGH_RF_E13 / RF_E25_PHASE_FIBRE_INTERFACE_ADDED`
 
 ```text
 TIR/IDT -> RFC conserved carrier / phase-energy source
@@ -27,6 +27,13 @@ TIR/IDT -> RFC conserved carrier / phase-energy source
  -> RF-E12 EH-action projected ADM source constraints              PASS
  -> RF-E13 spatial evolution + Bianchi constraint propagation      PASS / MAIN
  -> physical carrier/scale/coupling promotion                      ACTIVE FRONTIER
+
+Additive Collatz–Fubini–Study phase-fibre line:
+IDT Collatz-FS temporal phase
+ -> TIR relational projective phase interface
+ -> RF-E25 phase fibre over M4                                     INTERFACE ADDED
+ -> metric/source coupling                                         OPEN / QUARANTINED
+ -> Einstein-field modification                                    NOT PROMOTED
 
 Parallel coupling line:
 project Yang-Mills normalization and BCJ
@@ -217,6 +224,47 @@ For the dynamic-Lambda branch, the already-recorded exchange law
 
 restores the same divergence-free residual ledger and the same homogeneous propagation form with `H -> H_Lambda`.
 
+## RF-E25 Collatz–Fubini–Study phase-fibre interface
+
+RF-E25 imports the new IDT/TIR projective phase coordinate into the Einstein-facing layer as an additive internal phase fibre,
+
+\[
+\boxed{S^1\hookrightarrow\mathcal E\xrightarrow{\pi}\mathcal M_4},
+\qquad
+\boxed{(x^\mu,\phi)}.
+\]
+
+The imported exact phase map is
+
+\[
+\zeta_C=e^{i\phi},
+\qquad
+\phi\mapsto2\phi\pmod{2\pi},
+\qquad
+\zeta_C\mapsto\zeta_C^2.
+\]
+
+The projective `2\pi` phase and optional spinorial `4\pi` lift remain typed separately. RF-E25 does not identify the discrete phase with lapse, coordinate time or proper time and does not alter the canonical RFC metric by itself.
+
+The candidate fibre metric
+
+\[
+\widetilde g
+=
+g_{\mu\nu}dx^\mu dx^\nu
++\lambda^2(d\phi+A_\mu dx^\mu)^2
+\]
+
+remains `QUARANTINED CANDIDATE`: the physical identity of `A_mu`, the scale `lambda`, and coupling to RFC source tensors are not derived. Einstein-field closure remains unchanged.
+
+Canonical source:
+
+`closure/einstein/RF_E25_COLLATZ_FS_PHASE_FIBRE_INTERFACE.md`.
+
+Status:
+
+`FIBRE_INTERFACE_ADDED / METRIC_COUPLING_OPEN / EINSTEIN_FIELD_CLOSURE_UNCHANGED`.
+
 ## TIR affine-gluing crosslink
 
 TIR now contains two promoted algebraic gates:
@@ -278,6 +326,7 @@ The overlay remains `CANDIDATE_ONLY / CHYBA`; candidate compilation never promot
 - RF-E12 corrected exact head `7a2c4b015da9e048efdaed250c4a54aed97eecc5`: suite **#223 SUCCESS**, merge `da05ebd1962bee59d50d1626affb9a178ddba676`.
 - RF-E13 exact head `40f403eb89a4f0e49b9fce0c2fb92f03c7b57ac9`: suite **#225 SUCCESS**, merge `09ff66035d333960ed8260fa0fd10c0d25bdad01`.
 - IDT material temporal-offset exact head `d5d5def488776c1310d83e33c639b5e3078befec`: Reference suite **#868 SUCCESS**.
+- RF-E25 interface is merged on `main` through PR #131, merge commit `dbbfcc83de96246aa96217a9c40def64661474d7`; its physical metric/source coupling remains open by construction.
 
 ## Active frontier
 
@@ -289,6 +338,7 @@ TIR affine-frame generator -> general ADM shift b^i source map
 RF-N1B2K physical current/measure realization
 multispecies/additional matter composition
 parameter-free Lambda0 calibration and global stability
+RF-E25 phase-fibre physical connection / coupling-scale derivation
 RFG35 vector-polarization projected-cut Ward audit
 Gamma_DC numerical/physical promotion
 M_star carrier-scale promotion
