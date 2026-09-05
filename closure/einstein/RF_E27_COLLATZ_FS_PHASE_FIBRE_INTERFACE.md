@@ -1,4 +1,4 @@
-# RF-E25 — Collatz–Fubini–Study Phase-Fibre Interface
+# RF-E27 — Collatz–Fubini–Study Phase-Fibre Interface
 
 **Date:** 2026-09-04  
 **Status:** `FIBRE_INTERFACE_ADDED / METRIC_COUPLING_OPEN / EINSTEIN_FIELD_CLOSURE_UNCHANGED`
@@ -67,7 +67,7 @@ N_R=\frac{d\tau_x}{d\tau_{ref}},
 g_R=-N_R^2c^2dt^2+h_\perp.
 \]
 
-RF-E25 does **not** identify the new discrete phase with \(N_R\), with coordinate time \(t\), or with proper time \(\tau\). The current typed relation is only
+RF-E27 does **not** identify the new discrete phase with \(N_R\), with coordinate time \(t\), or with proper time \(\tau\). The current typed relation is only
 
 \[
 \boxed{
@@ -88,7 +88,7 @@ g_{\mu\nu}dx^\mu dx^\nu
 +\lambda^2(d\phi+A_\mu dx^\mu)^2
 \]
 
-is mathematically available, but RF-E25 records it only as a **QUARANTINED CANDIDATE**. Neither \(\lambda\), nor the physical identity of \(A_\mu\), nor the coupling to RFC source tensors is currently derived.
+is mathematically available, but RF-E27 records it only as a **QUARANTINED CANDIDATE**. Neither \(\lambda\), nor the physical identity of \(A_\mu\), nor the coupling to RFC source tensors is currently derived.
 
 Therefore the canonical RFC metric remains unchanged.
 
@@ -114,7 +114,7 @@ q(n)\in\frac{1}{7\,2^{L_n}}\mathbb Z,
 \zeta_C(n)^{7\,2^{L_n}}=1.
 \]
 
-RF-E25 may therefore transport a root-of-unity-labelled internal phase state along spacetime curves. This is a kinematic interface only. It does not imply quantized spacetime, quantized proper time or modified Einstein equations.
+RF-E27 may therefore transport a root-of-unity-labelled internal phase state along spacetime curves. This is a kinematic interface only. It does not imply quantized spacetime, quantized proper time or modified Einstein equations.
 
 ## 7. Einstein-sector frontier
 
@@ -136,7 +136,7 @@ The revised dependency order is
 }
 \]
 
-The existing Einstein closure gate remains open. RF-E25 narrows the interface by specifying where the new phase structure may enter without contaminating the already-derived metric/source results.
+The existing Einstein closure gate remains open. RF-E27 narrows the interface by specifying where the new phase structure may enter without contaminating the already-derived metric/source results.
 
 ## 8. Claim firewall
 
