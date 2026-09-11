@@ -1,0 +1,29 @@
+name: Candidate promotion bridge v0.2
+
+on:
+  push:
+    branches:
+      - candidate/600cell-working-layer-v0.1-20260911-v02
+    paths:
+      - 'src/rfc/promotion_connection_curvature_bridge_v01.py'
+      - 'tests/test_promotion_connection_curvature_bridge_v02.py'
+      - '.github/workflows/candidate-promotion-bridge-v02.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  bridge-v02:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install isolated test dependencies
+        run: python -m pip install --upgrade pytest numpy
+      - name: Run dimension-scaled promotion bridge tests
+        env:
+          PYTHONPATH: src
+        run: python -m pytest -q tests/test_promotion_connection_curvature_bridge_v02.py
