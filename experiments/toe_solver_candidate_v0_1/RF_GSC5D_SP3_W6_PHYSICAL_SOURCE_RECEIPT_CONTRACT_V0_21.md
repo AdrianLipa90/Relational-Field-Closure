@@ -109,11 +109,16 @@ Minimum fields:
     representation_kind
     tensor_payload_digest
     construction_receipt_id
+    coverage_domain_id
+    coverage_patch_id
+    coverage_certified = true
     independent_of_target_metric_construction = true
 
 The payload may be a finite tensor field sample packet with declared interpolation/coverage; coefficients of an independently calibrated physical source model; a source-field callable with immutable implementation/data digest; or a certified zero-source/vacuum packet if the physical source domain is independently established as vacuum.
 
-A bare assertion T=0 is not enough. A vacuum packet must itself carry independent domain/source provenance.
+The source tensor must certify coverage of its full atlas patch, not merely the finite SP3 anchor set. Its coverage_domain_id must equal the admitted atlas domain, coverage_patch_id must equal the patch receipt patch_id, and coverage_certified must be true.
+
+A bare assertion T=0 is not enough. A vacuum packet must itself carry independent domain/source provenance and full patch coverage.
 
 ## 7. Common constants
 
@@ -165,6 +170,8 @@ Minimum local-solution fields:
     metric_representation_digest
     einstein_tensor_representation_digest
     source_tensor_payload_digest
+    source_tensor_coverage_domain_id
+    source_tensor_coverage_patch_id
     validation_receipt_id
     validation_head_or_artifact_digest
 
@@ -254,8 +261,9 @@ The contract rejects:
 6. local_solution_certified=false;
 7. residual above tolerance;
 8. source tensor digest mismatch between source packet and local solution;
-9. geometry-only derivation of T;
-10. a claimed vacuum source without independent vacuum-domain provenance.
+9. source tensor coverage is missing, covers only anchors, or names the wrong patch/domain;
+10. geometry-only derivation of T;
+11. a claimed vacuum source without independent vacuum-domain provenance or full patch coverage.
 
 ## 14. Evidence boundary
 
