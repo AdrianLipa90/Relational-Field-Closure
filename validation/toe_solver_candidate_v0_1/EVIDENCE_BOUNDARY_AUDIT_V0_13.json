@@ -1,0 +1,34 @@
+{
+  "schema": "QHTRI_TOE_EVIDENCE_BOUNDARY_AUDIT_VALIDATION_V0_13",
+  "date": "2026-09-19",
+  "authority": "CANDIDATE_ONLY",
+  "status": "PASS",
+  "canon_allowed": false,
+  "physical_production_claim": false,
+  "empirical_theory_confirmation": false,
+  "historical_v012_preserved": true,
+  "evidence_reclassification_v013": {
+    "sp3_clock": "EXTERNAL_OBSERVATIONAL_ARCHIVE_DERIVED_CLOCK_CONTROL",
+    "sp3_topology": "EXTERNAL_OBSERVATIONAL_ARCHIVE_DERIVED_AFFINE_4SIMPLEX_BOUNDARY_CANDIDATE_NOT_GLOBAL_PRODUCTION",
+    "sp3_matching": "EXTERNAL_OBSERVATIONAL_ARCHIVE_DERIVED_TANGENT_FIELD_WITH_MODELLED_OVERLAP_BINDING",
+    "sp3_metric": "MODEL_FIT_FROM_ARCHIVE_DERIVED_FIELDS",
+    "sp3_bianchi": "NUMERICAL_COVARIANT_IDENTITY_VALIDATION_ON_MODEL_FIT",
+    "sp3_same_id": "DETERMINISTIC_COMMON_SOURCE_PARENT_BINDING_NOT_INDEPENDENT_PHYSICAL_REALIZATION_PROOF"
+  },
+  "what_changed": {
+    "old_arbitrariness_assumption_rejected": true,
+    "affine_rank_four": true,
+    "boundary_facets_match_existing_spatial_packet": true,
+    "global_physical_spatial_manifold_claim": false,
+    "production_source_admission": false
+  },
+  "remaining_physical_gate": "EXPLICIT_BINDING_FROM_FINITE_OBSERVATIONAL_AFFINE_4SIMPLEX_BOUNDARY_TO_THE_INTENDED_GLOBAL_PHYSICAL_SPATIAL_CARRIER",
+  "candidate_receipt_sha256": "f8870bc2446b3b3c21560f924055d3c6643755817bee782d518d652fdbca986e",
+  "ci": {
+    "workflow": "ToE 3plus1 two-epoch constructor v0.13",
+    "run_id": 35469807017,
+    "job_id": 105968581048,
+    "tested_head_sha": "faf880d157b356c6fba527cff335cf147a883d50",
+    "conclusion": "success"
+  }
+}
