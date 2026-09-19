@@ -13,6 +13,7 @@ on:
       - "experiments/toe_solver_candidate_v0_1/RF_GSC3H_3PLUS1_TWO_EPOCH_CONSTRUCTOR_V0_13.md"
       - "experiments/toe_solver_candidate_v0_1/three_plus_one_two_epoch_constructor_v0_13.py"
       - "experiments/toe_solver_candidate_v0_1/igs_sp3_observational_e2e_v0_11.py"
+      - "experiments/toe_solver_candidate_v0_1/evidence_boundary_audit_v0_13.py"
       - ".github/workflows/toe-3plus1-two-epoch-v0-13.yml"
 
 jobs:
@@ -31,6 +32,10 @@ jobs:
           grep -Fq '"status": "PASS"' build/THREE_PLUS_ONE_TWO_EPOCH_CONSTRUCTOR_V0_13.json
           grep -Fq '"authority": "CANDIDATE_ONLY"' build/THREE_PLUS_ONE_TWO_EPOCH_CONSTRUCTOR_V0_13.json
           grep -Fq '"physical_production_claim": false' build/THREE_PLUS_ONE_TWO_EPOCH_CONSTRUCTOR_V0_13.json
+          grep -Fq '"five_midpoint_3plus1_events_are_affinely_independent": true' build/THREE_PLUS_ONE_TWO_EPOCH_CONSTRUCTOR_V0_13.json
+          grep -Fq '"spatial_packet_is_exact_boundary_of_data_defined_4simplex": true' build/THREE_PLUS_ONE_TWO_EPOCH_CONSTRUCTOR_V0_13.json
+          grep -Fq '"affine_rank_four": true' build/THREE_PLUS_ONE_TWO_EPOCH_CONSTRUCTOR_V0_13.json
+          grep -Fq '"boundary_facets_match_spatial_packet": true' build/THREE_PLUS_ONE_TWO_EPOCH_CONSTRUCTOR_V0_13.json
           python experiments/toe_solver_candidate_v0_1/evidence_boundary_audit_v0_13.py | tee build/EVIDENCE_BOUNDARY_AUDIT_V0_13.json
           grep -Fq '"status": "PASS"' build/EVIDENCE_BOUNDARY_AUDIT_V0_13.json
           grep -Fq '"old_arbitrariness_assumption_rejected": true' build/EVIDENCE_BOUNDARY_AUDIT_V0_13.json
