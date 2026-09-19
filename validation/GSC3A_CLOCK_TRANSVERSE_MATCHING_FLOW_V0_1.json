@@ -10,9 +10,10 @@
   "validation": {
     "isolated_reference_tests": "9_OF_9_PASS",
     "hosted_workflow": "RFC reference suite",
-    "hosted_run_number": 413,
-    "hosted_run_id": 33348254473,
-    "hosted_conclusion": "SUCCESS"
+    "hosted_run_number": 414,
+    "hosted_run_id": 33348300043,
+    "hosted_conclusion": "SUCCESS",
+    "validated_head_sha": "caaf9d881aadb458f055ff5c2c3eb816222faebb"
   },
   "exact_results": [
     "dt(X)=1 for X=partial_t-b^i partial_i",
