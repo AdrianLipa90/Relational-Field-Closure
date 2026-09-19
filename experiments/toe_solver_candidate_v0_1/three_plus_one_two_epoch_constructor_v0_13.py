@@ -3,6 +3,8 @@ from __future__ import annotations
 import importlib.util
 import json
 from decimal import Decimal, localcontext
+from fractions import Fraction
+from itertools import combinations
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -20,6 +22,29 @@ SCHEMA = "QHTRI_TOE_3PLUS1_TWO_EPOCH_CONSTRUCTOR_V0_13"
 def dec4(record):
     return tuple(Decimal(x) for x in record)
 
+
+def det_fraction(matrix):
+    a = [list(row) for row in matrix]
+    n = len(a)
+    det = Fraction(1)
+    for i in range(n):
+        pivot = next((r for r in range(i, n) if a[r][i] != 0), None)
+        if pivot is None:
+            return Fraction(0)
+        if pivot != i:
+            a[i], a[pivot] = a[pivot], a[i]
+            det = -det
+        pv = a[i][i]
+        det *= pv
+        for j in range(i, n):
+            a[i][j] /= pv
+        for r in range(i + 1, n):
+            factor = a[r][i]
+            if factor == 0:
+                continue
+            for j in range(i, n):
+                a[r][j] -= factor * a[i][j]
+    return det
 
 def midpoint_and_rate(a, b, dt):
     with localcontext() as ctx:
@@ -94,6 +119,27 @@ def run():
         == sp3.realization_id()
     )
 
+    midpoint4 = []
+    for sat in sp3.SAT_IDS:
+        a = tuple(Fraction(x) for x in sp3.REC1[sat])
+        b = tuple(Fraction(x) for x in sp3.REC2[sat])
+        midpoint4.append(tuple((x + y) / 2 for x, y in zip(a, b)))
+    base = midpoint4[0]
+    diff = [
+        [midpoint4[j][i] - base[i] for j in range(1, 5)]
+        for i in range(4)
+    ]
+    affine_det = det_fraction(diff)
+    expected_facets = sorted(
+        tuple(sorted(face))
+        for face in combinations(sp3.SAT_IDS, 4)
+    )
+    actual_facets = sorted(
+        tuple(sorted(cell["vertices"]))
+        for cell in spp["capture"]["tetrahedral_cells"]
+    )
+    source_defined_boundary = affine_det != 0 and actual_facets == expected_facets
+
     source_hash_reproducible = (
         sp3.realization_id()
         == "physical:igs-sp3:sha256:" + sp3.sha(sp3.source_records())
@@ -116,6 +162,8 @@ def run():
         "existing_field_fit_uses_two_epoch_spatial_midpoint": max_midpoint_center_error < 1e-12,
         "clock_spatial_matching_share_one_parent_realization_id": common_id,
         "realization_id_is_reproducible_source_hash": source_hash_reproducible,
+        "five_midpoint_3plus1_events_are_affinely_independent": affine_det != 0,
+        "spatial_packet_is_exact_boundary_of_data_defined_4simplex": source_defined_boundary,
         "parent_sp3_e2e_pass": sp3.run()["status"] == "PASS",
     }
 
@@ -146,6 +194,14 @@ def run():
             "four_component_determinant": str(four_component_det),
             "lossless_for_dt_nonzero": True,
         },
+        "affine_4simplex": {
+            "midpoint_event_count": len(midpoint4),
+            "affine_determinant_numerator": affine_det.numerator,
+            "affine_determinant_denominator": affine_det.denominator,
+            "affine_rank_four": affine_det != 0,
+            "boundary_facets_match_spatial_packet": actual_facets == expected_facets,
+            "incidence_derivation": "all four-vertex facets of the unique nondegenerate affine 4-simplex defined by the five midpoint 3+1 events",
+        },
         "residuals": {
             "max_matching_rate_error": max_matching_rate_error,
             "max_midpoint_center_error": max_midpoint_center_error,
@@ -156,7 +212,8 @@ def run():
             "mnemonic_is_not_physical_evidence": True,
             "two_epoch_transform_is_not_collatz_dynamics": True,
             "sp3_tuple_is_not_yet_identified_with_tir_herm2_event_carrier": True,
-            "model_derived_topology_is_not_production_spatial_measurement": True,
+            "data_defined_affine_simplex_boundary_does_not_by_itself_equal_global_physical_space": True,
+            "prior_model_level_evidence_typing_not_silently_overwritten": True,
             "full_physical_3plus1_production_gate_remains_open": True,
         },
     }
