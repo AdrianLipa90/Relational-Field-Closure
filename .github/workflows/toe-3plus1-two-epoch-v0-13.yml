@@ -6,6 +6,7 @@ on:
       - "experiments/toe_solver_candidate_v0_1/RF_GSC3H_3PLUS1_TWO_EPOCH_CONSTRUCTOR_V0_13.md"
       - "experiments/toe_solver_candidate_v0_1/three_plus_one_two_epoch_constructor_v0_13.py"
       - "experiments/toe_solver_candidate_v0_1/igs_sp3_observational_e2e_v0_11.py"
+      - "experiments/toe_solver_candidate_v0_1/evidence_boundary_audit_v0_13.py"
       - ".github/workflows/toe-3plus1-two-epoch-v0-13.yml"
   push:
     paths:
@@ -30,7 +31,13 @@ jobs:
           grep -Fq '"status": "PASS"' build/THREE_PLUS_ONE_TWO_EPOCH_CONSTRUCTOR_V0_13.json
           grep -Fq '"authority": "CANDIDATE_ONLY"' build/THREE_PLUS_ONE_TWO_EPOCH_CONSTRUCTOR_V0_13.json
           grep -Fq '"physical_production_claim": false' build/THREE_PLUS_ONE_TWO_EPOCH_CONSTRUCTOR_V0_13.json
+          python experiments/toe_solver_candidate_v0_1/evidence_boundary_audit_v0_13.py | tee build/EVIDENCE_BOUNDARY_AUDIT_V0_13.json
+          grep -Fq '"status": "PASS"' build/EVIDENCE_BOUNDARY_AUDIT_V0_13.json
+          grep -Fq '"old_arbitrariness_assumption_rejected": true' build/EVIDENCE_BOUNDARY_AUDIT_V0_13.json
+          grep -Fq '"physical_production_claim": false' build/EVIDENCE_BOUNDARY_AUDIT_V0_13.json
       - uses: actions/upload-artifact@v4
         with:
           name: toe-3plus1-two-epoch-constructor-v0-13
-          path: build/THREE_PLUS_ONE_TWO_EPOCH_CONSTRUCTOR_V0_13.json
+          path: |
+            build/THREE_PLUS_ONE_TWO_EPOCH_CONSTRUCTOR_V0_13.json
+            build/EVIDENCE_BOUNDARY_AUDIT_V0_13.json
