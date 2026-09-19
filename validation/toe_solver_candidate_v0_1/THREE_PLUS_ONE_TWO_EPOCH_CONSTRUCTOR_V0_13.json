@@ -35,9 +35,9 @@
   "candidate_receipt_sha256": "3e8415b78830edabdf7f6cb4b2b3ddd9cfbb68ade3e761dea2b4aa4ab9677a7c",
   "ci": {
     "workflow": "ToE 3plus1 two-epoch constructor v0.13",
-    "run_id": 35469732968,
-    "job_id": 105968384209,
-    "tested_head_sha": "fa5b6d5b7627ccafaa6732a524c706f39c46affe",
+    "run_id": 35469760364,
+    "job_id": 105968457289,
+    "tested_head_sha": "f5da9d5f91d87a75e53ec91b050e277ad266e42f",
     "conclusion": "success"
   },
   "source_parent": {
@@ -49,9 +49,9 @@
     "mnemonic_is_not_physical_evidence": true,
     "two_epoch_transform_is_not_collatz_dynamics": true,
     "sp3_tuple_is_not_yet_identified_with_tir_herm2_event_carrier": true,
-    "full_physical_3plus1_production_gate_remains_open": true,
     "data_defined_affine_simplex_boundary_does_not_by_itself_equal_global_physical_space": true,
-    "prior_model_level_evidence_typing_not_silently_overwritten": true
+    "prior_model_level_evidence_typing_not_silently_overwritten": true,
+    "full_physical_3plus1_production_gate_remains_open": true
   },
   "affine_4simplex": {
     "midpoint_event_count": 5,
@@ -59,6 +59,6 @@
     "affine_determinant_denominator": "1600000000000000000000000",
     "affine_rank_four": true,
     "boundary_facets_match_spatial_packet": true,
-    "incidence_derivation": "all four-vertex facets of the unique nondegenerate affine 4-simplex defined by the five midpoint 3+1 events"
+    "interpretation": "five observed 3+1 midpoint events define a unique nondegenerate affine 4-simplex; the spatial packet uses exactly its five tetrahedral boundary facets"
   }
 }
