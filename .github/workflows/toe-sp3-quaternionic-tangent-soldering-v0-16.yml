@@ -1,0 +1,37 @@
+name: ToE SP3 quaternionic tangent soldering v0.16
+
+on:
+  pull_request:
+    paths:
+      - "experiments/toe_solver_candidate_v0_1/RF_GSC3K_SP3_QUATERNIONIC_TANGENT_SOLDERING_V0_16.md"
+      - "experiments/toe_solver_candidate_v0_1/sp3_quaternionic_tangent_soldering_v0_16.py"
+      - ".github/workflows/toe-sp3-quaternionic-tangent-soldering-v0-16.yml"
+  push:
+    paths:
+      - "experiments/toe_solver_candidate_v0_1/RF_GSC3K_SP3_QUATERNIONIC_TANGENT_SOLDERING_V0_16.md"
+      - "experiments/toe_solver_candidate_v0_1/sp3_quaternionic_tangent_soldering_v0_16.py"
+      - ".github/workflows/toe-sp3-quaternionic-tangent-soldering-v0-16.yml"
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install numpy
+      - name: Validate quaternionic tangent soldering
+        run: |
+          mkdir -p build
+          python experiments/toe_solver_candidate_v0_1/sp3_quaternionic_tangent_soldering_v0_16.py | tee build/SP3_QUATERNIONIC_TANGENT_SOLDERING_V0_16.json
+          grep -Fq '"status": "PASS"' build/SP3_QUATERNIONIC_TANGENT_SOLDERING_V0_16.json
+          grep -Fq '"global_frame_is_Q_orthonormal": true' build/SP3_QUATERNIONIC_TANGENT_SOLDERING_V0_16.json
+          grep -Fq '"dual_coframe_recovers_matching_coefficients": true' build/SP3_QUATERNIONIC_TANGENT_SOLDERING_V0_16.json
+          grep -Fq '"GSC3A_spatial_coframe_annihilation": true' build/SP3_QUATERNIONIC_TANGENT_SOLDERING_V0_16.json
+          grep -Fq '"compact_carrier_implies_complete_smooth_spatial_flow": true' build/SP3_QUATERNIONIC_TANGENT_SOLDERING_V0_16.json
+          grep -Fq '"physical_production_claim": false' build/SP3_QUATERNIONIC_TANGENT_SOLDERING_V0_16.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: toe-sp3-quaternionic-tangent-soldering-v0-16
+          path: build/SP3_QUATERNIONIC_TANGENT_SOLDERING_V0_16.json
