@@ -1,0 +1,36 @@
+name: ToE 3plus1 two-epoch constructor v0.13
+
+on:
+  pull_request:
+    paths:
+      - "experiments/toe_solver_candidate_v0_1/RF_GSC3H_3PLUS1_TWO_EPOCH_CONSTRUCTOR_V0_13.md"
+      - "experiments/toe_solver_candidate_v0_1/three_plus_one_two_epoch_constructor_v0_13.py"
+      - "experiments/toe_solver_candidate_v0_1/igs_sp3_observational_e2e_v0_11.py"
+      - ".github/workflows/toe-3plus1-two-epoch-v0-13.yml"
+  push:
+    paths:
+      - "experiments/toe_solver_candidate_v0_1/RF_GSC3H_3PLUS1_TWO_EPOCH_CONSTRUCTOR_V0_13.md"
+      - "experiments/toe_solver_candidate_v0_1/three_plus_one_two_epoch_constructor_v0_13.py"
+      - "experiments/toe_solver_candidate_v0_1/igs_sp3_observational_e2e_v0_11.py"
+      - ".github/workflows/toe-3plus1-two-epoch-v0-13.yml"
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install numpy
+      - name: Validate exact 3+1 two-epoch constructor
+        run: |
+          mkdir -p build
+          python experiments/toe_solver_candidate_v0_1/three_plus_one_two_epoch_constructor_v0_13.py | tee build/THREE_PLUS_ONE_TWO_EPOCH_CONSTRUCTOR_V0_13.json
+          grep -Fq '"status": "PASS"' build/THREE_PLUS_ONE_TWO_EPOCH_CONSTRUCTOR_V0_13.json
+          grep -Fq '"authority": "CANDIDATE_ONLY"' build/THREE_PLUS_ONE_TWO_EPOCH_CONSTRUCTOR_V0_13.json
+          grep -Fq '"physical_production_claim": false' build/THREE_PLUS_ONE_TWO_EPOCH_CONSTRUCTOR_V0_13.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: toe-3plus1-two-epoch-constructor-v0-13
+          path: build/THREE_PLUS_ONE_TWO_EPOCH_CONSTRUCTOR_V0_13.json
