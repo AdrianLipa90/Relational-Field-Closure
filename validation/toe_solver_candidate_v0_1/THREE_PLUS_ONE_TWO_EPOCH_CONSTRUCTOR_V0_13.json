@@ -1,0 +1,53 @@
+{
+  "schema": "QHTRI_TOE_3PLUS1_TWO_EPOCH_CONSTRUCTOR_VALIDATION_V0_13",
+  "date": "2026-09-19",
+  "authority": "CANDIDATE_ONLY",
+  "status": "PASS",
+  "canon_allowed": false,
+  "physical_production_claim": false,
+  "empirical_theory_confirmation": false,
+  "theorem": {
+    "source_record_per_epoch": "R3_POSITION_PLUS_R1_CLOCK",
+    "transform": "mid=(y1+y2)/2; tangent=(y2-y1)/dt",
+    "inverse": "y1=mid-dt*tangent/2; y2=mid+dt*tangent/2",
+    "dt_s": "120",
+    "scalar_block_determinant": "0.0083333333333333333333333333333333333333333333333333333333333333333333333333333333",
+    "four_component_determinant": "4.8225308641975308641975308641975308641975308641975308641975308641975308641975308E-9",
+    "lossless_for_dt_nonzero": true
+  },
+  "checks": {
+    "source_record_is_literal_3plus1": true,
+    "two_epoch_transform_nonzero_determinant": true,
+    "two_epoch_reconstruction_exact_decimal": true,
+    "existing_matching_packet_equals_spatial_tangent": true,
+    "existing_clock_packet_equals_clock_tangent_after_sp3_unit_scale": true,
+    "existing_field_fit_uses_two_epoch_spatial_midpoint": true,
+    "clock_spatial_matching_share_one_parent_realization_id": true,
+    "realization_id_is_reproducible_source_hash": true,
+    "parent_sp3_e2e_pass": true
+  },
+  "residuals": {
+    "max_matching_rate_error": 1.2434497875801753e-14,
+    "max_midpoint_center_error": 9.094947017729282e-13
+  },
+  "candidate_receipt_sha256": "7d7f082cc2e02669034ce4fb19dee046acbdb138b32102213c9d365d056e42c8",
+  "ci": {
+    "workflow": "ToE 3plus1 two-epoch constructor v0.13",
+    "run_id": 35469451723,
+    "job_id": 105967631630,
+    "tested_head_sha": "ae883bf55db52be93db2ff00578e9ab14d8eee07",
+    "conclusion": "success"
+  },
+  "source_parent": {
+    "implementation": "experiments/toe_solver_candidate_v0_1/igs_sp3_observational_e2e_v0_11.py",
+    "source_id": "RT218283.SP3@8013",
+    "evidence_class": "EXTERNAL_OBSERVATIONAL_ARCHIVE_DERIVED_MODEL_LEVEL"
+  },
+  "interpretation_firewall": {
+    "mnemonic_is_not_physical_evidence": true,
+    "two_epoch_transform_is_not_collatz_dynamics": true,
+    "sp3_tuple_is_not_yet_identified_with_tir_herm2_event_carrier": true,
+    "model_derived_topology_is_not_production_spatial_measurement": true,
+    "full_physical_3plus1_production_gate_remains_open": true
+  }
+}
