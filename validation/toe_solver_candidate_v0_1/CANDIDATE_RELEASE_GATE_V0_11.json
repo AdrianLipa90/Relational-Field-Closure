@@ -1,0 +1,26 @@
+{
+  "authority": "CANDIDATE_ONLY",
+  "canon_allowed": false,
+  "checks": [
+    {"detail":{"failed":0,"passed":10,"status":"PASS"},"name":"v011_empirical_e2e_pass","status":"PASS"},
+    {"detail":{"center_z_m":0.0,"max_abs_einstein":0.0,"max_abs_ricci":0.0,"metric":"diag(-(1+gamma*z)^2,1,1,1)","scalar_curvature":0.0},"name":"rindler_curvature_null_control","status":"PASS"},
+    {"detail":{"adm_metric_residual":0.0,"lapse_center":1.0,"overlap_count":0,"patch_count":1,"shared_atlas_certified":true,"shift":[0.0,0.0,0.0],"triad":"I3"},"name":"rf_e25_single_patch_pass","status":"PASS"},
+    {"detail":{"covered":true,"domain":{"domain_id":"RINDLER_CLOCK_COLUMN_1CM_REFERENCE_DOMAIN","x0_max_m":1e-09,"x0_min_m":-1e-09,"x_max_m":0.0005,"x_min_m":-0.0005,"y_max_m":0.0005,"y_min_m":-0.0005,"z_max_m":0.01,"z_min_m":0.0}},"name":"bounded_domain_coverage_pass","status":"PASS"},
+    {"detail":{"global_einstein_carrier":true,"kappa_e_si":"2.0766474428449718546197834567466179734683044649176769927197871206506963710885830E-43","lambda":0.0,"max_local_residual":0.0},"name":"rf_e26_global_carrier_on_covered_domain_pass","status":"PASS"},
+    {"detail":"OPTIONAL_GLOBAL_MULTIPATCH_ROUTE_NOT_REQUIRED_FOR_SINGLE_PATCH_RF_E25_RF_E26","name":"a5_not_mandatory_for_single_patch_e26","status":"PASS"},
+    {"detail":"OPTIONAL_MULTIPATCH_ROUTE_NOT_REQUIRED_FOR_SINGLE_PATCH_RF_E25_RF_E26","name":"interleaf_not_mandatory_for_single_patch_e26","status":"PASS"},
+    {"detail":{"canon_allowed":false,"physical_production_claim":false},"name":"physical_claim_firewall","status":"PASS"},
+    {"detail":{"hardware":"UNASSESSED","norm_error":0.0,"status":"PASS"},"name":"qhtri_model_state_validation_pass","status":"PASS"}
+  ],
+  "failed": 0,
+  "firewall": "Repository completion is an implementation/reference-validation status. It does not promote a physical-production claim or canon.",
+  "open_external_evidence": ["FULL_PHYSICAL_3PLUS1_PRODUCTION_CAPTURE_IF_PHYSICAL_PRODUCTION_CLAIM_IS_REQUESTED"],
+  "optional_expansion_routes": ["GLOBAL_A5_MULTIPATCH_TOPOLOGY","TIR_INTERLEAF_MULTIPATCH_SHIFT","RF_L7_GLOBAL_HYPERBOLICITY_CAUCHY"],
+  "passed": 9,
+  "physical_production_claim": false,
+  "receipt_sha256": "dc059332fe5c766774443f5afab8fad8aefb0e5c50043719e4b3b039af8890e9",
+  "repository_scope_status": "IMPLEMENTATION_COMPLETE_FOR_BOUNDED_DOMAIN_E2E_REFERENCE",
+  "schema": "QHTRI_TOE_CANDIDATE_RELEASE_GATE_V0_11",
+  "status": "PASS",
+  "verdict": "PASS_REPOSITORY_BOUNDED_DOMAIN_E2E_REFERENCE_COMPLETE"
+}

@@ -1,0 +1,26 @@
+{
+  "authority": "CANDIDATE_ONLY",
+  "gremlin_fused_event_id": "gremlin:whisper:sha256:3fd549c3e49a3a0f4d3ffa778026fc2e65e68194db89b1fb7a4323f636566c4e",
+  "gremlin_query_candidate_event_id": "gremlin:whisper:sha256:ec60b2f8006e96a2994f6829efa109f19c2c04726c6a07cda1192b30f9c1774b",
+  "gremlin_source_event_id": "gremlin:whisper:sha256:2ea7932de068a5e788cd85e0999f0ebfd1edfa61fbefec242de142461a101528",
+  "missing_executable_operator_detected": false,
+  "phase_attention_R": 0.2126652354039086,
+  "production_delta": [
+    "PRODUCTION_IDT_EVENT_CLOCK_RATIO_AND_SMOOTH_DOMAIN_CAPTURE",
+    "PRODUCTION_TIR_GLOBAL_RELATIONAL_COMPLEX_AND_EDGE_REFINEMENT_CAPTURE",
+    "PRODUCTION_SHIFT_OR_GLOBAL_FLOW_WITNESS"
+  ],
+  "qhtri": {
+    "epistemic_status": "MODEL_STATE_VALIDATION",
+    "hardware_witness_scope": "UNASSESSED",
+    "qhtri_norm_error": 1.1102230246251565e-16,
+    "receipt_sha256": "098040edeede71385a059d3908c6978599ccfcbefcc5089e6d20feca57670848",
+    "starter_validation": "22/22 PASS",
+    "status": "PASS",
+    "validation_scope": "QHTRI_36_MODE_SINGLE_EXCITATION_LIFT_AND_OVERLAP"
+  },
+  "reference_receipt_sha256": "d3560eef20de26bb69aed4688ae7afc988b527e64a64025f0c2818189a8e3809",
+  "schema": "QHTRI_TOE_GLOBAL_REFERENCE_GREMLIN_QHTRI_AUDIT_V0_4",
+  "status": "PASS",
+  "verdict": "GLOBAL_REFERENCE_ARCHITECTURE_PASS_PRODUCTION_DELTA_THREE_SOURCE_WITNESSES"
+}

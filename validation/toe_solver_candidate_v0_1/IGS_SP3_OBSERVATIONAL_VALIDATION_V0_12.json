@@ -1,0 +1,27 @@
+{
+  "authority": "CANDIDATE_ONLY",
+  "canon_allowed": false,
+  "checks": {
+    "base_e2e_pass_after_retyping": true,
+    "candidate_only": true,
+    "no_physical_production_claim": true,
+    "numerical_geometry_unchanged": true,
+    "observational_id_prefix": true,
+    "production_admission_false": true,
+    "production_receipt_absent": true,
+    "source_typing_check": true
+  },
+  "ci": {
+    "conclusion": "success",
+    "head_sha": "46b5345f6775b2c93a593e688be50bf50cf33ae8",
+    "job_id": 100595568538,
+    "workflow_run_id": 33738786973
+  },
+  "failed": 0,
+  "passed": 8,
+  "physical_production_claim": false,
+  "receipt_sha256": "45827586ff52317b922c6c61e1202b17807dda74eb30ee59aeb60e29f22414ea",
+  "schema": "QHTRI_TOE_IGS_SP3_OBSERVATIONAL_VALIDATION_V0_12",
+  "status": "PASS",
+  "v012_receipt_sha256": "b63ddf8bd8073ab6effb893b13035294a5527d35313614a6e0950189f1fa6a1d"
+}

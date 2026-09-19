@@ -1,0 +1,45 @@
+{
+  "authority": "CANDIDATE_ONLY",
+  "candidate_release_ready": true,
+  "canon_allowed": false,
+  "claim_boundary": "Candidate implementation and reference/observational model-level validation are complete. Full physical 3+1 production capture remains an external-evidence expansion and is not required for repository implementation completion.",
+  "github_actions": {
+    "all_release_steps_success": true,
+    "conclusion": "success",
+    "job_id": 100593193978,
+    "run_id": 33738048439,
+    "workflow": "ToE candidate v0.11 release gates"
+  },
+  "implementation_head_sha": "ba65b96f09bb11b9589d45c8f479e584120d901e",
+  "main_sha": "85bbb1d0754605be2720b6bd258b486b0a072345",
+  "main_unchanged": true,
+  "merge_to_main_requires_explicit_user_order": true,
+  "missing_software_operators": 0,
+  "missing_source_wiring_operators": 0,
+  "noema_tether": {
+    "fail_closed": true,
+    "failures": [],
+    "status": "ACTIVE"
+  },
+  "physical_production_claim": false,
+  "qhtri": {
+    "candidate_id": "NOEMA-IC-7018491d6185b775e1222359",
+    "candidate_sha256": "3bb699723cd60848234443cb30d7d41b83dbc7abcb42064f8430dcb0390c2208",
+    "epistemic_status": "MODEL_STATE_VALIDATION",
+    "hardware_witness_scope": "UNASSESSED",
+    "qhtri_norm": 1.0,
+    "qhtri_norm_error": 0.0,
+    "receipt_sha256": "1e0691ddc6f4badedc9f5eb614e1518cdb5015c854b50ea56039d39f5d5d8c36",
+    "starter_validation": "22/22 PASS",
+    "status": "PASS"
+  },
+  "receipt_sha256": "f23c24a9a7bbf40ee87883916c6261d45a8f37484f9be8597123e7f336f32de1",
+  "release_gates": {
+    "bounded_domain_release_gate": "PASS",
+    "observational_adversarial": "5/5 PASS",
+    "observational_reproducibility_gate": "10/10 PASS",
+    "observational_validation": "7/7 PASS"
+  },
+  "schema": "QHTRI_TOE_FINAL_CANDIDATE_ACCEPTANCE_V0_11",
+  "status": "PASS"
+}

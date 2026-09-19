@@ -1,0 +1,78 @@
+{
+  "authority": "CANDIDATE_ONLY",
+  "canon_allowed": false,
+  "epistemic_boundary": "All currently identified software/provider/operator paths needed to receive and validate production source evidence are executable. Physical closure remains contingent on three source-owned witness objects from one admitted realization and subsequent field-level Einstein closure.",
+  "firewalls": {
+    "candidate_branch_promotes_canon": false,
+    "candidate_source_promotes_production": false,
+    "found_provider_equals_found_production_data": false,
+    "ready_for_field_ingest_equals_physical_closure": false,
+    "same_clock_identity_required": true,
+    "same_realization_required": true
+  },
+  "gremlin_v0_7": {
+    "event_id": "gremlin:whisper:sha256:960d2fb7c88dc20c69abece0112df8ed3c572450f4b8b77c91f919aac8cb4d2e",
+    "missing_operator_candidate": false,
+    "phase_attention_R": 0.11682602900651938,
+    "phase_attention_terms": [
+      "source-owned",
+      "production",
+      "determine",
+      "discovery"
+    ]
+  },
+  "ledger_sha256": "ad5b2203415e74d1f5f001f0e135e1945cbc93f2c538ee9373859e681fafbf51",
+  "production_evidence_frontier": [
+    {
+      "name": "IDT_GLOBAL_LAPSE_PRODUCTION_CAPTURE",
+      "status": "SOURCE_DATA_REQUIRED"
+    },
+    {
+      "name": "TIR_GLOBAL_RELATIONAL_COMPLEX_AND_EDGE_REFINEMENT_CAPTURE",
+      "status": "SOURCE_DATA_REQUIRED"
+    },
+    {
+      "name": "RFC_GSC3C_BETA_MATCH_SHIFT_SAME_REALIZATION_BINDING",
+      "status": "SOURCE_BINDING_WITNESS_REQUIRED"
+    }
+  ],
+  "production_ingest": {
+    "entrypoint": "production_ingest_entrypoint_v0_7.py",
+    "ready_semantics": "Source receipts passed typed contracts and are eligible for downstream field ingest; no canon or physical-result promotion occurs at this gate.",
+    "statuses": [
+      "FAIL_CONTRACT",
+      "BLOCKED_PRODUCTION_EVIDENCE",
+      "READY_FOR_FIELD_INGEST_AND_E2E_PHYSICAL_CLOSURE"
+    ]
+  },
+  "provider_status": {
+    "IDT_05K": "FOUND_UNMERGED_PROVIDER_979c470c719c199ac56f86963e2effc7f3bc3e98",
+    "RFC_GSC3C": "IN_MAIN_85bbb1d0754605be2720b6bd258b486b0a072345",
+    "TIR_GSC1": "IN_MAIN_9a004eebe3d1d9bece971180a240136f896d0799"
+  },
+  "qhtri_v0_7": {
+    "epistemic_status": "MODEL_STATE_VALIDATION",
+    "hardware_witness_scope": "UNASSESSED",
+    "qhtri_norm_error": 1.1102230246251565e-16,
+    "receipt_sha256": "972de9c67a4af1e385f1ad5769515c0dd7af793b141c915cc5456d8731180601",
+    "starter_validation": "22/22 PASS",
+    "status": "PASS",
+    "validation_scope": "QHTRI_36_MODE_SINGLE_EXCITATION_LIFT_AND_OVERLAP"
+  },
+  "schema": "QHTRI_TOE_CONCEPTNAV_CLOSURE_LEDGER_V0_7",
+  "software_closure": {
+    "generic_source_bundle": "PASS_6_OF_6_V0_5",
+    "global_reference_architecture": "PASS_V0_4",
+    "production_ingest_entrypoint": "PASS_6_OF_6_V0_7",
+    "typed_source_contract_bridge": "PASS_7_OF_7_V0_6"
+  },
+  "status": "SOFTWARE_CLOSURE_READY_FOR_PRODUCTION_INGEST_PHYSICAL_EVIDENCE_OPEN",
+  "summary": {
+    "live_fail": 0,
+    "live_pass": 13,
+    "missing_executable_provider_operators": 0,
+    "production_ingest_entrypoint_ready": true,
+    "production_source_witness_objects_required": 3,
+    "retained_historical_candidate_fail": 1
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "authority": "CANDIDATE_ONLY",
+  "blocked_production_inputs": [
+    {"name":"PRODUCTION_N_R_FIELD_PACKET","status":"BLOCKED_INPUT"},
+    {"name":"PRODUCTION_H_IJ_OR_TRIAD_FIELD_PACKET","status":"BLOCKED_INPUT"},
+    {"name":"PRODUCT_TRIVIALIZATION_OR_PROPER_GLOBAL_CLOCK_WITNESS","status":"BLOCKED_WITNESS"},
+    {"name":"PHYSICAL_EVENT_PLACEMENT","status":"BLOCKED_WITNESS"},
+    {"name":"GSC1_PRODUCTION_A5_FACET_OR_EQUIVALENT_COVERAGE_PACKET","status":"BLOCKED_INPUT"},
+    {"name":"GLOBAL_DOMAIN_COVERAGE_FOR_E26","status":"BLOCKED_WITNESS"}
+  ],
+  "canon_allowed": false,
+  "created_unix_ns": 1788295899865595576,
+  "epistemic_boundary": "Executable local geometry/source solver exists. Production field/coverage witnesses remain explicit inputs. QHTRI hardware witness unassessed.",
+  "key_solver_results": {
+    "anisotropic_BianchiI_massless_only_residual": 0.007886680391421472,
+    "anisotropic_BianchiI_massless_plus_RF_E7_scalar_residual": 0.004634958555339089,
+    "anisotropic_full_positive_cone_status": "REJECTED",
+    "anisotropic_residual_reduction_fraction": 0.41230551698523976,
+    "radiation_FLRW_massless_closure_max_residual": 5.551115123125783e-17
+  },
+  "ledger_sha256": "6abc2bc8608fd2cd139b05a7c2e4900ceffd577c433f10de2f958bcd9289cc67",
+  "live_executed_gates": [
+    {"authority":"CANDIDATE_ONLY","canon_allowed":false,"gate":"G_MN_FROM_METRIC_DERIVATIVES","receipt":"gmn_einstein_provider_candidate_receipt_v1.json","receipt_sha256":"c673c496e996656098552e3db3a23e9392d72c93f86e1d1f5fac5c646efcd34d","status":"PASS"},
+    {"authority":"CANDIDATE_ONLY","canon_allowed":false,"gate":"METRIC_CALLABLE_TO_G_MN","receipt":"metric_jet_to_einstein_pipeline_receipt_v1.json","receipt_sha256":"04800c9fcb03d05132c12a132f90ef6ba44bbd1dcef656026be4601c93e19c50","status":"PASS"},
+    {"authority":"CANDIDATE_ONLY","canon_allowed":false,"gate":"RF_E8_ADM_FIELD_TO_G_MN","receipt":"adm_field_to_einstein_pipeline_receipt_v1.json","receipt_sha256":"0d97676f38830b23ccc07887e72d14a7a0bf8d33b71668e3b7a8400d28f9ac57","status":"PASS"},
+    {"authority":"CANDIDATE_ONLY","canon_allowed":false,"gate":"RFN0_RF02H_LOCAL_METRIC_TO_G_MN","receipt":"rfn0_rf02h_local_metric_provider_receipt_v1.json","receipt_sha256":"40e58e7c0c54942b82262588c856e4a828b979ddda6f73f0704c259b68a7aee5","status":"PASS"},
+    {"authority":"CANDIDATE_ONLY","canon_allowed":false,"gate":"QHTRI_NEUTRINO_TOTAL_STRESS_BINDING","receipt":"qhtri_neutrino_total_stress_binding_receipt_v1.json","receipt_sha256":"18aa02caa8ee6537c750456eddc3dcb617a9438c5ebe7da0b009813ebbc62857","status":"PASS"},
+    {"authority":"CANDIDATE_ONLY","canon_allowed":false,"gate":"GSC3A_GSC4B_SHIFT_ROUTE_LOCAL_CONFORMANCE","receipt":"gsc3a_gsc4b_shift_route_receipt_v1.json","receipt_sha256":"acd19cdc053851fb0daccd5ec853bb792189b7022c1c4a46d9b42bb192697246","status":"PASS"},
+    {"authority":"CANDIDATE_ONLY","canon_allowed":false,"gate":"LOCAL_POSITIVE_MASSLESS_EINSTEIN_SOLVER","receipt":"local_einstein_closure_solver_receipt_v1.json","receipt_sha256":"98d86fdec759e9f6985883c5f83ed6fdfaf5db4c4c7be4b209ddd3d244a88485","status":"PASS"},
+    {"authority":"CANDIDATE_ONLY","canon_allowed":false,"gate":"MULTISECTOR_SOURCE_CONE_SOLVER_V2","receipt":"multisector_source_cone_solver_receipt_v2.json","receipt_sha256":"8ef853cb4b737bae54abbeb3e399481a67cf029aa52693bc8ace901869798e1d","status":"PASS"}
+  ],
+  "retained_failures": [
+    {"authority":"CANDIDATE_ONLY","canon_allowed":false,"gate":"MULTISECTOR_SOURCE_CONE_SOLVER_V1_NUMERICAL_CONTROL","receipt":"multisector_source_cone_solver_receipt_v1.json","receipt_sha256":"a1df6378e92882fd997e1686794cc84837bbd01518dd5d293ec28cf1c08d1407","status":"FAIL"}
+  ],
+  "schema": "QHTRI_TOE_CONCEPTNAV_CLOSURE_LEDGER_V0_2",
+  "source_verified_routes": {
+    "E26":"EXECUTABLE_GLOBAL_CARRIER_REQUIRES_SHARED_ATLAS_AND_DOMAIN_COVERAGE",
+    "GSC3A":"EXECUTABLE_LOCAL_SOLDERING_GLOBAL_FLOW_AND_EVENT_INPUTS_OPEN",
+    "GSC4C":"HOSTED_PASS_GSC1_PRODUCTION_FACETS_OPEN",
+    "GSC4D":"HOSTED_PASS_PRODUCTION_PACKET_OPEN",
+    "GSC4E":"HOSTED_PASS_PRODUCTION_FIELD_OPEN_AND_DOES_NOT_DETERMINE_IDT_LAPSE"
+  },
+  "status": "PARTIAL_EXECUTABLE_CLOSURE",
+  "summary": {"blocked_production_inputs":6,"live_fail":0,"live_pass":8,"retained_historical_candidate_fail":1}
+}

@@ -1,0 +1,35 @@
+{
+  "authority": "VALIDATION_ONLY",
+  "backend": {
+    "backend": "numpy_cpu",
+    "copied_from_host": true,
+    "device": "cpu",
+    "dtype": "complex128",
+    "silent_fallback_used": false
+  },
+  "candidate_id": "NOEMA-IC-37fe44d51d89c8e824e9b6f9",
+  "candidate_sha256": "8ab8786ba248cbcabefb8f47cb119bc1675797c25133aa795564d0639b6d2769",
+  "canon_allowed": false,
+  "checks": {
+    "cpu_silent_fallback_false": true,
+    "phase36_finite": true,
+    "qhtri_amplitudes_36": true,
+    "qhtri_norm_one": true,
+    "starter_tests_green": true
+  },
+  "epistemic_status": "MODEL_STATE_VALIDATION",
+  "execution_authorized": false,
+  "hardware_witness_scope": "UNASSESSED",
+  "phase_attention_index": 0,
+  "phase_vector_sha256": "413090c1c6bff8057e5908caf9ac65699b4ec75813510b170c639847bbc2efad",
+  "qhtri_amplitude_sha256": "8d05ce3af197c7c1eedecaf6b5c65dc1e7059932cd0c3adae377366c88f2e5c2",
+  "qhtri_norm": 1.0,
+  "qhtri_norm_error": 0.0,
+  "receipt_sha256": "136550cc74af20b356476b6c69f9b5a07158cf10ec5cc2c9008ec7384f3528e5",
+  "schema": "NOEMA_QHTRI_CANDIDATE_VALIDATION_RECEIPT_V1",
+  "starter_source_zip_sha256": "fbd695cb8e965e411cc7245da43c4554912a656b21f87608c3f8817c4ed0240b",
+  "starter_validation": "22/22 PASS",
+  "status": "PASS",
+  "trace_sha256": "bc4607cec59bc8c37d1adcc97d5895fe7d66d9eb1e0f0f802db78d673800cb4f",
+  "validation_scope": "QHTRI_36_MODE_SINGLE_EXCITATION_LIFT_AND_OVERLAP"
+}

@@ -1,0 +1,27 @@
+{
+  "authority": "CANDIDATE_ONLY",
+  "bianchi_sweep": [
+    {"Gmax": 7.182377096552681e-11, "R": 4.042954178215425e-11, "bianchi": 3.082654024706368e-24, "h": 0.01},
+    {"Gmax": 7.182377096552681e-11, "R": 4.042954178215425e-11, "bianchi": 8.17093415186093e-24, "h": 0.003},
+    {"Gmax": 7.182377096552681e-11, "R": 4.042954178215425e-11, "bianchi": 4.34941960674139e-23, "h": 0.001},
+    {"Gmax": 7.182377096552681e-11, "R": 4.042954178215425e-11, "bianchi": 1.5239321378476376e-23, "h": 0.0003},
+    {"Gmax": 7.182377096552681e-11, "R": 4.042954178215425e-11, "bianchi": 4.191361048516344e-22, "h": 0.0001},
+    {"Gmax": 7.182377096552681e-11, "R": 4.042954178215425e-11, "bianchi": 1.8911293101403545e-21, "h": 3e-05}
+  ],
+  "canon_allowed": false,
+  "checks": {
+    "analytic_metric_bianchi_convergence": true,
+    "base_observational_e2e_pass": true,
+    "full_A5_vertex_link_certificate": true,
+    "matching_failclosed_relation_residual": true,
+    "no_physical_truth_promotion": true,
+    "precision_clock_exact_inverse_cycles": true,
+    "single_source_realization": true
+  },
+  "evidence_class": "EXTERNAL_OBSERVATIONAL_ARCHIVE_DERIVED_MODEL_LEVEL",
+  "physical_realization_id": "physical:igs-sp3:sha256:e6c18e85a6f2b62c6820258b7ecfc514f8a177f1c2eaff54d6a5ff0b8fab2399",
+  "receipt_sha256": "5c6378513af679fe0a6472652f85ff6690bb9dab7dd3f3b5c86d4333071ae768",
+  "schema": "QHTRI_TOE_IGS_SP3_OBSERVATIONAL_VALIDATION_V0_11",
+  "source_extract_sha256": "e6c18e85a6f2b62c6820258b7ecfc514f8a177f1c2eaff54d6a5ff0b8fab2399",
+  "status": "PASS"
+}

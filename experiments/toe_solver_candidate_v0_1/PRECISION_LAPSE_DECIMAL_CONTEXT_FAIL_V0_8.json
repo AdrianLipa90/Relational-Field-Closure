@@ -1,0 +1,15 @@
+{
+  "authority": "CANDIDATE_ONLY",
+  "canon_allowed": false,
+  "failure_class": "DECIMAL_CONTEXT_ROUNDING_ON_UNARY_NEGATION",
+  "fix": "Decimal.copy_negate() preserves the exact coefficient without applying the ambient 28-digit context",
+  "observed_residual": "2.429021469594861761852559533E-47",
+  "physical_production_claim": false,
+  "receipt_sha256": "f734de96a9d8f8036a4eb8f606d761dbd019b696c542cbc661f4b3ac3b81fbc7",
+  "resolved_by": "precision_lapse_measurement_candidate_v0_8.py",
+  "retention_policy": "append-only provenance; historical FAIL remains visible after fix",
+  "schema": "QHTRI_TOE_PRECISION_LAPSE_DECIMAL_CONTEXT_FAIL_V0_8",
+  "status": "FAIL_RETAINED",
+  "tolerance_log": "1e-50",
+  "trigger": "inverse edge constructed with unary -l outside the 80-digit localcontext"
+}

@@ -1,0 +1,26 @@
+{
+  "authority": "CANDIDATE_ONLY",
+  "candidate_receipt_sha256": "84c9501196e2c87550b6b69dacbbd296ba3b11b486c62535d31416c7d8b709f3",
+  "gremlin_fused_event_id": "gremlin:whisper:sha256:788689beb20c855489c5f532bed998673e00a2e0d0036e197f3092aa6c785374",
+  "gremlin_query_candidate_event_id": "gremlin:whisper:sha256:756d38cfdd18ae2daa5ce46a31a909f7b17a80b40ce3edacff7641fc7717d405",
+  "gremlin_selected_bottlenecks": [
+    "SOURCE_OWNED_SPATIAL_OVERLAP_COCYCLE_AND_GLOBAL_REFINEMENT_WITNESS",
+    "SOURCE_OWNED_GLOBAL_CLOCK_DOMAIN_COVERAGE_WITNESS",
+    "SHIFT_WITNESS_OR_CERTIFIED_FLOW_ADAPTED_ROUTE"
+  ],
+  "gremlin_source_event_id": "gremlin:whisper:sha256:aa2d9da4095f4b9784f582ec8453c9d41267abb395f2733bb6e06e0729123236",
+  "phase_attention_R": 0.2751533732210469,
+  "qhtri": {
+    "epistemic_status": "MODEL_STATE_VALIDATION",
+    "hardware_witness_scope": "UNASSESSED",
+    "qhtri_norm": 0.9999999999999999,
+    "qhtri_norm_error": 1.1102230246251565e-16,
+    "receipt_sha256": "f1fa0cade66d17bcda174d572ba0de91516fc8dcb9992e98af66af704be8fe5d",
+    "starter_validation": "22/22 PASS",
+    "status": "PASS",
+    "validation_scope": "QHTRI_36_MODE_SINGLE_EXCITATION_LIFT_AND_OVERLAP"
+  },
+  "schema": "QHTRI_TOE_PRODUCTION_METRIC_PACKET_GREMLIN_QHTRI_AUDIT_V0_3",
+  "status": "PASS",
+  "verdict": "LOCAL_SOURCE_PACKET_RECONSTRUCTION_PASS_GLOBAL_SOURCE_WITNESSES_REMAIN_TYPED_OPEN"
+}

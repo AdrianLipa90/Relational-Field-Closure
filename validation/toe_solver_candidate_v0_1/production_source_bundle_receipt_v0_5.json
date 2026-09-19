@@ -1,0 +1,35 @@
+{
+  "authority": "CANDIDATE_ONLY",
+  "canon_allowed": false,
+  "checks": [
+    {
+      "blockers": [
+        "CLOCK_SOURCE_WITNESS",
+        "SPATIAL_SOURCE_WITNESS",
+        "SHIFT_FLOW_SOURCE_WITNESS",
+        "SAME_PHYSICAL_REALIZATION_BINDING"
+      ],
+      "clock_cycle_residual": 0.0,
+      "name": "reference_control_never_promotes_production",
+      "pass": true,
+      "shift_overlap_residual": 0.0
+    },
+    {
+      "blockers": [
+        "SAME_PHYSICAL_REALIZATION_BINDING"
+      ],
+      "individual_ready": [true,true,true],
+      "name": "same_physical_realization_firewall",
+      "pass": true
+    },
+    {"error":"clock activities must be strictly positive","name":"clock_nonpositive_activity_fail_closed","pass":true},
+    {"error":"multiplicative clock cycle closure failed","name":"clock_cycle_mismatch_fail_closed","pass":true},
+    {"error":"GSC3A shift overlap law failed","name":"shift_wrong_sign_fail_closed","pass":true},
+    {"error":"PRODUCTION_SOURCE requires 64-hex receipt_sha256","name":"malformed_production_receipt_fail_closed","pass":true}
+  ],
+  "interpretation_firewall": "PRODUCTION-shaped fixtures validate gate logic only; they are not physical production evidence.",
+  "physical_production_claim": false,
+  "schema": "QHTRI_TOE_PRODUCTION_SOURCE_BUNDLE_VALIDATION_V0_5",
+  "status": "PASS",
+  "summary": {"fail":0,"pass":6}
+}

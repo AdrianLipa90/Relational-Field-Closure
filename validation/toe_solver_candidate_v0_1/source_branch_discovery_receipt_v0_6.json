@@ -1,0 +1,53 @@
+{
+  "authority":"CANDIDATE_ONLY",
+  "canon_allowed":false,
+  "conclusion":{
+    "missing_executable_provider_operators":0,
+    "production_source_witness_objects_required":3,
+    "provider_vs_data_firewall":"FOUND_PROVIDER_NEQ_FOUND_PRODUCTION_DATA",
+    "witnesses":["IDT_GLOBAL_LAPSE_PRODUCTION_CAPTURE","TIR_GLOBAL_RELATIONAL_COMPLEX_AND_EDGE_REFINEMENT_CAPTURE","RFC_GSC3C_BETA_MATCH_SHIFT_SAME_REALIZATION_BINDING"]
+  },
+  "findings":[
+    {
+      "branch":"feat/05k-global-lapse-production-capture-v0.1",
+      "branch_relation_to_main":{"ahead_by":1,"behind_by":11},
+      "commit":"979c470c719c199ac56f86963e2effc7f3bc3e98",
+      "file":"src/idt/global_lapse_production_capture.py",
+      "notes":"Branch adds certifier and reference triangle fixture; no physical production capture identified.",
+      "production_dataset_status":"NOT_FOUND",
+      "provider_status":"FOUND_UNMERGED_PROVIDER",
+      "source":"IDT",
+      "target":"global lapse production capture"
+    },
+    {
+      "historical_branches":[
+        {"ahead_by":0,"behind_by":22,"name":"feat/gsc1-global-relational-complex-witness-v0.1"},
+        {"ahead_by":0,"behind_by":231,"name":"feat/tir-se3-global-gluing-v0.1"},
+        {"ahead_by":0,"behind_by":208,"name":"feat/tir-cartan-continuum-refinement-v0.1"}
+      ],
+      "main_commit":"9a004eebe3d1d9bece971180a240136f896d0799",
+      "notes":"Main contains source-freeze/input/refinement machinery; TIR contract itself records production spatial incidence as open.",
+      "production_dataset_status":"OPEN_SOURCE_OWNED_INPUT",
+      "provider_status":"IN_MAIN",
+      "source":"TIR",
+      "target":"global relational complex + edge refinement"
+    },
+    {
+      "historical_branches":[
+        {"ahead_by":0,"behind_by":100,"name":"feat/gsc3c-beta-match-shift-source-binding-v0.1"},
+        {"ahead_by":0,"behind_by":124,"name":"feat/gsc3b-relational-event-placement-v0.1"},
+        {"ahead_by":0,"behind_by":108,"name":"feat/gsc3d-beta-shift-interface-alias-v0.1"}
+      ],
+      "main_commit":"85bbb1d0754605be2720b6bd258b486b0a072345",
+      "notes":"Main GSC3C can certify exact beta_t=c*b_x0 on a supplied common realization; no physical source-owned binding receipt identified.",
+      "production_dataset_status":"OPEN_SOURCE_OWNED_BINDING",
+      "provider_status":"IN_MAIN",
+      "source":"RFC",
+      "target":"beta_match -> shift source binding / event placement / flow"
+    }
+  ],
+  "physical_production_claim":false,
+  "receipt_sha256":"15b4ba443f09b8042d9981015d74d037df96ca1ffcc848a21adf1556beb83f97",
+  "schema":"QHTRI_TOE_SOURCE_BRANCH_DISCOVERY_V0_6",
+  "status":"PASS_PROVIDER_DISCOVERY_PRODUCTION_DATA_STILL_OPEN"
+}

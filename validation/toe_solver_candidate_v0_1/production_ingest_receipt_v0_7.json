@@ -1,0 +1,54 @@
+{
+  "authority": "CANDIDATE_ONLY",
+  "canon_allowed": false,
+  "checks": [
+    {
+      "blockers": [
+        "IDT_05K_PRODUCTION_CAPTURE_DATASET",
+        "TIR_GSC1_PRODUCTION_SOURCE_CAPTURE"
+      ],
+      "name": "reference_source_bundle_blocks_without_failure",
+      "pass": true,
+      "status": "BLOCKED_PRODUCTION_EVIDENCE"
+    },
+    {
+      "name": "production_shaped_same_realization_reaches_field_ingest_gate",
+      "pass": true,
+      "receipt_sha256": "397a0ed8166311f9e05bde693146d079a83c56b2529e5f785c49fd65b41048fc",
+      "status": "READY_FOR_FIELD_INGEST_AND_E2E_PHYSICAL_CLOSURE"
+    },
+    {
+      "blockers": [
+        "SAME_PHYSICAL_REALIZATION_BINDING"
+      ],
+      "name": "realization_mismatch_blocks",
+      "pass": true
+    },
+    {
+      "blockers": [
+        "SAME_CLOCK_ID_BINDING"
+      ],
+      "name": "clock_identity_mismatch_blocks",
+      "pass": true
+    },
+    {
+      "name": "rfc_source_binding_open_is_contract_fail",
+      "pass": true,
+      "reason": "RFC production bridge requires source_binding_exact",
+      "status": "FAIL_CONTRACT"
+    },
+    {
+      "error": "idt_lapse field mismatch: missing=[], extra=['unexpected']",
+      "name": "unexpected_input_field_fail_closed",
+      "pass": true
+    }
+  ],
+  "interpretation_firewall": "READY fixture tests ingest mechanics only. It is not a physical production capture or physical closure result.",
+  "physical_production_claim": false,
+  "schema": "QHTRI_TOE_PRODUCTION_INGEST_VALIDATION_V0_7",
+  "status": "PASS",
+  "summary": {
+    "fail": 0,
+    "pass": 6
+  }
+}

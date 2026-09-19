@@ -1,0 +1,37 @@
+{
+  "schema": "QHTRI_TOE_CONCEPTNAV_CLOSURE_LEDGER_V0_11",
+  "status": "PASS_CANDIDATE_REPO_COMPLETE_OBSERVATIONAL_E2E",
+  "authority": "CANDIDATE_ONLY",
+  "canon_allowed": false,
+  "physical_production_claim": false,
+  "evidence_status": "MODEL_LEVEL_EXTERNAL_OBSERVATIONAL_ARCHIVE_DERIVED",
+  "source": {
+    "dataset": "RT218283.SP3@8013",
+    "url": "https://software.rtcm-ntrip.org/browser/ntrip/branches/BNC_2.12/Example_Configs/Input/RT218283.SP3?rev=8013",
+    "epochs": ["2015-01-21T00:01:00Z", "2015-01-21T00:03:00Z"],
+    "satellites": ["G01", "G02", "G03", "G04", "G05"],
+    "source_extract_sha256": "e6c18e85a6f2b62c6820258b7ecfc514f8a177f1c2eaff54d6a5ff0b8fab2399",
+    "physical_realization_id": "physical:igs-sp3:sha256:e6c18e85a6f2b62c6820258b7ecfc514f8a177f1c2eaff54d6a5ff0b8fab2399"
+  },
+  "closed_frontier": {
+    "precision_clock_capture": "PASS_DECIMAL_LOG_N_EXACT_INVERSE_CYCLES",
+    "global_relational_complex": "PASS_FULL_A5_CLOSED_3MANIFOLD_VERTEX_LINKS_S2",
+    "interleaf_matching": "PASS_MAX_RESIDUAL_6.938893903907228e-17",
+    "rfe8_shift": "DERIVED_DOWNSTREAM_FROM_MATCHING_PACKET",
+    "adm_metric": "PASS_FINITE_LORENTZIAN",
+    "einstein_tensor": "PASS_G_MAX_ABS_7.182377096552681e-11",
+    "contracted_bianchi": "PASS_ANALYTIC_METRIC_JET_SWEEP_3.08e-24_TO_1.89e-21"
+  },
+  "validation": {
+    "observational_validation": "7/7 PASS",
+    "adversarial_fail_closed": "5/5 PASS",
+    "qhtri_model_state_validation": "1/1 PASS; starter 22/22 PASS",
+    "fresh_noema_tether_guard": "ACTIVE failures=[]",
+    "retained_failure": "receipt numpy.bool_ serialization FAIL fixed by explicit bool cast; no data or physics thresholds changed"
+  },
+  "remaining_missing_software_operators": 0,
+  "remaining_missing_source_wiring_operators": 0,
+  "candidate_release_ready": true,
+  "merge_to_main_requires_explicit_user_order": true,
+  "note": "Repository candidate implementation is complete through one real archived same-realization observational E2E. This validates executable model-level plumbing and falsification gates; it is not a standalone empirical proof of the underlying physical theory."
+}

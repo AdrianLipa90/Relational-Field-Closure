@@ -1,0 +1,31 @@
+{
+  "authority": "CANDIDATE_ONLY",
+  "canon_allowed": false,
+  "checks": [
+    {"name": "production_matching_source_derives_rfc_shift", "status": "PASS"},
+    {"name": "matching_relation_defect_fails", "status": "PASS"},
+    {"name": "payload_digest_tamper_fails", "status": "PASS"},
+    {"name": "source_digest_mismatch_fails", "status": "PASS"},
+    {"name": "source_locator_mismatch_fails", "status": "PASS"},
+    {"name": "phase_realization_cannot_be_physical_realization", "status": "PASS"},
+    {"name": "reference_packet_derives_shift_but_cannot_promote", "status": "PASS"},
+    {"name": "production_receipt_mismatch_fails", "status": "PASS"}
+  ],
+  "failed": 0,
+  "passed": 8,
+  "physical_production_claim": false,
+  "production_control": {
+    "max_matching_residual": 0.0,
+    "payload_sha256": "d147e27920b9d5d92bb428d60e07db4daa7840cba3196df6dda81e3f92f9dd82",
+    "physical_realization_id": "physical:tir-spatial:R1",
+    "receipt_sha256": "793ed9d62db3617fab9b1e0128ffdc8040a246d3eca32661429efc26806393c2",
+    "rfc_shift_derived_downstream": true,
+    "rfc_source_witness_required": false
+  },
+  "production_frontier": "ACTUAL_SOURCE_OWNED_TIR_INTERLEAF_MATCHING_DATASET_STILL_OPEN",
+  "receipt_sha256": "3d451dcf676ca4d5ac8a054951e61137ac7869b8c36cde3bae4656eea888a3b5",
+  "result": "RFC_SHIFT_IS_DERIVED_DOWNSTREAM_NOT_AN_INDEPENDENT_SOURCE_WITNESS",
+  "schema": "QHTRI_TOE_TIR_INTERLEAF_SOURCE_REALIZATION_BRIDGE_ARCHIVE_RECEIPT_V0_10",
+  "status": "PASS",
+  "validation_source_receipt_sha256": "2164f61cd99cea8a81d716520d6b455f6e4f4855091ce9e58f197b1cf5cc3a89"
+}

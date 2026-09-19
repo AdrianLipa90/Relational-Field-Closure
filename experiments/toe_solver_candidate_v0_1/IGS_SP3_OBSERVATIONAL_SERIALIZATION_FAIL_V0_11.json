@@ -1,0 +1,13 @@
+{
+  "schema": "QHTRI_TOE_IGS_SP3_OBSERVATIONAL_FAIL_V0_11",
+  "status": "FAIL_RETAINED_FIXED",
+  "stage": "receipt_serialization_after_geometry_execution",
+  "error": "TypeError",
+  "detail": "numpy.bool_ in metric_finite_lorentzian was not JSON serializable",
+  "geometry_execution_completed_before_failure": true,
+  "physics_thresholds_changed_by_fix": false,
+  "data_changed_by_fix": false,
+  "fix": "explicit bool(...) cast at receipt boundary",
+  "authority": "CANDIDATE_ONLY",
+  "canon_allowed": false
+}

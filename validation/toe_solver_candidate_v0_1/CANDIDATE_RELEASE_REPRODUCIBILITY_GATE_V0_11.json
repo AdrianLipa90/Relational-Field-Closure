@@ -1,0 +1,25 @@
+{
+  "adversarial_receipt_sha256": "ebe2fc40928a160453f0b4a847028d6399567695efb1eae53f4a0f95bf04bb69",
+  "authority": "CANDIDATE_ONLY",
+  "candidate_release_ready": true,
+  "canon_allowed": false,
+  "checks": {
+    "adversarial_5_of_5_pass": true,
+    "adversarial_receipt_reproducible": true,
+    "candidate_ledger_complete": true,
+    "epistemic_firewall": true,
+    "main_merge_requires_explicit_order": true,
+    "retained_fail_preserved": true,
+    "single_archived_source_digest": true,
+    "validation_7_of_7_pass": true,
+    "validation_receipt_reproducible": true,
+    "zero_missing_software_operators": true
+  },
+  "merge_to_main_requires_explicit_user_order": true,
+  "physical_production_claim": false,
+  "receipt_sha256": "cf234332e84d75ddd3d82fadff210eab88b17ac24c40c05bc89babaa5374ba3f",
+  "schema": "QHTRI_TOE_CANDIDATE_RELEASE_REPRODUCIBILITY_GATE_V0_11",
+  "source_extract_sha256": "e6c18e85a6f2b62c6820258b7ecfc514f8a177f1c2eaff54d6a5ff0b8fab2399",
+  "status": "PASS",
+  "validation_receipt_sha256": "5c6378513af679fe0a6472652f85ff6690bb9dab7dd3f3b5c86d4333071ae768"
+}

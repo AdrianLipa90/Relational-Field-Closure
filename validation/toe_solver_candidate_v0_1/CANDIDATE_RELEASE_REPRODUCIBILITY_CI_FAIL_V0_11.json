@@ -1,0 +1,20 @@
+{
+  "schema": "QHTRI_TOE_REPRODUCIBILITY_GATE_CI_FAIL_V0_11",
+  "status": "FAIL_RETAINED_FIXED",
+  "authority": "CANDIDATE_ONLY",
+  "canon_allowed": false,
+  "github_actions_run_id": 33738387801,
+  "github_actions_job_id": 100594300351,
+  "failed_step": "Observational reproducibility release gate",
+  "cause": "BITWISE_FLOAT_RECEIPT_SHA_NOT_CROSS_RUNTIME_INVARIANT",
+  "source_extract_sha256": "e6c18e85a6f2b62c6820258b7ecfc514f8a177f1c2eaff54d6a5ff0b8fab2399",
+  "archived_validation_receipt_sha256": "5c6378513af679fe0a6472652f85ff6690bb9dab7dd3f3b5c86d4333071ae768",
+  "ci_validation_receipt_sha256": "88d8963e4dd162c993df991923a23dc79a72bd0352fea0583e9c67419b3ef25e",
+  "logical_validation_checks": "7/7 PASS",
+  "adversarial_checks": "5/5 PASS",
+  "ci_bianchi_max_abs": 8.140712208786007e-22,
+  "data_changed_by_fix": false,
+  "physics_thresholds_changed_by_fix": false,
+  "fix": "Cross-runner gate now checks immutable source digest, 7/7 logical validation, stable Gmax/R within 1e-12 relative tolerance, and contracted-Bianchi residual below 1e-20 instead of requiring identical SHA of floating-point receipt bytes.",
+  "replacement_workflow_commit": "3a35a2763220852fb40eb4a7e50abeb82c0b79ee"
+}

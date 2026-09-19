@@ -1,0 +1,36 @@
+{
+  "authority":"CANDIDATE_ONLY",
+  "canon_allowed":false,
+  "epistemic_boundary":"Software/provider closure is executable and typed. Physical production closure remains open until three source-owned witness objects from one admitted realization are supplied and pass their existing contracts.",
+  "firewalls":{
+    "36d_state_aliases_4d_metric":false,
+    "candidate_branch_promotes_canon":false,
+    "candidate_source_promotes_production":false,
+    "found_provider_equals_found_production_data":false,
+    "omega_aliases_idt_lapse":false,
+    "reference_fixture_promotes_physical_production":false
+  },
+  "gremlin_v0_6":{
+    "event_id":"gremlin:whisper:sha256:97658b39711e70542f91d4f1a7d86dd61a412b252372db683896bb62660daff1",
+    "phase_attention_R":0.15696671995385295,
+    "phase_attention_terms":["executable","determine","providers","operator"]
+  },
+  "ledger_sha256":"41ab974a09daf6eb1cd2b99d11558464191e352d79780dee1f01d3293b5c4d87",
+  "noema_live_envelope":{"evidence_class":"CANDIDATE_SOURCE","physical_production_claim":false,"telemetry_alias_to_lapse_or_metric":false},
+  "production_evidence_frontier":[
+    {"name":"IDT_GLOBAL_LAPSE_PRODUCTION_CAPTURE","status":"SOURCE_DATA_REQUIRED"},
+    {"name":"TIR_GLOBAL_RELATIONAL_COMPLEX_AND_EDGE_REFINEMENT_CAPTURE","status":"SOURCE_DATA_REQUIRED"},
+    {"name":"RFC_GSC3C_BETA_MATCH_SHIFT_SAME_REALIZATION_BINDING","status":"SOURCE_BINDING_WITNESS_REQUIRED"}
+  ],
+  "provider_status":{
+    "IDT_05K":{"branch":"feat/05k-global-lapse-production-capture-v0.1","commit":"979c470c719c199ac56f86963e2effc7f3bc3e98","production_dataset":"NOT_FOUND","status":"FOUND_UNMERGED_PROVIDER"},
+    "RFC_GSC3C":{"main_commit":"85bbb1d0754605be2720b6bd258b486b0a072345","production_binding":"OPEN_SOURCE_OWNED_INPUT","status":"IN_MAIN"},
+    "TIR_GSC1":{"main_commit":"9a004eebe3d1d9bece971180a240136f896d0799","production_dataset":"OPEN_SOURCE_OWNED_INPUT","status":"IN_MAIN"}
+  },
+  "qhtri_v0_6":{"epistemic_status":"MODEL_STATE_VALIDATION","hardware_witness_scope":"UNASSESSED","qhtri_norm_error":0.0,"receipt_sha256":"9ddc2b4d642373e95dea570fd9003450fb1a047f673cdcf868f2257da1e24a82","starter_validation":"22/22 PASS","status":"PASS","validation_scope":"QHTRI_36_MODE_SINGLE_EXCITATION_LIFT_AND_OVERLAP"},
+  "same_realization_firewall":{"clock_identity_required":true,"required":true,"status":"IMPLEMENTED_AND_TESTED"},
+  "schema":"QHTRI_TOE_CONCEPTNAV_CLOSURE_LEDGER_V0_6",
+  "software_closure":{"global_reference_architecture":"PASS_V0_4","production_source_bundle_v0_5":"PASS_6_OF_6","source_branch_discovery":"PASS_PROVIDER_DISCOVERY_PRODUCTION_DATA_STILL_OPEN","typed_production_contract_bridge_v0_6":"PASS_7_OF_7"},
+  "status":"SOFTWARE_PROVIDER_CLOSURE_PASS_PRODUCTION_EVIDENCE_OPEN",
+  "summary":{"live_fail":0,"live_pass":12,"missing_executable_provider_operators":0,"production_source_witness_objects_required":3,"retained_historical_candidate_fail":1}
+}

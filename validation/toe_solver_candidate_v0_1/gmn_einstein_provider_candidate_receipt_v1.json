@@ -1,0 +1,30 @@
+{
+  "authority": "CANDIDATE_ONLY",
+  "canon_allowed": false,
+  "checks": {
+    "einstein_symmetry": true,
+    "finite": true,
+    "flat_null": true,
+    "gauss_codazzi_hamiltonian": true,
+    "gauss_codazzi_momentum_x": true,
+    "isotropic_G00": true
+  },
+  "created_unix_ns": 1788294210451897819,
+  "max_residual": 5.551115123125783e-17,
+  "provider_path": "/dev/shm/ciel_noema/qhtri/toe_solver_candidate_v0_1/gmn_einstein_provider_candidate.py",
+  "receipt_sha256": "c673c496e996656098552e3db3a23e9392d72c93f86e1d1f5fac5c646efcd34d",
+  "remaining_blocker": "PRODUCTION_4D_METRIC_FIRST_AND_SECOND_DERIVATIVE_PROVIDER",
+  "residuals": {
+    "einstein_symmetry": 0.0,
+    "flat_null": 0.0,
+    "gauss_codazzi_hamiltonian": 0.0,
+    "gauss_codazzi_momentum_x": 0.0,
+    "isotropic_G00": 5.551115123125783e-17
+  },
+  "schema": "QHTRI_TOE_GMN_EINSTEIN_PROVIDER_CANDIDATE_V1",
+  "scope": "g,dg,ddg -> Ricci scalar/Ricci tensor/Einstein tensor at a point; production derivative source not yet bound",
+  "source_commit": "85bbb1d0754605be2720b6bd258b486b0a072345",
+  "source_path": "tests/reference/test_rfe10_gauss_codazzi_projections.py",
+  "source_repository": "AdrianLipa90/Relational-Field-Closure",
+  "status": "PASS"
+}

@@ -1,0 +1,22 @@
+{
+  "authority": "CANDIDATE_ONLY",
+  "canon_allowed": false,
+  "checks": [
+    {"detail":{"failed":0,"passed":6},"name":"precision_realdata_6_of_6","status":"PASS"},
+    {"detail":{"failed":0,"passed":6},"name":"precision_ingest_6_of_6","status":"PASS"},
+    {"detail":"2.429021469594861761852559533E-47","name":"decimal_failure_retained","status":"PASS"},
+    {"detail":"PASS_SOFTWARE_PRECISION_PATCH_PRODUCTION_EVIDENCE_OPEN","name":"ledger_precision_aware_status","status":"PASS"},
+    {"detail":"PASS_RETAINED_AS_PRE_PRECISION_DISCOVERY","name":"v07_historical_not_current","status":"PASS"},
+    {"detail":["IDT_05K_PRECISION_PRODUCTION_CAPTURE_DATASET","TIR_GSC1_PRODUCTION_SOURCE_CAPTURE","RFC_GSC3C_SOURCE_OWNED_BINDING_ON_SAME_REALIZATION"],"name":"production_frontier_exact_three","status":"PASS"},
+    {"detail":["EXTERNAL_PROCESS_DATA_REFERENCE_NEQ_PRODUCTION_SOURCE","READY_NEQ_PHYSICAL_RESULT","NO_CANON_PROMOTION","NO_FLOAT64_N_FOR_SUB_EPSILON_CLOCK_OFFSETS"],"name":"float64_sub_epsilon_firewall","status":"PASS"},
+    {"detail":{"ingest":false,"ledger":false,"precision":false,"retained_fail":false},"name":"no_self_canon","status":"PASS"}
+  ],
+  "failed": 0,
+  "firewall": "Software precision closure PASS does not promote any production witness or physical ToE closure.",
+  "passed": 8,
+  "physical_production_claim": false,
+  "production_evidence_status": "OPEN",
+  "receipt_sha256": "e28811f98a298eb5da9afce7ca1a127b3c198d320e1ea2635c65d3a4188fc122",
+  "schema": "QHTRI_TOE_CANDIDATE_SOFTWARE_RELEASE_GATE_V0_8",
+  "status": "PASS"
+}
