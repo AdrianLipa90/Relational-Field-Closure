@@ -133,6 +133,18 @@ def validate_patch_receipt(receipt: Mapping[str, Any]) -> dict[str, Any]:
         source_tensor.get("construction_receipt_id"),
         "source_tensor.construction_receipt_id",
     )
+    coverage_domain_id = _nonempty(
+        source_tensor.get("coverage_domain_id"), "source_tensor.coverage_domain_id"
+    )
+    coverage_patch_id = _nonempty(
+        source_tensor.get("coverage_patch_id"), "source_tensor.coverage_patch_id"
+    )
+    if coverage_domain_id != ATLAS_DOMAIN_ID:
+        raise W6ContractError("source tensor coverage domain does not match atlas domain")
+    if coverage_patch_id != patch_id:
+        raise W6ContractError("source tensor coverage patch does not match patch receipt")
+    if source_tensor.get("coverage_certified") is not True:
+        raise W6ContractError("source tensor full-patch coverage must be certified")
     derivation = _nonempty(
         source_tensor.get("derivation_class"), "source_tensor.derivation_class"
     )
@@ -179,6 +191,18 @@ def validate_patch_receipt(receipt: Mapping[str, Any]) -> dict[str, Any]:
     )
     if solution_source_digest != tensor_digest:
         raise W6ContractError("source tensor digest mismatch between evidence and local solution")
+    solution_coverage_domain = _nonempty(
+        solution.get("source_tensor_coverage_domain_id"),
+        "local_solution.source_tensor_coverage_domain_id",
+    )
+    solution_coverage_patch = _nonempty(
+        solution.get("source_tensor_coverage_patch_id"),
+        "local_solution.source_tensor_coverage_patch_id",
+    )
+    if solution_coverage_domain != coverage_domain_id:
+        raise W6ContractError("local solution source coverage domain mismatch")
+    if solution_coverage_patch != coverage_patch_id:
+        raise W6ContractError("local solution source coverage patch mismatch")
     _nonempty(
         solution.get("validation_receipt_id"), "local_solution.validation_receipt_id"
     )
@@ -299,6 +323,9 @@ def fixture_patch(patch_id: str) -> dict[str, Any]:
             "representation_kind": "INDEPENDENT_TEST_PACKET",
             "tensor_payload_digest": tensor_digest,
             "construction_receipt_id": f"fixture-source-construction:{patch_id}",
+            "coverage_domain_id": ATLAS_DOMAIN_ID,
+            "coverage_patch_id": patch_id,
+            "coverage_certified": True,
             "derivation_class": "INDEPENDENT_TEST_FIXTURE",
             "independent_of_target_metric_construction": True,
         },
@@ -311,6 +338,8 @@ def fixture_patch(patch_id: str) -> dict[str, Any]:
             "metric_representation_digest": digest(f"fixture-metric:{patch_id}"),
             "einstein_tensor_representation_digest": digest(f"fixture-G:{patch_id}"),
             "source_tensor_payload_digest": tensor_digest,
+            "source_tensor_coverage_domain_id": ATLAS_DOMAIN_ID,
+            "source_tensor_coverage_patch_id": patch_id,
             "validation_receipt_id": f"fixture-local-solution:{patch_id}",
             "validation_head_or_artifact_digest": digest(
                 f"fixture-local-validation:{patch_id}"
@@ -359,6 +388,9 @@ def main():
     high_residual = copy.deepcopy(good_fixture)
     high_residual["patch_receipts"][0]["local_solution"]["residual_norm"] = 1e-3
 
+    bad_coverage = copy.deepcopy(good_fixture)
+    bad_coverage["patch_receipts"][0]["source_tensor"]["coverage_patch_id"] = "ANCHORS_ONLY_NOT_PATCH"
+
     vacuum_no_provenance = copy.deepcopy(good_fixture)
     vacuum_no_provenance["patch_receipts"][0]["source_tensor"][
         "representation_kind"
@@ -383,6 +415,7 @@ def main():
         "source_tensor_digest_mismatch_rejected": expect_reject(digest_mismatch),
         "missing_immutable_source_reference_rejected": expect_reject(no_refs),
         "residual_above_tolerance_rejected": expect_reject(high_residual),
+        "incomplete_or_wrong_source_patch_coverage_rejected": expect_reject(bad_coverage),
         "vacuum_without_independent_domain_provenance_rejected": expect_reject(
             vacuum_no_provenance
         ),
