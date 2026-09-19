@@ -1,0 +1,70 @@
+{
+  "schema": "QHTRI_TOE_SP3_QUATERNIONIC_TANGENT_SOLDERING_VALIDATION_V0_16",
+  "date": "2026-09-19",
+  "status": "PASS",
+  "authority": "CANDIDATE_ONLY",
+  "canon_allowed": false,
+  "physical_production_claim": false,
+  "empirical_theory_confirmation": false,
+  "tested_head_sha": "9f9880cd7b142edd0d26a4dbe0f5e12ab697477e",
+  "source": {
+    "parent_pr": 138,
+    "parent_branch": "candidate/sp3-circumellipsoid-smooth-carrier-v0.15",
+    "evidence_class": "EXTERNAL_OBSERVATIONAL_ARCHIVE_DERIVED_TANGENT_SOLDERING_CANDIDATE"
+  },
+  "construction": {
+    "carrier": "(y-g)^T Q (y-g)=1",
+    "factorization": "Q=R^T R via positive-diagonal Cholesky",
+    "frame": "e_a=R^{-1} J_a R(y-g)",
+    "dual_coframe": "theta^a(v)=e_a^T Q v",
+    "matching_vector": "W=sum_a (B^a/c)e_a",
+    "product_matching_field": "X=partial_x0-W",
+    "spatial_coframe": "vartheta^a=theta^a+(B^a/c)dx0"
+  },
+  "checks": {
+    "global_frame_is_tangent": true,
+    "global_frame_is_Q_orthonormal": true,
+    "global_frame_rank_three_everywhere_sampled": true,
+    "dual_coframe_recovers_matching_coefficients": true,
+    "smooth_matching_vector_is_tangent": true,
+    "GSC3A_spatial_coframe_annihilation": true,
+    "source_anchor_shift_matches_existing_v013_packet": true,
+    "compact_carrier_implies_complete_smooth_spatial_flow": true,
+    "physical_RF_E25_coframe_identity_not_claimed": true
+  },
+  "residuals": {
+    "Q_reconstruction": 3.308722450212111e-24,
+    "quaternion_skew": 0,
+    "surface": 8.881784197001252e-16,
+    "tangent": 6.106226635438361e-16,
+    "frame_gram": 1.1102230246251565e-15,
+    "dual": 1.1102230246251565e-15,
+    "matching_tangent": 4.870439446712227e-21,
+    "theta_W_minus_b": 1.1858461261560205e-20,
+    "coframe_annihilation": 1.1858461261560205e-20,
+    "source_shift": 4.2351647362715017e-20
+  },
+  "candidate_receipt_sha256": "23258a370b37c4ea37f18aec401e6057949d8945d83a43eea52b227b3e52cb05",
+  "ci": {
+    "dedicated": {
+      "workflow": "ToE SP3 quaternionic tangent soldering v0.16",
+      "run_id": 35470759305,
+      "job_id": 105971169407,
+      "conclusion": "success"
+    },
+    "rfc_reference_suite": {
+      "run_id": 35470759311,
+      "conclusion": "success"
+    },
+    "toe_v011_release_gates": {
+      "run_id": 35470759371,
+      "conclusion": "success"
+    }
+  },
+  "remaining_gate": "PHYSICAL_RF_E25_COFRAME_METRIC_IDENTITY_AND_PRODUCTION_ADMISSION",
+  "interpretation_firewall": {
+    "quaternionic_frame_is_coordinate_canonical_candidate_not_measured_coframe": true,
+    "clock_correction_feature_axis_is_not_event_trace_scale": true,
+    "global_physical_spacetime_claim_not_made": true
+  }
+}
