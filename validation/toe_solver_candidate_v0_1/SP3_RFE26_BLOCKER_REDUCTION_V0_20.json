@@ -1,0 +1,63 @@
+{
+  "schema": "QHTRI_TOE_SP3_RFE26_BLOCKER_REDUCTION_VALIDATION_V0_20",
+  "date": "2026-09-20",
+  "status": "PASS",
+  "authority": "CANDIDATE_ONLY",
+  "canon_allowed": false,
+  "physical_production_claim": false,
+  "empirical_theory_confirmation": false,
+  "tested_head_sha": "be826e7d837c06bee8984bcfa12bca6f938e987e",
+  "reduction_class": "DEPENDENCY_REDUCTION_NOT_SOURCE_COMPLETION",
+  "atlas": {
+    "patch_ids": [
+      "SP3_STEREO_N",
+      "SP3_STEREO_S"
+    ],
+    "target_domain_id": "SP3_STATIONARY_PRODUCT_DOMAIN_V0_18_V0_19",
+    "atlas_cover_status": "EXACT_PARENT_V019",
+    "smooth_shared_metric_atlas_status": "CANDIDATE_PASS_PARENT_V019"
+  },
+  "checks": {
+    "parent_v019_PASS": true,
+    "parent_v019_mathematical_RF_E25_atlas_seam_closed": true,
+    "parent_v019_executable_RF_E25_compatibility_PASS": true,
+    "current_missing_one_W6_patch_keeps_GSC5B_domain_coverage_open": true,
+    "complete_two_patch_W6_set_derives_GSC5B_domain_coverage": true,
+    "foreign_solution_patch_id_keeps_GSC5B_open": true,
+    "GSC5A_missing_local_solution_receipt_fails_closed": true,
+    "GSC5A_source_lineage_mismatch_fails_closed": true,
+    "GSC5A_reduced_contract_sufficient_when_all_declared_parents_supplied": true,
+    "counterfactual_complete_packet_is_not_current_evidence": true,
+    "effective_stress_from_geometry_not_promoted_as_physical_source": true,
+    "physical_W6_receipts_remain_open": true,
+    "common_physical_source_field_lineage_remains_open": true,
+    "physical_production_claim_remains_false": true
+  },
+  "frontier": {
+    "independent_W7_domain_coverage_blocker": "REDUCED_TO_W6_PATCH_COMPLETENESS_ON_THIS_TWO_CHART_ROUTE",
+    "W6_physical_RF_E24_local_solution_receipts": "OPEN",
+    "common_physical_source_field_lineage": "OPEN",
+    "RF_E26_production_promotion": "OPEN"
+  },
+  "ci": {
+    "dedicated": {
+      "workflow": "ToE SP3 RF-E26 blocker reduction v0.20",
+      "run_id": 35476175275,
+      "job_id": 105985687577,
+      "conclusion": "success"
+    },
+    "candidate_release_gates": {
+      "run_id": 35476175257,
+      "conclusion": "success"
+    },
+    "rfc_reference_suite": {
+      "run_id": 35476175251,
+      "conclusion": "success"
+    }
+  },
+  "interpretation_firewall": {
+    "no_T_equals_G_over_kappa_physical_source_promotion": true,
+    "counterfactual_dependency_packet_is_not_observational_evidence": true,
+    "geometry_does_not_supply_physical_source_lineage": true
+  }
+}
