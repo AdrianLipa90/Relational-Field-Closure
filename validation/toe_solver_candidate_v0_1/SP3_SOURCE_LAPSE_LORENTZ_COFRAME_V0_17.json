@@ -1,0 +1,59 @@
+{
+  "schema": "QHTRI_TOE_SP3_SOURCE_LAPSE_LORENTZ_COFRAME_VALIDATION_V0_17",
+  "date": "2026-09-19",
+  "status": "PASS",
+  "authority": "CANDIDATE_ONLY",
+  "canon_allowed": false,
+  "physical_production_claim": false,
+  "empirical_theory_confirmation": false,
+  "tested_head_sha": "3c4645b55a4b88b1debc4cfbe88795d8a19bd709",
+  "source": {
+    "parent_pr": 139,
+    "parent_branch": "candidate/sp3-quaternionic-tangent-soldering-v0.16",
+    "clock_packet_schema": "IDT_05K_PRECISION_PRODUCTION_CLOCK_CAPTURE_V0_11",
+    "evidence_class": "EXTERNAL_OBSERVATIONAL_ARCHIVE_DERIVED_GLOBAL_LORENTZ_COFRAME_CANDIDATE"
+  },
+  "lapse": {
+    "construction": "N(y)=exp(L(y)); L is the unique affine interpolant of the five source log_lapse_relative anchors",
+    "anchor_max_decimal_residual": "3E-90",
+    "global_N_min": 0.9999999999861638,
+    "global_N_max": 1.0000000000241862,
+    "source_log_packet_residual": 1.2116903504194741e-27
+  },
+  "coframe_metric": {
+    "temporal": "vartheta0=N dx0",
+    "spatial": "vartheta^a=theta^a+b^a dx0",
+    "matching": "X=partial_x0-W",
+    "signature": "(-,+,+,+)",
+    "det_identity": "det(g)=-N^2",
+    "spatial_annihilation_residual": 4.870439446712227e-21,
+    "temporal_pairing_residual": 0,
+    "metric_det_identity_residual": 2.220446049250313e-16,
+    "minimum_abs_negative_eigenvalue_sampled": 0.9999999999457707,
+    "minimum_positive_eigenvalue_sampled": 0.9999999999999987
+  },
+  "candidate_receipt_sha256": "c6480650e2d8c1abca6877ab124bde551299724ff271fe9371caf8aeafba03b4",
+  "ci": {
+    "dedicated": {
+      "workflow": "ToE SP3 source-lapse Lorentz coframe v0.17",
+      "run_id": 35470971029,
+      "job_id": 105971751751,
+      "conclusion": "success"
+    },
+    "rfc_reference_suite": {
+      "run_id": 35470971021,
+      "job_id": 105971751664,
+      "conclusion": "success"
+    },
+    "toe_v011_release_gates": {
+      "run_id": 35470971055,
+      "conclusion": "success"
+    }
+  },
+  "remaining_gate": "FINITE_OR_EXPLICIT_COORDINATE_ATLAS_PACKET_J_LAMBDA_FOR_RF_E25_AND_PHYSICAL_PRODUCTION_ADMISSION",
+  "interpretation_firewall": {
+    "relative_clock_rate_lapse_candidate_not_independent_production_lapse_measurement": true,
+    "global_intrinsic_coframe_not_yet_executable_RF_E25_coordinate_atlas_packet": true,
+    "physical_spacetime_identity_not_claimed": true
+  }
+}
