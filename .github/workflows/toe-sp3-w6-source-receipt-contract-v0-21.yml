@@ -28,6 +28,7 @@ jobs:
           python experiments/toe_solver_candidate_v0_1/sp3_w6_physical_source_receipt_contract_v0_21.py | tee build/SP3_W6_PHYSICAL_SOURCE_RECEIPT_CONTRACT_V0_21.json
           grep -Fq '"status": "PASS"' build/SP3_W6_PHYSICAL_SOURCE_RECEIPT_CONTRACT_V0_21.json
           grep -Fq '"geometry_derived_source_rejected": true' build/SP3_W6_PHYSICAL_SOURCE_RECEIPT_CONTRACT_V0_21.json
+          grep -Fq '"incomplete_or_wrong_source_patch_coverage_rejected": true' build/SP3_W6_PHYSICAL_SOURCE_RECEIPT_CONTRACT_V0_21.json
           grep -Fq '"vacuum_without_independent_domain_provenance_rejected": true' build/SP3_W6_PHYSICAL_SOURCE_RECEIPT_CONTRACT_V0_21.json
           grep -Fq '"candidate_authority_cannot_promote_physical_production_claim": true' build/SP3_W6_PHYSICAL_SOURCE_RECEIPT_CONTRACT_V0_21.json
           grep -Fq '"actual_physical_W6_source_packet": "OPEN_EXTERNAL_EVIDENCE"' build/SP3_W6_PHYSICAL_SOURCE_RECEIPT_CONTRACT_V0_21.json
