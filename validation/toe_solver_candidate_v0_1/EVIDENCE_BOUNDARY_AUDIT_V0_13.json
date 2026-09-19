@@ -26,9 +26,10 @@
   "candidate_receipt_sha256": "f8870bc2446b3b3c21560f924055d3c6643755817bee782d518d652fdbca986e",
   "ci": {
     "workflow": "ToE 3plus1 two-epoch constructor v0.13",
-    "run_id": 35469807017,
-    "job_id": 105968581048,
-    "tested_head_sha": "faf880d157b356c6fba527cff335cf147a883d50",
+    "run_id": 35469866336,
+    "job_id": 105968739376,
+    "tested_head_sha": "e7fee21f004c28aca7beb8aeac8b3bf39e6a012c",
     "conclusion": "success"
-  }
+  },
+  "constructor_receipt_sha256": "3e8415b78830edabdf7f6cb4b2b3ddd9cfbb68ade3e761dea2b4aa4ab9677a7c"
 }
