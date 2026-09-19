@@ -199,7 +199,8 @@ def main():
 
     evidence_firewall = {
         "v013_model_level_archive_derived": (
-            r013.get("source_evidence_class") == "EXTERNAL_OBSERVATIONAL_ARCHIVE_DERIVED_MODEL_LEVEL"
+            r013.get("source_parent", {}).get("evidence_class")
+            == "EXTERNAL_OBSERVATIONAL_ARCHIVE_DERIVED_MODEL_LEVEL"
         ),
         "v013_physical_production_claim_false": r013.get("physical_production_claim") is False,
         "legacy_internal_PRODUCTION_SOURCE_label_present": legacy_source_label == "PRODUCTION_SOURCE",
