@@ -1,0 +1,58 @@
+{
+  "schema": "QHTRI_TOE_SP3_CANONICAL_CIRCUMELLIPSOID_VALIDATION_V0_15",
+  "date": "2026-09-19",
+  "status": "PASS",
+  "authority": "CANDIDATE_ONLY",
+  "canon_allowed": false,
+  "physical_production_claim": false,
+  "empirical_theory_confirmation": false,
+  "tested_head_sha": "01db959dc3871a9cbd470887efc47341a7ca0dee",
+  "source": {
+    "parent_pr": 137,
+    "parent_branch": "candidate/sp3-affine-matching-field-v0.14",
+    "evidence_class": "EXTERNAL_OBSERVATIONAL_ARCHIVE_DERIVED_SMOOTH_CARRIER_CANDIDATE"
+  },
+  "quadratic_form": {
+    "definition": "Q = 5/4 * inverse(sum_i z_i z_i^T)",
+    "Q_sha256": "967ae828e82e4e00bd3c60c5ed2595d0aa08a433be02c2b5d34ee5f53573f78b",
+    "all_five_source_points_Q_norm_one_exact": true,
+    "all_pairwise_Q_inner_products_minus_one_quarter_exact": true,
+    "Q_positive_definite": true
+  },
+  "smooth_carrier": {
+    "equation": "(y-g)^T Q (y-g)=1",
+    "dimension": 3,
+    "compact": true,
+    "diffeomorphism_class": "S3",
+    "contains_all_five_source_points_exactly": true,
+    "parameter_free_from_source_simplex": true
+  },
+  "matching_field": {
+    "affine_beta_interpolant_recovers_all_source_values_exactly": true,
+    "restriction_to_ellipsoid_is_smooth_R3_valued_field": true,
+    "tangent_bundle_soldering_status": "OPEN"
+  },
+  "candidate_receipt_sha256": "8cc50c83c253075c69eb8cd7386a6d9d0aeab23b54cf396074223b39c808b0e5",
+  "ci": {
+    "dedicated_workflow": {
+      "name": "ToE SP3 canonical circumellipsoid v0.15",
+      "run_id": 35470546045,
+      "job_id": 105970590811,
+      "conclusion": "success"
+    },
+    "rfc_reference_suite": {
+      "run_id": 35470546050,
+      "conclusion": "success"
+    },
+    "toe_v011_release_gates": {
+      "run_id": 35470546078,
+      "conclusion": "success"
+    }
+  },
+  "remaining_gate": "SMOOTH_R3_COEFFICIENT_FIELD_TO_PHYSICAL_TANGENT_VECTOR_FIELD_AND_RF_E25_COFRAME",
+  "interpretation_firewall": {
+    "ellipsoid_is_source_derived_candidate_not_global_physical_space_claim": true,
+    "clock_unit_homogenization_is_not_clock_trace_identification": true,
+    "production_source_admission_remains_false": true
+  }
+}
