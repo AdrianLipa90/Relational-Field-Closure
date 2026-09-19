@@ -1,0 +1,67 @@
+{
+  "schema": "QHTRI_TOE_SP3_RFE25_PRODUCTION_READINESS_VALIDATION_V0_20",
+  "date": "2026-09-19",
+  "status": "PASS",
+  "authority": "CANDIDATE_ONLY",
+  "canon_allowed": false,
+  "physical_production_claim": false,
+  "production_admission": false,
+  "readiness_class": "PACKET_READY_PRODUCTION_AUTHORITY_OPEN",
+  "tested_head_sha": "d295fc733e51e74bc10b04cd773964afc74b79ab",
+  "checks": {
+    "all_six_reduced_packet_coordinates_populated_structurally": true,
+    "TIR_beta_match_bound_route_used_on_all_patches": true,
+    "one_common_realization_id": true,
+    "one_common_clock_id": true,
+    "GSC4A_provenance_wrapper_PASS": true,
+    "downstream_GSC4A_geometry_PASS": true,
+    "downstream_RF_E25_geometry_PASS": true,
+    "declared_provenance_is_not_source_ownership_proof": true,
+    "parent_production_firewalls_remain_open": true,
+    "legacy_source_label_firewall_enforced": true,
+    "missing_software_operators_zero": true,
+    "production_admission_remains_false": true
+  },
+  "metrics": {
+    "GSC4A_max_lapse_residual": 0,
+    "GSC4A_max_spatial_coframe_residual": 2.220446049250313e-16,
+    "GSC4A_max_shift_residual": 1.6940658945086007e-21,
+    "RF_E25_max_coframe_residual": 2.220446049250313e-16,
+    "RF_E25_max_metric_residual": 3.3306690738754696e-16,
+    "missing_software_operators": 0
+  },
+  "provenance_wrapper": {
+    "status": "DECLARED_SOURCE_ROUTES_ADMITTED",
+    "production_source_ownership_status": "SOURCE_CONTROLLED_PROVENANCE_REQUIRED"
+  },
+  "executable_receipt_sha256": "964728f8825fe76993f0abd54d38257d8b68a9a56d5726e55296367c3e059420",
+  "ci": {
+    "dedicated": {
+      "workflow": "ToE SP3 RF-E25 production readiness v0.20",
+      "run_id": 35475517396,
+      "job_id": 105983983673,
+      "conclusion": "success"
+    },
+    "rfc_reference_suite": {
+      "run_id": 35475517379,
+      "conclusion": "success"
+    },
+    "candidate_release_gates": {
+      "run_id": 35475517418,
+      "conclusion": "success"
+    }
+  },
+  "remaining_external_gate": [
+    "source-controlled provenance for the declared physical realization",
+    "GSC3E physical production source-binding witness",
+    "admitted production TIR/IDT/RFC source packet",
+    "production overlap coverage authority",
+    "RF-E26 global Einstein/source carrier"
+  ],
+  "interpretation_firewall": {
+    "packet_readiness_is_not_production_admission": true,
+    "declared_source_reference_is_not_source_ownership_proof": true,
+    "legacy_PRODUCTION_SOURCE_string_is_not_authoritative_evidence_class": true,
+    "physical_production_claim_remains_false": true
+  }
+}
