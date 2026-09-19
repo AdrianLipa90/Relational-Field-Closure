@@ -1,0 +1,97 @@
+{
+  "schema": "QHTRI_TOE_SP3_STEREOGRAPHIC_RFE25_ATLAS_VALIDATION_V0_19",
+  "date": "2026-09-19",
+  "status": "PASS",
+  "authority": "CANDIDATE_ONLY",
+  "canon_allowed": false,
+  "physical_production_claim": false,
+  "empirical_theory_confirmation": false,
+  "tested_head_sha": "023f86f673ef41dd6c247cd76438b1994389c226",
+  "atlas_class": "ANALYTIC_TWO_CHART_STEREOGRAPHIC_ATLAS_PLUS_EXECUTABLE_SOURCE_ANCHOR_COMPATIBILITY",
+  "analytic_atlas": {
+    "north_domain": "S3 minus north pole",
+    "south_domain": "S3 minus south pole",
+    "oriented_south_reflection": "diag(-1,1,1)",
+    "transition": "q=S x/|x|^2",
+    "det_spatial_jacobian": "(x1**2 + x2**2 + x3**2)**(-3)",
+    "north_triad_det": "-8/(1+|x|^2)^3",
+    "south_triad_det": "-8/(1+|q|^2)^3",
+    "lorentz_frame_transition": "I4",
+    "temporal_drift": "0",
+    "coframe_overlap": "T_S(q(x)) A(x)=T_N(x)",
+    "RF_E25_overlap": "E_S J = I4 E_N"
+  },
+  "source_anchor": {
+    "satellite": "G02",
+    "orientation_det": 1.0633818583386492,
+    "north_triad_det": -1.031041827726037,
+    "south_triad_det": -0.9695875659726431
+  },
+  "residuals": {
+    "stereographic_transition": 1.1102230246251565e-16,
+    "triad_overlap": 1.3877787807814457e-16,
+    "shift_overlap": 1.6940658945086007e-21,
+    "GSC4A_lapse": 0,
+    "GSC4A_spatial_coframe": 2.220446049250313e-16,
+    "GSC4A_shift": 1.6940658945086007e-21,
+    "GSC4A_rotation": 0,
+    "RF_E25_coframe": 2.220446049250313e-16,
+    "RF_E25_lorentz": 0,
+    "RF_E25_metric": 3.3306690738754696e-16
+  },
+  "checks": {
+    "north_south_inverse_coordinates_agree_on_overlap_exact": true,
+    "spatial_overlap_jacobian_det_equals_inverse_radius_six_exact": true,
+    "spatial_overlap_orientation_preserving": true,
+    "global_quaternionic_coframe_pullback_relation_TS_A_equals_TN_exact": true,
+    "north_chart_triad_invertible_exact": true,
+    "south_chart_triad_invertible_exact": true,
+    "Lorentz_frame_transition_identity_is_exact": true,
+    "two_stereographic_domains_cover_S3": true,
+    "shared_time_coordinate_first_J_row_is_1_0_0_0": true,
+    "parent_v018_global_Cauchy_carrier_PASS": true,
+    "source_anchor_stereographic_transition_matches_symbolic_map": true,
+    "source_anchor_spatial_jacobian_orientation_positive": true,
+    "source_anchor_triad_overlap_residual_below_tolerance": true,
+    "source_anchor_shift_overlap_residual_below_tolerance": true,
+    "GSC4A_source_assembler_compatible": true,
+    "RF_E25_real_certifier_compatible": true,
+    "RF_E25_patch_count_two": true,
+    "RF_E25_bidirectional_overlap_count_two": true,
+    "RF_E25_lorentz_residual_below_tolerance": true,
+    "RF_E25_metric_residual_below_tolerance": true,
+    "RF_E25_coframe_residual_below_tolerance": true,
+    "RF_E25_production_input_still_open": true,
+    "GSC4A_source_packet_still_open": true,
+    "physical_production_claim_remains_false": true
+  },
+  "executable_receipt_sha256": "a152b55af46e236bf312a1b7c69f0e02b89ecd3ac821528caf89bc20677d6fb1",
+  "ci": {
+    "dedicated": {
+      "workflow": "ToE SP3 stereographic RF-E25 atlas v0.19",
+      "run_id": 35475169325,
+      "job_id": 105983064565,
+      "conclusion": "success"
+    },
+    "candidate_release_gates": {
+      "run_id": 35475169235,
+      "conclusion": "success"
+    },
+    "rfc_reference_suite": {
+      "run_id": 35475169270,
+      "conclusion": "success"
+    }
+  },
+  "frontier": {
+    "candidate_mathematical_RF_E25_atlas_seam": "CLOSED",
+    "executable_RF_E25_data_structure_compatibility": "PASS",
+    "production_RF_E25_admission": "OPEN",
+    "RF_E26_global_Einstein_carrier": "OPEN"
+  },
+  "interpretation_firewall": {
+    "analytic_chart_cover_is_mathematical_not_new_observational_evidence": true,
+    "single_source_anchor_software_instantiation_is_not_production_admission": true,
+    "RF_E25_production_status_not_promoted": true,
+    "RF_E26_not_claimed": true
+  }
+}

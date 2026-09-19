@@ -1,0 +1,46 @@
+name: ToE SP3 stereographic RF-E25 atlas v0.19
+
+on:
+  pull_request:
+    paths:
+      - "experiments/toe_solver_candidate_v0_1/RF_GSC4C_SP3_STEREOGRAPHIC_RFE25_ATLAS_V0_19.md"
+      - "experiments/toe_solver_candidate_v0_1/sp3_stereographic_rfe25_atlas_v0_19.py"
+      - ".github/workflows/toe-sp3-stereographic-rfe25-atlas-v0-19.yml"
+  push:
+    paths:
+      - "experiments/toe_solver_candidate_v0_1/RF_GSC4C_SP3_STEREOGRAPHIC_RFE25_ATLAS_V0_19.md"
+      - "experiments/toe_solver_candidate_v0_1/sp3_stereographic_rfe25_atlas_v0_19.py"
+      - ".github/workflows/toe-sp3-stereographic-rfe25-atlas-v0-19.yml"
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install numpy sympy pytest
+      - name: Validate RF-E25/GSC4A parent certifiers
+        env:
+          PYTHONPATH: .:src
+        run: |
+          pytest -q tests/reference/test_gsc4a_source_assembled_shared_spacetime_atlas.py
+          pytest -q tests/reference/test_rfe25_shared_spacetime_atlas.py
+      - name: Validate stereographic RF-E25 atlas bridge
+        env:
+          PYTHONPATH: .:src
+        run: |
+          mkdir -p build
+          python experiments/toe_solver_candidate_v0_1/sp3_stereographic_rfe25_atlas_v0_19.py | tee build/SP3_STEREOGRAPHIC_RFE25_ATLAS_V0_19.json
+          grep -Fq '"status": "PASS"' build/SP3_STEREOGRAPHIC_RFE25_ATLAS_V0_19.json
+          grep -Fq '"global_quaternionic_coframe_pullback_relation_TS_A_equals_TN_exact": true' build/SP3_STEREOGRAPHIC_RFE25_ATLAS_V0_19.json
+          grep -Fq '"spatial_overlap_orientation_preserving": true' build/SP3_STEREOGRAPHIC_RFE25_ATLAS_V0_19.json
+          grep -Fq '"GSC4A_source_assembler_compatible": true' build/SP3_STEREOGRAPHIC_RFE25_ATLAS_V0_19.json
+          grep -Fq '"RF_E25_real_certifier_compatible": true' build/SP3_STEREOGRAPHIC_RFE25_ATLAS_V0_19.json
+          grep -Fq '"RF_E25_production_input_still_open": true' build/SP3_STEREOGRAPHIC_RFE25_ATLAS_V0_19.json
+          grep -Fq '"physical_production_claim": false' build/SP3_STEREOGRAPHIC_RFE25_ATLAS_V0_19.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: toe-sp3-stereographic-rfe25-atlas-v0-19
+          path: build/SP3_STEREOGRAPHIC_RFE25_ATLAS_V0_19.json
