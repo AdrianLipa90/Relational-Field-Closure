@@ -1,0 +1,36 @@
+name: ToE static S3 ADM dust Lambda crosscheck v0.25
+
+on:
+  pull_request:
+    paths:
+      - "experiments/toe_solver_candidate_v0_1/RF_GSC5H_STATIC_S3_ADM_DUST_LAMBDA_CROSSCHECK_V0_25.md"
+      - "experiments/toe_solver_candidate_v0_1/static_s3_adm_dust_lambda_crosscheck_v0_25.py"
+      - ".github/workflows/toe-static-s3-adm-dust-lambda-v0-25.yml"
+  push:
+    paths:
+      - "experiments/toe_solver_candidate_v0_1/RF_GSC5H_STATIC_S3_ADM_DUST_LAMBDA_CROSSCHECK_V0_25.md"
+      - "experiments/toe_solver_candidate_v0_1/static_s3_adm_dust_lambda_crosscheck_v0_25.py"
+      - ".github/workflows/toe-static-s3-adm-dust-lambda-v0-25.yml"
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install sympy
+      - name: Validate independent ADM static S3 dust Lambda cross-check
+        run: |
+          mkdir -p build
+          python experiments/toe_solver_candidate_v0_1/static_s3_adm_dust_lambda_crosscheck_v0_25.py | tee build/STATIC_S3_ADM_DUST_LAMBDA_CROSSCHECK_V0_25.json
+          grep -Fq '"status": "PASS"' build/STATIC_S3_ADM_DUST_LAMBDA_CROSSCHECK_V0_25.json
+          grep -Fq '"ADM_system_unique_solution_Lambda_k_A_2k": true' build/STATIC_S3_ADM_DUST_LAMBDA_CROSSCHECK_V0_25.json
+          grep -Fq '"finite_radius_vacuum_no_go_from_ADM_constraints": true' build/STATIC_S3_ADM_DUST_LAMBDA_CROSSCHECK_V0_25.json
+          grep -Fq '"ADM_solution_agrees_with_direct_Einstein_tensor_v024": true' build/STATIC_S3_ADM_DUST_LAMBDA_CROSSCHECK_V0_25.json
+          grep -Fq '"physical_production_claim": false' build/STATIC_S3_ADM_DUST_LAMBDA_CROSSCHECK_V0_25.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: toe-static-s3-adm-dust-lambda-v0-25
+          path: build/STATIC_S3_ADM_DUST_LAMBDA_CROSSCHECK_V0_25.json
