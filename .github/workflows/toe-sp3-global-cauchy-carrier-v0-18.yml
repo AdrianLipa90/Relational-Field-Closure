@@ -1,0 +1,46 @@
+name: ToE SP3 global Cauchy carrier v0.18
+
+on:
+  pull_request:
+    paths:
+      - "experiments/toe_solver_candidate_v0_1/RF_GSC6D_SP3_GLOBAL_CAUCHY_CARRIER_V0_18.md"
+      - "experiments/toe_solver_candidate_v0_1/sp3_global_cauchy_carrier_v0_18.py"
+      - ".github/workflows/toe-sp3-global-cauchy-carrier-v0-18.yml"
+  push:
+    paths:
+      - "experiments/toe_solver_candidate_v0_1/RF_GSC6D_SP3_GLOBAL_CAUCHY_CARRIER_V0_18.md"
+      - "experiments/toe_solver_candidate_v0_1/sp3_global_cauchy_carrier_v0_18.py"
+      - ".github/workflows/toe-sp3-global-cauchy-carrier-v0-18.yml"
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install numpy sympy pytest
+      - name: Validate v0.17 parent and RF-GSC6B parent route
+        env:
+          PYTHONPATH: .:src
+        run: |
+          python experiments/toe_solver_candidate_v0_1/sp3_source_lapse_lorentz_coframe_v0_17.py > /tmp/v017.json
+          grep -Fq '"status": "PASS"' /tmp/v017.json
+          pytest -q tests/reference/test_gsc6b_proper_temporal_clock.py
+      - name: Validate SP3 global Cauchy carrier
+        env:
+          PYTHONPATH: .:src
+        run: |
+          mkdir -p build
+          python experiments/toe_solver_candidate_v0_1/sp3_global_cauchy_carrier_v0_18.py | tee build/SP3_GLOBAL_CAUCHY_CARRIER_V0_18.json
+          grep -Fq '"status": "PASS"' build/SP3_GLOBAL_CAUCHY_CARRIER_V0_18.json
+          grep -Fq '"ADM_inverse_metric_clock_identity_ginv_dt_dt_equals_minus_one_over_N2": true' build/SP3_GLOBAL_CAUCHY_CARRIER_V0_18.json
+          grep -Fq '"projection_clock_proper_from_R_times_compact_fiber": true' build/SP3_GLOBAL_CAUCHY_CARRIER_V0_18.json
+          grep -Fq '"RF_GSC6B_global_hyperbolicity_eligible": true' build/SP3_GLOBAL_CAUCHY_CARRIER_V0_18.json
+          grep -Fq '"RF_E25_production_atlas_not_claimed": true' build/SP3_GLOBAL_CAUCHY_CARRIER_V0_18.json
+          grep -Fq '"physical_production_claim": false' build/SP3_GLOBAL_CAUCHY_CARRIER_V0_18.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: toe-sp3-global-cauchy-carrier-v0-18
+          path: build/SP3_GLOBAL_CAUCHY_CARRIER_V0_18.json

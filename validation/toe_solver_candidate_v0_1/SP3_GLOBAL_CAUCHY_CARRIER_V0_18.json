@@ -1,0 +1,77 @@
+{
+  "schema": "QHTRI_TOE_SP3_GLOBAL_CAUCHY_CARRIER_VALIDATION_V0_18",
+  "date": "2026-09-19",
+  "status": "PASS",
+  "authority": "CANDIDATE_ONLY",
+  "canon_allowed": false,
+  "physical_production_claim": false,
+  "empirical_theory_confirmation": false,
+  "tested_head_sha": "b3e9d6385cfe0ca1bdd6b9baf38e35034e08ae7c",
+  "carrier_class": "SOURCE_DERIVED_STATIONARY_MATHEMATICAL_EXTENSION",
+  "carrier": {
+    "M": "R x E_Q",
+    "spatial_fiber": "E_Q={(y-g)^T Q (y-g)=1}",
+    "time_function": "t=x0",
+    "time_gradient_norm": "-1/N**2",
+    "signature": "(-,+,+,+)",
+    "cauchy_slice": "{t=const} ~= E_Q ~= S3"
+  },
+  "lapse": {
+    "global_N_min": 0.9999999999861638,
+    "global_N_max": 1.0000000000241862,
+    "smooth_finite_positive": true
+  },
+  "checks": {
+    "parent_v016_PASS": true,
+    "parent_v017_PASS": true,
+    "Q_positive_definite_exact_by_Sylvester": true,
+    "Q_nonsingular_exact": true,
+    "source_ellipsoid_compact_from_positive_definite_Q": true,
+    "stationary_product_extension_R_times_E_Q_declared_candidate_only": true,
+    "global_product_trivialization_on_stationary_extension": true,
+    "ADM_inverse_metric_clock_identity_ginv_dt_dt_equals_minus_one_over_N2": true,
+    "global_clock_gradient_strictly_timelike_for_positive_N": true,
+    "global_lapse_positive_finite_on_compact_fiber": true,
+    "projection_clock_proper_from_R_times_compact_fiber": true,
+    "RF_GSC6B_wick_completeness_derived": true,
+    "RF_GSC6B_smooth_slice_lapse_majorant_derived": true,
+    "RF_GSC6B_steep_reparametrization_derived": true,
+    "RF_GSC6B_global_hyperbolicity_eligible": true,
+    "global_Cauchy_foliation_consequence_typed_by_RF_GSC6B_external_theorem": true,
+    "RF_E25_production_atlas_not_claimed": true,
+    "RF_E26_global_Einstein_carrier_not_claimed": true,
+    "stationary_extension_not_claimed_as_external_observation": true,
+    "physical_production_claim_remains_false": true
+  },
+  "executable_receipt_sha256": "eaf8507bbd720ab42bd8ba9d99f19adaf085d18b48029d83f0c7d1439fca6310",
+  "ci": {
+    "dedicated": {
+      "workflow": "ToE SP3 global Cauchy carrier v0.18",
+      "run_id": 35474974137,
+      "job_id": 105982552208,
+      "conclusion": "success"
+    },
+    "candidate_release_gates": {
+      "run_id": 35474974145,
+      "job_id": 105982552400,
+      "conclusion": "success"
+    },
+    "rfc_reference_suite": {
+      "run_id": 35474974162,
+      "job_id": 105982552376,
+      "conclusion": "success"
+    }
+  },
+  "remaining_gate": [
+    "explicit RF-E25 J/Lambda coordinate atlas packet and production admission",
+    "RF-E26 global Einstein carrier and target-domain coverage",
+    "empirical support for stationary extension outside frozen source window",
+    "nonlinear global stability"
+  ],
+  "interpretation_firewall": {
+    "global_hyperbolicity_is_candidate_mathematical_carrier_statement": true,
+    "not_a_production_RF_E25_promotion": true,
+    "not_an_RF_E26_Einstein_solution_claim": true,
+    "stationary_extension_is_not_new_observational_evidence": true
+  }
+}
