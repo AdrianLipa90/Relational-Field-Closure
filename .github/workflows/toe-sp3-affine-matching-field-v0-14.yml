@@ -1,0 +1,37 @@
+name: ToE SP3 affine matching field v0.14
+
+on:
+  pull_request:
+    paths:
+      - "experiments/toe_solver_candidate_v0_1/RF_GSC3I_SP3_AFFINE_MATCHING_FIELD_V0_14.md"
+      - "experiments/toe_solver_candidate_v0_1/sp3_affine_matching_field_v0_14.py"
+      - ".github/workflows/toe-sp3-affine-matching-field-v0-14.yml"
+  push:
+    paths:
+      - "experiments/toe_solver_candidate_v0_1/RF_GSC3I_SP3_AFFINE_MATCHING_FIELD_V0_14.md"
+      - "experiments/toe_solver_candidate_v0_1/sp3_affine_matching_field_v0_14.py"
+      - ".github/workflows/toe-sp3-affine-matching-field-v0-14.yml"
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install numpy
+      - name: Validate unique affine matching-field extension
+        run: |
+          mkdir -p build
+          python experiments/toe_solver_candidate_v0_1/sp3_affine_matching_field_v0_14.py | tee build/SP3_AFFINE_MATCHING_FIELD_V0_14.json
+          grep -Fq '"status": "PASS"' build/SP3_AFFINE_MATCHING_FIELD_V0_14.json
+          grep -Fq '"unique_global_affine_interpolant_exists": true' build/SP3_AFFINE_MATCHING_FIELD_V0_14.json
+          grep -Fq '"global_affine_interpolant_recovers_all_source_beta_exactly": true' build/SP3_AFFINE_MATCHING_FIELD_V0_14.json
+          grep -Fq '"all_pairwise_triangular_overlap_restrictions_agree_exactly": true' build/SP3_AFFINE_MATCHING_FIELD_V0_14.json
+          grep -Fq '"whole_data_defined_simplex_field_is_subluminal_by_convexity": true' build/SP3_AFFINE_MATCHING_FIELD_V0_14.json
+          grep -Fq '"physical_production_claim": false' build/SP3_AFFINE_MATCHING_FIELD_V0_14.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: toe-sp3-affine-matching-field-v0-14
+          path: build/SP3_AFFINE_MATCHING_FIELD_V0_14.json
