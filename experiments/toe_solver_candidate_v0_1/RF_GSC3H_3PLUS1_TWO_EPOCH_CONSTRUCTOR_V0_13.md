@@ -163,6 +163,61 @@ where (S) denotes the frozen two-epoch source.
 
 This is stronger than manually assigning the same identifier after independent construction: all three packet surfaces are deterministic projections of one source parent.
 
+## 4A. Data-defined affine 4-simplex
+
+The five satellite midpoint records are five points in the same (3+1) affine carrier:
+
+[
+\bar y_{mathrm{G01}},ldots,ar y_{mathrm{G05}}inmathbb R^4.
+]
+
+Using (ar y_{mathrm{G01}}) as affine origin, form the (4\times4) difference matrix
+
+[
+D=
+\big[
+\bar y_{mathrm{G02}}-\bar y_{mathrm{G01}},
+\ldots,
+\bar y_{mathrm{G05}}-\bar y_{mathrm{G01}}
+\big].
+]
+
+For the frozen SP3 decimals the determinant is exactly
+
+[
+\boxed{
+\det D=
+-\frac{
+13977020116417867310346922964392497592033
+}{
+1600000000000000000000000
+}
+\neq0.
+}
+]
+
+Hence the five observed midpoint events are affinely independent and determine a unique nondegenerate affine 4-simplex.
+
+The boundary of a 4-simplex has exactly five tetrahedral facets, obtained by omitting one of its five vertices. The existing `spatial_packet()` constructs exactly those five four-vertex subsets.
+
+Therefore, at the candidate level,
+
+[
+\boxed{
+\text{five observed }(3+1)	ext{ midpoint events}
+\Longrightarrow
+\text{data-defined affine 4-simplex}
+\Longrightarrow
+\partial\Delta^4
+}
+]
+
+with no additional tetrahedral-incidence choice.
+
+This removes the arbitrariness of the specific boundary-of-a-4-simplex incidence used by the candidate. It does **not** by itself prove that this finite simplicial boundary is the global physical spatial manifold.
+
+Affine independence is unchanged by any nonzero rescaling of the clock coordinate, so the rank statement does not depend on a particular positive clock-unit conversion.
+
 ## 5. Relation to the TIR 3+1 half-lift
 
 TIR separately contains the exact local carrier decomposition
