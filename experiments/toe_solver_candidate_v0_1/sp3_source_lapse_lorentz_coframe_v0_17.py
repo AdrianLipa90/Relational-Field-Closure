@@ -227,7 +227,7 @@ def main():
         "spatial_frame_remains_Q_orthonormal": max_frame_gram_residual < 1e-10,
         "ADM_spatial_coframe_annihilates_matching_X": max_spatial_annihilation_residual < 1e-10,
         "temporal_coframe_pairs_X_to_positive_lapse": max_temporal_pairing_residual < 1e-10 and min_sample_lapse > 0.0,
-        "metric_has_one_negative_three_positive_eigenvalues": min_negative_gap > 0.0 and min_positive_eigenvalue > 0.0,
+        "metric_has_one_negative_three_positive_eigenvalues": bool(min_negative_gap > 0.0 and min_positive_eigenvalue > 0.0),
         "metric_determinant_equals_minus_lapse_squared": max_metric_det_identity_residual < 1e-8,
         "source_anchor_log_lapse_matches_existing_clock_packet": source_log_packet_residual < 1e-12,
         "RF_E25_coordinate_atlas_packet_not_claimed": True,
