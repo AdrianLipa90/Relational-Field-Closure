@@ -1,0 +1,46 @@
+{
+  "schema": "QHTRI_TOE_SP3_AFFINE_MATCHING_FIELD_VALIDATION_V0_14",
+  "date": "2026-09-19",
+  "status": "PASS",
+  "authority": "CANDIDATE_ONLY",
+  "canon_allowed": false,
+  "physical_production_claim": false,
+  "empirical_theory_confirmation": false,
+  "tested_head_sha": "ba3fd471d2f95f70f67b0eb153c441f70ce47281",
+  "source": {
+    "parent_pr": 136,
+    "parent_branch": "feat/3plus1-two-epoch-constructor-v0.13",
+    "realization_id_class": "physical:igs-sp3:sha256:*",
+    "source_evidence_class": "EXTERNAL_OBSERVATIONAL_ARCHIVE_DERIVED_AFFINE_FIELD_CANDIDATE"
+  },
+  "affine_interpolant": {
+    "augmented_matrix_determinant_numerator": "-13977020116417867310346922964392497592033",
+    "augmented_matrix_determinant_denominator": "1600000000000000000000000",
+    "coefficient_sha256": "3ed66f680e41d1d7ee886a66211e673ba1397b931ad1f3e135e025c473304f74",
+    "unique_global_affine_interpolant_exists": true,
+    "global_affine_interpolant_recovers_all_source_beta_exactly": true
+  },
+  "overlap_and_bound": {
+    "all_pairwise_triangular_overlap_restrictions_agree_exactly": true,
+    "whole_data_defined_simplex_field_is_subluminal_by_convexity": true,
+    "existing_v013_matching_packet_max_vertex_beta_residual": 1.2633333333333333e-14
+  },
+  "result": {
+    "source_vertex_values_to_global_affine_coefficient_field": "CLOSED_CANDIDATE_LEVEL",
+    "facet_overlap_compatibility": "CLOSED_EXACT",
+    "smooth_physical_tangent_realization": "OPEN",
+    "global_physical_spatial_carrier_binding": "OPEN"
+  },
+  "candidate_receipt_sha256": "1beebe1ee2aff988c2abbd8fd0579389fa3e93c84e133bde814598e9de76e0bc",
+  "ci": {
+    "workflow": "ToE SP3 affine matching field v0.14",
+    "run_id": 35470336258,
+    "job_id": 105970020416,
+    "conclusion": "success"
+  },
+  "interpretation_firewall": {
+    "ambient_affine_interpolant_is_not_yet_global_physical_spatial_field": true,
+    "simplicial_boundary_smoothing_selection_remains_open": true,
+    "production_source_admission_remains_false": true
+  }
+}
