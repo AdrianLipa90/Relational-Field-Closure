@@ -1,0 +1,37 @@
+name: ToE static S3 dust Lambda reference v0.24
+
+on:
+  pull_request:
+    paths:
+      - "experiments/toe_solver_candidate_v0_1/RF_GSC5G_STATIC_S3_DUST_LAMBDA_REFERENCE_V0_24.md"
+      - "experiments/toe_solver_candidate_v0_1/static_s3_dust_lambda_reference_v0_24.py"
+      - ".github/workflows/toe-static-s3-dust-lambda-reference-v0-24.yml"
+  push:
+    paths:
+      - "experiments/toe_solver_candidate_v0_1/RF_GSC5G_STATIC_S3_DUST_LAMBDA_REFERENCE_V0_24.md"
+      - "experiments/toe_solver_candidate_v0_1/static_s3_dust_lambda_reference_v0_24.py"
+      - ".github/workflows/toe-static-s3-dust-lambda-reference-v0-24.yml"
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install sympy
+      - name: Validate exact static S3 dust plus Lambda reference
+        run: |
+          mkdir -p build
+          python experiments/toe_solver_candidate_v0_1/static_s3_dust_lambda_reference_v0_24.py | tee build/STATIC_S3_DUST_LAMBDA_REFERENCE_V0_24.json
+          grep -Fq '"status": "PASS"' build/STATIC_S3_DUST_LAMBDA_REFERENCE_V0_24.json
+          grep -Fq '"static_product_Einstein_tensor_diag_3k_minus_k_minus_k_minus_k": true' build/STATIC_S3_DUST_LAMBDA_REFERENCE_V0_24.json
+          grep -Fq '"dust_plus_Lambda_solution_unique_in_declared_class": true' build/STATIC_S3_DUST_LAMBDA_REFERENCE_V0_24.json
+          grep -Fq '"finite_radius_vacuum_plus_Lambda_incompatible": true' build/STATIC_S3_DUST_LAMBDA_REFERENCE_V0_24.json
+          grep -Fq '"unit_radius_reference_is_Lambda_1_A_2": true' build/STATIC_S3_DUST_LAMBDA_REFERENCE_V0_24.json
+          grep -Fq '"physical_production_claim": false' build/STATIC_S3_DUST_LAMBDA_REFERENCE_V0_24.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: toe-static-s3-dust-lambda-reference-v0-24
+          path: build/STATIC_S3_DUST_LAMBDA_REFERENCE_V0_24.json
