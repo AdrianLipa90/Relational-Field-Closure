@@ -1,0 +1,46 @@
+name: ToE SP3 RF-E26 blocker reduction v0.20
+
+on:
+  pull_request:
+    paths:
+      - "experiments/toe_solver_candidate_v0_1/RF_GSC5C_SP3_RFE26_BLOCKER_REDUCTION_V0_20.md"
+      - "experiments/toe_solver_candidate_v0_1/sp3_rfe26_blocker_reduction_v0_20.py"
+      - ".github/workflows/toe-sp3-rfe26-blocker-reduction-v0-20.yml"
+  push:
+    paths:
+      - "experiments/toe_solver_candidate_v0_1/RF_GSC5C_SP3_RFE26_BLOCKER_REDUCTION_V0_20.md"
+      - "experiments/toe_solver_candidate_v0_1/sp3_rfe26_blocker_reduction_v0_20.py"
+      - ".github/workflows/toe-sp3-rfe26-blocker-reduction-v0-20.yml"
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install pytest
+      - name: Validate GSC5A/GSC5B parent reducers
+        env:
+          PYTHONPATH: .:src
+        run: |
+          pytest -q tests/reference/test_gsc5a_natural_einstein_globalization.py
+          pytest -q tests/reference/test_gsc5b_canonical_atlas_domain_coverage.py
+      - name: Validate SP3 RF-E26 blocker reduction
+        env:
+          PYTHONPATH: .:src
+        run: |
+          mkdir -p build
+          python experiments/toe_solver_candidate_v0_1/sp3_rfe26_blocker_reduction_v0_20.py | tee build/SP3_RFE26_BLOCKER_REDUCTION_V0_20.json
+          grep -Fq '"status": "PASS"' build/SP3_RFE26_BLOCKER_REDUCTION_V0_20.json
+          grep -Fq '"complete_two_patch_W6_set_derives_GSC5B_domain_coverage": true' build/SP3_RFE26_BLOCKER_REDUCTION_V0_20.json
+          grep -Fq '"parent_v019_RF_E25_production_admission_remains_open": true' build/SP3_RFE26_BLOCKER_REDUCTION_V0_20.json
+          grep -Fq '"GSC5A_missing_local_solution_receipt_fails_closed": true' build/SP3_RFE26_BLOCKER_REDUCTION_V0_20.json
+          grep -Fq '"GSC5A_source_lineage_mismatch_fails_closed": true' build/SP3_RFE26_BLOCKER_REDUCTION_V0_20.json
+          grep -Fq '"physical_W6_receipts_remain_open": true' build/SP3_RFE26_BLOCKER_REDUCTION_V0_20.json
+          grep -Fq '"physical_production_claim": false' build/SP3_RFE26_BLOCKER_REDUCTION_V0_20.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: toe-sp3-rfe26-blocker-reduction-v0-20
+          path: build/SP3_RFE26_BLOCKER_REDUCTION_V0_20.json
