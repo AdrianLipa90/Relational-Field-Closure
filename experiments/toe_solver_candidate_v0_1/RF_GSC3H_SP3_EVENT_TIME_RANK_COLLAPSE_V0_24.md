@@ -1,83 +1,105 @@
 # RF-GSC3H — SP3 Physical Event-Time Rank Collapse v0.24
 
-Status: CANDIDATE_ONLY / EXACT_EVENT_TIME_SUBSTITUTION_RANK_COLLAPSE / CLOCK_CORRECTION_FEATURE_NEQ_EVENT_TIME_REINFORCED / PHYSICAL_S3_IDENTITY_OPEN / CANON_ALLOWED_FALSE
+Status: CANDIDATE_ONLY / EXACT_EVENT_TIME_SUBSTITUTION_RANK_COLLAPSE / RELATIONAL_MIDPOINT_NEQ_TRAJECTORY_MIDEVENT / CLOCK_CORRECTION_FEATURE_NEQ_EVENT_TIME_REINFORCED / PHYSICAL_S3_IDENTITY_OPEN / CANON_ALLOWED_FALSE
 
 Date: 2026-09-20
 
 ## 1. Purpose
 
-V0.13–v0.15 obtain a nondegenerate affine four-simplex and a smooth \(S^3\)-like carrier from five four-component midpoint records
+V0.13–v0.15 obtain a nondegenerate affine four-simplex and a smooth \(S^3\)-like carrier from five four-component **relational midpoint** records
 
 \[
 y_s
 =
 \left(
-\mathbf X_s,
-c\,\delta t_{{\rm clock},s}
+\frac{\mathbf X_s^{(1)}+\mathbf X_s^{(2)}}2,
+c\,\frac{\delta t_{{\rm clock},s}^{(1)}+\delta t_{{\rm clock},s}^{(2)}}2
 \right).
 \]
 
-The fourth component is the SP3 clock-correction feature converted to length units.
+The fourth component is an SP3 clock-correction feature converted to length units.
 
-Earlier validation already rejects direct identification of that raw clock-correction feature with the physical event-trace time.
+The source file also contains an actual record at the physical midpoint epoch 00:02. Therefore the relational midpoint can be compared directly with the physical mid-epoch trajectory event.
 
-This note tests what happens if the fourth component is replaced by the actual common physical event time of the midpoint epoch.
+## 2. Relational midpoint is not the physical mid-epoch event
 
-## 2. Common physical midpoint epoch
-
-The frozen source uses two common epochs for all five satellites:
+The frozen source epochs are
 
 \[
 t_1=\text{2015-01-21T00:01:00Z},
+\qquad
+t_2=\text{2015-01-21T00:03:00Z},
 \]
 
-\[
-t_2=\text{2015-01-21T00:03:00Z}.
-\]
-
-Therefore every satellite has the same physical midpoint epoch
+with actual source records also present at
 
 \[
 \boxed{
-t_\star
-=
-\frac{t_1+t_2}{2}
-=
-\text{2015-01-21T00:02:00Z}.
+t_\star=\text{2015-01-21T00:02:00Z}.
 }
 \]
 
-If the fourth coordinate is the actual event time, the five midpoint events are
+Define the relational spatial midpoint
+
+\[
+\mathbf M_s
+=
+\frac{\mathbf X_s^{(1)}+\mathbf X_s^{(2)}}2
+\]
+
+and the actual physical mid-epoch position
+
+\[
+\mathbf P_s^\star
+=
+\mathbf X_s(t_\star).
+\]
+
+For all five frozen satellites,
 
 \[
 \boxed{
-\widetilde y_s
-=
-(\mathbf X_s,c\,t_\star).
+\mathbf M_s\ne\mathbf P_s^\star.
 }
 \]
 
-All five therefore lie in the affine hyperplane
+The discrepancy is of order \(0.7\)–\(0.85\) km for this 120-second chord.
+
+Therefore
 
 \[
-x^0=c\,t_\star.
+\boxed{
+M=\frac{A+B}{2}
+}
 \]
 
-## 3. Exact affine-rank consequence
+must be interpreted as the affine/relational centre of the endpoint pair, not automatically as a third physical event lying on the actual trajectory at the midpoint time.
 
-Choose one midpoint as affine base point.
+This distinction is fully compatible with the causal-pair theorem.
 
-For every other midpoint,
+## 3. Actual common-time physical events
+
+The five actual source records at \(t_\star\) are
 
 \[
-\widetilde y_s-\widetilde y_{s_0}
+\widehat y_s
 =
-(\mathbf X_s-\mathbf X_{s_0},0).
+(\mathbf P_s^\star,c\,t_\star).
 \]
 
-Thus the fourth component of every affine-difference vector is exactly zero.
+All five share the same physical event time.
 
-The \(4\times4\) affine-difference determinant therefore satisfies
+Hence for any affine base point \(s_0\),
+
+\[
+\widehat y_s-\widehat y_{s_0}
+=
+(\mathbf P_s^\star-\mathbf P_{s_0}^\star,0).
+\]
+
+The fourth component of every affine-difference vector is exactly zero.
+
+Therefore the four-dimensional affine determinant satisfies
 
 \[
 \boxed{
@@ -85,50 +107,39 @@ The \(4\times4\) affine-difference determinant therefore satisfies
 }
 \]
 
-Hence
+Thus
 
 \[
 \boxed{
 \operatorname{affrank}
-\{\widetilde y_s\}
+\{\widehat y_s\}
 \le3.
 }
 \]
 
-For the frozen source the spatial midpoint differences have rank three, so in fact
+The actual 00:02 spatial positions have affine rank three, so
 
 \[
 \boxed{
 \operatorname{affrank}
-\{\widetilde y_s\}
+\{\widehat y_s\}
 =3.
 }
 \]
 
-The five common-time physical midpoint events therefore do not define a nondegenerate affine four-simplex.
+## 4. Contrast with the feature-derived v0.13 lift
 
-## 4. Contrast with the clock-correction feature lift
+The v0.13/v0.15 carrier does not use the common event time as its fourth coordinate.
 
-The existing v0.13 source lift uses
+It uses the satellite-dependent clock-correction feature.
 
-\[
-y_s
-=
-\left(
-\mathbf X_s,
-c\,\delta t_{{\rm clock},s}
-\right).
-\]
+For the same five source identities, that feature lift has nonzero four-dimensional affine determinant and therefore affine rank four.
 
-Those five source vectors have affine rank four.
-
-Therefore the rank-four closure depends on the satellite-dependent clock-correction feature.
-
-Schematically,
+Hence
 
 \[
 \boxed{
-(\mathbf X,\text{common physical event time})
+(\mathbf P^\star,\text{common physical event time})
 \Rightarrow
 \text{rank }3,
 }
@@ -138,89 +149,112 @@ while
 
 \[
 \boxed{
-(\mathbf X,\text{SP3 clock-correction feature})
+(\mathbf M,\text{SP3 clock-correction feature})
 \Rightarrow
 \text{rank }4.
 }
 \]
 
-## 5. Physical interpretation firewall
+## 5. Consequence for the /2 interpretation
 
-This result does not invalidate the four-component data construction.
-
-It establishes that the fourth direction responsible for the nondegenerate four-simplex is not supplied merely by the common event epoch.
-
-Therefore the resulting smooth \(S^3\)-like carrier cannot be promoted to a physical spatial manifold by saying that its fourth source coordinate is simply physical time.
-
-That route is exactly ruled out.
-
-## 6. Relation to the Hermitian causal-time result
-
-The causal \(3+1\) theorem uses the physical elapsed scale
+The factor \(1/2\) remains exact and unique for endpoint centring:
 
 \[
-\ell=c\,\Delta t
+M=\frac{A+B}{2},
+\qquad
+H=\frac{B-A}{2}.
 \]
 
-in the Hermitian pair difference.
+But the pair centre \(M\) is an affine relation variable.
 
-That temporal coordinate is source-owned and physically interpreted.
-
-The v0.15 smooth-carrier construction instead uses the midpoint clock-correction feature
-
-\[
-c\,\delta t_{\rm clock}.
-\]
-
-These are different quantities and must remain separated.
-
-Thus:
+For a curved physical trajectory,
 
 \[
 \boxed{
-\text{causal physical time}
+M
 \ne
-\text{v0.15 carrier feature axis}
+\gamma\!\left(\frac{t_1+t_2}{2}\right)
 }
 \]
 
-unless an independent physical binding theorem is supplied.
+in general.
+
+The SP3 source gives a direct finite witness of this distinction.
+
+Therefore the earlier causal theorem should be read as a theorem about the **binary relation representation**, not as a claim that the affine midpoint is itself an observed midpoint event.
+
+## 6. Physical interpretation firewall
+
+The fourth direction responsible for the v0.15 rank-four closure is not supplied by common physical event time.
+
+Earlier validation also rejects direct identification of raw SP3 clock correction with the physical event-trace scale.
+
+Therefore the v0.15 fourth feature axis cannot be promoted to physical time by relabelling.
+
+Likewise, the \(S^3\)-like carrier cannot be promoted to the physical spatial manifold merely because it contains the five feature-derived relation centres.
 
 ## 7. Production consequence
 
-The physical product-domain gate from v0.22 cannot be closed by relabelling the v0.15 fourth feature axis as event time.
+The physical product-domain gate from v0.22 still requires an independent full-domain binding
 
-A production spatial-carrier binding must instead supply an independent map from the physical spatial realization to \(\mathcal E_Q\), with full-domain coverage and provenance.
+\[
+\Phi_\Sigma:
+|\Sigma_{\rm prod}|\to\mathcal E_Q.
+\]
 
-## 8. Main no-go statement
+Neither of the following is sufficient:
 
-For the frozen five-source two-epoch SP3 realization,
+1. the five relational midpoint anchors alone;
+2. replacing the feature axis by physical event time.
+
+## 8. Main result
+
+For the frozen SP3 source:
 
 \[
 \boxed{
-\text{replacing the clock-correction feature by the actual common event time collapses the midpoint affine rank from }4\text{ to }3.
+\text{actual same-time physical records have affine rank }3,
 }
 \]
 
-Therefore the v0.15 rank-four simplex and \(S^3\)-like carrier are feature-derived rather than direct consequences of the shared physical event epoch.
+whereas
+
+\[
+\boxed{
+\text{the relation-centre plus clock-correction feature lift has affine rank }4.
+}
+\]
+
+Additionally,
+
+\[
+\boxed{
+\text{relational midpoint}
+\ne
+\text{actual mid-epoch trajectory event}
+}
+\]
+
+for all five source satellites.
 
 ## 9. Evidence boundary
 
-Exact:
+Exact/source-derived:
 
-- common source epochs;
-- common midpoint event epoch;
-- zero fourth component in all common-time affine differences;
-- rank-four determinant equals zero;
-- spatial affine rank equals three.
+- actual 00:02 records from the same immutable SP3 revision;
+- common physical midpoint epoch;
+- zero event-time difference across the five same-epoch records;
+- rank-four determinant exactly zero for the physical same-time lift;
+- spatial affine rank exactly three;
+- nonzero separation between relational chord midpoint and actual mid-epoch position.
 
 Previously validated parent:
 
-- clock-correction-feature lift has affine rank four;
+- clock-correction-feature relation-centre lift has affine rank four;
 - raw SP3 clock correction is not physical event-trace time.
 
 Still open:
 
 - nonlinear physical spatial binding to \(\mathcal E_Q\);
 - full-domain physical product realization;
-- physical interpretation of the clock-correction feature inside the spatial carrier.
+- physical interpretation, if any, of the clock-correction feature inside the candidate carrier.
