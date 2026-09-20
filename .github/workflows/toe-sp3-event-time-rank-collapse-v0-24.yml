@@ -1,0 +1,37 @@
+name: ToE SP3 event-time rank collapse v0.24
+
+on:
+  pull_request:
+    paths:
+      - "experiments/toe_solver_candidate_v0_1/RF_GSC3H_SP3_EVENT_TIME_RANK_COLLAPSE_V0_24.md"
+      - "experiments/toe_solver_candidate_v0_1/sp3_event_time_rank_collapse_v0_24.py"
+      - ".github/workflows/toe-sp3-event-time-rank-collapse-v0-24.yml"
+  push:
+    paths:
+      - "experiments/toe_solver_candidate_v0_1/RF_GSC3H_SP3_EVENT_TIME_RANK_COLLAPSE_V0_24.md"
+      - "experiments/toe_solver_candidate_v0_1/sp3_event_time_rank_collapse_v0_24.py"
+      - ".github/workflows/toe-sp3-event-time-rank-collapse-v0-24.yml"
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install numpy
+      - name: Validate physical event-time rank collapse
+        run: |
+          mkdir -p build
+          python experiments/toe_solver_candidate_v0_1/sp3_event_time_rank_collapse_v0_24.py | tee build/SP3_EVENT_TIME_RANK_COLLAPSE_V0_24.json
+          grep -Fq '"status": "PASS"' build/SP3_EVENT_TIME_RANK_COLLAPSE_V0_24.json
+          grep -Fq '"common_event_time_four_dimensional_affine_determinant_zero_exactly": true' build/SP3_EVENT_TIME_RANK_COLLAPSE_V0_24.json
+          grep -Fq '"physical_spatial_midpoint_affine_rank_is_three": true' build/SP3_EVENT_TIME_RANK_COLLAPSE_V0_24.json
+          grep -Fq '"parent_clock_correction_feature_lift_affine_rank_four": true' build/SP3_EVENT_TIME_RANK_COLLAPSE_V0_24.json
+          grep -Fq '"event_time_substitution_cannot_reproduce_parent_four_simplex": true' build/SP3_EVENT_TIME_RANK_COLLAPSE_V0_24.json
+          grep -Fq '"physical_production_claim": false' build/SP3_EVENT_TIME_RANK_COLLAPSE_V0_24.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: toe-sp3-event-time-rank-collapse-v0-24
+          path: build/SP3_EVENT_TIME_RANK_COLLAPSE_V0_24.json
