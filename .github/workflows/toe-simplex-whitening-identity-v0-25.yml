@@ -1,0 +1,38 @@
+name: ToE simplex whitening identity v0.25
+
+on:
+  pull_request:
+    paths:
+      - "experiments/toe_solver_candidate_v0_1/RF_GSC3I_SIMPLEX_WHITENING_IDENTITY_V0_25.md"
+      - "experiments/toe_solver_candidate_v0_1/simplex_whitening_identity_v0_25.py"
+      - ".github/workflows/toe-simplex-whitening-identity-v0-25.yml"
+  push:
+    paths:
+      - "experiments/toe_solver_candidate_v0_1/RF_GSC3I_SIMPLEX_WHITENING_IDENTITY_V0_25.md"
+      - "experiments/toe_solver_candidate_v0_1/simplex_whitening_identity_v0_25.py"
+      - ".github/workflows/toe-simplex-whitening-identity-v0-25.yml"
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install numpy
+      - name: Validate general simplex whitening identity
+        run: |
+          mkdir -p build
+          python experiments/toe_solver_candidate_v0_1/simplex_whitening_identity_v0_25.py | tee build/SIMPLEX_WHITENING_IDENTITY_V0_25.json
+          grep -Fq '"status": "PASS"' build/SIMPLEX_WHITENING_IDENTITY_V0_25.json
+          grep -Fq '"canonical_simplex_whitening_identity_exact_for_dimensions_1_through_8": true' build/SIMPLEX_WHITENING_IDENTITY_V0_25.json
+          grep -Fq '"whitened_gram_invariant_under_nontrivial_affine_transform": true' build/SIMPLEX_WHITENING_IDENTITY_V0_25.json
+          grep -Fq '"source_projector_equals_I_minus_J_over_5_exactly": true' build/SIMPLEX_WHITENING_IDENTITY_V0_25.json
+          grep -Fq '"v015_regular_simplex_identity_is_implied_by_whitening_definition": true' build/SIMPLEX_WHITENING_IDENTITY_V0_25.json
+          grep -Fq '"regularity_in_source_derived_Q_is_not_independent_empirical_signal": true' build/SIMPLEX_WHITENING_IDENTITY_V0_25.json
+          grep -Fq '"physical_production_claim": false' build/SIMPLEX_WHITENING_IDENTITY_V0_25.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: toe-simplex-whitening-identity-v0-25
+          path: build/SIMPLEX_WHITENING_IDENTITY_V0_25.json
