@@ -1,28 +1,20 @@
 # RF-GSC5E — SP3 Vacuum + Lambda Falsification v0.22
 
-Status: CANDIDATE_ONLY / SOURCE_CLASS_FALSIFICATION_DIAGNOSTIC / NO_SOURCE_PROMOTION / CANON_ALLOWED_FALSE
+Status: CANDIDATE_ONLY / SOURCE_CLASS_FALSIFICATION_DIAGNOSTIC / ORTHONORMAL_FRAME_PRIMARY / EXACT_ROUND_S3_NO_GO / NO_SOURCE_PROMOTION / CANON_ALLOWED_FALSE
 
 Date: 2026-09-20
 
 ## 1. Purpose
 
-The current RF-E26 frontier requires independent W6 source evidence.
+The remaining RF-E26 frontier requires independent W6 source evidence.
 
-Before acquiring a general nonzero source tensor, one simple physical source class can be falsified directly against the source-derived candidate metric:
+Before acquiring a general nonzero source tensor, test the simplest source class
 
 \[
-\boxed{
 T_{\mu\nu}=0
-}
 \]
 
-with one common cosmological constant
-
-\[
-\Lambda.
-\]
-
-The vacuum-plus-Lambda equation is
+with one common cosmological constant \(\Lambda\):
 
 \[
 \boxed{
@@ -30,15 +22,13 @@ G_{\mu\nu}+\Lambda g_{\mu\nu}=0.
 }
 \]
 
-This candidate tests whether one common Lambda can satisfy that equation on the five frozen SP3 source anchors for the v0.17/v0.19 metric.
+The test is performed on all five frozen SP3 source anchors for the v0.17/v0.19 source-derived candidate metric.
 
-It does not assume that the source-derived carrier is production physical spacetime.
+It is a falsification diagnostic only. It does not promote vacuum, a physical source, or RF-E26.
 
-## 2. Metric under test
+## 2. Metric and curvature under test
 
-Use the north stereographic chart of v0.19.
-
-For chart coordinate \(x\in\mathbb R^3\),
+Use the north stereographic chart of v0.19,
 
 \[
 u_N(x)
@@ -46,70 +36,70 @@ u_N(x)
 \left(
 \frac{|x|^2-1}{|x|^2+1},
 \frac{2x}{|x|^2+1}
-\right)
-\in S^3.
+\right),
 \]
 
-Map back to the source-derived ellipsoid through
+then
 
 \[
 y=g+R^{-1}u_N(x).
 \]
 
-At y:
+At each y, the existing candidate chain supplies:
 
-- v0.17 gives the positive lapse \(N(y)\);
-- v0.14 gives the affine matching coefficients \(b^a(y)\);
-- v0.16/v0.19 give the stereographic spatial coframe \(T_N(x)\).
+- lapse \(N(y)\);
+- quaternionic stereographic coframe \(T_N(x)\);
+- matching coefficients \(b^a(y)\);
+- coordinate shift \(w_N=T_N^{-1}b\);
+- the Lorentz metric from the ADM coframe.
 
-The chart-coordinate shift is
+Curvature is calculated by the existing
 
-\[
-w_N=T_N^{-1}b.
-\]
+    metric callable -> centered metric jet -> Ricci / Einstein tensor
 
-The ADM coframe therefore determines the coordinate metric
+providers. No Einstein tensor is inserted by hand.
 
-\[
-g_{\mu\nu}(x).
-\]
+## 3. Primary source-class test in an orthonormal frame
 
-## 3. Curvature provider
-
-The test consumes the existing candidate providers:
-
-- metric callable to centered metric jet;
-- metric jet to Ricci and Einstein tensor.
-
-No Einstein tensor is inserted by hand.
-
-The metric is stationary, so the time coordinate is retained in the 4D jet even though the metric coefficients are time independent.
-
-## 4. Source anchors
-
-Each frozen SP3 midpoint source event lies on the v0.15 ellipsoid.
-
-Every source anchor away from the north stereographic pole has a finite north-chart coordinate and is evaluated directly.
-
-The test uses all five frozen source anchors unless a pole exclusion is triggered, in which case the chart failure is explicit rather than silently dropping the point.
-
-## 5. Common-Lambda fit
-
-At each anchor i obtain
+The coordinate coframe is
 
 \[
-g_i,\qquad G_i.
+E^A{}_\mu.
 \]
 
-A vacuum-plus-Lambda solution requires
+For a covariant Einstein tensor \(G_{\mu\nu}\), define orthonormal-frame components
 
 \[
-G_i=-\Lambda g_i
+\boxed{
+G_{\hat A\hat B}
+=
+(E^{-1})^\mu{}_{\hat A}
+(E^{-1})^\nu{}_{\hat B}
+G_{\mu\nu}.
+}
 \]
 
-for the same scalar Lambda at every anchor.
+In this frame,
 
-The unique least-squares common scalar is
+\[
+g_{\hat A\hat B}=\eta_{\hat A\hat B}
+=
+\operatorname{diag}(-1,1,1,1).
+\]
+
+Therefore the vacuum-plus-Lambda condition is
+
+\[
+\boxed{
+G_{\hat A\hat B}
++
+\Lambda\eta_{\hat A\hat B}
+=
+0.
+}
+\]
+
+The primary common scalar fit across all five anchors is
 
 \[
 \boxed{
@@ -117,42 +107,113 @@ The unique least-squares common scalar is
 =
 -
 \frac{
-\sum_i \langle G_i,g_i\rangle_F
+\sum_i
+\langle G_{\hat A\hat B}^{(i)},\eta\rangle_F
 }{
-\sum_i \langle g_i,g_i\rangle_F
+5\,\langle\eta,\eta\rangle_F
 }.
 }
 \]
 
-The residual matrices are
+This removes chart-dependent weighting from the source-class decision.
+
+The previous coordinate-basis Frobenius fit is retained only as a secondary diagnostic.
+
+## 4. Exact round-S3 no-go
+
+The v0.15/v0.16 spatial carrier is the round \(S^3\) geometry in its source-derived Q metric.
+
+For the exact product baseline
 
 \[
-R_i
-=
-G_i+\Lambda_\star g_i.
+\mathbb R\times S^3_a
 \]
 
-The diagnostic reports absolute and scale-normalized residuals.
+with finite radius a, the orthonormal Einstein tensor is
 
-## 6. Numerical stability
+\[
+\boxed{
+G_{\hat A\hat B}
+=
+\operatorname{diag}
+\left(
+\frac{3}{a^2},
+-\frac{1}{a^2},
+-\frac{1}{a^2},
+-\frac{1}{a^2}
+\right).
+}
+\]
 
-Curvature is estimated on a deterministic finite-difference sweep in stereographic coordinates.
+Vacuum plus one constant Lambda requires simultaneously
 
-The classification is accepted only if:
+\[
+\Lambda=\frac{3}{a^2}
+\]
 
-1. every metric remains finite and Lorentzian;
-2. the fitted common Lambda and normalized residual are stable across the selected central sweep scales;
-3. no source anchor is silently excluded.
+from the temporal component and
 
-The sweep is evidence about numerical stability only.
+\[
+\Lambda=\frac{1}{a^2}
+\]
 
-## 7. Interpretation
+from the spatial components.
 
-Possible outcomes:
+Their difference is
+
+\[
+\boxed{
+\frac{2}{a^2}>0
+}
+\]
+
+for every finite positive a.
+
+Therefore
+
+\[
+\boxed{
+\mathbb R\times S^3_a
+\text{ cannot satisfy vacuum + one constant }\Lambda
+}
+\]
+
+for finite a.
+
+This is an exact mathematical source-class no-go for the round baseline. It is not physical source evidence.
+
+## 5. Numerical source-derived deformation test
+
+The actual v0.17 metric contains the source-derived lapse and matching field.
+
+At each frozen anchor and each finite-difference scale h, the validator computes:
+
+- \(R\);
+- \(G_{\hat A\hat B}\);
+- the common orthonormal-frame \(\Lambda_\star\);
+- the normalized vacuum-plus-Lambda residual;
+- deviation from the round-S3 pattern
+  \[
+  \operatorname{diag}(3,-1,-1,-1)
+  \]
+  in the normalized carrier.
+
+The h-sweep is
+
+\[
+3\times10^{-3},\;
+10^{-3},\;
+3\times10^{-4},\;
+10^{-4}.
+\]
+
+A robust rejection requires a normalized residual above the declared rejection floor at every h and stable \(\Lambda_\star\).
+
+## 6. Interpretation classes
 
 VACUUM_PLUS_LAMBDA_COMPATIBLE_NUMERIC
 
-means the candidate metric is numerically consistent, within the declared tolerance, with the simple vacuum-plus-Lambda source class on all five frozen anchors.
+means the candidate metric is numerically compatible with the simple source class on the tested anchors.
 
 VACUUM_PLUS_LAMBDA_REJECTED_ON_CANDIDATE_METRIC
 
@@ -160,20 +221,17 @@ means one common Lambda does not remove the Einstein tensor on the tested source
 
 INCONCLUSIVE_NUMERICAL_STABILITY
 
-means the finite-difference sweep is not stable enough to classify the source class.
+means the h-sweep is not stable enough to classify the source class.
 
-No outcome supplies production W6 evidence by itself.
-
-Even a compatible vacuum route would still require independent provenance that the physical domain represented by the atlas is actually vacuum.
-
-## 8. Firewalls
+## 7. Evidence boundary
 
 This diagnostic does not:
 
-- define \(T\) from \(G\);
-- promote a vacuum source;
-- infer physical vacuum solely from the source metric;
+- define \(T_{\mu\nu}\) from \(G_{\mu\nu}\);
+- identify the required nonzero source;
+- prove that the candidate carrier is physical spacetime;
+- promote vacuum;
 - promote RF-E26;
-- treat small curvature as proof of physical GR correctness.
+- use the numerical source-class rejection as production W6 evidence.
 
-Its role is source-class falsification only.
+A rejection only says that if this candidate metric is retained, the W6 source cannot be the simple \(T=0\) plus one constant Lambda class on the tested carrier.
