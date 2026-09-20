@@ -157,6 +157,9 @@ def main():
         "parent_v019_executable_RF_E25_compatibility_PASS": r19.get("frontier", {}).get(
             "executable_RF_E25_data_structure_compatibility"
         ) == "PASS",
+        "parent_v019_RF_E25_production_admission_remains_open": r19.get("frontier", {}).get(
+            "production_RF_E25_admission"
+        ) == "OPEN",
         "current_missing_one_W6_patch_keeps_GSC5B_domain_coverage_open": not current_cov.domain_coverage_derived,
         "complete_two_patch_W6_set_derives_GSC5B_domain_coverage": complete_cov.domain_coverage_derived,
         "foreign_solution_patch_id_keeps_GSC5B_open": not foreign_cov.domain_coverage_derived,
@@ -186,13 +189,15 @@ def main():
             "smooth_shared_metric_atlas_status": "CANDIDATE_PASS_PARENT_V019",
         },
         "current": {
+            "RF_E25_production_atlas_admission": "OPEN",
             "admitted_physical_RF_E24_solution_patch_ids": [],
             "GSC5B_domain_coverage_currently_promoted": False,
-            "reason": "W6 physical local-solution receipt set is not supplied",
+            "reason": "RF-E25 production atlas admission and W6 physical local-solution receipts are not supplied",
         },
         "derived_if_W6_complete": {
             "required_exact_patch_set": list(PATCHES),
             "GSC5B_domain_coverage": complete_cov.domain_coverage_derived,
+            "RF_E25_production_atlas_admission_still_required": True,
             "GSC5A_tensor_overlap_covariance": counterfactual_complete.einstein_overlap_covariance,
             "GSC5A_stress_overlap_covariance": counterfactual_complete.stress_overlap_covariance,
             "GSC5A_residual_overlap_covariance": counterfactual_complete.residual_overlap_covariance,
@@ -201,11 +206,13 @@ def main():
         "checks": checks,
         "frontier": {
             "independent_W7_domain_coverage_blocker": "REDUCED_TO_W6_PATCH_COMPLETENESS_ON_THIS_TWO_CHART_ROUTE",
+            "RF_E25_production_metric_atlas_admission": "OPEN",
             "W6_physical_RF_E24_local_solution_receipts": "OPEN",
             "common_physical_source_field_lineage": "OPEN",
             "RF_E26_production_promotion": "OPEN",
         },
         "interpretation_firewall": {
+            "candidate_RF_E25_compatibility_is_not_production_metric_admission": True,
             "no_T_equals_G_over_kappa_physical_source_promotion": True,
             "counterfactual_dependency_packet_is_not_observational_evidence": True,
             "geometry_does_not_supply_physical_source_lineage": True,
