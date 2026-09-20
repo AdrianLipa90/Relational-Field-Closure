@@ -35,6 +35,7 @@ jobs:
           python experiments/toe_solver_candidate_v0_1/sp3_rfe26_blocker_reduction_v0_20.py | tee build/SP3_RFE26_BLOCKER_REDUCTION_V0_20.json
           grep -Fq '"status": "PASS"' build/SP3_RFE26_BLOCKER_REDUCTION_V0_20.json
           grep -Fq '"complete_two_patch_W6_set_derives_GSC5B_domain_coverage": true' build/SP3_RFE26_BLOCKER_REDUCTION_V0_20.json
+          grep -Fq '"parent_v019_RF_E25_production_admission_remains_open": true' build/SP3_RFE26_BLOCKER_REDUCTION_V0_20.json
           grep -Fq '"GSC5A_missing_local_solution_receipt_fails_closed": true' build/SP3_RFE26_BLOCKER_REDUCTION_V0_20.json
           grep -Fq '"GSC5A_source_lineage_mismatch_fails_closed": true' build/SP3_RFE26_BLOCKER_REDUCTION_V0_20.json
           grep -Fq '"physical_W6_receipts_remain_open": true' build/SP3_RFE26_BLOCKER_REDUCTION_V0_20.json
