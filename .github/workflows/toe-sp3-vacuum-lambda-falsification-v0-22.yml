@@ -30,6 +30,10 @@ jobs:
           grep -Fq '"status": "PASS"' build/SP3_VACUUM_LAMBDA_FALSIFICATION_V0_22.json
           grep -Fq '"all_five_source_anchors_included": true' build/SP3_VACUUM_LAMBDA_FALSIFICATION_V0_22.json
           grep -Fq '"one_common_Lambda_fit_used_for_all_five_anchors": true' build/SP3_VACUUM_LAMBDA_FALSIFICATION_V0_22.json
+          grep -Fq '"primary_Lambda_fit_is_in_orthonormal_frame": true' build/SP3_VACUUM_LAMBDA_FALSIFICATION_V0_22.json
+          grep -Fq '"round_S3_exact_vacuum_plus_Lambda_no_go_for_finite_radius": true' build/SP3_VACUUM_LAMBDA_FALSIFICATION_V0_22.json
+          grep -Fq '"orthonormal_frame_rejection_is_stable_across_h_sweep": true' build/SP3_VACUUM_LAMBDA_FALSIFICATION_V0_22.json
+          grep -Fq '"source_anchor_Einstein_tensor_converges_to_round_S3_pattern": true' build/SP3_VACUUM_LAMBDA_FALSIFICATION_V0_22.json
           grep -Fq '"no_stress_tensor_defined_from_Einstein_tensor": true' build/SP3_VACUUM_LAMBDA_FALSIFICATION_V0_22.json
           grep -Fq '"physical_production_claim": false' build/SP3_VACUUM_LAMBDA_FALSIFICATION_V0_22.json
       - uses: actions/upload-artifact@v4
