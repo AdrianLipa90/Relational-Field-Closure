@@ -1,0 +1,39 @@
+name: ToE SP3 RF-E25 production atlas contract v0.25
+
+on:
+  pull_request:
+    paths:
+      - "experiments/toe_solver_candidate_v0_1/RF_GSC4D_SP3_RF_E25_PRODUCTION_ATLAS_CONTRACT_V0_25.md"
+      - "experiments/toe_solver_candidate_v0_1/sp3_rfe25_production_atlas_contract_v0_25.py"
+      - ".github/workflows/toe-sp3-rfe25-production-atlas-contract-v0-25.yml"
+  push:
+    paths:
+      - "experiments/toe_solver_candidate_v0_1/RF_GSC4D_SP3_RF_E25_PRODUCTION_ATLAS_CONTRACT_V0_25.md"
+      - "experiments/toe_solver_candidate_v0_1/sp3_rfe25_production_atlas_contract_v0_25.py"
+      - ".github/workflows/toe-sp3-rfe25-production-atlas-contract-v0-25.yml"
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Validate fail-closed RF-E25 production atlas contract
+        env:
+          PYTHONPATH: .:src
+        run: |
+          mkdir -p build
+          python experiments/toe_solver_candidate_v0_1/sp3_rfe25_production_atlas_contract_v0_25.py | tee build/SP3_RF_E25_PRODUCTION_ATLAS_CONTRACT_V0_25.json
+          grep -Fq '"status": "PASS"' build/SP3_RF_E25_PRODUCTION_ATLAS_CONTRACT_V0_25.json
+          grep -Fq '"parent_v019_RF_E25_production_input_still_open": true' build/SP3_RF_E25_PRODUCTION_ATLAS_CONTRACT_V0_25.json
+          grep -Fq '"anchor_only_spatial_coverage_rejected": true' build/SP3_RF_E25_PRODUCTION_ATLAS_CONTRACT_V0_25.json
+          grep -Fq '"single_overlap_sample_rejected": true' build/SP3_RF_E25_PRODUCTION_ATLAS_CONTRACT_V0_25.json
+          grep -Fq '"stationary_mathematical_extension_not_production_temporal_coverage": true' build/SP3_RF_E25_PRODUCTION_ATLAS_CONTRACT_V0_25.json
+          grep -Fq '"candidate_authority_cannot_spoof_production_claim": true' build/SP3_RF_E25_PRODUCTION_ATLAS_CONTRACT_V0_25.json
+          grep -Fq '"physical_production_claim": false' build/SP3_RF_E25_PRODUCTION_ATLAS_CONTRACT_V0_25.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: toe-sp3-rfe25-production-atlas-contract-v0-25
+          path: build/SP3_RF_E25_PRODUCTION_ATLAS_CONTRACT_V0_25.json
