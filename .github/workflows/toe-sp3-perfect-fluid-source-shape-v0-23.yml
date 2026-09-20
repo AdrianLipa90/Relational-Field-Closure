@@ -1,0 +1,39 @@
+name: ToE SP3 round-S3 perfect-fluid source shape v0.23
+
+on:
+  pull_request:
+    paths:
+      - "experiments/toe_solver_candidate_v0_1/RF_GSC5F_SP3_ROUND_S3_PERFECT_FLUID_SOURCE_SHAPE_V0_23.md"
+      - "experiments/toe_solver_candidate_v0_1/sp3_round_s3_perfect_fluid_source_shape_v0_23.py"
+      - ".github/workflows/toe-sp3-perfect-fluid-source-shape-v0-23.yml"
+  push:
+    paths:
+      - "experiments/toe_solver_candidate_v0_1/RF_GSC5F_SP3_ROUND_S3_PERFECT_FLUID_SOURCE_SHAPE_V0_23.md"
+      - "experiments/toe_solver_candidate_v0_1/sp3_round_s3_perfect_fluid_source_shape_v0_23.py"
+      - ".github/workflows/toe-sp3-perfect-fluid-source-shape-v0-23.yml"
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install sympy
+      - name: Validate exact round-S3 perfect-fluid source-shape theorem
+        env:
+          PYTHONPATH: .:src
+        run: |
+          mkdir -p build
+          python experiments/toe_solver_candidate_v0_1/sp3_round_s3_perfect_fluid_source_shape_v0_23.py | tee build/SP3_ROUND_S3_PERFECT_FLUID_SOURCE_SHAPE_V0_23.json
+          grep -Fq '"status": "PASS"' build/SP3_ROUND_S3_PERFECT_FLUID_SOURCE_SHAPE_V0_23.json
+          grep -Fq '"perfect_fluid_EFE_component_identity_exact": true' build/SP3_ROUND_S3_PERFECT_FLUID_SOURCE_SHAPE_V0_23.json
+          grep -Fq '"vacuum_plus_one_Lambda_exact_no_go_for_finite_positive_radius": true' build/SP3_ROUND_S3_PERFECT_FLUID_SOURCE_SHAPE_V0_23.json
+          grep -Fq '"tracefree_Lambda_equals_R_over_four": true' build/SP3_ROUND_S3_PERFECT_FLUID_SOURCE_SHAPE_V0_23.json
+          grep -Fq '"source_shape_theorem_is_not_source_evidence": true' build/SP3_ROUND_S3_PERFECT_FLUID_SOURCE_SHAPE_V0_23.json
+          grep -Fq '"physical_production_claim": false' build/SP3_ROUND_S3_PERFECT_FLUID_SOURCE_SHAPE_V0_23.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: toe-sp3-perfect-fluid-source-shape-v0-23
+          path: build/SP3_ROUND_S3_PERFECT_FLUID_SOURCE_SHAPE_V0_23.json
