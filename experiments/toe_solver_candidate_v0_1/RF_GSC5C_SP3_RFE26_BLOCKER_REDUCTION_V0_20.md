@@ -21,7 +21,7 @@ The two charts cover the full spatial carrier \(S^3\), and v0.18 extends this to
 
 RF-GSC5A and RF-GSC5B already prove that RF-E26 does not require independent overlap packets for \(G_{\mu\nu}\), \(T_{\mu\nu}\), and the Einstein residual once a smooth shared metric atlas and patchwise RF-E24 local solutions are present.
 
-This candidate specializes that reduction to the actual v0.19 two-chart atlas and identifies the exact remaining production parent.
+This candidate specializes that reduction to the actual v0.19 two-chart atlas and separates the remaining production parents without collapsing candidate atlas compatibility into production admission.
 
 ## 2. Exact atlas cover
 
@@ -106,7 +106,7 @@ RF-GSC5A consumes:
 6. connected overlap incidence;
 7. target-domain coverage.
 
-V0.19 already supplies the smooth connected metric atlas at candidate mathematical level.
+V0.19 supplies the smooth connected metric atlas at candidate mathematical level and executable RF-E25 compatibility, but its production RF-E25 admission remains explicitly OPEN.
 
 V0.20 does not manufacture items 2 or 5 from geometry.
 
@@ -147,6 +147,14 @@ On the v0.19/v0.18 candidate route:
 
 \[
 \boxed{
+\text{RF-E25 production atlas admission}
+=
+\text{OPEN}
+}
+\]
+
+\[
+\boxed{
 \text{global Cauchy carrier}
 =
 \text{PASS CANDIDATE}
@@ -181,7 +189,23 @@ and
 }
 \]
 
-Thus the remaining substantive RF-E26 production blocker is source-owned local Einstein solution evidence, not additional atlas geometry.
+Thus W7 target-domain coverage is no longer an independent blocker once W6 is complete. However RF-E26 production still has two independent evidence axes:
+
+\[
+\boxed{
+\text{A: RF-E25 production metric-atlas admission}
+}
+\]
+
+and
+
+\[
+\boxed{
+\text{B: W6 physical RF-E24 source receipts + common source lineage}.
+}
+\]
+
+The result removes an additional atlas-coverage theorem gap; it does not promote the candidate atlas into a production physical metric.
 
 ## 6. Fail-closed requirement
 
@@ -213,8 +237,9 @@ Current candidate evidence:
 
 Still open:
 
+- RF-E25 production atlas / physical metric-lineage admission;
 - two physical RF-E24 local-solution receipts;
 - common physical source-field lineage;
-- production admission.
+- RF-E26 production promotion.
 
 No effective stress tensor manufactured from geometry is promoted as physical source evidence.
