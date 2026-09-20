@@ -1,0 +1,78 @@
+{
+  "schema": "QHTRI_TOE_SP3_ROUND_S3_PERFECT_FLUID_SOURCE_SHAPE_VALIDATION_V0_23",
+  "date": "2026-09-20",
+  "status": "PASS",
+  "authority": "CANDIDATE_ONLY",
+  "canon_allowed": false,
+  "physical_production_claim": false,
+  "empirical_theory_confirmation": false,
+  "tested_head_sha": "2250884bb89cfe1d37b7a3ecc716b0d18fb9d9e2",
+  "theorem_class": "EXACT_SOURCE_SHAPE_NOT_SOURCE_EVIDENCE",
+  "round_baseline": {
+    "Einstein_frame": "diag(3/a^2,-1/a^2,-1/a^2,-1/a^2)",
+    "scalar_R": "6/a**2"
+  },
+  "perfect_fluid_family": {
+    "rho": "-Lambda/kappa_E + 3/(a**2*kappa_E)",
+    "p": "Lambda/kappa_E - 1/(a**2*kappa_E)",
+    "w_in_x_equals_Lambda_a2": "(1-x)/(x-3)",
+    "rho_plus_p": "2/(a**2*kappa_E)",
+    "rho_plus_3p": "2*Lambda/kappa_E"
+  },
+  "special_cases": {
+    "Lambda_0": "w=-1/3",
+    "Lambda_1_over_a2": "dust: p=0, rho=2/(kappa_E a^2)",
+    "Lambda_3_over_2a2": "tracefree/radiation-like: p=rho/3",
+    "orthonormal_least_squares_Lambda": "3/(2*a**2)=R/4"
+  },
+  "energy_conditions": {
+    "rho_nonnegative_if": "Lambda*a^2 <= 3",
+    "dominant_energy_if": "Lambda*a^2 <= 2"
+  },
+  "checks": {
+    "perfect_fluid_EFE_component_identity_exact": true,
+    "vacuum_plus_one_Lambda_exact_no_go_for_finite_positive_radius": true,
+    "equation_of_state_family_w_equals_x_minus_1_over_3_minus_x": true,
+    "Lambda_zero_gives_w_minus_one_third": true,
+    "Lambda_equals_inverse_a2_gives_dust_pressure_zero": true,
+    "dust_density_equals_2_over_kappa_a2": true,
+    "Lambda_equals_three_over_two_a2_gives_radiation_w_one_third": true,
+    "perfect_fluid_trace_formula_exact": true,
+    "tracefree_member_unique_at_Lambda_three_over_two_a2": true,
+    "tracefree_Lambda_equals_R_over_four": true,
+    "orthonormal_Frobenius_Lambda_fit_equals_tracefree_Lambda": true,
+    "tracefree_metric_residual_has_radiation_like_3_to_1_diagonal_ratio": true,
+    "rho_plus_p_equals_2_over_kappa_a2_independent_of_Lambda": true,
+    "rho_plus_3p_equals_2Lambda_over_kappa": true,
+    "dominant_energy_branch_algebra_reduces_to_x_le_2": true,
+    "source_shape_theorem_is_not_source_evidence": true,
+    "W6_not_promoted": true,
+    "physical_production_claim_remains_false": true
+  },
+  "executable_receipt_sha256": "c2efd298a2f412bb5990ae342d5ee6f3d8160582fe576a5725957078213583c5",
+  "ci": {
+    "dedicated": {
+      "run_id": 35488053468,
+      "job_id": 106017934699,
+      "conclusion": "success"
+    },
+    "rfc_reference_suite": {
+      "run_id": 35488053502,
+      "conclusion": "success"
+    },
+    "candidate_release_gates": {
+      "run_id": 35488053527,
+      "conclusion": "success"
+    }
+  },
+  "frontier": {
+    "required_source_shape_family": "DEFINED_EXACTLY_ON_ROUND_BASELINE",
+    "independent_physical_source_observations": "OPEN",
+    "W6_physical_source_packet": "OPEN_EXTERNAL_EVIDENCE"
+  },
+  "interpretation_firewall": {
+    "radiation_like_tracefree_split_is_decomposition_not_detection": true,
+    "dust_special_case_is_not_source_identification": true,
+    "geometry_does_not_supply_source_provenance": true
+  }
+}
