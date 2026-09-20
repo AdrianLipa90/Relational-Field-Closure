@@ -1,0 +1,56 @@
+{
+  "schema": "QHTRI_TOE_SP3_PHYSICAL_PRODUCT_DOMAIN_BINDING_VALIDATION_V0_22",
+  "date": "2026-09-20",
+  "status": "PASS",
+  "authority": "CANDIDATE_ONLY",
+  "canon_allowed": false,
+  "physical_production_claim": false,
+  "tested_head_sha": "5fe19eedd92b398d2b00134d20dadbc2360c28bc",
+  "contract_class": "FAIL_CLOSED_PHYSICAL_PRODUCT_REALIZATION_SCHEMA",
+  "candidate_domain_id": "SP3_STATIONARY_PRODUCT_DOMAIN_V0_18_V0_19",
+  "required_patch_ids": [
+    "SP3_STEREO_N",
+    "SP3_STEREO_S"
+  ],
+  "checks": {
+    "structurally_complete_fixture_passes_schema": true,
+    "candidate_fixture_does_not_gain_physical_product_admission": true,
+    "identifier_only_without_domain_coverage_rejected": true,
+    "five_anchor_only_binding_rejected": true,
+    "inconsistent_event_clock_offset_rejected": true,
+    "W6_source_on_foreign_domain_rejected": true,
+    "missing_source_to_RF_E25_frame_transform_rejected": true,
+    "mixed_realization_receipts_rejected": true,
+    "candidate_authority_cannot_self_promote_physical_product_claim": true,
+    "contract_does_not_supply_real_physical_product_binding": true
+  },
+  "corrected_production_frontier": [
+    "PHYSICAL_PRODUCT_REALIZATION_EVENT_PLACEMENT_BINDING",
+    "W6_INDEPENDENT_PHYSICAL_SOURCE_RECEIPTS"
+  ],
+  "frontier": {
+    "physical_product_realization_event_placement_binding": "OPEN_EXTERNAL_SOURCE_EVIDENCE",
+    "W6_physical_source_receipts": "OPEN_EXTERNAL_SOURCE_EVIDENCE",
+    "RF_E26_production_promotion": "OPEN"
+  },
+  "ci": {
+    "dedicated": {
+      "run_id": 35487992064,
+      "job_id": 106017779168,
+      "conclusion": "success"
+    },
+    "candidate_release_gates": {
+      "run_id": 35487992065,
+      "conclusion": "success"
+    },
+    "rfc_reference_suite": {
+      "run_id": 35487992058,
+      "conclusion": "success"
+    }
+  },
+  "interpretation_firewall": {
+    "same_identifier_is_not_same_physical_domain_proof": true,
+    "finite_source_anchors_are_not_full_domain_binding": true,
+    "candidate_carrier_is_not_self_promoted_to_physical_spacetime": true
+  }
+}
