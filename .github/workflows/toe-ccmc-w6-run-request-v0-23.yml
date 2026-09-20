@@ -1,0 +1,36 @@
+name: ToE CCMC W6 real-event run request v0.23
+
+on:
+  pull_request:
+    paths:
+      - "experiments/toe_solver_candidate_v0_1/RF_GSC5F_CCMC_W6_REAL_EVENT_RUN_REQUEST_V0_23.md"
+      - "experiments/toe_solver_candidate_v0_1/ccmc_w6_real_event_run_request_v0_23.py"
+      - ".github/workflows/toe-ccmc-w6-run-request-v0-23.yml"
+  push:
+    paths:
+      - "experiments/toe_solver_candidate_v0_1/RF_GSC5F_CCMC_W6_REAL_EVENT_RUN_REQUEST_V0_23.md"
+      - "experiments/toe_solver_candidate_v0_1/ccmc_w6_real_event_run_request_v0_23.py"
+      - ".github/workflows/toe-ccmc-w6-run-request-v0-23.yml"
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Validate CCMC W6 run-request manifest
+        run: |
+          mkdir -p build
+          python experiments/toe_solver_candidate_v0_1/ccmc_w6_real_event_run_request_v0_23.py | tee build/CCMC_W6_REAL_EVENT_RUN_REQUEST_V0_23.json
+          grep -Fq '"status": "PASS"' build/CCMC_W6_REAL_EVENT_RUN_REQUEST_V0_23.json
+          grep -Fq '"external_submission_not_authorized": true' build/CCMC_W6_REAL_EVENT_RUN_REQUEST_V0_23.json
+          grep -Fq '"unauthorized_submission_manifest_rejected": true' build/CCMC_W6_REAL_EVENT_RUN_REQUEST_V0_23.json
+          grep -Fq '"anchor_only_patch_request_rejected": true' build/CCMC_W6_REAL_EVENT_RUN_REQUEST_V0_23.json
+          grep -Fq '"actual_CCMC_run_remains_open": true' build/CCMC_W6_REAL_EVENT_RUN_REQUEST_V0_23.json
+          grep -Fq '"submission_authorized": false' build/CCMC_W6_REAL_EVENT_RUN_REQUEST_V0_23.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: toe-ccmc-w6-run-request-v0-23
+          path: build/CCMC_W6_REAL_EVENT_RUN_REQUEST_V0_23.json
