@@ -1,0 +1,39 @@
+name: ToE SP3 physical product-domain binding v0.22
+
+on:
+  pull_request:
+    paths:
+      - "experiments/toe_solver_candidate_v0_1/RF_GSC3F_SP3_PHYSICAL_PRODUCT_DOMAIN_BINDING_V0_22.md"
+      - "experiments/toe_solver_candidate_v0_1/sp3_physical_product_domain_binding_v0_22.py"
+      - ".github/workflows/toe-sp3-physical-product-domain-binding-v0-22.yml"
+  push:
+    paths:
+      - "experiments/toe_solver_candidate_v0_1/RF_GSC3F_SP3_PHYSICAL_PRODUCT_DOMAIN_BINDING_V0_22.md"
+      - "experiments/toe_solver_candidate_v0_1/sp3_physical_product_domain_binding_v0_22.py"
+      - ".github/workflows/toe-sp3-physical-product-domain-binding-v0-22.yml"
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Validate physical product-domain binding firewall
+        env:
+          PYTHONPATH: .:src
+        run: |
+          mkdir -p build
+          python experiments/toe_solver_candidate_v0_1/sp3_physical_product_domain_binding_v0_22.py | tee build/SP3_PHYSICAL_PRODUCT_DOMAIN_BINDING_V0_22.json
+          grep -Fq '"status": "PASS"' build/SP3_PHYSICAL_PRODUCT_DOMAIN_BINDING_V0_22.json
+          grep -Fq '"identifier_only_without_domain_coverage_rejected": true' build/SP3_PHYSICAL_PRODUCT_DOMAIN_BINDING_V0_22.json
+          grep -Fq '"five_anchor_only_binding_rejected": true' build/SP3_PHYSICAL_PRODUCT_DOMAIN_BINDING_V0_22.json
+          grep -Fq '"W6_source_on_foreign_domain_rejected": true' build/SP3_PHYSICAL_PRODUCT_DOMAIN_BINDING_V0_22.json
+          grep -Fq '"candidate_authority_cannot_self_promote_physical_product_claim": true' build/SP3_PHYSICAL_PRODUCT_DOMAIN_BINDING_V0_22.json
+          grep -Fq '"physical_product_realization_event_placement_binding": "OPEN_EXTERNAL_SOURCE_EVIDENCE"' build/SP3_PHYSICAL_PRODUCT_DOMAIN_BINDING_V0_22.json
+          grep -Fq '"physical_production_claim": false' build/SP3_PHYSICAL_PRODUCT_DOMAIN_BINDING_V0_22.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: toe-sp3-physical-product-domain-binding-v0-22
+          path: build/SP3_PHYSICAL_PRODUCT_DOMAIN_BINDING_V0_22.json
