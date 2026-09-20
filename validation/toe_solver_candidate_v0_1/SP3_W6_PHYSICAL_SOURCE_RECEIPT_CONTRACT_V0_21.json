@@ -1,0 +1,57 @@
+{
+  "schema": "QHTRI_TOE_SP3_W6_PHYSICAL_SOURCE_RECEIPT_CONTRACT_VALIDATION_V0_21",
+  "date": "2026-09-20",
+  "status": "PASS",
+  "authority": "CANDIDATE_ONLY",
+  "canon_allowed": false,
+  "physical_production_claim": false,
+  "tested_head_sha": "657eac83a2dd3c6eb91fc3e51eee25f229a2a8c9",
+  "contract_class": "FAIL_CLOSED_SOURCE_EVIDENCE_SCHEMA",
+  "required_patch_ids": [
+    "SP3_STEREO_N",
+    "SP3_STEREO_S"
+  ],
+  "atlas_domain_id": "SP3_STATIONARY_PRODUCT_DOMAIN_V0_18_V0_19",
+  "checks": {
+    "complete_two_patch_test_fixture_satisfies_schema": true,
+    "test_fixture_does_not_gain_production_admission": true,
+    "missing_patch_rejected": true,
+    "geometry_derived_source_rejected": true,
+    "cross_patch_source_lineage_mismatch_rejected": true,
+    "source_tensor_digest_mismatch_rejected": true,
+    "missing_immutable_source_reference_rejected": true,
+    "residual_above_tolerance_rejected": true,
+    "incomplete_or_wrong_source_patch_coverage_rejected": true,
+    "vacuum_without_independent_domain_provenance_rejected": true,
+    "candidate_authority_cannot_promote_physical_production_claim": true,
+    "contract_does_not_supply_real_W6_evidence": true
+  },
+  "frontier": {
+    "W6_receipt_schema": "DEFINED_AND_EXECUTABLE",
+    "actual_physical_W6_source_packet": "OPEN_EXTERNAL_EVIDENCE",
+    "RF_E26_production_promotion": "OPEN"
+  },
+  "ci": {
+    "dedicated": {
+      "run_id": 35476450125,
+      "job_id": 105986406566,
+      "conclusion": "success"
+    },
+    "candidate_release_gates": {
+      "run_id": 35476450117,
+      "job_id": 105986406546,
+      "conclusion": "success"
+    },
+    "rfc_reference_suite": {
+      "run_id": 35476450150,
+      "job_id": 105986406557,
+      "conclusion": "success"
+    }
+  },
+  "interpretation_firewall": {
+    "schema_PASS_is_not_W6_evidence_PASS": true,
+    "test_fixture_is_not_physical_source_evidence": true,
+    "geometry_only_effective_stress_is_rejected": true,
+    "full_patch_coverage_is_required": true
+  }
+}
