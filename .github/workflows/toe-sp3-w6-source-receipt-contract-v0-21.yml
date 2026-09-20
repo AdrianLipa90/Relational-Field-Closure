@@ -1,0 +1,39 @@
+name: ToE SP3 W6 physical source receipt contract v0.21
+
+on:
+  pull_request:
+    paths:
+      - "experiments/toe_solver_candidate_v0_1/RF_GSC5D_SP3_W6_PHYSICAL_SOURCE_RECEIPT_CONTRACT_V0_21.md"
+      - "experiments/toe_solver_candidate_v0_1/sp3_w6_physical_source_receipt_contract_v0_21.py"
+      - ".github/workflows/toe-sp3-w6-source-receipt-contract-v0-21.yml"
+  push:
+    paths:
+      - "experiments/toe_solver_candidate_v0_1/RF_GSC5D_SP3_W6_PHYSICAL_SOURCE_RECEIPT_CONTRACT_V0_21.md"
+      - "experiments/toe_solver_candidate_v0_1/sp3_w6_physical_source_receipt_contract_v0_21.py"
+      - ".github/workflows/toe-sp3-w6-source-receipt-contract-v0-21.yml"
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Validate fail-closed W6 physical source receipt contract
+        env:
+          PYTHONPATH: .:src
+        run: |
+          mkdir -p build
+          python experiments/toe_solver_candidate_v0_1/sp3_w6_physical_source_receipt_contract_v0_21.py | tee build/SP3_W6_PHYSICAL_SOURCE_RECEIPT_CONTRACT_V0_21.json
+          grep -Fq '"status": "PASS"' build/SP3_W6_PHYSICAL_SOURCE_RECEIPT_CONTRACT_V0_21.json
+          grep -Fq '"geometry_derived_source_rejected": true' build/SP3_W6_PHYSICAL_SOURCE_RECEIPT_CONTRACT_V0_21.json
+          grep -Fq '"incomplete_or_wrong_source_patch_coverage_rejected": true' build/SP3_W6_PHYSICAL_SOURCE_RECEIPT_CONTRACT_V0_21.json
+          grep -Fq '"vacuum_without_independent_domain_provenance_rejected": true' build/SP3_W6_PHYSICAL_SOURCE_RECEIPT_CONTRACT_V0_21.json
+          grep -Fq '"candidate_authority_cannot_promote_physical_production_claim": true' build/SP3_W6_PHYSICAL_SOURCE_RECEIPT_CONTRACT_V0_21.json
+          grep -Fq '"actual_physical_W6_source_packet": "OPEN_EXTERNAL_EVIDENCE"' build/SP3_W6_PHYSICAL_SOURCE_RECEIPT_CONTRACT_V0_21.json
+          grep -Fq '"physical_production_claim": false' build/SP3_W6_PHYSICAL_SOURCE_RECEIPT_CONTRACT_V0_21.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: toe-sp3-w6-source-receipt-contract-v0-21
+          path: build/SP3_W6_PHYSICAL_SOURCE_RECEIPT_CONTRACT_V0_21.json
