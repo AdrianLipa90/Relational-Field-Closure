@@ -1,0 +1,36 @@
+name: ToE SP3 W6 MHD source acquisition v0.22
+
+on:
+  pull_request:
+    paths:
+      - "experiments/toe_solver_candidate_v0_1/RF_GSC5E_SP3_W6_MHD_SOURCE_ACQUISITION_V0_22.md"
+      - "experiments/toe_solver_candidate_v0_1/sp3_w6_mhd_source_acquisition_v0_22.py"
+      - ".github/workflows/toe-sp3-w6-mhd-source-acquisition-v0-22.yml"
+  push:
+    paths:
+      - "experiments/toe_solver_candidate_v0_1/RF_GSC5E_SP3_W6_MHD_SOURCE_ACQUISITION_V0_22.md"
+      - "experiments/toe_solver_candidate_v0_1/sp3_w6_mhd_source_acquisition_v0_22.py"
+      - ".github/workflows/toe-sp3-w6-mhd-source-acquisition-v0-22.yml"
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Validate independent MHD W6 acquisition route
+        run: |
+          mkdir -p build
+          python experiments/toe_solver_candidate_v0_1/sp3_w6_mhd_source_acquisition_v0_22.py | tee build/SP3_W6_MHD_SOURCE_ACQUISITION_V0_22.json
+          grep -Fq '"status": "PASS"' build/SP3_W6_MHD_SOURCE_ACQUISITION_V0_22.json
+          grep -Fq '"auxiliary_gravity_model_rejected_as_primary_W6_source": true' build/SP3_W6_MHD_SOURCE_ACQUISITION_V0_22.json
+          grep -Fq '"incomplete_patch_coverage_rejected": true' build/SP3_W6_MHD_SOURCE_ACQUISITION_V0_22.json
+          grep -Fq '"target_metric_source_leakage_rejected": true' build/SP3_W6_MHD_SOURCE_ACQUISITION_V0_22.json
+          grep -Fq '"actual_external_MHD_run_remains_open": true' build/SP3_W6_MHD_SOURCE_ACQUISITION_V0_22.json
+          grep -Fq '"physical_production_claim": false' build/SP3_W6_MHD_SOURCE_ACQUISITION_V0_22.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: toe-sp3-w6-mhd-source-acquisition-v0-22
+          path: build/SP3_W6_MHD_SOURCE_ACQUISITION_V0_22.json

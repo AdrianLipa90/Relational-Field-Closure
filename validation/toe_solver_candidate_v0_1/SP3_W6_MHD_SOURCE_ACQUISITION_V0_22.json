@@ -1,0 +1,70 @@
+{
+  "schema": "QHTRI_TOE_SP3_W6_MHD_SOURCE_ACQUISITION_VALIDATION_V0_22",
+  "date": "2026-09-20",
+  "status": "PASS",
+  "authority": "CANDIDATE_ONLY",
+  "canon_allowed": false,
+  "physical_production_claim": false,
+  "tested_head_sha": "b57f7f040099c777f23c36e31350b538a2f586a4",
+  "acquisition_class": "EXTERNAL_W6_SOURCE_ROUTE_INFRASTRUCTURE",
+  "primary_source_candidates": [
+    "SWMF_BATSRUS",
+    "OPEN_GGCM"
+  ],
+  "auxiliary_only_source_classes": [
+    "EGM2008",
+    "IGS_SP3_CLOCK",
+    "IERS_FRAME_TIME",
+    "IRI",
+    "NRLMSIS",
+    "PREM"
+  ],
+  "required_MHD_fields": [
+    "density",
+    "magnetic_field_x",
+    "magnetic_field_y",
+    "magnetic_field_z",
+    "pressure",
+    "velocity_x",
+    "velocity_y",
+    "velocity_z"
+  ],
+  "checks": {
+    "independent_MHD_fixture_structurally_accepted": true,
+    "auxiliary_gravity_model_rejected_as_primary_W6_source": true,
+    "missing_MHD_field_rejected": true,
+    "incomplete_patch_coverage_rejected": true,
+    "missing_external_driver_lineage_rejected": true,
+    "target_metric_source_leakage_rejected": true,
+    "manifest_PASS_is_not_external_W6_evidence_PASS": true,
+    "actual_external_MHD_run_remains_open": true
+  },
+  "frontier": {
+    "acquisition_route": "DEFINED_AND_EXECUTABLE",
+    "actual_external_MHD_run": "OPEN",
+    "actual_W6_source_tensor": "OPEN",
+    "RF_E24_patch_receipts": "OPEN",
+    "RF_E26_production_promotion": "OPEN"
+  },
+  "ci": {
+    "dedicated": {
+      "workflow": "ToE SP3 W6 MHD source acquisition v0.22",
+      "run_id": 35485642574,
+      "conclusion": "success"
+    },
+    "candidate_release_gates": {
+      "run_id": 35485642553,
+      "conclusion": "success"
+    },
+    "rfc_reference_suite": {
+      "run_id": 35485642555,
+      "conclusion": "success"
+    }
+  },
+  "interpretation_firewall": {
+    "acquisition_route_PASS_is_not_W6_evidence_PASS": true,
+    "gravity_orbit_clock_products_are_not_stress_energy_sources": true,
+    "target_metric_must_not_be_used_to_construct_source": true,
+    "full_two_patch_coverage_still_required": true
+  }
+}
