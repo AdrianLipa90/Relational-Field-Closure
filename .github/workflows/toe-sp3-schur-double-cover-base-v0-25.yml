@@ -1,0 +1,40 @@
+name: ToE SP3 Schur double-cover base v0.25
+
+on:
+  pull_request:
+    paths:
+      - "experiments/toe_solver_candidate_v0_1/RF_GSC5H_SP3_SCHUR_DOUBLE_COVER_BASE_V0_25.md"
+      - "experiments/toe_solver_candidate_v0_1/sp3_schur_double_cover_base_v0_25.py"
+      - ".github/workflows/toe-sp3-schur-double-cover-base-v0-25.yml"
+  push:
+    paths:
+      - "experiments/toe_solver_candidate_v0_1/RF_GSC5H_SP3_SCHUR_DOUBLE_COVER_BASE_V0_25.md"
+      - "experiments/toe_solver_candidate_v0_1/sp3_schur_double_cover_base_v0_25.py"
+      - ".github/workflows/toe-sp3-schur-double-cover-base-v0-25.yml"
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install numpy sympy
+      - name: Validate Schur double-cover base
+        env:
+          PYTHONPATH: .:src
+        run: |
+          mkdir -p build
+          python experiments/toe_solver_candidate_v0_1/sp3_schur_double_cover_base_v0_25.py | tee build/SP3_SCHUR_DOUBLE_COVER_BASE_V0_25.json
+          grep -Fq '"status": "PASS"' build/SP3_SCHUR_DOUBLE_COVER_BASE_V0_25.json
+          grep -Fq '"Schur_complement_S_positive_definite": true' build/SP3_SCHUR_DOUBLE_COVER_BASE_V0_25.json
+          grep -Fq '"Schur_completion_identity_exact": true' build/SP3_SCHUR_DOUBLE_COVER_BASE_V0_25.json
+          grep -Fq '"all_five_source_anchor_fourth_features_reconstruct_from_sheet_formula": true' build/SP3_SCHUR_DOUBLE_COVER_BASE_V0_25.json
+          grep -Fq '"source_anchors_occupy_both_sheet_signs": true' build/SP3_SCHUR_DOUBLE_COVER_BASE_V0_25.json
+          grep -Fq '"W6_source_evidence_not_claimed": true' build/SP3_SCHUR_DOUBLE_COVER_BASE_V0_25.json
+          grep -Fq '"physical_production_claim": false' build/SP3_SCHUR_DOUBLE_COVER_BASE_V0_25.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: toe-sp3-schur-double-cover-base-v0-25
+          path: build/SP3_SCHUR_DOUBLE_COVER_BASE_V0_25.json
