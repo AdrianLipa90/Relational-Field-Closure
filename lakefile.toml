@@ -1,4 +1,4 @@
-name = "rfc-formal"
+name = "rfc_formal"
 version = "0.1.0"
 defaultTargets = ["Formal"]
 
