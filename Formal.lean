@@ -121,4 +121,39 @@ theorem transitionFromPotential_cocycle
   rw [hOneMul]
 
 
+
+/--
+FSI.03 RFC-side quotient theorem: a common left frame transformation cancels
+from the relative frame observable.
+-/
+def relativeFrame {G : Type}
+    (mul : G → G → G)
+    (inv : G → G)
+    (a b : G) : G :=
+  mul (inv a) b
+
+def commonLeftFrame {G : Type}
+    (mul : G → G → G)
+    (h a : G) : G :=
+  mul h a
+
+theorem relativeFrame_commonLeft_invariant
+    {G : Type}
+    (mul : G → G → G)
+    (inv : G → G)
+    (one : G)
+    (hAssoc : ∀ x y z : G, mul (mul x y) z = mul x (mul y z))
+    (hInvMul : ∀ x : G, mul (inv x) x = one)
+    (hOneMul : ∀ x : G, mul one x = x)
+    (hInvProduct : ∀ x y : G, inv (mul x y) = mul (inv y) (inv x))
+    (h a b : G) :
+    relativeFrame mul inv (commonLeftFrame mul h a) (commonLeftFrame mul h b) =
+      relativeFrame mul inv a b := by
+  unfold relativeFrame commonLeftFrame
+  rw [hInvProduct]
+  rw [hAssoc]
+  rw [← hAssoc (inv h) h b]
+  rw [hInvMul]
+  rw [hOneMul]
+
 end Formal
