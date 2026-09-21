@@ -1211,6 +1211,23 @@
       "from": "RFC.GSC6B.PROPER_TEMPORAL_CLOCK",
       "to": "RFC.L7.CAUCHY_HYPERBOLICITY",
       "authority": "CANONICAL_FRONTIER"
+    },
+    {
+      "from": "RFC.GSC4F.GLOBAL_SE3_GAUGE_QUOTIENT",
+      "to": "RFC.GSC4G.RIGID_OVERLAP_COCYCLE",
+      "authority": "CANONICAL"
+    },
+    {
+      "from": "RFC.GSC4G.RIGID_OVERLAP_COCYCLE",
+      "to": "RFC.GSC4A.SOURCE_ASSEMBLED_SHARED_ATLAS",
+      "authority": "CANONICAL_FRONTIER"
+    },
+    {
+      "from": "RFC.GSC3H.3PLUS1_TWO_EPOCH_CONSTRUCTOR_V013",
+      "to": "RFC.GSC3A.CLOCK_TRANSVERSE_MATCHING_FLOW",
+      "authority": "CANDIDATE_ONLY",
+      "promotion_required": true,
+      "promotion_gate": "FULL_PHYSICAL_3PLUS1_PRODUCTION_BINDING_REQUIRED"
     }
   ]
 }
