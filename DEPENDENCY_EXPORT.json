@@ -2,8 +2,8 @@
   "schema": "FPDG_DEPENDENCY_EXPORT_V0_1",
   "repository_id": "RFC",
   "repository": "AdrianLipa90/Relational-Field-Closure",
-  "source_commit": "5997313a67e10a9ee6abba44cb67de256b916c46",
-  "generated_at": "2026-09-23T06:55:00+01:00",
+  "source_commit": "b4f6a2ee2cc9af3f4a5e748b59230cd1ae3750e6",
+  "generated_at": "2026-09-23T07:35:00+01:00",
   "claims": [
     {
       "claim_id": "RFC.SOURCE.CONSERVED_CARRIER",
@@ -593,6 +593,14 @@
       "evidence_class": "source_formalism_status",
       "exact_head": "5997313a67e10a9ee6abba44cb67de256b916c46",
       "validation": "tests/reference/test_rfc_chemistry_loop_phase_interface.py"
+    },
+    {
+      "claim_id": "RFC.CHEMISTRY.CARRIER_SCALE_IDENTIFIABILITY_NOGO",
+      "status": "PASS_EXACT_SOURCE_DENSITY_NONIDENTIFIABILITY / TWO_PARAMETER_RESCALING_ORBIT / INDEPENDENT_SCALE_RECEIPT_REQUIRED",
+      "source_path": "formalism/RF_CHEMISTRY_CARRIER_SCALE_IDENTIFIABILITY_NOGO_V0_1.md",
+      "evidence_class": "exact_identifiability_theorem",
+      "exact_head": "b4f6a2ee2cc9af3f4a5e748b59230cd1ae3750e6",
+      "validation": "tests/reference/test_rfc_chemistry_carrier_scale_identifiability.py"
     }
   ],
   "local_edges": [
@@ -1223,6 +1231,21 @@
     {
       "from": "RFC.F5.PHASE_ENERGY_ONE_FORM",
       "to": "RFC.CHEMISTRY.LOOP_PHASE_ENERGY_RESPONSE",
+      "authority": "CANONICAL"
+    },
+    {
+      "from": "RFC.F4.OCCUPATION_CURRENT",
+      "to": "RFC.CHEMISTRY.CARRIER_SCALE_IDENTIFIABILITY_NOGO",
+      "authority": "CANONICAL"
+    },
+    {
+      "from": "RFC.F5.PHASE_ENERGY_ONE_FORM",
+      "to": "RFC.CHEMISTRY.CARRIER_SCALE_IDENTIFIABILITY_NOGO",
+      "authority": "CANONICAL"
+    },
+    {
+      "from": "RFC.F6.COVARIANT_SOURCE",
+      "to": "RFC.CHEMISTRY.CARRIER_SCALE_IDENTIFIABILITY_NOGO",
       "authority": "CANONICAL"
     }
   ]
