@@ -171,7 +171,117 @@ Examples include a source-owned receipt for at least enough independent coordina
 
 A numerical choice of \(B(\phi+\kappa)=\hbar/2\) or \(=\hbar\) does not resolve the physical branch unless the corresponding carrier observable has independent source authority. RF-S13 itself marks that selection as OPEN INPUT.
 
-## 6. Chemistry consequence
+## 6. Minimal identifiability ladder
+
+Use logarithmic parameter coordinates
+
+\[
+x=(\ln B,\ln\mathcal N,\ln V_R).
+\]
+
+Relevant independently measured quantities have sensitivity rows
+
+\[
+J_\rho=(1,1,-1),
+\]
+
+\[
+J_\epsilon=(1,0,0),
+\]
+
+\[
+J_n=(0,1,-1),
+\]
+
+\[
+J_{\mathcal N}=(0,1,0),
+\qquad
+J_{V_R}=(0,0,1).
+\]
+
+Because
+
+\[
+\boxed{
+J_\rho=J_\epsilon+J_n,
+}
+\]
+
+the three quantities \(\rho_E,\epsilon_\Psi,n_R\) are not three independent scale constraints. Their matrix has rank two.
+
+This yields the exact minimal ladder:
+
+### Identify B only
+
+A physical per-carrier energy receipt gives
+
+\[
+\epsilon_\Psi=B\omega(\phi+\kappa)
+\]
+
+and therefore identifies \(B\) when \(\omega,\phi\) are independently known.
+
+Alternatively, source density plus occupation density gives
+
+\[
+\boxed{
+B
+=
+\frac{\rho_E}
+{n_R\,\omega(\phi+\kappa)}
+}
+\]
+
+when the denominator is nonzero.
+
+Thus either
+
+\[
+\{\epsilon_\Psi\}
+\]
+
+or
+
+\[
+\{\rho_E,n_R\}
+\]
+
+breaks the \(B\)-direction degeneracy.
+
+### Identify all of B, N, V_R
+
+The set
+
+\[
+\{\rho_E,\epsilon_\Psi,n_R\}
+\]
+
+still has rank two because \(\rho_E=n_R\epsilon_\Psi\).
+
+To obtain full rank three, one needs an absolute occupation or volume coordinate in addition to an energy/density scale. Examples are
+
+\[
+\{\rho_E,\epsilon_\Psi,\mathcal N\},
+\qquad
+\{\rho_E,\epsilon_\Psi,V_R\},
+\]
+
+\[
+\{\rho_E,n_R,\mathcal N\},
+\qquad
+\{\rho_E,n_R,V_R\}.
+\]
+
+Each corresponding sensitivity matrix has rank three.
+
+Hence the source-owned open inputs have a precise role:
+
+- a carrier-energy or occupation-density receipt can identify \(B\);
+- an absolute occupation or cell-volume receipt is additionally required to separate \(\mathcal N\) from \(V_R\).
+
+This is the minimal rank requirement, not a heuristic data wish-list.
+
+## 7. Chemistry consequence
 
 A chemical residual cannot be used to solve for \(B\) and then be reused as evidence for an RFC-induced chemical interaction.
 
@@ -189,7 +299,7 @@ V_I
 
 Therefore the chemistry admission gate must require an independently sourced normalization before the target observable is opened.
 
-## 7. Exact scope of the no-go
+## 8. Exact scope of the no-go
 
 Proved here:
 

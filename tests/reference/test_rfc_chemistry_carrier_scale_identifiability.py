@@ -8,6 +8,8 @@ from src.rfc.chemistry_carrier_scale_identifiability import (
     dot,
     log_source_jacobian,
     log_source_null_directions,
+    observable_rank,
+    parameter_identifiable,
     rescale_source_equivalent,
 )
 
@@ -79,3 +81,24 @@ def test_source_density_does_not_identify_carrier_energy():
 def test_fail_closed_inputs(args):
     with pytest.raises(CarrierScaleIdentifiabilityError):
         carrier_scale_state(*args)
+
+
+def test_rho_epsilon_and_n_are_rank_redundant():
+    assert observable_rank(("rho", "epsilon", "n")) == 2
+
+
+def test_minimal_routes_identify_B():
+    assert parameter_identifiable(("epsilon",), "B")
+    assert parameter_identifiable(("rho", "n"), "B")
+    assert not parameter_identifiable(("rho",), "B")
+
+
+def test_full_parameter_identification_requires_absolute_N_or_V_scale():
+    assert observable_rank(("rho", "epsilon", "N")) == 3
+    assert observable_rank(("rho", "epsilon", "V")) == 3
+    assert observable_rank(("rho", "n", "N")) == 3
+    assert observable_rank(("rho", "n", "V")) == 3
+
+    assert observable_rank(("rho", "epsilon", "n")) == 2
+    assert not parameter_identifiable(("rho", "epsilon", "n"), "N")
+    assert not parameter_identifiable(("rho", "epsilon", "n"), "V")
