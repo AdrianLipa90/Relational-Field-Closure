@@ -2,8 +2,8 @@
   "schema": "FPDG_DEPENDENCY_EXPORT_V0_1",
   "repository_id": "RFC",
   "repository": "AdrianLipa90/Relational-Field-Closure",
-  "source_commit": "f36e627ad9990f6ad5bc44d34e2e9aa40c3a6ca5",
-  "generated_at": "2026-09-23T07:42:00+01:00",
+  "source_commit": "30ca034fea121a678ef84342e1400d4ebfc1d3fa",
+  "generated_at": "2026-09-23T07:50:00+01:00",
   "claims": [
     {
       "claim_id": "RFC.SOURCE.CONSERVED_CARRIER",
@@ -580,10 +580,10 @@
     },
     {
       "claim_id": "RFC.CHEMISTRY.CARRIER_SCALE_IDENTIFIABILITY_NOGO",
-      "status": "PASS_EXACT_SOURCE_DENSITY_NONIDENTIFIABILITY / TWO_PARAMETER_RESCALING_ORBIT / INDEPENDENT_SCALE_RECEIPT_REQUIRED",
+      "status": "PASS_EXACT_SOURCE_DENSITY_NONIDENTIFIABILITY / TWO_PARAMETER_RESCALING_ORBIT / MINIMAL_OBSERVABLE_RANK_LADDER_DERIVED / INDEPENDENT_SCALE_RECEIPT_REQUIRED",
       "source_path": "formalism/RF_CHEMISTRY_CARRIER_SCALE_IDENTIFIABILITY_NOGO_V0_1.md",
       "evidence_class": "exact_identifiability_theorem",
-      "exact_head": "f36e627ad9990f6ad5bc44d34e2e9aa40c3a6ca5",
+      "exact_head": "30ca034fea121a678ef84342e1400d4ebfc1d3fa",
       "validation": "tests/reference/test_rfc_chemistry_carrier_scale_identifiability.py"
     }
   ],
