@@ -3,7 +3,7 @@
   "repository_id": "RFC",
   "repository": "AdrianLipa90/Relational-Field-Closure",
   "source_commit": "30ca034fea121a678ef84342e1400d4ebfc1d3fa",
-  "generated_at": "2026-09-23T07:50:00+01:00",
+  "generated_at": "2026-09-23T07:58:00+01:00",
   "claims": [
     {
       "claim_id": "RFC.SOURCE.CONSERVED_CARRIER",
@@ -13,9 +13,11 @@
     },
     {
       "claim_id": "RFC.N1B2K.CURRENT_MEASURE",
-      "status": "ACTIVE_PHYSICAL_REALIZATION",
-      "source_path": "formalism/DEPENDENCY_GRAPH.md",
-      "evidence_class": "source_repository_frontier"
+      "status": "REFERENCE_SUITE_PASS / EXECUTABLE_INDEPENDENT_INPUT_RECEIPT / PHYSICAL_REALIZATION_INPUT_OPEN",
+      "source_path": "formalism/RF_F24_CURRENT_MEASURE_REALIZATION_RECEIPT.md",
+      "evidence_class": "reference_receipt_physical_input_open",
+      "exact_head": "3b213f2df9e9528ec5fc42e1b07dfe959f4c120a",
+      "validation": "validation/RF_F24_CURRENT_MEASURE_REALIZATION_RECEIPT_V0_1.json / RFC reference suite run 33274280691 SUCCESS"
     },
     {
       "claim_id": "RFC.N1B2O.MATTER_SOURCE_FACTORIZATION",
