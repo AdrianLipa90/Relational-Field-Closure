@@ -1,0 +1,24 @@
+{
+  "schema":"RFC_AUX_RGB_QCD_DISCRETE_HOLONOMY_HESSIAN_V0_7",
+  "date":"2026-09-26",
+  "status":"EXACT_QUADRATIC_GRAPH_GAUGE_GATE_CONTINUUM_LOOP_OPEN",
+  "branch":"candidate/aux-rgb-moire-su3-qcd-bridge-v0.1-20260926",
+  "exact":[
+    "B D = 0",
+    "H_phys=(C_p/2) B^T B",
+    "H_phys D = 0",
+    "H_xi=H_phys+(1/xi) D D^T full rank on one-plaquette link space",
+    "Delta_FP=D^T D",
+    "connected-square FP spectrum has one global zero mode and nonzero spectrum {2,2,4}",
+    "quadratic SU3 lift is I8 tensor H_xi"
+  ],
+  "interpretation":"ghost determinant is gauge-quotient Jacobian on graph fluctuation space, not an independent physical carrier",
+  "open":[
+    "extended lattice or continuum spectral family",
+    "scale-dependent determinant",
+    "typed quark Dirac determinant",
+    "regulator and continuum limit",
+    "project-derived F2 log coefficient"
+  ],
+  "main_modified":false
+}
