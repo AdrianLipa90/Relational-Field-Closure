@@ -1,0 +1,31 @@
+{
+  "schema":"RFC_AUX_RGB_QCD_RUNNING_INVARIANTS_V0_4",
+  "date":"2026-09-26",
+  "status":"GROUP_INVARIANT_PASS_STANDARD_QFT_COMPARISON_PHYSICAL_RUNNING_OPEN",
+  "branch":"candidate/aux-rgb-moire-su3-qcd-bridge-v0.1-20260926",
+  "project_derived":{
+    "C_A":"3",
+    "C_F":"4/3",
+    "T_F":"1/2"
+  },
+  "standard_qft_import":{
+    "beta0":"(11/3) C_A - (4/3) T_F n_f",
+    "beta1":"(34/3) C_A^2 - 4 C_F T_F n_f - (20/3) C_A T_F n_f"
+  },
+  "derived_after_substitution":{
+    "beta0":"11 - 2 n_f/3",
+    "beta1":"102 - 38 n_f/3",
+    "nf6_beta0":"7",
+    "nf6_beta1":"26",
+    "asymptotic_freedom_integer_nf_0_to_16":true
+  },
+  "open":[
+    "project derivation of renormalization dynamics",
+    "physical alpha_c source selection",
+    "renormalization scale and scheme binding",
+    "Lambda_QCD",
+    "threshold matching",
+    "confinement and hadron spectrum"
+  ],
+  "main_modified":false
+}
