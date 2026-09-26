@@ -1,0 +1,26 @@
+{
+  "schema":"RFC_AUX_RGB_QCD_BACKGROUND_VECTOR_HESSIAN_V0_11",
+  "date":"2026-09-26",
+  "status":"VECTOR_HESSIAN_CONSTRUCTED_SELECTED_BACKGROUND_UNSTABLE",
+  "branch":"candidate/aux-rgb-moire-su3-qcd-bridge-v0.1-20260926",
+  "operator":"Delta1_mu_nu=-Dbar^2 delta_mu_nu - 2 ad(Fbar_mu_nu) in declared convention",
+  "witness":{
+    "lattice":"2^4 periodic spectral regulator",
+    "theta":0.20,
+    "negative_modes":6,
+    "near_zero_modes":4,
+    "global_color_conjugation_spectral_residual":2.4868995751603507e-14
+  },
+  "verdict":{
+    "vector_operator_structural_gate":"PASS",
+    "selected_background_stability":"FAIL",
+    "naive_real_logdet_rg_extraction_on_this_background":"REJECT"
+  },
+  "open":[
+    "heat-kernel/local UV coefficient extraction or controlled stable background",
+    "combined one-loop F2 logarithm",
+    "project-derived b0",
+    "physical running and Lambda_QCD"
+  ],
+  "main_modified":false
+}
