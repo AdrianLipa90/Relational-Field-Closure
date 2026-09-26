@@ -1,0 +1,26 @@
+{
+  "schema":"RFC_AUX_RGB_QCD_DIMENSIONLESS_RG_RATIO_V0_13",
+  "date":"2026-09-26",
+  "status":"EXACT_FIXED_NF_RATIO_PHYSICAL_SCALE_OPEN",
+  "branch":"candidate/aux-rgb-moire-su3-qcd-bridge-v0.1-20260926",
+  "project_coordinate":{
+    "kappa":"ln(2)/(24*pi)",
+    "alpha_c_candidate":"ln(phi)-kappa*ln(2)",
+    "alpha_c_numeric":0.474839619052230,
+    "meaning":"1/g^2, not alpha_s"
+  },
+  "results":{
+    "flow":"alpha_c(mu)=alpha_c(mu0)+b0/(8*pi^2)*ln(mu/mu0)",
+    "ratio":"Lambda/mu0=exp(-8*pi^2*alpha_c(mu0)/b0)",
+    "nf6_ratio":0.004719859618240724,
+    "pure_YM_ratio":0.03309581284558998
+  },
+  "firewall":[
+    "not promoted to physical Lambda_QCD",
+    "mu0 not selected",
+    "physical alpha_c source selection remains gated",
+    "threshold matching absent",
+    "scheme binding absent"
+  ],
+  "main_modified":false
+}
