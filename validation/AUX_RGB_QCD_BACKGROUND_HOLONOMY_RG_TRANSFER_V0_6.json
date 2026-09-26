@@ -1,0 +1,36 @@
+{
+  "schema":"RFC_AUX_RGB_QCD_BACKGROUND_HOLONOMY_RG_TRANSFER_V0_6",
+  "date":"2026-09-26",
+  "status":"EXACT_LOG_COEFFICIENT_TO_BETA_TRANSFER_PROJECT_QUANTUM_LOOP_OPEN",
+  "branch":"candidate/aux-rgb-moire-su3-qcd-bridge-v0.1-20260926",
+  "gremlin_internal_audit":{
+    "authority":"CANDIDATE_ONLY",
+    "source_event_id":"gremlin:whisper:sha256:b8e1256965baeed21b48a613e1eb54a39642330d331a0a23e0843b632f0df1e8",
+    "route_species":["OWL","SPIDER","ANT"],
+    "phase_attention_terms":["holonomy-continuum-wilson","renormalization","normalization","rfg8-rfg15"]
+  },
+  "repo_audit":{
+    "brst_or_faddeev_popov_found_in_active_rfc":false,
+    "Zg_ZA_Zq_engine_found":false,
+    "quantum_wilson_ensemble_or_step_scaling_found":false
+  },
+  "exact_transfer":{
+    "d_inverse_g2_d_log_mu":"b0/(8*pi^2)",
+    "beta_g":"-b0*g^3/(16*pi^2)",
+    "effective_action_F2_log_coefficient":"b0/(32*pi^2)"
+  },
+  "standard_target":{
+    "b0":"11-2*n_f/3",
+    "nf6_b0":"7",
+    "background_field_identity":"Z_g*sqrt(Z_B)=1"
+  },
+  "open":[
+    "project fluctuation Hessian",
+    "quantum measure and regulator",
+    "gauge redundancy quotient",
+    "quark determinant",
+    "project-derived logarithmic coefficient",
+    "physical running and Lambda_QCD"
+  ],
+  "main_modified":false
+}
