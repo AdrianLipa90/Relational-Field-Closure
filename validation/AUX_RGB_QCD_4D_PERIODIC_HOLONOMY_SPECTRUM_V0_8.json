@@ -1,0 +1,25 @@
+{
+  "schema":"RFC_AUX_RGB_QCD_4D_PERIODIC_HOLONOMY_SPECTRUM_V0_8",
+  "date":"2026-09-26",
+  "status":"EXACT_4D_FREE_SPECTRUM_BACKGROUND_RENORMALIZATION_OPEN",
+  "branch":"candidate/aux-rgb-moire-su3-qcd-bridge-v0.1-20260926",
+  "exact":[
+    "B D = 0 on periodic L^4 complex",
+    "Delta1=B^T B + D D^T",
+    "spec(Delta1)=p_hat^2 repeated four times",
+    "p_hat^2=4 sum_mu sin^2(pi n_mu/L)",
+    "four harmonic one-form modes on T4",
+    "one global ghost zero mode per color",
+    "SU3 lift gives 32 harmonic color-holonomy modes",
+    "nonzero eigenvalues scale as a^-2"
+  ],
+  "validated_L":[2,3],
+  "open":[
+    "nontrivial background holonomy with F_mu_nu != 0",
+    "background-dependent determinant difference",
+    "quark Dirac determinant",
+    "F2 log coefficient",
+    "project-derived beta function"
+  ],
+  "main_modified":false
+}
