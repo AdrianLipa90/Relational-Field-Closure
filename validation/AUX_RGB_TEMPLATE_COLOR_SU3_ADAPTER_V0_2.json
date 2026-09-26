@@ -1,0 +1,29 @@
+{
+  "schema":"RFC_AUX_RGB_TEMPLATE_COLOR_SU3_ADAPTER_V0_2",
+  "date":"2026-09-26",
+  "status":"EXACT_TYPED_TEMPLATE_ADAPTER_LOCAL_PASS_QCD_DYNAMICS_OPEN",
+  "branch":"candidate/aux-rgb-moire-su3-qcd-bridge-v0.1-20260926",
+  "source_firewalls":[
+    "RF-M2: AUX RGB is neutrino-flavour implementation alias",
+    "RF-M2: full bipolar AUX dimension is 8",
+    "TIR Stage25: color C3 and family C3 are independent tensor factors"
+  ],
+  "exact_results":[
+    "finite Weyl relation",
+    "analytic matrix-unit reconstruction",
+    "analytic reconstruction of all eight Gell-Mann matrices",
+    "standard f_abc tensor",
+    "adjoint dimension 8",
+    "adjoint Casimir C_A=3",
+    "color-family tensor-factor commutator zero"
+  ],
+  "claim_boundary":{
+    "full_aux_equals_color":false,
+    "shared_three_channel_phase_template":true,
+    "color_su3_representation_adapter":true,
+    "full_qcd_closed":false,
+    "running_closed":false,
+    "confinement_closed":false,
+    "main_modified":false
+  }
+}
