@@ -1,0 +1,51 @@
+{
+  "schema": "RFC_AUX_RGB_MOIRE_SU3_STRUCTURE_TENSOR_GATE_V0_1",
+  "status": "LOCAL_PASS_EXACT_ALGEBRA_PHYSICAL_QCD_BINDING_OPEN",
+  "date": "2026-09-26",
+  "branch": "candidate/aux-rgb-moire-su3-qcd-bridge-v0.1-20260926",
+  "base_main_sha": "664349e2f16b57ee23bf6f5f21f5fe8ada17c5a5",
+  "reference_test": "tests/reference/test_aux_rgb_moire_su3_structure_tensor.py",
+  "formalism": "formalism/AUX_RGB_MOIRE_SU3_STRUCTURE_TENSOR_GATE_V0_1.md",
+  "local_result": "5 passed, 0 failed",
+  "normalization": "Tr(T_A T_B)=1/2 delta_AB",
+  "max_residuals": {
+    "weyl_relation": 6.740105962128839e-16,
+    "orthogonal_intertwiner": 4.440892098500626e-16,
+    "structure_tensor": 2.220446049250313e-16,
+    "adjoint_intertwiner": 2.220446049250313e-16,
+    "adjoint_casimir_C_A_equals_3": 8.881784197001252e-16
+  },
+  "adjoint_casimir_eigenvalues": [
+    2.9999999999999987,
+    3.0,
+    3.0,
+    3.0000000000000004,
+    3.000000000000001,
+    3.000000000000001,
+    3.0000000000000018,
+    3.000000000000002
+  ],
+  "gremlin_live_audit": {
+    "authority": "CANDIDATE_ONLY",
+    "source_event_id": "gremlin:whisper:sha256:1c843fa3ea0e914fd9136b0059f9b187c1f0e6c46b45ad6f246d12fa9b75e4d6",
+    "route_event_id": "gremlin:whisper:sha256:fd2a7899f40362879631054095169c6e6a705e74bbf6384582279d622947a1a2",
+    "terminal36d_fused_event_id": "gremlin:whisper:sha256:d0b02be750371411e87908339783779022c15a6a3b091ec86c6c19ab69f85983",
+    "route_species": ["OWL", "SPIDER", "HOUND"],
+    "phase_attention_R": 0.2185891245355063
+  },
+  "existing_project_bindings": {
+    "tir_stage27_quark_link_coupling": "PASS",
+    "rfg11_full_su3_adjoint_covariance": "PASS",
+    "rfg12_rfg15_yang_mills_downstream": "PASS_EXISTING_PROJECT_GATES"
+  },
+  "open_physical_gates": [
+    "AUX_RGB_TO_PHYSICAL_QCD_COLOR_TRIPLET_SOURCE_BINDING",
+    "PHYSICAL_QCD_COUPLING_AND_RUNNING",
+    "NONPERTURBATIVE_CONFINEMENT_AND_HADRONIZATION"
+  ],
+  "firewalls": [
+    "DIMENSION_8_ALONE_NOT_USED_AS_IDENTIFICATION",
+    "FULL_QCD_CENTER_SYMMETRY_NOT_ASSUMED_WITH_DYNAMICAL_FUNDAMENTAL_QUARKS",
+    "NO_MAIN_MERGE"
+  ]
+}
