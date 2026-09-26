@@ -1,0 +1,22 @@
+{
+  "schema":"RFC_AUX_RGB_QCD_SCALE_BINDING_FIREWALL_V0_14",
+  "date":"2026-09-26",
+  "status":"PHYSICAL_SCALE_OPEN_DIMENSIONLESS_RATIO_EXACT",
+  "branch":"candidate/aux-rgb-moire-su3-qcd-bridge-v0.1-20260926",
+  "audit":{
+    "RFG3_lattice_a":"REGULATOR_SCALE_NO_PHYSICAL_CALIBRATION",
+    "omega_Q_Mstar":"DOUBLE_COPY_GRAVITY_LANE_WITH_EXACT_FACTOR_TWO_TYPE_AMBIGUITY",
+    "unique_QCD_mu0_found":false
+  },
+  "exact":{
+    "Lambda_a_nf6":0.004719859618240724,
+    "Mstar_rest_over_kinetic":"2",
+    "physical_Lambda_inherits_factor_two_if_Mstar_branch_is_used_without_independent_type_selection":true
+  },
+  "forbidden_selection":[
+    "fit mu0 to known Lambda_QCD",
+    "select Mstar type using gravity output",
+    "silently assign physical units to lattice a"
+  ],
+  "main_modified":false
+}
