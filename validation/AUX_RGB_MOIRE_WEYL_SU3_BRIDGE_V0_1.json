@@ -1,0 +1,34 @@
+{
+  "schema": "RFC_AUX_RGB_MOIRE_WEYL_SU3_BRIDGE_V0_1",
+  "status": "CANDIDATE_LOCAL_PASS_EXACT_ALGEBRA_PHYSICAL_QCD_BINDING_OPEN",
+  "date": "2026-09-26",
+  "branch": "candidate/aux-rgb-moire-su3-qcd-bridge-v0.1-20260926",
+  "base_main_sha": "664349e2f16b57ee23bf6f5f21f5fe8ada17c5a5",
+  "formalism": "formalism/AUX_RGB_MOIRE_WEYL_SU3_BRIDGE_V0_1.md",
+  "reference_test": "tests/reference/test_aux_rgb_moire_weyl_su3_bridge.py",
+  "reference_test_git_blob_sha1": "264e60efbfc2a15e5f67e29f91d1727ad4878a2d",
+  "reference_test_sha256": "3c89736a4e6ef53632c452c089dedf52eb32fb77dc3f278ff5e24e77e3fdfb4e",
+  "local_result": "1 passed, 0 failed",
+  "checked_invariants": [
+    "1+omega+omega^2=0",
+    "X_orb^3=Z_RGB^3=I",
+    "Z_RGB X_orb = omega X_orb Z_RGB",
+    "W_ab=X_orb^a Z_RGB^b spans M3(C) with complex rank 9",
+    "traceless Hermitian Weyl sector has real rank 8",
+    "Weyl traceless-Hermitian span equals the Gell-Mann real span",
+    "RGB phase clock alone remains Abelian"
+  ],
+  "source_pins": {
+    "tir_c3_crosswalk_commit": "853032e019824b836de43634d949da5566396153",
+    "on_primes_fractal_orbital_commit": "43aebbcc46d7003634f26b773472e64d9f85fdee",
+    "rfc_yang_mills_base_commit": "664349e2f16b57ee23bf6f5f21f5fe8ada17c5a5"
+  },
+  "claim_boundary": {
+    "exact_representation_closure": true,
+    "exact_su3_lie_span": true,
+    "rgb_scalars_alone_nonabelian": false,
+    "physical_qcd_color_identification": false,
+    "uniform_c3_physical_clock_identification": false,
+    "main_branch_modified": false
+  }
+}
