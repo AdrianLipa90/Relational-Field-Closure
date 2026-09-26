@@ -1,0 +1,43 @@
+{
+  "schema": "RFC_AUX_RGB_MOIRE_QCD_GROUP_INVARIANTS_V0_1",
+  "status": "LOCAL_PASS_GROUP_THEORY_PHYSICAL_RUNNING_OPEN",
+  "date": "2026-09-26",
+  "branch": "candidate/aux-rgb-moire-su3-qcd-bridge-v0.1-20260926",
+  "reference_test": "tests/reference/test_aux_rgb_moire_qcd_group_invariants.py",
+  "formalism": "formalism/AUX_RGB_MOIRE_QCD_GROUP_INVARIANTS_V0_1.md",
+  "local_result": "5 passed, 0 failed",
+  "derived_group_invariants": {
+    "T_F": 0.5,
+    "C_F": 1.3333333333333333,
+    "C_A": 3.0,
+    "one_loop_b0": "(33-2*n_f)/(12*pi)"
+  },
+  "max_residuals": {
+    "C_F_four_thirds": 4.440892098500626e-16,
+    "C_A_three": 8.881784197001252e-16
+  },
+  "center_structure": {
+    "group": "Z3",
+    "elements": ["I", "omega I", "omega^2 I"],
+    "adjoint_action": "TRIVIAL",
+    "fundamental_action": "NONTRIVIAL"
+  },
+  "closed": [
+    "SU3_FUNDAMENTAL_DYNKIN_INDEX",
+    "SU3_FUNDAMENTAL_QUADRATIC_CASIMIR",
+    "SU3_ADJOINT_QUADRATIC_CASIMIR",
+    "ONE_LOOP_QCD_GROUP_FACTOR_CONDITIONAL_ON_NF"
+  ],
+  "open": [
+    "PHYSICAL_ALPHA_S_BOUNDARY_VALUE",
+    "RG_SCALE_BINDING",
+    "LAMBDA_QCD",
+    "NONPERTURBATIVE_CONFINEMENT",
+    "PHYSICAL_AUX_RGB_TO_QCD_COLOR_SOURCE_BINDING"
+  ],
+  "firewalls": [
+    "NO_PHYSICAL_NF_DERIVATION_CLAIM",
+    "NO_FULL_QCD_CENTER_SYMMETRY_CLAIM_WITH_DYNAMICAL_FUNDAMENTAL_QUARKS",
+    "NO_MAIN_MERGE"
+  ]
+}
