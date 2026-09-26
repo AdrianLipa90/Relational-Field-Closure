@@ -1,0 +1,32 @@
+{
+  "schema": "RFC_AUX_RGB_TETRA_TRIPLET_C3_INTERTWINER_V0_1",
+  "status": "LOCAL_PASS_EXACT_REPRESENTATION_BRIDGE_PHYSICAL_QCD_BINDING_OPEN",
+  "date": "2026-09-26",
+  "branch": "candidate/aux-rgb-moire-su3-qcd-bridge-v0.1-20260926",
+  "reference_test": "tests/reference/test_aux_rgb_tetra_triplet_intertwiner.py",
+  "formalism": "formalism/AUX_RGB_TETRA_TRIPLET_C3_INTERTWINER_V0_1.md",
+  "local_result": "4 passed, 0 failed",
+  "source_module": {
+    "name": "METATIME_SM_TETRA_TRIPLET_SU3_LIFT_v3_9",
+    "tetrahedron": [
+      [1,1,1],
+      [1,-1,-1],
+      [-1,1,-1],
+      [-1,-1,1]
+    ]
+  },
+  "exact_results": [
+    "R_tet fixes v0 and cycles v1_to_v2_to_v3_to_v1",
+    "R_tet equals AUX X_orb=P3 in the declared ordered representation",
+    "R_tet has determinant 1 and rotation angle 2pi/3",
+    "F3_dagger P3 F3 equals Z_RGB_dagger",
+    "anchored RGB-to-project-triplet map intertwines the C3 action"
+  ],
+  "claim_boundary": {
+    "aux_is_generic_three_channel_carrier": true,
+    "representation_equivariance": true,
+    "project_triplet_link": true,
+    "physical_qcd_color_identification": false,
+    "main_branch_modified": false
+  }
+}
