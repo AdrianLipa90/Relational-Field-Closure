@@ -1,0 +1,30 @@
+{
+  "schema":"RFC_AUX_RGB_QCD_BACKGROUND_ADJOINT_DETERMINANT_V0_9",
+  "date":"2026-09-26",
+  "status":"EXACT_BACKGROUND_GHOST_SECTOR_FULL_ONE_LOOP_OPEN",
+  "branch":"candidate/aux-rgb-moire-su3-qcd-bridge-v0.1-20260926",
+  "witness":{
+    "lattice":"2^4 periodic",
+    "background":"Ux=exp(i*0.37*T1), Uy=exp(i*0.37*T2), Uz=Ut=I",
+    "plaquette_defect":0.0045795881527266324,
+    "trivial_adjoint_zero_modes":8,
+    "background_adjoint_zero_modes":1,
+    "trivial_log_pseudodet":245.8723361276029,
+    "background_log_pseudodet":230.03362412779973,
+    "global_conjugation_spectral_residual":3.197442310920451e-14
+  },
+  "exact":[
+    "R(U)_ab=2 Tr(T_a U T_b U^dagger) is orthogonal",
+    "background adjoint Laplacian is gauge-basis conjugacy invariant",
+    "noncommuting holonomy produces nonzero plaquette curvature",
+    "FP/adjoint spectrum and pseudodeterminant respond to background"
+  ],
+  "open":[
+    "background vector Hessian including curvature term",
+    "quark Dirac determinant",
+    "combined one-loop effective action",
+    "F2 log coefficient",
+    "project-derived beta function"
+  ],
+  "main_modified":false
+}
