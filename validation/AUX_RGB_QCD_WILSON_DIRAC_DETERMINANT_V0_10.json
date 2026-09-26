@@ -1,0 +1,31 @@
+{
+  "schema":"RFC_AUX_RGB_QCD_WILSON_DIRAC_DETERMINANT_V0_10",
+  "date":"2026-09-26",
+  "status":"EXACT_LOCAL_GAUGE_COVARIANCE_QUARK_DETERMINANT_BACKGROUND_SENSITIVE",
+  "branch":"candidate/aux-rgb-moire-su3-qcd-bridge-v0.1-20260926",
+  "witness":{
+    "lattice":"2^4 periodic",
+    "spin_dimension":4,
+    "color_dimension":3,
+    "matrix_dimension":192,
+    "regulator":"Wilson-Dirac r=1",
+    "structural_test_mass":0.4,
+    "background_theta":0.37,
+    "background_minus_trivial_logabsdet":2.14203942461279,
+    "local_gauge_matrix_covariance_residual":5.773844773599247e-14,
+    "local_gauge_logdet_residual":1.1368683772161603e-13
+  },
+  "firewall":[
+    "Wilson-Dirac is imported as a standard regulator witness",
+    "m=0.4 is not a physical quark mass",
+    "determinant covariance is structural, not a QCD precision prediction"
+  ],
+  "open":[
+    "background gauge-vector Hessian determinant",
+    "combined one-loop effective action",
+    "continuum/regulator matching",
+    "project-derived F2 log coefficient",
+    "physical quark threshold matching"
+  ],
+  "main_modified":false
+}
