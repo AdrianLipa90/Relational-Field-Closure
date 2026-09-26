@@ -1,0 +1,23 @@
+{
+  "schema":"RFC_AUX_RGB_QCD_TYPED_PROVENANCE_ERRATUM_V0_1",
+  "date":"2026-09-26",
+  "status":"TYPE_CORRECTION_PRIOR_RESULTS_PRESERVED",
+  "supersedes_claim":{
+    "source":"AUX_RGB_TETRA_TRIPLET_C3_INTERTWINER_V0_1",
+    "claim":"aux_is_generic_three_channel_carrier=true",
+    "corrected_to":"abstract_three_channel_phase_template_is_reusable; full_RF_M2_AUX_is_8D_neutrino_flavour"
+  },
+  "preserved":[
+    "C3 intertwiner mathematics",
+    "Weyl relation",
+    "Gell-Mann reconstruction",
+    "f_abc structure tensor",
+    "adjoint-8 and Casimirs"
+  ],
+  "authoritative_typed_chain":[
+    "AUX_RGB_TEMPLATE_COLOR_SU3_ADAPTER_V0_2",
+    "AUX_RGB_COLOR_QUARK_LINK_COUPLING_V0_3",
+    "AUX_RGB_QCD_RUNNING_INVARIANTS_V0_4"
+  ],
+  "main_modified":false
+}
