@@ -1,0 +1,74 @@
+{
+  "schema":"RFC_AUX_RGB_QCD_DIMENSIONLESS_CONFINEMENT_V0_15",
+  "date":"2026-09-26",
+  "status":"STRUCTURAL_DIAGNOSTIC_PASS_MONTE_CARLO_PILOT_INCONCLUSIVE",
+  "branch":"candidate/aux-rgb-moire-su3-qcd-bridge-v0.1-20260926",
+  "gremlin":{
+    "authority":"CANDIDATE_ONLY",
+    "task_event":"gremlin:whisper:sha256:9e78fe3fba5f97ed77e52102ce3f23490d43ace9ed44abd5821b399704eb52ff",
+    "audit_event":"gremlin:whisper:sha256:aaa0cfe8176e5d76d8fa950afc77ab385a6a28721de186507450afa4ac1325dc",
+    "route_species":["OWL","SPIDER"],
+    "primary_firewall":"PURE_YM_CENTER_VS_FULL_QCD"
+  },
+  "exact_structural_results":[
+    "Creutz ratio cancels area-independent constant and perimeter terms",
+    "pure SU3 Wilson action is invariant under a Z3 temporal center transformation",
+    "fundamental Polyakov loop transforms by the center phase",
+    "fundamental dynamical Wilson-Dirac determinant breaks that exact center symmetry",
+    "leading strong-coupling SU3 Wilson-loop coordinate is (beta_W/18)^Area"
+  ],
+  "strong_coupling_coordinate":{
+    "beta_W":2.84903771431338,
+    "u_leading":0.15827987301741,
+    "sigma_a2_leading":1.8433904647307773,
+    "promotion":"LEADING_ORDER_ONLY_NOT_PRECISION"
+  },
+  "implementation_error_log":[
+    {
+      "status":"REJECTED",
+      "issue":"first Metropolis pilot embedded-SU2 proposal omitted parentheses, so one off-diagonal component was not multiplied by sin(theta)",
+      "effect":"proposal was nonunitary and Wilson-loop values became unphysical",
+      "repair":"corrected proposal; 1000-proposal max unitarity defect <3.2e-16 and max determinant defect <4.5e-16",
+      "invalid_run_values_retained":false
+    }
+  ],
+  "corrected_pilot":{
+    "lattice":"4^4 periodic pure SU3 Wilson action",
+    "seed1":{
+      "therm":80,
+      "nmeas":30,
+      "W11":0.23245222579419555,
+      "W12":0.06383158968038004,
+      "W21":0.057143257859940615,
+      "W22":0.008208254298822812,
+      "creutz_11":0.6479846212122744,
+      "bootstrap_mean":0.6548520389347948,
+      "bootstrap_sd":0.10844338281784008
+    },
+    "seed2":{
+      "therm":120,
+      "nmeas":15,
+      "W11":0.19087839028824563,
+      "W12":0.039083453013126275,
+      "W21":0.03839260759516079,
+      "W22":-0.0008742074992576253,
+      "W22_se":0.0012157912158199445,
+      "creutz_11":"UNDEFINED_AT_MEAN"
+    },
+    "verdict":"INCONCLUSIVE_DUE_TO_W22_SIGNAL_TO_NOISE"
+  },
+  "external_method_refs":[
+    "M. Luescher and P. Weisz, JHEP 09 (2001) 010, arXiv:hep-lat/0108014",
+    "J.-M. Drouffe and J.-B. Zuber, Phys. Rept. 102 (1983) 1-119, DOI 10.1016/0370-1573(83)90034-0",
+    "M. Creutz, Phys. Rev. D 21 (1980) 2308, DOI 10.1103/PhysRevD.21.2308"
+  ],
+  "next_gate":"PURE_YM_MULTILEVEL_WILSON_CREUTZ_PLATEAU",
+  "open":[
+    "variance-reduced Wilson-loop expectation values",
+    "Creutz plateau across increasing loop sizes",
+    "finite-volume stability",
+    "full-QCD string-breaking diagnostics with dynamical quarks",
+    "physical scale calibration"
+  ],
+  "main_modified":false
+}
