@@ -1,0 +1,29 @@
+{
+  "schema":"RFC_AUX_RGB_COLOR_QUARK_LINK_COUPLING_V0_3",
+  "date":"2026-09-26",
+  "status":"EXACT_DISCRETE_COLOR_MATTER_COVARIANCE_LOCAL_PASS",
+  "branch":"candidate/aux-rgb-moire-su3-qcd-bridge-v0.1-20260926",
+  "local_probe":{
+    "samples":200,
+    "max_link_scalar_invariance_defect":2.7605288630897186e-15,
+    "max_transport_covariance_defect":2.345181899594705e-15,
+    "max_adjoint_current_covariance_defect":6.076684586596503e-16,
+    "max_color_family_commutator_defect":1.678653105880299e-16,
+    "fundamental_casimir_CF_4_over_3_defect":2.847310689679501e-16
+  },
+  "exact_results":[
+    "quark color link transforms covariantly",
+    "q_i^dagger W_ij q_j is gauge invariant",
+    "color current transforms in adjoint-8",
+    "C_F=4/3",
+    "color and family actions remain independent"
+  ],
+  "open":[
+    "continuum Dirac covariant derivative from project dynamics",
+    "physical alpha_c source selection",
+    "renormalized QCD running",
+    "confinement",
+    "hadron spectrum"
+  ],
+  "main_modified":false
+}
