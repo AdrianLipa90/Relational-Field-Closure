@@ -1,0 +1,30 @@
+{
+  "schema":"RFC_AUX_RGB_QCD_HEAT_KERNEL_B0_V0_12",
+  "date":"2026-09-26",
+  "status":"PURE_GAUGE_B0_CLOSED_STANDARD_SPECTRAL_QUANTIZATION_MATTER_CONDITIONAL",
+  "branch":"candidate/aux-rgb-moire-su3-qcd-bridge-v0.1-20260926",
+  "inputs":{
+    "C_A":"3 from RGB-Moire SU3 adjoint",
+    "T_F":"1/2 from RGB-Moire fundamental triplet",
+    "vector_operator":"v0.11 background Yang-Mills second variation",
+    "ghost_operator":"v0.9 adjoint/FP Laplacian",
+    "spectral_rule":"standard flat-space Seeley-DeWitt a4"
+  },
+  "exact_rational_ledger":{
+    "vector_effective_trace_coeff":"-5/6",
+    "ghost_effective_trace_coeff":"-1/12",
+    "gauge_plus_ghost_trace_coeff":"-11/12",
+    "pure_gauge_b0":"(11/3) C_A = 11 for C_A=3",
+    "conditional_dirac_b0":"-(4/3) T_F n_f = -(2/3) n_f",
+    "conditional_total_b0":"11-(2/3)n_f",
+    "nf6":"7"
+  },
+  "claim_boundary":{
+    "pure_gauge_one_loop_local_coefficient":true,
+    "dirac_matter_term_project_native":false,
+    "physical_alpha_s_boundary_value":false,
+    "two_loop_closed":false,
+    "Lambda_QCD_closed":false
+  },
+  "main_modified":false
+}
