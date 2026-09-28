@@ -1,0 +1,51 @@
+{
+  "schema": "AUX_RGB_QCD_DUKE_Z2_STRING_BREAKING_EXTERNAL_BENCHMARK_V0_17",
+  "status": "PASS",
+  "authority": "EXTERNAL_CONSISTENCY_BENCHMARK_ONLY",
+  "date": "2026-09-28",
+  "source": {
+    "doi": "10.1038/s41567-026-03422-0",
+    "arxiv": "2410.13815",
+    "nature_publication_date": "2026-09-23",
+    "arxiv_first_submission": "2024-10-17",
+    "model": "1+1D Z2 lattice gauge theory mapped to a 13-spin dual Ising chain"
+  },
+  "frozen_inputs": {
+    "L": 13,
+    "beta": 0.78,
+    "g_over_J": [
+      0.75,
+      1,
+      1.25
+    ],
+    "h_over_J": [
+      0,
+      0.3,
+      0.6
+    ],
+    "state_dimension": 8192
+  },
+  "checks": {
+    "exact_state_space_2pow13": true,
+    "virtual_boundary_field_symmetric": true,
+    "exact_edge_excess_positive_9_of_9": true,
+    "max_edge_minus_center_range": [
+      0.3231628307702211,
+      0.3814837868025575
+    ],
+    "perturbative_edge_center_ratio_h03": 1.9774566471539827,
+    "perturbative_edge_center_ratio_h06": 2.1869334510820972,
+    "published_vmax_eq_2g": true,
+    "published_amplitude_eq_2g_over_h": true,
+    "published_period_Jt_eq_pi_over_h_over_J": true,
+    "local_pytest": "2 passed in 9.63s"
+  },
+  "classification": "INDEPENDENT_EXTERNAL_CONSISTENCY_CONFIRMATION_MECHANISM_LEVEL",
+  "mechanism": "confining gauge dynamics -> stored string energy -> charge-pair formation -> string breaking; edge-enhanced transient pair creation reproduced in the reduced model",
+  "not_claimed": [
+    "FULL_SU3_QCD_CONFIRMATION",
+    "PHASENAV_CONFIRMATION",
+    "PRIORITY_OR_INDEPENDENT_PREDICTION_PROVENANCE"
+  ],
+  "next_gate": "PROJECT_OWN_SU3_DYNAMICAL_FUNDAMENTAL_MATTER_STRING_BREAKING"
+}
